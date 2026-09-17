@@ -21,9 +21,11 @@ const warns = [];
 
 // --- budget -------------------------------------------------
 const daily = plan.campaigns.reduce((s, c) => s + c.dailyBudget, 0);
-const monthly = daily * 30.4;
+// Weekday-only schedule: 22 billable days a month, not 30.4.
+const BILLABLE_DAYS = 22;
+const monthly = daily * BILLABLE_DAYS;
 if (monthly > plan.monthlyBudget) {
-  errs.push(`budget: $${daily.toFixed(2)}/day = $${monthly.toFixed(2)}/mo, over the $${plan.monthlyBudget} cap`);
+  errs.push(`budget: $${daily.toFixed(2)}/day x ${BILLABLE_DAYS} weekdays = $${monthly.toFixed(2)}/mo, over the $${plan.monthlyBudget} cap`);
 }
 if (monthly < plan.monthlyBudget * 0.9) {
   warns.push(`budget: only $${monthly.toFixed(2)}/mo of the $${plan.monthlyBudget} cap is allocated`);
@@ -48,6 +50,10 @@ for (const c of plan.campaigns) {
     const dupes = g.headlines.filter((h, i) => g.headlines.indexOf(h) !== i);
     if (dupes.length) errs.push(`${where}: duplicate headlines — ${dupes.join(', ')}`);
     if (!/^https:\/\/badasslogistics\.com\//.test(g.finalUrl)) errs.push(`${where}: bad final URL ${g.finalUrl}`);
+    // Manual CPC means every ad group carries its own bid, and that bid has
+    // to clear the top-of-page entry price or the ad buys the page bottom.
+    if (typeof g.maxCpc !== 'number') errs.push(`${where}: no maxCpc — Manual CPC needs a bid per ad group`);
+    else if (g.maxCpc < 2) warns.push(`${where}: bid $${g.maxCpc} is below the cheapest top-of-page price in the research`);
   }
 }
 
@@ -120,7 +126,9 @@ async function checkLive() {
   console.log(`\n▸ blueprint: ${plan.campaigns.length} campaigns, ${adGroups} ad groups, ${keywords} keywords`);
   console.log(`▸ budget:    $${daily.toFixed(2)}/day = $${monthly.toFixed(2)}/mo of $${plan.monthlyBudget}`);
   for (const c of plan.campaigns) {
-    console.log(`   · ${c.name.padEnd(34)} $${c.dailyBudget.toFixed(2)}/day  ($${(c.dailyBudget * 30.4).toFixed(0)}/mo)`);
+    const bids = c.adGroups.map(g => `${g.name} $${g.maxCpc}`).join(', ');
+    console.log(`   · ${c.name.padEnd(30)} $${c.dailyBudget.toFixed(2)}/day  ($${(c.dailyBudget * BILLABLE_DAYS).toFixed(0)}/mo)`);
+    console.log(`     ${bids}`);
   }
   warns.forEach(w => console.log(`⚠ ${w}`));
   if (errs.length) {

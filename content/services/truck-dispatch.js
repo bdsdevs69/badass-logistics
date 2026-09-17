@@ -1,4 +1,5 @@
-// /services/truck-dispatch — fleets of 4+ power units only. No owner-operators.
+// /services/truck-dispatch — built for fleets. The ads do the qualifying;
+// the page stays open so a growing carrier still has a reason to call.
 module.exports = {
   slug: 'truck-dispatch',
   cardBlurb: 'Dispatch for trucking companies running 4+ trucks — freight from our project network, rate work, and the full back office.',
@@ -8,9 +9,9 @@ module.exports = {
   hero: '/assets/img/dispatch-hero.jpg',
   band: '/assets/img/dispatch-truck.jpg',
   bandAnnots: ['NEXT LOAD LINED UP ✓', 'FLEET — 12 UNITS'],
-  tag: 'truck dispatch — fleets of 4+ trucks only',
+  tag: 'us-based truck dispatch for fleets',
   h1: 'Dispatch Services for <span class="y">Trucking Companies</span>',
-  lead: 'Built for trucking companies running four trucks or more — not owner-operators. We have offices, connections, and a lot of freight moving through our rigging and project network. Your trucks get covered with it, and our desk runs the rates, the paperwork, and the back office so your team can run the fleet.',
+  lead: 'A US-based dispatch desk built for trucking companies running fleets. We have offices, connections, and a lot of freight moving through our rigging and project network. Your trucks get covered with it, and our desk runs the rates, the paperwork, and the back office so your team can run the fleet.',
   cta: 'Apply for Fleet Dispatch',
   ctaHref: '/quote-dispatch',
   annots: ['MIN. 4 POWER UNITS', 'NO FORCED DISPATCH', 'RATE CON ✓', 'DETENTION BILLED'],
@@ -26,7 +27,7 @@ module.exports = {
   },
   requirements: [
     { n: '4+', l: 'Power units minimum' },
-    { n: '0', l: 'Owner-operators' },
+    { n: 'US', l: 'Based dispatch desk' },
     { n: '24/7', l: 'Dispatch desk' },
     { n: 'YOU', l: 'Approve every load' },
   ],
@@ -48,7 +49,7 @@ module.exports = {
       h2: 'Is fleet dispatch a fit for your company?',
       paragraphs: [
         'We\'re a good fit if you run a trucking company with at least four trucks under your own authority, your drivers are employees or leased to your company, and you want more of your freight coming from steady sources instead of the board every afternoon.',
-        'We\'re not a fit for single-truck owner-operators, drivers leased onto another carrier who want their own dispatcher, or companies looking for someone to push trucks onto whatever pays the highest number today with no plan for tomorrow.',
+        'Where we\'re a weaker fit: drivers leased onto another carrier who want their own dispatcher, and anyone looking for someone to push trucks onto whatever pays the highest number today with no plan for tomorrow. If you\'re running one or two trucks now and building toward a fleet, tell us where you\'re headed and we\'ll tell you straight whether the timing works.',
       ],
       list: [
         'Minimum four power units running under your authority',
@@ -87,7 +88,7 @@ module.exports = {
     items: ['Dry van', 'Reefer', 'Flatbed', 'Step deck', 'Conestoga', 'Power only', 'Project freight lanes', 'Dedicated regional runs'],
   },
   faq: [
-    { q: 'Do you dispatch owner-operators?', a: 'No. We only dispatch trucking companies with four or more power units. Our desk plans lanes across a fleet and keeps project freight covered, which doesn\'t work well one truck at a time.' },
+    { q: 'How many trucks do you need to run to work with us?', a: 'The desk is built around fleets of roughly four power units and up, because planning reloads across several trucks is what makes it work. Smaller than that and the economics get thin \u2014 but if you\'re growing toward it, tell us your plan and we\'ll say honestly whether now is the right time.' },
     { q: 'What does a truck dispatch service do for a fleet?', a: 'Finds and books freight, plans reloads across trucks, negotiates rates, handles broker and shipper setups and rate cons, runs check calls, pursues detention and TONU, and builds billing and factoring packets.' },
     { q: 'Where does the freight come from?', a: 'From our own rigging and <a href="/services/project-freight">project freight</a> network, direct shippers, vetted brokers, and load boards — matched to your equipment and lanes.' },
     { q: 'Is it forced dispatch?', a: 'No. You keep your authority and approve every load before it\'s booked.' },
