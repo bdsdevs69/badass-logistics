@@ -15,7 +15,8 @@
       "angle": "Vault work: shielding, the maze, component sequence, OEM de-install, crane-in vs knock-out panel, decommissioning an old linac. Almost no competitor content exists on this and the jobs are large.",
       "links": ["services/mri-medical-equipment-rigging", "services/machinery-removal", "blog/how-to-move-an-mri-machine"],
       "hero": "loads/ct-mri-scanner-enclosed-air-ride.jpg",
-      "status": "todo"
+      "status": "done",
+      "published": "2026-09-18"
     },
     {
       "slug": "how-to-move-an-x-ray-machine",
