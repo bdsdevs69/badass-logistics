@@ -59,25 +59,9 @@ function industryPhrase(industry) {
   return 'manufacturing';
 }
 
-const NAVLINKS = [['/services/rigging','Rigging'],['/services/heavy-haul','Heavy Haul'],['/services/machinery-moving','Machinery Moving'],['/services/cnc-machine-movers','CNC Movers'],['/locations','Locations'],['/blog/','Blog'],['/about','About']];
-const NAV = `
-<div class="topbar"><div class="wrap"><div>📍 88 locations nationwide &nbsp;·&nbsp; <strong>All 50 states</strong></div><div><a href="tel:3072841332">📞 (307) 284-1332</a> &nbsp;·&nbsp; <a href="/contact"><strong>Get a Quote</strong></a></div></div></div>
-<header class="site-header"><div class="wrap">
-  <a class="logo" href="/"><span class="brand"><span class="l1">BADASS</span><span class="l2">LOGISTICS</span></span></a>
-  <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
-  <nav class="main" id="nav">
-    <a href="/">Home</a>${NAVLINKS.map(([h,t])=>`<a href="${h}">${t}</a>`).join('')}
-    <a class="btn" style="font-size:14px;padding:9px 16px;box-shadow:3px 3px 0 var(--ink)" href="/contact">Get a Quote</a>
-  </nav>
-</div></header>`;
-const FOOTER = `
-<footer><div class="wrap"><div class="cols">
-  <div><h4>Badass Logistics</h4><p style="opacity:.85;max-width:280px;">Industrial rigging &amp; heavy haul — our own crews, machinery, and rigging gear, plus a network of specialized carriers for everything oversized and overweight.</p></div>
-  <div><h4>Services</h4><a href="/services/rigging">Industrial Rigging</a><a href="/services/heavy-haul">Heavy Haul Transport</a><a href="/services/machinery-moving">Machinery Moving</a><a href="/services/cnc-machine-movers">CNC Machine Movers</a><a href="/services/plant-relocation">Plant Relocation</a></div>
-  <div><h4>Trailer Types</h4><a href="/services/rgn-trailer">RGN Transport</a><a href="/services/lowboy-trailer">Lowboy Transport</a><a href="/services/step-deck-trailer">Step-Deck Transport</a><a href="/services/double-drop-trailer">Double-Drop &amp; Stretch</a><a href="/services/flatbed-transport">Flatbed Transport</a><a href="/services/conestoga-trailer">Conestoga Transport</a><a href="/services/multi-axle-transport">Multi-Axle &amp; Superload</a></div>
-  <div><h4>Company</h4><a href="/about">About Us</a><a href="/locations">Locations</a><a href="/blog/">Blog</a><a href="/contact">Contact</a><a href="/privacy">Privacy</a></div>
-</div><div class="covstrip">Coverage: <a href="/locations/texas">Texas</a> · <a href="/locations/california">California</a> · <a href="/locations/florida">Florida</a> · <a href="/locations/georgia">Georgia</a> · <a href="/locations/illinois">Illinois</a> · <a href="/locations/ohio">Ohio</a> · <a href="/locations/pennsylvania">Pennsylvania</a> · <a href="/locations/new-york">New York</a> · <a href="/locations"><strong>All 88 locations →</strong></a></div><div class="footer-nap"><span class="nap-name">Badass Logistics</span><span>${site.hqStreet}, ${site.hqCity}, ${site.hqState} ${site.hqZip}</span><span><a href="tel:3072841332">(307) 284-1332</a></span><span><a href="mailto:rigging@badasslogistics.com">rigging@badasslogistics.com</a></span></div>
-<div class="legal"><span>© 2022–2026 Badass Logistics. All rights reserved.</span><span class="hand">made to move heavy things.</span></div></div></footer>`;
+const chrome = require('./lib/chrome');
+const NAV = `\n${chrome.topbar()}\n${chrome.header()}`;
+const FOOTER_FOR = (rel) => chrome.footer(rel);
 
 // ---------- SERVICES (genuinely distinct copy per vertical) ----------
 const SERVICES = {
@@ -89,14 +73,14 @@ const SERVICES = {
     introH2:(c)=>`Machine-tool moving in ${c.CS}`,
     introPs:(c)=>[
       `${c.metro?`${c.city}'s industrial base — ${c.metro.industry} — runs on CNC.`:`${c.city} runs on CNC.`} Machining centers, lathes, grinders, and the job shops that feed them count on precision, and when one of those machines has to move it can't be muscled like a pallet. It's an instrument that holds ten-thousandths, and it has to come back online holding them.`,
-      `That's the job Badass Logistics is built for in ${c.city}. We pull the manufacturer's lift and jacking data before a wrench turns, protect the ways, lock the axes and spindle, and move on air skates and air-ride — then set, level, and square the machine to spec. Because we run <a href="/services/rigging">rigging</a> and <a href="/services/heavy-haul">heavy haul</a> in-house, an oversized machining center gets moved and permitted without a hand-off.`,
+      `That's the job Badass Logistics is built for in ${c.city}. We pull the manufacturer's lift and jacking data before a wrench turns, protect the ways, lock the axes and spindle, and move on air skates and air-ride — then set, level, and square the machine to spec. And when the machine is headed to another plant, the same crew manages it as <a href="/services/project-freight">project freight</a> — crated, loaded, and <a href="/services/rigging">rigged</a> back in at the other end, no hand-off.`,
     ],
     movesH2:(c)=>`${c.city} CNC &amp; machine-tool moves`,
     moves:[['production machining','Production Machining','VMCs, HMCs, and transfer lines'],['turning','CNC Lathes','Flat-bed and slant-bed lathes and multi-axis turning centers'],['grinding','Grinders &amp; EDM','Surface, cylindrical, and CNC grinders plus wire and sinker EDM'],['cells &amp; shops','Full Shop Relocations','Multi-machine cells and complete machine-shop moves']],
     faq:(c)=>[
       [`Do you move CNC machines in ${c.city}?`,`Yes — CNC machine moving throughout ${c.CS} and the surrounding metro, serving ${c.angle} machine shops. Single machines, cells, and full shop relocations. <a href="/contact">Get a quote →</a>`],
       [`How much does it cost to move a CNC machine in ${c.city}?`,`It depends on weight and class, rigging access at both shops, distance across the metro, and the disconnect and re-level work involved. Send the model and both floor layouts and we'll turn a ${c.city} quote around fast.`],
-      [`Can you handle ${c.stName} oversize permits?`,`Yes — when a crated machine runs over legal dimensions on ${c.ix}, we handle ${c.stName} DOT permitting, routing, and escorts as part of the move.`],
+      [`Can you move a CNC machine from ${c.city} to another state?`,`Yes — we rig it out, crate it, and manage the transport as project freight on licensed partner carriers, then set and re-level it at the new shop.`],
       [`Do you re-level the machine after transit?`,`Always — set on the new pad and squared to the builder's spec before hand-off, ready for OEM ramp-up and first cut.`],
     ],
     pillarFile:'services/cnc-machine-movers.html', sentinel:'CNC_METROS', cardNoun:'CNC movers',
@@ -110,14 +94,14 @@ const SERVICES = {
     introH2:(c)=>`Machinery moving in ${c.CS}`,
     introPs:(c)=>[
       `Most machinery moves fail in the gaps — the rigger who only lifts, the carrier who only drives, the installer who shows up to a machine that was moved wrong. Across ${c.metro?`${c.city}'s ${c.metro.industry} base`:`the ${c.city} metro`}, Badass Logistics closes those gaps by running rigging, transport, and reinstallation as one job with one crew.`,
-      `Presses, generators, compressors, production lines, a single machine between bays or a full <a href="/services/plant-relocation">plant relocation</a> — we plan it on paper first, move it on air skates and air-ride, and set and level it to spec at the new floor. Oversized loads get <a href="/services/heavy-haul">permitted and hauled</a> in-house, no hand-off.`,
+      `Presses, generators, compressors, production lines, a single machine between bays or a full <a href="/services/plant-relocation">plant relocation</a> — we plan it on paper first, move it on air skates and air-ride, and set and level it to spec at the new floor. Moving to another facility? It runs as <a href="/services/project-freight">project freight</a> inside the same plan — no hand-off.`,
     ],
     movesH2:(c)=>`What we move in ${c.city}`,
     moves:[['forming','Presses &amp; Fabrication','Stamping presses, press brakes, shears, and injection molding machines'],['power','Generators &amp; Compressors','Generator sets, compressors, switchgear, and plant utilities'],['machining','CNC &amp; Machine Tools','VMCs, lathes, and machining centers — see <a href="/services/cnc-machine-movers">CNC moving</a>'],['lines','Production Lines','Full lines and multi-machine cells, sequenced around production']],
     faq:(c)=>[
       [`Do you move industrial machinery in ${c.city}?`,`Yes — single machines, multi-machine cells, and full production-line moves throughout ${c.CS} and the surrounding metro, serving its ${c.angle} base. <a href="/contact">Get a quote →</a>`],
       [`How do you keep our downtime short?`,`Everything is decided before rig day — path of travel, floor loads, gear, and sequence — and the move is scheduled around your production calendar in ${c.city}, nights and weekends included, so the floor is down only for the move window.`],
-      [`Can you handle ${c.stName} oversize permits?`,`Yes — when a load runs over legal dimensions on ${c.ix}, we handle ${c.stName} DOT permitting, routing, and escorts as part of the move.`],
+      [`Can you move machinery out of ${c.city} to another plant?`,`Yes — machines are rigged out, crated where needed, and moved as project freight on licensed partner carriers, then set and leveled at the destination by the same crew.`],
       [`Do you reinstall and level the machine?`,`Yes — set on the new pad and leveled to the manufacturer's spec before hand-off, ready for recommissioning.`],
     ],
     pillarFile:'services/machinery-moving.html', sentinel:'MM_METROS', cardNoun:'machinery movers',
@@ -131,14 +115,14 @@ const SERVICES = {
     introH2:(c)=>`Plant &amp; factory relocation in ${c.CS}`,
     introPs:(c)=>[
       `A plant move isn't one big lift — it's dozens of moves in the right order: disconnect, teardown, sequenced transport, reinstall, recommission. Get the sequence wrong and the new floor sits half-built while production bleeds. Across ${c.metro?`${c.city}'s ${c.metro.industry} sector`:`the ${c.city} metro`}, Badass Logistics owns the whole project with one accountable crew.`,
-      `We map the path of travel and floor loadings at both sites, tear down and label, <a href="/services/heavy-haul">haul</a> oversized machines on permitted routes, and <a href="/services/machinery-moving">rig and set</a> every machine back to spec in the new layout. Single line, full facility, or a multi-site consolidation — one plan, one team, one schedule.`,
+      `We map the path of travel and floor loadings at both sites, tear down and label, run the loads as <a href="/services/project-freight">project freight</a> on <a href="/services/dedicated-lanes">dedicated lanes</a>, and <a href="/services/machinery-moving">rig and set</a> every machine back to spec in the new layout. Single line, full facility, or a multi-site consolidation — one plan, one team, one schedule.`,
     ],
     movesH2:(c)=>`${c.city} plant &amp; line relocation`,
     moves:[['production lines','Production Lines','Sequenced teardown, transport, and reinstall of complete lines'],['machine cells','Machine Cells','Multi-machine cells relocated and re-leveled in the new layout'],['utilities','Plant Utilities','Compressors, dust collection, conveyors, and support equipment'],['consolidation','Multi-Site Moves','Consolidating two floors into one, or splitting to a new building']],
     faq:(c)=>[
       [`Do you handle full plant relocations in ${c.city}?`,`Yes — single production lines, machine cells, and complete facility relocations throughout ${c.CS} and the surrounding metro, serving its ${c.angle} base. <a href="/contact">Get a quote →</a>`],
       [`How do you minimize downtime on a ${c.city} plant move?`,`The whole project is planned before teardown — path of travel, floor loads, machine sequence, and a schedule built around your production calendar so the line is down only for the move window.`],
-      [`Can you move oversized machines and handle ${c.stName} permits?`,`Yes — oversized loads are hauled in-house on permitted ${c.stName} DOT routes via the ${c.ix} corridors, with escorts where required.`],
+      [`How do you handle the freight on a ${c.city} plant move?`,`It runs as project freight: machines are crated or prepped, loaded in sequence, and moved on dedicated partner-carrier capacity scheduled around the rig-out and rig-in, so trucks arrive when the crew is ready.`],
       [`Do you reinstall the line in the new building?`,`Yes — every machine is set, leveled, and squared to spec in the new layout, ready for recommissioning. We hand off a floor that's ready to run.`],
     ],
     pillarFile:'services/plant-relocation.html', sentinel:'PR_METROS', cardNoun:'plant relocation',
@@ -148,41 +132,21 @@ const SERVICES = {
     name:'Industrial Rigging', serviceType:'Industrial Rigging', hero:'/assets/img/rigging-hero.jpg', band:'/assets/img/rigging-crane2.jpg',
     tag:'rigging company', quote:'Rigging', coverageNoun:'Rigging jobs',
     snippet:`We handle engineered lifts, machine setting, and heavy moves from a few hundred pounds to 200,000 lbs and beyond, set and leveled to spec.`,
-    lead:(c)=>`When a machine is too heavy, too tall, or too tight to move safely, ${c.city} calls a rigger. Badass Logistics plans and executes precision lifts, machine setting, and heavy moves across the ${c.city} metro — from a few hundred pounds to 200,000 lbs and beyond, rigged, hauled, and set by one accountable crew.`,
+    lead:(c)=>`When a machine is too heavy, too tall, or too tight to move safely, ${c.city} calls a rigger. Badass Logistics plans and executes precision lifts, machine setting, and heavy moves across the ${c.city} metro — from a few hundred pounds to 200,000 lbs and beyond, rigged, moved, and set by one accountable crew.`,
     introH2:(c)=>`Industrial rigging in ${c.CS}`,
     introPs:(c)=>[
       `${c.metro?`${c.city}'s ${c.metro.industry} base`:`The ${c.city} metro`} runs on machines that can't be muscled onto a truck — presses, machining centers, transformers, and production lines that have to come off the floor, through the door, and onto a trailer without a scratch. That's rigging: engineered lifts, air skates and gantries, and a crew that measures every doorway before anything moves.`,
-      `Badass Logistics rigs it like an engineering problem and runs it like a road crew across ${c.city}. We plan the pick, protect the floors, and set the load to spec — and because we run <a href="/services/heavy-haul">heavy haul</a> and <a href="/services/machinery-moving">machinery moving</a> in-house, an oversized lift gets permitted, hauled, and reset without a hand-off.`,
+      `Badass Logistics rigs it like an engineering problem and runs it like a road crew across ${c.city}. We plan the pick, protect the floors, and set the load to spec — and when the load has to leave the building, the same team runs <a href="/services/machinery-moving">the move</a> and the <a href="/services/project-freight">project freight</a>, so it gets rigged out, delivered, and reset without a hand-off.`,
     ],
     movesH2:(c)=>`What we rig in ${c.city}`,
     moves:[['machine setting','Machine Setting','Setting and leveling machinery onto pads and foundations to spec'],['heavy lifts','Heavy &amp; Critical Lifts','Crane, gantry, and jack-and-slide lifts up to 200,000 lbs and beyond'],['plant equipment','Plant Equipment','Presses, generators, transformers, and production-line machinery'],['tight access','Tight-Access Moves','Skating machines through doorways, up mezzanines, and out of packed floors']],
     faq:(c)=>[
       [`Do you offer rigging services in ${c.city}?`,`Yes — industrial rigging, machine setting, and heavy lifts throughout ${c.CS} and the surrounding metro, serving its ${c.angle} base. Single machines to full production lines. <a href="/contact">Get a quote →</a>`],
       [`How heavy a load can you rig in ${c.city}?`,`From a few hundred pounds to 200,000 lbs and beyond. We size the gear — cranes, gantries, skates, and jack-and-slide — to the load and the site, and plan every pick before rig day.`],
-      [`Can you handle ${c.stName} oversize permits and transport?`,`Yes — when a rigged load runs over legal dimensions on ${c.ix}, we handle ${c.stName} DOT permitting, routing, and escorts and haul it in-house, no hand-off.`],
+      [`What kinds of rigging do you do in ${c.city}?`,`Machine setting, crane and gantry lifts, jacking and skidding, millwright installation, MRI and medical equipment, data center, chiller, and transformer rigging — see every type on our <a href="/services/rigging">rigging page</a>.`],
       [`Do you set and level the machine after the lift?`,`Yes — we set the load on its new pad or foundation and level it to the manufacturer's spec, ready for recommissioning.`],
     ],
     pillarFile:'services/rigging.html', sentinel:'RIG_METROS', cardNoun:'riggers',
-  },
-  'heavy-haul': {
-    name:'Heavy Haul Trucking', serviceType:'Heavy Haul & Oversize Transport', hero:'/assets/img/heavyhaul-hero.jpg', band:'/assets/img/rgn-load.jpg',
-    tag:'heavy haul company', quote:'Heavy Haul', coverageNoun:'Heavy-haul loads',
-    snippet:`We move oversize and overweight freight on RGN, lowboy, step-deck, double-drop, and multi-axle trailers — permitted, escorted, and routed before we quote it.`,
-    lead:(c)=>`When a load is too wide, too tall, or too heavy for a standard flatbed, ${c.city} calls for heavy haul. Badass Logistics moves oversize and overweight freight across the ${c.city} metro on RGN, lowboy, step-deck, double-drop, and multi-axle trailers — permitted, escorted, and routed before we quote it.`,
-    introH2:(c)=>`Heavy haul trucking in ${c.CS}`,
-    introPs:(c)=>[
-      `${c.metro?`${c.city}'s ${c.metro.industry} base`:`The ${c.city} metro`} ships loads that break the rules — excavators, presses, transformers, tanks, and fabricated steel that run over width, height, or weight. Heavy haul is how they move: the right trailer for the dimensions, a permitted route down ${c.ix}, and escorts where the state requires them.`,
-      `Badass Logistics routes it before we quote it — bridge ratings, low clearances, and turn radii across ${c.stName} — then hauls it in-house with compliant, permitted carriers. And because we run <a href="/services/rigging">rigging</a> and <a href="/services/machinery-moving">machinery moving</a> too, an oversized machine gets lifted, loaded, hauled, and set without a single hand-off.`,
-    ],
-    movesH2:(c)=>`What we haul in ${c.city}`,
-    moves:[['oversize loads','Oversize Loads','Over-width, over-height, and over-length freight on the right trailer for the job'],['heavy equipment','Heavy Equipment','Excavators, dozers, cranes, and machinery hauled on RGN and lowboy'],['superloads','Superloads &amp; Permits','Multi-axle, permitted, and escorted moves that exceed standard oversize limits'],['industrial','Industrial &amp; Fabricated','Tanks, vessels, transformers, presses, and structural steel']],
-    faq:(c)=>[
-      [`Do you do heavy haul in ${c.city}?`,`Yes — oversize and overweight transport throughout ${c.CS} and the surrounding metro, serving its ${c.angle} base. RGN, lowboy, step-deck, double-drop, and multi-axle trailers. <a href="/contact">Get a quote →</a>`],
-      [`What trailer will my ${c.city} load ship on?`,`It depends on dimensions and weight: step-deck for tall freight, RGN or lowboy for tall/heavy equipment that rolls on, double-drop for extreme height, and multi-axle for superloads. We match the trailer to the load before we quote it.`],
-      [`Can you handle ${c.stName} oversize permits and escorts?`,`Yes — we handle ${c.stName} DOT oversize permitting, plan a legal route on ${c.ix}, and arrange pilot cars and police escorts where the state requires them.`],
-      [`How fast can you quote a ${c.city} heavy-haul load?`,`Send dimensions, weight, and pickup/drop and we'll route it and quote it fast. Every oversized move is priced after we see the specs.`],
-    ],
-    pillarFile:'services/heavy-haul.html', sentinel:'HH_METROS', cardNoun:'heavy haul',
   },
 };
 
@@ -193,7 +157,6 @@ const CITY_GUIDES = {
   'cnc-machine-movers': [['how-to-move-a-cnc-machine','How to Move a CNC Machine'],['machine-leveling-and-alignment','Machine Leveling &amp; Alignment'],['how-to-move-a-lathe','How to Move a Metal Lathe']],
   'machinery-moving': [['how-to-move-a-lathe','How to Move a Metal Lathe'],['machine-leveling-and-alignment','Machine Leveling &amp; Alignment'],['how-to-move-an-mri-machine','How to Move an MRI Machine']],
   'plant-relocation': [['plant-relocation-checklist','The Plant Relocation Checklist'],['blocking-bracing-and-dunnage-explained','Blocking, Bracing &amp; Dunnage Explained'],['machine-leveling-and-alignment','Machine Leveling &amp; Alignment']],
-  'heavy-haul': [['step-deck-vs-drop-deck-trailers','Step-Deck vs Drop-Deck Trailers'],['how-to-ship-a-generator','How to Ship an Industrial Generator'],['how-to-secure-a-load-on-a-flatbed','How to Secure a Load on a Flatbed']],
 };
 
 // ---------- SIBLING-SERVICE MESH ----------
@@ -213,11 +176,6 @@ const CROSS = {
     pitch:(c)=>`Machine has to come off the floor, through the door, or onto a pad before it travels? That's the rigging side of the same ${c} crew.`,
     anchors:(c)=>[`industrial rigging in ${c}`,`${c} riggers`,`rigging contractors in ${c}`,`${c} industrial rigging`],
   },
-  'heavy-haul': {
-    short:'Heavy Haul Trucking', noun:'heavy haul',
-    pitch:(c)=>`Once it's rigged and loaded, an over-dimension load still needs permits, a routed corridor, and escorts out of ${c}. We haul it in-house — no hand-off.`,
-    anchors:(c)=>[`heavy haul trucking in ${c}`,`${c} heavy haul transport`,`oversize load hauling in ${c}`,`${c} heavy haul`],
-  },
   'machinery-moving': {
     short:'Machinery Movers', noun:'machinery movers',
     pitch:(c)=>`Presses, compressors, generators, full production lines — disconnected, rigged, hauled, and re-leveled across ${c} as one accountable job.`,
@@ -234,7 +192,7 @@ const CROSS = {
     anchors:(c)=>[`plant relocation in ${c}`,`${c} plant &amp; factory relocation`,`factory relocation in ${c}`,`${c} plant relocation`],
   },
 };
-const CROSS_ORDER = ['rigging','heavy-haul','machinery-moving','cnc-machine-movers','plant-relocation'];
+const CROSS_ORDER = ['rigging','machinery-moving','cnc-machine-movers','plant-relocation'];
 
 // Stable string hash → picks an anchor variant per (city, target service) so the mesh
 // doesn't ship 440 copies of the same anchor text.
@@ -260,11 +218,11 @@ function siblingMesh(serviceSlug, svc, city, slug) {
 <section><div class="wrap">
   <span class="section-tag hand">same crew, same city</span>
   <h2 class="section-title">Other heavy work we do in ${city}</h2>
-  <p class="section-intro">Most ${city} jobs don't stop at one service. The crew that rigs a machine is the crew that hauls it and sets it back down — so you're dealing with one company from the disconnect to the re-level, not three subcontractors pointing at each other.</p>
+  <p class="section-intro">Most ${city} jobs don't stop at one service. The crew that rigs a machine out is the crew that manages the move and sets it back down — so you're dealing with one company from the disconnect to the re-level, not three subcontractors pointing at each other.</p>
   <div class="grid-services" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:22px;">
 ${cards}
   </div>
-  <p style="margin-top:22px;font-weight:600;">In ${city} we also run ${inlineList} &mdash; or see <a href="/locations/${slug}" style="color:var(--yellow-deep);text-decoration:underline;">every service we offer in ${city}</a>.</p>
+  <p style="margin-top:22px;font-weight:600;">In ${city} we also run ${inlineList}, plus <a href="/services/project-freight" style="color:var(--yellow-deep);text-decoration:underline;">project freight</a> for the jobs we rig &mdash; or see <a href="/locations/${slug}" style="color:var(--yellow-deep);text-decoration:underline;">every service we offer in ${city}</a>.</p>
 </div></section>`;
 }
 
@@ -285,7 +243,7 @@ function page(serviceSlug, svc, loc, metro, hubStates) {
   // Keep under ~155 chars so Google doesn't truncate mid-sentence, and don't
   // repeat svc.name/svc.serviceType back-to-back (they're identical for several
   // services, which produced a stuttering snippet on 87 pages).
-  const desc = `${svc.name} in ${CS} — planned, rigged, hauled on permitted routes, and re-leveled to spec. Same-day quotes: (307) 284-1332.`;
+  const desc = `${svc.name} in ${CS} — surveyed, rigged, moved, and re-leveled to spec by one accountable crew. Same-day quotes: (307) 284-1332.`;
   const svcSchema = {"@context":"https://schema.org","@type":"Service","serviceType":svc.serviceType,"areaServed":{"@type":"City","name":CS},"provider":{"@type":"LocalBusiness","@id":`${DOMAIN}/#organization`,"name":site.brand,"telephone":"+1-307-284-1332","url":`${DOMAIN}/`},"description":`${site.brand} provides ${svc.serviceType.toLowerCase()} across ${CS} and the surrounding metro.`};
   const bcItems = [{"@type":"ListItem","position":1,"name":"Home","item":`${DOMAIN}/`},{"@type":"ListItem","position":2,"name":svc.name,"item":`${DOMAIN}/services/${serviceSlug}`}];
   if (hasHub) bcItems.push({"@type":"ListItem","position":3,"name":c.stName,"item":`${DOMAIN}/services/${serviceSlug}/${stSlug}`});
@@ -306,12 +264,12 @@ function page(serviceSlug, svc, loc, metro, hubStates) {
 <meta name="theme-color" content="#141414">
 <meta property="og:type" content="website">
 <meta property="og:title" content="${title}">
-<meta property="og:description" content="${svc.serviceType} in ${CS} — planned, rigged, hauled, and re-leveled to spec.">
+<meta property="og:description" content="${svc.serviceType} in ${CS} — surveyed, rigged, moved, and re-leveled to spec.">
 <meta property="og:url" content="${url}">
 <meta property="og:image" content="${DOMAIN}${svc.hero}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${title}">
-<meta name="twitter:description" content="${svc.serviceType} in ${CS} — planned, rigged, hauled, and re-leveled to spec.">
+<meta name="twitter:description" content="${svc.serviceType} in ${CS} — surveyed, rigged, moved, and re-leveled to spec.">
 <meta name="twitter:image" content="${DOMAIN}${svc.hero}">
 <link rel="sitemap" type="application/xml" href="${DOMAIN}/sitemap.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -357,7 +315,7 @@ ${NAV}
 {"@context":"https://schema.org","@type":"WebPage","url":"${url}","name":"${title}","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".answer-box"]}}
 </script>
 <section><div class="wrap prose">
-  <div class="answer-box"><p><strong>Quick answer:</strong> ${site.brand} provides ${svc.serviceType.toLowerCase()} in ${CS} and the surrounding metro. ${svc.snippet} Serving ${city} and nearby ${c.stName} metros, with ${c.stName} permits and routing handled where a move needs them — usually quoted the same day. Call (307) 284-1332.</p></div>
+  <div class="answer-box"><p><strong>Quick answer:</strong> ${site.brand} provides ${svc.serviceType.toLowerCase()} in ${CS} and the surrounding metro. ${svc.snippet} Our crews work across ${city} and nearby ${c.stName} metros, and moves between facilities run as project freight under the same plan — usually quoted the same day. Call (307) 284-1332.</p></div>
   <h2>${svc.introH2(c)}</h2>
   ${svc.introPs(c).map(p=>`<p>${p}</p>`).join('\n  ')}
 </div></section>
@@ -372,10 +330,10 @@ ${NAV}
 
 <section class="notes-bg">
   <span class="bgnote" style="top:10%;right:5%;transform:rotate(-4deg)">${c.ix.split(',')[0]} CORRIDOR</span>
-  <span class="bgnote" style="bottom:12%;left:4%;transform:rotate(4deg)">${state} DOT PERMIT ✓</span>
+  <span class="bgnote" style="bottom:12%;left:4%;transform:rotate(4deg)">CRATED &amp; STAGED ✓</span>
   <div class="wrap prose">
-  <h2>Routes &amp; permits across the ${city} metro</h2>
-  <p>Moves around ${city} run the ${c.ix} corridors that knit the metro's industrial belt together. A load that's legal-dimension just gets hauled; anything over height, width, or weight has to be legal on every mile. We handle the ${c.stName} DOT oversize/overweight permitting, route survey, clearance checks, and any escorts as part of the job — so the move reaches its new floor on a compliant route the first time.</p>
+  <h2>When the equipment leaves ${city}</h2>
+  <p>Plenty of ${city} jobs start and finish on one floor. The rest have to travel — to a new building across the metro, a sister plant down ${c.ix}, or a facility in another state. We don't hand that part off. It runs as <a href="/services/project-freight">project freight</a> inside the same plan: machines <a href="/services/crating-packing">crated or prepped</a> on site, loads sequenced to the rig-out, transport on licensed partner carriers with <a href="/services/dedicated-lanes">dedicated capacity</a> for bigger moves, and our crew waiting at the destination to set it.</p>
 </div></section>
 
 <section><div class="wrap">
@@ -435,7 +393,7 @@ ${(CITY_GUIDES[serviceSlug]||[]).length ? `
   <p>Tell us what's moving and where. We'll route the nearest crew and quote it fast.</p>
   <a class="btn dark" href="/contact">Get a ${city} ${svc.quote} Quote</a>
 </div></div>
-${FOOTER}
+${FOOTER_FOR(`services/${serviceSlug}/${slug}.html`)}
 
 </body>
 </html>`;
@@ -452,13 +410,13 @@ function statePage(serviceSlug, svc, st, cityMs) {
   const title = `${svc.name} in ${stName} | Badass Logistics`;
   // No phone here — the city list already eats the character budget and these
   // ran past 160 (truncated) with it.
-  const desc = `${svc.name} across ${stName} — ${names.slice(0,3).join(', ')} and metros statewide. Permitted routes, re-leveled to spec. Same-day quotes.`;
+  const desc = `${svc.name} across ${stName} — ${names.slice(0,3).join(', ')} and metros statewide. Rigged, moved, and re-leveled to spec. Same-day quotes.`;
   const svcSchema = {"@context":"https://schema.org","@type":"Service","serviceType":svc.serviceType,"areaServed":{"@type":"State","name":stName},"provider":{"@type":"LocalBusiness","@id":`${DOMAIN}/#organization`,"name":site.brand,"telephone":"+1-307-284-1332","url":`${DOMAIN}/`},"description":`${site.brand} provides ${svc.serviceType.toLowerCase()} across ${stName}.`};
   const breadcrumb = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":`${DOMAIN}/`},{"@type":"ListItem","position":2,"name":svc.name,"item":`${DOMAIN}/services/${serviceSlug}`},{"@type":"ListItem","position":3,"name":stName,"item":url}]};
   const faqPairs = [
     [`Do you provide ${svc.name.toLowerCase()} across ${stName}?`,`Yes — ${svc.serviceType.toLowerCase()} in ${nameList} and metros throughout ${stName}, backed by a nationwide network of 88 locations. <a href="/contact">Get a quote →</a>`],
     [`Which ${stName} cities do you cover?`,`We run ${svc.tag} in ${nameList}, and reach the rest of ${stName} through our nationwide network. Pick your metro below for a local page.`],
-    [`Can you handle ${stName} oversize permits and transport?`,`Yes — when a load runs over legal dimensions on ${ix}, we handle ${stName} DOT permitting, routing, and escorts and haul it in-house, no hand-off.`],
+    [`Can you move equipment between ${stName} facilities?`,`Yes — equipment is rigged out, crated or prepped, moved as project freight on licensed partner carriers, and set by the same crew at the destination.`],
   ];
   const faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":faqPairs.map(([q,a])=>({"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a.replace(/<[^>]+>/g,'')}}))};
   const cards = cities.map(m=>`    <a class="svc-card" href="${m.url.split('/').pop()}"><div class="num">// ${st}</div><h3>${m.city}, ${st}</h3><p>${svc.name} in ${m.city}</p><span class="more">${m.city} ${svc.cardNoun}</span></a>`).join('\n');
@@ -475,7 +433,7 @@ function statePage(serviceSlug, svc, st, cityMs) {
 <meta name="theme-color" content="#141414">
 <meta property="og:type" content="website">
 <meta property="og:title" content="${title}">
-<meta property="og:description" content="${svc.serviceType} across ${stName} — permitted, rigged, and re-leveled to spec.">
+<meta property="og:description" content="${svc.serviceType} across ${stName} — surveyed, rigged, and re-leveled to spec.">
 <meta property="og:url" content="${url}">
 <meta property="og:image" content="${DOMAIN}${svc.hero}">
 <meta name="twitter:card" content="summary_large_image">
@@ -507,7 +465,7 @@ ${NAV}
 <section class="page-hero photo" style="background-image:url('${svc.hero}')"><div class="wrap">
   <span class="section-tag hand">// ${svc.tag} — ${stName.toLowerCase()}</span>
   <h1>${svc.name} in <span class="y">${stName}</span></h1>
-  <p class="lead">${svc.serviceType} across ${stName} — from ${names.slice(0,3).join(', ')} to metros statewide. One accountable crew rigs it, permits it on the ${ix.split(' and ')[0]} corridors, hauls it, and sets it to spec.</p>
+  <p class="lead">${svc.serviceType} across ${stName} — from ${names.slice(0,3).join(', ')} to metros statewide. One accountable crew surveys it, rigs it, manages the move, and sets it to spec.</p>
   <div class="cta-row" style="margin-top:24px;"><a class="btn" href="/contact">Get a ${stName} ${svc.quote} Quote</a></div>
 </div>
   <span class="annot hand tag warn a1">${stName.toUpperCase()}</span>
@@ -516,8 +474,8 @@ ${NAV}
 
 <section><div class="wrap prose">
   <h2>${svc.serviceType} statewide in ${stName}</h2>
-  <p>${stName}'s industrial base runs on machines that have to move — presses, machining centers, production lines, and the plants that house them. Badass Logistics provides ${svc.serviceType.toLowerCase()} in ${nameList}, and reaches every other corner of ${stName} through a nationwide network of 88 locations. One crew plans the lift, protects the floors, and sets the load to spec — and because we run rigging, <a href="/services/heavy-haul">heavy haul</a>, and <a href="/services/machinery-moving">machinery moving</a> in-house, an oversized ${stName} move gets permitted and hauled without a hand-off.</p>
-  <p>Loads that stay legal-dimension just get moved; anything over height, width, or weight has to be legal on every mile. We handle ${stName} DOT oversize and overweight permitting, route surveys, and escorts on the ${ix} corridors as part of the job — so the move reaches its new floor on a compliant route the first time.</p>
+  <p>${stName}'s industrial base runs on machines that have to move — presses, machining centers, production lines, and the plants that house them. Badass Logistics provides ${svc.serviceType.toLowerCase()} in ${nameList}, and reaches every other corner of ${stName} through a nationwide network of 88 locations. One crew plans the lift, protects the floors, and sets the load to spec — and when equipment has to travel, the same team runs it as <a href="/services/project-freight">project freight</a>, so a ${stName} move never gets passed between a rigger, a trucking company, and an installer.</p>
+  <p>Work across ${stName} runs the ${ix} corridors between its industrial metros. Single machines, production lines, and full plant relocations all start the same way: a site survey, a documented plan, and a schedule built around your production calendar — then <a href="/services/rigging">rigging</a>, the move, and the reset handled by one crew.</p>
 </div></section>
 
 <section class="bg-paper" style="border-top:3px solid var(--ink);border-bottom:3px solid var(--ink);"><div class="wrap">
@@ -542,7 +500,7 @@ ${cards}
   <p>Tell us what's moving and where. We'll route the nearest crew and quote it fast.</p>
   <a class="btn dark" href="/contact">Get a ${stName} ${svc.quote} Quote</a>
 </div></div>
-${FOOTER}
+${FOOTER_FOR(`services/${serviceSlug}/${stSlug}.html`)}
 
 </body>
 </html>`;
@@ -555,7 +513,6 @@ const WAVES = {
   'cnc-machine-movers': 'ALL',
   'machinery-moving': 'ALL',
   'plant-relocation':  'ALL',
-  'heavy-haul':        'ALL',
 };
 
 // ---------- build ----------
@@ -611,16 +568,8 @@ console.log(`✓ Built ${stateManifest.length} service×state hub pages`);
 
 fs.writeFileSync(path.join(ROOT, 'data/service-cities.json'), JSON.stringify(manifest, null, 2) + '\n');
 
-// sitemap append (idempotent)
-const smPath = path.join(ROOT, 'sitemap.xml');
-if (fs.existsSync(smPath)) {
-  let sm = fs.readFileSync(smPath, 'utf8');
-  const block = [...manifest, ...stateManifest].map(m => `  <url><loc>${DOMAIN}${m.url}</loc><lastmod>${TODAY}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>`).join('\n');
-  sm = sm.replace(/\s*<!--SVC_CITIES_START-->[\s\S]*?<!--SVC_CITIES_END-->/, '');
-  sm = sm.replace('</urlset>', `  <!--SVC_CITIES_START-->\n${block}\n  <!--SVC_CITIES_END-->\n</urlset>`);
-  fs.writeFileSync(smPath, sm);
-}
+// sitemap.xml is written by build-sitemap.js from what's on disk.
 
 const byService = manifest.reduce((a,m)=>{a[m.service]=(a[m.service]||0)+1;return a;},{});
 console.log(`✓ Built ${manifest.length} service×city pages:`, JSON.stringify(byService));
-console.log(`✓ Updated pillar grids + sitemap.xml + data/service-cities.json`);
+console.log(`✓ Updated pillar grids + data/service-cities.json`);

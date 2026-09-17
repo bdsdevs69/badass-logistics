@@ -3,17 +3,16 @@
    Badass Logistics — single build entrypoint
 
    WHY THIS EXISTS:
-   The generators overwrite the programmatic pages, which WIPES every
-   post-build link pass. On 2026-09-03 someone ran build-service-cities
-   without re-running the linkers; the contextual trailer strips vanished
-   from all 113 heavy-haul city pages and nobody noticed for four weeks.
-   The trailer hubs sat at position 49–79 the whole time.
-
-   Running the steps in the wrong order, or skipping the tail, is the
-   single most expensive recurring mistake in this repo. So: one command.
+   The generators overwrite programmatic pages, which wipes any pass that
+   ran before them. Running steps in the wrong order, or skipping the tail,
+   has silently broken the live site more than once. So: one command.
 
    RUN:  node build.js            (full rebuild, then verify)
          node build.js --verify   (verify only — no writes)
+
+   2026-09 revamp: riggers first. Heavy haul is retired (redirect stubs via
+   data/redirects.json); service pages come from content/services; header and
+   footer come from lib/chrome.js; sitemap and llms.txt are generated last.
    =========================================================== */
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -21,16 +20,21 @@ const path = require('path');
 
 const VERIFY_ONLY = process.argv.includes('--verify');
 
-// Order matters. Generators first (they overwrite), link passes last.
+// Order matters. Writers first, link pass after the pages it links, stubs after
+// every generator (nothing may overwrite them), chrome after every writer,
+// then the files that describe the finished site.
 const STEPS = [
-  ['build-locations.js',     'city/location pages + locations grid + sitemap'],
-  ['build-states.js',        'state hub pages + state chips'],
-  ['build-service-cities.js','440 service x city pages + 125 state hubs'],
-  ['build-trailer-types.js', '7 trailer-type hubs + heavy-haul trailer grid'],
-  ['build-blog.js',          'field-guide articles + blog index'],
-  ['seo-polish.js',          'head/footer upgrades for hand-written pages'],
-  ['link-trailer-hubs.js',   'LINK PASS — trailer hub mesh'],
-  ['link-city-mesh.js',      'LINK PASS — lateral nearby-city mesh'],
+  ['build-locations.js',      '88 city pages + locations grid'],
+  ['build-states.js',         'state hub pages + state chips'],
+  ['build-blog.js',           'field-guide articles + blog index'],
+  ['build-service-pages.js',  '17 service pages from content/services + homepage grid'],
+  ['build-service-cities.js', 'service x city pages + state hubs + pillar metro grids'],
+  ['seo-polish.js',           'head upgrades for hand-written pages'],
+  ['link-city-mesh.js',       'LINK PASS — lateral nearby-city mesh'],
+  ['build-redirects.js',      'redirect stubs for retired URLs'],
+  ['apply-chrome.js',         'shared header + footer on every page'],
+  ['build-llms.js',           'llms.txt'],
+  ['build-sitemap.js',        'sitemap.xml from indexable pages on disk'],
 ];
 
 function run(script, desc) {
@@ -46,10 +50,9 @@ function run(script, desc) {
   }
 }
 
-// ---------- verification: the checks that would have caught the Sep 3 regression ----------
 function walk(dir, out = []) {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
-    if (['node_modules', '.git', 'content-drafts'].includes(e.name)) continue;
+    if (['node_modules', '.git', '.claude', 'content-drafts', 'content', 'lib', 'scripts', 'data', 'assets'].includes(e.name)) continue;
     const p = path.join(dir, e.name);
     if (e.isDirectory()) walk(p, out);
     else if (e.name.endsWith('.html')) out.push(p);
@@ -59,107 +62,116 @@ function walk(dir, out = []) {
 
 function verify() {
   console.log('\n══ VERIFY ═══════════════════════════════════════════');
-  const files = walk(__dirname);
+  const ROOT = __dirname;
+  const all = walk(ROOT);
+  const read = (f) => fs.readFileSync(f, 'utf8');
+  const isStub = (f) => read(f).includes('<!--REDIRECT-->');
+  const files = all.filter(f => !isStub(f));
+  const stubs = all.filter(isStub);
   let fail = 0;
+  const check = (ok, msg, detail = []) => {
+    console.log(`${ok ? '✓' : '✖'} ${msg}`);
+    if (!ok) { fail++; detail.slice(0, 12).forEach(d => console.log('     ' + d)); }
+  };
 
-  // 1. every link pass actually landed
-  const SERVICE_DIRS = ['heavy-haul', 'machinery-moving', 'rigging', 'cnc-machine-movers', 'plant-relocation'];
+  // 1. city mesh landed on every service-city page
+  const SERVICE_DIRS = ['machinery-moving', 'rigging', 'cnc-machine-movers', 'plant-relocation'];
   const cityRe = /-[a-z]{2}\.html$/;
-
-  const hh = fs.existsSync(path.join(__dirname, 'services/heavy-haul'))
-    ? fs.readdirSync(path.join(__dirname, 'services/heavy-haul')).filter(n => n.endsWith('.html')) : [];
-  const hhStrip = hh.filter(n =>
-    fs.readFileSync(path.join(__dirname, 'services/heavy-haul', n), 'utf8').includes('<!--TRAILER_STRIP_START-->')).length;
-  const ok1 = hh.length > 0 && hhStrip === hh.length;
-  console.log(`${ok1 ? '✓' : '✖'} trailer strip: ${hhStrip}/${hh.length} heavy-haul pages`);
-  if (!ok1) fail++;
-
   let meshTotal = 0, meshHas = 0;
   for (const d of SERVICE_DIRS) {
-    const dir = path.join(__dirname, 'services', d);
+    const dir = path.join(ROOT, 'services', d);
     if (!fs.existsSync(dir)) continue;
-    for (const n of fs.readdirSync(dir).filter(x => x.endsWith('.html') && cityRe.test(x))) {
+    for (const n of fs.readdirSync(dir).filter(x => cityRe.test(x))) {
       meshTotal++;
-      if (fs.readFileSync(path.join(dir, n), 'utf8').includes('<!--CITY_MESH_START-->')) meshHas++;
+      if (read(path.join(dir, n)).includes('<!--CITY_MESH_START-->')) meshHas++;
     }
   }
-  const ok2 = meshTotal > 0 && meshHas === meshTotal;
-  console.log(`${ok2 ? '✓' : '✖'} city mesh: ${meshHas}/${meshTotal} service-city pages`);
-  if (!ok2) fail++;
+  check(meshTotal > 0 && meshHas === meshTotal, `city mesh: ${meshHas}/${meshTotal} service-city pages`);
 
-  // 2. no broken internal links
-  const has = (u) => {
+  // 2. internal links resolve, and never point at a redirect stub
+  const resolve = (u) => {
     u = u.split('#')[0].split('?')[0];
-    if (!u.startsWith('/')) return true;
     if (u.endsWith('/')) u += 'index.html';
-    const p = path.join(__dirname, u.replace(/^\//, ''));
-    if (fs.existsSync(p) && fs.statSync(p).isFile()) return true;
-    if (fs.existsSync(p + '.html')) return true;
-    if (fs.existsSync(p) && fs.statSync(p).isDirectory() && fs.existsSync(path.join(p, 'index.html'))) return true;
-    return false;
+    const p = path.join(ROOT, u.replace(/^\//, ''));
+    for (const c of [p, p + '.html', path.join(p, 'index.html')]) {
+      if (fs.existsSync(c) && fs.statSync(c).isFile()) return c;
+    }
+    return null;
   };
-  const broken = new Map();
+  const broken = new Map(), toStub = new Map();
   let checked = 0;
   for (const f of files) {
-    // Strip <script>/<style> first: JS that builds markup contains href="' + fn() + '"
-    // fragments that are not links and would report as false breaks.
-    const html = fs.readFileSync(f, 'utf8')
-      .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '')
-      .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, '');
+    const html = read(f).replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '').replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, '');
     for (const m of html.matchAll(/href="([^"]+)"/g)) {
       const raw = m[1];
       if (/^(https?:|mailto:|tel:|#|javascript:|data:)/i.test(raw)) continue;
       checked++;
-      // Resolve relative hrefs against the page's own directory.
-      const target = raw.startsWith('/')
-        ? raw
-        : '/' + path.relative(__dirname, path.resolve(path.dirname(f), raw.split('#')[0].split('?')[0]));
-      if (!has(target)) {
-        const key = `${raw}  (from /${path.relative(__dirname, f)})`;
-        broken.set(key, (broken.get(key) || 0) + 1);
-      }
+      const target = raw.startsWith('/') ? raw : '/' + path.relative(ROOT, path.resolve(path.dirname(f), raw.split('#')[0].split('?')[0]));
+      const hit = resolve(target);
+      const key = `${raw}  (from /${path.relative(ROOT, f)})`;
+      if (!hit) broken.set(key, (broken.get(key) || 0) + 1);
+      else if (hit.endsWith('.html') && isStubCached(hit)) toStub.set(key, (toStub.get(key) || 0) + 1);
     }
   }
-  const ok3 = broken.size === 0;
-  console.log(`${ok3 ? '✓' : '✖'} internal links: ${checked} checked, ${broken.size} broken`);
-  if (!ok3) { fail++; [...broken].slice(0, 15).forEach(([u, c]) => console.log(`     ${c}x ${u}`)); }
+  check(broken.size === 0, `internal links: ${checked} checked, ${broken.size} broken`, [...broken].map(([u, c]) => `${c}x ${u}`));
+  check(toStub.size === 0, `links to retired URLs: ${toStub.size}`, [...toStub].map(([u, c]) => `${c}x ${u}`));
 
-  // 3. the machinery-moving regression from 2026-08-11 — pillar must keep its city cards
-  const pillar = path.join(__dirname, 'services/machinery-moving.html');
-  if (fs.existsSync(pillar)) {
-    // Pillars link their city cards with RELATIVE hrefs ("machinery-moving/akron-oh"),
-    // so match both forms — an absolute-only pattern reports a false regression.
-    const ph = fs.readFileSync(pillar, 'utf8');
-    const n = new Set(
-      [...ph.matchAll(/href="(?:\/services\/)?machinery-moving\/([a-z-]+)"/g)].map(m => m[1])
-    ).size;
-    const ok4 = n >= 50;
-    console.log(`${ok4 ? '✓' : '✖'} machinery-moving pillar city links: ${n} (expect 50+)`);
-    if (!ok4) fail++;
+  // 3. every pillar with a city matrix still carries its city cards
+  for (const [svc, min] of [['machinery-moving', 50], ['rigging', 50], ['plant-relocation', 50], ['cnc-machine-movers', 50]]) {
+    const pillar = path.join(ROOT, `services/${svc}.html`);
+    const ph = fs.existsSync(pillar) ? read(pillar) : '';
+    const n = new Set([...ph.matchAll(new RegExp(`href="(?:/services/)?${svc}/([a-z-]+)"`, 'g'))].map(m => m[1])).size;
+    check(n >= min, `${svc} pillar city links: ${n} (expect ${min}+)`);
   }
 
-  // 4. titles + descriptions present and unique
+  // 4. titles + descriptions present and unique (stubs exempt)
   const titles = new Map(), descs = new Map();
   let noTitle = 0, noDesc = 0;
   for (const f of files) {
-    const html = fs.readFileSync(f, 'utf8');
+    const html = read(f);
     const t = html.match(/<title>([\s\S]*?)<\/title>/);
     const d = html.match(/name="description"\s+content="([\s\S]*?)"/);
     if (!t) noTitle++; else titles.set(t[1].trim(), (titles.get(t[1].trim()) || 0) + 1);
-    // noindex pages (404, thank-you) never surface in search — a description is moot.
     const noindex = /name="robots"[^>]*content="[^"]*noindex/i.test(html);
     if (!d) { if (!noindex) noDesc++; } else descs.set(d[1].trim(), (descs.get(d[1].trim()) || 0) + 1);
   }
-  const dupT = [...titles.values()].filter(v => v > 1).length;
-  const dupD = [...descs.values()].filter(v => v > 1).length;
-  const ok5 = noTitle === 0 && dupT === 0;
-  console.log(`${ok5 ? '✓' : '✖'} titles: ${files.length} pages, ${noTitle} missing, ${dupT} duplicated`);
+  const dupT = [...titles].filter(([, v]) => v > 1);
+  const dupD = [...descs].filter(([, v]) => v > 1).length;
+  check(noTitle === 0 && dupT.length === 0, `titles: ${files.length} pages, ${noTitle} missing, ${dupT.length} duplicated`, dupT.map(([t, c]) => `${c}x ${t}`));
   console.log(`${noDesc === 0 && dupD === 0 ? '✓' : '!'} descriptions: ${noDesc} missing, ${dupD} duplicated (noindex pages exempt)`);
-  if (!ok5) fail++;
+
+  // 5. positioning: heavy haul must not appear in any indexable page's title,
+  //    description, or site chrome; retired pages must all be stubs
+  const leaks = [];
+  for (const f of files) {
+    const html = read(f);
+    if (/name="robots"[^>]*noindex/i.test(html)) continue;
+    const head = (html.match(/<title>[\s\S]*?<\/title>/) || [''])[0] + ((html.match(/name="description"\s+content="[^"]*"/) || [''])[0]);
+    const chrome = (html.match(/<header[\s\S]*?<\/header>/) || [''])[0] + (html.match(/<footer[\s\S]*?<\/footer>/) || [''])[0];
+    if (/heavy[- ]haul/i.test(head + chrome)) leaks.push('/' + path.relative(ROOT, f));
+  }
+  check(leaks.length === 0, `heavy haul in titles/descriptions/nav/footer: ${leaks.length} pages`, leaks);
+  const hhLeft = fs.existsSync(path.join(ROOT, 'services/heavy-haul'))
+    ? fs.readdirSync(path.join(ROOT, 'services/heavy-haul')).filter(n => !isStubCached(path.join(ROOT, 'services/heavy-haul', n))) : [];
+  check(hhLeft.length === 0, `retired heavy-haul city pages still live: ${hhLeft.length} (${stubs.length} redirect stubs total)`, hhLeft);
+
+  // 6. sitemap lists only indexable, non-stub pages
+  const sm = fs.existsSync(path.join(ROOT, 'sitemap.xml')) ? read(path.join(ROOT, 'sitemap.xml')) : '';
+  const smBad = [...sm.matchAll(/<loc>https:\/\/badasslogistics\.com([^<]*)<\/loc>/g)].map(m => m[1]).filter(u => {
+    const hit = resolve(u === '' ? '/' : u);
+    return !hit || isStubCached(hit);
+  });
+  check(sm.length > 0 && smBad.length === 0, `sitemap: ${(sm.match(/<loc>/g) || []).length} URLs, ${smBad.length} bad`, smBad);
 
   console.log('═════════════════════════════════════════════════════');
   if (fail) { console.error(`✖ ${fail} check(s) FAILED — do not deploy.`); process.exit(1); }
   console.log('✓ All checks passed.\n');
+}
+
+const stubCache = new Map();
+function isStubCached(f) {
+  if (!stubCache.has(f)) stubCache.set(f, fs.readFileSync(f, 'utf8').includes('<!--REDIRECT-->'));
+  return stubCache.get(f);
 }
 
 if (!VERIFY_ONLY) {

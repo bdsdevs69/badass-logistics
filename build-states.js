@@ -73,30 +73,12 @@ const citySlug = (city, st) =>
   `${city.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}-${st.toLowerCase()}`;
 const stateSlug = (st) => STATE[st].name.toLowerCase().replace(/ /g, '-');
 
-const HEROES = ['heavyhaul-hero.jpg', 'rigging-hero.jpg', 'heavyhaul-real.jpg', 'brokerage-hero.jpg', 'rigging-crane2.jpg', 'dispatch-hero.jpg'];
-const BANDS  = ['rigging-crane.jpg', 'rgn-load.jpg', 'heavyhaul-load.jpg', 'brokerage-flatbed.jpg', 'dispatch-truck.jpg', 'brokerage-truck.jpg'];
+const HEROES = ['rigging-hero.jpg', 'loads/load-machine-loadout.jpg', 'rigging-crane2.jpg', 'loads/tarped-machinery-flatbed-warehouse-loadout.jpg', 'mri-real.jpg', 'loads/load-crated-equipment.jpg'];
+const BANDS  = ['rigging-crane.jpg', 'loads/load-pallet-racking.jpg', 'loads/load-mri-rigging.jpg', 'loads/white-glove-crated-equipment-delivery.jpg', 'loads/enclosed-trailer-machinery-loaded.jpg', 'rigging-hero.jpg'];
 const pick = (arr, i) => arr[i % arr.length];
 
-const NAV = `
-<div class="topbar"><div class="wrap"><div>📍 88 locations nationwide &nbsp;·&nbsp; <strong>All 50 states</strong></div><div><a href="tel:${site.phoneHref}">📞 ${site.phone}</a> &nbsp;·&nbsp; <a href="../contact.html"><strong>Get a Quote</strong></a></div></div></div>
-<header class="site-header"><div class="wrap">
-  <a class="logo" href="../index.html"><span class="brand"><span class="l1">BADASS</span><span class="l2">LOGISTICS</span></span></a>
-  <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
-  <nav class="main" id="nav">
-    <a href="../index.html">Home</a><a href="../services/rigging.html">Rigging</a><a href="../services/heavy-haul.html">Heavy Haul</a><a href="../services/machinery-moving.html">Machinery Moving</a><a href="../locations.html">Locations</a><a href="../blog/index.html">Blog</a><a href="../about.html">About</a>
-    <a class="btn" style="font-size:14px;padding:9px 16px;box-shadow:3px 3px 0 var(--ink)" href="../contact.html">Get a Quote</a>
-  </nav>
-</div></header>`;
-
-const FOOTER = `
-<footer><div class="wrap"><div class="cols">
-  <div><h4>Badass Logistics</h4><p style="opacity:.85;max-width:280px;">Industrial rigging &amp; heavy haul — our own crews, machinery, and rigging gear, plus a network of specialized carriers for everything oversized and overweight.</p></div>
-  <div><h4>Services</h4><a href="../services/rigging.html">Industrial Rigging</a><a href="../services/heavy-haul.html">Heavy Haul Transport</a><a href="../services/machinery-moving.html">Machinery Moving</a><a href="../services/cnc-machine-movers.html">CNC Machine Movers</a><a href="../services/plant-relocation.html">Plant Relocation</a></div>
-  <div><h4>Trailer Types</h4><a href="/services/rgn-trailer">RGN Transport</a><a href="/services/lowboy-trailer">Lowboy Transport</a><a href="/services/step-deck-trailer">Step-Deck Transport</a><a href="/services/double-drop-trailer">Double-Drop &amp; Stretch</a><a href="/services/flatbed-transport">Flatbed Transport</a><a href="/services/conestoga-trailer">Conestoga Transport</a><a href="/services/multi-axle-transport">Multi-Axle &amp; Superload</a></div>
-  <div><h4>Company</h4><a href="../about.html">About Us</a><a href="../locations.html">Locations</a><a href="../blog/index.html">Blog</a><a href="../contact.html">Contact</a><a href="../privacy.html">Privacy</a></div>
-  
-</div><div class="covstrip">Coverage: <a href="../locations/texas.html">Texas</a> · <a href="../locations/california.html">California</a> · <a href="../locations/florida.html">Florida</a> · <a href="../locations/georgia.html">Georgia</a> · <a href="../locations/illinois.html">Illinois</a> · <a href="../locations/ohio.html">Ohio</a> · <a href="../locations/pennsylvania.html">Pennsylvania</a> · <a href="../locations/new-york.html">New York</a> · <a href="../locations.html"><strong>All 88 locations →</strong></a></div>
-<div class="footer-nap"><span class="nap-name">Badass Logistics</span><span>1001 S Main St, STE 500, Kalispell, MT 59901</span><span><a href="tel:${site.phoneHref}">${site.phone}</a></span><span><a href="mailto:${site.email}">${site.email}</a></span></div><div class="legal"><span>© 2022–2026 Badass Logistics. All rights reserved.</span><span class="hand">made to move heavy things.</span></div></div></footer>`;
+const chrome = require('./lib/chrome');
+const NAV = `\n${chrome.topbar()}\n${chrome.header()}`;
 
 function statePage(st, cities, idx, allStates) {
   const meta = STATE[st];
@@ -118,16 +100,16 @@ function statePage(st, cities, idx, allStates) {
   // neighbor states = same region, excluding self
   const neighbors = allStates.filter(s => s !== st && STATE[s].region === meta.region);
 
-  const title = `${name} Heavy Haul, Rigging &amp; Freight Services | Badass Logistics`;
-  const desc = `Heavy haul, industrial rigging, machinery moving, and plant relocation across ${name} — based out of ${cityList}. Oversize/overweight permits, our own rigging crews, specialized carriers for the haul. Fast quotes.`;
+  const title = `${name} Rigging, Machinery Moving &amp; Project Freight | Badass Logistics`;
+  const desc = `Industrial rigging, machinery moving, plant relocation, and project freight across ${name} — local crews in ${cityList}. Our own riggers and gear. Fast quotes.`;
 
   const svcSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "serviceType": "Heavy Haul, Rigging & Freight Services",
+    "serviceType": "Industrial Rigging, Machinery Moving & Project Freight",
     "areaServed": { "@type": "State", "name": name },
     "provider": { "@type": "LocalBusiness", "@id": site.domain + "/#organization", "name": site.brand, "telephone": site.phone, "email": site.email, "url": site.domain + "/" },
-    "description": `${site.brand} provides industrial rigging, heavy haul, and machinery moving throughout ${name}.`
+    "description": `${site.brand} provides industrial rigging, machinery moving, plant relocation, and project freight throughout ${name}.`
   };
   const breadcrumb = {
     "@context": "https://schema.org",
@@ -143,14 +125,14 @@ function statePage(st, cities, idx, allStates) {
     "@type": "FAQPage",
     "mainEntity": [
       { "@type": "Question", "name": `Do you cover all of ${name}?`, "acceptedAnswer": { "@type": "Answer", "text": `Yes — statewide. Our ${name} coverage runs out of ${cityList} and reaches every corner of the state, with the national network behind it for cross-country moves.` } },
-      { "@type": "Question", "name": `Can you handle oversize and overweight permits in ${name}?`, "acceptedAnswer": { "@type": "Answer", "text": `Yes. We handle ${name} DOT oversize/overweight permitting, route surveys, clearance checks, and pilot-car or escort coordination as part of every heavy haul move.` } },
+      { "@type": "Question", "name": `What kinds of rigging do you do in ${name}?`, "acceptedAnswer": { "@type": "Answer", "text": `Every kind — machinery moving, plant relocation, CNC and MRI moves, crane and gantry lifts, millwright installation, and data center, chiller, and transformer rigging — plus project freight for the jobs we rig.` } },
       { "@type": "Question", "name": `What cities do you serve in ${name}?`, "acceptedAnswer": { "@type": "Answer", "text": `${plural ? 'Our ' + name + ' pages cover ' + cityList : 'Our ' + name + ' hub is ' + cityList} — and we work statewide, including ${townsSample.slice(0, 5).join(', ')} and beyond.` } },
-      { "@type": "Question", "name": `How fast can you quote a ${name} load?`, "acceptedAnswer": { "@type": "Answer", "text": `Send dimensions, weight, pickup, and destination and we typically turn ${name} quotes around the same day.` } }
+      { "@type": "Question", "name": `How fast can you quote a ${name} load?`, "acceptedAnswer": { "@type": "Answer", "text": `Send the equipment, weights, and both sites and we typically turn ${name} quotes around the same day.` } }
     ]
   };
 
   const cityCards = cities.map(c => `
-    <a class="svc-card" href="${citySlug(c.city, c.state)}.html"><span class="num hand">${c.state} — ${c.hub}</span><h3>${c.city}, ${c.state}</h3><p>${(c.near || []).slice(0, 4).join(' · ')}${(c.near || []).length ? ' &amp; more' : ''}</p><span class="more">${c.city} rigging &amp; heavy haul</span></a>`).join('');
+    <a class="svc-card" href="${citySlug(c.city, c.state)}.html"><span class="num hand">${c.state} — ${c.hub}</span><h3>${c.city}, ${c.state}</h3><p>${(c.near || []).slice(0, 4).join(' · ')}${(c.near || []).length ? ' &amp; more' : ''}</p><span class="more">${c.city} rigging &amp; machinery moving</span></a>`).join('');
 
   const neighborChips = neighbors.map(s => `<a href="${stateSlug(s)}.html">${STATE[s].name}</a>`).join('');
 
@@ -166,12 +148,12 @@ function statePage(st, cities, idx, allStates) {
 <link rel="canonical" href="${pageUrl}">
 <meta property="og:type" content="website">
 <meta property="og:title" content="${title}">
-<meta property="og:description" content="Statewide ${name} heavy haul, rigging &amp; machinery moving. Fast quotes, permits handled.">
+<meta property="og:description" content="Statewide ${name} industrial rigging, machinery moving &amp; project freight. Fast quotes.">
 <meta property="og:url" content="${pageUrl}">
 <meta property="og:image" content="${site.domain}/assets/img/og-default.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${title}">
-<meta name="twitter:description" content="Statewide ${name} heavy haul, rigging &amp; machinery moving.">
+<meta name="twitter:description" content="Statewide ${name} industrial rigging, machinery moving &amp; project freight.">
 <meta name="twitter:image" content="${site.domain}/assets/img/og-default.jpg">
 <link rel="sitemap" type="application/xml" href="${site.domain}/sitemap.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -206,8 +188,8 @@ ${NAV}
 
 <section class="page-hero photo" style="background-image:url('../assets/img/${hero}')"><div class="wrap">
   <span class="section-tag hand">// statewide — ${name.toLowerCase()}</span>
-  <h1>${name} <span class="y">Heavy Haul, Rigging &amp; Freight</span></h1>
-  <p class="lead">Industrial rigging, heavy haul, and machinery moving across ${name} — anchored in ${cityList} and working statewide. If it is oversized, overweight, or on a deadline, it is our kind of load.</p>
+  <h1>${name} <span class="y">Rigging &amp; Machinery Moving</span></h1>
+  <p class="lead">Industrial rigging, machinery moving, and plant relocation across ${name} — local crews in ${cityList}, working statewide. If it is heavy, fragile, or on a deadline, it is our kind of job.</p>
   <div class="cta-row" style="margin-top:24px;"><a class="btn" href="../contact.html">Get a ${name} Quote</a></div>
 </div>
   <span class="annot hand tag warn a1">${st} • STATEWIDE</span>
@@ -215,66 +197,66 @@ ${NAV}
 </section>
 
 <section class="notes-bg">
-  <span class="bgnote" style="top:12%;right:5%;transform:rotate(-4deg)">${st} DOT PERMITS ✓</span>
+  <span class="bgnote" style="top:12%;right:5%;transform:rotate(-4deg)">${st} CREWS ✓</span>
   <span class="bgnote" style="top:48%;left:3%;transform:rotate(3deg)">${meta.ix} CORRIDORS</span>
   <span class="bgnote" style="bottom:12%;right:7%;transform:rotate(-3deg)">STATEWIDE ✓</span>
   <div class="wrap prose">
-  <h2>Heavy haul &amp; rigging across ${name}</h2>
-  <p>${site.brand} runs industrial rigging, heavy haul, and machinery moving throughout ${name}, with local coverage built around ${cityList}. The state's freight moves on the ${meta.ix} corridors, and our crews move with it — machinery, oversize loads, and plant relocations in the ${industries} ${plural ? 'markets' : 'market'}.</p>
-  <p>Every oversize or overweight move through ${name} needs to be legal on every mile: state permits, routing around restricted bridges, travel-time windows, and escorts where dimensions require them. We handle the ${name} DOT paperwork, the route survey, and the pilot cars as part of the job — read our <a href="../blog/oversize-load-permits-guide.html">permit guide</a> and <a href="../blog/how-much-does-heavy-haul-cost.html">cost guide</a> for what to expect, then send us the load.</p>
+  <h2>Rigging &amp; machinery moving across ${name}</h2>
+  <p>${site.brand} runs <a href="../services/rigging.html">industrial rigging</a>, <a href="../services/machinery-moving.html">machinery moving</a>, and <a href="../services/plant-relocation.html">plant relocation</a> throughout ${name}, with local crews built around ${cityList}. Our work follows the ${industries} ${plural ? 'markets' : 'market'} — presses and machine tools, production lines, MRI and imaging equipment, generators, chillers, and the plants that house them.</p>
+  <p>When equipment has to travel — between ${name} plants on the ${meta.ix} corridors or out of state — we run it as <a href="../services/project-freight.html">project freight</a>: crated or prepped on site, moved on licensed partner carriers, and set by the same crew at the other end. Trucking companies running four or more trucks in ${name} can also put them on our <a href="../services/truck-dispatch.html">fleet dispatch desk</a>.</p>
 </div></section>
 
 <section class="bg-paper notes-bg" style="border-top:3px solid var(--ink);border-bottom:3px solid var(--ink);">
-  <span class="bgnote" style="top:10%;right:4%;transform:rotate(-4deg)">RIG · HAUL · DISPATCH · FREIGHT</span>
+  <span class="bgnote" style="top:10%;right:4%;transform:rotate(-4deg)">RIG · MOVE · SET</span>
   <span class="bgnote" style="top:52%;left:3%;transform:rotate(3deg)">NEAREST CREW →</span>
-  <span class="bgnote" style="bottom:10%;right:6%;transform:rotate(-3deg)">OVERSIZE • OVERWEIGHT</span>
+  <span class="bgnote" style="bottom:10%;right:6%;transform:rotate(-3deg)">SET &amp; LEVELED ✓</span>
   <div class="wrap">
   <span class="section-tag hand">where we work in ${name}</span>
   <h2 class="section-title">${name} ${plural ? 'cities' : 'coverage'}</h2>
   <div class="grid-services">${cityCards}
   </div>
-  ${townsSample.length ? `<p style="margin-top:24px;font-weight:600;">Also moving freight near ${townsSample.join(', ')} — and everywhere in between. <a href="../contact.html" style="color:var(--yellow-deep);text-decoration:underline;">Tell us where</a>.</p>` : ''}
+  ${townsSample.length ? `<p style="margin-top:24px;font-weight:600;">Also working near ${townsSample.join(', ')} — and everywhere in between. <a href="../contact.html" style="color:var(--yellow-deep);text-decoration:underline;">Tell us where</a>.</p>` : ''}
 </div></section>
 
 <section class="notes-bg">
-  <span class="bgnote" style="top:14%;right:5%;transform:rotate(-4deg)">EVERY MILE LEGAL ✓</span>
+  <span class="bgnote" style="top:14%;right:5%;transform:rotate(-4deg)">SURVEY FIRST ✓</span>
   <span class="bgnote" style="bottom:12%;left:4%;transform:rotate(4deg)">88 LOCATIONS NATIONWIDE</span>
   <div class="wrap">
   <span class="section-tag hand">on the map</span>
   <h2 class="section-title">${name} coverage map</h2>
-  <p class="section-intro">Statewide ${name} — industrial rigging, heavy haul, and machinery moving, backed by a nationwide network of 88 locations.</p>
+  <p class="section-intro">Statewide ${name} — industrial rigging, machinery moving, and project freight, backed by a nationwide network of 88 locations.</p>
   <div class="map-frame" style="margin-top:24px;">
-    <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="${name} heavy haul coverage map" src="https://maps.google.com/maps?q=${mapQ}&z=6&output=embed"></iframe>
+    <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="${name} rigging coverage map" src="https://maps.google.com/maps?q=${mapQ}&z=6&output=embed"></iframe>
   </div>
 </div></section>
 
 <div class="photo-band" style="background-image:url('../assets/img/${band}')">
   <span class="annot hand tag a1">${name.toUpperCase()} ✓</span>
-  <span class="annot hand a6">OVERSIZE • OVERWEIGHT</span>
+  <span class="annot hand a6">RIGGED &amp; SET ✓</span>
 </div>
 
 <section class="bg-paper notes-bg" style="border-top:3px solid var(--ink);border-bottom:3px solid var(--ink);">
-  <span class="bgnote" style="top:14%;right:5%;transform:rotate(-4deg)">PERMITTED &amp; PILOTED</span>
-  <span class="bgnote" style="top:52%;left:3%;transform:rotate(3deg)">MEASURE TWICE — HAUL ONCE</span>
+  <span class="bgnote" style="top:14%;right:5%;transform:rotate(-4deg)">LIFT PLAN SIGNED</span>
+  <span class="bgnote" style="top:52%;left:3%;transform:rotate(3deg)">MEASURE TWICE — LIFT ONCE</span>
   <span class="bgnote" style="bottom:10%;right:6%;transform:rotate(-3deg)">SAME-DAY QUOTE</span>
   <div class="wrap">
   <span class="section-tag hand">questions</span>
-  <h2 class="section-title">${name} heavy haul FAQ</h2>
+  <h2 class="section-title">${name} rigging FAQ</h2>
   <div class="faq">
     <details open><summary>Do you cover all of ${name}?</summary><div class="a">Yes — statewide, anchored in ${cityList} with the national network behind it. <a href="../contact.html">Get a quote →</a></div></details>
-    <details><summary>Can you handle oversize &amp; overweight permits in ${name}?</summary><div class="a">Yes — ${name} DOT permitting, route surveys, clearances, and escort coordination are part of every heavy haul move we run.</div></details>
+    <details><summary>What kinds of rigging do you do in ${name}?</summary><div class="a">Every kind — machinery moving, plant relocation, CNC and MRI moves, crane and gantry lifts, millwright installation, and data center, chiller, and transformer rigging. <a href="../services/rigging.html">See every type →</a></div></details>
     <details><summary>What cities do you serve in ${name}?</summary><div class="a">${plural ? cityList + ' each have a dedicated local page below — and we work statewide.' : cityList + ' is our ' + name + ' hub — and we work statewide.'} <a href="../locations.html">All locations →</a></div></details>
-    <details><summary>How fast can you quote a ${name} load?</summary><div class="a">Send dimensions, weight, pickup, and destination — ${name} quotes usually turn around same day.</div></details>
+    <details><summary>How fast can you quote a ${name} job?</summary><div class="a">Send the equipment, weights, and both sites — ${name} quotes usually turn around the same day.</div></details>
   </div>
   ${neighborChips ? `<h3 style="margin-top:34px;font-size:22px;">Nearby states we cover across ${meta.region}</h3><div class="metros">${neighborChips}</div>` : ''}
 </div></section>
 
 <div class="cta-band"><div class="wrap" style="padding-top:56px;padding-bottom:56px;text-align:center;">
   <h2>Moving something through ${name}?</h2>
-  <p>Tell us the load and the lane. We will route the nearest crew and quote it fast.</p>
+  <p>Tell us what's moving and where. We will send the nearest crew and quote it fast.</p>
   <a class="btn dark" href="../contact.html">Get a ${name} Quote</a>
 </div></div>
-${FOOTER}
+${chrome.footer(`locations/${slug}.html`)}
 
 </body>
 </html>`;

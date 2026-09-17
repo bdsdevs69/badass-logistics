@@ -1,0 +1,117 @@
+// /services/machinery-moving — ranks for "machinery movers"; rewritten 2026-09 without heavy haul.
+module.exports = {
+  slug: 'machinery-moving',
+  cardBlurb: 'Presses, generators, compressors, and full production lines — disconnected, rigged, moved, and re-leveled by one crew.',
+  title: 'Machinery Moving Company | Industrial Machinery Movers | Badass Logistics',
+  description: 'Industrial machinery movers for single machines, production lines, and plant moves. Survey, rigging, staging, project freight, and reinstall — built around downtime.',
+  serviceType: 'Machinery Moving',
+  hero: '/assets/img/loads/load-machine-loadout.jpg',
+  band: '/assets/img/rigging-crane.jpg',
+  bandAnnots: ['MACHINE MOVED ✓', 'LINE BACK UP →'],
+  tag: 'machinery movers — rigging first',
+  h1: 'Industrial <span class="y">Machinery Moving</span>',
+  lead: 'Every hour your line is down costs money. We move machines across the shop, across town, or across the country on a documented plan that gets production back up on schedule — one crew from disconnect to reinstall.',
+  cta: 'Get a Machinery Moving Quote',
+  annots: ['DOWNTIME — MINIMIZED', 'PATH OF TRAVEL ✓', 'FLOOR LOAD ✓', 'LEVEL ± 0.001"'],
+  bgnotes: ['FLOOR LOAD ✓', 'LEVEL TO SPEC', 'RECOMMISSION →', 'SURVEY FIRST', 'AIR SKATES', 'SET &amp; LEVEL ✓', 'LOTO VERIFIED', 'TAG &amp; MAP', 'STAGED ✓', 'LIFT POINTS PER OEM', 'DOOR 12\'0" W', 'NIGHT SHIFT MOVE'],
+  quickAnswer: 'Machinery moving is the de-installation, relocation, and reinstallation of industrial machines — presses, CNC machines, generators, compressors, and full production lines. Badass Logistics surveys the move, rigs the equipment out, stages it when needed, manages the freight between facilities, and sets and levels it back to the builder\'s spec with one crew and one point of contact.',
+  intro: {
+    h2: 'Machinery movers who own the whole move',
+    paragraphs: [
+      'Most machinery moves fail in the gaps: the rigger who only lifts, the trucking company that only drives, the installer who shows up to a machine that was moved wrong. Badass Logistics closes those gaps by running <a href="/services/rigging">industrial rigging</a>, the move between buildings, and reinstallation as one job with one accountable crew — so your CNC machine, press, or production line comes back online when the plan says it will.',
+      'We move single machines between bays, relocate complete lines between plants, and take on full facility moves across state lines. When a machine leaves the building, it runs as <a href="/services/project-freight">project freight</a> inside the same plan: <a href="/services/crating-packing">crated or prepped</a> on site, loaded in sequence, and moved on licensed partner carriers — with <a href="/services/dedicated-lanes">dedicated capacity</a> when there are enough loads to justify it.',
+      'The part nobody sees is the planning. Doorways, ceiling heights, floor capacity, the route to the dock, the utilities that have to be disconnected and by whom — all of it gets measured and written down before rig day. That\'s why the move itself looks boring. Boring is the goal.',
+    ],
+  },
+  capabilities: {
+    tag: 'what we move',
+    h2: 'Machinery we move',
+    items: [
+      { k: 'forming', h: 'Presses &amp; Fabrication', p: 'Stamping presses, press brakes, shears, punches, and injection molding machines.' },
+      { k: 'machining', h: 'CNC &amp; Machine Tools', p: 'VMCs, HMCs, lathes, and grinders — see <a href="/services/cnc-machine-movers">CNC machine movers</a>.' },
+      { k: 'power', h: 'Generators &amp; Compressors', p: 'Generator sets, air compressors, switchgear, and plant utilities.' },
+      { k: 'lines', h: 'Production Lines', p: 'Complete lines and multi-machine cells, sequenced around production.' },
+      { k: 'process', h: 'Process Equipment', p: 'Tanks, mixers, ovens, dust collectors, conveyors, and skids.' },
+      { k: 'staging', h: 'Storage &amp; Staging', p: 'New floor not ready? Equipment secured and staged, then set on your schedule.' },
+    ],
+  },
+  sections: [
+    {
+      tag: 'before rig day',
+      h2: 'What gets decided before anything moves',
+      paragraphs: [
+        'A machinery move is won or lost in the survey. We walk both sites and write down what actually matters:',
+      ],
+      list: [
+        'Machine weight and center of gravity — from the builder\'s data or measured, never guessed from a brochure',
+        'Every doorway, turn, ramp, and ceiling on the path of travel, plus overhead obstructions like sprinkler lines and bus duct',
+        'Floor capacity along the route and at the new pad, including trenches, drains, and slab joints',
+        'Who disconnects what: electrical, air, water, coolant, hydraulics — and who reconnects it',
+        'Gear for the job: toe jacks, air skates, roller dollies, gantry, forklift, or crane',
+        'The production calendar, so the move window fits the schedule instead of the other way around',
+      ],
+      after: [
+        'That plan becomes the move sequence. Anything that could surprise the crew on the day — a floor that won\'t take the load, a door that\'s two inches short — gets found on paper instead.',
+      ],
+    },
+    {
+      bg: 'paper',
+      tag: 'between buildings',
+      h2: 'When the machine goes to another facility',
+      paragraphs: [
+        'Across the plant is a rigging job. Across the state is a rigging job with freight in the middle, and that middle is where machines get damaged: loose securement, the wrong equipment, a truck that shows up before the crew is ready or after they\'ve gone home.',
+        'We manage that stretch as part of the move. Machines are drained, locked, and <a href="/services/crating-packing">crated or wrapped</a> on site. Loads are planned around weight, dimensions, and install order. Transport runs on licensed, insured partner carriers, on air-ride where the machine calls for it, timed to the rig-out and rig-in. For relocations with a lot of equipment, trucks run on <a href="/services/dedicated-lanes">dedicated lanes</a> for the life of the project.',
+      ],
+    },
+  ],
+  media: {
+    tag: 'on the job',
+    h2: 'Rigged out, moved, set back to spec',
+    intro: 'Real machinery moves by our crews — not stock photos.',
+    checklist: [
+      'Lifted only from the manufacturer\'s designated points',
+      'Axes, spindles, and moving assemblies locked for the move',
+      'Floors protected and path of travel load-checked',
+      'Machines staged securely when the new floor isn\'t ready',
+      'Set, leveled, and walked with you before hand-off',
+    ],
+    images: [
+      { src: '/assets/img/loads/tarped-machinery-flatbed-warehouse-loadout.jpg', alt: 'Two tarped industrial machines loaded on a flatbed trailer outside a warehouse after load-out', caption: 'Load-out done — tarped, secured, and ready to go.' },
+    ],
+  },
+  process: {
+    h2: 'How a machinery move runs',
+    steps: [
+      { h: 'Site survey &amp; plan', p: 'Both floors measured — machine, doorways, clearances, floor capacity, path of travel.' },
+      { h: 'Prep &amp; disconnect', p: 'Coordinated lockout, drained fluids, axis securement, and OEM transport prep where required.' },
+      { h: 'Rig out', p: 'Toe jacks, air skates, gantries — the machine moves on a planned path, under control.' },
+      { h: 'Move or stage', p: 'Project freight to the new site on partner carriers, or into secure staging until your floor is ready.' },
+      { h: 'Set, level &amp; hand off', p: 'Placed on the new pad, leveled to the builder\'s spec, ready for recommissioning.' },
+    ],
+  },
+  industries: {
+    h2: 'Who we move machinery for',
+    items: ['Machine shops &amp; job shops', 'Automotive &amp; tier suppliers', 'Metal fabrication', 'Plastics &amp; injection molding', 'Food &amp; beverage', 'Printing &amp; packaging', 'Aerospace &amp; defense', 'Energy &amp; utilities', 'Equipment dealers &amp; auction buyers', 'General contractors', 'Universities &amp; labs'],
+  },
+  faq: [
+    { q: 'What does a machinery moving company do?', a: 'The full lifecycle: planning and survey, disconnect coordination, rigging out, moving the machine or staging it, and setting, leveling, and reinstalling at the destination — one crew, one plan.' },
+    { q: 'How do you keep downtime short during a machinery move?', a: 'Everything is decided before rig day — path of travel, floor loads, gear, sequence — and the move is scheduled around your production calendar, nights and weekends included, so the line is down only for the move window.' },
+    { q: 'Can you move a whole production line or plant?', a: 'Yes — single machines, full production lines, and complete facility relocations. See <a href="/services/plant-relocation">plant &amp; project relocation</a>.' },
+    { q: 'Can you move machinery to another state?', a: 'Yes. We rig it out, prep or crate it, manage the transport as <a href="/services/project-freight">project freight</a> on licensed partner carriers, and set it at the new facility.' },
+    { q: 'What if the new building isn\'t ready?', a: 'We secure and stage your equipment, then deliver and set it when the floor is ready. <a href="/contact">Tell us the timeline →</a>' },
+    { q: 'Do you move a single machine, or only big projects?', a: 'Both. A single machine across the shop is a normal job for us — it gets the same survey and plan as a full line.' },
+  ],
+  faqTitle: 'Machinery moving FAQ',
+  related: ['cnc-machine-movers', 'plant-relocation', 'millwright-services', 'crating-packing', 'dedicated-lanes'],
+  guides: [
+    ['how-to-prepare-a-machine-for-shipping', 'How to Prepare a Machine for Shipping'],
+    ['how-to-move-a-press-brake', 'How to Move a Press Brake'],
+    ['machine-leveling-and-alignment', 'Machine Leveling &amp; Alignment'],
+    ['how-to-move-a-cnc-machine', 'How to Move a CNC Machine'],
+  ],
+  metrosSentinel: 'MM_METROS',
+  metrosTag: 'machinery movers by metro',
+  metrosH2: 'Where we move machinery',
+  metrosIntro: 'Industrial machinery moving in the country\'s biggest manufacturing markets — our own crews and rigging gear, backed by a nationwide network of 88 locations.',
+  ctaBand: { h2: 'Got a machine that needs a new home?', p: 'Send the model list and both floor plans. We\'ll plan the move machine by machine.' },
+};

@@ -1,0 +1,97 @@
+// /services/plant-relocation — Plant & Project Relocation. The strongest bridge between rigging and project freight.
+module.exports = {
+  slug: 'plant-relocation',
+  cardBlurb: 'Whole floors, production lines, and multi-site consolidations — sequenced, moved as one project, and reinstalled to spec.',
+  title: 'Plant Relocation Services | Factory & Project Relocation | Badass Logistics',
+  description: 'Plant relocation and industrial project relocation — production lines, machine cells, and whole facilities sequenced, moved, and reinstalled around your downtime.',
+  serviceType: 'Plant & Factory Relocation',
+  hero: '/assets/img/heavyhaul-hero.jpg',
+  band: '/assets/img/loads/load-pallet-racking.jpg',
+  bandAnnots: ['PHASE 2 OF 4 ✓', 'LINE BACK UP →'],
+  tag: 'plant &amp; industrial project relocation',
+  h1: 'Plant &amp; Project <span class="y">Relocation</span>',
+  lead: 'When the whole floor moves, the order is everything. We relocate production lines, machine cells, and entire facilities — survey, teardown, sequenced freight, reinstall, re-level — planned so your line is down only for the move window, not a day longer.',
+  cta: 'Get a Plant Relocation Quote',
+  annots: ['DOWNTIME — MINIMIZED', 'SEQUENCE 1 → 48', 'TAGGED &amp; MAPPED', 'LINE BACK UP →'],
+  bgnotes: ['TAG &amp; MAP', 'SEQUENCE FIRST', 'NEW PAD READY?', 'TRUCK 7 OF 22', 'LOTO ✓', 'PHASE 2', 'UTILITIES OFF', 'REINSTALL ORDER', 'FLOOR PLAN REV C', 'PUNCH LIST ✓', 'DAY 1 — TEARDOWN', 'FIRST PART OFF'],
+  quickAnswer: 'Plant relocation is the sequenced move of production lines or an entire facility with minimal downtime. Badass Logistics surveys and tags every asset, plans the sequence backward from your production start date, rigs each machine out, runs the freight between sites as one project, and reinstalls and levels everything in the new layout — one team from the first survey to the first part off the line.',
+  intro: {
+    h2: 'One team owns the whole relocation',
+    paragraphs: [
+      'A plant move isn\'t one big lift — it\'s dozens or hundreds of moves in the right order. Disconnect, teardown, crating, freight, reinstall, recommission. Get the sequence wrong and the new floor sits half-built while production bleeds. Badass Logistics runs the entire project with one accountable team, so nothing falls into the cracks between the rigger, the trucking company, and the installer.',
+      'We map the path of travel and floor loading at both sites, tear down and label, <a href="/services/crating-packing">crate and prep</a> what needs it, and run the loads as <a href="/services/project-freight">project freight</a> on <a href="/services/dedicated-lanes">dedicated lanes</a> timed to the crew. At the new building we <a href="/services/machinery-moving">rig and set</a> every machine back to spec in the new layout — including the precision <a href="/services/cnc-machine-movers">CNC machines</a> that have to come back holding tolerance.',
+      'New to planning a facility move? Start with our <a href="/blog/plant-relocation-checklist">plant relocation checklist</a>, then see how we handle the tricky pieces like <a href="/blog/machine-leveling-and-alignment">re-leveling machines to spec</a> at the new site.',
+    ],
+  },
+  capabilities: {
+    tag: 'what we relocate',
+    h2: 'Plant &amp; project relocation',
+    items: [
+      { k: 'production lines', h: 'Full Production Lines', p: 'Sequenced teardown, freight, and reinstallation of complete lines.' },
+      { k: 'machine cells', h: 'Machine Cells', p: 'Multi-machine cells relocated and re-leveled in the new layout.' },
+      { k: 'utilities', h: 'Plant Utilities', p: 'Compressors, dust collection, conveyors, and the support gear that moves with the line.' },
+      { k: 'consolidation', h: 'Multi-Site Moves', p: 'Two floors consolidated into one, or production split out to a new building.' },
+      { k: 'removal', h: 'Decommissioning', p: 'Equipment that isn\'t making the trip rigged out cleanly so the old building can be handed back.' },
+      { k: 'staging', h: 'Storage &amp; Staging', p: 'Equipment secured and staged when the new floor isn\'t ready yet.' },
+    ],
+  },
+  sections: [
+    {
+      tag: 'the sequence',
+      h2: 'Planned backward from your start-up date',
+      paragraphs: [
+        'Every relocation plan we build starts at the end: the day the first line has to run in the new building. From there we work backward — which machines are needed first, which utilities have to be live before they land, which pads and anchors have to be ready, and how many days each teardown and reinstall really takes.',
+      ],
+      subsections: [
+        { h: 'Survey &amp; asset list', paragraphs: ['Every machine and piece of support equipment gets tagged with its weight, dimensions, utilities, and destination on the new floor plan. That list drives the rigging plan, the crating plan, and the truck count.'] },
+        { h: 'Phasing', paragraphs: ['Most plants can\'t go dark for the whole move. We break it into phases — often line by line — so part of production keeps running at the old site while the first lines come up at the new one.'] },
+        { h: 'Tag, map, photograph', paragraphs: ['Cables, hoses, and guards get labeled and photographed before they come off. Reassembly should be a checklist, not archaeology.'] },
+      ],
+    },
+    {
+      bg: 'paper',
+      tag: 'the freight in the middle',
+      h2: 'Where rigging meets project freight',
+      paragraphs: [
+        'A relocation is the clearest example of why we run freight at all. Between the rig-out and the rig-in, you might have dozens of truckloads of machines, crated parts, racking, and tooling that all need to arrive in a specific order — not whenever a truck happens to be available.',
+        'So the freight is planned with the rigging. Loads are built around weight, dimensions, and install order. Equipment types are matched to the freight — air-ride for precision machines, open deck for tall or crane-loaded pieces, enclosed for crated parts. Transport runs on licensed, insured partner carriers, usually on <a href="/services/dedicated-lanes">dedicated lanes</a> for the length of the move, so the same trucks cycle between sites on a schedule the crews can plan around.',
+        'For equipment coming in from overseas or out of storage, we handle <a href="/services/container-to-warehouse">container-to-warehouse</a> receiving and staging as part of the same project.',
+      ],
+    },
+  ],
+  process: {
+    h2: 'How a plant relocation runs',
+    steps: [
+      { h: 'Survey &amp; sequence', p: 'Both sites measured; the order every machine comes down and goes back up is planned before teardown.' },
+      { h: 'Disconnect &amp; teardown', p: 'Coordinated lockout, OEM prep, and label-and-map so reassembly goes by the book.' },
+      { h: 'Crate, load &amp; move', p: 'Machines prepped or crated, loaded in install order, and moved as project freight on scheduled partner capacity.' },
+      { h: 'Reinstall in the new layout', p: 'Rigged, set, anchored, leveled, and squared to spec — line by line.' },
+      { h: 'Recommission &amp; hand off', p: 'A floor that\'s ready to run, with a punch list closed out on the schedule we agreed.' },
+    ],
+  },
+  industries: {
+    h2: 'Relocations we plan',
+    items: ['Manufacturing plants', 'Machine shops', 'Automotive suppliers', 'Plastics &amp; molding', 'Food &amp; beverage', 'Pharma &amp; biotech', 'Printing &amp; packaging', 'Electronics assembly', 'Distribution centers', 'Labs &amp; R&amp;D facilities', 'Reshoring &amp; nearshoring moves'],
+  },
+  faq: [
+    { q: 'How do you keep downtime short on a plant move?', a: 'The whole project is planned before teardown — path of travel, floor loads, machine sequence, and a phased schedule built around your production calendar, so each line is down only for its move window.' },
+    { q: 'Can you relocate a full production line?', a: 'Yes — single lines, machine cells, and complete facilities, including disconnect, labeling, crating, freight, reinstallation, and re-leveling to spec.' },
+    { q: 'How is the freight handled on a plant relocation?', a: 'As <a href="/services/project-freight">project freight</a>: loads planned in install order and moved on licensed partner carriers, usually on dedicated lanes for the length of the move, timed to the rigging crews at both ends.' },
+    { q: 'How long does a plant relocation take?', a: 'It depends on the number of machines, the distance, and how much reinstall and utility work the new building needs. We build the timeline from your asset list during the survey.' },
+    { q: 'Do you remove the equipment we\'re leaving behind?', a: 'Yes. Equipment that isn\'t moving can be rigged out and decommissioned so the old building is ready to hand back.' },
+    { q: 'Do you cover my area?', a: 'We run relocations from 88 locations and cover all 50 states, including moves between states. <a href="/locations">See locations →</a>' },
+  ],
+  faqTitle: 'Plant relocation FAQ',
+  related: ['machinery-moving', 'dedicated-lanes', 'crating-packing', 'millwright-services', 'container-to-warehouse'],
+  guides: [
+    ['plant-relocation-checklist', 'The Plant Relocation Checklist'],
+    ['machine-leveling-and-alignment', 'Machine Leveling &amp; Alignment'],
+    ['dedicated-freight-lanes-explained', 'Dedicated Freight Lanes, Explained'],
+    ['blocking-bracing-and-dunnage-explained', 'Blocking, Bracing &amp; Dunnage'],
+  ],
+  metrosSentinel: 'PR_METROS',
+  metrosTag: 'plant relocation by metro',
+  metrosH2: 'Where we relocate plants',
+  metrosIntro: 'Plant and factory relocation in the country\'s biggest manufacturing markets — including moves between them. Our own crews and rigging gear, backed by a nationwide network of 88 locations.',
+  ctaBand: { h2: 'Moving the whole floor?', p: 'Send the asset list and both floor plans. We\'ll build the sequence and the schedule.' },
+};

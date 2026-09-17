@@ -1,0 +1,116 @@
+// /services/cnc-machine-movers — ranking page; rewritten 2026-09 without heavy haul.
+module.exports = {
+  slug: 'cnc-machine-movers',
+  cardBlurb: 'VMCs, HMCs, lathes, grinders, and full machine shops — lifted from OEM points, moved on air-ride, and re-leveled to spec.',
+  title: 'CNC Machine Movers | Machine Tool Moving Services | Badass Logistics',
+  description: 'CNC machine movers for VMCs, HMCs, lathes, grinders, and full machine shops. Lifted from OEM points, moved on air-ride, and re-leveled to the builder\'s spec.',
+  serviceType: 'CNC Machine Moving',
+  hero: '/assets/img/loads/load-machine-loadout.jpg',
+  band: '/assets/img/loads/enclosed-trailer-machinery-loaded.jpg',
+  bandAnnots: ['AXES LOCKED ✓', 'AIR-RIDE'],
+  tag: 'machine-tool moving — precision class',
+  h1: 'CNC <span class="y">Machine Movers</span>',
+  lead: 'A CNC machine is a precision instrument that weighs as much as a truck and holds tolerances in ten-thousandths. We move VMCs, HMCs, lathes, and full machine shops on a documented plan, then re-level and square them so they cut true the day you power back up.',
+  cta: 'Get a CNC Moving Quote',
+  annots: ['LIFT POINTS PER OEM', 'RE-LEVEL ± 0.0005"', 'SPINDLE LOCKED', 'WAYS PROTECTED'],
+  bgnotes: ['LIFT POINTS PER OEM', 'AXES LOCKED', 'COOLANT DRAINED', 'WAYS OILED &amp; WRAPPED', 'SHIPPING BRACKETS ON', 'AIR-RIDE ONLY', 'LEVEL ± 0.0005"', 'BALLBAR AFTER SET', 'FIRST CUT ✓', 'ANCHOR BOLTS', 'CHIP CONVEYOR OFF', 'DOOR 10\'2"'],
+  quickAnswer: 'CNC machine movers relocate mills, lathes, grinders, and machining centers without wrecking their precision. Badass Logistics disconnects and secures the machine, rigs it only from the manufacturer\'s designated points, moves it on air-ride as part of a planned project, and sets and re-levels it to the builder\'s spec — one machine or a whole shop, anywhere in the US.',
+  intro: {
+    h2: 'Machine-tool moving, done like the precision job it is',
+    paragraphs: [
+      'The fastest way to ruin a machine tool is to move it like furniture. Lift from the wrong casting point, leave an axis free to slide, or skip the re-level, and the machine powers on fine and never holds tolerance again. Badass Logistics treats every CNC move as an engineering job: a documented plan, lifting only from the manufacturer\'s designated points, and a machine that\'s squared back to spec before we hand it over.',
+      'From a single VMC across the shop to a full CNC shop relocation across state lines, you get one accountable crew. Our <a href="/services/rigging">riggers</a> handle the disconnect coordination, rig-out, and set. When the machine is headed to another building, it runs as <a href="/services/project-freight">project freight</a> — <a href="/services/crating-packing">crated or wrapped</a>, moved on air-ride partner equipment, and met at the other end by the same crew.',
+      'The goal is simple: the machine should arrive as straight as it left, and your programmers shouldn\'t be chasing a new geometry problem the week after the move.',
+    ],
+  },
+  capabilities: {
+    tag: 'what we move',
+    h2: 'Machines we handle',
+    items: [
+      { k: 'machining centers', h: 'VMCs &amp; HMCs', p: 'Vertical and horizontal machining centers, from knee mills to large 5-axis cells.' },
+      { k: 'turning', h: 'CNC Lathes &amp; Turning', p: 'Flat-bed and slant-bed lathes, multi-axis turning centers, and bar feeders.' },
+      { k: 'grinding', h: 'Grinders &amp; EDM', p: 'Surface, cylindrical, and CNC grinders plus wire and sinker EDM.' },
+      { k: 'fabrication', h: 'Press Brakes &amp; Lasers', p: 'Press brakes, turret punches, fiber lasers, and waterjets.' },
+      { k: 'cells &amp; shops', h: 'Full Shop Relocations', p: 'Multi-machine cells and complete machine shops, sequenced around production.' },
+      { k: 'support gear', h: 'Conveyors, Chillers &amp; Tooling', p: 'Chip conveyors, coolant systems, tool carts, and the gear that moves with the machine.' },
+    ],
+  },
+  sections: [
+    {
+      tag: 'why it\'s different',
+      h2: 'Lift points, not pry bars',
+      paragraphs: [
+        'CNC machines have designated lift and jacking points in the manual — and only those. Pry under the sheet metal or sling the casting wrong and you twist the machine\'s geometry. We pull the lift data first, protect the ways, lock the axes and spindle in their transport positions with the builder\'s shipping brackets where they exist, and move on toe jacks, machine skates, or air casters so the casting stays supported the whole way.',
+        'Weight concentration matters too. A machining center puts a lot of load on a small footprint, and older shop floors, trench covers, and dock plates aren\'t always rated for it. The survey checks the path, not just the pad.',
+      ],
+    },
+    {
+      bg: 'paper',
+      tag: 'between shops',
+      h2: 'Moving a CNC machine to another building',
+      paragraphs: [
+        'When a machine leaves the building, the risks change. Vibration and shock over hundreds of miles, moisture on unprotected ways, and securement that shifts under braking all show up as problems at power-on. We plan that stretch like the rest of the move:',
+      ],
+      list: [
+        'Coolant, lube, and hydraulic reservoirs drained or secured per the builder',
+        'Ways and exposed surfaces cleaned, oiled, and wrapped against moisture',
+        'Crated or skidded when the machine or its components call for it',
+        'Air-ride equipment on licensed partner carriers, with securement to real tie-down points',
+        'Delivery timed so the rigging crew is on site when the truck arrives',
+      ],
+      after: [
+        'At the new shop the machine is set on its pad, anchored if required, and leveled to the builder\'s spec, ready for your service tech or the OEM to run their checks and first cut. See our guide to <a href="/blog/how-to-move-a-cnc-machine">moving a CNC machine</a> for the full breakdown.',
+      ],
+    },
+  ],
+  media: {
+    tag: 'on the job',
+    h2: 'Dock to deck, deck to pad',
+    intro: 'One of ours — crated machine loaded and headed to its new floor.',
+    checklist: [
+      'OEM lift and jacking data pulled before rig day',
+      'Axes and spindle locked in transport position',
+      'Floor and dock ratings checked along the path',
+      'Air-ride transport timed to the rig-in crew',
+      'Set, leveled, and squared before hand-off',
+    ],
+    images: [
+      { src: '/assets/img/loads/load-crated-equipment.jpg', alt: 'Crated industrial equipment strapped down on a flatbed trailer by Badass Logistics', caption: 'Crated, strapped, and checked before it rolls.' },
+    ],
+  },
+  process: {
+    h2: 'How a CNC move runs',
+    steps: [
+      { h: 'Survey &amp; lift data', p: 'Both floors measured; weights, lift points, and floor loading pulled from the manual — not guessed.' },
+      { h: 'Power-down &amp; secure', p: 'Qualified disconnect, coolant and air drained, axes and spindle locked with OEM bracing.' },
+      { h: 'Rig out', p: 'Toe jacks, machine skates or air casters, gantry or crane from the rated points on a planned path.' },
+      { h: 'Air-ride move', p: 'Wrapped or crated and moved as project freight on air-ride partner equipment.' },
+      { h: 'Set, level &amp; square', p: 'Placed on the new pad and leveled to the builder\'s spec, ready for ramp-up and first cut.' },
+    ],
+  },
+  industries: {
+    h2: 'Shops we move',
+    items: ['Job shops', 'Production machining', 'Aerospace machining', 'Medical device manufacturing', 'Automotive &amp; tool-and-die', 'Mold makers', 'Oil &amp; gas component shops', 'Defense contractors', 'Technical schools &amp; universities', 'Used machine dealers'],
+  },
+  faq: [
+    { q: 'How much does it cost to move a CNC machine?', a: 'It depends on machine weight and class, rigging access at both ends, distance, and how much disconnect and re-level work is involved. Our guide on <a href="/blog/how-much-does-it-cost-to-move-a-cnc-machine">what drives the cost</a> breaks it down; send the model and both sites for a real quote.' },
+    { q: 'Do you re-level the machine after the move?', a: 'Always. It\'s set on the new pad and leveled to the builder\'s spec before hand-off, ready for your service tech or the OEM to verify.' },
+    { q: 'Can you move a CNC machine to another state?', a: 'Yes. We rig it out, wrap or crate it, move it on air-ride as <a href="/services/project-freight">project freight</a> on licensed partner carriers, and set it at the new shop.' },
+    { q: 'Should the OEM be involved in the move?', a: 'For many machines, yes — especially for disconnect, shipping brackets, and post-move calibration. We coordinate with your OEM or service tech so each side knows exactly where their work starts.' },
+    { q: 'Can you move a whole machine shop?', a: 'Yes. Full shops are sequenced machine by machine so the critical spindles come back online first. See <a href="/services/plant-relocation">plant relocation</a>.' },
+    { q: 'Do you move lathes and grinders too?', a: 'Yes — lathes, turning centers, grinders, EDM, press brakes, and lasers. See how to <a href="/blog/how-to-move-a-lathe">move a lathe</a> without twisting the bed.' },
+  ],
+  faqTitle: 'CNC machine moving FAQ',
+  related: ['machinery-moving', 'millwright-services', 'plant-relocation', 'crating-packing'],
+  guides: [
+    ['how-to-move-a-cnc-machine', 'How to Move a CNC Machine'],
+    ['how-much-does-it-cost-to-move-a-cnc-machine', 'What Drives the Cost of Moving a CNC Machine?'],
+    ['how-to-move-a-milling-machine', 'How to Move a Milling Machine'],
+    ['machine-leveling-and-alignment', 'Machine Leveling &amp; Alignment'],
+  ],
+  metrosSentinel: 'CNC_METROS',
+  metrosTag: 'cnc movers by metro',
+  metrosH2: 'Where we move CNC machines',
+  metrosIntro: 'CNC machine moving in the country\'s biggest machining markets — our own crews and rigging gear, backed by a nationwide network of 88 locations.',
+  ctaBand: { h2: 'Moving a CNC machine?', p: 'Send the make, model, and both sites. We\'ll pull the lift data and plan the move.' },
+};

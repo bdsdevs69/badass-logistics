@@ -1,0 +1,105 @@
+// /services/truck-dispatch — fleets of 4+ power units only. No owner-operators.
+module.exports = {
+  slug: 'truck-dispatch',
+  cardBlurb: 'Dispatch for trucking companies running 4+ trucks — freight from our project network, rate work, and the full back office.',
+  title: 'Truck Dispatch Services for Fleets (4+ Trucks) | Badass Logistics',
+  description: 'Truck dispatch services for trucking companies with 4+ trucks. Freight from our project network, lane planning, rates, and back office. No owner-operators.',
+  serviceType: 'Truck Dispatch Service',
+  hero: '/assets/img/dispatch-hero.jpg',
+  band: '/assets/img/dispatch-truck.jpg',
+  bandAnnots: ['NEXT LOAD LINED UP ✓', 'FLEET — 12 UNITS'],
+  tag: 'truck dispatch — fleets of 4+ trucks only',
+  h1: 'Truck Dispatch <span class="y">for Fleets</span>',
+  lead: 'Built for trucking companies running four trucks or more — not owner-operators. We have offices, connections, and a lot of freight moving through our rigging and project network. Your trucks get covered with it, and our desk runs the rates, the paperwork, and the back office so your team can run the fleet.',
+  cta: 'Apply for Fleet Dispatch',
+  ctaHref: '/quote-dispatch',
+  annots: ['MIN. 4 POWER UNITS', 'NO FORCED DISPATCH', 'RATE CON ✓', 'DETENTION BILLED'],
+  bgnotes: ['RATE CON SIGNED', 'CHECK CALL 14:00', 'POD UPLOADED ✓', 'TRUCK 3 — RELOAD', 'LANE: DAL → MEM', 'DETENTION 2.5 HRS', 'COI ON FILE', 'HOS: 6 HRS LEFT', 'FACTORING SENT', 'HOME FRIDAY ✓', 'NO FORCED DISPATCH', 'TONU FILED'],
+  quickAnswer: 'A truck dispatch service finds and books freight for a trucking company, negotiates rates, and handles the paperwork between the carrier, shippers, and brokers. Badass Logistics dispatches only for fleets with four or more power units. Your trucks get covered with freight from our rigging and project network plus loads our desk sources, and you keep your authority and approve every load.',
+  intro: {
+    h2: 'Why we only dispatch fleets',
+    paragraphs: [
+      'Plenty of dispatch services will take anybody with a truck and an MC number. We don\'t. Our desk is built around fleets of four power units and up, because that\'s where dispatch actually works as a system: lanes can be planned across trucks, reloads can be lined up before a truck empties, and the freight coming out of our own projects has somewhere reliable to go.',
+      'Here\'s the part most dispatch services can\'t offer. Badass Logistics is a <a href="/services/rigging">rigging</a> and <a href="/services/project-freight">project freight</a> company first. We have offices, relationships with shippers and manufacturers, and freight moving through our network every week — machines between plants, crated equipment to job sites, <a href="/services/dedicated-lanes">dedicated lanes</a> that run for months. When your trucks are on our desk, that freight is available to cover them, alongside loads we source from direct shippers, brokers we\'ve vetted, and the boards.',
+      'You keep your own authority, your own insurance, and your own drivers. You approve every load before it\'s booked. No forced dispatch, no pressure to run a lane that doesn\'t work for your equipment or your drivers\' home time.',
+    ],
+  },
+  requirements: [
+    { n: '4+', l: 'Power units minimum' },
+    { n: '0', l: 'Owner-operators' },
+    { n: '24/7', l: 'Dispatch desk' },
+    { n: 'YOU', l: 'Approve every load' },
+  ],
+  capabilities: {
+    tag: 'what your dispatcher handles',
+    h2: 'The desk and the back office',
+    items: [
+      { k: 'freight', h: 'Freight That Fits the Fleet', p: 'Loads from our project network, direct shippers, vetted brokers, and the boards — matched to equipment and lanes.' },
+      { k: 'planning', h: 'Lane &amp; Reload Planning', p: 'Next loads lined up across the fleet to cut deadhead and keep trucks turning.' },
+      { k: 'rates', h: 'Rate Negotiation', p: 'Every load negotiated against the lane, the equipment, and what the freight actually takes.' },
+      { k: 'setup', h: 'Carrier Packets &amp; Rate Cons', p: 'Broker and shipper setup, rate confirmations reviewed, terms checked before you commit.' },
+      { k: 'in transit', h: 'Check Calls &amp; Claims', p: 'Tracking updates, detention, layover, and TONU pursued with timestamps, not memory.' },
+      { k: 'billing', h: 'Paperwork &amp; Invoicing', p: 'BOLs and PODs collected, invoice packets built, and factoring submissions sent.' },
+    ],
+  },
+  sections: [
+    {
+      tag: 'who it\'s for',
+      h2: 'Is fleet dispatch a fit for your company?',
+      paragraphs: [
+        'We\'re a good fit if you run a trucking company with at least four trucks under your own authority, your drivers are employees or leased to your company, and you want more of your freight coming from steady sources instead of the board every afternoon.',
+        'We\'re not a fit for single-truck owner-operators, drivers leased onto another carrier who want their own dispatcher, or companies looking for someone to push trucks onto whatever pays the highest number today with no plan for tomorrow.',
+      ],
+      list: [
+        'Minimum four power units running under your authority',
+        'Active insurance and authority documents we can keep on file for setups',
+        'Dry van, reefer, flatbed, step deck, conestoga, or power only',
+        'A fleet owner or manager who wants lanes planned, not just loads found',
+      ],
+    },
+    {
+      bg: 'paper',
+      tag: 'the back office',
+      h2: 'The work that eats a fleet manager\'s day',
+      paragraphs: [
+        'Finding the load is maybe a third of dispatch. The rest is paperwork and follow-through — and on a fleet, that work multiplies by every truck. Our desk takes it on:',
+      ],
+      subsections: [
+        { h: 'Setup and compliance documents', paragraphs: ['Certificates of insurance, W-9s, authority letters, and carrier packets kept current and sent out for new broker and shipper setups, so a good load isn\'t lost to a missing form.'] },
+        { h: 'In-transit follow-through', paragraphs: ['Check calls, tracking updates, and appointment changes handled with the receiver and the customer. When a truck sits at a dock, detention and layover are documented as they happen and pursued afterward. See how dispatchers and brokers differ in our guide to <a href="/blog/truck-dispatcher-vs-freight-broker">dispatcher vs freight broker</a>.'] },
+        { h: 'Getting paid', paragraphs: ['Signed BOLs and PODs collected, invoice packets assembled, and submissions sent to your factoring company or directly to the customer — so cash doesn\'t stall because a document is still in a driver\'s cab.'] },
+        { h: 'Hours and home time', paragraphs: ['Loads are planned around each driver\'s available hours and home-time commitments. A load that looks great but blows up a driver\'s weekend isn\'t a good load for your fleet.'] },
+      ],
+    },
+  ],
+  process: {
+    h2: 'How onboarding works',
+    steps: [
+      { h: 'Apply', p: 'Tell us your fleet size, equipment, home base, and the lanes you want to run.' },
+      { h: 'Onboarding call', p: 'We go over your trucks, drivers, goals, and pricing based on fleet size and equipment.' },
+      { h: 'Paperwork on file', p: 'Authority, insurance, W-9, and factoring details set up so the desk can book fast.' },
+      { h: 'Lanes planned', p: 'Freight from our network and sourced loads matched to each truck — you approve every booking.' },
+      { h: 'Run &amp; review', p: 'Daily dispatch, in-transit follow-through, and regular reviews of lanes, revenue, and deadhead.' },
+    ],
+  },
+  industries: {
+    h2: 'Equipment we dispatch',
+    items: ['Dry van', 'Reefer', 'Flatbed', 'Step deck', 'Conestoga', 'Power only', 'Project freight lanes', 'Dedicated regional runs'],
+  },
+  faq: [
+    { q: 'Do you dispatch owner-operators?', a: 'No. We only dispatch trucking companies with four or more power units. Our desk plans lanes across a fleet and keeps project freight covered, which doesn\'t work well one truck at a time.' },
+    { q: 'What does a truck dispatch service do for a fleet?', a: 'Finds and books freight, plans reloads across trucks, negotiates rates, handles broker and shipper setups and rate cons, runs check calls, pursues detention and TONU, and builds billing and factoring packets.' },
+    { q: 'Where does the freight come from?', a: 'From our own rigging and <a href="/services/project-freight">project freight</a> network, direct shippers, vetted brokers, and load boards — matched to your equipment and lanes.' },
+    { q: 'Is it forced dispatch?', a: 'No. You keep your authority and approve every load before it\'s booked.' },
+    { q: 'How much does fleet dispatch cost?', a: 'Pricing is set on the onboarding call based on fleet size, equipment, and how much of the back office you want us to run. No numbers until we know your fleet.' },
+    { q: 'How do I get started?', a: '<a href="/quote-dispatch">Apply for fleet dispatch</a> with your fleet size, equipment, and home base. We\'ll set up an onboarding call.' },
+  ],
+  faqTitle: 'Fleet dispatch FAQ',
+  related: ['project-freight', 'dedicated-lanes', 'container-to-warehouse'],
+  guides: [
+    ['truck-dispatch-for-small-fleets', 'Truck Dispatch for Small Fleets: What to Expect'],
+    ['truck-dispatcher-vs-freight-broker', 'Truck Dispatcher vs Freight Broker'],
+    ['ltl-vs-ftl-freight', 'LTL vs FTL Freight'],
+  ],
+  ctaBand: { h2: 'Running four trucks or more?', p: 'Tell us your fleet, your equipment, and your lanes. We\'ll set up a call and get your trucks covered.' },
+};

@@ -33,7 +33,6 @@ const S = '<!--CITY_MESH_START-->', E = '<!--CITY_MESH_END-->';
 const SERVICES = {
   'machinery-moving':   { label: 'machinery moving', anchor: 'Machinery Movers' },
   'rigging':            { label: 'industrial rigging', anchor: 'Industrial Rigging' },
-  'heavy-haul':         { label: 'heavy haul',        anchor: 'Heavy Haul' },
   'cnc-machine-movers': { label: 'CNC machine moving', anchor: 'CNC Machine Movers' },
   'plant-relocation':   { label: 'plant relocation',  anchor: 'Plant Relocation' },
 };
