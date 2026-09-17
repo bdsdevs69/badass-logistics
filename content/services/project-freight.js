@@ -16,13 +16,13 @@ module.exports = {
   cta2: { href: '#types', label: 'What We Handle' },
   annots: ['PROJECT — NOT SPOT', 'INSTALL ORDER ✓', 'CRATED &amp; TAGGED', 'DELIVERY WINDOW 06:00'],
   bgnotes: ['LOAD PLAN REV B', 'INSTALL ORDER', 'CREW ON SITE 06:00', 'CONTAINER #4 IN', 'CRATED ✓', 'DEDICATED LANE', 'BOL + PHOTOS', 'NO SPOT LOADS', 'PHASE 3 FREIGHT', 'DEVANNED ✓', 'AIR-RIDE', 'POD SIGNED'],
-  quickAnswer: 'Project freight is the planning and management of every shipment tied to one industrial project — containers, crated equipment, machines, and materials moved in a set sequence to a set schedule. Badass Logistics runs project freight for the jobs we rig: container-to-warehouse receiving, crating and packing, and FTL or dedicated lanes on licensed partner carriers, timed to our rigging crews. We handle project-based moves, not one-off loads.',
+  quickAnswer: 'Project freight is the planning and management of every shipment tied to one industrial project — containers, crated equipment, machines, and materials moved in a set sequence to a set schedule. Badass Logistics runs project freight for the jobs we rig: container-to-warehouse receiving, crating and packing, and FTL or dedicated lanes through our licensed broker and carrier partners, timed to our rigging crews. We handle project-based moves, not one-off loads.',
   intro: {
     h2: 'Freight that belongs to a project',
     paragraphs: [
       'Most industrial projects split the work three ways: a rigger on each end, a trucking company in the middle, and a warehouse somewhere that nobody visits. Each one does its piece. Nobody owns the sequence. So the truck shows up before the pad is poured, the machine that was supposed to go in first arrives last, and a crew stands around on the clock waiting for a load that\'s sitting at a dock two states away.',
       'We started running freight because our <a href="/services/rigging">rigging</a> jobs kept needing it done right. Badass Logistics plans the freight with the rigging — which pieces move first, how they\'re packed, what equipment they ride on, and exactly when they need to land so the crew is ready to set them. One project team, one schedule, one point of contact from the first container to the last machine.',
-      'That also means we\'re clear about what we don\'t do. We don\'t sell one-off spot loads off a board. Freight comes with a project — a <a href="/services/plant-relocation">plant relocation</a>, a production line install, an imported equipment package, a build-out receiving deliveries in phases. Transport runs on licensed, insured partner carriers that we manage inside the project plan.',
+      'That also means we\'re clear about what we don\'t do. We don\'t sell one-off spot loads off a board. Freight comes with a project — a <a href="/services/plant-relocation">plant relocation</a>, a production line install, an imported equipment package, a build-out receiving deliveries in phases. Transport runs on our network of licensed broker and carrier partners, coordinated inside the project plan.',
     ],
   },
   capabilities: {
@@ -80,7 +80,7 @@ module.exports = {
     steps: [
       { h: 'Scope the project', p: 'Equipment list, weights and dimensions, origin points, site access, and the install schedule.' },
       { h: 'Build the freight plan', p: 'Receiving, staging, crating, load plans, equipment types, and delivery windows tied to the rigging plan.' },
-      { h: 'Book the capacity', p: 'Licensed, insured partner carriers lined up for the project — dedicated lanes where volume calls for it.' },
+      { h: 'Book the capacity', p: 'Capacity lined up through our licensed broker and carrier partners for the project — dedicated lanes where volume calls for it.' },
       { h: 'Move &amp; track', p: 'Pickups, transit updates, and deliveries managed against the schedule, with photos and signed paperwork.' },
       { h: 'Deliver to the crew', p: 'Freight lands when our riggers are ready to set it, and the project closes out with one set of records.' },
     ],
@@ -92,7 +92,7 @@ module.exports = {
   faq: [
     { q: 'What is project freight?', a: 'Freight planned and managed as part of one project — containers, crated equipment, machines, and materials moved in a set sequence to a set schedule — instead of booked one shipment at a time. See our guide to <a href="/blog/what-is-project-cargo">project cargo</a>.' },
     { q: 'Do you take single one-off loads?', a: 'No. We handle project-based moves: relocations, installs, build-outs, and equipment packages with multiple shipments. We don\'t sell spot loads.' },
-    { q: 'Do you own the trucks?', a: 'No. Transport runs on licensed, insured partner carriers that we manage inside the project plan. Our own crews handle the rigging, devanning, and setting.' },
+    { q: 'Do you own the trucks?', a: 'No. Transport runs on our network of licensed broker and carrier partners, coordinated inside the project plan. Our own crews handle the rigging, devanning, and setting.' },
     { q: 'Can you receive containers of imported equipment?', a: 'Yes — pickup at port or rail, drayage to a warehouse or staging site, devanning with riggers on the heavy pieces, inspection, and staging. See <a href="/services/container-to-warehouse">container to warehouse</a>.' },
     { q: 'What equipment types can you use for project freight?', a: 'Whatever the freight calls for — dry van, air-ride, flatbed, step deck, conestoga, and enclosed trailers — matched to each load\'s weight, dimensions, and how sensitive it is.' },
     { q: 'Do I need to use your riggers to use project freight?', a: 'Project freight works best when it\'s planned with the rigging, and most of our freight comes out of jobs we rig. If you have your own install team, we\'ll plan deliveries around their schedule instead.' },

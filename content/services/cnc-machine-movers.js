@@ -55,7 +55,7 @@ module.exports = {
         'Coolant, lube, and hydraulic reservoirs drained or secured per the builder',
         'Ways and exposed surfaces cleaned, oiled, and wrapped against moisture',
         'Crated or skidded when the machine or its components call for it',
-        'Air-ride equipment on licensed partner carriers, with securement to real tie-down points',
+        'Air-ride equipment through our licensed carrier partners, with securement to real tie-down points',
         'Delivery timed so the rigging crew is on site when the truck arrives',
       ],
       after: [
@@ -95,7 +95,7 @@ module.exports = {
   faq: [
     { q: 'How much does it cost to move a CNC machine?', a: 'It depends on machine weight and class, rigging access at both ends, distance, and how much disconnect and re-level work is involved. Our guide on <a href="/blog/how-much-does-it-cost-to-move-a-cnc-machine">what drives the cost</a> breaks it down; send the model and both sites for a real quote.' },
     { q: 'Do you re-level the machine after the move?', a: 'Always. It\'s set on the new pad and leveled to the builder\'s spec before hand-off, ready for your service tech or the OEM to verify.' },
-    { q: 'Can you move a CNC machine to another state?', a: 'Yes. We rig it out, wrap or crate it, move it on air-ride as <a href="/services/project-freight">project freight</a> on licensed partner carriers, and set it at the new shop.' },
+    { q: 'Can you move a CNC machine to another state?', a: 'Yes. We rig it out, wrap or crate it, move it on air-ride as <a href="/services/project-freight">project freight</a> through our licensed broker and carrier partners, and set it at the new shop.' },
     { q: 'Should the OEM be involved in the move?', a: 'For many machines, yes — especially for disconnect, shipping brackets, and post-move calibration. We coordinate with your OEM or service tech so each side knows exactly where their work starts.' },
     { q: 'Can you move a whole machine shop?', a: 'Yes. Full shops are sequenced machine by machine so the critical spindles come back online first. See <a href="/services/plant-relocation">plant relocation</a>.' },
     { q: 'Do you move lathes and grinders too?', a: 'Yes — lathes, turning centers, grinders, EDM, press brakes, and lasers. See how to <a href="/blog/how-to-move-a-lathe">move a lathe</a> without twisting the bed.' },

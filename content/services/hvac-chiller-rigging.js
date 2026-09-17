@@ -2,8 +2,8 @@
 module.exports = {
   slug: 'hvac-chiller-rigging',
   cardBlurb: 'Chillers, boilers, cooling towers, rooftop units, and air handlers — craned in, skated down, or rebuilt to fit.',
-  title: 'Chiller, Boiler & HVAC Rigging | Badass Logistics',
-  description: 'Chiller rigging, boiler rigging, and HVAC equipment moving — rooftop unit crane lifts, cooling towers, air handlers, and basement or penthouse replacements.',
+  title: 'Chiller & Boiler Rigging and Removal | HVAC Rigging | Badass Logistics',
+  description: 'Chiller rigging, boiler rigging and removal, and HVAC crane lifts — rooftop units, cooling towers, air handlers, and basement or penthouse replacements.',
   serviceType: 'Chiller, Boiler & HVAC Rigging',
   hero: '/assets/img/loads/step-deck-industrial-air-handlers.jpg',
   band: '/assets/img/rigging-crane2.jpg',

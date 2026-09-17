@@ -2,7 +2,7 @@
 module.exports = {
   slug: 'heavy-lift-rigging',
   cardBlurb: 'Hydraulic gantries, jack-and-slide, toe jacks, and air skates — heavy moves where a crane can\'t reach.',
-  title: 'Hydraulic Gantry, Jacking & Skidding Services | Badass Logistics',
+  title: 'Jacking & Skidding and Hydraulic Gantry Services | Badass Logistics',
   description: 'Heavy lift rigging with hydraulic gantries, jack-and-slide skidding, toe jacks, and air skates — for heavy loads inside buildings and where cranes can\'t reach.',
   serviceType: 'Heavy Lift Rigging — Jacking, Skidding & Gantry',
   hero: '/assets/img/loads/load-rigging-equipment.jpg',
@@ -93,6 +93,7 @@ module.exports = {
   faqTitle: 'Jacking &amp; skidding FAQ',
   related: ['crane-services', 'transformer-generator-rigging', 'machinery-moving', 'millwright-services'],
   guides: [
+    ['jacking-and-skidding-explained', 'Jacking &amp; Skidding Explained'],
     ['types-of-rigging', 'Types of Rigging, Explained'],
     ['how-to-transport-a-transformer', 'How to Transport a Transformer'],
     ['how-to-transport-a-storage-tank', 'How to Transport a Storage Tank'],

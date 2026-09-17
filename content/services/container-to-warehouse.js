@@ -2,7 +2,7 @@
 module.exports = {
   slug: 'container-to-warehouse',
   cardBlurb: 'Containers of machinery pulled from port or rail, drayed to staging, devanned by riggers, inspected, and released to the project.',
-  title: 'Container Transloading, Devanning &amp; Drayage | Badass Logistics',
+  title: 'Transloading & Container Devanning Services | Badass Logistics',
   description: 'Container transloading, devanning and drayage to warehouse for project freight. Port and rail pickup, machinery rigged out of the box, inspected and staged.',
   serviceType: 'Container Drayage, Transloading & Devanning',
   hero: '/assets/img/loads/load-reels-container.jpg',
@@ -15,12 +15,12 @@ module.exports = {
   ctaHref: '/quote-project-freight',
   annots: ['LAST FREE DAY ✓', '40\' HIGH CUBE', 'DOOR CLEAR ✓', 'ROLLERS UNDER'],
   bgnotes: ['SEAL INTACT ✓', 'PHOTOS BEFORE DOORS', 'FLOOR RATING?', 'OPEN TOP — CRANE', 'FLAT RACK', 'CHASSIS ✓', 'EMPTY RETURN', 'DUNNAGE CUT', 'OS&amp;D NOTED', 'TRANSLOAD → 53\'', 'HOLDS CLEARED ✓'],
-  quickAnswer: 'Container-to-warehouse service picks up an import container at a port or rail ramp, drays it to a warehouse or staging site, then devans it, meaning the cargo is unloaded, inspected, and staged. Badass Logistics runs it as part of a rigging or project-freight job: drayage on licensed partner carriers, heavy machines rigged out of the box by our crews, and the empty returned before per diem runs up.',
+  quickAnswer: 'Container-to-warehouse service picks up an import container at a port or rail ramp, drays it to a warehouse or staging site, then devans it, meaning the cargo is unloaded, inspected, and staged. Badass Logistics runs it as part of a rigging or project-freight job: drayage through our licensed broker and carrier partners, heavy machines rigged out of the box by our crews, and the empty returned before per diem runs up.',
   intro: {
     h2: 'The box is the easy part. What\'s inside is the job.',
     paragraphs: [
       'Most drayage outfits see a container as a unit: pull it, drop it, return the empty. That works for cartons. It falls apart when the box is holding a machining center, a press frame, a skid of process equipment, or crated parts that belong to a production line going in next month. Somebody has to get that freight out of an 8-foot-wide steel tube without dropping it, and the dock crew with a standard forklift is usually not that somebody.',
-      'That\'s where we come in. Badass Logistics is a rigging company, and container-to-warehouse work is part of our <a href="/services/project-freight">project freight</a> service. We coordinate the pickup at the port or rail ramp, manage the drayage on licensed partner carriers, and put a rigging crew on the unload. Heavy machines get jacked, skated, or pulled out on rollers. Light freight gets devanned and checked like it matters, because it does.',
+      'That\'s where we come in. Badass Logistics is a rigging company, and container-to-warehouse work is part of our <a href="/services/project-freight">project freight</a> service. We coordinate the pickup at the port or rail ramp, manage the drayage through our licensed broker and carrier partners, and put a rigging crew on the unload. Heavy machines get jacked, skated, or pulled out on rollers. Light freight gets devanned and checked like it matters, because it does.',
       'We don\'t take single one-off containers off a load board. This is project work: a plant build-out receiving machinery in waves, a relocation with equipment coming back from overseas, a line install waiting on imported components. The containers, the staging, and the rig-in all run on one schedule, managed by one team.',
     ],
   },
@@ -63,7 +63,7 @@ module.exports = {
         '<strong>Flat rack:</strong> no sides or roof, built for machinery too wide or tall for a closed box. Unloaded by crane or a properly rated forklift from the side.',
       ],
       after: [
-        'Chassis matter too. The container rides a chassis from the terminal, and it isn\'t always sitting where the box is. Heavy 20-foot containers may need a tri-axle chassis to stay legal on axle weights. Our partner carriers handle the chassis side, and we track it inside the project so a chassis delay doesn\'t quietly eat the free time.',
+        'Chassis matter too. The container rides a chassis from the terminal, and it isn\'t always sitting where the box is. Heavy 20-foot containers may need a tri-axle chassis to stay legal on axle weights. Our carrier partners handle the chassis side, and we track it inside the project so a chassis delay doesn\'t quietly eat the free time.',
       ],
     },
     {
@@ -95,7 +95,7 @@ module.exports = {
     h2: 'How a container-to-warehouse job runs',
     steps: [
       { h: 'Booking &amp; packing list review', p: 'Container type, weights, dimensions, holds, and last free day confirmed before anything is scheduled.' },
-      { h: 'Pickup &amp; drayage', p: 'Released containers pulled from the port or rail ramp on licensed partner carriers.' },
+      { h: 'Pickup &amp; drayage', p: 'Released containers pulled from the port or rail ramp through our licensed broker and carrier partners.' },
       { h: 'Devan &amp; rig out', p: 'Doors opened on record, dunnage removed, and freight unloaded by forklift or rigged out by our crew.' },
       { h: 'Inspect &amp; stage', p: 'Damage and shortages documented, pieces tagged, and equipment held in secure staging.' },
       { h: 'Return &amp; release', p: 'Empty returned, then equipment released to the floor, the next leg, or our rig-in crew.' },
@@ -110,7 +110,7 @@ module.exports = {
     { q: 'How do I avoid demurrage and per diem charges?', a: 'Get holds cleared early, book the pickup against the last free day, and have the unload ready before the container gates out. We plan the receiving and rigging crew first so the box doesn\'t sit waiting.' },
     { q: 'Can you unload a heavy machine from a shipping container?', a: 'Yes. Our riggers jack, skate, and roll heavy machines out of containers, and use cranes on open tops and flat racks. We check the weight against the container floor rating before any forklift goes inside.' },
     { q: 'Do you pick up single containers?', a: 'No. Container work is part of a project, such as a build-out, relocation, or line install with equipment arriving in containers. One-off drayage moves aren\'t something we take on.' },
-    { q: 'Do you own the drayage trucks?', a: 'No. Drayage runs on licensed, insured partner carriers that we manage inside the project plan. Our own crews handle the rigging and devanning.' },
+    { q: 'Do you own the drayage trucks?', a: 'No. Drayage runs on our network of licensed broker and carrier partners, coordinated inside the project plan. Our own crews handle the rigging and devanning.' },
     { q: 'What is drayage?', a: 'Drayage is the short-distance move of a container between a port or rail ramp and a nearby warehouse or site. Our guide to <a href="/blog/what-is-drayage">what drayage is</a> covers how it works.' },
   ],
   faqTitle: 'Container to warehouse FAQ',

@@ -2,22 +2,25 @@
 
 > Badass Logistics is a U.S. industrial rigging company — riggers first. Our own crews and rigging gear handle every kind of industrial rigging: machinery moving, plant and project relocation, MRI and medical equipment, CNC machines, crane and critical lifts, jacking and skidding, hydraulic gantry lifts, millwright installation, and data center, chiller/HVAC, and transformer/generator rigging. Our rigging work generates freight, so we also run project freight (container to warehouse, crating and packing, dedicated lanes and project FTL) for the jobs we rig — project-based moves only, never one-off loads. We also provide truck dispatch for trucking companies with 4 or more power units (no owner-operators). Coverage: 88 locations, all 50 U.S. states. Founded 2022. Phone: (307) 284-1332.
 
-Badass Logistics is not a heavy haul company, not a motor carrier, and does not hold its own operating authority. Freight on our projects moves on licensed, insured partner carriers managed inside the project plan. We do not publish flat rates; every job is quoted from the equipment, the sites, and the schedule.
+Badass Logistics is not a heavy haul company, not a motor carrier, and does not hold its own operating authority. Freight on our projects moves on our network of licensed broker and carrier partners, coordinated inside the project plan. We do not publish flat rates; every job is quoted from the equipment, the sites, and the schedule.
 
 ## Rigging services (primary)
 
 - [Industrial Rigging](https://badasslogistics.com/services/rigging): Engineered lifts, machine setting, and heavy moves — from a few hundred pounds to 200,000 lbs and beyond.
 - [Machinery Moving](https://badasslogistics.com/services/machinery-moving): Presses, generators, compressors, and full production lines — disconnected, rigged, moved, and re-leveled by one crew.
-- [Plant & Project Relocation](https://badasslogistics.com/services/plant-relocation): Whole floors, production lines, and multi-site consolidations — sequenced, moved as one project, and reinstalled to spec.
-- [MRI & Medical Equipment Rigging](https://badasslogistics.com/services/mri-medical-equipment-rigging): MRI, CT, PET/CT, cath lab and linac moves — rigged in, rigged out, and handled like the instruments they are.
+- [Factory & Plant Relocation](https://badasslogistics.com/services/plant-relocation): Whole floors, production lines, and multi-site consolidations — sequenced, moved as one project, and reinstalled to spec.
+- [Machinery Removal & Decommissioning](https://badasslogistics.com/services/machinery-removal): Old machines, dead lines, and whole plants rigged out cleanly — disconnected, dismantled, and removed so the floor is ready.
+- [Medical Equipment & MRI Rigging](https://badasslogistics.com/services/mri-medical-equipment-rigging): MRI, CT, PET/CT, cath lab and linac moves — rigged in, rigged out, and handled like the instruments they are.
+- [Lab & Precision Equipment Movers](https://badasslogistics.com/services/lab-equipment-movers): Heavy lab instruments, semiconductor tools, and precision test equipment — rigged, moved, and set with vibration care.
 - [CNC Machine Movers](https://badasslogistics.com/services/cnc-machine-movers): VMCs, HMCs, lathes, grinders, and full machine shops — lifted from OEM points, moved on air-ride, and re-leveled to spec.
-- [Crane Service & Critical Lifts](https://badasslogistics.com/services/crane-services): Crane lifts planned, rigged, and signaled by our crew — rooftop units, machine picks, and critical lifts.
+- [Printing Press Movers](https://badasslogistics.com/services/printing-press-movers): Offset presses, digital presses, bindery, and converting lines — torn down in order, moved, and reassembled to register.
+- [Crane & Rigging Services](https://badasslogistics.com/services/crane-services): Crane lifts planned, rigged, and signaled by our crew — rooftop units, machine picks, and critical lifts.
 - [Jacking, Skidding & Gantry Lifts](https://badasslogistics.com/services/heavy-lift-rigging): Hydraulic gantries, jack-and-slide, toe jacks, and air skates — heavy moves where a crane can't reach.
 - [Millwright & Machine Installation](https://badasslogistics.com/services/millwright-services): Machine installation, anchoring, precision leveling, and alignment — the work that makes a moved machine run right.
-- [Heavy Forklift, Loading & Unloading](https://badasslogistics.com/services/forklift-loading-unloading): Heavy-capacity forklift work, machine load-outs, and unloading crated equipment from trucks and containers.
+- [Machinery Loading & Unloading](https://badasslogistics.com/services/forklift-loading-unloading): Heavy-capacity forklift work, machine load-outs, and unloading crated equipment from trucks and containers.
 - [Data Center Rigging](https://badasslogistics.com/services/data-center-rigging): Generators, UPS modules, switchgear, cooling units, and loaded racks — rigged into live and new-build data centers.
 - [Chiller, Boiler & HVAC Rigging](https://badasslogistics.com/services/hvac-chiller-rigging): Chillers, boilers, cooling towers, rooftop units, and air handlers — craned in, skated down, or rebuilt to fit.
-- [Transformer & Generator Rigging](https://badasslogistics.com/services/transformer-generator-rigging): Transformers, generator sets, switchgear, and turbines — jacked, skidded, craned, and set on their foundations.
+- [Transformer & Generator Moving](https://badasslogistics.com/services/transformer-generator-rigging): Transformers, generator sets, switchgear, and turbines — jacked, skidded, craned, and set on their foundations.
 
 ## Project freight
 
@@ -28,7 +31,7 @@ Badass Logistics is not a heavy haul company, not a motor carrier, and does not 
 
 ## Truck dispatch (fleets of 4+ trucks)
 
-- [Truck Dispatch for Fleets](https://badasslogistics.com/services/truck-dispatch): Dispatch for trucking companies running 4+ trucks — freight from our project network, rate work, and the full back office.
+- [Truck Dispatch for Trucking Companies](https://badasslogistics.com/services/truck-dispatch): Dispatch for trucking companies running 4+ trucks — freight from our project network, rate work, and the full back office.
 
 ## Tools
 
@@ -37,7 +40,10 @@ Badass Logistics is not a heavy haul company, not a motor carrier, and does not 
 ## Guides: Rigging
 
 - [How to Move a CNC Machine Without Wrecking It](https://badasslogistics.com/blog/how-to-move-a-cnc-machine): Moving a CNC machine or machining center: OEM prep, rigging with toe jacks and skates, why you never lift from the wrong points, transport on air-ride, and re-leveling at the destination.
+- [How to Move a Printing Press: Teardown, Rigging, and Reassembly](https://badasslogistics.com/blog/how-to-move-a-printing-press): How to move a printing press — documenting the line, separating units with technicians, rigging each unit, and setting the press for reassembly.
+- [Jacking and Skidding Explained: How Heavy Loads Move Without a Crane](https://badasslogistics.com/blog/jacking-and-skidding-explained): What jacking and skidding is, how jack-and-slide systems and hydraulic gantries work, when they beat a crane, and what gets checked before a heavy skid move.
 - [Types of Rigging: Every Kind of Industrial Rigging, Explained](https://badasslogistics.com/blog/types-of-rigging): The main types of industrial rigging — machinery moving, plant relocation, crane lifts, jacking and skidding, millwright, MRI, data center, HVAC — explained.
+- [What Is a Critical Lift? Criteria, Lift Plans, and What Goes in One](https://badasslogistics.com/blog/what-is-a-critical-lift): What is considered a critical lift, the common criteria companies use, and what a crane lift plan includes — weight, radius, rigging, and ground bearing.
 - [What Is Industrial Rigging? A Plain-English Guide](https://badasslogistics.com/blog/what-is-industrial-rigging): Industrial rigging explained: what riggers do, the equipment they use (cranes, gantries, jacks, skates, slings), common jobs, and why every lift is an engineering problem.
 
 ## Guides: Specialized Rigging
@@ -51,6 +57,7 @@ Badass Logistics is not a heavy haul company, not a motor carrier, and does not 
 
 ## Guides: Machinery Moving
 
+- [How Much Do Machinery Movers Cost? What Actually Drives the Price](https://badasslogistics.com/blog/how-much-do-machinery-movers-cost): What drives machinery moving costs — weight, site access, rigging method, disconnects, distance, crating, and installation — and how to get a real quote.
 - [What Drives the Cost of Moving a CNC Machine?](https://badasslogistics.com/blog/how-much-does-it-cost-to-move-a-cnc-machine): There is no flat rate to move a CNC machine — the price is built from weight and size, rigging complexity at both ends, distance, transport type, and prep. Here are the levers that decide the number, and how to get an accurate quote.
 - [How to Move an Industrial Boiler or Chiller](https://badasslogistics.com/blog/how-to-move-a-boiler-or-chiller): How to move an industrial boiler or chiller: weight and rigging, roof and mechanical-room access, trailer choice, upright handling, and reconnection.
 - [How to Move a Metal Lathe Without Twisting the Bed](https://badasslogistics.com/blog/how-to-move-a-lathe): How to move a metal lathe without twisting the bed: weights, rigging points, tailstock and chuck prep, skating, air-ride vs flatbed, and re-leveling to spec.
@@ -66,6 +73,7 @@ Badass Logistics is not a heavy haul company, not a motor carrier, and does not 
 ## Guides: Project Freight
 
 - [Dedicated Freight Lanes: When a Project Needs Its Own Trucks](https://badasslogistics.com/blog/dedicated-freight-lanes-explained): Dedicated vs spot vs contract freight explained, when dedicated capacity makes sense for industrial projects, and how to plan a dedicated lane that holds up.
+- [Export Crating Requirements: ISPM-15, Marking, and Machinery Packing](https://badasslogistics.com/blog/export-crating-requirements): Export crate requirements explained — ISPM-15 heat-treated wood and the IPPC mark, moisture and corrosion protection, CG marking, and machinery prep.
 - [How to Ship Large Industrial Machinery on a Flatbed](https://badasslogistics.com/blog/how-to-ship-industrial-machinery-on-a-flatbed): Shipping oversized industrial equipment on a flatbed comes down to five things: the right trailer, a real load plan, blocking and bracing, secure tie-downs, and permits. Here is how a heavy, awkward machine gets from plant to plant intact.
 - [What Is Transloading? Container to Warehouse, Explained](https://badasslogistics.com/blog/what-is-transloading): What transloading is, how it differs from cross-docking and devanning, when to transload imported machinery, and how to keep containers off demurrage.
 
@@ -90,6 +98,7 @@ Badass Logistics is not a heavy haul company, not a motor carrier, and does not 
 
 ## Guides: Dispatch
 
+- [How Do Truck Dispatchers Get Paid? Pricing Models Explained for Fleets](https://badasslogistics.com/blog/how-do-truck-dispatchers-get-paid): How truck dispatch services get paid — percentage of gross, flat per-truck fees, and hybrid models — plus what the fee should include and red flags.
 - [Truck Dispatch Services for Small Fleets (4+ Trucks): What to Expect](https://badasslogistics.com/blog/truck-dispatch-for-small-fleets): What a fleet truck dispatch service does, when outsourcing dispatch makes sense for 4 to 20 trucks, what to ask before signing, and the red flags to avoid.
 - [Truck Dispatcher vs Freight Broker: What's the Difference?](https://badasslogistics.com/blog/truck-dispatcher-vs-freight-broker): Dispatchers and brokers are not the same thing. Who each one works for, what they legally can and cannot do, and which one an owner-operator actually needs.
 

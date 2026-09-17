@@ -2,8 +2,8 @@
 module.exports = {
   slug: 'rigging',
   cardBlurb: 'Engineered lifts, machine setting, and heavy moves — from a few hundred pounds to 200,000 lbs and beyond.',
-  title: 'Rigging Services | Industrial Riggers Nationwide | Badass Logistics',
-  description: 'Industrial rigging for every kind of heavy move — machinery, plant relocation, MRI, crane lifts, jacking and skidding, millwright work. 88 locations nationwide.',
+  title: 'Industrial Rigging Company | Rigging Services Nationwide | Badass Logistics',
+  description: 'Industrial rigging company with crews across 88 metros — machinery moving, factory relocation, MRI, crane lifts, jacking and skidding, and millwright work.',
   serviceType: 'Industrial Rigging',
   hero: '/assets/img/rigging-hero.jpg',
   band: '/assets/img/rigging-crane2.jpg',
@@ -21,7 +21,7 @@ module.exports = {
     paragraphs: [
       'Rigging is not one job. Setting a 40,000-lb press on a new foundation, skating a CT scanner down a hospital corridor, craning a chiller onto a roof, and tearing out a production line are four different problems with four different gear lists. What they share is the part that matters: somebody has to measure the load, find the center of gravity, check the floor, and plan the pick before anything leaves the ground.',
       'That\'s the work Badass Logistics is built around. We own the rigging side — the crews, the jacks, skates, gantries and slings, and the planning — and we run it the same way on every job: survey first, documented lift plan, controlled execution, then set, level, and sign off. One crew from the first measurement to the final shim, so nothing falls into the gap between a rigger, a millwright, and whoever was supposed to move it next.',
-      'When a rigged machine has to travel to another building, another city, or another state, we don\'t hand you off. We manage it as <a href="/services/project-freight">project freight</a> — crated, loaded, and moved on licensed partner carriers inside the same project plan — and our crew is waiting at the other end to set it.',
+      'When a rigged machine has to travel to another building, another city, or another state, we don\'t hand you off. We manage it as <a href="/services/project-freight">project freight</a> — crated, loaded, and moved through our licensed broker and carrier partners inside the same project plan — and our crew is waiting at the other end to set it.',
     ],
   },
   capabilities: {
@@ -49,8 +49,9 @@ module.exports = {
         'Riggers get called for far more than machine shops. If it\'s heavy, awkward, fragile, or sitting somewhere it was never meant to leave, it\'s a rigging job. A few more we run regularly:',
       ],
       subsections: [
-        { h: 'Precision &amp; laboratory equipment', paragraphs: ['Semiconductor tools, electron microscopes, lab instruments, and test stands that can\'t take shock or tilt — moved on air-ride with vibration-conscious handling and set on isolated pads.'] },
-        { h: 'Printing presses &amp; packaging lines', paragraphs: ['Multi-unit presses, folders, converting and packaging lines broken down in sequence, labeled, moved, and reassembled in order.'] },
+        { h: 'Precision &amp; laboratory equipment', paragraphs: ['Semiconductor tools, electron microscopes, lab instruments, and test stands that can\'t take shock or tilt — moved on air-ride with vibration-conscious handling and set on isolated pads. See <a href="/services/lab-equipment-movers">lab and precision equipment movers</a>.'] },
+        { h: 'Printing presses &amp; packaging lines', paragraphs: ['Multi-unit presses, folders, converting and packaging lines broken down in sequence, labeled, moved, and reassembled in order. See <a href="/services/printing-press-movers">printing press movers</a>.'] },
+        { h: 'Machinery removal &amp; decommissioning', paragraphs: ['Retired machines, dead lines, and whole plants rigged out safely so the floor can be handed back. See <a href="/services/machinery-removal">machinery removal</a>.'] },
         { h: 'Tanks, vessels &amp; process equipment', paragraphs: ['Storage tanks, pressure vessels, reactors, and skids rigged out of process buildings and set on new saddles or foundations.'] },
         { h: 'Rooftop &amp; crane-in work', paragraphs: ['Rooftop units, cooling towers, and mechanical equipment picked onto roofs and into penthouses, with the lift, the street closure, and the setting planned as one job.'] },
         { h: 'Structural &amp; equipment setting', paragraphs: ['Precast pieces, steel members, modular skids, and enclosures set into place on new construction and plant expansions.'] },
@@ -73,7 +74,7 @@ module.exports = {
       h2: 'When the machine has to go somewhere',
       paragraphs: [
         'Plenty of rigging jobs start and end in the same building. The rest need freight: a machine rigged out of one plant, crated, trucked across the country, and set in another. Most companies split that into a rigger on each end and a carrier nobody\'s watching in the middle.',
-        'We run it as one project. The same team that rigs the machine out manages the <a href="/services/crating-packing">crating</a>, the load-out, the <a href="/services/dedicated-lanes">transport</a> on licensed partner carriers, and the rig-in at the destination — one schedule, one point of contact, one crew accountable for the machine the whole way.',
+        'We run it as one project. The same team that rigs the machine out manages the <a href="/services/crating-packing">crating</a>, the load-out, the <a href="/services/dedicated-lanes">transport</a> through our licensed broker and carrier partners, and the rig-in at the destination — one schedule, one point of contact, one crew accountable for the machine the whole way.',
       ],
     },
   ],
@@ -108,9 +109,9 @@ module.exports = {
   },
   faq: [
     { q: 'What is industrial rigging?', a: 'It\'s the planning and physical work of lifting, moving, and setting heavy equipment — using cranes, gantries, jacks, skates, and slings to relocate loads safely and precisely, often into tight or elevated spaces.' },
-    { q: 'What types of rigging do you do?', a: 'Every kind: <a href="/services/machinery-moving">machinery moving</a>, <a href="/services/plant-relocation">plant relocation</a>, <a href="/services/mri-medical-equipment-rigging">MRI and medical equipment</a>, <a href="/services/crane-services">crane lifts</a>, <a href="/services/heavy-lift-rigging">jacking and skidding</a>, <a href="/services/millwright-services">millwright installation</a>, <a href="/services/data-center-rigging">data center</a>, <a href="/services/hvac-chiller-rigging">chiller and HVAC</a>, and <a href="/services/transformer-generator-rigging">transformer and generator</a> rigging — plus lab, press, tank, and rooftop work.' },
+    { q: 'What types of rigging do you do?', a: 'Every kind: <a href="/services/machinery-moving">machinery moving</a>, <a href="/services/plant-relocation">factory relocation</a>, <a href="/services/machinery-removal">machinery removal</a>, <a href="/services/mri-medical-equipment-rigging">MRI and medical equipment</a>, <a href="/services/lab-equipment-movers">lab equipment</a>, <a href="/services/printing-press-movers">printing presses</a>, <a href="/services/crane-services">crane lifts</a>, <a href="/services/heavy-lift-rigging">jacking and skidding</a>, <a href="/services/millwright-services">millwright installation</a>, <a href="/services/data-center-rigging">data center</a>, <a href="/services/hvac-chiller-rigging">chiller and HVAC</a>, and <a href="/services/transformer-generator-rigging">transformer and generator</a> rigging — plus lab, press, tank, and rooftop work.' },
     { q: 'How heavy a load can you rig?', a: 'From a single crate to machinery over 200,000 lbs. Every lift is matched to load-rated rigging and the right equipment for the weight, the dimensions, and the site.' },
-    { q: 'Can you move the equipment to another facility too?', a: 'Yes. We manage it as <a href="/services/project-freight">project freight</a> — crating, loading, transport on licensed partner carriers, and rig-in at the destination — so one team owns the machine the whole way.' },
+    { q: 'Can you move the equipment to another facility too?', a: 'Yes. We manage it as <a href="/services/project-freight">project freight</a> — crating, loading, transport through our licensed broker and carrier partners, and rig-in at the destination — so one team owns the machine the whole way.' },
     { q: 'Do you work nights and weekends?', a: 'Yes. Most rigging is scheduled around production, so off-shift and weekend moves are normal for us.' },
     { q: 'Do you cover my area?', a: 'We run rigging from 88 locations and cover all 50 states. <a href="/locations">See locations →</a>' },
   ],

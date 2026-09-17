@@ -80,9 +80,11 @@ const SERVICES = {
     faq:(c)=>[
       [`Do you move CNC machines in ${c.city}?`,`Yes — CNC machine moving throughout ${c.CS} and the surrounding metro, serving ${c.angle} machine shops. Single machines, cells, and full shop relocations. <a href="/contact">Get a quote →</a>`],
       [`How much does it cost to move a CNC machine in ${c.city}?`,`It depends on weight and class, rigging access at both shops, distance across the metro, and the disconnect and re-level work involved. Send the model and both floor layouts and we'll turn a ${c.city} quote around fast.`],
-      [`Can you move a CNC machine from ${c.city} to another state?`,`Yes — we rig it out, crate it, and manage the transport as project freight on licensed partner carriers, then set and re-level it at the new shop.`],
+      [`Can you move a CNC machine from ${c.city} to another state?`,`Yes — we rig it out, crate it, and manage the transport as project freight through our licensed broker and carrier partners, then set and re-level it at the new shop.`],
       [`Do you re-level the machine after transit?`,`Always — set on the new pad and squared to the builder's spec before hand-off, ready for OEM ramp-up and first cut.`],
     ],
+    titleFn:(CS)=>`CNC Machine Movers in ${CS} | Badass Logistics`,
+    quoteFactors:['Machine make, model, and weight — from the builder\'s data, not a guess','Rigging access at both shops: doors, aisles, pits, and floor ratings','Disconnect, draining, and axis-locking work, and whether the OEM tech attends','Air-ride transport distance and whether the machine is crated','Re-leveling and anchoring at the new pad'],
     pillarFile:'services/cnc-machine-movers.html', sentinel:'CNC_METROS', cardNoun:'CNC movers',
   },
 
@@ -101,9 +103,11 @@ const SERVICES = {
     faq:(c)=>[
       [`Do you move industrial machinery in ${c.city}?`,`Yes — single machines, multi-machine cells, and full production-line moves throughout ${c.CS} and the surrounding metro, serving its ${c.angle} base. <a href="/contact">Get a quote →</a>`],
       [`How do you keep our downtime short?`,`Everything is decided before rig day — path of travel, floor loads, gear, and sequence — and the move is scheduled around your production calendar in ${c.city}, nights and weekends included, so the floor is down only for the move window.`],
-      [`Can you move machinery out of ${c.city} to another plant?`,`Yes — machines are rigged out, crated where needed, and moved as project freight on licensed partner carriers, then set and leveled at the destination by the same crew.`],
+      [`Can you move machinery out of ${c.city} to another plant?`,`Yes — machines are rigged out, crated where needed, and moved as project freight through our licensed broker and carrier partners, then set and leveled at the destination by the same crew.`],
       [`Do you reinstall and level the machine?`,`Yes — set on the new pad and leveled to the manufacturer's spec before hand-off, ready for recommissioning.`],
     ],
+    titleFn:(CS)=>`Machinery Movers in ${CS} | Heavy Equipment Moving | Badass Logistics`,
+    quoteFactors:['What\'s moving: machine types, weights, and dimensions','Access at both ends — doors, ceilings, docks, and floor capacity along the path','Disconnect and reconnect scope, and who handles utilities','Distance, crating, and whether it runs as a truckload or several','Setting, leveling, anchoring, and any staging time in between'],
     pillarFile:'services/machinery-moving.html', sentinel:'MM_METROS', cardNoun:'machinery movers',
   },
 
@@ -125,6 +129,8 @@ const SERVICES = {
       [`How do you handle the freight on a ${c.city} plant move?`,`It runs as project freight: machines are crated or prepped, loaded in sequence, and moved on dedicated partner-carrier capacity scheduled around the rig-out and rig-in, so trucks arrive when the crew is ready.`],
       [`Do you reinstall the line in the new building?`,`Yes — every machine is set, leveled, and squared to spec in the new layout, ready for recommissioning. We hand off a floor that's ready to run.`],
     ],
+    titleFn:(CS)=>`Factory & Plant Relocation in ${CS} | Badass Logistics`,
+    quoteFactors:['The asset list: how many machines and lines, and their weights','Phasing — what has to keep running while the rest moves','Teardown, tagging, and reassembly scope with your trades and OEMs','Truckload count, crating, and whether dedicated lanes make sense','Reinstall, leveling, and the start-up date the schedule works back from'],
     pillarFile:'services/plant-relocation.html', sentinel:'PR_METROS', cardNoun:'plant relocation',
   },
 
@@ -146,6 +152,8 @@ const SERVICES = {
       [`What kinds of rigging do you do in ${c.city}?`,`Machine setting, crane and gantry lifts, jacking and skidding, millwright installation, MRI and medical equipment, data center, chiller, and transformer rigging — see every type on our <a href="/services/rigging">rigging page</a>.`],
       [`Do you set and level the machine after the lift?`,`Yes — we set the load on its new pad or foundation and level it to the manufacturer's spec, ready for recommissioning.`],
     ],
+    titleFn:(CS)=>`Rigging Company in ${CS} | Industrial Rigging | Badass Logistics`,
+    quoteFactors:['The load: weight, dimensions, and center of gravity','The method: skates and jacks, gantry, forklift, or crane — and who supplies the crane','Site access, headroom, floor ratings, and any street or site closures','Crew size and schedule, including nights and weekends around production','Setting, leveling, and anchoring at the final position'],
     pillarFile:'services/rigging.html', sentinel:'RIG_METROS', cardNoun:'riggers',
   },
 };
@@ -153,9 +161,9 @@ const SERVICES = {
 // Per-service internal links to the highest-value blog "movers" (from GSC: pages already
 // pulling impressions on page 3-9). Every city page funnels authority to these → pushes them up.
 const CITY_GUIDES = {
-  'rigging': [['machine-leveling-and-alignment','Machine Leveling &amp; Alignment After a Move'],['how-to-move-an-mri-machine','How to Move an MRI Machine'],['how-to-move-a-cnc-machine','How to Move a CNC Machine']],
+  'rigging': [['types-of-rigging','Types of Rigging, Explained'],['what-is-a-critical-lift','What Is a Critical Lift?'],['how-to-move-an-mri-machine','How to Move an MRI Machine'],['how-to-move-a-cnc-machine','How to Move a CNC Machine']],
   'cnc-machine-movers': [['how-to-move-a-cnc-machine','How to Move a CNC Machine'],['machine-leveling-and-alignment','Machine Leveling &amp; Alignment'],['how-to-move-a-lathe','How to Move a Metal Lathe']],
-  'machinery-moving': [['how-to-move-a-lathe','How to Move a Metal Lathe'],['machine-leveling-and-alignment','Machine Leveling &amp; Alignment'],['how-to-move-an-mri-machine','How to Move an MRI Machine']],
+  'machinery-moving': [['how-much-do-machinery-movers-cost','How Much Do Machinery Movers Cost?'],['machine-leveling-and-alignment','Machine Leveling &amp; Alignment'],['how-to-move-an-mri-machine','How to Move an MRI Machine']],
   'plant-relocation': [['plant-relocation-checklist','The Plant Relocation Checklist'],['blocking-bracing-and-dunnage-explained','Blocking, Bracing &amp; Dunnage Explained'],['machine-leveling-and-alignment','Machine Leveling &amp; Alignment']],
 };
 
@@ -226,6 +234,72 @@ ${cards}
 </div></section>`;
 }
 
+
+// ---------- INDUSTRY PROFILES (per-metro uniqueness from the metro's real industrial base) ----------
+// Keyed off industryPhrase(). General, accurate equipment lists — no invented local facts.
+const INDUSTRY_PROFILE = {
+  'automotive and tool-and-die': { eq: ['Stamping and transfer presses', 'Die sets and tool-and-die equipment', 'Robotic weld and assembly cells', 'CMMs and inspection equipment', 'Conveyor and body-shop lines', 'Injection molding machines'], why: 'Press pits, heavy die weights, and short retooling windows during model changeovers decide how these moves are planned.' },
+  'semiconductor and precision-tool': { eq: ['Process and metrology tools', 'Sub-fab pumps and abatement units', 'Cleanroom air handlers and chillers', 'Precision machining centers', 'Test and inspection systems', 'Vibration-isolated instruments'], why: 'Cleanroom protocol, decontamination sign-off, and tight shock and tilt limits drive the rigging plan.' },
+  'aerospace and defense': { eq: ['Large 5-axis machining centers', 'Autoclaves and composite ovens', 'Test cells and test stands', 'Tooling fixtures and jigs', 'CMMs and inspection equipment', 'Paint and finishing systems'], why: 'Large machine envelopes, documentation expectations, and secure-site access rules shape every move.' },
+  'energy and petrochemical': { eq: ['Compressors and pump skids', 'Heat exchangers and vessels', 'Transformers and switchgear', 'Generators and turbines', 'Process skids and modules', 'Control buildings and e-houses'], why: 'Turnaround windows, site safety rules, and heavy concentrated loads on process pads set the schedule.' },
+  'steel and metal-fabrication': { eq: ['Press brakes and shears', 'Laser, plasma, and waterjet tables', 'Rolling and forming equipment', 'Furnaces and heat-treat equipment', 'Welding and cutting cells', 'Overhead-crane-served production lines'], why: 'Very concentrated floor loads and moves inside running mills and shops shape how these jobs are rigged.' },
+  'ag-equipment and food-processing': { eq: ['Processing and cooking lines', 'Fillers and packaging lines', 'Industrial ovens and fryers', 'Freezers and refrigeration equipment', 'Stainless tanks and mixers', 'Palletizers and conveyors'], why: 'Sanitary handling, washdown areas, and short plant shutdown windows drive the plan.' },
+  'pharma and medical-device': { eq: ['Cleanroom production equipment', 'Bioreactors and process vessels', 'Fill-finish lines', 'Autoclaves and sterilizers', 'Lab and analytical instruments', 'Molding and assembly equipment'], why: 'Validated spaces, cleanroom rules, and equipment that has to be requalified after the move shape every job.' },
+  'process-industry': { eq: ['Extruders and calenders', 'Converting and laminating lines', 'Mixers and reactors', 'Molding presses', 'Dryers and ovens', 'Winders and slitters'], why: 'Long interconnected lines have to come apart and go back together in the right order and alignment.' },
+  'distribution and manufacturing': { eq: ['Conveyor and sortation systems', 'Pallet racking and mezzanines', 'Automated storage and retrieval equipment', 'Compressors and plant utilities', 'Packaging and palletizing lines', 'Production machinery'], why: 'Most work happens around live distribution and production operations that can\'t stop for the move.' },
+  'manufacturing': { eq: ['CNC machining centers', 'Presses and press brakes', 'Injection molding machines', 'Compressors and plant utilities', 'Production and assembly lines', 'Paint and finishing systems'], why: 'Keeping the rest of production running while machines move is usually the hardest part of the plan.' },
+};
+function industrySection(svc, c) {
+  const prof = INDUSTRY_PROFILE[c.angle] || INDUSTRY_PROFILE['manufacturing'];
+  const lead = c.metro && c.metro.industry ? `${c.city}'s industrial base — ${c.metro.industry} —` : `${c.city}'s ${c.angle} base`;
+  return `
+<section class="notes-bg">
+  <span class="bgnote" style="top:10%;right:4%;transform:rotate(-4deg)">${c.angle.split(' ')[0].toUpperCase()} ✓</span>
+  <div class="wrap">
+  <span class="section-tag hand">${c.angle} equipment</span>
+  <h2 class="section-title">Equipment we rig for ${c.city}'s ${c.angle} plants</h2>
+  <p class="section-intro">${lead} runs on equipment that doesn't move like freight. ${prof.why} Typical ${svc.coverageNoun.toLowerCase()} for ${c.city} customers include:</p>
+  <div class="chip-row">${prof.eq.map(e => `<span>${e}</span>`).join('')}</div>
+</div></section>`;
+}
+
+// ---------- EVERY TYPE OF RIGGING (links money pages to every specialty page) ----------
+// Competitor city pages that win "near me" SERPs link 9+ same-city specialties.
+// We don't build city variants of every specialty (scaled-content risk), so each
+// city page links the national specialty pages with city-framed context instead.
+const { inFamily } = require('./lib/taxonomy');
+const RIG_TYPE_PITCH = {
+  'machinery-moving': 'presses, machine tools, and production equipment',
+  'plant-relocation': 'whole floors, lines, and multi-site consolidations',
+  'machinery-removal': 'retired machines, plant closures, and lease exits',
+  'mri-medical-equipment-rigging': 'MRI, CT, and imaging systems for hospitals',
+  'lab-equipment-movers': 'microscopes, NMR, and semiconductor tools',
+  'cnc-machine-movers': 'VMCs, lathes, grinders, and machine shops',
+  'printing-press-movers': 'offset, web, digital presses, and bindery',
+  'crane-services': 'planned crane picks and critical lifts',
+  'heavy-lift-rigging': 'gantries, jacking, and skidding where cranes can\'t reach',
+  'millwright-services': 'installation, leveling, alignment, conveyors',
+  'forklift-loading-unloading': 'load-outs, container unloads, dock-less deliveries',
+  'data-center-rigging': 'generators, UPS, switchgear, and racks',
+  'hvac-chiller-rigging': 'chillers, boilers, rooftop units, cooling towers',
+  'transformer-generator-rigging': 'transformers, gensets, and switchgear',
+};
+function rigTypes(serviceSlug, city, CS) {
+  const items = inFamily('rigging').filter(x => x.slug !== 'rigging' && x.slug !== serviceSlug);
+  return `
+<section class="notes-bg">
+  <span class="bgnote" style="top:8%;right:4%;transform:rotate(-4deg)">EVERY KIND OF RIG</span>
+  <div class="wrap">
+  <span class="section-tag hand">every type of rigging</span>
+  <h2 class="section-title">More rigging we do in ${city}</h2>
+  <p class="section-intro">The same ${city} crews handle every kind of industrial rigging. If your job looks more like one of these, start here:</p>
+  <div class="type-grid">
+${items.map(x => `    <a href="/services/${x.slug}"><span class="k">// ${RIG_TYPE_PITCH[x.slug] || x.short.toLowerCase()}</span><h3>${x.label}</h3></a>`).join('\n')}
+  </div>
+  <p style="margin-top:20px;font-weight:600;">Running a trucking fleet out of ${city}? See <a href="/services/truck-dispatch" style="color:var(--yellow-deep);text-decoration:underline;">truck dispatch for fleets of 4+ trucks</a>.</p>
+</div></section>`;
+}
+
 function page(serviceSlug, svc, loc, metro, hubStates) {
   const { city, state } = loc;
   const CS = `${city}, ${state}`;
@@ -239,7 +313,7 @@ function page(serviceSlug, svc, loc, metro, hubStates) {
   const url = `${DOMAIN}/services/${serviceSlug}/${slug}`;
   const cityHub = `/locations/${slug}`;
   const mapQ = encodeURIComponent(CS);
-  const title = `${svc.name} in ${CS} | Badass Logistics`;
+  const title = svc.titleFn ? svc.titleFn(CS) : `${svc.name} in ${CS} | Badass Logistics`;
   // Keep under ~155 chars so Google doesn't truncate mid-sentence, and don't
   // repeat svc.name/svc.serviceType back-to-back (they're identical for several
   // services, which produced a stuttering snippet on 87 pages).
@@ -249,7 +323,8 @@ function page(serviceSlug, svc, loc, metro, hubStates) {
   if (hasHub) bcItems.push({"@type":"ListItem","position":3,"name":c.stName,"item":`${DOMAIN}/services/${serviceSlug}/${stSlug}`});
   bcItems.push({"@type":"ListItem","position":hasHub?4:3,"name":CS,"item":url});
   const breadcrumb = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":bcItems};
-  const faqPairs = svc.faq(c);
+  const faqPairs = svc.faq(c).slice();
+  if (serviceSlug !== 'cnc-machine-movers') faqPairs.splice(2, 0, [`How much do ${svc.cardNoun} cost in ${city}?`, `There is no flat rate for ${svc.serviceType.toLowerCase()} — the price comes from the equipment, the access at both ends, the crew and gear, distance, and setting work. Send the equipment list and both sites and we'll quote your ${city} job fast, usually the same day.`]);
   const faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":faqPairs.map(([q,a])=>({"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a.replace(/<[^>]+>/g,'')}}))};
 
   return `<!DOCTYPE html>
@@ -319,6 +394,7 @@ ${NAV}
   <h2>${svc.introH2(c)}</h2>
   ${svc.introPs(c).map(p=>`<p>${p}</p>`).join('\n  ')}
 </div></section>
+${industrySection(svc, c)}
 
 <section class="bg-paper" style="border-top:3px solid var(--ink);border-bottom:3px solid var(--ink);"><div class="wrap">
   <span class="section-tag hand">what we move in ${city}</span>
@@ -333,8 +409,20 @@ ${NAV}
   <span class="bgnote" style="bottom:12%;left:4%;transform:rotate(4deg)">CRATED &amp; STAGED ✓</span>
   <div class="wrap prose">
   <h2>When the equipment leaves ${city}</h2>
-  <p>Plenty of ${city} jobs start and finish on one floor. The rest have to travel — to a new building across the metro, a sister plant down ${c.ix}, or a facility in another state. We don't hand that part off. It runs as <a href="/services/project-freight">project freight</a> inside the same plan: machines <a href="/services/crating-packing">crated or prepped</a> on site, loads sequenced to the rig-out, transport on licensed partner carriers with <a href="/services/dedicated-lanes">dedicated capacity</a> for bigger moves, and our crew waiting at the destination to set it.</p>
+  <p>Plenty of ${city} jobs start and finish on one floor. The rest have to travel — to a new building across the metro, a sister plant down ${c.ix}, or a facility in another state. We don't hand that part off. It runs as <a href="/services/project-freight">project freight</a> inside the same plan: machines <a href="/services/crating-packing">crated or prepped</a> on site, loads sequenced to the rig-out, transport through our licensed broker and carrier partners with <a href="/services/dedicated-lanes">dedicated capacity</a> for bigger moves, and our crew waiting at the destination to set it.</p>
 </div></section>
+
+<section class="bg-paper notes-bg" style="border-top:3px solid var(--ink);border-bottom:3px solid var(--ink);">
+  <span class="bgnote" style="top:10%;right:5%;transform:rotate(-4deg)">NO FLAT RATES</span>
+  <span class="bgnote" style="bottom:12%;left:4%;transform:rotate(4deg)">SAME-DAY QUOTE</span>
+  <div class="wrap prose">
+  <span class="section-tag hand">how we quote</span>
+  <h2>How we price a ${city} ${svc.quote.toLowerCase()} job</h2>
+  <p>Every ${svc.serviceType.toLowerCase()} job in ${CS} is quoted from the actual work, not a rate sheet. These are the things that move the number — send them with your request and you'll get a real quote back fast:</p>
+  <ul class="checklist" style="margin-bottom:18px;">${(svc.quoteFactors||[]).map(f=>`<li><span>${f}</span></li>`).join('')}</ul>
+  <p>Photos of the equipment, its nameplate, and the path out of the building save a site visit on smaller ${city} jobs. For bigger moves we walk both sites before we price anything.</p>
+</div></section>
+${rigTypes(serviceSlug, city, CS)}
 
 <section><div class="wrap">
   <span class="section-tag hand">on the map</span>
@@ -416,7 +504,7 @@ function statePage(serviceSlug, svc, st, cityMs) {
   const faqPairs = [
     [`Do you provide ${svc.name.toLowerCase()} across ${stName}?`,`Yes — ${svc.serviceType.toLowerCase()} in ${nameList} and metros throughout ${stName}, backed by a nationwide network of 88 locations. <a href="/contact">Get a quote →</a>`],
     [`Which ${stName} cities do you cover?`,`We run ${svc.tag} in ${nameList}, and reach the rest of ${stName} through our nationwide network. Pick your metro below for a local page.`],
-    [`Can you move equipment between ${stName} facilities?`,`Yes — equipment is rigged out, crated or prepped, moved as project freight on licensed partner carriers, and set by the same crew at the destination.`],
+    [`Can you move equipment between ${stName} facilities?`,`Yes — equipment is rigged out, crated or prepped, moved as project freight through our licensed broker and carrier partners, and set by the same crew at the destination.`],
   ];
   const faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":faqPairs.map(([q,a])=>({"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a.replace(/<[^>]+>/g,'')}}))};
   const cards = cities.map(m=>`    <a class="svc-card" href="${m.url.split('/').pop()}"><div class="num">// ${st}</div><h3>${m.city}, ${st}</h3><p>${svc.name} in ${m.city}</p><span class="more">${m.city} ${svc.cardNoun}</span></a>`).join('\n');

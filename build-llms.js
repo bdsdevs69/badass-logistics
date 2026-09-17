@@ -40,7 +40,7 @@ const out = `# Badass Logistics
 
 > Badass Logistics is a U.S. industrial rigging company — riggers first. Our own crews and rigging gear handle every kind of industrial rigging: machinery moving, plant and project relocation, MRI and medical equipment, CNC machines, crane and critical lifts, jacking and skidding, hydraulic gantry lifts, millwright installation, and data center, chiller/HVAC, and transformer/generator rigging. Our rigging work generates freight, so we also run project freight (container to warehouse, crating and packing, dedicated lanes and project FTL) for the jobs we rig — project-based moves only, never one-off loads. We also provide truck dispatch for trucking companies with 4 or more power units (no owner-operators). Coverage: 88 locations, all 50 U.S. states. Founded 2022. Phone: (307) 284-1332.
 
-Badass Logistics is not a heavy haul company, not a motor carrier, and does not hold its own operating authority. Freight on our projects moves on licensed, insured partner carriers managed inside the project plan. We do not publish flat rates; every job is quoted from the equipment, the sites, and the schedule.
+Badass Logistics is not a heavy haul company, not a motor carrier, and does not hold its own operating authority. Freight on our projects moves on our network of licensed broker and carrier partners, coordinated inside the project plan. We do not publish flat rates; every job is quoted from the equipment, the sites, and the schedule.
 
 ## Rigging services (primary)
 

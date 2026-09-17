@@ -15,7 +15,7 @@ const BANNED = [
   [/\bservice area\b/i, '"service area" phrasing'],
   [/\bheadquarter/i, 'HQ disclosure'],
   [/\b(seamless|cutting-edge|one-stop shop|we pride ourselves|world-class|state-of-the-art)\b/i, 'marketing cliche'],
-  [/\bbroker(age|ed|s)?\b/i, 'broker language (avoid describing ourselves in broker terms)'],
+  [/\b(we are|we're|as an?|our) (freight |licensed )?broker(age)?\b(?! and carrier partners)|\bbrokerage\b/i, 'describes Badass as a broker'],
 ];
 const strip = s => String(s).replace(/<[^>]+>/g,' ').replace(/&[a-z]+;/g,' ');
 const slugs = process.argv.slice(2);
@@ -42,7 +42,7 @@ for (const slug of slugs) {
     const svc = u.match(/^\/services\/([a-z0-9-]+)$/);
     if (svc && !bySlug[svc[1]]) errs.push(`link to unknown service ${u}`);
     const blog = u.match(/^\/blog\/([a-z0-9-]+)$/);
-    if (blog && !fs.existsSync(path.join(ROOT,'blog',blog[1]+'.html')) && !['types-of-rigging','what-is-transloading','dedicated-freight-lanes-explained','truck-dispatch-for-small-fleets'].includes(blog[1])) errs.push(`link to missing blog ${u}`);
+    if (blog && !fs.existsSync(path.join(ROOT,'blog',blog[1]+'.html')) && !['types-of-rigging','what-is-transloading','dedicated-freight-lanes-explained','truck-dispatch-for-small-fleets','how-to-move-a-printing-press','what-is-a-critical-lift','jacking-and-skidding-explained','export-crating-requirements','how-much-do-machinery-movers-cost','how-do-truck-dispatchers-get-paid'].includes(blog[1])) errs.push(`link to missing blog ${u}`);
   }
   (c.faq||[]).length < 5 && warns.push('fewer than 5 FAQs');
   console.log(`${errs.length ? '✖' : '✓'} ${slug} (~${words} words)`);

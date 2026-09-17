@@ -2,7 +2,7 @@
 module.exports = {
   slug: 'crating-packing',
   cardBlurb: 'Custom crates, skids, export packing, and machine prep — done on site by the crew that rigs it out.',
-  title: 'Industrial Crating & Machinery Packing Services | Badass Logistics',
+  title: 'Industrial Crating & Export Packing Services | Badass Logistics',
   description: 'Industrial crating and packing for machinery and project freight — custom crates and skids, export packing with ISPM-15 lumber, VCI wrap, and blocking and bracing.',
   serviceType: 'Industrial Crating & Packing',
   hero: '/assets/img/loads/crating-shrink-wrap-electrical-equipment.jpg',
@@ -94,6 +94,7 @@ module.exports = {
   faqTitle: 'Crating &amp; packing FAQ',
   related: ['machinery-moving', 'container-to-warehouse', 'dedicated-lanes', 'mri-medical-equipment-rigging'],
   guides: [
+    ['export-crating-requirements', 'Export Crating Requirements (ISPM-15)'],
     ['white-glove-freight-and-custom-crating', 'White-Glove Freight &amp; Custom Crating'],
     ['blocking-bracing-and-dunnage-explained', 'Blocking, Bracing &amp; Dunnage'],
     ['how-to-prepare-a-machine-for-shipping', 'How to Prepare a Machine for Shipping'],

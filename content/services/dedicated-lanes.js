@@ -2,7 +2,7 @@
 module.exports = {
   slug: 'dedicated-lanes',
   cardBlurb: 'Truckload and dedicated capacity reserved for the life of a project — same lane, same schedule, synced with the crew.',
-  title: 'Dedicated Lanes & Project FTL Capacity | Badass Logistics',
+  title: 'Dedicated Trucking Services & Project Lanes | Badass Logistics',
   description: 'Dedicated freight lanes and truckload capacity for industrial projects — relocations, phased deliveries, and recurring site runs, scheduled with the rigging crew.',
   serviceType: 'Dedicated Lane & Project Truckload Management',
   hero: '/assets/img/loads/tarped-flatbed-load-blue-kenworth.jpg',
@@ -15,12 +15,12 @@ module.exports = {
   ctaHref: '/quote-project-freight',
   annots: ['LANE: PLANT A → PLANT B', '2 TRUCKS / DAY', 'AIR-RIDE ✓', 'DELIVERY 06:00–10:00'],
   bgnotes: ['SAME TRUCKS DAILY', 'LOAD 14 OF 40', 'WINDOW 06:00', 'CREW READY ✓', 'AIR-RIDE', 'STEP DECK — TALL', 'TARPED ✓', 'POD + PHOTOS', 'LANE LOCKED', 'PHASE 2 RUNS', 'NO SPOT BOOKING', 'RETURN LOAD: RACKING'],
-  quickAnswer: 'A dedicated lane is truck capacity reserved on a specific route for a set period, instead of booking each load on the spot market. Badass Logistics sets up dedicated lanes and full-truckload capacity for industrial projects — plant relocations, phased equipment deliveries, and recurring runs between warehouses and job sites — on licensed partner carriers, with delivery windows synced to our rigging crews.',
+  quickAnswer: 'A dedicated lane is truck capacity reserved on a specific route for a set period, instead of booking each load on the spot market. Badass Logistics sets up dedicated lanes and full-truckload capacity for industrial projects — plant relocations, phased equipment deliveries, and recurring runs between warehouses and job sites — through our licensed broker and carrier partners, with delivery windows synced to our rigging crews.',
   intro: {
     h2: 'Project capacity, not spot loads',
     paragraphs: [
       'The spot market works fine for one load. It falls apart on a project. A <a href="/services/plant-relocation">plant relocation</a> might need forty loads over three weeks between the same two buildings. A build-out might take deliveries every morning for two months. Book those one at a time and you get different trucks, different equipment, different arrival times, and a crew standing around waiting for whichever load shows up first.',
-      'Dedicated lanes fix that by reserving the capacity up front. We work out how many loads the project really needs, the equipment each type of freight requires, and the cadence the loading and unloading crews can handle — then line up licensed, insured partner carriers to run that lane for the life of the project. Same lane, same schedule, often the same drivers who learn the sites.',
+      'Dedicated lanes fix that by reserving the capacity up front. We work out how many loads the project really needs, the equipment each type of freight requires, and the cadence the loading and unloading crews can handle — then line up capacity through our licensed broker and carrier partners to run that lane for the life of the project. Same lane, same schedule, often the same drivers who learn the sites.',
       'This is the freight side of our <a href="/services/project-freight">project freight</a> work. We don\'t sell dedicated capacity for general freight or one-off loads. The lanes exist because a project needs them, and they\'re planned together with the <a href="/services/rigging">rigging</a> at both ends.',
     ],
   },
@@ -74,7 +74,7 @@ module.exports = {
     steps: [
       { h: 'Scope the freight', p: 'Asset list, weights, dimensions, origins, destinations, and the project schedule.' },
       { h: 'Design the lane', p: 'Load count, cadence, equipment mix, and delivery windows tied to the rigging plan.' },
-      { h: 'Secure capacity', p: 'Licensed, insured partner carriers committed to the lane for the project period.' },
+      { h: 'Secure capacity', p: 'Capacity committed to the lane through our licensed broker and carrier partners for the project period.' },
       { h: 'Run the lane', p: 'Loads move on schedule with tracking, photos, and signed paperwork for each run.' },
       { h: 'Adjust &amp; close out', p: 'Cadence adjusted as the project changes, then closed out with a complete record.' },
     ],
@@ -86,7 +86,7 @@ module.exports = {
   faq: [
     { q: 'What is a dedicated freight lane?', a: 'Truck capacity reserved on a specific route for a set period, instead of booking each load on the spot market. It gives a project consistent equipment, timing, and often the same drivers.' },
     { q: 'Do you offer dedicated lanes for regular freight?', a: 'No. Our dedicated lanes and truckloads are for projects — relocations, installs, build-outs, and equipment programs — planned together with our <a href="/services/project-freight">project freight</a> and rigging work.' },
-    { q: 'Who runs the trucks?', a: 'Licensed, insured partner carriers that we manage inside the project plan. We don\'t own trucks; we own the planning, scheduling, and coordination with the crews.' },
+    { q: 'Who runs the trucks?', a: 'Our network of licensed broker and carrier partners, coordinated inside the project plan. We don\'t own trucks; we own the planning, scheduling, and coordination with the crews.' },
     { q: 'What equipment can run on a project lane?', a: 'Dry van, air-ride, flatbed, step deck, and conestoga are the most common. Each load is matched to what the freight actually needs.' },
     { q: 'How many loads does a project need before a dedicated lane makes sense?', a: 'There\'s no fixed number. It depends on how predictable the freight is, how tight the schedule is, and what a missed truck would cost the job. We work it out from your asset list.' },
     { q: 'Can the schedule change mid-project?', a: 'Yes. Cadence and load counts are adjusted as the project moves, which is one of the main reasons to have one team managing the lane and the rigging together.' },

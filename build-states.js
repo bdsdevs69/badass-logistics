@@ -203,7 +203,7 @@ ${NAV}
   <div class="wrap prose">
   <h2>Rigging &amp; machinery moving across ${name}</h2>
   <p>${site.brand} runs <a href="../services/rigging.html">industrial rigging</a>, <a href="../services/machinery-moving.html">machinery moving</a>, and <a href="../services/plant-relocation.html">plant relocation</a> throughout ${name}, with local crews built around ${cityList}. Our work follows the ${industries} ${plural ? 'markets' : 'market'} — presses and machine tools, production lines, MRI and imaging equipment, generators, chillers, and the plants that house them.</p>
-  <p>When equipment has to travel — between ${name} plants on the ${meta.ix} corridors or out of state — we run it as <a href="../services/project-freight.html">project freight</a>: crated or prepped on site, moved on licensed partner carriers, and set by the same crew at the other end. Trucking companies running four or more trucks in ${name} can also put them on our <a href="../services/truck-dispatch.html">fleet dispatch desk</a>.</p>
+  <p>When equipment has to travel — between ${name} plants on the ${meta.ix} corridors or out of state — we run it as <a href="../services/project-freight.html">project freight</a>: crated or prepped on site, moved through our licensed broker and carrier partners, and set by the same crew at the other end. Trucking companies running four or more trucks in ${name} can also put them on our <a href="../services/truck-dispatch.html">fleet dispatch desk</a>.</p>
 </div></section>
 
 <section class="bg-paper notes-bg" style="border-top:3px solid var(--ink);border-bottom:3px solid var(--ink);">
