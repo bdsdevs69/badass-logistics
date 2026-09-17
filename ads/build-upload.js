@@ -46,9 +46,10 @@ for (const c of plan.campaigns) {
     Budget: c.dailyBudget.toFixed(2),
     'Bid Strategy Type': 'Manual CPC',
     Status: 'Paused',
-    // Google refuses any new campaign without this declaration. Nothing
-    // here is political advertising anywhere, let alone in the EU.
-    'EU political ads': 'Does not contain EU political ads',
+    // Google refuses any new campaign without this declaration, and the
+    // column only accepts a bare Yes/No. Nothing here is political
+    // advertising anywhere, let alone in the EU.
+    'EU political ads': 'No',
   });
 
   for (const g of c.adGroups) {
