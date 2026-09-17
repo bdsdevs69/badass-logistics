@@ -26,7 +26,8 @@
       "angle": "Fixed radiographic rooms, C-arms, fluoroscopy and mammo. Tube and detector handling, ceiling-suspended rails, lead-lined wall openings, working around a live department.",
       "links": ["services/mri-medical-equipment-rigging", "services/lab-equipment-movers"],
       "hero": "loads/ct-scanner-medical-imaging-move.jpg",
-      "status": "todo"
+      "status": "done",
+      "published": "2026-09-18"
     },
     {
       "slug": "hospital-equipment-relocation-guide",
@@ -36,7 +37,8 @@
       "angle": "Department-level moves: who owns what between the OEM, biomed, EHS, facilities and the rigger. Decon sign-off, infection control risk assessment, elevator embargoes, night windows.",
       "links": ["services/mri-medical-equipment-rigging", "services/lab-equipment-movers", "services/plant-relocation"],
       "hero": "loads/white-glove-crated-equipment-delivery.jpg",
-      "status": "todo"
+      "status": "done",
+      "published": "2026-09-18"
     },
     {
       "slug": "how-much-does-it-cost-to-move-medical-equipment",
@@ -46,7 +48,8 @@
       "angle": "Cost-factor piece with no prices — the same structure as the machinery-movers cost post that already ranks. Drivers: system weight and class, floor and route, OEM time, after-hours windows, wall work, distance.",
       "links": ["services/mri-medical-equipment-rigging", "blog/how-much-do-machinery-movers-cost"],
       "hero": "loads/ct-mri-scanner-enclosed-air-ride.jpg",
-      "status": "todo"
+      "status": "done",
+      "published": "2026-09-18"
     },
     {
       "slug": "how-to-move-an-injection-molding-machine",

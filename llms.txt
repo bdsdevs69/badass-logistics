@@ -104,7 +104,10 @@ Badass Logistics is not a heavy haul company, not a motor carrier, and does not 
 
 ## Guides: Medical Rigging
 
+- [Hospital Equipment Relocation: How a Department Move Runs](https://badasslogistics.com/blog/hospital-equipment-relocation-guide): How hospital equipment relocation actually works: who owns what between OEM, biomed, EHS and the rigger, the sign-offs that gate the move, routes and night windows.
+- [What Drives the Cost of Moving Medical Equipment?](https://badasslogistics.com/blog/how-much-does-it-cost-to-move-medical-equipment): What actually sets the price of a medical equipment move: system class, room access, OEM time, physics testing, downtime windows and reinstall scope.
 - [How to Move a Linear Accelerator: Vault, Rigging & Reinstall](https://badasslogistics.com/blog/how-to-move-a-linear-accelerator): How a linear accelerator move really runs — physics release, OEM de-install, getting the gantry out through the maze or a shield panel, rigging, and reinstall.
+- [How to Move an X-Ray Machine, C-Arm or Radiography Room](https://badasslogistics.com/blog/how-to-move-an-x-ray-machine): Moving an x-ray machine: fixed radiographic rooms, C-arms, fluoroscopy and mammo. Tube and detector handling, ceiling rails, lead-lined walls, live departments.
 
 ## Company
 
