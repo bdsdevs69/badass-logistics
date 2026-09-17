@@ -166,8 +166,11 @@ function verify() {
     const hasPhone = /3072841332|\(307\)\s*284-1332/.test(html);
     const mail = html.match(/mailto:([a-z0-9._%+-]+@badasslogistics\.com)/i);
     if (!hasPhone || !mail) { noContact.push(`${rel}${hasPhone ? '' : ' (no phone)'}${mail ? '' : ' (no email)'}`); continue; }
+    // Quote landing pages all answer on info@ — that mailbox is already
+    // activated with FormSubmit, so a lead never waits on a confirmation click.
     const want = /^\/services\/(rigging|machinery|plant|mri|lab|cnc|printing|crane|heavy-lift|millwright|forklift|data-center|hvac|transformer)/.test(rel) ? 'rigging@'
-      : /^\/(services\/truck-dispatch|quote-dispatch)/.test(rel) ? 'dispatch@' : null;
+      : /^\/services\/truck-dispatch/.test(rel) ? 'dispatch@'
+      : /^\/quote-/.test(rel) ? 'info@' : null;
     if (want && !mail[1].startsWith(want)) noContact.push(`${rel} shows ${mail[1]}, expected ${want}…`);
   }
   check(noContact.length === 0, `phone + department email on every page: ${files.length - noContact.length}/${files.length}`, noContact.slice(0, 12));
