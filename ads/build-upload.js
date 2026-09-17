@@ -20,7 +20,7 @@ const path = require('path');
 const plan = JSON.parse(fs.readFileSync(path.join(__dirname, 'campaigns.json'), 'utf8'));
 
 const COLS = [
-  'Campaign', 'Campaign Type', 'Budget', 'Bid Strategy Type', 'Status',
+  'Campaign', 'Campaign Type', 'Budget', 'Bid Strategy Type', 'Status', 'EU political ads',
   'Ad Group', 'Max CPC', 'Keyword', 'Criterion Type', 'Ad type', 'Final URL',
   ...Array.from({ length: 15 }, (_, i) => `Headline ${i + 1}`),
   ...Array.from({ length: 4 }, (_, i) => `Description ${i + 1}`),
@@ -46,6 +46,9 @@ for (const c of plan.campaigns) {
     Budget: c.dailyBudget.toFixed(2),
     'Bid Strategy Type': 'Manual CPC',
     Status: 'Paused',
+    // Google refuses any new campaign without this declaration. Nothing
+    // here is political advertising anywhere, let alone in the EU.
+    'EU political ads': 'Does not contain EU political ads',
   });
 
   for (const g of c.adGroups) {
@@ -88,8 +91,10 @@ const shared = Object.entries(plan.sharedNegatives)
 fs.writeFileSync(path.join(__dirname, 'shared-negatives.txt'), shared.join('\n') + '\n');
 
 const counts = rows.reduce((a, r) => {
-  const k = r[9] ? 'ads' : r[8] ? (r[8].startsWith('Campaign Negative') ? 'negatives' : 'keywords')
-    : r[5] ? 'adGroups' : 'campaigns';
+  const i = (c) => COLS.indexOf(c);
+  const k = r[i('Ad type')] ? 'ads'
+    : r[i('Criterion Type')] ? (r[i('Criterion Type')].startsWith('Campaign Negative') ? 'negatives' : 'keywords')
+    : r[i('Ad Group')] ? 'adGroups' : 'campaigns';
   a[k] = (a[k] || 0) + 1; return a;
 }, {});
 console.log(`✓ ads/upload.csv — ${rows.length} rows`);
