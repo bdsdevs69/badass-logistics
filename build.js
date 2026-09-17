@@ -155,7 +155,24 @@ function verify() {
     ? fs.readdirSync(path.join(ROOT, 'services/heavy-haul')).filter(n => !isStubCached(path.join(ROOT, 'services/heavy-haul', n))) : [];
   check(hhLeft.length === 0, `retired heavy-haul city pages still live: ${hhLeft.length} (${stubs.length} redirect stubs total)`, hhLeft);
 
-  // 6. sitemap lists only indexable, non-stub pages
+  // 6. every live page carries the phone and a department mailbox.
+  //    Rigging pages answer on rigging@, dispatch on dispatch@, and
+  //    everything else on info@ — a page that shows neither number nor
+  //    address is a page a buyer can land on with no way to call.
+  const noContact = [];
+  for (const f of files) {
+    const html = read(f);
+    const rel = '/' + path.relative(ROOT, f);
+    const hasPhone = /3072841332|\(307\)\s*284-1332/.test(html);
+    const mail = html.match(/mailto:([a-z0-9._%+-]+@badasslogistics\.com)/i);
+    if (!hasPhone || !mail) { noContact.push(`${rel}${hasPhone ? '' : ' (no phone)'}${mail ? '' : ' (no email)'}`); continue; }
+    const want = /^\/services\/(rigging|machinery|plant|mri|lab|cnc|printing|crane|heavy-lift|millwright|forklift|data-center|hvac|transformer)/.test(rel) ? 'rigging@'
+      : /^\/(services\/truck-dispatch|quote-dispatch)/.test(rel) ? 'dispatch@' : null;
+    if (want && !mail[1].startsWith(want)) noContact.push(`${rel} shows ${mail[1]}, expected ${want}…`);
+  }
+  check(noContact.length === 0, `phone + department email on every page: ${files.length - noContact.length}/${files.length}`, noContact.slice(0, 12));
+
+  // 7. sitemap lists only indexable, non-stub pages
   const sm = fs.existsSync(path.join(ROOT, 'sitemap.xml')) ? read(path.join(ROOT, 'sitemap.xml')) : '';
   const smBad = [...sm.matchAll(/<loc>https:\/\/badasslogistics\.com([^<]*)<\/loc>/g)].map(m => m[1]).filter(u => {
     const hit = resolve(u === '' ? '/' : u);

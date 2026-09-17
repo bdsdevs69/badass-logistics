@@ -1,0 +1,312 @@
+{
+  "_note": "Source of truth for the Google Ads account (788-067-9748). Rebuilt 2026-09-18 after the riggers-first revamp: the old single 'Search - Rigging & Heavy Haul - Leads' campaign was removed with heavy haul. Four campaigns, one per service theme, each with its own daily budget so spend cannot drift between themes (under Maximize clicks you CANNOT reallocate between ad groups inside one campaign — that lesson cost two months of heavy-haul spend). ads/review.md is the weekly routine that reads this file.",
+  "account": "788-067-9748",
+  "owner": "abdul.samad9k@gmail.com",
+  "monthlyBudget": 500,
+  "tag": "AW-18295250442",
+  "conversionLabel": "AW-18295250442/yvjJCK3VhdEcEIq87ZNE",
+  "sharedSettings": {
+    "network": "Search only — Display OFF, Search Partners OFF",
+    "location": "United States, Presence targeting (NOT presence-or-interest)",
+    "language": "English",
+    "bidding": "Maximize clicks with a max CPC cap",
+    "aiMax": "OFF",
+    "schedule": "Mon-Fri 06:00-20:00, Sat 08:00-16:00, Sun off (account TZ = ET)",
+    "callAsset": "(307) 284-1332"
+  },
+  "campaigns": [
+    {
+      "name": "Rigging & Medical Equipment",
+      "dailyBudget": 6.5,
+      "maxCpc": 4.0,
+      "why": "The only theme with proven conversions — $58 CPA across the two leads the old account produced, both from rigging keywords. Gets the biggest share.",
+      "adGroups": [
+        {
+          "name": "Industrial Rigging",
+          "finalUrl": "https://badasslogistics.com/quote-rigging",
+          "keywords": [
+            "\"industrial rigging\"", "\"rigging company\"", "\"rigging services\"",
+            "\"riggers near me\"", "\"machine riggers\"", "\"machinery riggers\"",
+            "\"rigging services near me\"", "\"industrial rigging company\"",
+            "\"machine moving company\"", "\"machinery rigging\"",
+            "\"machinery movers near me\"", "\"machine movers and riggers\"",
+            "\"rigging and machine moving\"", "\"millwright services\"",
+            "\"plant relocation services\"", "\"factory relocation\""
+          ],
+          "headlines": [
+            "Industrial Rigging Company", "Machinery Movers Near Me", "Riggers & Machine Movers",
+            "Machine Moving Company", "Rigging Services Nationwide", "Lifts To 200,000+ Lbs",
+            "Rigged, Moved & Leveled", "One Crew, No Hand-Offs", "Same-Day Rigging Quotes",
+            "Plant & Factory Relocation", "Heavy Machinery Moving", "Machinery Relocation",
+            "Crane & Rigging Services", "Set & Leveled To Spec", "Get A Rigging Quote Today"
+          ],
+          "descriptions": [
+            "Engineered lifts, machine setting and heavy moves. Rigged, moved and leveled by one crew.",
+            "From a few hundred pounds to 200,000+ lbs. Cranes, gantries, air skates, jack-and-slide.",
+            "Tell us the machine and the site. We plan the pick and quote it fast, often the same day.",
+            "Nationwide riggers. We rig it out, move it and set it. No hand-off between three vendors."
+          ]
+        },
+        {
+          "name": "Medical & Imaging Equipment",
+          "finalUrl": "https://badasslogistics.com/quote-medical",
+          "why": "Got 19 impressions in 30 days on the old account, because generic rigging copy on a generic rigging page scored badly against medical queries. Dedicated page and copy is the fix, not more keywords.",
+          "keywords": [
+            "\"medical equipment movers\"", "\"medical equipment movers near me\"",
+            "\"medical equipment moving company\"", "\"medical equipment moving services\"",
+            "\"hospital equipment movers\"", "\"medical equipment relocation\"",
+            "\"mri machine movers\"", "\"mri rigging\"", "\"mri moving company\"",
+            "\"ct scanner moving\"", "\"ct scanner removal\"", "\"imaging equipment movers\"",
+            "\"linear accelerator removal\"", "\"x ray machine moving\"",
+            "\"medical imaging equipment transport\"", "\"hospital equipment relocation\""
+          ],
+          "headlines": [
+            "Medical Equipment Movers", "MRI & CT Scanner Rigging", "Hospital Equipment Movers",
+            "MRI Machine Movers", "Imaging Equipment Moving", "Shock & Tilt Monitored",
+            "We Work To Your OEM's Plan", "Nights & Weekend Moves", "CT, PET, X-Ray & Linac",
+            "Medical Equipment Rigging", "Linear Accelerator Rigging", "Route Surveyed First",
+            "Moved Without Downtime", "Nationwide Medical Rigging", "Get A Medical Move Quote"
+          ],
+          "descriptions": [
+            "MRI, CT, PET, X-ray and linac rigging. Shock and tilt monitored from rig-out to set-down.",
+            "Scheduled around clinical hours so the department keeps running. Nights and weekends.",
+            "Your OEM de-installs and recommissions. We do the rigging, the move and the set-in-place.",
+            "Send the make, model and both rooms. We plan the rig-out and quote it fast. Nationwide."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Machinery, CNC & Power Equipment",
+      "dailyBudget": 5.0,
+      "maxCpc": 4.0,
+      "why": "Widest commercial intent after core rigging. 'machinery movers near me' and 'cnc machine movers near me' are the proven autocomplete demand.",
+      "adGroups": [
+        {
+          "name": "Machinery Moving",
+          "finalUrl": "https://badasslogistics.com/quote-machinery",
+          "keywords": [
+            "\"machinery movers\"", "\"machinery moving company\"", "\"industrial machinery movers\"",
+            "\"industrial equipment movers\"", "\"heavy machinery movers\"",
+            "\"machinery moving services\"", "\"machine tool movers\"",
+            "\"production line relocation\"", "\"equipment relocation services\"",
+            "\"machinery removal\"", "\"machinery decommissioning\""
+          ],
+          "headlines": [
+            "Machinery Movers Near Me", "Industrial Machinery Movers", "Machinery Moving Company",
+            "Heavy Machinery Movers", "Machine Tool Movers", "Off The Floor. Onto The Pad.",
+            "Set & Leveled To Spec", "Production Line Relocation", "Machinery Removal Services",
+            "One Crew, No Hand-Offs", "Lifts To 200,000+ Lbs", "Equipment Relocation Experts",
+            "Same-Day Machinery Quotes", "Nationwide Machine Movers", "Get A Machinery Quote"
+          ],
+          "descriptions": [
+            "Machines rigged out, moved, set on the pad and leveled to the builder's own spec.",
+            "Send the machine, the weight and both sites. We plan the pick and quote it fast.",
+            "Lines tagged and photographed on teardown, then reassembled in order and aligned.",
+            "One crew rigs it out, manages the freight and sets it. No hand-off between vendors."
+          ]
+        },
+        {
+          "name": "CNC & Machine Tools",
+          "finalUrl": "https://badasslogistics.com/quote-machinery",
+          "keywords": [
+            "\"cnc machine movers\"", "\"cnc machine movers near me\"", "\"cnc machinery movers\"",
+            "\"cnc machine moving\"", "\"cnc machine moving company\"", "\"milling machine movers\"",
+            "\"lathe moving\"", "\"machine shop relocation\"", "\"press brake moving\"",
+            "\"machining center moving\""
+          ],
+          "headlines": [
+            "CNC Machine Movers", "CNC Machine Movers Near Me", "Milling Machine Movers",
+            "Machine Shop Relocation", "Machining Center Moving", "Lathe & Mill Moving",
+            "Re-Leveled To Spec", "Press & Press Brake Moving", "Rigged By One Crew",
+            "Tight-Access Machine Moves", "CNC Moving Company", "Skated Out, Set Level",
+            "Same-Day CNC Move Quotes", "Nationwide CNC Movers", "Get A CNC Moving Quote"
+          ],
+          "descriptions": [
+            "Mills, lathes and 5-axis centers skated out, moved and re-leveled to the builder's spec.",
+            "Machines that cost more than the move don't get guessed. The pick is engineered first.",
+            "Whole shops moved in sequence. Tagged on teardown, rebuilt and aligned in order.",
+            "Send the make, model and both sites. We plan the rig-out and quote it fast."
+          ]
+        },
+        {
+          "name": "Generators, Transformers & Power",
+          "finalUrl": "https://badasslogistics.com/quote-machinery",
+          "keywords": [
+            "\"transformer moving company\"", "\"transformer rigging\"", "\"generator rigging\"",
+            "\"generator moving company\"", "\"switchgear installation companies\"",
+            "\"substation equipment moving\"", "\"transformer installation services\"",
+            "\"power plant equipment rigging\"", "\"generator set installation\"",
+            "\"electrical equipment rigging\""
+          ],
+          "headlines": [
+            "Transformer Moving & Rigging", "Generator Rigging & Moving", "Switchgear Rigging",
+            "Substation Equipment Moving", "Power Equipment Rigging", "Set On Pads & Skids",
+            "Powerhouse Equipment Moves", "Generator Set Installation", "Rigged, Moved & Set",
+            "Heavy Electrical Rigging", "Transformer Movers", "Plant & Utility Rigging",
+            "Same-Day Rigging Quotes", "Nationwide Power Rigging", "Get A Rigging Quote"
+          ],
+          "descriptions": [
+            "Dry-type and oil-filled transformers, switchgear and gensets rigged, moved and set.",
+            "Boilers, chillers, compressors and utility equipment in and out of plant rooms.",
+            "Send the unit, the weight and both sites. We plan the pick and quote it fast.",
+            "Set on pads or skids, shimmed and leveled, handed off ready for the electrical trades."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Crane, Forklift & Handling",
+      "dailyBudget": 2.6,
+      "maxCpc": 3.5,
+      "why": "High-volume but shallow-intent theme. Deliberately the smaller budget: 'crane service near me' and 'forklift service near me' are heavily polluted by equipment rental, repair and training searches. Watch the search terms here hardest.",
+      "adGroups": [
+        {
+          "name": "Crane Services",
+          "finalUrl": "https://badasslogistics.com/quote-crane",
+          "keywords": [
+            "\"crane and rigging services\"", "\"crane rigging company\"", "\"crane services near me\"",
+            "\"crane rental with operator\"", "\"crane service with operator\"",
+            "\"crane and rigging\"", "\"critical lift planning\"", "\"set in place services\"",
+            "\"rooftop unit crane lift\""
+          ],
+          "headlines": [
+            "Crane & Rigging Services", "Crane Lifts With Operators", "Crane With Operator & Crew",
+            "Lift Plan Before Rig Day", "Rooftop & Set-In-Place", "Critical Lift Planning",
+            "Operators & Riggers Included", "One Call, Lift & Crew", "Planned, Not Improvised",
+            "Crane Rigging Company", "Set On Pads & Rooftops", "Nationwide Crane Rigging",
+            "Same-Day Lift Quotes", "Gantry Lifts Too", "Get A Crane Lift Quote"
+          ],
+          "descriptions": [
+            "Cranes sized to the pick, with operators, riggers and a plan worked from the load chart.",
+            "Crane, operator, riggers and gear arrive together. You aren't coordinating three vendors.",
+            "No crane access? Jacking, skidding and gantry lifts move it inside the building instead.",
+            "Send the load, the site and the date. We size the lift and quote it fast. Nationwide."
+          ]
+        },
+        {
+          "name": "Loading, Unloading & Crating",
+          "finalUrl": "https://badasslogistics.com/quote-crane",
+          "keywords": [
+            "\"machinery loading and unloading services\"", "\"forklift loading and unloading\"",
+            "\"container unloading services\"", "\"heavy equipment loading services\"",
+            "\"industrial crating\"", "\"machine crating services\"", "\"export crating\"",
+            "\"custom crating company\"", "\"jacking and skidding\"", "\"machine skidding services\""
+          ],
+          "headlines": [
+            "Machinery Loading Services", "Loading & Unloading Crews", "Forklift Loading Service",
+            "Container Unloading", "Industrial Crating Service", "Custom Crates & Skids",
+            "ISPM-15 Export Packing", "Jacking, Skidding & Gantry", "Machines On & Off Trailers",
+            "Crated, Skidded, Shipped", "Heavy Equipment Unloading", "Crews With The Right Gear",
+            "Same-Day Quotes", "Nationwide Handling Crews", "Get A Handling Quote"
+          ],
+          "descriptions": [
+            "Machinery and heavy crates on and off trailers, containers and docks by trained crews.",
+            "Custom crates, skids and ISPM-15 export packing built around the actual machine.",
+            "Jacking, skidding and gantry work for loads a crane or forklift can't reach.",
+            "Send the load, the site and the date. We bring the gear and quote it fast."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fleet Dispatch (4+ Trucks)",
+      "dailyBudget": 2.3,
+      "maxCpc": 4.5,
+      "why": "Side quest per the brief — it should produce leads without defining the brand. Smallest budget, heaviest negative list: the whole head of this market is owner-operator and new-authority searches, which we do not serve.",
+      "adGroups": [
+        {
+          "name": "Dispatch For Trucking Companies",
+          "finalUrl": "https://badasslogistics.com/quote-dispatch",
+          "keywords": [
+            "\"dispatch services for trucking companies\"", "\"truck dispatch company\"",
+            "\"fleet dispatch services\"", "\"dispatch service for trucking company\"",
+            "\"trucking dispatch services\"", "\"outsourced truck dispatching\"",
+            "\"dispatching company usa\"", "\"freight dispatch services\"",
+            "\"dedicated freight lanes\"", "\"dispatch team for fleets\""
+          ],
+          "headlines": [
+            "Dispatch For Trucking Cos", "Fleet Dispatch Services", "For Fleets Of 4+ Trucks",
+            "Outsourced Truck Dispatch", "Your Dispatch Department", "Freight From Our Network",
+            "No Owner-Operators", "Dedicated Lanes For Fleets", "Keep Your Trucks Loaded",
+            "Truck Dispatch Company", "Built For Real Fleets", "Rigging Freight, Your Trucks",
+            "Talk To Our Dispatch Team", "Nationwide Freight Network", "Get A Dispatch Quote"
+          ],
+          "descriptions": [
+            "Dispatch built for fleets of four trucks and up. We do not take on owner-operators.",
+            "Our rigging and project work generates the freight. Your trucks run it on real lanes.",
+            "A dispatch team with offices and a carrier network behind it, not one person and a laptop.",
+            "Tell us your fleet size, equipment and home base. We'll show you what we can keep moving."
+          ]
+        }
+      ]
+    }
+  ],
+  "sharedNegatives": {
+    "_note": "Applied at every campaign via a shared negative keyword list named 'BL - Global Negatives'. Carried over from the old account's 66 tested negatives plus the new ones the 2026-09-18 autocomplete research surfaced.",
+    "employment": ["jobs", "job", "salary", "hiring", "careers", "resume", "apprenticeship"],
+    "training": ["training", "school", "course", "courses", "certification", "certified", "class", "classes", "how to become"],
+    "buyingGear": ["for sale", "rental", "rent", "buy", "used", "price list", "cost calculator", "manufacturers", "suppliers", "parts", "\"rigging equipment\"", "\"lifting equipment\"", "yoke", "sling", "shackle"],
+    "research": ["what is", "definition", "meaning", "pdf", "template", "checklist pdf", "wikipedia", "naics", "sic code", "hsn", "sac code"],
+    "wrongIndustry": ["boat", "sailboat", "yacht", "sail", "mobile home", "piano", "furniture", "residential", "household", "gym equipment", "atm", "vending"],
+    "wrongService": ["software", "app", "load board", "freight broker training", "3d rigging", "ai rigging", "character rigging", "blender"],
+    "geo": ["canada", "uk", "india", "delhi", "dubai", "australia", "toronto", "mumbai"],
+    "neverAdd": {
+      "free": "Blocks 'free quote' and 'free estimate', which are high-intent. Tested and rejected twice on the old account.",
+      "ontario": "Ontario, California is a major Inland Empire freight hub. Blocking it loses real US shippers.",
+      "oilfield": "Only ever the phrase \"oilfield trucking\" — bare 'oilfield' blocks legitimate oilfield rig and equipment rigging work.",
+      "badass logistics": "Own brand. CTR is roughly 3x campaign average and it feeds Ad Rank. Worth the couple of dollars."
+    }
+  },
+  "campaignNegatives": {
+    "Fleet Dispatch (4+ Trucks)": [
+      "owner operator", "owner operators", "owner-operator", "new authority", "\"for owner operators\"",
+      "\"box truck\"", "hotshot", "\"hot shot\"", "\"dispatch software\"", "\"dispatch training\"",
+      "\"dispatcher salary\"", "\"become a dispatcher\"", "\"dispatch company for sale\"",
+      "\"agreement template\"", "\"dispatcher jobs\"", "\"cdl\"", "\"single truck\"", "\"one truck\""
+    ],
+    "Crane, Forklift & Handling": [
+      "[crane rental]", "[crane hire]", "\"crane rental rates\"", "\"crane parts\"", "\"crane repair\"",
+      "\"forklift repair\"", "\"forklift technician\"", "\"forklift parts\"", "\"forklift rental\"",
+      "\"forklift ramps\"", "\"forklift training\"", "\"forklift certification\"", "\"boom lift\"",
+      "\"scissor lift\"", "\"tower crane\"", "\"overhead crane installation\"", "\"crane inspection\""
+    ],
+    "Rigging & Medical Equipment": [
+      "\"mri cost\"", "\"mri near me\"", "\"mri scan\"", "\"ct scan cost\"", "\"mri vs ct\"",
+      "\"mri technologist\"", "\"medical equipment for sale\"", "\"durable medical equipment\"",
+      "\"medical supply\"", "\"equipment repair\"", "\"biomed\"", "\"linear accelerator price\""
+    ],
+    "Machinery, CNC & Power Equipment": [
+      "\"cnc machine for sale\"", "\"cnc router\"", "\"cnc programming\"", "\"machine shop near me\"",
+      "\"generator for sale\"", "\"generator repair\"", "\"generator installation cost\"",
+      "\"portable generator\"", "\"transformer toy\"", "\"transformer movie\"", "\"transformers robot\"",
+      "\"electrician near me\""
+    ]
+  },
+  "assets": {
+    "sitelinks": [
+      ["Industrial Rigging", "/services/rigging", "Every kind of rigging", "Lifts to 200,000+ lbs"],
+      ["Machinery Moving", "/services/machinery-moving", "Rigged, moved and set", "Leveled to spec"],
+      ["Medical & MRI Rigging", "/services/mri-medical-equipment-rigging", "MRI, CT, X-ray, linac", "Monitored in transit"],
+      ["Plant Relocation", "/services/plant-relocation", "Whole plants, in sequence", "Tagged and rebuilt in order"],
+      ["Crane & Rigging", "/services/crane-services", "Cranes with operators", "Lift plan before rig day"],
+      ["About Badass Logistics", "/about", "Riggers first", "88 locations, all 50 states"]
+    ],
+    "callouts": [
+      "Lifts to 200,000+ Lbs", "Nationwide Coverage", "Same-Day Quotes",
+      "Own Crews & Rigging Gear", "One Crew, No Hand-Offs", "Set & Leveled to Spec"
+    ],
+    "structuredSnippet": {
+      "header": "Service catalog",
+      "values": ["Industrial Rigging", "Machinery Moving", "Plant Relocation", "Medical Equipment Rigging", "Crane & Rigging Services", "Machine Installation"]
+    }
+  },
+  "rules": [
+    "No prices, no rate claims, no MC or DOT numbers, never 'our trucks' or 'our fleet' — the company is not a motor carrier.",
+    "No certification claims (OSHA, NCCCO, ASME) unless the company actually holds them.",
+    "Freight between sites is always 'through our licensed broker and carrier partners'.",
+    "Heavy haul is retired. No trailer-type keywords (RGN, lowboy, step deck, conestoga, double drop), no oversize or permit keywords.",
+    "Dispatch never targets owner-operators or new authority.",
+    "Stay on Maximize clicks until a campaign has 15+ conversions in 30 days, then consider Maximize conversions for that campaign only."
+  ]
+}
