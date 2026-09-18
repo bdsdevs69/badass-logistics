@@ -59,7 +59,8 @@
       "angle": "Real gap — the site covers CNC, lathes, mills and press brakes but not molding. Tie-bar and platen protection, splitting clamp and injection units, hopper and dryer systems, oil drain, leveling to tie-bar parallelism.",
       "links": ["services/machinery-moving", "services/millwright-services"],
       "hero": "loads/load-machine-loadout.jpg",
-      "status": "todo"
+      "status": "done",
+      "published": "2026-09-18"
     },
     {
       "slug": "switchgear-and-substation-equipment-moving",
@@ -69,7 +70,8 @@
       "angle": "Autocomplete shows real demand for switchgear installation. Lineups moved in sections, bus alignment, pad and anchor tolerance, working around energized gear, coordination with the electrical contractor.",
       "links": ["services/transformer-generator-rigging", "services/millwright-services"],
       "hero": "loads/load-flatbed-electrical.jpg",
-      "status": "todo"
+      "status": "done",
+      "published": "2026-09-18"
     },
     {
       "slug": "crane-rental-vs-rigging-company",
@@ -79,7 +81,8 @@
       "angle": "Decision-stage post for the exact confusion the crane ad group runs into: renting steel and an operator versus hiring a crew that owns the whole pick. Where each one is correct.",
       "links": ["services/crane-services", "services/rigging", "blog/what-is-a-critical-lift"],
       "hero": "rigging-crane.jpg",
-      "status": "todo"
+      "status": "done",
+      "published": "2026-09-18"
     },
     {
       "slug": "how-to-move-a-compressor",
@@ -89,7 +92,8 @@
       "angle": "Rotary screw and centrifugal units, receiver tanks and dryers, oil and condensate, vibration isolation pads, reconnecting plant air without leaks.",
       "links": ["services/machinery-moving", "services/hvac-chiller-rigging"],
       "hero": "loads/flatbed-industrial-dust-collectors-strapped.jpg",
-      "status": "todo"
+      "status": "done",
+      "published": "2026-09-18"
     },
     {
       "slug": "forklift-vs-crane-for-machine-loading",
