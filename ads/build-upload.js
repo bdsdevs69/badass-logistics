@@ -21,7 +21,8 @@ const plan = JSON.parse(fs.readFileSync(path.join(__dirname, 'campaigns.json'), 
 
 const COLS = [
   'Campaign', 'Campaign Type', 'Budget', 'Bid Strategy Type', 'Status', 'EU political ads',
-  'Ad Group', 'Max CPC', 'Keyword', 'Criterion Type', 'Ad type', 'Final URL',
+  'Ad Group', 'Max CPC', 'Keyword', 'Criterion Type', 'Location', 'Ad Schedule',
+  'Ad type', 'Final URL',
   ...Array.from({ length: 15 }, (_, i) => `Headline ${i + 1}`),
   ...Array.from({ length: 4 }, (_, i) => `Description ${i + 1}`),
 ];
@@ -31,7 +32,9 @@ const COLS = [
 const NEGATIVES_ONLY = process.argv.includes('--negatives');
 const rows = [];
 const negRows = [];
-const row = (o, neg) => (neg ? negRows : rows).push(COLS.map(c => o[c] === undefined ? '' : String(o[c])));
+const setRows = [];
+const row = (o, bucket) => (bucket === 'neg' ? negRows : bucket === 'set' ? setRows : rows)
+  .push(COLS.map(c => o[c] === undefined ? '' : String(o[c])));
 
 // A keyword's match type is carried in its punctuation, the same way
 // the Ads UI reads it: "quoted" is phrase, [bracketed] is exact, bare
@@ -83,7 +86,16 @@ for (const c of plan.campaigns) {
   // these rows cover the campaigns until it is attached.
   for (const kw of (plan.campaignNegatives[c.name] || [])) {
     const [type, text] = matchType(kw, true);
-    row({ Campaign: c.name, Keyword: text, 'Criterion Type': type }, true);
+    row({ Campaign: c.name, Keyword: text, 'Criterion Type': type }, 'neg');
+  }
+
+  // Targeting: 20 industrial metros, and weekdays only. Both are campaign
+  // level and neither is carried by the structure sheet.
+  for (const loc of plan.sharedSettings.locations) {
+    row({ Campaign: c.name, Location: loc }, 'set');
+  }
+  for (const day of ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']) {
+    row({ Campaign: c.name, 'Ad Schedule': `${day} 6:00 AM 8:00 PM` }, 'set');
   }
 }
 
@@ -91,6 +103,7 @@ const esc = (v) => /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v;
 const toCsv = (rs) => [COLS, ...rs].map(r => r.map(esc).join(',')).join('\n') + '\n';
 fs.writeFileSync(path.join(__dirname, 'upload.csv'), toCsv(rows));
 fs.writeFileSync(path.join(__dirname, 'upload-negatives.csv'), toCsv(negRows));
+fs.writeFileSync(path.join(__dirname, 'upload-settings.csv'), toCsv(setRows));
 
 // The shared negatives go in one list, pasted into the UI once.
 const shared = Object.entries(plan.sharedNegatives)
@@ -107,5 +120,6 @@ const counts = rows.reduce((a, r) => {
 }, {});
 console.log(`✓ ads/upload.csv — ${rows.length} rows (structure)`);
 console.log(`✓ ads/upload-negatives.csv — ${negRows.length} campaign negatives`);
+console.log(`✓ ads/upload-settings.csv — ${setRows.length} location + ad schedule rows`);
 for (const [k, v] of Object.entries(counts)) console.log(`   ${String(v).padStart(4)} ${k}`);
 console.log(`✓ ads/shared-negatives.txt — ${shared.length} terms for the shared list`);
