@@ -26,14 +26,20 @@ const COLS = [
   ...Array.from({ length: 4 }, (_, i) => `Description ${i + 1}`),
 ];
 
+// Re-running the full sheet after a partial apply would duplicate the ads
+// that already landed, so the negatives get their own file.
+const NEGATIVES_ONLY = process.argv.includes('--negatives');
 const rows = [];
-const row = (o) => rows.push(COLS.map(c => o[c] === undefined ? '' : String(o[c])));
+const negRows = [];
+const row = (o, neg) => (neg ? negRows : rows).push(COLS.map(c => o[c] === undefined ? '' : String(o[c])));
 
 // A keyword's match type is carried in its punctuation, the same way
 // the Ads UI reads it: "quoted" is phrase, [bracketed] is exact, bare
 // is broad.
+// Google rejects 'Campaign Negative Phrase' — the sheet wants plain
+// 'Negative Phrase' and infers campaign level from the empty Ad Group cell.
 function matchType(kw, negative) {
-  const prefix = negative ? 'Campaign Negative ' : '';
+  const prefix = negative ? 'Negative ' : '';
   if (/^".*"$/.test(kw)) return [prefix + 'Phrase', kw.slice(1, -1)];
   if (/^\[.*\]$/.test(kw)) return [prefix + 'Exact', kw.slice(1, -1)];
   return [prefix + 'Broad', kw];
@@ -77,13 +83,14 @@ for (const c of plan.campaigns) {
   // these rows cover the campaigns until it is attached.
   for (const kw of (plan.campaignNegatives[c.name] || [])) {
     const [type, text] = matchType(kw, true);
-    row({ Campaign: c.name, Keyword: text, 'Criterion Type': type });
+    row({ Campaign: c.name, Keyword: text, 'Criterion Type': type }, true);
   }
 }
 
 const esc = (v) => /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v;
-const csv = [COLS, ...rows].map(r => r.map(esc).join(',')).join('\n') + '\n';
-fs.writeFileSync(path.join(__dirname, 'upload.csv'), csv);
+const toCsv = (rs) => [COLS, ...rs].map(r => r.map(esc).join(',')).join('\n') + '\n';
+fs.writeFileSync(path.join(__dirname, 'upload.csv'), toCsv(rows));
+fs.writeFileSync(path.join(__dirname, 'upload-negatives.csv'), toCsv(negRows));
 
 // The shared negatives go in one list, pasted into the UI once.
 const shared = Object.entries(plan.sharedNegatives)
@@ -98,6 +105,7 @@ const counts = rows.reduce((a, r) => {
     : r[i('Ad Group')] ? 'adGroups' : 'campaigns';
   a[k] = (a[k] || 0) + 1; return a;
 }, {});
-console.log(`✓ ads/upload.csv — ${rows.length} rows`);
+console.log(`✓ ads/upload.csv — ${rows.length} rows (structure)`);
+console.log(`✓ ads/upload-negatives.csv — ${negRows.length} campaign negatives`);
 for (const [k, v] of Object.entries(counts)) console.log(`   ${String(v).padStart(4)} ${k}`);
 console.log(`✓ ads/shared-negatives.txt — ${shared.length} terms for the shared list`);
