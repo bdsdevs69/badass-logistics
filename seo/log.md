@@ -47,5 +47,46 @@ Service-page checking is unchanged.
   happen in the early hours PKT, so a page built today gets yesterday's date.
   Harmless — noting it so it isn't chased later as a bug.
 
-**Next run:** `how-to-move-an-x-ray-machine` (medical cluster).
+
+---
+
+## 2026-09-18 — run 1b (same day, extra batch)
+
+Sam pushed back on one post per run, so the rest of the medical cluster went
+out the same night. The one-post cadence in `seo/routine.md` is the file's own
+rule, not a constraint of the run — worth deciding whether that rule still
+stands, because the queue drains four times faster at this pace.
+
+**Shipped:** three more posts, closing the medical cluster the queue
+front-loaded as a paid theme.
+
+| slug | words | FAQ |
+|---|---|---|
+| `how-to-move-an-x-ray-machine` | 1,422 | 5 |
+| `hospital-equipment-relocation-guide` | 1,272 | 6 |
+| `how-much-does-it-cost-to-move-medical-equipment` | 1,290 | 5 |
+
+All four medical posts cross-link to each other and into the MRI and CT posts,
+so the cluster now has an internal mesh instead of four orphans hanging off the
+service page. Queue items flipped to done — 8 todo remain, all machinery and
+crane. Next up is `how-to-move-an-injection-molding-machine`.
+
+**Gate caught two real problems** on the cost post before it shipped — a 169
+char description and a 1,129 word body, both under the routine's own
+non-negotiables. Fixed by tightening the description and adding the storage
+and staging section. That is the new blog branch of `scripts/check-content.js`
+doing exactly what it was added for, on its first run.
+
+**Verify:** full `node build.js`, all checks passed — 67,474 internal links
+0 broken, 657 pages 0 duplicate titles, sitemap 646 URLs 0 bad.
+
+**Checks:** all three URLs 200 live after the Pages deploy. Article,
+BreadcrumbList and FAQPage all parse on each; quick-answer box rendered on all
+three. All three present in the live `sitemap.xml` and `llms.txt`. IndexNow
+HTTP 200 accepted, 640 URLs.
+
+**Still needs Sam:** the Search Console sitemap resubmit by hand — four new
+URLs now, not one. `gsc-key.json` is still only on the M2.
+
+**Next run:** `how-to-move-an-injection-molding-machine` (machinery cluster).
 **Run 4 is the wider sweep.**
