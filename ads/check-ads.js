@@ -87,11 +87,19 @@ const BANNED = [
 // Qualifying copy is allowed to say "no owner-operators"; a KEYWORD that
 // targets them is the actual mistake, so that one is checked separately.
 const BANNED_KEYWORDS = [[/\bowner[- ]operator/i, 'owner-operator targeting']];
+// Copy-only: "heavy machinery movers" is a legitimate keyword to bid on —
+// 480 searches a month — but saying it in an ad reads as heavy haul.
+const BANNED_COPY = [[/\bheavy (machinery|machine|equipment)\b/i, 'heavy-haul-flavoured wording']];
 for (const c of plan.campaigns) {
   for (const g of c.adGroups) {
     for (const text of [...g.headlines, ...g.descriptions, ...g.keywords]) {
       for (const [re, what] of BANNED) {
         // campaignNegatives legitimately contain these words; ad copy must not.
+        if (re.test(text)) errs.push(`${c.name} / ${g.name}: ${what} in "${text}"`);
+      }
+    }
+    for (const text of [...g.headlines, ...g.descriptions]) {
+      for (const [re, what] of BANNED_COPY) {
         if (re.test(text)) errs.push(`${c.name} / ${g.name}: ${what} in "${text}"`);
       }
     }

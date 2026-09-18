@@ -122,7 +122,7 @@
             "Get A Rigging Quote Today"
           ],
           "descriptions": [
-            "Engineered lifts, machine setting and heavy moves. Rigged, moved and leveled by one crew.",
+            "Engineered lifts, machine setting and relocation. Rigged, moved and leveled by one crew.",
             "From a few hundred pounds to 200,000+ lbs. Cranes, gantries, air skates, jack-and-slide.",
             "Tell us the machine and the site. We plan the pick and quote it fast, often the same day.",
             "Set on anchors, shimmed and leveled to spec, with drives aligned. Ready for start-up."
@@ -155,7 +155,7 @@
             "Jacking, Skidding & Gantry",
             "Machines On & Off Trailers",
             "Crated, Skidded, Shipped",
-            "Heavy Equipment Unloading",
+            "Rigging Crews For Unloading",
             "Crews With The Right Gear",
             "Built Around Your Machine",
             "Same-Day Quotes",
@@ -163,7 +163,7 @@
           ],
           "descriptions": [
             "Custom crates, skids and ISPM-15 export packing built around the actual machine.",
-            "Machinery and heavy crates on and off trailers, containers and docks by trained crews.",
+            "Machinery and crated equipment on and off trailers, containers and docks by trained crews.",
             "Jacking, skidding and gantry work for loads a crane or forklift can't reach.",
             "Vapor barrier and desiccant for ocean freight. Send the machine and we'll spec the crate."
           ]
@@ -194,7 +194,7 @@
           ],
           "headlines": [
             "Machinery Movers",
-            "Heavy Machinery Movers",
+            "Plant Machinery Movers",
             "Machinery Moving Company",
             "Industrial Machinery Movers",
             "Machine Tool Movers",
@@ -580,6 +580,7 @@
     "No prices, no rate claims, no percentages, no MC or DOT numbers, never 'our trucks' or 'our fleet' — the company is not a motor carrier.",
     "No certification claims (OSHA, NCCCO, ASME) unless the company actually holds them.",
     "Freight between sites is always 'through our licensed broker and carrier partners'.",
+    "Never say 'heavy machinery movers' or 'heavy equipment' in ad copy — Sam's call 2026-09-18: it reads as heavy haul and trucking, the exact positioning the revamp retired. The keyword \"heavy machinery movers\" stays as a match target (480/mo) because a keyword never appears in the ad.",
     "Heavy haul is retired. No trailer-type keywords (RGN, lowboy, step deck, conestoga, double drop), no oversize or permit keywords.",
     "Dispatch qualifies for 4+ truck fleets in the AD COPY. The website stays open — no hard refusal of smaller operators on the site itself.",
     "Every quote path is call, email or form. No pricing anywhere.",
