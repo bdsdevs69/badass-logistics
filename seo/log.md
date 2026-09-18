@@ -90,3 +90,64 @@ URLs now, not one. `gsc-key.json` is still only on the M2.
 
 **Next run:** `how-to-move-an-injection-molding-machine` (machinery cluster).
 **Run 4 is the wider sweep.**
+
+
+---
+
+## 2026-09-18 — run 2
+
+**Shipped:** four posts, taken in queue order off the machinery and crane
+clusters. Batch pace rather than one-per-run, per Sam's pushback in run 1b.
+
+| slug | words | FAQ |
+|---|---|---|
+| `how-to-move-an-injection-molding-machine` | 1,750 | 6 |
+| `switchgear-and-substation-equipment-moving` | 1,581 | 6 |
+| `crane-rental-vs-rigging-company` | 1,463 | 6 |
+| `how-to-move-a-compressor` | 1,608 | 6 |
+
+All four cleared `scripts/check-content.js` with **zero warnings** — first time
+a batch has gone through the gate clean on the first pass. The crane post is
+deliberately decision-stage: it is the page the crane ad group has been missing,
+and it answers "crane rental or rigging company" without needing a price.
+
+Queue items flipped to done. **4 todo remain** (`forklift-vs-crane-for-machine-loading`,
+`what-is-a-machinery-move-survey`, `how-to-move-a-data-center`,
+`how-to-move-a-transformer-into-a-building`) — exactly at the routine's backfill
+threshold, so the next run should add topics, and they need to come from Search
+Console impressions rather than a brainstorm. That is blocked on the same missing
+GSC access as everything else below.
+
+**One link removed:** the crane post originally linked forward to
+`forklift-vs-crane-for-machine-loading`, which is still a queue item. The gate
+caught it as a link to a missing blog. Repointed at the forklift loading service
+page. Worth remembering that forward links to unwritten queue items will always
+fail the gate — write the linked post first or link the service page.
+
+**Verify:** full `node build.js` chain, all checks passed — city mesh 352/352,
+67,807 internal links 0 broken, 0 links to retired URLs, 661 pages 0 duplicate
+titles and 0 duplicate descriptions, 0 heavy-haul leakage, sitemap 650 URLs 0 bad,
+phone + department email on 661/661.
+
+**Checks:**
+- All four URLs 200 live after the Pages deploy (404 on the first poll, 200 on
+  the second). Not stubs — canonical self-referencing, full body served.
+  `/services/crane-services` and `/blog/how-to-move-a-linear-accelerator` both 200.
+  `/services/heavy-haul` still serves its redirect stub as intended.
+- All four present in the live `sitemap.xml` (650 URLs) and the live `llms.txt`.
+- Article, BreadcrumbList and FAQPage all parse on all four live pages, 6 FAQ
+  entries each. Quick-answer box rendered on all four.
+- IndexNow: HTTP 200 accepted, 16 URLs (new + changed only this run).
+
+**Still needs Sam:**
+- **Submit `sitemap.xml` by hand in the Search Console UI** — four more new URLs.
+  `gsc-key.json` is still only on the M2, so `ping-search-engines.js` skipped the
+  Google half again. This is the third run in a row it has been skipped; copying
+  that one file over closes it permanently and also unblocks the queue backfill.
+
+**Not done:** the wider sweep — Search Console coverage, the city-page indexation
+rule, positions 5-15, and the AI-citation spot check. **Run 4 is the sweep**, and
+it needs Search Console access to be worth anything.
+
+**Next run:** `forklift-vs-crane-for-machine-loading` (pairs with the crane post
+shipped today, and that post wants the link back).
