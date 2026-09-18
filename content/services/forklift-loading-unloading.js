@@ -2,19 +2,19 @@
 module.exports = {
   slug: 'forklift-loading-unloading',
   cardBlurb: 'Heavy-capacity forklift work, machine load-outs, and unloading crated equipment from trucks and containers.',
-  title: 'Machinery Loading & Unloading Services | Heavy Forklift | Badass Logistics',
-  description: 'Heavy equipment loading and unloading with heavy-capacity forklifts and rigging crews — machine load-outs, crated freight, container unloads, dock-less deliveries.',
+  title: 'Machinery Loading & Unloading Services | Forklift Crews | Badass Logistics',
+  description: 'Machinery loading and unloading with high-capacity forklifts and rigging crews — machine load-outs, crated freight, container unloads, dock-less deliveries.',
   serviceType: 'Heavy Equipment Loading & Unloading',
   hero: '/assets/img/loads/palletized-equipment-curbside-unload.jpg',
   band: '/assets/img/warehouse-loadout.jpg',
   bandAnnots: ['UNLOADED ✓', 'NO DOCK — NO PROBLEM'],
   tag: 'heavy forklift, loading &amp; unloading',
   h1: 'Machinery Loading &amp; <span class="y">Unloading Services</span>',
-  lead: 'The most dangerous minutes of a machine\'s trip are the ones at each end — getting it onto the truck and getting it off. We load and unload heavy equipment with heavy-capacity forklifts, rigging gear, and crews who check the weight, the center of gravity, and the fork position before anything lifts.',
+  lead: 'The most dangerous minutes of a machine\'s trip are the ones at each end — getting it onto the truck and getting it off. We load and unload machinery with high-capacity forklifts, rigging gear, and crews who check the weight, the center of gravity, and the fork position before anything lifts.',
   cta: 'Get a Loading &amp; Unloading Quote',
   annots: ['CAP @ 24" LOAD CENTER', 'FORK EXTENSIONS', 'CG MARKED ✓', 'NO DOCK'],
   bgnotes: ['LOAD CENTER ✓', 'CG OFF-CENTER', 'FORKS SPREAD WIDE', 'DECK RATING ✓', 'CHOCKED', 'SPOTTER ON', 'COUNTERWEIGHT ADDED', 'PNEUMATIC TIRES', 'CONTAINER FLOOR ✓', 'LIFTGATE — NO', 'PLATE OVER DOCK GAP', 'SET ON SKATES'],
-  quickAnswer: 'Heavy equipment loading and unloading is the lifting of machines, crated freight, and industrial equipment on and off trucks and containers — typically with heavy-capacity forklifts, cranes, or rigging gear. Badass Logistics loads and unloads heavy equipment as rigging work: weights and centers of gravity verified, forklifts sized to the real load, and crews that can take the equipment into the building and set it.',
+  quickAnswer: 'Machinery loading and unloading is the lifting of machines, crated freight, and industrial equipment on and off trucks and containers — typically with high-capacity forklifts, cranes, or rigging gear. Badass Logistics loads and unloads heavy equipment as rigging work: weights and centers of gravity verified, forklifts sized to the real load, and crews that can take the equipment into the building and set it.',
   intro: {
     h2: 'A forklift is only as safe as the math behind it',
     paragraphs: [
@@ -63,7 +63,7 @@ module.exports = {
       subsections: [
         { h: 'Cushion-tire forklifts', paragraphs: ['Compact machines for smooth indoor concrete, tight aisles, and moving freight inside warehouses and plants.'] },
         { h: 'Pneumatic and rough-terrain forklifts', paragraphs: ['For outdoor lots, gravel, and uneven ground at job sites and dock-less deliveries.'] },
-        { h: 'Heavy-capacity forklifts', paragraphs: ['Larger machines with longer forks and more counterweight for heavy machinery, long crates, and loads with an extended load center.'] },
+        { h: 'High-capacity forklifts', paragraphs: ['Larger machines with longer forks and more counterweight for heavy machinery, long crates, and loads with an extended load center.'] },
         { h: 'Container work', paragraphs: ['Heavy pieces inside containers often come out on rollers or skates pulled to the door, where a forklift can pick them safely. See <a href="/services/container-to-warehouse">container to warehouse</a>.'] },
       ],
     },

@@ -82,6 +82,15 @@ for (const slug of slugs) {
   imgs.forEach(p => { if (!fs.existsSync(path.join(ROOT, p.replace(/^\//,'')))) errs.push(`image missing: ${p}`); });
   const text = JSON.stringify(c);
   BANNED.forEach(([re, why]) => { if (slug === 'truck-dispatch' && /broker/.test(why)) return; const m = text.match(re); if (m) errs.push(`${why}: "${m[0]}"`); });
+  // Sam's call 2026-09-18: "heavy equipment movers" / "heavy machinery movers"
+  // reads as heavy haul and trucking, which the revamp retired. Body prose may
+  // still say a rigger lifts heavy equipment — that's plain English. This only
+  // guards the naming slots, where the phrase becomes what we call ourselves.
+  for (const [field, val] of Object.entries({ title: c.title, description: c.description, h1: c.h1, cardBlurb: c.cardBlurb, tag: c.tag })) {
+    if (val && /heavy (equipment|machinery|machine)\s*(mover|moving)/i.test(val)) {
+      errs.push(`heavy-haul-flavoured service name in ${field}: "${val.match(/heavy (equipment|machinery|machine)\s*(mover|moving)\w*/i)[0]}"`);
+    }
+  }
   const words = strip(text.replace(/"(slug|hero|band|src|metrosSentinel)":"[^"]*"/g,'')).split(/\s+/).filter(w=>/[a-z]/i.test(w)).length;
   if (words < 900) warns.push(`only ~${words} words (aim 1,100-1,700)`);
   for (const m of text.matchAll(/href=\\?"(\/[^"\\#]*)/g)) {
