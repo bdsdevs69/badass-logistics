@@ -230,3 +230,78 @@ highest-impression stubs; sitemap resubmitted, Google now reading 650 URLs.
 - **Retired heavy-haul demand is still substantial** — oversize/overweight/
   multi-axle queries across Minneapolis, Detroit, Indiana, Phoenix, Pittsburgh.
   Deliberately not served. Noting it, not chasing it.
+
+
+---
+
+## 2026-09-21 — step 0b: retitle the city matrix on query data
+
+The geo plan's new first step — fix what already ranks before building more.
+Driven entirely by the Search Console data that came back the same day, not by
+a brainstorm.
+
+**What the query data said.** Head-noun demand across 90 days, all of it at
+zero clicks:
+
+| phrase | impressions | avg position | on the site before today? |
+|---|---|---|---|
+| machinery moving | 1,324 | 38.9 | yes |
+| plant / factory relocation | 1,077 | 53.6 | yes |
+| machinery movers | 1,036 | 30.9 | yes |
+| heavy machinery movers | 475 | 38.8 | retired wording |
+| equipment movers | 459 | 46.3 | partly |
+| **rigging contractors** | **358** | **26.5** | **no — word appeared nowhere** |
+| rigging company/companies | 286 | 20.6 | yes |
+| **riggers / rigger** | **233** | **27.5** | **no** |
+| industrial rigging | 206 | 15.0 | yes |
+
+The pattern is clean: **the terms already in our titles rank best (industrial
+rigging 15.0, rigging company 20.6); the ones missing rank worst (contractors
+26.5, riggers 27.5).** "rigger akron oh" alone is 100 impressions at position 17.
+
+**Changes shipped, all in `build-service-cities.js` so the matrix stays generated:**
+
+1. **Rigging title** → `Rigging Company & Contractors in {City}, {ST}`. Keeps the
+   two proven terms, adds the 358-impression miss.
+2. **Machinery title** → `Machinery Moving Company in {City}, {ST}`. Leads with
+   the weaker term (23-24) since H1 and description already carry "machinery
+   movers" (14-20), so both are covered.
+3. **"Heavy Equipment Moving" removed from 88 machinery city titles.** It was
+   retired as a service name on 2026-09-18 for reading as heavy haul, and
+   survived only because `check-content.js` lints `content/services` and never
+   this generator. Worth a guard later.
+4. **Descriptions were one boilerplate line across all 352 pages.** Each service
+   now has its own carrying the vocabulary its queries use, 146-163 chars.
+5. **New rigging FAQ on all 88 city pages** — "Are you a rigging contractor or a
+   machinery mover?" — putting both missing terms in real prose rather than meta
+   alone, and linking the crane-rental post shipped in run 2. FAQPage schema now
+   6 entries.
+
+**Verify:** full `node build.js`, all green — 67,895 internal links 0 broken,
+661 pages 0 duplicate titles and 0 duplicate descriptions, sitemap 650 URLs
+0 bad. All seven highest-impression pages confirmed live with the new titles.
+IndexNow 200 on the 16 demand-carrying URLs, sitemap resubmitted.
+
+**BASELINE — re-measure on or after 2026-10-19 (4 weeks).** This is the point
+of the change and it is falsifiable:
+
+| page | impr (90d) | position | clicks |
+|---|---|---|---|
+| /services/machinery-moving/omaha-ne | 691 | 67.5 | 0 |
+| /services/machinery-moving/savannah-ga | 607 | 21.0 | 0 |
+| /services/machinery-moving/charleston-sc | 496 | 29.8 | 0 |
+| /services/rigging/savannah-ga | 362 | 25.6 | 0 |
+| /services/rigging/charleston-sc | 260 | 31.6 | 0 |
+| /services/machinery-moving/tulsa-ok | 203 | 12.3 | 0 |
+| /services/rigging/akron-oh | 101 | 18.0 | 0 |
+| **site non-brand clicks** | — | — | **4 of 120** |
+
+If non-brand clicks have not moved off 4 and the "rigging contractors" cluster
+is still at position 26 with no clicks in four weeks, the title theory is wrong
+and the problem is authority, not wording — which is what §1 of the geo plan
+argues anyway. Say so in the log rather than retitling again.
+
+**Deliberately not done:** the `cnc-machine-movers` consolidation. It is at 50%
+indexed and breaches the 40%-dark rule, so under the standing policy it should
+fold into its state hubs — but that removes 88 live pages and is Sam's call, not
+a routine action. Flagged, not executed.
