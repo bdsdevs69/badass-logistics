@@ -80,11 +80,14 @@ for (const c of plan.campaigns) {
     row(ad);
   }
 
-  // Campaign-level negatives: the theme-specific ones here, plus every
-  // shared negative repeated per campaign. The uploader has no concept
-  // of a shared list, so the list itself gets built once in the UI and
-  // these rows cover the campaigns until it is attached.
-  for (const kw of (plan.campaignNegatives[c.name] || [])) {
+  // Campaign-level negatives. The uploader has no concept of a shared
+  // negative list, so the global terms are repeated on every campaign
+  // alongside that campaign's own theme-specific ones. One sheet, every
+  // negative — no second pass to forget.
+  const globals = Object.entries(plan.sharedNegatives)
+    .filter(([k]) => !k.startsWith('_') && k !== 'neverAdd')
+    .flatMap(([, v]) => v);
+  for (const kw of [...globals, ...(plan.campaignNegatives[c.name] || [])]) {
     const [type, text] = matchType(kw, true);
     row({ Campaign: c.name, Keyword: text, 'Criterion Type': type }, 'neg');
   }
