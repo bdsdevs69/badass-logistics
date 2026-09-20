@@ -39,13 +39,16 @@ const row = (o, bucket) => (bucket === 'neg' ? negRows : bucket === 'set' ? setR
 // A keyword's match type is carried in its punctuation, the same way
 // the Ads UI reads it: "quoted" is phrase, [bracketed] is exact, bare
 // is broad.
-// Google rejects 'Campaign Negative Phrase' — the sheet wants plain
-// 'Negative Phrase' and infers campaign level from the empty Ad Group cell.
-function matchType(kw, negative) {
-  const prefix = negative ? 'Negative ' : '';
-  if (/^".*"$/.test(kw)) return [prefix + 'Phrase', kw.slice(1, -1)];
-  if (/^\[.*\]$/.test(kw)) return [prefix + 'Exact', kw.slice(1, -1)];
-  return [prefix + 'Broad', kw];
+//
+// Positive keywords name the match type in Criterion Type and drop the
+// punctuation. NEGATIVES are different: Criterion Type is the bare word
+// 'Negative' and the punctuation stays on the keyword to carry the match
+// type. 'Campaign Negative Phrase' and 'Negative Phrase' are both
+// rejected — each cost a full upload cycle to learn.
+function matchType(kw) {
+  if (/^".*"$/.test(kw)) return ['Phrase', kw.slice(1, -1)];
+  if (/^\[.*\]$/.test(kw)) return ['Exact', kw.slice(1, -1)];
+  return ['Broad', kw];
 }
 
 for (const c of plan.campaigns) {
@@ -65,7 +68,7 @@ for (const c of plan.campaigns) {
     row({ Campaign: c.name, 'Ad Group': g.name, 'Max CPC': g.maxCpc.toFixed(2), Status: 'Enabled' });
 
     for (const kw of g.keywords) {
-      const [type, text] = matchType(kw, false);
+      const [type, text] = matchType(kw);
       row({ Campaign: c.name, 'Ad Group': g.name, Keyword: text, 'Criterion Type': type, Status: 'Enabled' });
     }
 
@@ -88,8 +91,7 @@ for (const c of plan.campaigns) {
     .filter(([k]) => !k.startsWith('_') && k !== 'neverAdd')
     .flatMap(([, v]) => v);
   for (const kw of [...globals, ...(plan.campaignNegatives[c.name] || [])]) {
-    const [type, text] = matchType(kw, true);
-    row({ Campaign: c.name, Keyword: text, 'Criterion Type': type }, 'neg');
+    row({ Campaign: c.name, Keyword: kw, 'Criterion Type': 'Negative' }, 'neg');
   }
 
   // Targeting: 20 industrial metros, and weekdays only. Both are campaign
