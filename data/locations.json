@@ -5,36 +5,192 @@
   "hub": "ports & industry",
   "blurb": "From the Ports of LA and Long Beach inland, we rig and move industrial machinery across Southern California.",
   "near": [
-   "Long Beach",
-   "Anaheim",
-   "Santa Ana",
-   "Glendale",
-   "Pasadena",
-   "Torrance",
-   "Pomona",
-   "Ontario",
-   "Carson",
-   "City of Industry",
-   "Santa Fe Springs",
-   "Vernon"
+   {
+    "name": "Long Beach",
+    "county": "Los Angeles",
+    "mi": 20
+   },
+   {
+    "name": "Anaheim",
+    "county": "Orange",
+    "mi": 24.1
+   },
+   {
+    "name": "Santa Ana",
+    "county": "Orange",
+    "mi": 30.2
+   },
+   {
+    "name": "Glendale",
+    "county": "Los Angeles",
+    "mi": 6.3
+   },
+   {
+    "name": "Pasadena",
+    "county": "Los Angeles",
+    "mi": 8.7
+   },
+   {
+    "name": "Torrance",
+    "county": "Los Angeles",
+    "mi": 15.9
+   },
+   {
+    "name": "Pomona",
+    "county": "Los Angeles",
+    "mi": 28.1
+   },
+   {
+    "name": "Ontario",
+    "county": "San Bernardino",
+    "mi": 33.9
+   },
+   {
+    "name": "Carson",
+    "county": "Los Angeles",
+    "mi": 15.4
+   },
+   {
+    "name": "City of Industry"
+   },
+   {
+    "name": "Santa Fe Springs",
+    "county": "Los Angeles",
+    "mi": 11.6
+   },
+   {
+    "name": "Vernon",
+    "county": "Los Angeles",
+    "mi": 3.4
+   },
+   {
+    "name": "Riverside",
+    "county": "Riverside",
+    "mi": 49
+   },
+   {
+    "name": "Irvine",
+    "county": "Orange",
+    "mi": 35.8
+   },
+   {
+    "name": "Fontana",
+    "county": "San Bernardino",
+    "mi": 46.4
+   },
+   {
+    "name": "Huntington Beach",
+    "county": "Orange",
+    "mi": 30.5
+   },
+   {
+    "name": "Santa Clarita",
+    "county": "Los Angeles",
+    "mi": 29
+   },
+   {
+    "name": "Garden Grove",
+    "county": "Orange",
+    "mi": 25.9
+   },
+   {
+    "name": "Rancho Cucamonga",
+    "county": "San Bernardino",
+    "mi": 37.4
+   },
+   {
+    "name": "Corona",
+    "county": "Riverside",
+    "mi": 40.7
+   },
+   {
+    "name": "Lancaster",
+    "county": "Los Angeles",
+    "mi": 45
+   },
+   {
+    "name": "Palmdale",
+    "county": "Los Angeles",
+    "mi": 37.1
+   },
+   {
+    "name": "Valencia",
+    "county": "Los Angeles",
+    "mi": 34.2
+   },
+   {
+    "name": "Orange",
+    "county": "Orange",
+    "mi": 28.9
+   }
   ]
  },
  {
   "city": "Bakersfield",
   "state": "CA",
   "hub": "oil & agriculture",
-  "blurb": "Kern County oilfield and ag rigging \u2014 we move the iron that works California's Central Valley.",
+  "blurb": "Kern County oilfield and ag rigging — we move the iron that works California's Central Valley.",
   "near": [
-   "Oildale",
-   "Shafter",
-   "Wasco",
-   "Delano",
-   "Taft",
-   "Arvin",
-   "Tehachapi",
-   "McFarland",
-   "Buttonwillow",
-   "Lamont"
+   {
+    "name": "Oildale",
+    "county": "Kern",
+    "mi": 3.2
+   },
+   {
+    "name": "Shafter",
+    "county": "Kern",
+    "mi": 16.7
+   },
+   {
+    "name": "Wasco",
+    "county": "Kern",
+    "mi": 23.7
+   },
+   {
+    "name": "Delano",
+    "county": "Kern",
+    "mi": 30.2
+   },
+   {
+    "name": "Taft",
+    "county": "Kern",
+    "mi": 29.4
+   },
+   {
+    "name": "Arvin",
+    "county": "Kern",
+    "mi": 15.6
+   },
+   {
+    "name": "Tehachapi",
+    "county": "Kern",
+    "mi": 36.2
+   },
+   {
+    "name": "McFarland",
+    "county": "Kern",
+    "mi": 24.2
+   },
+   {
+    "name": "Buttonwillow",
+    "county": "Kern",
+    "mi": 25.5
+   },
+   {
+    "name": "Lamont",
+    "county": "Kern",
+    "mi": 9.8
+   },
+   {
+    "name": "Porterville",
+    "county": "Tulare",
+    "mi": 47.8
+   },
+   {
+    "name": "Rosedale",
+    "county": "Kern",
+    "mi": 7.2
+   }
   ]
  },
  {
@@ -43,52 +199,385 @@
   "hub": "construction & distribution",
   "blurb": "Rigging and machinery moving across the Sacramento Valley and Northern California.",
   "near": [
-   "Roseville",
-   "Elk Grove",
-   "Folsom",
-   "Rancho Cordova",
-   "West Sacramento",
-   "Davis",
-   "Woodland",
-   "Citrus Heights",
-   "Stockton",
-   "Lodi"
+   {
+    "name": "Roseville",
+    "county": "Placer",
+    "mi": 16.2
+   },
+   {
+    "name": "Elk Grove",
+    "county": "Sacramento",
+    "mi": 13.7
+   },
+   {
+    "name": "Folsom",
+    "county": "Sacramento",
+    "mi": 18.4
+   },
+   {
+    "name": "Rancho Cordova",
+    "county": "Sacramento",
+    "mi": 10.4
+   },
+   {
+    "name": "West Sacramento",
+    "county": "Yolo",
+    "mi": 1.9
+   },
+   {
+    "name": "Davis",
+    "county": "Yolo",
+    "mi": 13.5
+   },
+   {
+    "name": "Woodland",
+    "county": "Yolo",
+    "mi": 16.5
+   },
+   {
+    "name": "Citrus Heights",
+    "county": "Sacramento",
+    "mi": 14.4
+   },
+   {
+    "name": "Stockton",
+    "county": "San Joaquin",
+    "mi": 44.5
+   },
+   {
+    "name": "Lodi",
+    "county": "San Joaquin",
+    "mi": 33.4
+   },
+   {
+    "name": "Fairfield",
+    "county": "Solano",
+    "mi": 37.4
+   },
+   {
+    "name": "Antioch",
+    "county": "Contra Costa",
+    "mi": 43.3
+   },
+   {
+    "name": "Vacaville",
+    "county": "Solano",
+    "mi": 30.9
+   },
+   {
+    "name": "Arden-Arcade",
+    "county": "Sacramento",
+    "mi": 6.4
+   },
+   {
+    "name": "Napa",
+    "county": "Napa",
+    "mi": 47.1
+   },
+   {
+    "name": "Pittsburg",
+    "county": "Contra Costa",
+    "mi": 43.7
+   },
+   {
+    "name": "Yuba City",
+    "county": "Sutter",
+    "mi": 39.2
+   },
+   {
+    "name": "Carmichael",
+    "county": "Sacramento",
+    "mi": 9.3
+   },
+   {
+    "name": "Rocklin",
+    "county": "Placer",
+    "mi": 20.1
+   },
+   {
+    "name": "Brentwood",
+    "county": "Contra Costa",
+    "mi": 46.2
+   },
+   {
+    "name": "Lincoln",
+    "county": "Placer",
+    "mi": 24
+   },
+   {
+    "name": "Florin",
+    "county": "Sacramento",
+    "mi": 7.5
+   },
+   {
+    "name": "Antelope",
+    "county": "Sacramento",
+    "mi": 12.5
+   },
+   {
+    "name": "North Highlands",
+    "county": "Sacramento",
+    "mi": 9.8
+   }
   ]
  },
  {
   "city": "Portland",
   "state": "OR",
   "hub": "manufacturing & port",
-  "blurb": "Pacific Northwest rigging and machinery moving \u2014 port cargo, semiconductor tools, and industrial machinery.",
+  "blurb": "Pacific Northwest rigging and machinery moving — port cargo, semiconductor tools, and industrial machinery.",
   "near": [
-   "Gresham",
-   "Hillsboro",
-   "Beaverton",
-   "Tigard",
-   "Vancouver WA",
-   "Clackamas",
-   "Wilsonville",
-   "Tualatin",
-   "Troutdale",
-   "Salem"
+   {
+    "name": "Gresham",
+    "county": "Multnomah",
+    "mi": 12
+   },
+   {
+    "name": "Hillsboro",
+    "county": "Washington",
+    "mi": 15.2
+   },
+   {
+    "name": "Beaverton",
+    "county": "Washington",
+    "mi": 6.7
+   },
+   {
+    "name": "Tigard",
+    "county": "Washington",
+    "mi": 7.9
+   },
+   {
+    "name": "Vancouver",
+    "county": "Clark",
+    "mi": 8,
+    "st": "WA"
+   },
+   {
+    "name": "Clackamas",
+    "county": "Clackamas",
+    "mi": 9.5
+   },
+   {
+    "name": "Wilsonville",
+    "county": "Clackamas",
+    "mi": 16.2
+   },
+   {
+    "name": "Tualatin",
+    "county": "Washington",
+    "mi": 10.5
+   },
+   {
+    "name": "Troutdale",
+    "county": "Multnomah",
+    "mi": 14
+   },
+   {
+    "name": "Salem",
+    "county": "Marion",
+    "mi": 43.7
+   },
+   {
+    "name": "Aloha",
+    "county": "Washington",
+    "mi": 9.5
+   },
+   {
+    "name": "Lake Oswego",
+    "county": "Clackamas",
+    "mi": 7.1
+   },
+   {
+    "name": "Keizer",
+    "county": "Marion",
+    "mi": 40.6
+   },
+   {
+    "name": "Longview",
+    "county": "Cowlitz",
+    "mi": 44.3,
+    "st": "WA"
+   },
+   {
+    "name": "Oregon City",
+    "county": "Clackamas",
+    "mi": 12
+   },
+   {
+    "name": "McMinnville",
+    "county": "Yamhill",
+    "mi": 33.3
+   },
+   {
+    "name": "West Linn",
+    "county": "Clackamas",
+    "mi": 11.3
+   },
+   {
+    "name": "Woodburn",
+    "county": "Marion",
+    "mi": 27.6
+   },
+   {
+    "name": "Forest Grove",
+    "county": "Washington",
+    "mi": 21
+   },
+   {
+    "name": "Newberg",
+    "county": "Yamhill",
+    "mi": 21.1
+   },
+   {
+    "name": "Camas",
+    "county": "Clark",
+    "mi": 14.1,
+    "st": "WA"
+   },
+   {
+    "name": "Milwaukie",
+    "county": "Clackamas",
+    "mi": 5.6
+   },
+   {
+    "name": "Bethany",
+    "county": "Washington",
+    "mi": 9.6
+   },
+   {
+    "name": "Hayesville",
+    "county": "Marion",
+    "mi": 40
+   }
   ]
  },
  {
   "city": "Seattle",
   "state": "WA",
   "hub": "aerospace & port",
-  "blurb": "Puget Sound rigging and machinery moving \u2014 aerospace tooling, port cargo, and heavy industrial equipment.",
+  "blurb": "Puget Sound rigging and machinery moving — aerospace tooling, port cargo, and heavy industrial equipment.",
   "near": [
-   "Tacoma",
-   "Bellevue",
-   "Kent",
-   "Renton",
-   "Auburn",
-   "Everett",
-   "Federal Way",
-   "Sumner",
-   "Fife",
-   "Lakewood"
+   {
+    "name": "Tacoma",
+    "county": "Pierce",
+    "mi": 25
+   },
+   {
+    "name": "Bellevue",
+    "county": "King",
+    "mi": 6.1
+   },
+   {
+    "name": "Kent",
+    "county": "King",
+    "mi": 16.2
+   },
+   {
+    "name": "Renton",
+    "county": "King",
+    "mi": 10.1
+   },
+   {
+    "name": "Auburn",
+    "county": "King",
+    "mi": 21.2
+   },
+   {
+    "name": "Everett",
+    "county": "Snohomish",
+    "mi": 26.5
+   },
+   {
+    "name": "Federal Way",
+    "county": "King",
+    "mi": 19.6
+   },
+   {
+    "name": "Sumner",
+    "county": "Pierce",
+    "mi": 28.2
+   },
+   {
+    "name": "Fife",
+    "county": "Pierce",
+    "mi": 25.4
+   },
+   {
+    "name": "Lakewood",
+    "county": "Pierce",
+    "mi": 31.3
+   },
+   {
+    "name": "Kirkland",
+    "county": "King",
+    "mi": 7.7
+   },
+   {
+    "name": "Marysville",
+    "county": "Snohomish",
+    "mi": 31.6
+   },
+   {
+    "name": "Redmond",
+    "county": "King",
+    "mi": 10.9
+   },
+   {
+    "name": "Olympia",
+    "county": "Thurston",
+    "mi": 47.1
+   },
+   {
+    "name": "Shoreline",
+    "county": "King",
+    "mi": 10.3
+   },
+   {
+    "name": "South Hill",
+    "county": "Pierce",
+    "mi": 32.3
+   },
+   {
+    "name": "Sammamish",
+    "county": "King",
+    "mi": 12
+   },
+   {
+    "name": "Burien",
+    "county": "King",
+    "mi": 9.4
+   },
+   {
+    "name": "Lacey",
+    "county": "Thurston",
+    "mi": 45.7
+   },
+   {
+    "name": "City of Sammamish",
+    "county": "King",
+    "mi": 13.7
+   },
+   {
+    "name": "Bothell",
+    "county": "King",
+    "mi": 12.3
+   },
+   {
+    "name": "Edmonds",
+    "county": "Snohomish",
+    "mi": 14.3
+   },
+   {
+    "name": "Puyallup",
+    "county": "Pierce",
+    "mi": 29.1
+   },
+   {
+    "name": "Bremerton",
+    "county": "Kitsap",
+    "mi": 14.3
+   }
   ]
  },
  {
@@ -97,14 +586,54 @@
   "hub": "mining & manufacturing",
   "blurb": "Inland Northwest rigging and machinery moving across Eastern Washington.",
   "near": [
-   "Spokane Valley",
-   "Liberty Lake",
-   "Cheney",
-   "Airway Heights",
-   "Deer Park",
-   "Post Falls ID",
-   "Coeur d'Alene ID",
-   "Medical Lake"
+   {
+    "name": "Spokane Valley",
+    "county": "Spokane",
+    "mi": 8.9
+   },
+   {
+    "name": "Liberty Lake",
+    "county": "Spokane",
+    "mi": 14.5
+   },
+   {
+    "name": "Cheney",
+    "county": "Spokane",
+    "mi": 13.7
+   },
+   {
+    "name": "Airway Heights",
+    "county": "Spokane",
+    "mi": 7.7
+   },
+   {
+    "name": "Deer Park",
+    "county": "Spokane",
+    "mi": 20.5
+   },
+   {
+    "name": "Post Falls",
+    "county": "Kootenai",
+    "mi": 22.6,
+    "st": "ID"
+   },
+   {
+    "name": "Coeur d'Alene",
+    "county": "Kootenai",
+    "mi": 30.2,
+    "st": "ID"
+   },
+   {
+    "name": "Medical Lake",
+    "county": "Spokane",
+    "mi": 13.2
+   },
+   {
+    "name": "Hayden",
+    "county": "Kootenai",
+    "mi": 30.8,
+    "st": "ID"
+   }
   ]
  },
  {
@@ -113,33 +642,190 @@
   "hub": "semiconductor & manufacturing",
   "blurb": "Treasure Valley rigging and machinery moving for semiconductor, manufacturing, and construction equipment.",
   "near": [
-   "Nampa",
-   "Meridian",
-   "Caldwell",
-   "Eagle",
-   "Garden City",
-   "Kuna",
-   "Mountain Home",
-   "Star",
-   "Emmett"
+   {
+    "name": "Nampa",
+    "county": "Canyon",
+    "mi": 18.7
+   },
+   {
+    "name": "Meridian",
+    "county": "Ada",
+    "mi": 9.4
+   },
+   {
+    "name": "Caldwell",
+    "county": "Canyon",
+    "mi": 24.4
+   },
+   {
+    "name": "Eagle",
+    "county": "Ada",
+    "mi": 9.4
+   },
+   {
+    "name": "Garden City",
+    "county": "Ada",
+    "mi": 1.8
+   },
+   {
+    "name": "Kuna",
+    "county": "Ada",
+    "mi": 13.7
+   },
+   {
+    "name": "Mountain Home",
+    "county": "Elmore",
+    "mi": 42
+   },
+   {
+    "name": "Star",
+    "county": "Ada",
+    "mi": 15.5
+   },
+   {
+    "name": "Emmett",
+    "county": "Gem",
+    "mi": 23.3
+   },
+   {
+    "name": "Eagle Foothills",
+    "county": "Ada",
+    "mi": 12.7
+   },
+   {
+    "name": "Ontario",
+    "county": "Malheur",
+    "mi": 47.4,
+    "st": "OR"
+   }
   ]
  },
  {
   "city": "Salt Lake City",
   "state": "UT",
   "hub": "mining & industrial",
-  "blurb": "Crossroads of the West \u2014 Salt Lake City rigging and machinery moving for mining and industrial equipment.",
+  "blurb": "Crossroads of the West — Salt Lake City rigging and machinery moving for mining and industrial equipment.",
   "near": [
-   "West Valley City",
-   "Sandy",
-   "Ogden",
-   "Provo",
-   "Orem",
-   "West Jordan",
-   "Layton",
-   "Tooele",
-   "Lehi",
-   "Clearfield"
+   {
+    "name": "West Valley City",
+    "county": "Salt Lake",
+    "mi": 7.5
+   },
+   {
+    "name": "Sandy",
+    "county": "Salt Lake",
+    "mi": 11.7
+   },
+   {
+    "name": "Ogden",
+    "county": "Weber",
+    "mi": 32.2
+   },
+   {
+    "name": "Provo",
+    "county": "Utah",
+    "mi": 38.4
+   },
+   {
+    "name": "Orem",
+    "county": "Utah",
+    "mi": 33.7
+   },
+   {
+    "name": "West Jordan",
+    "county": "Salt Lake",
+    "mi": 10.7
+   },
+   {
+    "name": "Layton",
+    "county": "Davis",
+    "mi": 21.1
+   },
+   {
+    "name": "Tooele",
+    "county": "Tooele",
+    "mi": 26.6
+   },
+   {
+    "name": "Lehi",
+    "county": "Utah",
+    "mi": 25.6
+   },
+   {
+    "name": "Clearfield",
+    "county": "Davis",
+    "mi": 25.2
+   },
+   {
+    "name": "South Jordan",
+    "county": "Salt Lake",
+    "mi": 13.9
+   },
+   {
+    "name": "Millcreek",
+    "county": "Salt Lake",
+    "mi": 5.2
+   },
+   {
+    "name": "Taylorsville",
+    "county": "Salt Lake",
+    "mi": 6.9
+   },
+   {
+    "name": "Murray",
+    "county": "Salt Lake",
+    "mi": 6.5
+   },
+   {
+    "name": "Draper",
+    "county": "Salt Lake",
+    "mi": 16.4
+   },
+   {
+    "name": "Bountiful",
+    "county": "Davis",
+    "mi": 8.9
+   },
+   {
+    "name": "Riverton",
+    "county": "Salt Lake",
+    "mi": 16.7
+   },
+   {
+    "name": "Pleasant Grove",
+    "county": "Utah",
+    "mi": 28.6
+   },
+   {
+    "name": "Roy",
+    "county": "Weber",
+    "mi": 28.6
+   },
+   {
+    "name": "Spanish Fork",
+    "county": "Utah",
+    "mi": 46.3
+   },
+   {
+    "name": "Kearns",
+    "county": "Salt Lake",
+    "mi": 8.9
+   },
+   {
+    "name": "Cottonwood Heights",
+    "county": "Salt Lake",
+    "mi": 10.6
+   },
+   {
+    "name": "Midvale",
+    "county": "Salt Lake",
+    "mi": 10.4
+   },
+   {
+    "name": "Springville",
+    "county": "Utah",
+    "mi": 43.7
+   }
   ]
  },
  {
@@ -148,33 +834,194 @@
   "hub": "construction & hospitality",
   "blurb": "Las Vegas rigging and machinery moving for construction, gaming, and large-scale equipment installs.",
   "near": [
-   "Henderson",
-   "North Las Vegas",
-   "Paradise",
-   "Boulder City",
-   "Pahrump",
-   "Mesquite",
-   "Sunrise Manor",
-   "Spring Valley"
+   {
+    "name": "Henderson",
+    "county": "Clark",
+    "mi": 12.7
+   },
+   {
+    "name": "North Las Vegas",
+    "county": "Clark",
+    "mi": 2
+   },
+   {
+    "name": "Paradise",
+    "county": "Clark",
+    "mi": 5.4
+   },
+   {
+    "name": "Boulder City",
+    "county": "Clark",
+    "mi": 21.8
+   },
+   {
+    "name": "Pahrump",
+    "county": "Nye",
+    "mi": 47.3
+   },
+   {
+    "name": "Mesquite",
+    "county": "Clark",
+    "mi": 73.7
+   },
+   {
+    "name": "Sunrise Manor",
+    "county": "Clark",
+    "mi": 4.4
+   },
+   {
+    "name": "Spring Valley",
+    "county": "Clark",
+    "mi": 7.6
+   },
+   {
+    "name": "Enterprise",
+    "county": "Clark",
+    "mi": 11.9
+   },
+   {
+    "name": "Whitney",
+    "county": "Clark",
+    "mi": 7.7
+   },
+   {
+    "name": "Winchester",
+    "county": "Clark",
+    "mi": 3.3
+   },
+   {
+    "name": "Summerlin South",
+    "county": "Clark",
+    "mi": 11.5
+   }
   ]
  },
  {
   "city": "Phoenix",
   "state": "AZ",
   "hub": "semiconductor & construction",
-  "blurb": "Valley of the Sun machinery moving \u2014 semiconductor tools, production equipment, and plant relocations.",
+  "blurb": "Valley of the Sun machinery moving — semiconductor tools, production equipment, and plant relocations.",
   "near": [
-   "Mesa",
-   "Chandler",
-   "Glendale",
-   "Tempe",
-   "Scottsdale",
-   "Gilbert",
-   "Peoria",
-   "Surprise",
-   "Goodyear",
-   "Buckeye",
-   "Casa Grande"
+   {
+    "name": "Mesa",
+    "county": "Maricopa",
+    "mi": 14.6
+   },
+   {
+    "name": "Chandler",
+    "county": "Maricopa",
+    "mi": 16.6
+   },
+   {
+    "name": "Glendale",
+    "county": "Maricopa",
+    "mi": 9
+   },
+   {
+    "name": "Tempe",
+    "county": "Maricopa",
+    "mi": 9.8
+   },
+   {
+    "name": "Scottsdale",
+    "county": "Maricopa",
+    "mi": 10.9
+   },
+   {
+    "name": "Gilbert",
+    "county": "Maricopa",
+    "mi": 17.7
+   },
+   {
+    "name": "Peoria",
+    "county": "Maricopa",
+    "mi": 13.1
+   },
+   {
+    "name": "Surprise",
+    "county": "Maricopa",
+    "mi": 19.5
+   },
+   {
+    "name": "Goodyear",
+    "county": "Maricopa",
+    "mi": 16.4
+   },
+   {
+    "name": "Buckeye",
+    "county": "Maricopa",
+    "mi": 29.9
+   },
+   {
+    "name": "Casa Grande",
+    "county": "Pinal",
+    "mi": 43.4
+   },
+   {
+    "name": "Tempe Junction",
+    "county": "Maricopa",
+    "mi": 7.9
+   },
+   {
+    "name": "San Tan Valley",
+    "county": "Pinal",
+    "mi": 36.2
+   },
+   {
+    "name": "Avondale",
+    "county": "Maricopa",
+    "mi": 15.9
+   },
+   {
+    "name": "Maricopa",
+    "county": "Pinal",
+    "mi": 27
+   },
+   {
+    "name": "Apache Junction",
+    "county": "Pinal",
+    "mi": 30.3
+   },
+   {
+    "name": "Sun City",
+    "county": "Maricopa",
+    "mi": 15.4
+   },
+   {
+    "name": "Queen Creek",
+    "county": "Maricopa",
+    "mi": 28.9
+   },
+   {
+    "name": "El Mirage",
+    "county": "Maricopa",
+    "mi": 18.4
+   },
+   {
+    "name": "Florence",
+    "county": "Pinal",
+    "mi": 49
+   },
+   {
+    "name": "Sun City West",
+    "county": "Maricopa",
+    "mi": 21.3
+   },
+   {
+    "name": "Fountain Hills",
+    "county": "Maricopa",
+    "mi": 23.4
+   },
+   {
+    "name": "New River",
+    "county": "Maricopa",
+    "mi": 32.5
+   },
+   {
+    "name": "Sun Lakes",
+    "county": "Maricopa",
+    "mi": 20
+   }
   ]
  },
  {
@@ -183,64 +1030,285 @@
   "hub": "energy & industrial",
   "blurb": "New Mexico rigging and machinery moving serving Southwest energy and industrial projects.",
   "near": [
-   "Rio Rancho",
-   "Santa Fe",
-   "Los Lunas",
-   "Belen",
-   "Bernalillo",
-   "Grants",
-   "Edgewood",
-   "Moriarty"
+   {
+    "name": "Rio Rancho",
+    "county": "Sandoval",
+    "mi": 10.3
+   },
+   {
+    "name": "Santa Fe",
+    "county": "Santa Fe",
+    "mi": 57.9
+   },
+   {
+    "name": "Los Lunas",
+    "county": "Valencia",
+    "mi": 19.8
+   },
+   {
+    "name": "Belen",
+    "county": "Valencia",
+    "mi": 30
+   },
+   {
+    "name": "Bernalillo",
+    "county": "Sandoval",
+    "mi": 15.9
+   },
+   {
+    "name": "Grants",
+    "county": "Cibola",
+    "mi": 68
+   },
+   {
+    "name": "Edgewood",
+    "county": "Santa Fe",
+    "mi": 26
+   },
+   {
+    "name": "Moriarty",
+    "county": "Torrance",
+    "mi": 34.7
+   },
+   {
+    "name": "Enchanted Hills",
+    "county": "Sandoval",
+    "mi": 17.7
+   },
+   {
+    "name": "South Valley",
+    "county": "Bernalillo",
+    "mi": 5.4
+   },
+   {
+    "name": "North Valley",
+    "county": "Bernalillo",
+    "mi": 6.3
+   }
   ]
  },
  {
   "city": "Denver",
   "state": "CO",
   "hub": "energy & construction",
-  "blurb": "Front Range rigging and machinery moving \u2014 energy equipment, construction machinery, and mountain-bound loads.",
+  "blurb": "Front Range rigging and machinery moving — energy equipment, construction machinery, and mountain-bound loads.",
   "near": [
-   "Aurora",
-   "Lakewood",
-   "Commerce City",
-   "Thornton",
-   "Westminster",
-   "Arvada",
-   "Centennial",
-   "Brighton",
-   "Golden",
-   "Boulder"
+   {
+    "name": "Aurora",
+    "county": "Adams",
+    "mi": 8.1
+   },
+   {
+    "name": "Lakewood",
+    "county": "Jefferson",
+    "mi": 5.7
+   },
+   {
+    "name": "Commerce City",
+    "county": "Adams",
+    "mi": 5.5
+   },
+   {
+    "name": "Thornton",
+    "county": "Adams",
+    "mi": 8.9
+   },
+   {
+    "name": "Westminster",
+    "county": "Adams",
+    "mi": 7.3
+   },
+   {
+    "name": "Arvada",
+    "county": "Jefferson",
+    "mi": 7
+   },
+   {
+    "name": "Centennial",
+    "county": "Arapahoe",
+    "mi": 12.5
+   },
+   {
+    "name": "Brighton",
+    "county": "Adams",
+    "mi": 19.1
+   },
+   {
+    "name": "Golden",
+    "county": "Jefferson",
+    "mi": 12.6
+   },
+   {
+    "name": "Boulder",
+    "county": "Boulder",
+    "mi": 24.4
+   },
+   {
+    "name": "Greeley",
+    "county": "Weld",
+    "mi": 49.5
+   },
+   {
+    "name": "Highlands Ranch",
+    "county": "Douglas",
+    "mi": 12.8
+   },
+   {
+    "name": "Longmont",
+    "county": "Boulder",
+    "mi": 30.2
+   },
+   {
+    "name": "Loveland",
+    "county": "Larimer",
+    "mi": 45.8
+   },
+   {
+    "name": "Broomfield",
+    "county": "Broomfield",
+    "mi": 13.7
+   },
+   {
+    "name": "Castle Rock",
+    "county": "Douglas",
+    "mi": 26.3
+   },
+   {
+    "name": "Parker",
+    "county": "Douglas",
+    "mi": 19.3
+   },
+   {
+    "name": "Littleton",
+    "county": "Arapahoe",
+    "mi": 8.9
+   },
+   {
+    "name": "Northglenn",
+    "county": "Adams",
+    "mi": 10.1
+   },
+   {
+    "name": "Dakota Ridge",
+    "county": "Jefferson",
+    "mi": 11.8
+   },
+   {
+    "name": "Englewood",
+    "county": "Arapahoe",
+    "mi": 6.3
+   },
+   {
+    "name": "Ken Caryl",
+    "county": "Jefferson",
+    "mi": 13.2
+   },
+   {
+    "name": "Wheat Ridge",
+    "county": "Jefferson",
+    "mi": 5.3
+   },
+   {
+    "name": "Lafayette",
+    "county": "Boulder",
+    "mi": 18.4
+   }
   ]
  },
  {
   "city": "Casper",
   "state": "WY",
   "hub": "oilfield & energy",
-  "blurb": "Wyoming oilfield and energy rigging \u2014 drilling iron, compressors, and plant equipment.",
+  "blurb": "Wyoming oilfield and energy rigging — drilling iron, compressors, and plant equipment.",
   "near": [
-   "Mills",
-   "Evansville",
-   "Glenrock",
-   "Douglas",
-   "Bar Nunn",
-   "Midwest",
-   "Natrona",
-   "Casper Mountain"
+   {
+    "name": "Mills",
+    "county": "Natrona",
+    "mi": 3.2
+   },
+   {
+    "name": "Evansville",
+    "county": "Natrona",
+    "mi": 2.3
+   },
+   {
+    "name": "Glenrock",
+    "county": "Converse",
+    "mi": 22.3
+   },
+   {
+    "name": "Douglas",
+    "county": "Converse",
+    "mi": 47.8
+   },
+   {
+    "name": "Bar Nunn",
+    "county": "Natrona",
+    "mi": 3.6
+   },
+   {
+    "name": "Midwest",
+    "county": "Natrona",
+    "mi": 37.7
+   },
+   {
+    "name": "Natrona",
+    "county": "Natrona",
+    "mi": 27.5
+   },
+   {
+    "name": "Casper Mountain",
+    "county": "Natrona",
+    "mi": 9.3
+   }
   ]
  },
  {
   "city": "Billings",
   "state": "MT",
   "hub": "energy & ag",
-  "blurb": "Montana's largest city and our own backyard \u2014 Billings rigging for energy, ag, and industrial equipment.",
+  "blurb": "Montana's largest city and our own backyard — Billings rigging for energy, ag, and industrial equipment.",
   "near": [
-   "Laurel",
-   "Lockwood",
-   "Shepherd",
-   "Hardin",
-   "Columbus",
-   "Roundup",
-   "Hysham",
-   "Worden"
+   {
+    "name": "Laurel",
+    "county": "Yellowstone",
+    "mi": 15.3
+   },
+   {
+    "name": "Lockwood",
+    "county": "Yellowstone",
+    "mi": 4.8
+   },
+   {
+    "name": "Shepherd",
+    "county": "Yellowstone",
+    "mi": 13.4
+   },
+   {
+    "name": "Hardin",
+    "county": "Big Horn",
+    "mi": 43
+   },
+   {
+    "name": "Columbus",
+    "county": "Stillwater",
+    "mi": 37.6
+   },
+   {
+    "name": "Roundup",
+    "county": "Musselshell",
+    "mi": 45.8
+   },
+   {
+    "name": "Hysham",
+    "county": "Treasure",
+    "mi": 70.2
+   },
+   {
+    "name": "Worden",
+    "county": "Yellowstone",
+    "mi": 20.4
+   }
   ]
  },
  {
@@ -249,14 +1317,54 @@
   "hub": "ag & energy",
   "blurb": "Red River Valley rigging and machinery moving serving North Dakota ag and Bakken energy work.",
   "near": [
-   "West Fargo",
-   "Moorhead MN",
-   "Dilworth",
-   "Casselton",
-   "Mapleton",
-   "Horace",
-   "Wahpeton",
-   "Valley City"
+   {
+    "name": "West Fargo",
+    "county": "Cass",
+    "mi": 5.2
+   },
+   {
+    "name": "Moorhead",
+    "county": "Clay",
+    "mi": 1,
+    "st": "MN"
+   },
+   {
+    "name": "Dilworth",
+    "county": "Clay",
+    "mi": 4.1,
+    "st": "MN"
+   },
+   {
+    "name": "Casselton",
+    "county": "Cass",
+    "mi": 20
+   },
+   {
+    "name": "Mapleton",
+    "county": "Cass",
+    "mi": 12.4
+   },
+   {
+    "name": "Horace",
+    "county": "Cass",
+    "mi": 9.8
+   },
+   {
+    "name": "Wahpeton",
+    "county": "Richland",
+    "mi": 43.2
+   },
+   {
+    "name": "Valley City",
+    "county": "Barnes",
+    "mi": 57.4
+   },
+   {
+    "name": "Detroit Lakes",
+    "county": "Becker",
+    "mi": 44.8,
+    "st": "MN"
+   }
   ]
  },
  {
@@ -265,14 +1373,57 @@
   "hub": "rail & ag",
   "blurb": "Omaha industrial rigging and machinery moving at the crossroads of the Plains.",
   "near": [
-   "Council Bluffs IA",
-   "Bellevue",
-   "Papillion",
-   "La Vista",
-   "Gretna",
-   "Elkhorn",
-   "Ralston",
-   "Fremont"
+   {
+    "name": "Council Bluffs",
+    "county": "Pottawattamie",
+    "mi": 4.2,
+    "st": "IA"
+   },
+   {
+    "name": "Bellevue",
+    "county": "Sarpy",
+    "mi": 8.7
+   },
+   {
+    "name": "Papillion",
+    "county": "Sarpy",
+    "mi": 8.8
+   },
+   {
+    "name": "La Vista",
+    "county": "Sarpy",
+    "mi": 6.9
+   },
+   {
+    "name": "Gretna",
+    "county": "Sarpy",
+    "mi": 17.5
+   },
+   {
+    "name": "Elkhorn",
+    "county": "Douglas",
+    "mi": 17.5
+   },
+   {
+    "name": "Ralston",
+    "county": "Douglas",
+    "mi": 6.4
+   },
+   {
+    "name": "Fremont",
+    "county": "Dodge",
+    "mi": 31.4
+   },
+   {
+    "name": "Lincoln",
+    "county": "Lancaster",
+    "mi": 49.3
+   },
+   {
+    "name": "Chalco",
+    "county": "Sarpy",
+    "mi": 12
+   }
   ]
  },
  {
@@ -281,16 +1432,127 @@
   "hub": "manufacturing & distribution",
   "blurb": "Twin Cities rigging and machinery moving across the Upper Midwest's industrial corridor.",
   "near": [
-   "St. Paul",
-   "Bloomington",
-   "Brooklyn Park",
-   "Plymouth",
-   "Eagan",
-   "Maple Grove",
-   "Eden Prairie",
-   "Burnsville",
-   "Shakopee",
-   "Rogers"
+   {
+    "name": "St. Paul",
+    "county": "Aleutians West Census Area",
+    "mi": 3258.7,
+    "st": "AK"
+   },
+   {
+    "name": "Bloomington",
+    "county": "Hennepin",
+    "mi": 9.8
+   },
+   {
+    "name": "Brooklyn Park",
+    "county": "Hennepin",
+    "mi": 9.1
+   },
+   {
+    "name": "Plymouth",
+    "county": "Hennepin",
+    "mi": 9.6
+   },
+   {
+    "name": "Eagan",
+    "county": "Dakota",
+    "mi": 13
+   },
+   {
+    "name": "Maple Grove",
+    "county": "Hennepin",
+    "mi": 11.3
+   },
+   {
+    "name": "Eden Prairie",
+    "county": "Hennepin",
+    "mi": 13.3
+   },
+   {
+    "name": "Burnsville",
+    "county": "Dakota",
+    "mi": 14.7
+   },
+   {
+    "name": "Shakopee",
+    "county": "Scott",
+    "mi": 18
+   },
+   {
+    "name": "Rogers",
+    "county": "Hennepin",
+    "mi": 20.2
+   },
+   {
+    "name": "Saint Paul",
+    "county": "Ramsey",
+    "mi": 8.7
+   },
+   {
+    "name": "Woodbury",
+    "county": "Washington",
+    "mi": 15.4
+   },
+   {
+    "name": "West Coon Rapids",
+    "county": "Hennepin",
+    "mi": 13.1
+   },
+   {
+    "name": "Coon Rapids",
+    "county": "Anoka",
+    "mi": 9.7
+   },
+   {
+    "name": "Blaine",
+    "county": "Anoka",
+    "mi": 12.6
+   },
+   {
+    "name": "Lakeville",
+    "county": "Dakota",
+    "mi": 22.8
+   },
+   {
+    "name": "Minnetonka",
+    "county": "Hennepin",
+    "mi": 12.6
+   },
+   {
+    "name": "Apple Valley",
+    "county": "Dakota",
+    "mi": 17.3
+   },
+   {
+    "name": "Edina",
+    "county": "Hennepin",
+    "mi": 7.5
+   },
+   {
+    "name": "Minnetonka Mills",
+    "county": "Hennepin",
+    "mi": 9.1
+   },
+   {
+    "name": "Saint Louis Park",
+    "county": "Hennepin",
+    "mi": 4.7
+   },
+   {
+    "name": "Maplewood",
+    "county": "Ramsey",
+    "mi": 13.3
+   },
+   {
+    "name": "Richfield",
+    "county": "Hennepin",
+    "mi": 6.7
+   },
+   {
+    "name": "Cottage Grove",
+    "county": "Washington",
+    "mi": 18.9
+   }
   ]
  },
  {
@@ -299,32 +1561,271 @@
   "hub": "heavy manufacturing",
   "blurb": "Milwaukee's heavy-equipment manufacturers count on us to rig and move their largest machinery.",
   "near": [
-   "Waukesha",
-   "West Allis",
-   "Wauwatosa",
-   "Racine",
-   "Kenosha",
-   "New Berlin",
-   "Oak Creek",
-   "Menomonee Falls",
-   "Germantown"
+   {
+    "name": "Waukesha",
+    "county": "Waukesha",
+    "mi": 16.5
+   },
+   {
+    "name": "West Allis",
+    "county": "Milwaukee",
+    "mi": 5.3
+   },
+   {
+    "name": "Wauwatosa",
+    "county": "Milwaukee",
+    "mi": 5.2
+   },
+   {
+    "name": "Racine",
+    "county": "Racine",
+    "mi": 22.5
+   },
+   {
+    "name": "Kenosha",
+    "county": "Kenosha",
+    "mi": 31.7
+   },
+   {
+    "name": "New Berlin",
+    "county": "Waukesha",
+    "mi": 11.1
+   },
+   {
+    "name": "Oak Creek",
+    "county": "Milwaukee",
+    "mi": 10.8
+   },
+   {
+    "name": "Menomonee Falls",
+    "county": "Waukesha",
+    "mi": 14.4
+   },
+   {
+    "name": "Germantown",
+    "county": "Washington",
+    "mi": 16.7
+   },
+   {
+    "name": "Waukegan",
+    "county": "Lake",
+    "mi": 46.8,
+    "st": "IL"
+   },
+   {
+    "name": "Brookfield",
+    "county": "Waukesha",
+    "mi": 10.2
+   },
+   {
+    "name": "Greenfield",
+    "county": "Milwaukee",
+    "mi": 7.6
+   },
+   {
+    "name": "Franklin",
+    "county": "Milwaukee",
+    "mi": 12.3
+   },
+   {
+    "name": "West Bend",
+    "county": "Washington",
+    "mi": 30.1
+   },
+   {
+    "name": "Gurnee",
+    "county": "Lake",
+    "mi": 46.2,
+    "st": "IL"
+   },
+   {
+    "name": "North Chicago",
+    "county": "Lake",
+    "mi": 49.4,
+    "st": "IL"
+   },
+   {
+    "name": "Round Lake Beach",
+    "county": "Lake",
+    "mi": 47,
+    "st": "IL"
+   },
+   {
+    "name": "Mount Pleasant",
+    "county": "Racine",
+    "mi": 23.7
+   },
+   {
+    "name": "Muskego",
+    "county": "Waukesha",
+    "mi": 14.9
+   },
+   {
+    "name": "Caledonia",
+    "county": "Racine",
+    "mi": 16
+   },
+   {
+    "name": "Zion",
+    "county": "Lake",
+    "mi": 41.1,
+    "st": "IL"
+   },
+   {
+    "name": "Watertown",
+    "county": "Jefferson",
+    "mi": 42.9
+   },
+   {
+    "name": "Mequon",
+    "county": "Ozaukee",
+    "mi": 13.7
+   },
+   {
+    "name": "South Milwaukee",
+    "county": "Milwaukee",
+    "mi": 9.2
+   }
   ]
  },
  {
   "city": "Kansas City",
   "state": "MO",
   "hub": "rail & distribution",
-  "blurb": "A national rail and freight crossroads \u2014 Kansas City industrial rigging and machinery moving.",
+  "blurb": "A national rail and freight crossroads — Kansas City industrial rigging and machinery moving.",
   "near": [
-   "Overland Park KS",
-   "Olathe KS",
-   "Independence",
-   "Lee's Summit",
-   "Shawnee KS",
-   "Blue Springs",
-   "Gardner KS",
-   "Liberty",
-   "Riverside"
+   {
+    "name": "Overland Park",
+    "county": "Johnson",
+    "mi": 9.5,
+    "st": "KS"
+   },
+   {
+    "name": "Olathe",
+    "county": "Johnson",
+    "mi": 19.9,
+    "st": "KS"
+   },
+   {
+    "name": "Independence",
+    "county": "Jackson",
+    "mi": 8.8
+   },
+   {
+    "name": "Lee's Summit",
+    "county": "Jackson",
+    "mi": 16.8
+   },
+   {
+    "name": "Shawnee",
+    "county": "Johnson",
+    "mi": 8.6,
+    "st": "KS"
+   },
+   {
+    "name": "Blue Springs",
+    "county": "Jackson",
+    "mi": 16.9
+   },
+   {
+    "name": "Gardner",
+    "county": "Johnson",
+    "mi": 27.4,
+    "st": "KS"
+   },
+   {
+    "name": "Liberty",
+    "county": "Clay",
+    "mi": 13.2
+   },
+   {
+    "name": "Riverside",
+    "county": "Platte",
+    "mi": 5.7
+   },
+   {
+    "name": "Kansas City",
+    "county": "Wyandotte",
+    "mi": 2.8,
+    "st": "KS"
+   },
+   {
+    "name": "Lawrence",
+    "county": "Douglas",
+    "mi": 36.3,
+    "st": "KS"
+   },
+   {
+    "name": "Saint Joseph",
+    "county": "Buchanan",
+    "mi": 48.4
+   },
+   {
+    "name": "Lenexa",
+    "county": "Johnson",
+    "mi": 13.1,
+    "st": "KS"
+   },
+   {
+    "name": "Leavenworth",
+    "county": "Leavenworth",
+    "mi": 23.5,
+    "st": "KS"
+   },
+   {
+    "name": "Leawood",
+    "county": "Johnson",
+    "mi": 9.4,
+    "st": "KS"
+   },
+   {
+    "name": "Raytown",
+    "county": "Jackson",
+    "mi": 8.8
+   },
+   {
+    "name": "Gladstone",
+    "county": "Clay",
+    "mi": 7.3
+   },
+   {
+    "name": "Grandview",
+    "county": "Jackson",
+    "mi": 15
+   },
+   {
+    "name": "Prairie Village",
+    "county": "Johnson",
+    "mi": 8,
+    "st": "KS"
+   },
+   {
+    "name": "Raymore",
+    "county": "Cass",
+    "mi": 21.7
+   },
+   {
+    "name": "Grain Valley",
+    "county": "Jackson",
+    "mi": 21.2
+   },
+   {
+    "name": "Ottawa",
+    "county": "Franklin",
+    "mi": 49.9,
+    "st": "KS"
+   },
+   {
+    "name": "Lansing",
+    "county": "Leavenworth",
+    "mi": 20.1,
+    "st": "KS"
+   },
+   {
+    "name": "Excelsior Springs",
+    "county": "Clay",
+    "mi": 25.1
+   }
   ]
  },
  {
@@ -333,15 +1834,134 @@
   "hub": "manufacturing & river",
   "blurb": "St. Louis rigging and machinery moving along the Mississippi's industrial and barge corridor.",
   "near": [
-   "St. Charles",
-   "Chesterfield",
-   "Florissant",
-   "O'Fallon",
-   "Earth City",
-   "Hazelwood",
-   "Wentzville",
-   "Fenton",
-   "Granite City IL"
+   {
+    "name": "St. Charles",
+    "county": "Kane",
+    "mi": 248,
+    "st": "IL"
+   },
+   {
+    "name": "Chesterfield",
+    "county": "Saint Louis",
+    "mi": 20.6
+   },
+   {
+    "name": "Florissant",
+    "county": "Saint Louis",
+    "mi": 13.1
+   },
+   {
+    "name": "O'Fallon",
+    "county": "Saint Charles",
+    "mi": 29.9
+   },
+   {
+    "name": "Earth City",
+    "county": "Saint Louis",
+    "mi": 17.6
+   },
+   {
+    "name": "Hazelwood",
+    "county": "Saint Louis",
+    "mi": 13.6
+   },
+   {
+    "name": "Wentzville",
+    "county": "Saint Charles",
+    "mi": 37.5
+   },
+   {
+    "name": "Fenton",
+    "county": "Saint Louis",
+    "mi": 15.1
+   },
+   {
+    "name": "Granite City",
+    "county": "Madison",
+    "mi": 5.8,
+    "st": "IL"
+   },
+   {
+    "name": "Saint Charles",
+    "county": "Saint Charles",
+    "mi": 18.7
+   },
+   {
+    "name": "Saint Peters",
+    "county": "Saint Charles",
+    "mi": 26
+   },
+   {
+    "name": "Belleville",
+    "county": "Saint Clair",
+    "mi": 13.7,
+    "st": "IL"
+   },
+   {
+    "name": "Oakville",
+    "county": "Saint Louis",
+    "mi": 12.3
+   },
+   {
+    "name": "Wildwood",
+    "county": "Saint Louis",
+    "mi": 25.3
+   },
+   {
+    "name": "University City",
+    "county": "Saint Louis",
+    "mi": 6.3
+   },
+   {
+    "name": "Ballwin",
+    "county": "Saint Louis",
+    "mi": 18.9
+   },
+   {
+    "name": "Upper Alton",
+    "county": "Madison",
+    "mi": 19.8,
+    "st": "IL"
+   },
+   {
+    "name": "O'Fallon",
+    "county": "Saint Clair",
+    "mi": 15.7,
+    "st": "IL"
+   },
+   {
+    "name": "Mehlville",
+    "county": "Saint Louis",
+    "mi": 10.6
+   },
+   {
+    "name": "Kirkwood",
+    "county": "Saint Louis",
+    "mi": 11.7
+   },
+   {
+    "name": "Maryland Heights",
+    "county": "Saint Louis",
+    "mi": 13.8
+   },
+   {
+    "name": "East Saint Louis",
+    "county": "Saint Clair",
+    "mi": 2.5,
+    "st": "IL"
+   },
+   {
+    "name": "Alton",
+    "county": "Madison",
+    "mi": 18.2,
+    "st": "IL"
+   },
+   {
+    "name": "Edwardsville",
+    "county": "Madison",
+    "mi": 18.3,
+    "st": "IL"
+   }
   ]
  },
  {
@@ -350,17 +1970,128 @@
   "hub": "manufacturing & rail",
   "blurb": "Chicagoland rigging and machinery moving through the nation's busiest rail and industrial hub.",
   "near": [
-   "Joliet",
-   "Aurora",
-   "Naperville",
-   "Elgin",
-   "Cicero",
-   "Gary IN",
-   "Hammond IN",
-   "Bolingbrook",
-   "Bedford Park",
-   "Romeoville",
-   "Elk Grove Village"
+   {
+    "name": "Joliet",
+    "county": "Will",
+    "mi": 31.7
+   },
+   {
+    "name": "Aurora",
+    "county": "Kane",
+    "mi": 35.1
+   },
+   {
+    "name": "Naperville",
+    "county": "DuPage",
+    "mi": 26
+   },
+   {
+    "name": "Elgin",
+    "county": "Kane",
+    "mi": 34.9
+   },
+   {
+    "name": "Cicero",
+    "county": "Cook",
+    "mi": 5.4
+   },
+   {
+    "name": "Gary",
+    "county": "Lake",
+    "mi": 23.7,
+    "st": "IN"
+   },
+   {
+    "name": "Hammond",
+    "county": "Lake",
+    "mi": 20,
+    "st": "IN"
+   },
+   {
+    "name": "Bolingbrook",
+    "county": "Will",
+    "mi": 24
+   },
+   {
+    "name": "Bedford Park",
+    "county": "Cook",
+    "mi": 9.8
+   },
+   {
+    "name": "Romeoville",
+    "county": "Will",
+    "mi": 26.6
+   },
+   {
+    "name": "Elk Grove Village",
+    "county": "Cook",
+    "mi": 19.6
+   },
+   {
+    "name": "Waukegan",
+    "county": "Lake",
+    "mi": 36.9
+   },
+   {
+    "name": "Arlington Heights",
+    "county": "Cook",
+    "mi": 23.7
+   },
+   {
+    "name": "Evanston",
+    "county": "Cook",
+    "mi": 13.4
+   },
+   {
+    "name": "Schaumburg",
+    "county": "Cook",
+    "mi": 25.6
+   },
+   {
+    "name": "Palatine",
+    "county": "Cook",
+    "mi": 26.7
+   },
+   {
+    "name": "Skokie",
+    "county": "Cook",
+    "mi": 13.4
+   },
+   {
+    "name": "Des Plaines",
+    "county": "Cook",
+    "mi": 17.4
+   },
+   {
+    "name": "Orland Park",
+    "county": "Cook",
+    "mi": 18.5
+   },
+   {
+    "name": "Tinley Park",
+    "county": "Cook",
+    "mi": 20.3
+   },
+   {
+    "name": "Oak Lawn",
+    "county": "Cook",
+    "mi": 11.1
+   },
+   {
+    "name": "Berwyn",
+    "county": "Cook",
+    "mi": 7.4
+   },
+   {
+    "name": "Mount Prospect",
+    "county": "Cook",
+    "mi": 21
+   },
+   {
+    "name": "Wheaton",
+    "county": "DuPage",
+    "mi": 23.5
+   }
   ]
  },
  {
@@ -369,34 +2100,254 @@
   "hub": "manufacturing & logistics",
   "blurb": "Central Indiana rigging and machinery moving serving the Midwest's manufacturing and distribution core.",
   "near": [
-   "Carmel",
-   "Fishers",
-   "Greenwood",
-   "Plainfield",
-   "Noblesville",
-   "Whitestown",
-   "Avon",
-   "Franklin",
-   "Lebanon",
-   "Anderson"
+   {
+    "name": "Carmel",
+    "county": "Hamilton",
+    "mi": 14.7
+   },
+   {
+    "name": "Fishers",
+    "county": "Hamilton",
+    "mi": 15
+   },
+   {
+    "name": "Greenwood",
+    "county": "Johnson",
+    "mi": 11
+   },
+   {
+    "name": "Plainfield",
+    "county": "Hendricks",
+    "mi": 13.6
+   },
+   {
+    "name": "Noblesville",
+    "county": "Hamilton",
+    "mi": 20.7
+   },
+   {
+    "name": "Whitestown",
+    "county": "Boone",
+    "mi": 18.7
+   },
+   {
+    "name": "Avon",
+    "county": "Hendricks",
+    "mi": 12.8
+   },
+   {
+    "name": "Franklin",
+    "county": "Johnson",
+    "mi": 20.6
+   },
+   {
+    "name": "Lebanon",
+    "county": "Boone",
+    "mi": 25.4
+   },
+   {
+    "name": "Anderson",
+    "county": "Madison",
+    "mi": 34.4
+   },
+   {
+    "name": "Bloomington",
+    "county": "Monroe",
+    "mi": 46.1
+   },
+   {
+    "name": "Kokomo",
+    "county": "Howard",
+    "mi": 49.6
+   },
+   {
+    "name": "Lawrence",
+    "county": "Marion",
+    "mi": 8.6
+   },
+   {
+    "name": "Columbus",
+    "county": "Bartholomew",
+    "mi": 41.2
+   },
+   {
+    "name": "Westfield",
+    "county": "Hamilton",
+    "mi": 19
+   },
+   {
+    "name": "Zionsville",
+    "county": "Boone",
+    "mi": 13.8
+   },
+   {
+    "name": "Brownsburg",
+    "county": "Hendricks",
+    "mi": 13.7
+   },
+   {
+    "name": "Greenfield",
+    "county": "Hancock",
+    "mi": 20.7
+   },
+   {
+    "name": "Fairfield Heights",
+    "county": "Hendricks",
+    "mi": 12.6
+   },
+   {
+    "name": "Shelbyville",
+    "county": "Shelby",
+    "mi": 26.5
+   },
+   {
+    "name": "New Castle",
+    "county": "Henry",
+    "mi": 43.2
+   },
+   {
+    "name": "Broad Ripple",
+    "county": "Marion",
+    "mi": 6.8
+   },
+   {
+    "name": "Frankfort",
+    "county": "Clinton",
+    "mi": 39.9
+   },
+   {
+    "name": "Crawfordsville",
+    "county": "Montgomery",
+    "mi": 42.4
+   }
   ]
  },
  {
   "city": "Detroit",
   "state": "MI",
   "hub": "automotive",
-  "blurb": "Motor City rigging and machinery moving \u2014 stamping presses, line equipment, and automotive machinery moves.",
+  "blurb": "Motor City rigging and machinery moving — stamping presses, line equipment, and automotive machinery moves.",
   "near": [
-   "Warren",
-   "Dearborn",
-   "Livonia",
-   "Sterling Heights",
-   "Troy",
-   "Romulus",
-   "Taylor",
-   "Pontiac",
-   "Southfield",
-   "Flint"
+   {
+    "name": "Warren",
+    "county": "Macomb",
+    "mi": 11.1
+   },
+   {
+    "name": "Dearborn",
+    "county": "Wayne",
+    "mi": 6.7
+   },
+   {
+    "name": "Livonia",
+    "county": "Wayne",
+    "mi": 15.9
+   },
+   {
+    "name": "Sterling Heights",
+    "county": "Macomb",
+    "mi": 17.2
+   },
+   {
+    "name": "Troy",
+    "county": "Oakland",
+    "mi": 19.7
+   },
+   {
+    "name": "Romulus",
+    "county": "Wayne",
+    "mi": 19.5
+   },
+   {
+    "name": "Taylor",
+    "county": "Wayne",
+    "mi": 13
+   },
+   {
+    "name": "Pontiac",
+    "county": "Oakland",
+    "mi": 24.6
+   },
+   {
+    "name": "Southfield",
+    "county": "Oakland",
+    "mi": 13.3
+   },
+   {
+    "name": "Flint",
+    "county": "Genesee",
+    "mi": 57.2
+   },
+   {
+    "name": "Ann Arbor",
+    "county": "Washtenaw",
+    "mi": 35.7
+   },
+   {
+    "name": "Clinton Township",
+    "county": "Macomb",
+    "mi": 18.8
+   },
+   {
+    "name": "Canton",
+    "county": "Wayne",
+    "mi": 22.4
+   },
+   {
+    "name": "Westland",
+    "county": "Wayne",
+    "mi": 18.1
+   },
+   {
+    "name": "Farmington Hills",
+    "county": "Oakland",
+    "mi": 20
+   },
+   {
+    "name": "Waterford",
+    "county": "Oakland",
+    "mi": 31.2
+   },
+   {
+    "name": "Shelby",
+    "county": "Macomb",
+    "mi": 23.5
+   },
+   {
+    "name": "Rochester Hills",
+    "county": "Oakland",
+    "mi": 23.2
+   },
+   {
+    "name": "West Bloomfield Township",
+    "county": "Oakland",
+    "mi": 23.8
+   },
+   {
+    "name": "Saint Clair Shores",
+    "county": "Macomb",
+    "mi": 14
+   },
+   {
+    "name": "Royal Oak",
+    "county": "Oakland",
+    "mi": 12
+   },
+   {
+    "name": "Novi",
+    "county": "Oakland",
+    "mi": 24.2
+   },
+   {
+    "name": "Dearborn Heights",
+    "county": "Wayne",
+    "mi": 11.6
+   },
+   {
+    "name": "Redford",
+    "county": "Wayne",
+    "mi": 13.3
+   }
   ]
  },
  {
@@ -405,34 +2356,254 @@
   "hub": "distribution & manufacturing",
   "blurb": "Columbus industrial rigging and machinery moving across central Ohio.",
   "near": [
-   "Dublin",
-   "Westerville",
-   "Grove City",
-   "Reynoldsburg",
-   "Hilliard",
-   "Gahanna",
-   "Groveport",
-   "Marysville",
-   "Lancaster",
-   "Newark"
+   {
+    "name": "Dublin",
+    "county": "Franklin",
+    "mi": 11.3
+   },
+   {
+    "name": "Westerville",
+    "county": "Franklin",
+    "mi": 12
+   },
+   {
+    "name": "Grove City",
+    "county": "Franklin",
+    "mi": 7.4
+   },
+   {
+    "name": "Reynoldsburg",
+    "county": "Franklin",
+    "mi": 9.9
+   },
+   {
+    "name": "Hilliard",
+    "county": "Franklin",
+    "mi": 9.8
+   },
+   {
+    "name": "Gahanna",
+    "county": "Franklin",
+    "mi": 7.5
+   },
+   {
+    "name": "Groveport",
+    "county": "Franklin",
+    "mi": 8.4
+   },
+   {
+    "name": "Marysville",
+    "county": "Union",
+    "mi": 27.2
+   },
+   {
+    "name": "Lancaster",
+    "county": "Fairfield",
+    "mi": 27.2
+   },
+   {
+    "name": "Newark",
+    "county": "Licking",
+    "mi": 32.3
+   },
+   {
+    "name": "Springfield",
+    "county": "Clark",
+    "mi": 43
+   },
+   {
+    "name": "Delaware",
+    "county": "Delaware",
+    "mi": 23.6
+   },
+   {
+    "name": "Marion",
+    "county": "Marion",
+    "mi": 43.9
+   },
+   {
+    "name": "Upper Arlington",
+    "county": "Franklin",
+    "mi": 4.1
+   },
+   {
+    "name": "Chillicothe",
+    "county": "Ross",
+    "mi": 43.4
+   },
+   {
+    "name": "Pickerington",
+    "county": "Fairfield",
+    "mi": 14
+   },
+   {
+    "name": "Whitehall",
+    "county": "Franklin",
+    "mi": 6
+   },
+   {
+    "name": "Mount Vernon",
+    "county": "Knox",
+    "mi": 40.3
+   },
+   {
+    "name": "Pataskala",
+    "county": "Licking",
+    "mi": 17.3
+   },
+   {
+    "name": "Worthington",
+    "county": "Franklin",
+    "mi": 9.2
+   },
+   {
+    "name": "Washington Court House",
+    "county": "Fayette",
+    "mi": 37.5
+   },
+   {
+    "name": "Circleville",
+    "county": "Pickaway",
+    "mi": 25.1
+   },
+   {
+    "name": "Bexley",
+    "county": "Franklin",
+    "mi": 3.3
+   },
+   {
+    "name": "Bellefontaine",
+    "county": "Logan",
+    "mi": 48.8
+   }
   ]
  },
  {
   "city": "Cleveland",
   "state": "OH",
   "hub": "steel & automotive",
-  "blurb": "Northeast Ohio rigging and machinery moving \u2014 steel, automotive, and heavy manufacturing equipment.",
+  "blurb": "Northeast Ohio rigging and machinery moving — steel, automotive, and heavy manufacturing equipment.",
   "near": [
-   "Parma",
-   "Akron",
-   "Lorain",
-   "Elyria",
-   "Euclid",
-   "Mentor",
-   "Strongsville",
-   "Lakewood",
-   "Solon",
-   "Canton"
+   {
+    "name": "Parma",
+    "county": "Cuyahoga",
+    "mi": 6.7
+   },
+   {
+    "name": "Akron",
+    "county": "Summit",
+    "mi": 30.3
+   },
+   {
+    "name": "Lorain",
+    "county": "Lorain",
+    "mi": 25.4
+   },
+   {
+    "name": "Elyria",
+    "county": "Lorain",
+    "mi": 23.2
+   },
+   {
+    "name": "Euclid",
+    "county": "Cuyahoga",
+    "mi": 10.9
+   },
+   {
+    "name": "Mentor",
+    "county": "Lake",
+    "mi": 21.7
+   },
+   {
+    "name": "Strongsville",
+    "county": "Cuyahoga",
+    "mi": 14.7
+   },
+   {
+    "name": "Lakewood",
+    "county": "Cuyahoga",
+    "mi": 5.5
+   },
+   {
+    "name": "Solon",
+    "county": "Cuyahoga",
+    "mi": 15.2
+   },
+   {
+    "name": "Canton",
+    "county": "Stark",
+    "mi": 51.1
+   },
+   {
+    "name": "Cuyahoga Falls",
+    "county": "Summit",
+    "mi": 27.5
+   },
+   {
+    "name": "Cleveland Heights",
+    "county": "Cuyahoga",
+    "mi": 7.3
+   },
+   {
+    "name": "Warren",
+    "county": "Trumbull",
+    "mi": 48.9
+   },
+   {
+    "name": "Stow",
+    "county": "Summit",
+    "mi": 27
+   },
+   {
+    "name": "Brunswick",
+    "county": "Medina",
+    "mi": 19.6
+   },
+   {
+    "name": "Collinwood",
+    "county": "Cuyahoga",
+    "mi": 7.7
+   },
+   {
+    "name": "North Ridgeville",
+    "county": "Lorain",
+    "mi": 18.4
+   },
+   {
+    "name": "Westlake",
+    "county": "Cuyahoga",
+    "mi": 11.9
+   },
+   {
+    "name": "Massillon",
+    "county": "Stark",
+    "mi": 49.4
+   },
+   {
+    "name": "North Olmsted",
+    "county": "Cuyahoga",
+    "mi": 13.2
+   },
+   {
+    "name": "North Royalton",
+    "county": "Cuyahoga",
+    "mi": 12.9
+   },
+   {
+    "name": "Kent",
+    "county": "Portage",
+    "mi": 29.6
+   },
+   {
+    "name": "Garfield Heights",
+    "county": "Cuyahoga",
+    "mi": 7.3
+   },
+   {
+    "name": "Shaker Heights",
+    "county": "Cuyahoga",
+    "mi": 8.4
+   }
   ]
  },
  {
@@ -441,14 +2612,132 @@
   "hub": "logistics & manufacturing",
   "blurb": "Louisville rigging and machinery moving at the heart of the Ohio Valley's logistics network.",
   "near": [
-   "Jeffersonville IN",
-   "New Albany IN",
-   "Shepherdsville",
-   "Shively",
-   "Jeffersontown",
-   "Clarksville IN",
-   "Elizabethtown",
-   "Bardstown"
+   {
+    "name": "Jeffersonville",
+    "county": "Clark",
+    "mi": 2,
+    "st": "IN"
+   },
+   {
+    "name": "New Albany",
+    "county": "Floyd",
+    "mi": 4.1,
+    "st": "IN"
+   },
+   {
+    "name": "Shepherdsville",
+    "county": "Bullitt",
+    "mi": 18.5
+   },
+   {
+    "name": "Shively",
+    "county": "Jefferson",
+    "mi": 5.1
+   },
+   {
+    "name": "Jeffersontown",
+    "county": "Jefferson",
+    "mi": 11.4
+   },
+   {
+    "name": "Clarksville",
+    "county": "Clark",
+    "mi": 2.9,
+    "st": "IN"
+   },
+   {
+    "name": "Elizabethtown",
+    "county": "Hardin",
+    "mi": 39.1
+   },
+   {
+    "name": "Bardstown",
+    "county": "Nelson",
+    "mi": 34.6
+   },
+   {
+    "name": "Frankfort",
+    "county": "Franklin",
+    "mi": 48.2
+   },
+   {
+    "name": "Valley Station",
+    "county": "Jefferson",
+    "mi": 11.6
+   },
+   {
+    "name": "Radcliff",
+    "county": "Hardin",
+    "mi": 30.4
+   },
+   {
+    "name": "Newburg",
+    "county": "Jefferson",
+    "mi": 8.5
+   },
+   {
+    "name": "Seymour",
+    "county": "Jackson",
+    "mi": 49.2,
+    "st": "IN"
+   },
+   {
+    "name": "Fern Creek",
+    "county": "Jefferson",
+    "mi": 11.4
+   },
+   {
+    "name": "Saint Matthews",
+    "county": "Jefferson",
+    "mi": 5.6
+   },
+   {
+    "name": "Okolona",
+    "county": "Jefferson",
+    "mi": 8.7
+   },
+   {
+    "name": "Shelbyville",
+    "county": "Shelby",
+    "mi": 29.2
+   },
+   {
+    "name": "Highview",
+    "county": "Jefferson",
+    "mi": 10.6
+   },
+   {
+    "name": "Mount Washington",
+    "county": "Bullitt",
+    "mi": 18.3
+   },
+   {
+    "name": "North Madison",
+    "county": "Jefferson",
+    "mi": 40.5,
+    "st": "IN"
+   },
+   {
+    "name": "Madison",
+    "county": "Jefferson",
+    "mi": 39.1,
+    "st": "IN"
+   },
+   {
+    "name": "Lyndon",
+    "county": "Jefferson",
+    "mi": 8.6
+   },
+   {
+    "name": "Lawrenceburg",
+    "county": "Anderson",
+    "mi": 49.2
+   },
+   {
+    "name": "Fort Knox",
+    "county": "Hardin",
+    "mi": 27.4
+   }
   ]
  },
  {
@@ -457,53 +2746,337 @@
   "hub": "energy & petrochemical",
   "blurb": "From the Houston Ship Channel refineries to the Energy Corridor, we rig and move the heavy equipment that keeps Gulf Coast industry running.",
   "near": [
-   "Pasadena",
-   "Baytown",
-   "Pearland",
-   "Sugar Land",
-   "The Woodlands",
-   "Katy",
-   "League City",
-   "Channelview",
-   "Deer Park",
-   "La Porte",
-   "Conroe"
+   {
+    "name": "Pasadena",
+    "county": "Harris",
+    "mi": 10.5
+   },
+   {
+    "name": "Baytown",
+    "county": "Harris",
+    "mi": 23.2
+   },
+   {
+    "name": "Pearland",
+    "county": "Brazoria",
+    "mi": 14.6
+   },
+   {
+    "name": "Sugar Land",
+    "county": "Fort Bend",
+    "mi": 19.1
+   },
+   {
+    "name": "The Woodlands",
+    "county": "Montgomery",
+    "mi": 28.3
+   },
+   {
+    "name": "Katy",
+    "county": "Harris",
+    "mi": 27.7
+   },
+   {
+    "name": "League City",
+    "county": "Galveston",
+    "mi": 23.9
+   },
+   {
+    "name": "Channelview",
+    "county": "Harris",
+    "mi": 14.9
+   },
+   {
+    "name": "Deer Park",
+    "county": "Harris",
+    "mi": 14.9
+   },
+   {
+    "name": "La Porte",
+    "county": "Harris",
+    "mi": 21.7
+   },
+   {
+    "name": "Conroe",
+    "county": "Montgomery",
+    "mi": 38.3
+   },
+   {
+    "name": "Cypress",
+    "county": "Harris",
+    "mi": 24.5
+   },
+   {
+    "name": "Missouri City",
+    "county": "Fort Bend",
+    "mi": 14.5
+   },
+   {
+    "name": "Spring",
+    "county": "Harris",
+    "mi": 22.1
+   },
+   {
+    "name": "Galveston",
+    "county": "Galveston",
+    "mi": 46.6
+   },
+   {
+    "name": "Texas City",
+    "county": "Galveston",
+    "mi": 38.1
+   },
+   {
+    "name": "Friendswood",
+    "county": "Galveston",
+    "mi": 18.9
+   },
+   {
+    "name": "Mission Bend",
+    "county": "Fort Bend",
+    "mi": 18.7
+   },
+   {
+    "name": "Rosenberg",
+    "county": "Fort Bend",
+    "mi": 30.3
+   },
+   {
+    "name": "Alvin",
+    "county": "Brazoria",
+    "mi": 24.5
+   },
+   {
+    "name": "New Caney",
+    "county": "Montgomery",
+    "mi": 28.6
+   },
+   {
+    "name": "Dickinson",
+    "county": "Galveston",
+    "mi": 28.1
+   },
+   {
+    "name": "Angleton",
+    "county": "Brazoria",
+    "mi": 41.2
+   },
+   {
+    "name": "Fresno",
+    "county": "Fort Bend",
+    "mi": 16.3
+   }
   ]
  },
  {
   "city": "Dallas",
   "state": "TX",
   "hub": "manufacturing & distribution",
-  "blurb": "Rigging and machinery moving across the Dallas\u2013Fort Worth metroplex, one of the country's busiest freight corridors.",
+  "blurb": "Rigging and machinery moving across the Dallas–Fort Worth metroplex, one of the country's busiest freight corridors.",
   "near": [
-   "Fort Worth",
-   "Arlington",
-   "Irving",
-   "Garland",
-   "Grand Prairie",
-   "Mesquite",
-   "Carrollton",
-   "Richardson",
-   "Denton",
-   "Frisco",
-   "Grapevine"
+   {
+    "name": "Fort Worth",
+    "county": "Tarrant",
+    "mi": 30.1
+   },
+   {
+    "name": "Arlington",
+    "county": "Tarrant",
+    "mi": 17.8
+   },
+   {
+    "name": "Irving",
+    "county": "Dallas",
+    "mi": 8.5
+   },
+   {
+    "name": "Garland",
+    "county": "Dallas",
+    "mi": 13.2
+   },
+   {
+    "name": "Grand Prairie",
+    "county": "Dallas",
+    "mi": 11.4
+   },
+   {
+    "name": "Mesquite",
+    "county": "Dallas",
+    "mi": 12.1
+   },
+   {
+    "name": "Carrollton",
+    "county": "Dallas",
+    "mi": 12.8
+   },
+   {
+    "name": "Richardson",
+    "county": "Dallas",
+    "mi": 12.3
+   },
+   {
+    "name": "Denton",
+    "county": "Denton",
+    "mi": 35.3
+   },
+   {
+    "name": "Frisco",
+    "county": "Collin",
+    "mi": 25.4
+   },
+   {
+    "name": "Grapevine",
+    "county": "Tarrant",
+    "mi": 18.9
+   },
+   {
+    "name": "Plano",
+    "county": "Collin",
+    "mi": 17.5
+   },
+   {
+    "name": "McKinney",
+    "county": "Collin",
+    "mi": 30.7
+   },
+   {
+    "name": "Lewisville",
+    "county": "Denton",
+    "mi": 21.2
+   },
+   {
+    "name": "Allen",
+    "county": "Collin",
+    "mi": 23.5
+   },
+   {
+    "name": "Flower Mound",
+    "county": "Denton",
+    "mi": 23.2
+   },
+   {
+    "name": "North Richland Hills",
+    "county": "Tarrant",
+    "mi": 24.8
+   },
+   {
+    "name": "Celina",
+    "county": "Collin",
+    "mi": 37.4
+   },
+   {
+    "name": "Mansfield",
+    "county": "Tarrant",
+    "mi": 24.7
+   },
+   {
+    "name": "Rowlett",
+    "county": "Dallas",
+    "mi": 16.3
+   },
+   {
+    "name": "Euless",
+    "county": "Tarrant",
+    "mi": 16.4
+   },
+   {
+    "name": "DeSoto",
+    "county": "Dallas",
+    "mi": 13.7
+   },
+   {
+    "name": "The Trails of Frisco",
+    "county": "Collin",
+    "mi": 26.4
+   },
+   {
+    "name": "Bedford",
+    "county": "Tarrant",
+    "mi": 20
+   }
   ]
  },
  {
   "city": "San Antonio",
   "state": "TX",
   "hub": "manufacturing & energy",
-  "blurb": "South Texas rigging and machinery moving \u2014 from Eagle Ford oilfield gear to full manufacturing plant relocations.",
+  "blurb": "South Texas rigging and machinery moving — from Eagle Ford oilfield gear to full manufacturing plant relocations.",
   "near": [
-   "New Braunfels",
-   "Schertz",
-   "Converse",
-   "Seguin",
-   "Boerne",
-   "Universal City",
-   "Cibolo",
-   "Floresville",
-   "Pleasanton"
+   {
+    "name": "New Braunfels",
+    "county": "Comal",
+    "mi": 29.4
+   },
+   {
+    "name": "Schertz",
+    "county": "Guadalupe",
+    "mi": 16.1
+   },
+   {
+    "name": "Converse",
+    "county": "Bexar",
+    "mi": 12.5
+   },
+   {
+    "name": "Seguin",
+    "county": "Guadalupe",
+    "mi": 33.3
+   },
+   {
+    "name": "Boerne",
+    "county": "Kendall",
+    "mi": 29.3
+   },
+   {
+    "name": "Universal City",
+    "county": "Bexar",
+    "mi": 14.9
+   },
+   {
+    "name": "Cibolo",
+    "county": "Guadalupe",
+    "mi": 18.6
+   },
+   {
+    "name": "Floresville",
+    "county": "Wilson",
+    "mi": 28.6
+   },
+   {
+    "name": "Pleasanton",
+    "county": "Atascosa",
+    "mi": 31.6
+   },
+   {
+    "name": "San Marcos",
+    "county": "Hays",
+    "mi": 45.9
+   },
+   {
+    "name": "Canyon Lake",
+    "county": "Comal",
+    "mi": 34.1
+   },
+   {
+    "name": "Live Oak",
+    "county": "Bexar",
+    "mi": 13.6
+   },
+   {
+    "name": "Timberwood Park",
+    "county": "Bexar",
+    "mi": 18.7
+   },
+   {
+    "name": "Hondo",
+    "county": "Medina",
+    "mi": 39.4
+   },
+   {
+    "name": "Selma",
+    "county": "Bexar",
+    "mi": 15.8
+   }
   ]
  },
  {
@@ -512,32 +3085,144 @@
   "hub": "Permian Basin oilfield",
   "blurb": "Right in the heart of the Permian Basin, rigging oilfield equipment, compressors, and plant machinery across West Texas.",
   "near": [
-   "Odessa",
-   "Big Spring",
-   "Andrews",
-   "Stanton",
-   "Gardendale",
-   "Greenwood",
-   "Crane",
-   "Monahans"
+   {
+    "name": "Odessa",
+    "county": "Ector",
+    "mi": 20
+   },
+   {
+    "name": "Big Spring",
+    "county": "Howard",
+    "mi": 39.2
+   },
+   {
+    "name": "Andrews",
+    "county": "Andrews",
+    "mi": 35.2
+   },
+   {
+    "name": "Stanton",
+    "county": "Martin",
+    "mi": 19.2
+   },
+   {
+    "name": "Gardendale",
+    "county": "Ector",
+    "mi": 17.8
+   },
+   {
+    "name": "Greenwood",
+    "county": "Midland",
+    "mi": 10.9
+   },
+   {
+    "name": "Crane",
+    "county": "Crane",
+    "mi": 44.4
+   },
+   {
+    "name": "Monahans",
+    "county": "Ward",
+    "mi": 55.4
+   },
+   {
+    "name": "West Odessa",
+    "county": "Ector",
+    "mi": 26.9
+   }
   ]
  },
  {
   "city": "Oklahoma City",
   "state": "OK",
   "hub": "energy & aerospace",
-  "blurb": "Central Oklahoma rigging and machinery moving \u2014 oilfield gear, aerospace tooling, and industrial machinery.",
+  "blurb": "Central Oklahoma rigging and machinery moving — oilfield gear, aerospace tooling, and industrial machinery.",
   "near": [
-   "Norman",
-   "Edmond",
-   "Moore",
-   "Yukon",
-   "Midwest City",
-   "Del City",
-   "Mustang",
-   "El Reno",
-   "Shawnee",
-   "Stillwater"
+   {
+    "name": "Norman",
+    "county": "Cleveland",
+    "mi": 17.5
+   },
+   {
+    "name": "Edmond",
+    "county": "Oklahoma",
+    "mi": 13
+   },
+   {
+    "name": "Moore",
+    "county": "Cleveland",
+    "mi": 9
+   },
+   {
+    "name": "Yukon",
+    "county": "Canadian",
+    "mi": 14.1
+   },
+   {
+    "name": "Midwest City",
+    "county": "Oklahoma",
+    "mi": 6.9
+   },
+   {
+    "name": "Del City",
+    "county": "Oklahoma",
+    "mi": 4.6
+   },
+   {
+    "name": "Mustang",
+    "county": "Canadian",
+    "mi": 13.1
+   },
+   {
+    "name": "El Reno",
+    "county": "Canadian",
+    "mi": 25.1
+   },
+   {
+    "name": "Shawnee",
+    "county": "Pottawatomie",
+    "mi": 34.7
+   },
+   {
+    "name": "Stillwater",
+    "county": "Payne",
+    "mi": 51.6
+   },
+   {
+    "name": "Bethany",
+    "county": "Oklahoma",
+    "mi": 7.4
+   },
+   {
+    "name": "Chickasha",
+    "county": "Grady",
+    "mi": 37.2
+   },
+   {
+    "name": "Choctaw",
+    "county": "Oklahoma",
+    "mi": 14.1
+   },
+   {
+    "name": "Guthrie",
+    "county": "Logan",
+    "mi": 28.9
+   },
+   {
+    "name": "Warr Acres",
+    "county": "Oklahoma",
+    "mi": 6.9
+   },
+   {
+    "name": "Newcastle",
+    "county": "McClain",
+    "mi": 15.9
+   },
+   {
+    "name": "The Village",
+    "county": "Oklahoma",
+    "mi": 6.7
+   }
   ]
  },
  {
@@ -546,15 +3231,76 @@
   "hub": "distribution & manufacturing",
   "blurb": "Central Arkansas rigging and machinery moving along the I-40 freight corridor.",
   "near": [
-   "North Little Rock",
-   "Conway",
-   "Benton",
-   "Bryant",
-   "Jacksonville",
-   "Sherwood",
-   "Maumelle",
-   "Cabot",
-   "Hot Springs"
+   {
+    "name": "North Little Rock",
+    "county": "Pulaski",
+    "mi": 2
+   },
+   {
+    "name": "Conway",
+    "county": "Faulkner",
+    "mi": 25.2
+   },
+   {
+    "name": "Benton",
+    "county": "Saline",
+    "mi": 21.1
+   },
+   {
+    "name": "Bryant",
+    "county": "Saline",
+    "mi": 15.4
+   },
+   {
+    "name": "Jacksonville",
+    "county": "Pulaski",
+    "mi": 13.1
+   },
+   {
+    "name": "Sherwood",
+    "county": "Pulaski",
+    "mi": 6
+   },
+   {
+    "name": "Maumelle",
+    "county": "Pulaski",
+    "mi": 10.6
+   },
+   {
+    "name": "Cabot",
+    "county": "Lonoke",
+    "mi": 22.1
+   },
+   {
+    "name": "Hot Springs",
+    "county": "Garland",
+    "mi": 46.6
+   },
+   {
+    "name": "Pine Bluff",
+    "county": "Jefferson",
+    "mi": 39.3
+   },
+   {
+    "name": "Searcy",
+    "county": "White",
+    "mi": 46.8
+   },
+   {
+    "name": "Hot Springs Village",
+    "county": "Garland",
+    "mi": 40.6
+   },
+   {
+    "name": "Malvern",
+    "county": "Hot Spring",
+    "mi": 39.9
+   },
+   {
+    "name": "Stuttgart",
+    "county": "Arkansas",
+    "mi": 45.2
+   }
   ]
  },
  {
@@ -563,16 +3309,127 @@
   "hub": "port & energy",
   "blurb": "Gulf Coast project cargo, breakbulk, and rigging from the Port of New Orleans inland.",
   "near": [
-   "Metairie",
-   "Kenner",
-   "Gretna",
-   "Marrero",
-   "Chalmette",
-   "Harvey",
-   "Slidell",
-   "LaPlace",
-   "Houma",
-   "Boutte"
+   {
+    "name": "Metairie",
+    "county": "Jefferson Parish",
+    "mi": 5.1
+   },
+   {
+    "name": "Kenner",
+    "county": "Jefferson Parish",
+    "mi": 10.3
+   },
+   {
+    "name": "Gretna",
+    "county": "Jefferson Parish",
+    "mi": 3
+   },
+   {
+    "name": "Marrero",
+    "county": "Jefferson Parish",
+    "mi": 4.1
+   },
+   {
+    "name": "Chalmette",
+    "county": "Saint Bernard Parish",
+    "mi": 6.6
+   },
+   {
+    "name": "Harvey",
+    "county": "Jefferson Parish",
+    "mi": 3.5
+   },
+   {
+    "name": "Slidell",
+    "county": "Saint Tammany Parish",
+    "mi": 28.3
+   },
+   {
+    "name": "LaPlace",
+    "county": "Piatt",
+    "mi": 684.6,
+    "st": "IL"
+   },
+   {
+    "name": "Houma",
+    "county": "Terrebonne Parish",
+    "mi": 45.9
+   },
+   {
+    "name": "Boutte",
+    "county": "Saint Charles Parish",
+    "mi": 19.1
+   },
+   {
+    "name": "Laplace",
+    "county": "Saint John the Baptist Parish",
+    "mi": 25.5
+   },
+   {
+    "name": "Terrytown",
+    "county": "Jefferson Parish",
+    "mi": 4
+   },
+   {
+    "name": "Hammond",
+    "county": "Tangipahoa Parish",
+    "mi": 44.5
+   },
+   {
+    "name": "Bayou Cane",
+    "county": "Terrebonne Parish",
+    "mi": 46.5
+   },
+   {
+    "name": "Estelle",
+    "county": "Jefferson Parish",
+    "mi": 7.8
+   },
+   {
+    "name": "Thibodaux",
+    "county": "Lafourche Parish",
+    "mi": 46.1
+   },
+   {
+    "name": "Bayou Boeuf",
+    "county": "Lafourche Parish",
+    "mi": 31.8
+   },
+   {
+    "name": "Grand Bayou Mobile Home Park",
+    "county": "Lafourche Parish",
+    "mi": 42.2
+   },
+   {
+    "name": "River Ridge",
+    "county": "Jefferson Parish",
+    "mi": 8.4
+   },
+   {
+    "name": "Belle Chasse",
+    "county": "Plaquemines Parish",
+    "mi": 8.5
+   },
+   {
+    "name": "Mandeville",
+    "county": "Saint Tammany Parish",
+    "mi": 27.9
+   },
+   {
+    "name": "Luling",
+    "county": "Saint Charles Parish",
+    "mi": 17.5
+   },
+   {
+    "name": "Woodmere",
+    "county": "Jefferson Parish",
+    "mi": 6.7
+   },
+   {
+    "name": "Destrehan",
+    "county": "Saint Charles Parish",
+    "mi": 16.7
+   }
   ]
  },
  {
@@ -581,32 +3438,156 @@
   "hub": "manufacturing & distribution",
   "blurb": "Central Mississippi rigging and machinery moving serving the Deep South's freight lanes.",
   "near": [
-   "Pearl",
-   "Ridgeland",
-   "Madison",
-   "Clinton",
-   "Brandon",
-   "Flowood",
-   "Byram",
-   "Canton",
-   "Vicksburg"
+   {
+    "name": "Pearl",
+    "county": "Rankin",
+    "mi": 3.5
+   },
+   {
+    "name": "Ridgeland",
+    "county": "Madison",
+    "mi": 9.5
+   },
+   {
+    "name": "Madison",
+    "county": "Madison",
+    "mi": 12
+   },
+   {
+    "name": "Clinton",
+    "county": "Hinds",
+    "mi": 8.5
+   },
+   {
+    "name": "Brandon",
+    "county": "Rankin",
+    "mi": 11.8
+   },
+   {
+    "name": "Flowood",
+    "county": "Rankin",
+    "mi": 2.8
+   },
+   {
+    "name": "Byram",
+    "county": "Hinds",
+    "mi": 9
+   },
+   {
+    "name": "Canton",
+    "county": "Madison",
+    "mi": 23.3
+   },
+   {
+    "name": "Vicksburg",
+    "county": "Warren",
+    "mi": 40.6
+   },
+   {
+    "name": "Yazoo City",
+    "county": "Yazoo",
+    "mi": 40.5
+   }
   ]
  },
  {
   "city": "Memphis",
   "state": "TN",
   "hub": "logistics crossroads",
-  "blurb": "Memphis is America's distribution crossroads \u2014 we rig and move the machinery and project freight that runs through it.",
+  "blurb": "Memphis is America's distribution crossroads — we rig and move the machinery and project freight that runs through it.",
   "near": [
-   "Bartlett",
-   "Germantown",
-   "Collierville",
-   "Southaven MS",
-   "Olive Branch MS",
-   "Millington",
-   "Horn Lake MS",
-   "West Memphis AR",
-   "Cordova"
+   {
+    "name": "Bartlett",
+    "county": "Shelby",
+    "mi": 10.6
+   },
+   {
+    "name": "Germantown",
+    "county": "Shelby",
+    "mi": 14.2
+   },
+   {
+    "name": "Collierville",
+    "county": "Shelby",
+    "mi": 23
+   },
+   {
+    "name": "Southaven",
+    "county": "DeSoto",
+    "mi": 11.3,
+    "st": "MS"
+   },
+   {
+    "name": "Olive Branch",
+    "county": "DeSoto",
+    "mi": 18,
+    "st": "MS"
+   },
+   {
+    "name": "Millington",
+    "county": "Shelby",
+    "mi": 15.8
+   },
+   {
+    "name": "Horn Lake",
+    "county": "DeSoto",
+    "mi": 13.4,
+    "st": "MS"
+   },
+   {
+    "name": "West Memphis",
+    "county": "Crittenden",
+    "mi": 7.7,
+    "st": "AR"
+   },
+   {
+    "name": "Cordova",
+    "county": "Shelby",
+    "mi": 15.4
+   },
+   {
+    "name": "Ellendale",
+    "county": "Shelby",
+    "mi": 13.8
+   },
+   {
+    "name": "Hernando",
+    "county": "DeSoto",
+    "mi": 22.7,
+    "st": "MS"
+   },
+   {
+    "name": "Forrest City",
+    "county": "St. Francis",
+    "mi": 43,
+    "st": "AR"
+   },
+   {
+    "name": "Lakeland",
+    "county": "Shelby",
+    "mi": 18.3
+   },
+   {
+    "name": "Marion",
+    "county": "Crittenden",
+    "mi": 9.5,
+    "st": "AR"
+   },
+   {
+    "name": "Arlington",
+    "county": "Shelby",
+    "mi": 24.1
+   },
+   {
+    "name": "Atoka",
+    "county": "Tipton",
+    "mi": 25.3
+   },
+   {
+    "name": "Covington",
+    "county": "Tipton",
+    "mi": 36.5
+   }
   ]
  },
  {
@@ -615,34 +3596,234 @@
   "hub": "auto & manufacturing",
   "blurb": "Middle Tennessee rigging and machinery moving, from auto-supplier equipment to industrial machinery moves.",
   "near": [
-   "Murfreesboro",
-   "Franklin",
-   "Hendersonville",
-   "Smyrna",
-   "Brentwood",
-   "Gallatin",
-   "Lebanon",
-   "La Vergne",
-   "Mount Juliet",
-   "Spring Hill"
+   {
+    "name": "Murfreesboro",
+    "county": "Rutherford",
+    "mi": 31.2
+   },
+   {
+    "name": "Franklin",
+    "county": "Williamson",
+    "mi": 17.3
+   },
+   {
+    "name": "Hendersonville",
+    "county": "Sumner",
+    "mi": 13.3
+   },
+   {
+    "name": "Smyrna",
+    "county": "Rutherford",
+    "mi": 19.5
+   },
+   {
+    "name": "Brentwood",
+    "county": "Williamson",
+    "mi": 9.2
+   },
+   {
+    "name": "Gallatin",
+    "county": "Sumner",
+    "mi": 24.3
+   },
+   {
+    "name": "Lebanon",
+    "county": "Wilson",
+    "mi": 27.7
+   },
+   {
+    "name": "La Vergne",
+    "county": "Rutherford",
+    "mi": 15.4
+   },
+   {
+    "name": "Mount Juliet",
+    "county": "Wilson",
+    "mi": 15
+   },
+   {
+    "name": "Spring Hill",
+    "county": "Maury",
+    "mi": 29.8
+   },
+   {
+    "name": "Clarksville",
+    "county": "Montgomery",
+    "mi": 40.7
+   },
+   {
+    "name": "Hermitage",
+    "county": "Davidson",
+    "mi": 9.3
+   },
+   {
+    "name": "Columbia",
+    "county": "Maury",
+    "mi": 40.6
+   },
+   {
+    "name": "Goodlettsville",
+    "county": "Davidson",
+    "mi": 11.6
+   },
+   {
+    "name": "Springfield",
+    "county": "Robertson",
+    "mi": 24.4
+   },
+   {
+    "name": "Dickson",
+    "county": "Dickson",
+    "mi": 34.2
+   },
+   {
+    "name": "Portland",
+    "county": "Sumner",
+    "mi": 32.4
+   },
+   {
+    "name": "Lewisburg",
+    "county": "Marshall",
+    "mi": 49.5
+   },
+   {
+    "name": "White House",
+    "county": "Sumner",
+    "mi": 22.3
+   },
+   {
+    "name": "Christiana",
+    "county": "Rutherford",
+    "mi": 38.2
+   }
   ]
  },
  {
   "city": "Birmingham",
   "state": "AL",
   "hub": "steel & manufacturing",
-  "blurb": "Birmingham's steel and manufacturing roots run deep \u2014 we rig and move the heavy iron that built them.",
+  "blurb": "Birmingham's steel and manufacturing roots run deep — we rig and move the heavy iron that built them.",
   "near": [
-   "Hoover",
-   "Bessemer",
-   "Tuscaloosa",
-   "Trussville",
-   "Vestavia Hills",
-   "Gardendale",
-   "Pelham",
-   "Alabaster",
-   "Leeds",
-   "Pell City"
+   {
+    "name": "Hoover",
+    "county": "Jefferson",
+    "mi": 8
+   },
+   {
+    "name": "Bessemer",
+    "county": "Jefferson",
+    "mi": 12
+   },
+   {
+    "name": "Tuscaloosa",
+    "county": "Tuscaloosa",
+    "mi": 49.2
+   },
+   {
+    "name": "Trussville",
+    "county": "Jefferson",
+    "mi": 13.1
+   },
+   {
+    "name": "Vestavia Hills",
+    "county": "Jefferson",
+    "mi": 5
+   },
+   {
+    "name": "Gardendale",
+    "county": "Jefferson",
+    "mi": 9.7
+   },
+   {
+    "name": "Pelham",
+    "county": "Shelby",
+    "mi": 16.2
+   },
+   {
+    "name": "Alabaster",
+    "county": "Shelby",
+    "mi": 19.1
+   },
+   {
+    "name": "Leeds",
+    "county": "Jefferson",
+    "mi": 15
+   },
+   {
+    "name": "Pell City",
+    "county": "St. Clair",
+    "mi": 30.1
+   },
+   {
+    "name": "Homewood",
+    "county": "Jefferson",
+    "mi": 3.4
+   },
+   {
+    "name": "Northport",
+    "county": "Tuscaloosa",
+    "mi": 49
+   },
+   {
+    "name": "Dixiana",
+    "county": "Jefferson",
+    "mi": 17.5
+   },
+   {
+    "name": "Mountain Brook",
+    "county": "Jefferson",
+    "mi": 3.2
+   },
+   {
+    "name": "Helena",
+    "county": "Shelby",
+    "mi": 15.7
+   },
+   {
+    "name": "Center Point",
+    "county": "Jefferson",
+    "mi": 11
+   },
+   {
+    "name": "Hueytown",
+    "county": "Jefferson",
+    "mi": 12.2
+   },
+   {
+    "name": "Talladega",
+    "county": "Talladega",
+    "mi": 40.6
+   },
+   {
+    "name": "Cullman",
+    "county": "Cullman",
+    "mi": 45.3
+   },
+   {
+    "name": "Jasper",
+    "county": "Walker",
+    "mi": 34.7
+   },
+   {
+    "name": "Calera",
+    "county": "Shelby",
+    "mi": 29
+   },
+   {
+    "name": "Sylacauga",
+    "county": "Talladega",
+    "mi": 39.8
+   },
+   {
+    "name": "Moody",
+    "county": "St. Clair",
+    "mi": 18.6
+   },
+   {
+    "name": "Irondale",
+    "county": "Jefferson",
+    "mi": 5.6
+   }
   ]
  },
  {
@@ -651,18 +3832,126 @@
   "hub": "distribution & manufacturing",
   "blurb": "Rigging heavy machinery and running project freight through the Southeast's largest logistics hub.",
   "near": [
-   "Marietta",
-   "Sandy Springs",
-   "Roswell",
-   "Alpharetta",
-   "Decatur",
-   "McDonough",
-   "Lawrenceville",
-   "Smyrna",
-   "Kennesaw",
-   "Stockbridge",
-   "Duluth",
-   "Conyers"
+   {
+    "name": "Marietta",
+    "county": "Cobb",
+    "mi": 16.9
+   },
+   {
+    "name": "Sandy Springs",
+    "county": "Fulton",
+    "mi": 12.1
+   },
+   {
+    "name": "Roswell",
+    "county": "Fulton",
+    "mi": 19
+   },
+   {
+    "name": "Alpharetta",
+    "county": "Fulton",
+    "mi": 23.2
+   },
+   {
+    "name": "Decatur",
+    "county": "DeKalb",
+    "mi": 5.6
+   },
+   {
+    "name": "McDonough",
+    "county": "Henry",
+    "mi": 25
+   },
+   {
+    "name": "Lawrenceville",
+    "county": "Gwinnett",
+    "mi": 27.1
+   },
+   {
+    "name": "Smyrna",
+    "county": "Cobb",
+    "mi": 11.8
+   },
+   {
+    "name": "Kennesaw",
+    "county": "Cobb",
+    "mi": 23
+   },
+   {
+    "name": "Stockbridge",
+    "county": "Henry",
+    "mi": 16.7
+   },
+   {
+    "name": "Duluth",
+    "county": "Gwinnett",
+    "mi": 22.4
+   },
+   {
+    "name": "Conyers",
+    "county": "Rockdale",
+    "mi": 22
+   },
+   {
+    "name": "South Fulton",
+    "county": "Fulton",
+    "mi": 19.6
+   },
+   {
+    "name": "Johns Creek",
+    "county": "Fulton",
+    "mi": 22.2
+   },
+   {
+    "name": "Brookhaven",
+    "county": "DeKalb",
+    "mi": 8
+   },
+   {
+    "name": "Stonecrest",
+    "county": "DeKalb",
+    "mi": 14.8
+   },
+   {
+    "name": "Dunwoody",
+    "county": "DeKalb",
+    "mi": 14
+   },
+   {
+    "name": "Peachtree Corners",
+    "county": "Gwinnett",
+    "mi": 18
+   },
+   {
+    "name": "Gainesville",
+    "county": "Hall",
+    "mi": 49.8
+   },
+   {
+    "name": "Milton",
+    "county": "Fulton",
+    "mi": 26.9
+   },
+   {
+    "name": "Newnan",
+    "county": "Coweta",
+    "mi": 34.8
+   },
+   {
+    "name": "Mableton",
+    "county": "Cobb",
+    "mi": 12.2
+   },
+   {
+    "name": "East Point",
+    "county": "Fulton",
+    "mi": 5.6
+   },
+   {
+    "name": "Peachtree City",
+    "county": "Fayette",
+    "mi": 27.1
+   }
   ]
  },
  {
@@ -671,14 +3960,51 @@
   "hub": "port & industrial",
   "blurb": "Port of Charleston breakbulk, project cargo, and rigging across the South Carolina Lowcountry.",
   "near": [
-   "North Charleston",
-   "Mount Pleasant",
-   "Summerville",
-   "Goose Creek",
-   "Hanahan",
-   "Ladson",
-   "Moncks Corner",
-   "Hollywood"
+   {
+    "name": "North Charleston",
+    "county": "Charleston",
+    "mi": 5.9
+   },
+   {
+    "name": "Mount Pleasant",
+    "county": "Charleston",
+    "mi": 4.3
+   },
+   {
+    "name": "Summerville",
+    "county": "Dorchester",
+    "mi": 21.9
+   },
+   {
+    "name": "Goose Creek",
+    "county": "Berkeley",
+    "mi": 15.3
+   },
+   {
+    "name": "Hanahan",
+    "county": "Berkeley",
+    "mi": 11.1
+   },
+   {
+    "name": "Ladson",
+    "county": "Berkeley",
+    "mi": 17.7
+   },
+   {
+    "name": "Moncks Corner",
+    "county": "Berkeley",
+    "mi": 29.4
+   },
+   {
+    "name": "Hollywood",
+    "county": "Charleston",
+    "mi": 18.2
+   },
+   {
+    "name": "Beaufort",
+    "county": "Beaufort",
+    "mi": 49.1
+   }
   ]
  },
  {
@@ -687,16 +4013,129 @@
   "hub": "energy & manufacturing",
   "blurb": "Carolinas rigging and machinery moving, from energy turbines to factory line relocations.",
   "near": [
-   "Concord",
-   "Gastonia",
-   "Rock Hill SC",
-   "Huntersville",
-   "Matthews",
-   "Monroe",
-   "Mooresville",
-   "Kannapolis",
-   "Statesville",
-   "Salisbury"
+   {
+    "name": "Concord",
+    "county": "Cabarrus",
+    "mi": 19.4
+   },
+   {
+    "name": "Gastonia",
+    "county": "Gaston",
+    "mi": 19.6
+   },
+   {
+    "name": "Rock Hill",
+    "county": "York",
+    "mi": 23.3,
+    "st": "SC"
+   },
+   {
+    "name": "Huntersville",
+    "county": "Mecklenburg",
+    "mi": 12.7
+   },
+   {
+    "name": "Matthews",
+    "county": "Mecklenburg",
+    "mi": 10.2
+   },
+   {
+    "name": "Monroe",
+    "county": "Union",
+    "mi": 23.5
+   },
+   {
+    "name": "Mooresville",
+    "county": "Iredell",
+    "mi": 24.8
+   },
+   {
+    "name": "Kannapolis",
+    "county": "Cabarrus",
+    "mi": 21.9
+   },
+   {
+    "name": "Statesville",
+    "county": "Iredell",
+    "mi": 38.5
+   },
+   {
+    "name": "Salisbury",
+    "county": "Rowan",
+    "mi": 37
+   },
+   {
+    "name": "Hickory",
+    "county": "Catawba",
+    "mi": 44.8
+   },
+   {
+    "name": "Indian Trail",
+    "county": "Union",
+    "mi": 14.3
+   },
+   {
+    "name": "Cornelius",
+    "county": "Mecklenburg",
+    "mi": 18
+   },
+   {
+    "name": "Mint Hill",
+    "county": "Mecklenburg",
+    "mi": 11.5
+   },
+   {
+    "name": "Shelby",
+    "county": "Cleveland",
+    "mi": 39.3
+   },
+   {
+    "name": "Albemarle",
+    "county": "Stanly",
+    "mi": 37.3
+   },
+   {
+    "name": "Stallings",
+    "county": "Union",
+    "mi": 12.9
+   },
+   {
+    "name": "Harrisburg",
+    "county": "Cabarrus",
+    "mi": 12.4
+   },
+   {
+    "name": "Mount Holly",
+    "county": "Gaston",
+    "mi": 10.9
+   },
+   {
+    "name": "Fort Mill",
+    "county": "York",
+    "mi": 16.2,
+    "st": "SC"
+   },
+   {
+    "name": "Waxhaw",
+    "county": "Union",
+    "mi": 21.6
+   },
+   {
+    "name": "Newton",
+    "county": "Catawba",
+    "mi": 37.3
+   },
+   {
+    "name": "Gaffney",
+    "county": "Cherokee",
+    "mi": 46.8,
+    "st": "SC"
+   },
+   {
+    "name": "Davidson",
+    "county": "Gaston",
+    "mi": 19
+   }
   ]
  },
  {
@@ -705,14 +4144,111 @@
   "hub": "port & logistics",
   "blurb": "Northeast Florida rigging and machinery moving, from JAXPORT project cargo to industrial plant equipment.",
   "near": [
-   "Orange Park",
-   "Fernandina Beach",
-   "Yulee",
-   "St. Augustine",
-   "Middleburg",
-   "Green Cove Springs",
-   "Callahan",
-   "Macclenny"
+   {
+    "name": "Orange Park",
+    "county": "Clay",
+    "mi": 11.9
+   },
+   {
+    "name": "Fernandina Beach",
+    "county": "Nassau",
+    "mi": 26
+   },
+   {
+    "name": "Yulee",
+    "county": "Nassau",
+    "mi": 20.9
+   },
+   {
+    "name": "St. Augustine"
+   },
+   {
+    "name": "Middleburg",
+    "county": "Clay",
+    "mi": 21.9
+   },
+   {
+    "name": "Green Cove Springs",
+    "county": "Clay",
+    "mi": 23.5
+   },
+   {
+    "name": "Callahan",
+    "county": "Nassau",
+    "mi": 19
+   },
+   {
+    "name": "Macclenny",
+    "county": "Baker",
+    "mi": 28
+   },
+   {
+    "name": "Ponte Vedra Beach",
+    "county": "Saint Johns",
+    "mi": 17.3
+   },
+   {
+    "name": "Lakeside",
+    "county": "Clay",
+    "mi": 15.5
+   },
+   {
+    "name": "Fruit Cove",
+    "county": "Saint Johns",
+    "mi": 15.3
+   },
+   {
+    "name": "Fleming Island",
+    "county": "Clay",
+    "mi": 16.9
+   },
+   {
+    "name": "Jacksonville Beach",
+    "county": "Duval",
+    "mi": 15.9
+   },
+   {
+    "name": "Oakleaf Plantation",
+    "county": "Clay",
+    "mi": 15.5
+   },
+   {
+    "name": "Palm Valley",
+    "county": "Saint Johns",
+    "mi": 19.2
+   },
+   {
+    "name": "St. Marys",
+    "county": "Camden",
+    "mi": 28.3,
+    "st": "GA"
+   },
+   {
+    "name": "Kingsland",
+    "county": "Camden",
+    "mi": 32.4,
+    "st": "GA"
+   },
+   {
+    "name": "Bellair-Meadowbrook Terrace",
+    "county": "Clay",
+    "mi": 11.8
+   },
+   {
+    "name": "Atlantic Beach",
+    "county": "Duval",
+    "mi": 15.3
+   },
+   {
+    "name": "Saint Augustine",
+    "county": "Saint Johns",
+    "mi": 36.5
+   },
+   {
+    "name": "Palatka",
+    "county": "Putnam",
+    "mi": 47.2
+   }
   ]
  },
  {
@@ -721,32 +4257,205 @@
   "hub": "trade & construction",
   "blurb": "South Florida rigging and machinery moving for construction, marine, and industrial equipment.",
   "near": [
-   "Hialeah",
-   "Fort Lauderdale",
-   "Hollywood",
-   "Pompano Beach",
-   "Doral",
-   "Miami Gardens",
-   "Homestead",
-   "Medley",
-   "Pembroke Pines",
-   "Opa-locka"
+   {
+    "name": "Hialeah",
+    "county": "Miami-Dade",
+    "mi": 7.8
+   },
+   {
+    "name": "Fort Lauderdale",
+    "county": "Broward",
+    "mi": 24.2
+   },
+   {
+    "name": "Hollywood",
+    "county": "Broward",
+    "mi": 16.6
+   },
+   {
+    "name": "Pompano Beach",
+    "county": "Broward",
+    "mi": 32.3
+   },
+   {
+    "name": "Doral",
+    "county": "Miami-Dade",
+    "mi": 10.5
+   },
+   {
+    "name": "Miami Gardens",
+    "county": "Miami-Dade",
+    "mi": 12
+   },
+   {
+    "name": "Homestead",
+    "county": "Miami-Dade",
+    "mi": 27.5
+   },
+   {
+    "name": "Medley",
+    "county": "Miami-Dade",
+    "mi": 9.4
+   },
+   {
+    "name": "Pembroke Pines",
+    "county": "Broward",
+    "mi": 15.9
+   },
+   {
+    "name": "Opa-locka",
+    "county": "Miami-Dade",
+    "mi": 9.5
+   },
+   {
+    "name": "Miramar",
+    "county": "Broward",
+    "mi": 14.9
+   },
+   {
+    "name": "Coral Springs",
+    "county": "Broward",
+    "mi": 34.7
+   },
+   {
+    "name": "Davie",
+    "county": "Broward",
+    "mi": 20.1
+   },
+   {
+    "name": "Boca Raton",
+    "county": "Palm Beach",
+    "mi": 41
+   },
+   {
+    "name": "Plantation",
+    "county": "Broward",
+    "mi": 25
+   },
+   {
+    "name": "Miami Beach",
+    "county": "Miami-Dade",
+    "mi": 4.1
+   },
+   {
+    "name": "Sunrise",
+    "county": "Broward",
+    "mi": 25.4
+   },
+   {
+    "name": "Kendall",
+    "county": "Miami-Dade",
+    "mi": 10.1
+   },
+   {
+    "name": "Deerfield Beach",
+    "county": "Broward",
+    "mi": 38
+   },
+   {
+    "name": "Lauderhill",
+    "county": "Broward",
+    "mi": 25.3
+   },
+   {
+    "name": "Weston",
+    "county": "Broward",
+    "mi": 25.9
+   },
+   {
+    "name": "Delray Beach",
+    "county": "Palm Beach",
+    "mi": 48.1
+   },
+   {
+    "name": "Tamarac",
+    "county": "Broward",
+    "mi": 30.5
+   },
+   {
+    "name": "Carol City",
+    "county": "Miami-Dade",
+    "mi": 11.9
+   }
   ]
  },
  {
   "city": "Norfolk",
   "state": "VA",
   "hub": "port & breakbulk",
-  "blurb": "Hampton Roads rigging and project freight \u2014 port cargo and industrial equipment out of Norfolk.",
+  "blurb": "Hampton Roads rigging and project freight — port cargo and industrial equipment out of Norfolk.",
   "near": [
-   "Virginia Beach",
-   "Chesapeake",
-   "Portsmouth",
-   "Hampton",
-   "Newport News",
-   "Suffolk",
-   "Williamsburg",
-   "Smithfield"
+   {
+    "name": "Virginia Beach",
+    "county": "City of Virginia Beach",
+    "mi": 17
+   },
+   {
+    "name": "Chesapeake",
+    "county": "City of Chesapeake",
+    "mi": 2
+   },
+   {
+    "name": "Portsmouth",
+    "county": "City of Portsmouth",
+    "mi": 1.1
+   },
+   {
+    "name": "Hampton",
+    "county": "City of Hampton",
+    "mi": 13.1
+   },
+   {
+    "name": "Newport News",
+    "county": "City of Newport News",
+    "mi": 12.2
+   },
+   {
+    "name": "Suffolk",
+    "county": "City of Suffolk",
+    "mi": 18.5
+   },
+   {
+    "name": "Williamsburg",
+    "county": "City of Williamsburg",
+    "mi": 37.4
+   },
+   {
+    "name": "Smithfield",
+    "county": "Isle of Wight",
+    "mi": 21.3
+   },
+   {
+    "name": "East Hampton",
+    "county": "City of Hampton",
+    "mi": 13.4
+   },
+   {
+    "name": "Portsmouth Heights",
+    "county": "City of Portsmouth",
+    "mi": 5
+   },
+   {
+    "name": "South Suffolk",
+    "county": "City of Suffolk",
+    "mi": 19.1
+   },
+   {
+    "name": "Elizabeth City",
+    "county": "Pasquotank",
+    "mi": 38.2,
+    "st": "NC"
+   },
+   {
+    "name": "Poquoson",
+    "county": "City of Poquoson",
+    "mi": 19.3
+   },
+   {
+    "name": "Gloucester Point",
+    "county": "Gloucester",
+    "mi": 30.5
+   }
   ]
  },
  {
@@ -755,85 +4464,674 @@
   "hub": "port & industrial",
   "blurb": "Port of Baltimore breakbulk and machinery moving across the Mid-Atlantic.",
   "near": [
-   "Towson",
-   "Dundalk",
-   "Glen Burnie",
-   "Columbia",
-   "Essex",
-   "Catonsville",
-   "Curtis Bay",
-   "Sparrows Point",
-   "Annapolis"
+   {
+    "name": "Towson",
+    "county": "Baltimore",
+    "mi": 7.7
+   },
+   {
+    "name": "Dundalk",
+    "county": "Baltimore",
+    "mi": 5.6
+   },
+   {
+    "name": "Glen Burnie",
+    "county": "Anne Arundel",
+    "mi": 8.9
+   },
+   {
+    "name": "Columbia",
+    "county": "Howard",
+    "mi": 12.6
+   },
+   {
+    "name": "Essex",
+    "county": "Baltimore",
+    "mi": 7.5
+   },
+   {
+    "name": "Catonsville",
+    "county": "Baltimore",
+    "mi": 6.5
+   },
+   {
+    "name": "Curtis Bay",
+    "county": "City of Baltimore",
+    "mi": 4.6
+   },
+   {
+    "name": "Sparrows Point",
+    "county": "Baltimore",
+    "mi": 8.8
+   },
+   {
+    "name": "Annapolis",
+    "county": "Anne Arundel",
+    "mi": 22.5
+   },
+   {
+    "name": "Washington",
+    "mi": 35.5,
+    "st": "DC"
+   },
+   {
+    "name": "Arlington",
+    "county": "Arlington",
+    "mi": 38.7,
+    "st": "VA"
+   },
+   {
+    "name": "Alexandria",
+    "county": "City of Alexandria",
+    "mi": 40.9,
+    "st": "VA"
+   },
+   {
+    "name": "Germantown",
+    "county": "Montgomery",
+    "mi": 36.2
+   },
+   {
+    "name": "Silver Spring",
+    "county": "Montgomery",
+    "mi": 30.3
+   },
+   {
+    "name": "Frederick",
+    "county": "Frederick",
+    "mi": 43.5
+   },
+   {
+    "name": "Waldorf",
+    "county": "Charles",
+    "mi": 49.2
+   },
+   {
+    "name": "Gaithersburg",
+    "county": "Montgomery",
+    "mi": 33.1
+   },
+   {
+    "name": "Rockville",
+    "county": "Montgomery",
+    "mi": 32.3
+   },
+   {
+    "name": "Ellicott City",
+    "county": "Howard",
+    "mi": 10.1
+   },
+   {
+    "name": "Bethesda",
+    "county": "Montgomery",
+    "mi": 33.8
+   },
+   {
+    "name": "Reston",
+    "county": "Fairfax",
+    "mi": 44.9,
+    "st": "VA"
+   },
+   {
+    "name": "Bowie",
+    "county": "Prince George's",
+    "mi": 24.8
+   },
+   {
+    "name": "Downtown DC",
+    "mi": 35.1,
+    "st": "DC"
+   },
+   {
+    "name": "Aspen Hill",
+    "county": "Montgomery",
+    "mi": 28.7
+   }
   ]
  },
  {
   "city": "Philadelphia",
   "state": "PA",
   "hub": "port & manufacturing",
-  "blurb": "Philadelphia and the Delaware Valley \u2014 port cargo, refinery equipment, and machinery moving.",
+  "blurb": "Philadelphia and the Delaware Valley — port cargo, refinery equipment, and machinery moving.",
   "near": [
-   "Camden NJ",
-   "Chester",
-   "Norristown",
-   "King of Prussia",
-   "Bensalem",
-   "Levittown",
-   "Trenton NJ",
-   "Conshohocken",
-   "Essington"
+   {
+    "name": "Camden",
+    "county": "Camden",
+    "mi": 3,
+    "st": "NJ"
+   },
+   {
+    "name": "Chester",
+    "county": "Delaware",
+    "mi": 12.6
+   },
+   {
+    "name": "Norristown",
+    "county": "Montgomery",
+    "mi": 15
+   },
+   {
+    "name": "King of Prussia",
+    "county": "Montgomery",
+    "mi": 15.5
+   },
+   {
+    "name": "Bensalem",
+    "county": "Bucks",
+    "mi": 15.4
+   },
+   {
+    "name": "Levittown",
+    "county": "Bucks",
+    "mi": 22.6
+   },
+   {
+    "name": "Trenton",
+    "county": "Mercer",
+    "mi": 28.8,
+    "st": "NJ"
+   },
+   {
+    "name": "Conshohocken",
+    "county": "Montgomery",
+    "mi": 11.4
+   },
+   {
+    "name": "Essington",
+    "county": "Delaware",
+    "mi": 9.4
+   },
+   {
+    "name": "Allentown",
+    "county": "Lehigh",
+    "mi": 48.5
+   },
+   {
+    "name": "Reading",
+    "county": "Berks",
+    "mi": 48.2
+   },
+   {
+    "name": "Bethlehem",
+    "county": "Northampton",
+    "mi": 47.8
+   },
+   {
+    "name": "Wilmington",
+    "county": "New Castle",
+    "mi": 24.8,
+    "st": "DE"
+   },
+   {
+    "name": "Cherry Hill",
+    "county": "Camden",
+    "mi": 7.1,
+    "st": "NJ"
+   },
+   {
+    "name": "Vineland",
+    "county": "Cumberland",
+    "mi": 33,
+    "st": "NJ"
+   },
+   {
+    "name": "South Vineland",
+    "county": "Cumberland",
+    "mi": 35.7,
+    "st": "NJ"
+   },
+   {
+    "name": "Abington",
+    "county": "Montgomery",
+    "mi": 11.9
+   },
+   {
+    "name": "Jackson",
+    "county": "Camden",
+    "mi": 20.1,
+    "st": "NJ"
+   },
+   {
+    "name": "Havertown",
+    "county": "Delaware",
+    "mi": 7.9
+   },
+   {
+    "name": "North Brunswick",
+    "county": "Middlesex",
+    "mi": 50,
+    "st": "NJ"
+   },
+   {
+    "name": "Sicklerville",
+    "county": "Camden",
+    "mi": 19.2,
+    "st": "NJ"
+   },
+   {
+    "name": "Mount Laurel",
+    "county": "Burlington",
+    "mi": 14.5,
+    "st": "NJ"
+   },
+   {
+    "name": "Hillsborough",
+    "county": "Somerset",
+    "mi": 46,
+    "st": "NJ"
+   },
+   {
+    "name": "Sewell",
+    "county": "Gloucester",
+    "mi": 12.9,
+    "st": "NJ"
+   }
   ]
  },
  {
   "city": "Pittsburgh",
   "state": "PA",
   "hub": "steel & energy",
-  "blurb": "Steel City rigging and machinery moving \u2014 heavy industrial equipment and Marcellus energy gear.",
+  "blurb": "Steel City rigging and machinery moving — heavy industrial equipment and Marcellus energy gear.",
   "near": [
-   "Monroeville",
-   "Bethel Park",
-   "McKeesport",
-   "Cranberry Township",
-   "Robinson",
-   "Coraopolis",
-   "Washington",
-   "Greensburg",
-   "Canonsburg"
+   {
+    "name": "Monroeville",
+    "county": "Allegheny",
+    "mi": 11
+   },
+   {
+    "name": "Bethel Park",
+    "county": "Allegheny",
+    "mi": 8.1
+   },
+   {
+    "name": "McKeesport",
+    "county": "Allegheny",
+    "mi": 9.4
+   },
+   {
+    "name": "Cranberry Township",
+    "county": "Butler",
+    "mi": 17.9
+   },
+   {
+    "name": "Robinson",
+    "county": "Indiana",
+    "mi": 45.1
+   },
+   {
+    "name": "Coraopolis",
+    "county": "Allegheny",
+    "mi": 10.5
+   },
+   {
+    "name": "Washington",
+    "county": "Washington",
+    "mi": 22.7
+   },
+   {
+    "name": "Greensburg",
+    "county": "Westmoreland",
+    "mi": 25.9
+   },
+   {
+    "name": "Canonsburg",
+    "county": "Washington",
+    "mi": 15.9
+   },
+   {
+    "name": "Mount Lebanon",
+    "county": "Allegheny",
+    "mi": 6.5
+   },
+   {
+    "name": "Wheeling",
+    "county": "Ohio",
+    "mi": 46.2,
+    "st": "WV"
+   },
+   {
+    "name": "Plum",
+    "county": "Allegheny",
+    "mi": 13.6
+   },
+   {
+    "name": "New Castle",
+    "county": "Lawrence",
+    "mi": 43
+   },
+   {
+    "name": "Allison Park",
+    "county": "Allegheny",
+    "mi": 8.4
+   },
+   {
+    "name": "Murrysville",
+    "county": "Westmoreland",
+    "mi": 15.7
+   },
+   {
+    "name": "West Mifflin",
+    "county": "Allegheny",
+    "mi": 8.7
+   },
+   {
+    "name": "Baldwin",
+    "county": "Allegheny",
+    "mi": 7.1
+   },
+   {
+    "name": "Weirton Heights",
+    "county": "Hancock",
+    "mi": 28.7,
+    "st": "WV"
+   },
+   {
+    "name": "Upper Saint Clair",
+    "county": "Allegheny",
+    "mi": 8.6
+   },
+   {
+    "name": "Weirton",
+    "county": "Hancock",
+    "mi": 31.3,
+    "st": "WV"
+   },
+   {
+    "name": "Steubenville",
+    "county": "Jefferson",
+    "mi": 33.9,
+    "st": "OH"
+   },
+   {
+    "name": "Wilkinsburg",
+    "county": "Allegheny",
+    "mi": 6
+   },
+   {
+    "name": "Franklin Park",
+    "county": "Allegheny",
+    "mi": 11
+   },
+   {
+    "name": "Indiana",
+    "county": "Indiana",
+    "mi": 46
+   }
   ]
  },
  {
   "city": "New York",
   "state": "NY",
   "hub": "construction & infrastructure",
-  "blurb": "New York metro rigging \u2014 construction, infrastructure, MRI, and industrial equipment across the tri-state area.",
+  "blurb": "New York metro rigging — construction, infrastructure, MRI, and industrial equipment across the tri-state area.",
   "near": [
-   "Newark NJ",
-   "Jersey City NJ",
-   "Yonkers",
-   "Elizabeth NJ",
-   "Brooklyn",
-   "Bronx",
-   "Edison NJ",
-   "Secaucus NJ",
-   "Bayonne NJ",
-   "Long Island City"
+   {
+    "name": "Newark",
+    "county": "Essex",
+    "mi": 8.8,
+    "st": "NJ"
+   },
+   {
+    "name": "Jersey City",
+    "county": "Hudson",
+    "mi": 3.9,
+    "st": "NJ"
+   },
+   {
+    "name": "Yonkers",
+    "county": "Westchester",
+    "mi": 16
+   },
+   {
+    "name": "Elizabeth",
+    "county": "Union",
+    "mi": 11.3,
+    "st": "NJ"
+   },
+   {
+    "name": "Brooklyn",
+    "county": "Kings",
+    "mi": 5.3
+   },
+   {
+    "name": "Bronx",
+    "county": "Bonner",
+    "mi": 2131.3,
+    "st": "ID"
+   },
+   {
+    "name": "Edison",
+    "county": "Middlesex",
+    "mi": 25.2,
+    "st": "NJ"
+   },
+   {
+    "name": "Secaucus",
+    "county": "Hudson",
+    "mi": 5.8,
+    "st": "NJ"
+   },
+   {
+    "name": "Bayonne",
+    "county": "Hudson",
+    "mi": 6.5,
+    "st": "NJ"
+   },
+   {
+    "name": "Long Island City"
+   },
+   {
+    "name": "New York City",
+    "mi": 0
+   },
+   {
+    "name": "Queens",
+    "county": "Queens",
+    "mi": 9.2
+   },
+   {
+    "name": "Manhattan",
+    "county": "New York",
+    "mi": 5.2
+   },
+   {
+    "name": "The Bronx",
+    "county": "Bronx",
+    "mi": 11.9
+   },
+   {
+    "name": "Staten Island",
+    "county": "Richmond",
+    "mi": 12.6
+   },
+   {
+    "name": "Paterson",
+    "county": "Passaic",
+    "mi": 16.5,
+    "st": "NJ"
+   },
+   {
+    "name": "Stamford",
+    "county": "Western Connecticut Planning Region",
+    "mi": 33.8,
+    "st": "CT"
+   },
+   {
+    "name": "North Stamford",
+    "county": "Western Connecticut Planning Region",
+    "mi": 38,
+    "st": "CT"
+   },
+   {
+    "name": "Norwalk",
+    "county": "Western Connecticut Planning Region",
+    "mi": 41.9,
+    "st": "CT"
+   },
+   {
+    "name": "Greenburgh",
+    "county": "Westchester",
+    "mi": 23.6
+   },
+   {
+    "name": "Clifton",
+    "county": "Passaic",
+    "mi": 12.9,
+    "st": "NJ"
+   },
+   {
+    "name": "East Norwalk",
+    "county": "Western Connecticut Planning Region",
+    "mi": 41.7,
+    "st": "CT"
+   },
+   {
+    "name": "New Rochelle",
+    "county": "Westchester",
+    "mi": 18
+   },
+   {
+    "name": "Brick",
+    "county": "Ocean",
+    "mi": 45.8,
+    "st": "NJ"
+   }
   ]
  },
  {
   "city": "Boston",
   "state": "MA",
   "hub": "manufacturing & port",
-  "blurb": "New England rigging and machinery moving \u2014 manufacturing, labs, and port cargo across the Northeast.",
+  "blurb": "New England rigging and machinery moving — manufacturing, labs, and port cargo across the Northeast.",
   "near": [
-   "Cambridge",
-   "Quincy",
-   "Worcester",
-   "Lowell",
-   "Framingham",
-   "Braintree",
-   "Woburn",
-   "Everett",
-   "Chelsea",
-   "Waltham"
+   {
+    "name": "Cambridge",
+    "county": "Middlesex",
+    "mi": 2.6
+   },
+   {
+    "name": "Quincy",
+    "county": "Norfolk",
+    "mi": 7.9
+   },
+   {
+    "name": "Worcester",
+    "county": "Worcester",
+    "mi": 38.5
+   },
+   {
+    "name": "Lowell",
+    "county": "Middlesex",
+    "mi": 23.1
+   },
+   {
+    "name": "Framingham",
+    "county": "Middlesex",
+    "mi": 19
+   },
+   {
+    "name": "Braintree",
+    "county": "Norfolk",
+    "mi": 11.1
+   },
+   {
+    "name": "Woburn",
+    "county": "Middlesex",
+    "mi": 9.6
+   },
+   {
+    "name": "Everett",
+    "county": "Middlesex",
+    "mi": 3.5
+   },
+   {
+    "name": "Chelsea",
+    "county": "Suffolk",
+    "mi": 2.7
+   },
+   {
+    "name": "Waltham",
+    "county": "Middlesex",
+    "mi": 9.1
+   },
+   {
+    "name": "Providence",
+    "county": "Providence",
+    "mi": 41.1,
+    "st": "RI"
+   },
+   {
+    "name": "Manchester",
+    "county": "Hillsborough",
+    "mi": 48.4,
+    "st": "NH"
+   },
+   {
+    "name": "Dorchester",
+    "county": "Suffolk",
+    "mi": 4.3
+   },
+   {
+    "name": "Brockton",
+    "county": "Plymouth",
+    "mi": 19.1
+   },
+   {
+    "name": "Fall River",
+    "county": "Bristol",
+    "mi": 45.7
+   },
+   {
+    "name": "Lynn",
+    "county": "Essex",
+    "mi": 9.4
+   },
+   {
+    "name": "Newton",
+    "county": "Middlesex",
+    "mi": 7.8
+   },
+   {
+    "name": "Nashua",
+    "county": "Hillsborough",
+    "mi": 34.9,
+    "st": "NH"
+   },
+   {
+    "name": "Warwick",
+    "county": "Kent",
+    "mi": 49,
+    "st": "RI"
+   },
+   {
+    "name": "Cranston",
+    "county": "Providence",
+    "mi": 44.4,
+    "st": "RI"
+   },
+   {
+    "name": "Somerville",
+    "county": "Middlesex",
+    "mi": 2.9
+   },
+   {
+    "name": "Lawrence",
+    "county": "Essex",
+    "mi": 24.7
+   },
+   {
+    "name": "Pawtucket",
+    "county": "Providence",
+    "mi": 37,
+    "st": "RI"
+   },
+   {
+    "name": "Framingham Center",
+    "county": "Middlesex",
+    "mi": 19.7
+   }
   ]
  },
  {
@@ -842,15 +5140,131 @@
   "hub": "aviation & machine tools",
   "blurb": "We rig and move heavy machinery across Greater Cincinnati, from the GE Aviation plants in Evendale to machine-tool shops along the I-75 corridor and the Ohio River terminals.",
   "near": [
-   "Norwood",
-   "Blue Ash",
-   "Sharonville",
-   "Fairfield",
-   "Hamilton",
-   "Mason",
-   "Covington",
-   "Florence",
-   "West Chester"
+   {
+    "name": "Norwood",
+    "county": "Hamilton",
+    "mi": 3.5
+   },
+   {
+    "name": "Blue Ash",
+    "county": "Hamilton",
+    "mi": 10.3
+   },
+   {
+    "name": "Sharonville",
+    "county": "Hamilton",
+    "mi": 11.1
+   },
+   {
+    "name": "Fairfield",
+    "county": "Butler",
+    "mi": 15.3
+   },
+   {
+    "name": "Hamilton",
+    "county": "Butler",
+    "mi": 19
+   },
+   {
+    "name": "Mason",
+    "county": "Warren",
+    "mi": 19.5
+   },
+   {
+    "name": "Covington",
+    "county": "Kenton",
+    "mi": 3,
+    "st": "KY"
+   },
+   {
+    "name": "Florence",
+    "county": "Switzerland",
+    "mi": 32.4,
+    "st": "IN"
+   },
+   {
+    "name": "West Chester",
+    "county": "Tuscarawas",
+    "mi": 185.1
+   },
+   {
+    "name": "Dayton",
+    "county": "Montgomery",
+    "mi": 46.9
+   },
+   {
+    "name": "Kettering",
+    "county": "Montgomery",
+    "mi": 43
+   },
+   {
+    "name": "Middletown",
+    "county": "Butler",
+    "mi": 27.5
+   },
+   {
+    "name": "Beavercreek",
+    "county": "Greene",
+    "mi": 46.9
+   },
+   {
+    "name": "Florence",
+    "county": "Boone",
+    "mi": 10.7,
+    "st": "KY"
+   },
+   {
+    "name": "Independence",
+    "county": "Kenton",
+    "mi": 12.8,
+    "st": "KY"
+   },
+   {
+    "name": "Xenia",
+    "county": "Greene",
+    "mi": 49.6
+   },
+   {
+    "name": "Riverside",
+    "county": "Montgomery",
+    "mi": 49.7
+   },
+   {
+    "name": "Trotwood",
+    "county": "Montgomery",
+    "mi": 47.6
+   },
+   {
+    "name": "Centerville",
+    "county": "Montgomery",
+    "mi": 39.5
+   },
+   {
+    "name": "Oxford",
+    "county": "Butler",
+    "mi": 29
+   },
+   {
+    "name": "Lebanon",
+    "county": "Warren",
+    "mi": 27
+   },
+   {
+    "name": "Miamisburg",
+    "county": "Montgomery",
+    "mi": 37.7
+   },
+   {
+    "name": "White Oak",
+    "county": "Hamilton",
+    "mi": 7.5
+   },
+   {
+    "name": "Erlanger",
+    "county": "Kenton",
+    "mi": 8.9,
+    "st": "KY"
+   }
   ]
  },
  {
@@ -859,15 +5273,126 @@
   "hub": "semiconductor & tech",
   "blurb": "We rig and move fab equipment and precision machinery through Silicon Valley, across San Jose and the tech corridors flanking US-101 and I-880.",
   "near": [
-   "Santa Clara",
-   "Sunnyvale",
-   "Milpitas",
-   "Campbell",
-   "Cupertino",
-   "Mountain View",
-   "Fremont",
-   "Morgan Hill",
-   "Gilroy"
+   {
+    "name": "Santa Clara",
+    "county": "Santa Clara",
+    "mi": 3.5
+   },
+   {
+    "name": "Sunnyvale",
+    "county": "Santa Clara",
+    "mi": 8
+   },
+   {
+    "name": "Milpitas",
+    "county": "Santa Clara",
+    "mi": 6.2
+   },
+   {
+    "name": "Campbell",
+    "county": "Santa Clara",
+    "mi": 4.7
+   },
+   {
+    "name": "Cupertino",
+    "county": "Santa Clara",
+    "mi": 7.6
+   },
+   {
+    "name": "Mountain View",
+    "county": "Santa Clara",
+    "mi": 10.9
+   },
+   {
+    "name": "Fremont",
+    "county": "Alameda",
+    "mi": 15.3
+   },
+   {
+    "name": "Morgan Hill",
+    "county": "Santa Clara",
+    "mi": 19.6
+   },
+   {
+    "name": "Gilroy",
+    "county": "Santa Clara",
+    "mi": 29.2
+   },
+   {
+    "name": "San Francisco",
+    "county": "City and County of San Francisco",
+    "mi": 41.6
+   },
+   {
+    "name": "Oakland",
+    "county": "Alameda",
+    "mi": 38.2
+   },
+   {
+    "name": "Hayward",
+    "county": "Alameda",
+    "mi": 24.9
+   },
+   {
+    "name": "Salinas",
+    "county": "Monterey",
+    "mi": 47.6
+   },
+   {
+    "name": "Concord",
+    "county": "Contra Costa",
+    "mi": 44.7
+   },
+   {
+    "name": "Berkeley",
+    "county": "Alameda",
+    "mi": 42.2
+   },
+   {
+    "name": "Antioch",
+    "county": "Contra Costa",
+    "mi": 46.2
+   },
+   {
+    "name": "Richmond",
+    "county": "Contra Costa",
+    "mi": 48.1
+   },
+   {
+    "name": "Daly City",
+    "county": "San Mateo",
+    "mi": 40.1
+   },
+   {
+    "name": "San Mateo",
+    "county": "San Mateo",
+    "mi": 28.2
+   },
+   {
+    "name": "San Leandro",
+    "county": "Alameda",
+    "mi": 30.2
+   },
+   {
+    "name": "Livermore",
+    "county": "Alameda",
+    "mi": 24.7
+   },
+   {
+    "name": "Tracy",
+    "county": "San Joaquin",
+    "mi": 37.8
+   },
+   {
+    "name": "Redwood City",
+    "county": "San Mateo",
+    "mi": 21.3
+   },
+   {
+    "name": "Pleasanton",
+    "county": "Alameda",
+    "mi": 22.3
+   }
   ]
  },
  {
@@ -876,15 +5401,102 @@
   "hub": "auto & advanced mfg",
   "blurb": "We rig and move production machinery across the Upstate, serving BMW and its auto suppliers along the I-85 corridor between Greenville and Spartanburg.",
   "near": [
-   "Greer",
-   "Mauldin",
-   "Simpsonville",
-   "Spartanburg",
-   "Easley",
-   "Taylors",
-   "Anderson",
-   "Travelers Rest",
-   "Fountain Inn"
+   {
+    "name": "Greer",
+    "county": "Greenville",
+    "mi": 11.2
+   },
+   {
+    "name": "Mauldin",
+    "county": "Greenville",
+    "mi": 7
+   },
+   {
+    "name": "Simpsonville",
+    "county": "Greenville",
+    "mi": 11.3
+   },
+   {
+    "name": "Spartanburg",
+    "county": "Spartanburg",
+    "mi": 27
+   },
+   {
+    "name": "Easley",
+    "county": "Pickens",
+    "mi": 11.9
+   },
+   {
+    "name": "Taylors",
+    "county": "Greenville",
+    "mi": 7.3
+   },
+   {
+    "name": "Anderson",
+    "county": "Anderson",
+    "mi": 28.2
+   },
+   {
+    "name": "Travelers Rest",
+    "county": "Greenville",
+    "mi": 8.4
+   },
+   {
+    "name": "Fountain Inn",
+    "county": "Greenville",
+    "mi": 16
+   },
+   {
+    "name": "Greenwood",
+    "county": "Greenwood",
+    "mi": 47.3
+   },
+   {
+    "name": "Wade Hampton",
+    "county": "Greenville",
+    "mi": 4.9
+   },
+   {
+    "name": "Clemson",
+    "county": "Pickens",
+    "mi": 27.7
+   },
+   {
+    "name": "Berea",
+    "county": "Greenville",
+    "mi": 4.2
+   },
+   {
+    "name": "Gantt",
+    "county": "Greenville",
+    "mi": 4
+   },
+   {
+    "name": "Five Forks",
+    "county": "Greenville",
+    "mi": 9.9
+   },
+   {
+    "name": "Hendersonville",
+    "county": "Henderson",
+    "mi": 32.4,
+    "st": "NC"
+   },
+   {
+    "name": "Gaffney",
+    "county": "Cherokee",
+    "mi": 44.8
+   },
+   {
+    "name": "Parker",
+    "county": "Greenville",
+    "mi": 3.4
+   },
+   {
+    "name": "Laurens",
+    "county": "Laurens",
+    "mi": 32.6
+   }
   ]
  },
  {
@@ -893,15 +5505,121 @@
   "hub": "furniture & auto mfg",
   "blurb": "We rig and move industrial machinery across West Michigan for the office-furniture, automotive, and aerospace plants along the I-96 and US-131 corridors.",
   "near": [
-   "Wyoming",
-   "Kentwood",
-   "Walker",
-   "Grandville",
-   "Holland",
-   "Hudsonville",
-   "Rockford",
-   "Cedar Springs",
-   "Byron Center"
+   {
+    "name": "Wyoming",
+    "county": "Kent",
+    "mi": 3.9
+   },
+   {
+    "name": "Kentwood",
+    "county": "Kent",
+    "mi": 6.6
+   },
+   {
+    "name": "Walker",
+    "county": "Kent",
+    "mi": 5.7
+   },
+   {
+    "name": "Grandville",
+    "county": "Kent",
+    "mi": 6.1
+   },
+   {
+    "name": "Holland",
+    "county": "Allegan",
+    "mi": 25.4
+   },
+   {
+    "name": "Hudsonville",
+    "county": "Ottawa",
+    "mi": 11.8
+   },
+   {
+    "name": "Rockford",
+    "county": "Kent",
+    "mi": 12.1
+   },
+   {
+    "name": "Cedar Springs",
+    "county": "Kent",
+    "mi": 18.9
+   },
+   {
+    "name": "Byron Center",
+    "county": "Kent",
+    "mi": 10.8
+   },
+   {
+    "name": "Kalamazoo",
+    "county": "Kalamazoo",
+    "mi": 46.6
+   },
+   {
+    "name": "Muskegon",
+    "county": "Muskegon",
+    "mi": 34.7
+   },
+   {
+    "name": "Forest Hills",
+    "county": "Kent",
+    "mi": 9
+   },
+   {
+    "name": "Norton Shores",
+    "county": "Muskegon",
+    "mi": 33.3
+   },
+   {
+    "name": "Allendale",
+    "county": "Ottawa",
+    "mi": 14.5
+   },
+   {
+    "name": "Jenison",
+    "county": "Ottawa",
+    "mi": 7.4
+   },
+   {
+    "name": "Northview",
+    "county": "Kent",
+    "mi": 6.6
+   },
+   {
+    "name": "Cutlerville",
+    "county": "Kent",
+    "mi": 8.5
+   },
+   {
+    "name": "Ionia",
+    "county": "Ionia",
+    "mi": 30.2
+   },
+   {
+    "name": "East Grand Rapids",
+    "county": "Kent",
+    "mi": 3.3
+   },
+   {
+    "name": "Grand Haven",
+    "county": "Ottawa",
+    "mi": 29.1
+   },
+   {
+    "name": "Muskegon Heights",
+    "county": "Muskegon",
+    "mi": 33.2
+   },
+   {
+    "name": "Comstock Park",
+    "county": "Kent",
+    "mi": 5.2
+   },
+   {
+    "name": "Belmont",
+    "county": "Kent",
+    "mi": 8.3
+   }
   ]
  },
  {
@@ -910,15 +5628,81 @@
   "hub": "heavy equipment mfg",
   "blurb": "We rig and move heavy machinery across the Peoria area, serving Caterpillar and central Illinois heavy-equipment plants along the Illinois River and I-74.",
   "near": [
-   "East Peoria",
-   "Pekin",
-   "Morton",
-   "Washington",
-   "Bartonville",
-   "Chillicothe",
-   "Bloomington",
-   "Normal",
-   "Galesburg"
+   {
+    "name": "East Peoria",
+    "county": "Tazewell",
+    "mi": 2
+   },
+   {
+    "name": "Pekin",
+    "county": "Tazewell",
+    "mi": 9.1
+   },
+   {
+    "name": "Morton",
+    "county": "Tazewell",
+    "mi": 8.8
+   },
+   {
+    "name": "Washington",
+    "county": "Tazewell",
+    "mi": 9.5
+   },
+   {
+    "name": "Bartonville",
+    "county": "Peoria",
+    "mi": 4.5
+   },
+   {
+    "name": "Chillicothe",
+    "county": "Peoria",
+    "mi": 16.7
+   },
+   {
+    "name": "Bloomington",
+    "county": "McLean",
+    "mi": 34.4
+   },
+   {
+    "name": "Normal",
+    "county": "McLean",
+    "mi": 33.7
+   },
+   {
+    "name": "Galesburg",
+    "county": "Knox",
+    "mi": 44.5
+   },
+   {
+    "name": "North Peoria",
+    "county": "Peoria",
+    "mi": 1.7
+   },
+   {
+    "name": "Canton",
+    "county": "Fulton",
+    "mi": 25.2
+   },
+   {
+    "name": "Lincoln",
+    "county": "Logan",
+    "mi": 39.5
+   },
+   {
+    "name": "Streator",
+    "county": "LaSalle",
+    "mi": 49.2
+   },
+   {
+    "name": "Kewanee",
+    "county": "Henry",
+    "mi": 42
+   },
+   {
+    "name": "Peru",
+    "county": "LaSalle",
+    "mi": 49.9
+   }
   ]
  },
  {
@@ -927,15 +5711,74 @@
   "hub": "aviation manufacturing",
   "blurb": "We rig and move industrial machinery across the Air Capital for Spirit AeroSystems, Textron, and Bombardier plants along the I-135 and US-54 corridors.",
   "near": [
-   "Derby",
-   "Andover",
-   "Haysville",
-   "Newton",
-   "Park City",
-   "Bel Aire",
-   "Goddard",
-   "Maize",
-   "Valley Center"
+   {
+    "name": "Derby",
+    "county": "Sedgwick",
+    "mi": 10.8
+   },
+   {
+    "name": "Andover",
+    "county": "Butler",
+    "mi": 11.1
+   },
+   {
+    "name": "Haysville",
+    "county": "Sedgwick",
+    "mi": 8.9
+   },
+   {
+    "name": "Newton",
+    "county": "Harvey",
+    "mi": 24.5
+   },
+   {
+    "name": "Park City",
+    "county": "Sedgwick",
+    "mi": 7.5
+   },
+   {
+    "name": "Bel Aire"
+   },
+   {
+    "name": "Goddard",
+    "county": "Sedgwick",
+    "mi": 13.2
+   },
+   {
+    "name": "Maize",
+    "county": "Sedgwick",
+    "mi": 9.3
+   },
+   {
+    "name": "Valley Center",
+    "county": "Sedgwick",
+    "mi": 10
+   },
+   {
+    "name": "Hutchinson",
+    "county": "Reno",
+    "mi": 41.1
+   },
+   {
+    "name": "El Dorado",
+    "county": "Butler",
+    "mi": 27.4
+   },
+   {
+    "name": "Winfield",
+    "county": "Cowley",
+    "mi": 36.5
+   },
+   {
+    "name": "Arkansas City",
+    "county": "Cowley",
+    "mi": 46.5
+   },
+   {
+    "name": "Augusta",
+    "county": "Butler",
+    "mi": 19.7
+   }
   ]
  },
  {
@@ -944,15 +5787,139 @@
   "hub": "glass & automotive",
   "blurb": "We rig and move heavy machinery across the Glass City, serving auto plants and glass makers along the I-75 corridor and the Port of Toledo on Lake Erie.",
   "near": [
-   "Sylvania",
-   "Maumee",
-   "Perrysburg",
-   "Oregon",
-   "Rossford",
-   "Bowling Green",
-   "Northwood",
-   "Holland",
-   "Waterville"
+   {
+    "name": "Sylvania",
+    "county": "Lucas",
+    "mi": 9
+   },
+   {
+    "name": "Maumee",
+    "county": "Lucas",
+    "mi": 8.6
+   },
+   {
+    "name": "Perrysburg",
+    "county": "Wood",
+    "mi": 8.3
+   },
+   {
+    "name": "Oregon",
+    "county": "Lucas",
+    "mi": 3.8
+   },
+   {
+    "name": "Rossford",
+    "county": "Wood",
+    "mi": 3.8
+   },
+   {
+    "name": "Bowling Green",
+    "county": "Wood",
+    "mi": 20.6
+   },
+   {
+    "name": "Northwood",
+    "county": "Wood",
+    "mi": 5.9
+   },
+   {
+    "name": "Holland",
+    "county": "Lucas",
+    "mi": 8.6
+   },
+   {
+    "name": "Waterville",
+    "county": "Lucas",
+    "mi": 14.1
+   },
+   {
+    "name": "Ann Arbor",
+    "county": "Washtenaw",
+    "mi": 43.5,
+    "st": "MI"
+   },
+   {
+    "name": "Dearborn",
+    "county": "Wayne",
+    "mi": 49.5,
+    "st": "MI"
+   },
+   {
+    "name": "Livonia",
+    "county": "Wayne",
+    "mi": 49.8,
+    "st": "MI"
+   },
+   {
+    "name": "Canton",
+    "county": "Wayne",
+    "mi": 44.7,
+    "st": "MI"
+   },
+   {
+    "name": "Westland",
+    "county": "Wayne",
+    "mi": 46.3,
+    "st": "MI"
+   },
+   {
+    "name": "Taylor",
+    "county": "Wayne",
+    "mi": 42.5,
+    "st": "MI"
+   },
+   {
+    "name": "Dearborn Heights",
+    "county": "Wayne",
+    "mi": 48.7,
+    "st": "MI"
+   },
+   {
+    "name": "Findlay",
+    "county": "Hancock",
+    "mi": 43.1
+   },
+   {
+    "name": "Lincoln Park",
+    "county": "Wayne",
+    "mi": 44.9,
+    "st": "MI"
+   },
+   {
+    "name": "Southgate",
+    "county": "Wayne",
+    "mi": 42.3,
+    "st": "MI"
+   },
+   {
+    "name": "Allen Park",
+    "county": "Wayne",
+    "mi": 44.7,
+    "st": "MI"
+   },
+   {
+    "name": "Garden City",
+    "county": "Wayne",
+    "mi": 47.1,
+    "st": "MI"
+   },
+   {
+    "name": "Sandusky",
+    "county": "Erie",
+    "mi": 46.3
+   },
+   {
+    "name": "Wyandotte",
+    "county": "Wayne",
+    "mi": 43.4,
+    "st": "MI"
+   },
+   {
+    "name": "Inkster",
+    "county": "Wayne",
+    "mi": 45.3,
+    "st": "MI"
+   }
   ]
  },
  {
@@ -961,15 +5928,97 @@
   "hub": "automotive manufacturing",
   "blurb": "We rig and move production machinery across the Chattanooga region, serving the Volkswagen assembly plant and manufacturers along the I-75 and I-24 interchange.",
   "near": [
-   "East Ridge",
-   "Red Bank",
-   "Hixson",
-   "Ooltewah",
-   "Collegedale",
-   "Soddy-Daisy",
-   "Cleveland",
-   "Ringgold",
-   "Fort Oglethorpe"
+   {
+    "name": "East Ridge",
+    "county": "Hamilton",
+    "mi": 3.9
+   },
+   {
+    "name": "Red Bank",
+    "county": "Hamilton",
+    "mi": 4.7
+   },
+   {
+    "name": "Hixson",
+    "county": "Hamilton",
+    "mi": 7.9
+   },
+   {
+    "name": "Ooltewah",
+    "county": "Hamilton",
+    "mi": 14.1
+   },
+   {
+    "name": "Collegedale",
+    "county": "Hamilton",
+    "mi": 14.7
+   },
+   {
+    "name": "Soddy-Daisy",
+    "county": "Hamilton",
+    "mi": 14.8
+   },
+   {
+    "name": "Cleveland",
+    "county": "Bradley",
+    "mi": 25.7
+   },
+   {
+    "name": "Ringgold",
+    "county": "Catoosa",
+    "mi": 14.5,
+    "st": "GA"
+   },
+   {
+    "name": "Fort Oglethorpe",
+    "county": "Catoosa",
+    "mi": 7.3,
+    "st": "GA"
+   },
+   {
+    "name": "East Chattanooga",
+    "county": "Hamilton",
+    "mi": 3.7
+   },
+   {
+    "name": "Dalton",
+    "county": "Whitfield",
+    "mi": 27.1,
+    "st": "GA"
+   },
+   {
+    "name": "Calhoun",
+    "county": "Gordon",
+    "mi": 42.7,
+    "st": "GA"
+   },
+   {
+    "name": "East Brainerd",
+    "county": "Hamilton",
+    "mi": 9.7
+   },
+   {
+    "name": "Scottsboro",
+    "county": "Jackson",
+    "mi": 48.5,
+    "st": "AL"
+   },
+   {
+    "name": "Fort Payne",
+    "county": "DeKalb",
+    "mi": 47.6,
+    "st": "AL"
+   },
+   {
+    "name": "Athens",
+    "county": "McMinn",
+    "mi": 48.9
+   },
+   {
+    "name": "Middle Valley",
+    "county": "Hamilton",
+    "mi": 12.6
+   }
   ]
  },
  {
@@ -978,15 +6027,82 @@
   "hub": "aerospace & defense",
   "blurb": "We rig and move heavy machinery across the Rocket City, serving Redstone Arsenal, Cummings Research Park, and aerospace shops along I-565.",
   "near": [
-   "Madison",
-   "Decatur",
-   "Athens",
-   "Meridianville",
-   "Hazel Green",
-   "Harvest",
-   "Owens Cross Roads",
-   "Priceville",
-   "Triana"
+   {
+    "name": "Madison",
+    "county": "Madison",
+    "mi": 9.5
+   },
+   {
+    "name": "Decatur",
+    "county": "Morgan",
+    "mi": 24.2
+   },
+   {
+    "name": "Athens",
+    "county": "Limestone",
+    "mi": 22.5
+   },
+   {
+    "name": "Meridianville",
+    "county": "Madison",
+    "mi": 8.4
+   },
+   {
+    "name": "Hazel Green",
+    "county": "Madison",
+    "mi": 14
+   },
+   {
+    "name": "Harvest",
+    "county": "Madison",
+    "mi": 12.7
+   },
+   {
+    "name": "Owens Cross Roads",
+    "county": "Madison",
+    "mi": 12.2
+   },
+   {
+    "name": "Priceville",
+    "county": "Morgan",
+    "mi": 22.6
+   },
+   {
+    "name": "Triana",
+    "county": "Madison",
+    "mi": 13
+   },
+   {
+    "name": "Albertville",
+    "county": "Marshall",
+    "mi": 38.5
+   },
+   {
+    "name": "Tullahoma",
+    "county": "Coffee",
+    "mi": 48.6,
+    "st": "TN"
+   },
+   {
+    "name": "Cullman",
+    "county": "Cullman",
+    "mi": 41.1
+   },
+   {
+    "name": "Scottsboro",
+    "county": "Jackson",
+    "mi": 31.6
+   },
+   {
+    "name": "Hartselle",
+    "county": "Morgan",
+    "mi": 28.1
+   },
+   {
+    "name": "Boaz",
+    "county": "Marshall",
+    "mi": 43.7
+   }
   ]
  },
  {
@@ -995,15 +6111,119 @@
   "hub": "shipbuilding & port",
   "blurb": "We rig and move industrial machinery across the Mobile Bay area for the Airbus final assembly line, shipyards, and the Port of Mobile along I-10 and I-65.",
   "near": [
-   "Prichard",
-   "Saraland",
-   "Chickasaw",
-   "Theodore",
-   "Daphne",
-   "Spanish Fort",
-   "Tillmans Corner",
-   "Satsuma",
-   "Bay Minette"
+   {
+    "name": "Prichard",
+    "county": "Mobile",
+    "mi": 3.7
+   },
+   {
+    "name": "Saraland",
+    "county": "Mobile",
+    "mi": 8.9
+   },
+   {
+    "name": "Chickasaw",
+    "county": "Mobile",
+    "mi": 5.2
+   },
+   {
+    "name": "Theodore",
+    "county": "Mobile",
+    "mi": 12.8
+   },
+   {
+    "name": "Daphne",
+    "county": "Baldwin",
+    "mi": 10.4
+   },
+   {
+    "name": "Spanish Fort",
+    "county": "Baldwin",
+    "mi": 7.7
+   },
+   {
+    "name": "Tillmans Corner",
+    "county": "Mobile",
+    "mi": 10.5
+   },
+   {
+    "name": "Satsuma",
+    "county": "Mobile",
+    "mi": 11
+   },
+   {
+    "name": "Bay Minette",
+    "county": "Baldwin",
+    "mi": 20.7
+   },
+   {
+    "name": "Bellview",
+    "county": "Escambia",
+    "mi": 46.2,
+    "st": "FL"
+   },
+   {
+    "name": "Pascagoula",
+    "county": "Jackson",
+    "mi": 38.1,
+    "st": "MS"
+   },
+   {
+    "name": "West Pensacola",
+    "county": "Escambia",
+    "mi": 49,
+    "st": "FL"
+   },
+   {
+    "name": "Ensley",
+    "county": "Escambia",
+    "mi": 47.4,
+    "st": "FL"
+   },
+   {
+    "name": "Fairhope",
+    "county": "Baldwin",
+    "mi": 14.5
+   },
+   {
+    "name": "Gautier",
+    "county": "Jackson",
+    "mi": 40,
+    "st": "MS"
+   },
+   {
+    "name": "Foley",
+    "county": "Baldwin",
+    "mi": 29.2
+   },
+   {
+    "name": "Myrtle Grove",
+    "county": "Escambia",
+    "mi": 47.7,
+    "st": "FL"
+   },
+   {
+    "name": "Moss Point",
+    "county": "Jackson",
+    "mi": 35.2,
+    "st": "MS"
+   },
+   {
+    "name": "Gonzalez",
+    "county": "Escambia",
+    "mi": 45.4,
+    "st": "FL"
+   },
+   {
+    "name": "Gulf Shores",
+    "county": "Baldwin",
+    "mi": 37.1
+   },
+   {
+    "name": "Atmore",
+    "county": "Escambia",
+    "mi": 39.7
+   }
   ]
  },
  {
@@ -1012,15 +6232,76 @@
   "hub": "energy & aerospace MRO",
   "blurb": "We rig and move heavy machinery across the Tulsa area, serving energy operators and the aerospace MRO base at Tulsa International along I-44 and the Arkansas River.",
   "near": [
-   "Broken Arrow",
-   "Owasso",
-   "Sand Springs",
-   "Bixby",
-   "Jenks",
-   "Sapulpa",
-   "Claremore",
-   "Catoosa",
-   "Glenpool"
+   {
+    "name": "Broken Arrow",
+    "county": "Tulsa",
+    "mi": 13.3
+   },
+   {
+    "name": "Owasso",
+    "county": "Tulsa",
+    "mi": 11.1
+   },
+   {
+    "name": "Sand Springs",
+    "county": "Tulsa",
+    "mi": 6.6
+   },
+   {
+    "name": "Bixby",
+    "county": "Tulsa",
+    "mi": 15.9
+   },
+   {
+    "name": "Jenks",
+    "county": "Tulsa",
+    "mi": 9.2
+   },
+   {
+    "name": "Sapulpa",
+    "county": "Creek",
+    "mi": 12.7
+   },
+   {
+    "name": "Claremore",
+    "county": "Rogers",
+    "mi": 23.7
+   },
+   {
+    "name": "Catoosa",
+    "county": "Rogers",
+    "mi": 14
+   },
+   {
+    "name": "Glenpool",
+    "county": "Tulsa",
+    "mi": 13.8
+   },
+   {
+    "name": "Muskogee",
+    "county": "Muskogee",
+    "mi": 44.7
+   },
+   {
+    "name": "Bartlesville",
+    "county": "Washington",
+    "mi": 41
+   },
+   {
+    "name": "Okmulgee",
+    "county": "Okmulgee",
+    "mi": 36.7
+   },
+   {
+    "name": "Coweta",
+    "county": "Wagoner",
+    "mi": 23.7
+   },
+   {
+    "name": "Pryor Creek",
+    "county": "Mayes",
+    "mi": 39.1
+   }
   ]
  },
  {
@@ -1029,15 +6310,128 @@
   "hub": "aerospace & machine tools",
   "blurb": "We rig and move industrial machinery across the Rockford region for aerospace suppliers and machine-tool shops along I-90 and the Rock River.",
   "near": [
-   "Loves Park",
-   "Machesney Park",
-   "Belvidere",
-   "Cherry Valley",
-   "Roscoe",
-   "Rockton",
-   "Freeport",
-   "Byron",
-   "South Beloit"
+   {
+    "name": "Loves Park",
+    "county": "Winnebago",
+    "mi": 3.8
+   },
+   {
+    "name": "Machesney Park",
+    "county": "Winnebago",
+    "mi": 6
+   },
+   {
+    "name": "Belvidere",
+    "county": "Boone",
+    "mi": 12.8
+   },
+   {
+    "name": "Cherry Valley",
+    "county": "Winnebago",
+    "mi": 7.8
+   },
+   {
+    "name": "Roscoe",
+    "county": "Winnebago",
+    "mi": 10.7
+   },
+   {
+    "name": "Rockton",
+    "county": "Winnebago",
+    "mi": 12.6
+   },
+   {
+    "name": "Freeport",
+    "county": "Stephenson",
+    "mi": 27
+   },
+   {
+    "name": "Byron",
+    "county": "Ogle",
+    "mi": 12.9
+   },
+   {
+    "name": "South Beloit",
+    "county": "Winnebago",
+    "mi": 15.6
+   },
+   {
+    "name": "Elgin",
+    "county": "Kane",
+    "mi": 44.7
+   },
+   {
+    "name": "Janesville",
+    "county": "Rock",
+    "mi": 28.7,
+    "st": "WI"
+   },
+   {
+    "name": "DeKalb",
+    "county": "DeKalb",
+    "mi": 29.5
+   },
+   {
+    "name": "Streamwood",
+    "county": "Cook",
+    "mi": 49.9
+   },
+   {
+    "name": "Crystal Lake",
+    "county": "McHenry",
+    "mi": 39.8
+   },
+   {
+    "name": "Carpentersville",
+    "county": "Kane",
+    "mi": 44
+   },
+   {
+    "name": "Beloit",
+    "county": "Rock",
+    "mi": 16.7,
+    "st": "WI"
+   },
+   {
+    "name": "St. Charles",
+    "county": "Kane",
+    "mi": 47.2
+   },
+   {
+    "name": "Algonquin",
+    "county": "McHenry",
+    "mi": 41.6
+   },
+   {
+    "name": "Lake in the Hills",
+    "county": "McHenry",
+    "mi": 39.6
+   },
+   {
+    "name": "McHenry",
+    "county": "McHenry",
+    "mi": 42.5
+   },
+   {
+    "name": "Batavia",
+    "county": "Kane",
+    "mi": 49.5
+   },
+   {
+    "name": "Huntley",
+    "county": "McHenry",
+    "mi": 34.8
+   },
+   {
+    "name": "Woodstock",
+    "county": "McHenry",
+    "mi": 33.1
+   },
+   {
+    "name": "Wasco",
+    "county": "Kane",
+    "mi": 42.2
+   }
   ]
  },
  {
@@ -1046,15 +6440,128 @@
   "hub": "aerospace & auto parts",
   "blurb": "We rig and move heavy machinery across the Dayton area, serving Wright-Patterson AFB, aerospace suppliers, and auto-parts plants along I-75 and I-70.",
   "near": [
-   "Kettering",
-   "Beavercreek",
-   "Huber Heights",
-   "Fairborn",
-   "Miamisburg",
-   "Centerville",
-   "Vandalia",
-   "Springboro",
-   "Trotwood"
+   {
+    "name": "Kettering",
+    "county": "Montgomery",
+    "mi": 4.9
+   },
+   {
+    "name": "Beavercreek",
+    "county": "Greene",
+    "mi": 7.6
+   },
+   {
+    "name": "Huber Heights",
+    "county": "Montgomery",
+    "mi": 6.9
+   },
+   {
+    "name": "Fairborn",
+    "county": "Greene",
+    "mi": 10.1
+   },
+   {
+    "name": "Miamisburg",
+    "county": "Montgomery",
+    "mi": 9.5
+   },
+   {
+    "name": "Centerville",
+    "county": "Montgomery",
+    "mi": 9.2
+   },
+   {
+    "name": "Vandalia",
+    "county": "Montgomery",
+    "mi": 9.1
+   },
+   {
+    "name": "Springboro",
+    "county": "Warren",
+    "mi": 14.5
+   },
+   {
+    "name": "Trotwood",
+    "county": "Montgomery",
+    "mi": 6.9
+   },
+   {
+    "name": "Cincinnati",
+    "county": "Hamilton",
+    "mi": 46.9
+   },
+   {
+    "name": "Hamilton",
+    "county": "Butler",
+    "mi": 31.7
+   },
+   {
+    "name": "Springfield",
+    "county": "Clark",
+    "mi": 23.3
+   },
+   {
+    "name": "Middletown",
+    "county": "Butler",
+    "mi": 20.1
+   },
+   {
+    "name": "Fairfield",
+    "county": "Butler",
+    "mi": 34.7
+   },
+   {
+    "name": "Covington",
+    "county": "Kenton",
+    "mi": 49.6,
+    "st": "KY"
+   },
+   {
+    "name": "Richmond",
+    "county": "Wayne",
+    "mi": 37.4,
+    "st": "IN"
+   },
+   {
+    "name": "Mason",
+    "county": "Warren",
+    "mi": 28.3
+   },
+   {
+    "name": "Xenia",
+    "county": "Greene",
+    "mi": 14.8
+   },
+   {
+    "name": "Troy",
+    "county": "Miami",
+    "mi": 19.4
+   },
+   {
+    "name": "Riverside",
+    "county": "Montgomery",
+    "mi": 3.9
+   },
+   {
+    "name": "Oxford",
+    "county": "Butler",
+    "mi": 34.2
+   },
+   {
+    "name": "Sidney",
+    "county": "Shelby",
+    "mi": 36.3
+   },
+   {
+    "name": "Piqua",
+    "county": "Miami",
+    "mi": 26.8
+   },
+   {
+    "name": "Lebanon",
+    "county": "Warren",
+    "mi": 22.4
+   }
   ]
  },
  {
@@ -1063,15 +6570,126 @@
   "hub": "defense & precision mfg",
   "blurb": "We rig and move industrial machinery across San Diego County for defense contractors, biotech campuses, and precision manufacturers along I-5, I-8, and I-15.",
   "near": [
-   "Chula Vista",
-   "El Cajon",
-   "Oceanside",
-   "Escondido",
-   "Carlsbad",
-   "Vista",
-   "National City",
-   "Poway",
-   "San Marcos"
+   {
+    "name": "Chula Vista",
+    "county": "San Diego",
+    "mi": 7
+   },
+   {
+    "name": "El Cajon",
+    "county": "San Diego",
+    "mi": 13
+   },
+   {
+    "name": "Oceanside",
+    "county": "San Diego",
+    "mi": 35.4
+   },
+   {
+    "name": "Escondido",
+    "county": "San Diego",
+    "mi": 28.2
+   },
+   {
+    "name": "Carlsbad",
+    "county": "San Diego",
+    "mi": 32.4
+   },
+   {
+    "name": "Vista",
+    "county": "San Diego",
+    "mi": 33.8
+   },
+   {
+    "name": "National City",
+    "county": "San Diego",
+    "mi": 4.6
+   },
+   {
+    "name": "Poway",
+    "county": "San Diego",
+    "mi": 18.6
+   },
+   {
+    "name": "San Marcos",
+    "county": "San Diego",
+    "mi": 29.5
+   },
+   {
+    "name": "Encinitas",
+    "county": "San Diego",
+    "mi": 23.4
+   },
+   {
+    "name": "La Mesa",
+    "county": "San Diego",
+    "mi": 9
+   },
+   {
+    "name": "Santee",
+    "county": "San Diego",
+    "mi": 14
+   },
+   {
+    "name": "La Presa",
+    "county": "San Diego",
+    "mi": 9.8
+   },
+   {
+    "name": "Fallbrook",
+    "county": "San Diego",
+    "mi": 45.9
+   },
+   {
+    "name": "Spring Valley",
+    "county": "San Diego",
+    "mi": 9.8
+   },
+   {
+    "name": "Imperial Beach",
+    "county": "San Diego",
+    "mi": 9.6
+   },
+   {
+    "name": "Lemon Grove",
+    "county": "San Diego",
+    "mi": 8
+   },
+   {
+    "name": "Coronado",
+    "county": "San Diego",
+    "mi": 2.3
+   },
+   {
+    "name": "Rancho San Diego",
+    "county": "San Diego",
+    "mi": 13.5
+   },
+   {
+    "name": "Lakeside",
+    "county": "San Diego",
+    "mi": 17.1
+   },
+   {
+    "name": "Winter Gardens",
+    "county": "San Diego",
+    "mi": 15.6
+   },
+   {
+    "name": "Ramona",
+    "county": "San Diego",
+    "mi": 28.3
+   },
+   {
+    "name": "Casa de Oro-Mount Helix",
+    "county": "San Diego",
+    "mi": 11.9
+   },
+   {
+    "name": "Bostonia",
+    "county": "San Diego",
+    "mi": 14.7
+   }
   ]
  },
  {
@@ -1080,15 +6698,126 @@
   "hub": "distribution & warehousing",
   "blurb": "We rig and move heavy machinery across the Inland Empire, serving the massive distribution and warehousing hubs along I-10, I-15, and the 60 freeway.",
   "near": [
-   "San Bernardino",
-   "Ontario",
-   "Fontana",
-   "Moreno Valley",
-   "Rialto",
-   "Rancho Cucamonga",
-   "Corona",
-   "Redlands",
-   "Jurupa Valley"
+   {
+    "name": "San Bernardino",
+    "county": "San Bernardino",
+    "mi": 12.3
+   },
+   {
+    "name": "Ontario",
+    "county": "San Bernardino",
+    "mi": 16.5
+   },
+   {
+    "name": "Fontana",
+    "county": "San Bernardino",
+    "mi": 9.9
+   },
+   {
+    "name": "Moreno Valley",
+    "county": "Riverside",
+    "mi": 9.6
+   },
+   {
+    "name": "Rialto",
+    "county": "San Bernardino",
+    "mi": 10.7
+   },
+   {
+    "name": "Rancho Cucamonga",
+    "county": "San Bernardino",
+    "mi": 15.5
+   },
+   {
+    "name": "Corona",
+    "county": "Riverside",
+    "mi": 11.2
+   },
+   {
+    "name": "Redlands",
+    "county": "San Bernardino",
+    "mi": 14.1
+   },
+   {
+    "name": "Jurupa Valley",
+    "county": "Riverside",
+    "mi": 7.4
+   },
+   {
+    "name": "Los Angeles",
+    "county": "Los Angeles",
+    "mi": 49
+   },
+   {
+    "name": "Long Beach",
+    "county": "Los Angeles",
+    "mi": 47.3
+   },
+   {
+    "name": "Anaheim",
+    "county": "Orange",
+    "mi": 30.8
+   },
+   {
+    "name": "Santa Ana",
+    "county": "Orange",
+    "mi": 30.6
+   },
+   {
+    "name": "Irvine",
+    "county": "Orange",
+    "mi": 31.4
+   },
+   {
+    "name": "Huntington Beach",
+    "county": "Orange",
+    "mi": 40.1
+   },
+   {
+    "name": "Garden Grove",
+    "county": "Orange",
+    "mi": 33.7
+   },
+   {
+    "name": "Pomona",
+    "county": "Los Angeles",
+    "mi": 21.6
+   },
+   {
+    "name": "Pasadena",
+    "county": "Los Angeles",
+    "mi": 44.9
+   },
+   {
+    "name": "Orange",
+    "county": "Orange",
+    "mi": 28.6
+   },
+   {
+    "name": "Fullerton",
+    "county": "Orange",
+    "mi": 30.9
+   },
+   {
+    "name": "East Los Angeles",
+    "county": "Los Angeles",
+    "mi": 44.7
+   },
+   {
+    "name": "Victorville",
+    "county": "San Bernardino",
+    "mi": 40.7
+   },
+   {
+    "name": "El Monte",
+    "county": "Los Angeles",
+    "mi": 37
+   },
+   {
+    "name": "Downey",
+    "county": "Los Angeles",
+    "mi": 42.2
+   }
   ]
  },
  {
@@ -1097,15 +6826,96 @@
   "hub": "port project cargo",
   "blurb": "We rig industrial equipment and run project cargo across the Savannah region for the Port of Savannah and area manufacturers along I-95 and I-16.",
   "near": [
-   "Pooler",
-   "Garden City",
-   "Port Wentworth",
-   "Richmond Hill",
-   "Rincon",
-   "Hinesville",
-   "Bloomingdale",
-   "Springfield",
-   "Guyton"
+   {
+    "name": "Pooler",
+    "county": "Chatham",
+    "mi": 8.9
+   },
+   {
+    "name": "Garden City",
+    "county": "Chatham",
+    "mi": 3.8
+   },
+   {
+    "name": "Port Wentworth",
+    "county": "Chatham",
+    "mi": 5.9
+   },
+   {
+    "name": "Richmond Hill",
+    "county": "Bryan",
+    "mi": 15.6
+   },
+   {
+    "name": "Rincon",
+    "county": "Effingham",
+    "mi": 16.7
+   },
+   {
+    "name": "Hinesville",
+    "county": "Liberty",
+    "mi": 33.4
+   },
+   {
+    "name": "Bloomingdale",
+    "county": "Chatham",
+    "mi": 12.1
+   },
+   {
+    "name": "Springfield",
+    "county": "Effingham",
+    "mi": 23.5
+   },
+   {
+    "name": "Guyton",
+    "county": "Effingham",
+    "mi": 24.4
+   },
+   {
+    "name": "Hilton Head Island",
+    "county": "Beaufort",
+    "mi": 22.5,
+    "st": "SC"
+   },
+   {
+    "name": "Hilton Head",
+    "county": "Beaufort",
+    "mi": 22.3,
+    "st": "SC"
+   },
+   {
+    "name": "Statesboro",
+    "county": "Bulloch",
+    "mi": 47.2
+   },
+   {
+    "name": "Bluffton",
+    "county": "Beaufort",
+    "mi": 17.6,
+    "st": "SC"
+   },
+   {
+    "name": "Wilmington Island",
+    "county": "Chatham",
+    "mi": 9.2
+   },
+   {
+    "name": "Beaufort",
+    "county": "Beaufort",
+    "mi": 34.8,
+    "st": "SC"
+   },
+   {
+    "name": "Port Royal",
+    "county": "Beaufort",
+    "mi": 31.4,
+    "st": "SC"
+   },
+   {
+    "name": "Georgetown",
+    "county": "Chatham",
+    "mi": 10.2
+   }
   ]
  },
  {
@@ -1114,15 +6924,96 @@
   "hub": "petrochemical & refining",
   "blurb": "We rig and move heavy machinery across the Baton Rouge area, serving the refineries and petrochemical plants along the Mississippi River and I-10.",
   "near": [
-   "Baker",
-   "Zachary",
-   "Central",
-   "Gonzales",
-   "Denham Springs",
-   "Prairieville",
-   "Port Allen",
-   "Walker",
-   "Plaquemine"
+   {
+    "name": "Baker",
+    "county": "East Baton Rouge Parish",
+    "mi": 10.1
+   },
+   {
+    "name": "Zachary",
+    "county": "East Baton Rouge Parish",
+    "mi": 14.3
+   },
+   {
+    "name": "Central",
+    "county": "East Baton Rouge Parish",
+    "mi": 11.8
+   },
+   {
+    "name": "Gonzales",
+    "county": "Ascension Parish",
+    "mi": 21.3
+   },
+   {
+    "name": "Denham Springs",
+    "county": "Livingston Parish",
+    "mi": 14
+   },
+   {
+    "name": "Prairieville",
+    "county": "Ascension Parish",
+    "mi": 16.1
+   },
+   {
+    "name": "Port Allen",
+    "county": "West Baton Rouge Parish",
+    "mi": 1.5
+   },
+   {
+    "name": "Walker",
+    "county": "Livingston Parish",
+    "mi": 19.7
+   },
+   {
+    "name": "Plaquemine",
+    "county": "Iberville Parish",
+    "mi": 11
+   },
+   {
+    "name": "New Iberia",
+    "county": "Iberia Parish",
+    "mi": 48.4
+   },
+   {
+    "name": "Laplace",
+    "county": "Saint John the Baptist Parish",
+    "mi": 49.5
+   },
+   {
+    "name": "Hammond",
+    "county": "Tangipahoa Parish",
+    "mi": 43.4
+   },
+   {
+    "name": "Shenandoah",
+    "county": "East Baton Rouge Parish",
+    "mi": 11.5
+   },
+   {
+    "name": "Thibodaux",
+    "county": "Lafourche Parish",
+    "mi": 49.8
+   },
+   {
+    "name": "Grand Bayou Mobile Home Park",
+    "county": "Lafourche Parish",
+    "mi": 44.4
+   },
+   {
+    "name": "Gardere",
+    "county": "East Baton Rouge Parish",
+    "mi": 7.3
+   },
+   {
+    "name": "Merrydale",
+    "county": "East Baton Rouge Parish",
+    "mi": 6.2
+   },
+   {
+    "name": "Reserve",
+    "county": "Saint John the Baptist Parish",
+    "mi": 46.5
+   }
   ]
  },
  {
@@ -1131,15 +7022,128 @@
   "hub": "aerospace & advanced mfg",
   "blurb": "We rig and move industrial machinery across the Triad for aerospace and advanced-manufacturing plants along I-40, I-85, and the Piedmont Triad airport corridor.",
   "near": [
-   "High Point",
-   "Winston-Salem",
-   "Burlington",
-   "Kernersville",
-   "Jamestown",
-   "Summerfield",
-   "Oak Ridge",
-   "Gibsonville",
-   "Archdale"
+   {
+    "name": "High Point",
+    "county": "Guilford",
+    "mi": 14.4
+   },
+   {
+    "name": "Winston-Salem",
+    "county": "Forsyth",
+    "mi": 25.3
+   },
+   {
+    "name": "Burlington",
+    "county": "Alamance",
+    "mi": 19.8
+   },
+   {
+    "name": "Kernersville",
+    "county": "Forsyth",
+    "mi": 16.1
+   },
+   {
+    "name": "Jamestown",
+    "county": "Guilford",
+    "mi": 9.7
+   },
+   {
+    "name": "Summerfield",
+    "county": "Guilford",
+    "mi": 11.3
+   },
+   {
+    "name": "Oak Ridge",
+    "county": "Guilford",
+    "mi": 13
+   },
+   {
+    "name": "Gibsonville",
+    "county": "Guilford",
+    "mi": 14.1
+   },
+   {
+    "name": "Archdale",
+    "county": "Randolph",
+    "mi": 14.8
+   },
+   {
+    "name": "Chapel Hill",
+    "county": "Orange",
+    "mi": 42.6
+   },
+   {
+    "name": "Danville",
+    "county": "City of Danville",
+    "mi": 41.8,
+    "st": "VA"
+   },
+   {
+    "name": "Salisbury",
+    "county": "Rowan",
+    "mi": 47.2
+   },
+   {
+    "name": "Thomasville",
+    "county": "Davidson",
+    "mi": 20.9
+   },
+   {
+    "name": "Asheboro",
+    "county": "Randolph",
+    "mi": 25.2
+   },
+   {
+    "name": "Carrboro",
+    "county": "Orange",
+    "mi": 41.6
+   },
+   {
+    "name": "Clemmons",
+    "county": "Forsyth",
+    "mi": 33.1
+   },
+   {
+    "name": "Lexington",
+    "county": "Davidson",
+    "mi": 31
+   },
+   {
+    "name": "Eden",
+    "county": "Rockingham",
+    "mi": 28.8
+   },
+   {
+    "name": "Graham",
+    "county": "Alamance",
+    "mi": 21.9
+   },
+   {
+    "name": "Reidsville",
+    "county": "Rockingham",
+    "mi": 20.8
+   },
+   {
+    "name": "Mebane",
+    "county": "Alamance",
+    "mi": 29.4
+   },
+   {
+    "name": "Martinsville",
+    "county": "City of Martinsville",
+    "mi": 43,
+    "st": "VA"
+   },
+   {
+    "name": "Lewisville",
+    "county": "Forsyth",
+    "mi": 35.1
+   },
+   {
+    "name": "Elon",
+    "county": "Alamance",
+    "mi": 16.1
+   }
   ]
  },
  {
@@ -1148,15 +7152,67 @@
   "hub": "mfg & DOE research",
   "blurb": "We rig and move heavy machinery across East Tennessee, serving manufacturers and the Oak Ridge DOE complex along I-40, I-75, and the Tennessee River.",
   "near": [
-   "Oak Ridge",
-   "Maryville",
-   "Alcoa",
-   "Farragut",
-   "Powell",
-   "Clinton",
-   "Lenoir City",
-   "Sevierville",
-   "Halls"
+   {
+    "name": "Oak Ridge",
+    "county": "Anderson",
+    "mi": 19.8
+   },
+   {
+    "name": "Maryville",
+    "county": "Blount",
+    "mi": 14.4
+   },
+   {
+    "name": "Alcoa",
+    "county": "Blount",
+    "mi": 12.2
+   },
+   {
+    "name": "Farragut",
+    "county": "Knox",
+    "mi": 14
+   },
+   {
+    "name": "Powell",
+    "county": "Knox",
+    "mi": 7.8
+   },
+   {
+    "name": "Clinton",
+    "county": "Anderson",
+    "mi": 15.4
+   },
+   {
+    "name": "Lenoir City",
+    "county": "Loudon",
+    "mi": 21.9
+   },
+   {
+    "name": "Sevierville",
+    "county": "Sevier",
+    "mi": 21.1
+   },
+   {
+    "name": "Halls",
+    "county": "Knox",
+    "mi": 8.4
+   },
+   {
+    "name": "Morristown",
+    "county": "Hamblen",
+    "mi": 39.1
+   },
+   {
+    "name": "Seymour",
+    "county": "Sevier",
+    "mi": 12
+   },
+   {
+    "name": "Middlesboro",
+    "county": "Bell",
+    "mi": 46.2,
+    "st": "KY"
+   }
   ]
  },
  {
@@ -1165,15 +7221,126 @@
   "hub": "polymers & rubber",
   "blurb": "We rig and move industrial machinery across the Akron area for the polymer and rubber industry and heavy manufacturers along I-76, I-77, and the Ohio Turnpike.",
   "near": [
-   "Cuyahoga Falls",
-   "Barberton",
-   "Stow",
-   "Green",
-   "Tallmadge",
-   "Fairlawn",
-   "Wadsworth",
-   "Kent",
-   "Norton"
+   {
+    "name": "Cuyahoga Falls",
+    "county": "Summit",
+    "mi": 4
+   },
+   {
+    "name": "Barberton",
+    "county": "Summit",
+    "mi": 6.5
+   },
+   {
+    "name": "Stow",
+    "county": "Summit",
+    "mi": 6.8
+   },
+   {
+    "name": "Green",
+    "county": "Summit",
+    "mi": 9.6
+   },
+   {
+    "name": "Tallmadge",
+    "county": "Summit",
+    "mi": 4.3
+   },
+   {
+    "name": "Fairlawn",
+    "county": "Summit",
+    "mi": 5.7
+   },
+   {
+    "name": "Wadsworth",
+    "county": "Medina",
+    "mi": 11.6
+   },
+   {
+    "name": "Kent",
+    "county": "Portage",
+    "mi": 9.8
+   },
+   {
+    "name": "Norton",
+    "county": "Summit",
+    "mi": 7.2
+   },
+   {
+    "name": "Cleveland",
+    "county": "Cuyahoga",
+    "mi": 30.3
+   },
+   {
+    "name": "Parma",
+    "county": "Cuyahoga",
+    "mi": 24.7
+   },
+   {
+    "name": "Canton",
+    "county": "Stark",
+    "mi": 20.9
+   },
+   {
+    "name": "Youngstown",
+    "county": "Mahoning",
+    "mi": 45.3
+   },
+   {
+    "name": "Lorain",
+    "county": "Lorain",
+    "mi": 43
+   },
+   {
+    "name": "Elyria",
+    "county": "Lorain",
+    "mi": 36.5
+   },
+   {
+    "name": "Lakewood",
+    "county": "Cuyahoga",
+    "mi": 31.2
+   },
+   {
+    "name": "Euclid",
+    "county": "Cuyahoga",
+    "mi": 35.4
+   },
+   {
+    "name": "Mentor",
+    "county": "Lake",
+    "mi": 41.5
+   },
+   {
+    "name": "Cleveland Heights",
+    "county": "Cuyahoga",
+    "mi": 30.4
+   },
+   {
+    "name": "Strongsville",
+    "county": "Cuyahoga",
+    "mi": 23
+   },
+   {
+    "name": "Warren",
+    "county": "Trumbull",
+    "mi": 38
+   },
+   {
+    "name": "Boardman",
+    "county": "Mahoning",
+    "mi": 44.8
+   },
+   {
+    "name": "Brunswick",
+    "county": "Medina",
+    "mi": 20
+   },
+   {
+    "name": "Collinwood",
+    "county": "Cuyahoga",
+    "mi": 33.1
+   }
   ]
  },
  {
@@ -1182,15 +7349,110 @@
   "hub": "diversified mfg",
   "blurb": "We rig and move heavy machinery across the Fort Wayne area, serving diversified manufacturers along I-69 and the US-30 and US-24 corridors.",
   "near": [
-   "New Haven",
-   "Huntertown",
-   "Leo-Cedarville",
-   "Woodburn",
-   "Auburn",
-   "Columbia City",
-   "Bluffton",
-   "Grabill",
-   "Roanoke"
+   {
+    "name": "New Haven",
+    "county": "Allen",
+    "mi": 7.3
+   },
+   {
+    "name": "Huntertown",
+    "county": "Allen",
+    "mi": 7.1
+   },
+   {
+    "name": "Leo-Cedarville",
+    "county": "Allen",
+    "mi": 8.1
+   },
+   {
+    "name": "Woodburn",
+    "county": "Allen",
+    "mi": 14.3
+   },
+   {
+    "name": "Auburn",
+    "county": "DeKalb",
+    "mi": 16.7
+   },
+   {
+    "name": "Columbia City",
+    "county": "Whitley",
+    "mi": 18.8
+   },
+   {
+    "name": "Bluffton",
+    "county": "Wells",
+    "mi": 27.2
+   },
+   {
+    "name": "Grabill",
+    "county": "Allen",
+    "mi": 10.1
+   },
+   {
+    "name": "Roanoke",
+    "county": "Huntington",
+    "mi": 17.2
+   },
+   {
+    "name": "Goshen",
+    "county": "Elkhart",
+    "mi": 48.1
+   },
+   {
+    "name": "Marion",
+    "county": "Grant",
+    "mi": 48.3
+   },
+   {
+    "name": "Huntington",
+    "county": "Huntington",
+    "mi": 25.7
+   },
+   {
+    "name": "Defiance",
+    "county": "Defiance",
+    "mi": 41.6,
+    "st": "OH"
+   },
+   {
+    "name": "Warsaw",
+    "county": "Kosciusko",
+    "mi": 38.4
+   },
+   {
+    "name": "Sturgis",
+    "county": "Saint Joseph",
+    "mi": 48.6,
+    "st": "MI"
+   },
+   {
+    "name": "Van Wert",
+    "county": "Van Wert",
+    "mi": 33.7,
+    "st": "OH"
+   },
+   {
+    "name": "Celina",
+    "county": "Mercer",
+    "mi": 49.7,
+    "st": "OH"
+   },
+   {
+    "name": "Wabash",
+    "county": "Wabash",
+    "mi": 42.8
+   },
+   {
+    "name": "Kendallville",
+    "county": "Noble",
+    "mi": 22.6
+   },
+   {
+    "name": "Decatur",
+    "county": "Adams",
+    "mi": 23.2
+   }
   ]
  },
  {
@@ -1199,15 +7461,109 @@
   "hub": "GM automotive",
   "blurb": "We rig and move industrial machinery across the Lansing area for the GM assembly plants and their suppliers along I-96, I-69, and US-127.",
   "near": [
-   "East Lansing",
-   "Okemos",
-   "Holt",
-   "Grand Ledge",
-   "Delta Township",
-   "Mason",
-   "Charlotte",
-   "DeWitt",
-   "Williamston"
+   {
+    "name": "East Lansing",
+    "county": "Ingham",
+    "mi": 3.6
+   },
+   {
+    "name": "Okemos",
+    "county": "Ingham",
+    "mi": 6.5
+   },
+   {
+    "name": "Holt",
+    "county": "Ingham",
+    "mi": 6.7
+   },
+   {
+    "name": "Grand Ledge",
+    "county": "Eaton",
+    "mi": 9.8
+   },
+   {
+    "name": "Delta Township"
+   },
+   {
+    "name": "Mason",
+    "county": "Ingham",
+    "mi": 12
+   },
+   {
+    "name": "Charlotte",
+    "county": "Eaton",
+    "mi": 18.4
+   },
+   {
+    "name": "DeWitt",
+    "county": "Clinton",
+    "mi": 7.6
+   },
+   {
+    "name": "Williamston",
+    "county": "Ingham",
+    "mi": 14.2
+   },
+   {
+    "name": "Flint",
+    "county": "Genesee",
+    "mi": 48
+   },
+   {
+    "name": "Battle Creek",
+    "county": "Calhoun",
+    "mi": 42.8
+   },
+   {
+    "name": "Jackson",
+    "county": "Jackson",
+    "mi": 34.5
+   },
+   {
+    "name": "Forest Hills",
+    "county": "Kent",
+    "mi": 49.9
+   },
+   {
+    "name": "Waverly",
+    "county": "Eaton",
+    "mi": 3.3
+   },
+   {
+    "name": "Haslett",
+    "county": "Ingham",
+    "mi": 7.9
+   },
+   {
+    "name": "Owosso",
+    "county": "Shiawassee",
+    "mi": 26.5
+   },
+   {
+    "name": "South Lyon",
+    "county": "Oakland",
+    "mi": 49.7
+   },
+   {
+    "name": "Fenton",
+    "county": "Genesee",
+    "mi": 43.4
+   },
+   {
+    "name": "Ionia",
+    "county": "Ionia",
+    "mi": 31.5
+   },
+   {
+    "name": "Howell",
+    "county": "Livingston",
+    "mi": 33
+   },
+   {
+    "name": "Alma",
+    "county": "Gratiot",
+    "mi": 45
+   }
   ]
  },
  {
@@ -1216,15 +7572,96 @@
   "hub": "manufacturing & steel",
   "blurb": "We rig and move heavy machinery across Western New York, serving steel and heavy manufacturers along the I-90 corridor and the Port of Buffalo.",
   "near": [
-   "Cheektowaga",
-   "Amherst",
-   "Tonawanda",
-   "West Seneca",
-   "Lackawanna",
-   "Lancaster",
-   "Hamburg",
-   "Niagara Falls",
-   "Depew"
+   {
+    "name": "Cheektowaga",
+    "county": "Erie",
+    "mi": 6.4
+   },
+   {
+    "name": "Amherst",
+    "county": "Erie",
+    "mi": 7.5
+   },
+   {
+    "name": "Tonawanda",
+    "county": "Erie",
+    "mi": 9.3
+   },
+   {
+    "name": "West Seneca",
+    "county": "Erie",
+    "mi": 4.7
+   },
+   {
+    "name": "Lackawanna",
+    "county": "Erie",
+    "mi": 5
+   },
+   {
+    "name": "Lancaster",
+    "county": "Erie",
+    "mi": 10.6
+   },
+   {
+    "name": "Hamburg",
+    "county": "Erie",
+    "mi": 12
+   },
+   {
+    "name": "Niagara Falls",
+    "county": "Niagara",
+    "mi": 17
+   },
+   {
+    "name": "Depew",
+    "county": "Erie",
+    "mi": 9.5
+   },
+   {
+    "name": "North Tonawanda",
+    "county": "Niagara",
+    "mi": 10.5
+   },
+   {
+    "name": "East Amherst",
+    "county": "Erie",
+    "mi": 12.9
+   },
+   {
+    "name": "Grand Island",
+    "county": "Erie",
+    "mi": 11
+   },
+   {
+    "name": "Lockport",
+    "county": "Niagara",
+    "mi": 21.8
+   },
+   {
+    "name": "Kenmore",
+    "county": "Erie",
+    "mi": 5.5
+   },
+   {
+    "name": "Eggertsville",
+    "county": "Erie",
+    "mi": 6.5
+   },
+   {
+    "name": "Batavia",
+    "county": "Genesee",
+    "mi": 35.8
+   },
+   {
+    "name": "Dunkirk",
+    "county": "Chautauqua",
+    "mi": 36.4
+   },
+   {
+    "name": "Fredonia",
+    "county": "Chautauqua",
+    "mi": 38.5
+   }
   ]
  },
  {
@@ -1233,15 +7670,129 @@
   "hub": "aerospace manufacturing",
   "blurb": "We rig and move industrial machinery across the Hartford area for Pratt & Whitney, Sikorsky, and aerospace suppliers along I-91 and I-84.",
   "near": [
-   "East Hartford",
-   "West Hartford",
-   "New Britain",
-   "Manchester",
-   "Bristol",
-   "Newington",
-   "Windsor",
-   "Wethersfield",
-   "Farmington"
+   {
+    "name": "East Hartford",
+    "county": "Capitol Planning Region",
+    "mi": 4
+   },
+   {
+    "name": "West Hartford",
+    "county": "Capitol Planning Region",
+    "mi": 2.9
+   },
+   {
+    "name": "New Britain",
+    "county": "Capitol Planning Region",
+    "mi": 8.6
+   },
+   {
+    "name": "Manchester",
+    "county": "Capitol Planning Region",
+    "mi": 8.5
+   },
+   {
+    "name": "Bristol",
+    "county": "Naugatuck Valley Planning Region",
+    "mi": 15
+   },
+   {
+    "name": "Newington",
+    "county": "Capitol Planning Region",
+    "mi": 5
+   },
+   {
+    "name": "Windsor",
+    "county": "Capitol Planning Region",
+    "mi": 6.5
+   },
+   {
+    "name": "Wethersfield",
+    "county": "Capitol Planning Region",
+    "mi": 3.8
+   },
+   {
+    "name": "Farmington",
+    "county": "Capitol Planning Region",
+    "mi": 8.2
+   },
+   {
+    "name": "Springfield",
+    "county": "Hampden",
+    "mi": 23.8,
+    "st": "MA"
+   },
+   {
+    "name": "Bridgeport",
+    "county": "Greater Bridgeport Planning Region",
+    "mi": 48.1
+   },
+   {
+    "name": "New Haven",
+    "county": "South Central Connecticut Planning Region",
+    "mi": 33.9
+   },
+   {
+    "name": "Waterbury",
+    "county": "Naugatuck Valley Planning Region",
+    "mi": 23.7
+   },
+   {
+    "name": "Danbury",
+    "county": "Western Connecticut Planning Region",
+    "mi": 47.2
+   },
+   {
+    "name": "Meriden",
+    "county": "South Central Connecticut Planning Region",
+    "mi": 16.8
+   },
+   {
+    "name": "Hamden",
+    "county": "South Central Connecticut Planning Region",
+    "mi": 27.7
+   },
+   {
+    "name": "Chicopee",
+    "county": "Hampden",
+    "mi": 26.9,
+    "st": "MA"
+   },
+   {
+    "name": "North Chicopee",
+    "county": "Hampden",
+    "mi": 29.3,
+    "st": "MA"
+   },
+   {
+    "name": "West Haven",
+    "county": "South Central Connecticut Planning Region",
+    "mi": 36.7
+   },
+   {
+    "name": "Milford",
+    "county": "South Central Connecticut Planning Region",
+    "mi": 42.1
+   },
+   {
+    "name": "Stratford",
+    "county": "Greater Bridgeport Planning Region",
+    "mi": 46.3
+   },
+   {
+    "name": "City of Milford (balance)",
+    "county": "South Central Connecticut Planning Region",
+    "mi": 42.1
+   },
+   {
+    "name": "Middletown",
+    "county": "Lower Connecticut River Valley Planning Region",
+    "mi": 14
+   },
+   {
+    "name": "Enfield",
+    "county": "Capitol Planning Region",
+    "mi": 15.4
+   }
   ]
  },
  {
@@ -1250,15 +7801,132 @@
   "hub": "logistics & mfg",
   "blurb": "We rig and move heavy machinery across the Lehigh Valley, serving the logistics hubs and manufacturers along I-78 and Route 22 near Allentown, Bethlehem, and Easton.",
   "near": [
-   "Bethlehem",
-   "Easton",
-   "Emmaus",
-   "Whitehall",
-   "Nazareth",
-   "Hellertown",
-   "Macungie",
-   "Northampton",
-   "Catasauqua"
+   {
+    "name": "Bethlehem",
+    "county": "Northampton",
+    "mi": 6.4
+   },
+   {
+    "name": "Easton",
+    "county": "Northampton",
+    "mi": 15.2
+   },
+   {
+    "name": "Emmaus",
+    "county": "Lehigh",
+    "mi": 4.8
+   },
+   {
+    "name": "Whitehall",
+    "county": "Sussex",
+    "mi": 46.4,
+    "st": "NJ"
+   },
+   {
+    "name": "Nazareth",
+    "county": "Northampton",
+    "mi": 13.1
+   },
+   {
+    "name": "Hellertown",
+    "county": "Northampton",
+    "mi": 8.1
+   },
+   {
+    "name": "Macungie",
+    "county": "Lehigh",
+    "mi": 7.2
+   },
+   {
+    "name": "Northampton",
+    "county": "Northampton",
+    "mi": 5.4
+   },
+   {
+    "name": "Catasauqua",
+    "county": "Lehigh",
+    "mi": 3.3
+   },
+   {
+    "name": "Philadelphia",
+    "county": "Philadelphia",
+    "mi": 48.5
+   },
+   {
+    "name": "Trenton",
+    "county": "Mercer",
+    "mi": 47.7,
+    "st": "NJ"
+   },
+   {
+    "name": "Reading",
+    "county": "Berks",
+    "mi": 29.7
+   },
+   {
+    "name": "Bensalem",
+    "county": "Bucks",
+    "mi": 44.9
+   },
+   {
+    "name": "Abington",
+    "county": "Montgomery",
+    "mi": 39
+   },
+   {
+    "name": "Levittown",
+    "county": "Bucks",
+    "mi": 46.8
+   },
+   {
+    "name": "Havertown",
+    "county": "Delaware",
+    "mi": 44.4
+   },
+   {
+    "name": "Bridgewater",
+    "county": "Somerset",
+    "mi": 44.2,
+    "st": "NJ"
+   },
+   {
+    "name": "Wilkes-Barre",
+    "county": "Luzerne",
+    "mi": 48.5
+   },
+   {
+    "name": "Hillsborough",
+    "county": "Somerset",
+    "mi": 46.2,
+    "st": "NJ"
+   },
+   {
+    "name": "Ewing",
+    "county": "Mercer",
+    "mi": 43.2,
+    "st": "NJ"
+   },
+   {
+    "name": "Norristown",
+    "county": "Montgomery",
+    "mi": 34.6
+   },
+   {
+    "name": "Wayne",
+    "county": "Delaware",
+    "mi": 39.4
+   },
+   {
+    "name": "Radnor",
+    "county": "Delaware",
+    "mi": 39.4
+   },
+   {
+    "name": "Princeton",
+    "county": "Mercer",
+    "mi": 47.2,
+    "st": "NJ"
+   }
   ]
  },
  {
@@ -1267,15 +7935,87 @@
   "hub": "heavy manufacturing",
   "blurb": "We rig and move industrial machinery across the Erie area for the locomotive and heavy-equipment plants and the Port of Erie along I-90 and I-79.",
   "near": [
-   "Millcreek",
-   "Wesleyville",
-   "Lawrence Park",
-   "Harborcreek",
-   "Fairview",
-   "North East",
-   "Girard",
-   "Edinboro",
-   "Waterford"
+   {
+    "name": "Millcreek",
+    "county": "Madison",
+    "mi": 628.2,
+    "st": "MO"
+   },
+   {
+    "name": "Wesleyville",
+    "county": "Erie",
+    "mi": 3.7
+   },
+   {
+    "name": "Lawrence Park",
+    "county": "Erie",
+    "mi": 3.6
+   },
+   {
+    "name": "Harborcreek",
+    "county": "Erie",
+    "mi": 7.2
+   },
+   {
+    "name": "Fairview",
+    "county": "Erie",
+    "mi": 11
+   },
+   {
+    "name": "North East",
+    "county": "Erie",
+    "mi": 14.2
+   },
+   {
+    "name": "Girard",
+    "county": "Erie",
+    "mi": 14.9
+   },
+   {
+    "name": "Edinboro",
+    "county": "Erie",
+    "mi": 17.8
+   },
+   {
+    "name": "Waterford",
+    "county": "Erie",
+    "mi": 13.9
+   },
+   {
+    "name": "Jamestown",
+    "county": "Chautauqua",
+    "mi": 43.6,
+    "st": "NY"
+   },
+   {
+    "name": "Ashtabula",
+    "county": "Ashtabula",
+    "mi": 40.5,
+    "st": "OH"
+   },
+   {
+    "name": "Meadville",
+    "county": "Crawford",
+    "mi": 33.9
+   },
+   {
+    "name": "Conneaut",
+    "county": "Ashtabula",
+    "mi": 27.2,
+    "st": "OH"
+   },
+   {
+    "name": "Dunkirk",
+    "county": "Chautauqua",
+    "mi": 45.4,
+    "st": "NY"
+   },
+   {
+    "name": "Fredonia",
+    "county": "Chautauqua",
+    "mi": 44.1,
+    "st": "NY"
+   }
   ]
  },
  {
@@ -1284,15 +8024,116 @@
   "hub": "manufacturing & port",
   "blurb": "We rig and move heavy machinery across the Richmond area, serving manufacturers and the James River port terminals along I-95, I-64, and I-295.",
   "near": [
-   "Henrico",
-   "Chesterfield",
-   "Petersburg",
-   "Colonial Heights",
-   "Mechanicsville",
-   "Midlothian",
-   "Glen Allen",
-   "Hopewell",
-   "Ashland"
+   {
+    "name": "Henrico",
+    "county": "Mecklenburg",
+    "mi": 92
+   },
+   {
+    "name": "Chesterfield",
+    "county": "Chesterfield",
+    "mi": 12.5
+   },
+   {
+    "name": "Petersburg",
+    "county": "City of Petersburg",
+    "mi": 22.7
+   },
+   {
+    "name": "Colonial Heights",
+    "county": "City of Colonial Heights",
+    "mi": 20
+   },
+   {
+    "name": "Mechanicsville",
+    "county": "Hanover",
+    "mi": 6.1
+   },
+   {
+    "name": "Midlothian",
+    "county": "Chesterfield",
+    "mi": 10.9
+   },
+   {
+    "name": "Glen Allen",
+    "county": "Henrico",
+    "mi": 8.2
+   },
+   {
+    "name": "Hopewell",
+    "county": "City of Hopewell",
+    "mi": 19.7
+   },
+   {
+    "name": "Ashland",
+    "county": "Hanover",
+    "mi": 14.2
+   },
+   {
+    "name": "Tuckahoe",
+    "county": "Henrico",
+    "mi": 5.8
+   },
+   {
+    "name": "Short Pump",
+    "county": "Henrico",
+    "mi": 10.7
+   },
+   {
+    "name": "Chester",
+    "county": "Chesterfield",
+    "mi": 13.6
+   },
+   {
+    "name": "Meadowbrook",
+    "county": "Chesterfield",
+    "mi": 7.3
+   },
+   {
+    "name": "Laurel",
+    "county": "Henrico",
+    "mi": 6.7
+   },
+   {
+    "name": "Bon Air",
+    "county": "Chesterfield",
+    "mi": 5.7
+   },
+   {
+    "name": "Highland Springs",
+    "county": "Henrico",
+    "mi": 7.3
+   },
+   {
+    "name": "Williamsburg",
+    "county": "City of Williamsburg",
+    "mi": 45.7
+   },
+   {
+    "name": "East Highland Park",
+    "county": "Henrico",
+    "mi": 3.5
+   },
+   {
+    "name": "Brandermill",
+    "county": "Chesterfield",
+    "mi": 13.4
+   },
+   {
+    "name": "Lakeside",
+    "county": "Henrico",
+    "mi": 3.8
+   },
+   {
+    "name": "Fort Lee",
+    "county": "Prince George",
+    "mi": 22.3
+   },
+   {
+    "name": "Wyndham",
+    "county": "Henrico",
+    "mi": 13
+   }
   ]
  },
  {
@@ -1301,15 +8142,126 @@
   "hub": "port & phosphate",
   "blurb": "We rig industrial equipment and run project cargo across the Tampa Bay area, including port freight from Port Tampa Bay along I-4, I-75, and I-275.",
   "near": [
-   "St. Petersburg",
-   "Clearwater",
-   "Brandon",
-   "Plant City",
-   "Riverview",
-   "Wesley Chapel",
-   "Lakeland",
-   "Palm Harbor",
-   "Largo"
+   {
+    "name": "St. Petersburg",
+    "county": "Pinellas",
+    "mi": 18.2
+   },
+   {
+    "name": "Clearwater",
+    "county": "Pinellas",
+    "mi": 20.9
+   },
+   {
+    "name": "Brandon",
+    "county": "Hillsborough",
+    "mi": 10.6
+   },
+   {
+    "name": "Plant City",
+    "county": "Hillsborough",
+    "mi": 21.5
+   },
+   {
+    "name": "Riverview",
+    "county": "Hillsborough",
+    "mi": 9.8
+   },
+   {
+    "name": "Wesley Chapel",
+    "county": "Pasco",
+    "mi": 21.7
+   },
+   {
+    "name": "Lakeland",
+    "county": "Polk",
+    "mi": 31.7
+   },
+   {
+    "name": "Palm Harbor",
+    "county": "Pinellas",
+    "mi": 20.7
+   },
+   {
+    "name": "Largo",
+    "county": "Pinellas",
+    "mi": 20.3
+   },
+   {
+    "name": "Spring Hill",
+    "county": "Hernando",
+    "mi": 36.8
+   },
+   {
+    "name": "Town 'n' Country",
+    "county": "Hillsborough",
+    "mi": 8.5
+   },
+   {
+    "name": "Sarasota",
+    "county": "Sarasota",
+    "mi": 42.5
+   },
+   {
+    "name": "Bradenton",
+    "county": "Manatee",
+    "mi": 31.8
+   },
+   {
+    "name": "Pinellas Park",
+    "county": "Pinellas",
+    "mi": 16.4
+   },
+   {
+    "name": "University",
+    "county": "Hillsborough",
+    "mi": 8.8
+   },
+   {
+    "name": "Carrollwood Village",
+    "county": "Hillsborough",
+    "mi": 9.1
+   },
+   {
+    "name": "Winter Haven",
+    "county": "Polk",
+    "mi": 44.6
+   },
+   {
+    "name": "Dunedin",
+    "county": "Pinellas",
+    "mi": 19.8
+   },
+   {
+    "name": "Valrico",
+    "county": "Hillsborough",
+    "mi": 13.6
+   },
+   {
+    "name": "Egypt Lake-Leto",
+    "county": "Hillsborough",
+    "mi": 5.7
+   },
+   {
+    "name": "Carrollwood",
+    "county": "Hillsborough",
+    "mi": 7.4
+   },
+   {
+    "name": "Land O' Lakes",
+    "county": "Pasco",
+    "mi": 18.8
+   },
+   {
+    "name": "East Lake",
+    "county": "Pinellas",
+    "mi": 18.3
+   },
+   {
+    "name": "Lake Magdalene",
+    "county": "Hillsborough",
+    "mi": 8.8
+   }
   ]
  },
  {
@@ -1318,15 +8270,62 @@
   "hub": "refining & petrochemical",
   "blurb": "We rig and move heavy machinery across the Golden Triangle, serving the refineries and petrochemical plants around Beaumont, Port Arthur, and Orange along I-10.",
   "near": [
-   "Port Arthur",
-   "Orange",
-   "Nederland",
-   "Groves",
-   "Port Neches",
-   "Vidor",
-   "Bridge City",
-   "Lumberton",
-   "Silsbee"
+   {
+    "name": "Port Arthur",
+    "county": "Jefferson",
+    "mi": 16.8
+   },
+   {
+    "name": "Orange",
+    "county": "Orange",
+    "mi": 21.8
+   },
+   {
+    "name": "Nederland",
+    "county": "Jefferson",
+    "mi": 10.1
+   },
+   {
+    "name": "Groves",
+    "county": "Jefferson",
+    "mi": 14.6
+   },
+   {
+    "name": "Port Neches",
+    "county": "Jefferson",
+    "mi": 10.8
+   },
+   {
+    "name": "Vidor",
+    "county": "Orange",
+    "mi": 6
+   },
+   {
+    "name": "Bridge City",
+    "county": "Orange",
+    "mi": 16
+   },
+   {
+    "name": "Lumberton",
+    "county": "Hardin",
+    "mi": 13.7
+   },
+   {
+    "name": "Silsbee",
+    "county": "Hardin",
+    "mi": 18.7
+   },
+   {
+    "name": "Sulphur",
+    "county": "Calcasieu Parish",
+    "mi": 44.5,
+    "st": "LA"
+   },
+   {
+    "name": "Liberty",
+    "county": "Liberty",
+    "mi": 41.5
+   }
   ]
  },
  {
@@ -1335,15 +8334,56 @@
   "hub": "refining & port",
   "blurb": "We rig industrial equipment and run refinery and wind-energy project freight across the Coastal Bend, from the Port of Corpus Christi along I-37 and US-181.",
   "near": [
-   "Portland",
-   "Robstown",
-   "Ingleside",
-   "Aransas Pass",
-   "Gregory",
-   "Rockport",
-   "Alice",
-   "Kingsville",
-   "Bishop"
+   {
+    "name": "Portland",
+    "county": "San Patricio",
+    "mi": 6.9
+   },
+   {
+    "name": "Robstown",
+    "county": "Nueces",
+    "mi": 16.7
+   },
+   {
+    "name": "Ingleside",
+    "county": "San Patricio",
+    "mi": 12.5
+   },
+   {
+    "name": "Aransas Pass",
+    "county": "San Patricio",
+    "mi": 16.8
+   },
+   {
+    "name": "Gregory",
+    "county": "San Patricio",
+    "mi": 10.6
+   },
+   {
+    "name": "Rockport",
+    "county": "Aransas",
+    "mi": 25.8
+   },
+   {
+    "name": "Alice",
+    "county": "Jim Wells",
+    "mi": 41.3
+   },
+   {
+    "name": "Kingsville",
+    "county": "Kleberg",
+    "mi": 34.3
+   },
+   {
+    "name": "Bishop",
+    "county": "Nueces",
+    "mi": 28.8
+   },
+   {
+    "name": "Beeville",
+    "county": "Bee",
+    "mi": 46.7
+   }
   ]
  },
  {
@@ -1352,15 +8392,76 @@
   "hub": "border manufacturing",
   "blurb": "We rig and move heavy machinery across the El Paso border region, serving maquila and manufacturing plants along I-10 and the Santa Teresa port of entry.",
   "near": [
-   "Socorro",
-   "Horizon City",
-   "San Elizario",
-   "Sunland Park",
-   "Santa Teresa",
-   "Anthony",
-   "Canutillo",
-   "Clint",
-   "Fabens"
+   {
+    "name": "Socorro",
+    "county": "El Paso",
+    "mi": 13
+   },
+   {
+    "name": "Horizon City",
+    "county": "El Paso",
+    "mi": 17
+   },
+   {
+    "name": "San Elizario",
+    "county": "El Paso",
+    "mi": 17.4
+   },
+   {
+    "name": "Sunland Park",
+    "county": "Doña Ana",
+    "mi": 6.1,
+    "st": "NM"
+   },
+   {
+    "name": "Santa Teresa",
+    "county": "Doña Ana",
+    "mi": 11.2,
+    "st": "NM"
+   },
+   {
+    "name": "Anthony",
+    "county": "El Paso",
+    "mi": 18
+   },
+   {
+    "name": "Canutillo",
+    "county": "El Paso",
+    "mi": 12.5
+   },
+   {
+    "name": "Clint",
+    "county": "El Paso",
+    "mi": 19.3
+   },
+   {
+    "name": "Fabens",
+    "county": "El Paso",
+    "mi": 26.2
+   },
+   {
+    "name": "Las Cruces",
+    "county": "Doña Ana",
+    "mi": 41.9,
+    "st": "NM"
+   },
+   {
+    "name": "Socorro Mission Number 1 Colonia",
+    "county": "El Paso",
+    "mi": 14.3
+   },
+   {
+    "name": "Chaparral",
+    "county": "Doña Ana",
+    "mi": 19.3,
+    "st": "NM"
+   },
+   {
+    "name": "Anthony",
+    "county": "Doña Ana",
+    "mi": 18.3,
+    "st": "NM"
+   }
   ]
  },
  {
@@ -1369,15 +8470,68 @@
   "hub": "distribution & gigafactory",
   "blurb": "We rig and move industrial machinery across the Reno-Sparks area for the distribution centers and the Tahoe-Reno Industrial Center along I-80 and US-395.",
   "near": [
-   "Sparks",
-   "Carson City",
-   "Fernley",
-   "Sun Valley",
-   "Spanish Springs",
-   "Fallon",
-   "Dayton",
-   "Gardnerville",
-   "Cold Springs"
+   {
+    "name": "Sparks",
+    "county": "Washoe",
+    "mi": 3.3
+   },
+   {
+    "name": "Carson City",
+    "county": "Carson City",
+    "mi": 25.4
+   },
+   {
+    "name": "Fernley",
+    "county": "Lyon",
+    "mi": 30.4
+   },
+   {
+    "name": "Sun Valley",
+    "county": "Washoe",
+    "mi": 5
+   },
+   {
+    "name": "Spanish Springs",
+    "county": "Washoe",
+    "mi": 10
+   },
+   {
+    "name": "Fallon",
+    "county": "Churchill",
+    "mi": 55.4
+   },
+   {
+    "name": "Dayton",
+    "county": "Lyon",
+    "mi": 23.4
+   },
+   {
+    "name": "Gardnerville",
+    "county": "Douglas",
+    "mi": 40.8
+   },
+   {
+    "name": "Cold Springs",
+    "county": "Washoe",
+    "mi": 13.5
+   },
+   {
+    "name": "South Lake Tahoe",
+    "county": "El Dorado",
+    "mi": 42.2,
+    "st": "CA"
+   },
+   {
+    "name": "Truckee",
+    "county": "Nevada",
+    "mi": 24.1,
+    "st": "CA"
+   },
+   {
+    "name": "Gardnerville Ranchos",
+    "county": "Douglas",
+    "mi": 44.5
+   }
   ]
  },
  {
@@ -1386,15 +8540,99 @@
   "hub": "aerospace & defense",
   "blurb": "We rig and move heavy machinery across the Pikes Peak region, serving the defense and aerospace installations along I-25 and the Powers corridor.",
   "near": [
-   "Fountain",
-   "Monument",
-   "Manitou Springs",
-   "Security-Widefield",
-   "Falcon",
-   "Woodland Park",
-   "Peyton",
-   "Cimarron Hills",
-   "Black Forest"
+   {
+    "name": "Fountain",
+    "county": "El Paso",
+    "mi": 12.3
+   },
+   {
+    "name": "Monument",
+    "county": "El Paso",
+    "mi": 18
+   },
+   {
+    "name": "Manitou Springs",
+    "county": "El Paso",
+    "mi": 5.5
+   },
+   {
+    "name": "Security-Widefield",
+    "county": "El Paso",
+    "mi": 8.3
+   },
+   {
+    "name": "Falcon",
+    "county": "El Paso",
+    "mi": 13.3
+   },
+   {
+    "name": "Woodland Park",
+    "county": "Teller",
+    "mi": 16.8
+   },
+   {
+    "name": "Peyton",
+    "county": "El Paso",
+    "mi": 22.6
+   },
+   {
+    "name": "Cimarron Hills"
+   },
+   {
+    "name": "Black Forest",
+    "county": "El Paso",
+    "mi": 14
+   },
+   {
+    "name": "Pueblo",
+    "county": "Pueblo",
+    "mi": 41.6
+   },
+   {
+    "name": "Castle Rock",
+    "county": "Douglas",
+    "mi": 37.2
+   },
+   {
+    "name": "Parker",
+    "county": "Douglas",
+    "mi": 47.4
+   },
+   {
+    "name": "Pueblo West",
+    "county": "Pueblo",
+    "mi": 33.9
+   },
+   {
+    "name": "Cañon City",
+    "county": "Fremont",
+    "mi": 35.4
+   },
+   {
+    "name": "Fort Carson",
+    "county": "El Paso",
+    "mi": 6.9
+   },
+   {
+    "name": "Lone Tree",
+    "county": "Adams",
+    "mi": 49.7
+   },
+   {
+    "name": "The Pinery",
+    "county": "Douglas",
+    "mi": 43.2
+   },
+   {
+    "name": "Castle Pines North",
+    "county": "Park",
+    "mi": 44.2
+   },
+   {
+    "name": "Roxborough Park",
+    "county": "Douglas",
+    "mi": 46.4
+   }
   ]
  },
  {
@@ -1403,15 +8641,126 @@
   "hub": "aerospace & defense",
   "blurb": "We rig and move industrial machinery across the Ogden area for Hill Air Force Base and the aerospace and defense plants along I-15 and I-84.",
   "near": [
-   "Roy",
-   "Clearfield",
-   "Layton",
-   "South Ogden",
-   "Clinton",
-   "Riverdale",
-   "Washington Terrace",
-   "West Haven",
-   "Sunset"
+   {
+    "name": "Roy",
+    "county": "Weber",
+    "mi": 5
+   },
+   {
+    "name": "Clearfield",
+    "county": "Davis",
+    "mi": 8.2
+   },
+   {
+    "name": "Layton",
+    "county": "Davis",
+    "mi": 11.2
+   },
+   {
+    "name": "South Ogden",
+    "county": "Weber",
+    "mi": 2.2
+   },
+   {
+    "name": "Clinton",
+    "county": "Davis",
+    "mi": 7
+   },
+   {
+    "name": "Riverdale",
+    "county": "Weber",
+    "mi": 3.5
+   },
+   {
+    "name": "Washington Terrace",
+    "county": "Weber",
+    "mi": 3.5
+   },
+   {
+    "name": "West Haven",
+    "county": "Weber",
+    "mi": 4.2
+   },
+   {
+    "name": "Sunset",
+    "county": "Davis",
+    "mi": 6.7
+   },
+   {
+    "name": "Salt Lake City",
+    "county": "Salt Lake",
+    "mi": 32.2
+   },
+   {
+    "name": "West Valley City",
+    "county": "Salt Lake",
+    "mi": 36.7
+   },
+   {
+    "name": "West Jordan",
+    "county": "Salt Lake",
+    "mi": 42.4
+   },
+   {
+    "name": "Sandy",
+    "county": "Salt Lake",
+    "mi": 43.9
+   },
+   {
+    "name": "South Jordan",
+    "county": "Salt Lake",
+    "mi": 45.7
+   },
+   {
+    "name": "Millcreek",
+    "county": "Salt Lake",
+    "mi": 37.4
+   },
+   {
+    "name": "Taylorsville",
+    "county": "Salt Lake",
+    "mi": 38.4
+   },
+   {
+    "name": "Logan",
+    "county": "Cache",
+    "mi": 36.1
+   },
+   {
+    "name": "Murray",
+    "county": "Salt Lake",
+    "mi": 38.7
+   },
+   {
+    "name": "Draper",
+    "county": "Salt Lake",
+    "mi": 48.6
+   },
+   {
+    "name": "Bountiful",
+    "county": "Davis",
+    "mi": 23.6
+   },
+   {
+    "name": "Riverton",
+    "county": "Salt Lake",
+    "mi": 48.5
+   },
+   {
+    "name": "Kearns",
+    "county": "Salt Lake",
+    "mi": 38.9
+   },
+   {
+    "name": "Cottonwood Heights",
+    "county": "Salt Lake",
+    "mi": 42.6
+   },
+   {
+    "name": "Midvale",
+    "county": "Salt Lake",
+    "mi": 42.5
+   }
   ]
  },
  {
@@ -1420,15 +8769,96 @@
   "hub": "ag equipment mfg",
   "blurb": "We rig and move heavy machinery across the Quad Cities, serving John Deere and ag-equipment plants along I-80, I-74, and the Mississippi River.",
   "near": [
-   "Bettendorf",
-   "Moline",
-   "Rock Island",
-   "East Moline",
-   "Eldridge",
-   "Silvis",
-   "Milan",
-   "Le Claire",
-   "Blue Grass"
+   {
+    "name": "Bettendorf",
+    "county": "Scott",
+    "mi": 3.2
+   },
+   {
+    "name": "Moline",
+    "county": "Rock Island",
+    "mi": 3.4,
+    "st": "IL"
+   },
+   {
+    "name": "Rock Island",
+    "county": "Rock Island",
+    "mi": 1,
+    "st": "IL"
+   },
+   {
+    "name": "East Moline",
+    "county": "Rock Island",
+    "mi": 7.1,
+    "st": "IL"
+   },
+   {
+    "name": "Eldridge",
+    "county": "Scott",
+    "mi": 9.3
+   },
+   {
+    "name": "Silvis",
+    "county": "Rock Island",
+    "mi": 8.4,
+    "st": "IL"
+   },
+   {
+    "name": "Milan",
+    "county": "Rock Island",
+    "mi": 4.9,
+    "st": "IL"
+   },
+   {
+    "name": "Le Claire",
+    "county": "Scott",
+    "mi": 13.2
+   },
+   {
+    "name": "Blue Grass",
+    "county": "Scott",
+    "mi": 9.8
+   },
+   {
+    "name": "Galesburg",
+    "county": "Knox",
+    "mi": 41.2,
+    "st": "IL"
+   },
+   {
+    "name": "Clinton",
+    "county": "Clinton",
+    "mi": 29.9
+   },
+   {
+    "name": "Muscatine",
+    "county": "Muscatine",
+    "mi": 25.1
+   },
+   {
+    "name": "Sterling",
+    "county": "Whiteside",
+    "mi": 49,
+    "st": "IL"
+   },
+   {
+    "name": "Kewanee",
+    "county": "Henry",
+    "mi": 38.9,
+    "st": "IL"
+   },
+   {
+    "name": "Monmouth",
+    "county": "Warren",
+    "mi": 42.5,
+    "st": "IL"
+   },
+   {
+    "name": "Rock Falls",
+    "county": "Whiteside",
+    "mi": 49.2,
+    "st": "IL"
+   }
   ]
  },
  {
@@ -1437,15 +8867,71 @@
   "hub": "mfg & food processing",
   "blurb": "We rig and move industrial machinery across the Cedar Rapids area for manufacturers and food-processing plants along I-380 and the Cedar River.",
   "near": [
-   "Marion",
-   "Hiawatha",
-   "Robins",
-   "Fairfax",
-   "Ely",
-   "Mount Vernon",
-   "Center Point",
-   "Palo",
-   "Walford"
+   {
+    "name": "Marion",
+    "county": "Linn",
+    "mi": 3
+   },
+   {
+    "name": "Hiawatha",
+    "county": "Linn",
+    "mi": 2.7
+   },
+   {
+    "name": "Robins",
+    "county": "Linn",
+    "mi": 4.5
+   },
+   {
+    "name": "Fairfax",
+    "county": "Linn",
+    "mi": 9.3
+   },
+   {
+    "name": "Ely",
+    "county": "Linn",
+    "mi": 9.8
+   },
+   {
+    "name": "Mount Vernon",
+    "county": "Linn",
+    "mi": 13.1
+   },
+   {
+    "name": "Center Point",
+    "county": "Linn",
+    "mi": 14.5
+   },
+   {
+    "name": "Palo",
+    "county": "Linn",
+    "mi": 8.7
+   },
+   {
+    "name": "Walford",
+    "county": "Benton",
+    "mi": 13.3
+   },
+   {
+    "name": "Iowa City",
+    "county": "Johnson",
+    "mi": 24.7
+   },
+   {
+    "name": "Waterloo",
+    "county": "Black Hawk",
+    "mi": 49
+   },
+   {
+    "name": "Coralville",
+    "county": "Johnson",
+    "mi": 23.2
+   },
+   {
+    "name": "North Liberty",
+    "county": "Johnson",
+    "mi": 18.1
+   }
   ]
  },
  {
@@ -1454,15 +8940,101 @@
   "hub": "paper & packaging mfg",
   "blurb": "We rig and move heavy machinery across the Green Bay area, serving paper mills and packaging-machinery plants along I-41 and the Fox River.",
   "near": [
-   "De Pere",
-   "Ashwaubenon",
-   "Bellevue",
-   "Howard",
-   "Allouez",
-   "Suamico",
-   "Hobart",
-   "Pulaski",
-   "Wrightstown"
+   {
+    "name": "De Pere",
+    "county": "Brown",
+    "mi": 5.3
+   },
+   {
+    "name": "Ashwaubenon",
+    "county": "Brown",
+    "mi": 3.6
+   },
+   {
+    "name": "Bellevue",
+    "county": "Brown",
+    "mi": 7.1
+   },
+   {
+    "name": "Howard",
+    "county": "Brown",
+    "mi": 3.8
+   },
+   {
+    "name": "Allouez",
+    "county": "Brown",
+    "mi": 2.9
+   },
+   {
+    "name": "Suamico",
+    "county": "Brown",
+    "mi": 7.9
+   },
+   {
+    "name": "Hobart",
+    "county": "Brown",
+    "mi": 6.6
+   },
+   {
+    "name": "Pulaski",
+    "county": "Brown",
+    "mi": 15.2
+   },
+   {
+    "name": "Wrightstown",
+    "county": "Brown",
+    "mi": 15.1
+   },
+   {
+    "name": "Appleton",
+    "county": "Outagamie",
+    "mi": 26.4
+   },
+   {
+    "name": "Oshkosh",
+    "county": "Winnebago",
+    "mi": 42.8
+   },
+   {
+    "name": "Manitowoc",
+    "county": "Manitowoc",
+    "mi": 34.7
+   },
+   {
+    "name": "Neenah",
+    "county": "Winnebago",
+    "mi": 31.8
+   },
+   {
+    "name": "Menasha",
+    "county": "Winnebago",
+    "mi": 30.4
+   },
+   {
+    "name": "Kaukauna",
+    "county": "Outagamie",
+    "mi": 20.8
+   },
+   {
+    "name": "Two Rivers",
+    "county": "Manitowoc",
+    "mi": 33.7
+   },
+   {
+    "name": "Little Chute",
+    "county": "Outagamie",
+    "mi": 22.1
+   },
+   {
+    "name": "Marinette",
+    "county": "Marinette",
+    "mi": 44.4
+   },
+   {
+    "name": "Shawano",
+    "county": "Shawano",
+    "mi": 34.2
+   }
   ]
  },
  {
@@ -1471,15 +9043,110 @@
   "hub": "mfg & RV production",
   "blurb": "We rig and move industrial machinery across the South Bend area for manufacturers and the RV plants around Elkhart along the US-20 and US-31 corridors.",
   "near": [
-   "Mishawaka",
-   "Granger",
-   "Elkhart",
-   "Osceola",
-   "Goshen",
-   "Niles",
-   "New Carlisle",
-   "Roseland",
-   "Bremen"
+   {
+    "name": "Mishawaka",
+    "county": "Saint Joseph",
+    "mi": 4.9
+   },
+   {
+    "name": "Granger",
+    "county": "Saint Joseph",
+    "mi": 8.7
+   },
+   {
+    "name": "Elkhart",
+    "county": "Elkhart",
+    "mi": 14.1
+   },
+   {
+    "name": "Osceola",
+    "county": "Saint Joseph",
+    "mi": 9.1
+   },
+   {
+    "name": "Goshen",
+    "county": "Elkhart",
+    "mi": 22.6
+   },
+   {
+    "name": "Niles",
+    "county": "Berrien",
+    "mi": 10.1,
+    "st": "MI"
+   },
+   {
+    "name": "New Carlisle",
+    "county": "Saint Joseph",
+    "mi": 13.4
+   },
+   {
+    "name": "Roseland",
+    "county": "Saint Joseph",
+    "mi": 2.3
+   },
+   {
+    "name": "Bremen",
+    "county": "Marshall",
+    "mi": 17.2
+   },
+   {
+    "name": "Portage",
+    "county": "Kalamazoo",
+    "mi": 49.7,
+    "st": "MI"
+   },
+   {
+    "name": "Portage",
+    "county": "Porter",
+    "mi": 48.4
+   },
+   {
+    "name": "Valparaiso",
+    "county": "Porter",
+    "mi": 44.4
+   },
+   {
+    "name": "Michigan City",
+    "county": "LaPorte",
+    "mi": 33.3
+   },
+   {
+    "name": "La Porte",
+    "county": "LaPorte",
+    "mi": 24.5
+   },
+   {
+    "name": "Warsaw",
+    "county": "Kosciusko",
+    "mi": 37
+   },
+   {
+    "name": "Chesterton",
+    "county": "Porter",
+    "mi": 42.3
+   },
+   {
+    "name": "Sturgis",
+    "county": "Saint Joseph",
+    "mi": 43.6,
+    "st": "MI"
+   },
+   {
+    "name": "Plymouth",
+    "county": "Marshall",
+    "mi": 23.7
+   },
+   {
+    "name": "Benton Harbor",
+    "county": "Berrien",
+    "mi": 31.7,
+    "st": "MI"
+   },
+   {
+    "name": "Otis",
+    "county": "LaPorte",
+    "mi": 34.4
+   }
   ]
  },
  {
@@ -1488,15 +9155,71 @@
   "hub": "automotive manufacturing",
   "blurb": "We rig and move heavy machinery across the Bluegrass, serving the Toyota assembly plant in Georgetown and area manufacturers along I-64 and I-75.",
   "near": [
-   "Georgetown",
-   "Nicholasville",
-   "Richmond",
-   "Winchester",
-   "Versailles",
-   "Frankfort",
-   "Paris",
-   "Berea",
-   "Wilmore"
+   {
+    "name": "Georgetown",
+    "county": "Scott",
+    "mi": 15.9
+   },
+   {
+    "name": "Nicholasville",
+    "county": "Jessamine",
+    "mi": 9.1
+   },
+   {
+    "name": "Richmond",
+    "county": "Madison",
+    "mi": 19.4
+   },
+   {
+    "name": "Winchester",
+    "county": "Clark",
+    "mi": 16.2
+   },
+   {
+    "name": "Versailles",
+    "county": "Woodford",
+    "mi": 14.4
+   },
+   {
+    "name": "Frankfort",
+    "county": "Franklin",
+    "mi": 26
+   },
+   {
+    "name": "Paris",
+    "county": "Bourbon",
+    "mi": 19.6
+   },
+   {
+    "name": "Berea",
+    "county": "Madison",
+    "mi": 30.7
+   },
+   {
+    "name": "Wilmore",
+    "county": "Jessamine",
+    "mi": 13.3
+   },
+   {
+    "name": "Lexington-Fayette",
+    "county": "Fayette",
+    "mi": 4.3
+   },
+   {
+    "name": "Danville",
+    "county": "Boyle",
+    "mi": 28.6
+   },
+   {
+    "name": "Shelbyville",
+    "county": "Shelby",
+    "mi": 43.4
+   },
+   {
+    "name": "Lawrenceburg",
+    "county": "Anderson",
+    "mi": 23
+   }
   ]
  },
  {
@@ -1505,15 +9228,61 @@
   "hub": "automotive manufacturing",
   "blurb": "We rig and move industrial machinery across the Montgomery area for the Hyundai assembly plant and its suppliers along I-65 and I-85.",
   "near": [
-   "Prattville",
-   "Wetumpka",
-   "Millbrook",
-   "Pike Road",
-   "Selma",
-   "Tallassee",
-   "Deatsville",
-   "Elmore",
-   "Autaugaville"
+   {
+    "name": "Prattville",
+    "county": "Autauga",
+    "mi": 11.5
+   },
+   {
+    "name": "Wetumpka",
+    "county": "Elmore",
+    "mi": 13.3
+   },
+   {
+    "name": "Millbrook",
+    "county": "Elmore",
+    "mi": 8.6
+   },
+   {
+    "name": "Pike Road",
+    "county": "Montgomery",
+    "mi": 12.8
+   },
+   {
+    "name": "Selma",
+    "county": "Dallas",
+    "mi": 42.2
+   },
+   {
+    "name": "Tallassee",
+    "county": "Elmore",
+    "mi": 26.4
+   },
+   {
+    "name": "Deatsville",
+    "county": "Elmore",
+    "mi": 17.6
+   },
+   {
+    "name": "Elmore",
+    "county": "Elmore",
+    "mi": 11.9
+   },
+   {
+    "name": "Autaugaville",
+    "county": "Autauga",
+    "mi": 21.2
+   },
+   {
+    "name": "Troy",
+    "county": "Pike",
+    "mi": 43.1
+   },
+   {
+    "name": "Alexander City",
+    "county": "Tallapoosa",
+    "mi": 44.7
+   }
   ]
  }
 ]

@@ -10,6 +10,7 @@
      node build-locations.js && node build-states.js
    =========================================================== */
 const fs = require('fs');
+const PLACES = require('./lib/places');
 const path = require('path');
 
 const ROOT = __dirname;
@@ -94,7 +95,7 @@ function statePage(st, cities, idx, allStates) {
     ? cityNames.slice(0, -1).join(', ') + ' and ' + cityNames[cityNames.length - 1]
     : cityNames[0];
   const industries = [...new Set(cities.map(c => c.hub))].join(', ');
-  const townsSample = [...new Set(cities.flatMap(c => (c.near || []).slice(0, 4)))].slice(0, 10);
+  const townsSample = [...new Set(cities.flatMap(c => PLACES.names(c.near, 4)))].slice(0, 10);
   const plural = cities.length > 1;
 
   // neighbor states = same region, excluding self
@@ -132,7 +133,7 @@ function statePage(st, cities, idx, allStates) {
   };
 
   const cityCards = cities.map(c => `
-    <a class="svc-card" href="${citySlug(c.city, c.state)}.html"><span class="num hand">${c.state} — ${c.hub}</span><h3>${c.city}, ${c.state}</h3><p>${(c.near || []).slice(0, 4).join(' · ')}${(c.near || []).length ? ' &amp; more' : ''}</p><span class="more">${c.city} rigging &amp; machinery moving</span></a>`).join('');
+    <a class="svc-card" href="${citySlug(c.city, c.state)}.html"><span class="num hand">${c.state} — ${c.hub}</span><h3>${c.city}, ${c.state}</h3><p>${PLACES.names(c.near, 4).join(' · ')}${(c.near || []).length ? ' &amp; more' : ''}</p><span class="more">${c.city} rigging &amp; machinery moving</span></a>`).join('');
 
   const neighborChips = neighbors.map(s => `<a href="${stateSlug(s)}.html">${STATE[s].name}</a>`).join('');
 

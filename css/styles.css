@@ -446,3 +446,16 @@ nav.main .nav-drop .drop a:hover { background: var(--yellow); color: var(--ink);
 .flow .st p { font-size: 15px; }
 @media (max-width: 860px) { .flow { grid-template-columns: 1fr 1fr; } .flow .st:nth-child(2) { border-right: 0; } .flow .st:nth-child(-n+2) { border-bottom: 3px dashed var(--ink); } }
 @media (max-width: 480px) { .flow { grid-template-columns: 1fr; } .flow .st { border-right: 0; border-bottom: 3px dashed var(--ink); } .flow .st:last-child { border-bottom: 0; } }
+
+/* Nearby-town coverage table — the sub-city tier lives on the city page,
+   not on 12,000 suburb URLs. Real county and distance from GeoNames. */
+.table-wrap { margin-top: 20px; overflow-x: auto; border: 3px solid var(--ink); box-shadow: var(--shadow); background: var(--white); }
+.towns-table { width: 100%; border-collapse: collapse; font-size: 15px; }
+.towns-table th,
+.towns-table td { padding: 9px 14px; text-align: left; border-bottom: 1px solid var(--grid-bold); white-space: nowrap; }
+.towns-table th { font-family: "Anton", sans-serif; font-weight: 400; letter-spacing: .04em; text-transform: uppercase; font-size: 13px; background: var(--yellow); border-bottom: 3px solid var(--ink); }
+.towns-table td:first-child { font-weight: 700; }
+.towns-table td:not(:first-child) { color: var(--ink-soft); }
+.towns-table tbody tr:last-child td { border-bottom: 0; }
+.towns-table tbody tr:nth-child(odd) td { background: var(--cream-2); }
+@media (max-width: 600px) { .towns-table { font-size: 14px; } .towns-table th, .towns-table td { padding: 7px 10px; } }

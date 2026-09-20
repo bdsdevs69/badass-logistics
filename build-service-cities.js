@@ -60,6 +60,7 @@ function industryPhrase(industry) {
 }
 
 const chrome = require('./lib/chrome');
+const PLACES = require('./lib/places');
 const NAV = `\n${chrome.topbar()}\n${chrome.header()}`;
 const FOOTER_FOR = (rel) => chrome.footer(rel);
 
@@ -321,7 +322,8 @@ function page(serviceSlug, svc, loc, metro, hubStates) {
   const c = { city, state, CS, stName: stateName(state), ix: interstatesOf(state), angle: industryPhrase(metro && metro.industry), metro };
   const stSlug = c.stName.toLowerCase().replace(/[^a-z0-9]+/g,'-');
   const hasHub = hubStates && hubStates.has(state);
-  const near = (loc.near || []).slice(0, 12);
+  const near = PLACES.names(loc.near, 12);
+  const nearRows = loc.near || [];
   // Other metros in the same state — real city→city internal links (hub-and-spoke mesh)
   const nearbyMetros = locations.filter(l => l.state === state && l.city !== city).slice(0, 8);
   const url = `${DOMAIN}/services/${serviceSlug}/${slug}`;
@@ -457,8 +459,9 @@ ${near.length ? `<section class="notes-bg bg-paper" style="border-top:3px solid 
   <div class="wrap">
   <span class="section-tag hand">metro coverage</span>
   <h2 class="section-title">${svc.coverageNoun} near ${city}</h2>
-  <p class="section-intro">Service throughout ${city} and the surrounding manufacturing suburbs — including:</p>
+  <p class="section-intro">${svc.serviceType} throughout ${city} and the industrial suburbs around it — the towns below are where the plants, shops and distribution parks actually sit:</p>
   <div class="towns">${near.map(t=>`<span>${t}</span>`).join('')}</div>
+  ${PLACES.coverageTable(nearRows)}
   <p style="margin-top:22px;font-weight:600;">Moving across the metro or out of state? See <a href="${cityHub}" style="color:var(--yellow-deep);text-decoration:underline;">all our ${city} services</a>${hasHub?`, <a href="/services/${serviceSlug}/${stSlug}" style="color:var(--yellow-deep);text-decoration:underline;">${svc.name} across ${c.stName}</a>`:``} or <a href="/contact" style="color:var(--yellow-deep);text-decoration:underline;">get a quote</a>.</p>
 </div></section>` : ''}
 ${nearbyMetros.length ? `
@@ -646,7 +649,7 @@ for (const [serviceSlug, wave] of Object.entries(WAVES)) {
     let p = fs.readFileSync(pillarPath, 'utf8');
     const cards = built.map(l => {
       const slug = citySlug(l.city, l.state);
-      return `    <a class="svc-card" href="${serviceSlug}/${slug}"><div class="num">// ${l.state}</div><h3>${l.city}, ${l.state}</h3><p>${(l.near||[]).slice(0,3).join(' · ')}</p><span class="more">${l.city} ${svc.cardNoun}</span></a>`;
+      return `    <a class="svc-card" href="${serviceSlug}/${slug}"><div class="num">// ${l.state}</div><h3>${l.city}, ${l.state}</h3><p>${PLACES.names(l.near,3).join(' · ')}</p><span class="more">${l.city} ${svc.cardNoun}</span></a>`;
     }).join('\n');
     const S = `<!--${svc.sentinel}_START-->`, E = `<!--${svc.sentinel}_END-->`;
     if (p.includes(S) && p.includes(E)) {

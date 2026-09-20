@@ -8,6 +8,7 @@
    Re-run any time:  node build-locations.js
    =========================================================== */
 const fs = require('fs');
+const PLACES = require('./lib/places');
 const path = require('path');
 
 const ROOT = __dirname;
@@ -271,7 +272,8 @@ ${NAV}
   <span class="section-tag hand">towns we cover near ${city}</span>
   <h2 class="section-title">Industrial rigging &amp; machinery moving near ${city}</h2>
   <p class="section-intro">One crew for machines, production lines, and heavy equipment across ${CS} and the nearby towns — including:</p>
-  <div class="towns">${near.map(t => `<span>${t}</span>`).join('')}</div>
+  <div class="towns">${PLACES.names(near, 12).map(t => `<span>${t}</span>`).join('')}</div>
+  ${PLACES.coverageTable(near)}
   <p style="margin-top:22px;font-weight:600;">Don't see your town? If it's anywhere around ${city}, we've got it covered — <a href="../contact.html" style="color:var(--yellow-deep);text-decoration:underline;">get a quote</a>.</p>
   ${nearbyMetros.length ? `
   <h3 style="margin-top:34px;font-size:22px;">More metros we serve across ${region}</h3>
