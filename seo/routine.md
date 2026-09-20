@@ -60,11 +60,21 @@ node ping-search-engines.js
 ```
 
 `ping-search-engines.js` pushes the new and changed URLs to IndexNow,
-which reaches Bing, Yandex and Copilot within minutes. Google has no
-equivalent — its half of that script needs `gsc-key.json`, which only
-exists on the old M2 machine. **Until that key is copied over, submit
-the sitemap by hand in the Search Console UI** after a push, and skip
-the Google half of the script.
+which reaches Bing, Yandex and Copilot within minutes, and resubmits the
+sitemap to Google. Both halves work — `gsc-key.json` was reissued on
+2026-09-21 and lives at the repo root (gitignored, chmod 600). No
+hand-submitting in the Search Console UI any more.
+
+If the Google half ever fails with a credential error, the key is a
+service-account key for `badass-gsc-reader@badass-gsc-reader.iam.gserviceaccount.com`
+in GCP project `badass-gsc-reader`, owned by abdul.samad9k@gmail.com.
+Reissue with:
+
+```bash
+gcloud iam service-accounts keys create gsc-key.json \
+  --iam-account=badass-gsc-reader@badass-gsc-reader.iam.gserviceaccount.com \
+  --project=badass-gsc-reader
+```
 
 GitHub Pages takes a couple of minutes to deploy. Confirm the new URL
 actually returns 200 before considering the run done.
