@@ -84,6 +84,7 @@ const SERVICES = {
       [`Do you re-level the machine after transit?`,`Always — set on the new pad and squared to the builder's spec before hand-off, ready for OEM ramp-up and first cut.`],
     ],
     titleFn:(CS)=>`CNC Machine Movers in ${CS} | Badass Logistics`,
+    descFn:(CS)=>`CNC machine movers in ${CS} — machine tool moving for single machines, cells and full shops, re-leveled to the builder's spec. Same-day quotes.`,
     quoteFactors:['Machine make, model, and weight — from the builder\'s data, not a guess','Rigging access at both shops: doors, aisles, pits, and floor ratings','Disconnect, draining, and axis-locking work, and whether the OEM tech attends','Air-ride transport distance and whether the machine is crated','Re-leveling and anchoring at the new pad'],
     pillarFile:'services/cnc-machine-movers.html', sentinel:'CNC_METROS', cardNoun:'CNC movers',
   },
@@ -106,7 +107,13 @@ const SERVICES = {
       [`Can you move machinery out of ${c.city} to another plant?`,`Yes — machines are rigged out, crated where needed, and moved as project freight through our licensed broker and carrier partners, then set and leveled at the destination by the same crew.`],
       [`Do you reinstall and level the machine?`,`Yes — set on the new pad and leveled to the manufacturer's spec before hand-off, ready for recommissioning.`],
     ],
-    titleFn:(CS)=>`Machinery Movers in ${CS} | Heavy Equipment Moving | Badass Logistics`,
+    // "Heavy Equipment Moving" was retired as a service name on 2026-09-18
+    // (it reads as heavy haul) but survived here because check-content.js only
+    // lints content/services, not this generator. "Machinery moving company"
+    // replaces it and carries real demand: 236 impressions across Savannah and
+    // Charleston alone at position 23-24, 90d to 2026-09-18.
+    titleFn:(CS)=>`Machinery Moving Company in ${CS} | Badass Logistics`,
+    descFn:(CS)=>`Machinery movers in ${CS} — a machinery moving company that disconnects, rigs, hauls and re-levels as one job. Same-day quotes: (307) 284-1332.`,
     quoteFactors:['What\'s moving: machine types, weights, and dimensions','Access at both ends — doors, ceilings, docks, and floor capacity along the path','Disconnect and reconnect scope, and who handles utilities','Distance, crating, and whether it runs as a truckload or several','Setting, leveling, anchoring, and any staging time in between'],
     pillarFile:'services/machinery-moving.html', sentinel:'MM_METROS', cardNoun:'machinery movers',
   },
@@ -130,6 +137,7 @@ const SERVICES = {
       [`Do you reinstall the line in the new building?`,`Yes — every machine is set, leveled, and squared to spec in the new layout, ready for recommissioning. We hand off a floor that's ready to run.`],
     ],
     titleFn:(CS)=>`Factory & Plant Relocation in ${CS} | Badass Logistics`,
+    descFn:(CS)=>`Factory and plant relocation in ${CS} — lines moved in phases so the floor keeps running. Teardown, transport, reinstall, leveling. Same-day quotes.`,
     quoteFactors:['The asset list: how many machines and lines, and their weights','Phasing — what has to keep running while the rest moves','Teardown, tagging, and reassembly scope with your trades and OEMs','Truckload count, crating, and whether dedicated lanes make sense','Reinstall, leveling, and the start-up date the schedule works back from'],
     pillarFile:'services/plant-relocation.html', sentinel:'PR_METROS', cardNoun:'plant relocation',
   },
@@ -151,8 +159,14 @@ const SERVICES = {
       [`How heavy a load can you rig in ${c.city}?`,`From a few hundred pounds to 200,000 lbs and beyond. We size the gear — cranes, gantries, skates, and jack-and-slide — to the load and the site, and plan every pick before rig day.`],
       [`What kinds of rigging do you do in ${c.city}?`,`Machine setting, crane and gantry lifts, jacking and skidding, millwright installation, MRI and medical equipment, data center, chiller, and transformer rigging — see every type on our <a href="/services/rigging">rigging page</a>.`],
       [`Do you set and level the machine after the lift?`,`Yes — we set the load on its new pad or foundation and level it to the manufacturer's spec, ready for recommissioning.`],
+      [`Are you a rigging contractor or a machinery mover?`,`Both, and on a ${c.city} job they are one scope rather than two vendors. Rigging contractors plan and execute the lift; machinery movers own the equipment end to end. Our riggers survey the job, size the gear, make the pick, then set and level the machine — so there is no handoff between a crane crew and whoever moves it afterward. <a href="/blog/crane-rental-vs-rigging-company">Crane rental vs a rigging company →</a>`],
     ],
-    titleFn:(CS)=>`Rigging Company in ${CS} | Industrial Rigging | Badass Logistics`,
+    // "rigging contractors" pulled 358 impressions at position 26.5 with zero
+    // clicks over 90d and the word appeared nowhere on the site; "riggers"
+    // another 233. The terms we already used ranked best (industrial rigging
+    // 15.0, rigging company 20.6), so this keeps those and adds the miss.
+    titleFn:(CS)=>`Rigging Company & Contractors in ${CS} | Badass Logistics`,
+    descFn:(CS)=>`Rigging contractors in ${CS} — industrial riggers for machine setting, crane and gantry lifts, jacking and skidding. One crew. Same-day quotes.`,
     quoteFactors:['The load: weight, dimensions, and center of gravity','The method: skates and jacks, gantry, forklift, or crane — and who supplies the crane','Site access, headroom, floor ratings, and any street or site closures','Crew size and schedule, including nights and weekends around production','Setting, leveling, and anchoring at the final position'],
     pillarFile:'services/rigging.html', sentinel:'RIG_METROS', cardNoun:'riggers',
   },
@@ -317,7 +331,11 @@ function page(serviceSlug, svc, loc, metro, hubStates) {
   // Keep under ~155 chars so Google doesn't truncate mid-sentence, and don't
   // repeat svc.name/svc.serviceType back-to-back (they're identical for several
   // services, which produced a stuttering snippet on 87 pages).
-  const desc = `${svc.name} in ${CS} — surveyed, rigged, moved, and re-leveled to spec by one accountable crew. Same-day quotes: (307) 284-1332.`;
+  // Per-service descriptions. This used to be one boilerplate line across all
+  // 352 pages, which wasted the snippet: 90d to 2026-09-18 the matrix took
+  // 9,979 impressions and 4 non-brand clicks. Each service now leads with the
+  // phrase its own queries actually use.
+  const desc = svc.descFn ? svc.descFn(CS) : `${svc.name} in ${CS} — surveyed, rigged, moved, and re-leveled to spec by one accountable crew. Same-day quotes: (307) 284-1332.`;
   const svcSchema = {"@context":"https://schema.org","@type":"Service","serviceType":svc.serviceType,"areaServed":{"@type":"City","name":CS},"provider":{"@type":"LocalBusiness","@id":`${DOMAIN}/#organization`,"name":site.brand,"telephone":"+1-307-284-1332","url":`${DOMAIN}/`},"description":`${site.brand} provides ${svc.serviceType.toLowerCase()} across ${CS} and the surrounding metro.`};
   const bcItems = [{"@type":"ListItem","position":1,"name":"Home","item":`${DOMAIN}/`},{"@type":"ListItem","position":2,"name":svc.name,"item":`${DOMAIN}/services/${serviceSlug}`}];
   if (hasHub) bcItems.push({"@type":"ListItem","position":3,"name":c.stName,"item":`${DOMAIN}/services/${serviceSlug}/${stSlug}`});
