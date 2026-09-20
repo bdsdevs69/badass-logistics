@@ -45,7 +45,9 @@ industry actually exists" rather than all 88 for everything.
 | Google's doorway policy describes the sub-city tier precisely | Spam policies, doorway abuse: "Having multiple domain names or pages targeted at specific regions or cities that funnel users to one page" | 12,195 suburb pages funnelling to one quote form is the textbook example. Not a grey area |
 | Our pages are already **deeper** than the leader's | Detroit rigging page: 2,042 words, 14 H2s. Their Houston rigging page: ~1,200–1,500 words, 3 FAQs | Depth is not the gap. **Breadth of services** and **thinness of suburb coverage** are |
 | Our suburb coverage is the weak spot | Detroit page names 10 suburbs, **once each, unlinked**. Theirs names 28 in a structured table | This is exactly where "all the sub-cities" should land — and it needs no new URLs |
-| The matrix **is indexing** | Live search surfaces `/services/rigging/louisville-ky`, `/services/machinery-moving/detroit-mi`, `/services/machinery-moving/lansing-mi` | The §3 gate in SEO-STRATEGY ("no new matrices until GSC proves indexation") is satisfied enough to expand in waves. It is not satisfied enough to expand all at once |
+| The matrix **is indexing — measured, 2026-09-21** | Search Console, 90d: rigging **94%** (83/88), machinery-moving **93%** (82/88), plant-relocation **75%**, cnc-machine-movers **50%**. Overall 275/352 = **78%** earning impressions | Kill switch is 40% dark; overall 22%. **Wave 2 cleared.** But cnc-machine-movers breaches the rule alone and gets consolidated, not expanded — see §4 |
+| **Non-brand search earns almost nothing** | 90d: 120 clicks total, **116 brand, 4 non-brand**, against 9,979 impressions in 28d. Pages like `/services/machinery-moving/omaha-ne` hold 691 impressions at position 67.5, Savannah 607 at 21.0 | The constraint is position and CTR on pages that already exist, not missing pages. **Fix the existing matrix before building wave 2** — this outranks the whole expansion in priority |
+| Retired stubs were absorbing the demand | 133 redirect stubs pulled **6,879 impressions in 90d**, all titled `Moved: /a → /b`. Fixed 2026-09-21 | Some of the "missing" performance was never missing — it was landing on dead URLs with debug titles |
 | One verified GBP = one local pack | GBP is a single verified profile; ads research confirms "machinery movers near me" is owned by the map pack | City pages compete in the **organic block below the pack**. Winnable: "{service} {city}", "{service} companies in {city}". Not winnable: "{service} near me" outside the GBP metro. Title and H1 should target the former |
 | Volume is concentrated in a few terms | Keyword Planner: crane and rigging services 1,600/mo · machinery movers 590 · rigging services 390 · millwright services 320 · medical equipment movers 210 · CNC movers 40 | Wave order follows volume, not alphabet |
 | `metros.json` cannot drive a medical matrix | Its `industry` field is written for manufacturing. Matching medical/pharma/biotech returns **1 of 88 metros**; energy returns 18, aerospace 14, auto 11, port/distribution 32 | Sector-matched waves need a **data enrichment step first** (§6). This is a real prerequisite, not a formality |
@@ -76,9 +78,15 @@ costs more than any naming gain.
 
 ## 4. Rigging expansion — three waves, ~850 pages
 
-### Wave 1 — shipped (352)
-`rigging` · `machinery-moving` · `plant-relocation` · `cnc-machine-movers`
-× all 88. No change except the §5 suburb upgrade.
+### Wave 1 — shipped (352), one matrix now failing its gate
+`rigging` (94% indexed) · `machinery-moving` (93%) · `plant-relocation` (75%)
+× all 88 — keep, plus the §5 suburb upgrade.
+
+**`cnc-machine-movers` is at 50% indexed and breaches the 40%-dark rule.**
+Under the standing policy it consolidates into its state hubs rather than
+expanding. It is also the thinnest-demand matrix in the set: "cnc machine
+movers" is 40/mo nationally. Consolidating it frees crawl budget for the
+waves below — which is the whole argument of §1 working in our favour.
 
 ### Wave 2 — volume-led (276 new)
 
@@ -243,7 +251,8 @@ has forgotten why.
 
 | Step | Gate to pass before the next |
 |---|---|
-| 0. `gsc-key.json` on this Mac | **Blocking everything below** |
+| 0. ~~`gsc-key.json` on this Mac~~ | ✅ **Done 2026-09-21** — key reissued, orphan revoked |
+| 0b. **Fix the existing 352 before adding any** | New, and now ranked first: 4 non-brand clicks against 9,979 impressions says the matrix underperforms where it already ranks. Titles, answer-position and internal links on the pages holding impressions at positions 15-70 |
 | 1. Sector + suburb data (§6) | Data review |
 | 2. Suburb coverage upgrade on existing 352 + 88 | Build verify green |
 | 3. Wave 2 (276 pages), one service at a time | 8 weeks, then §11 rule |
@@ -260,10 +269,9 @@ matrix defensible rather than reckless.
 
 ## 12. What needs Sam
 
-1. **`gsc-key.json` copied from the M2.** Third run flagging it. Without
-   Search Console there is no indexation baseline, no impression data to
-   promote suburbs on, no way to run the kill switch, and no honest way to
-   pick which metros go in wave 3. Everything here is gated on this one file.
+1. ~~`gsc-key.json` copied from the M2.~~ **Resolved 2026-09-21** — the M2 was
+   formatted, so the key was reissued from the surviving service account.
+   Search Console data is live and the numbers above are measured, not assumed.
 2. **Sign-off on demand-tiered over blanket.** All 15 rigging services get
    city coverage either way. The question is 850 justified pages vs 1,320
    uniform ones on an authority-constrained domain.
