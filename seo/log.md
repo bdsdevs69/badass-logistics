@@ -151,3 +151,82 @@ it needs Search Console access to be worth anything.
 
 **Next run:** `forklift-vs-crane-for-machine-loading` (pairs with the crane post
 shipped today, and that post wants the link back).
+
+
+---
+
+## 2026-09-21 — Search Console access restored + the stub fix it exposed
+
+Not a content run. The M2 was formatted, so `gsc-key.json` was gone for good —
+this was the run that got it back and then acted on what it showed.
+
+**Credential.** The service account survived the format: `badass-gsc-reader@…`
+was still on the property with Full permission, so this was a key reissue, not
+a rebuild. Installed gcloud, reissued the key into the repo root (gitignored,
+chmod 600), and deleted the orphaned 2026-07-12 key that the M2 had held —
+confirmed gone (IAM returns 404 on it, 200 on the new one). Both halves of
+`ping-search-engines.js` work now; `204 ✓ resubmitted` is the first successful
+Google sitemap submit since the M2 died. Google had last pulled the sitemap on
+2026-09-17 at 642 URLs, four days and 8 URLs stale. Details and the reissue
+one-liner are in `seo/routine.md`, which no longer tells the run to submit by
+hand. Full write-up in the GSC access memory.
+
+**First look at 90 days of data:**
+
+| | |
+|---|---|
+| sitemap URLs | 650 |
+| earning impressions | 504 (78%) |
+| earning zero | 146 (22%) |
+| clicks | 120 — **116 brand, 4 non-brand** |
+
+Service × city indexation, which the geo plan was gated on: rigging 94%,
+machinery-moving 93%, plant-relocation 75%, **cnc-machine-movers 50%**.
+Overall 78% against a 40%-dark kill switch, so wave 2 is cleared — but
+**cnc-machine-movers breaches the rule on its own** and under the standing
+policy gets consolidated into state hubs rather than expanded.
+
+**The real finding: 133 retired redirect stubs were pulling 6,879 impressions
+over 90 days**, led by `/blog/step-deck-vs-drop-deck-trailers` at 1,729 and
+`/services/heavy-haul` at 613. Every one of them was titled
+`Moved: /a → /b` — a debug string, served to searchers, guaranteeing 0% CTR.
+
+URL Inspection showed why the noindex on them wasn't helping: heavy-haul,
+multi-axle-transport and step-deck-vs-drop-deck-trailers all came back
+**"Submitted and indexed"** after crawls on 2026-09-06..12. The noindex was
+doing nothing except contradicting the canonical — noindex says drop this URL,
+canonical says fold it into that one, and the noindex blocks the consolidation
+the canonical exists to get.
+
+Fixed in `build-redirects.js`: stubs now inherit the destination's title and
+description, keep the canonical and the instant meta refresh, and carry no
+robots directive. 149 stubs rewritten, verified live.
+
+**A theory I had that turned out wrong**, recorded so nobody re-runs it: the
+13 canonical targets showing zero impressions (project-freight, crane-services,
+heavy-lift-rigging, truck-dispatch, dedicated-lanes) looked like noindex
+contamination bleeding into live pages. It wasn't — `git log` shows every one
+of them was created 2026-09-17, so the 90-day window covers a single day of
+their existence. URL Inspection confirms all five are indexed and healthy.
+
+**Verify:** full `node build.js` after the change, all checks passed —
+67,807 internal links 0 broken, 661 pages 0 duplicate titles, sitemap 650 URLs
+0 bad, 149 stubs intact. `build.js` itself needed no change: its verify already
+excludes stubs at line 69. I patched it first on a misreading and reverted.
+
+**Checks:** all four sample stubs live with the destination's title, no
+noindex, description present. Controls (`/services/project-freight`,
+`/services/rigging/detroit-mi`, `/blog/how-to-move-a-compressor`) all 200 and
+unchanged. Sitemap still 650 with zero stubs in it. IndexNow 200 on the 16
+highest-impression stubs; sitemap resubmitted, Google now reading 650 URLs.
+
+**Worth Sam's attention:**
+- **4 non-brand clicks out of 120.** 9,979 impressions in 28 days converting
+  almost entirely on brand. That is a position-and-CTR problem, not a coverage
+  problem, and it argues for fixing what exists before building wave 2.
+- **Savannah and Charleston are a genuine unserved cluster** — "rigging
+  contractors savannah ga" 139 impressions at position 23, and a dozen more
+  like it. Those pages exist and rank on page 2-3.
+- **Retired heavy-haul demand is still substantial** — oversize/overweight/
+  multi-axle queries across Minneapolis, Detroit, Indiana, Phoenix, Pittsburgh.
+  Deliberately not served. Noting it, not chasing it.
