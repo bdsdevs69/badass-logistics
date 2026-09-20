@@ -128,12 +128,26 @@ once in a sentence, unlinked.
 
 **Plan:**
 
-1. **Expand `near` to 20–30 industrial suburbs per metro** (813 → ~2,000).
-   Chosen for industrial parks and corridors, not population. Sterling
-   Heights and Livonia earn their place in Detroit; Birmingham does not.
-2. **Render a real coverage table** on every T3 and T2 page — suburb, county,
-   and the industrial driver in one line. The leader's 28-row table is the
-   benchmark; the extra column beats it.
+1. ✅ **Done 2026-09-21. `near` expanded 813 → 1,682**, curated-first then
+   topped up from GeoNames within 50 miles of each metro's own coordinates.
+   88/88 metros resolved.
+2. ✅ **Coverage table shipped** on every T3 and T2 page — town, county,
+   distance. 1,673 of 1,682 rows carry a real county, 1,676 a real distance.
+
+   **Amendment, from doing it:** this section originally promised "the
+   industrial driver" as a third column per suburb. That is not obtainable
+   from any dataset — it is editorial knowledge — and writing 1,682 of them
+   would be precisely the scaled-content fabrication §1 argues against. The
+   column is town / county / distance, all verifiable. The industrial driver
+   stays at metro level, where it is researched and true.
+
+   **The other thing doing it taught:** ranking suburbs by residential
+   population reproduced only **77%** of the hand-curated list, and the
+   misses were the most important entries. City of Industry and Vernon have
+   a few hundred residents each and are two of the densest industrial zones
+   in the country; Fife and Sumner near Seattle are warehouse towns. Curation
+   encodes industrial relevance that population actively hides. So curated
+   entries lead and keep their order, and data only tops up behind them.
 3. **Add an H2 per city page: "Rigging in the {Metro} suburbs"** — ~150 words
    naming the actual corridors and parks, not a list re-flowed into prose.
    This is what makes suburb queries land on the city page.
@@ -158,9 +172,10 @@ The sector-matched waves are only defensible if the sector data is real.
 1. **Add `sectors: []` to every metro in `metros.json`** — multi-valued, from
    real anchors (health systems, universities, data-centre campuses, print
    plants, utility service territories). The current single `industry` string
-   returns 1 medical metro out of 88 and cannot carry wave 3.
-2. **Rebuild `near` lists** to 20–30 industrial suburbs per metro with county
-   and driver.
+   returns 1 medical metro out of 88 and cannot carry wave 3. **Still open —
+   this is now the blocker on wave 3**, and unlike the suburb lists it cannot
+   be derived from a public dataset. It needs research per metro.
+2. ✅ **`near` lists rebuilt** — 1,682 towns with real county and distance.
 3. **Per-service equipment vocabularies** so a `transformer-generator-rigging`
    page in Houston reads differently from one in Pittsburgh — the uniqueness
    engine already does this for 4 services and needs 11 more.
@@ -253,8 +268,9 @@ has forgotten why.
 |---|---|
 | 0. ~~`gsc-key.json` on this Mac~~ | ✅ **Done 2026-09-21** — key reissued, orphan revoked |
 | 0b. **Fix the existing 352 before adding any** | New, and now ranked first: 4 non-brand clicks against 9,979 impressions says the matrix underperforms where it already ranks. Titles, answer-position and internal links on the pages holding impressions at positions 15-70 |
-| 1. Sector + suburb data (§6) | Data review |
-| 2. Suburb coverage upgrade on existing 352 + 88 | Build verify green |
+| ~~1. Suburb data (§6.2)~~ | ✅ **Done 2026-09-21** — 1,682 towns, real county + distance |
+| ~~2. Suburb coverage upgrade on existing 352 + 88~~ | ✅ **Done 2026-09-21** — table live on all 440 pages |
+| 1b. Sector data (§6.1) — **now the wave 3 blocker** | Needs per-metro research; no dataset supplies it |
 | 3. Wave 2 (276 pages), one service at a time | 8 weeks, then §11 rule |
 | 4. Wave 3 (225 pages), sector-matched | 8 weeks, then §11 rule |
 | 5. Suburb promotions | Only on proven impressions |

@@ -305,3 +305,59 @@ argues anyway. Say so in the log rather than retitling again.
 indexed and breaches the 40%-dark rule, so under the standing policy it should
 fold into its state hubs — but that removes 88 live pages and is Sam's call, not
 a routine action. Flagged, not executed.
+
+
+---
+
+## 2026-09-21 — steps 1 & 2: the sub-city tier, without sub-city pages
+
+Sam's original ask was "all the sub cities". The market leader on this model
+builds none of them — it lists 28 suburbs in a table on the city page, linked
+to Google Maps — so this does the same thing with better data and no new URLs.
+
+**`data/locations.json` `near`: 813 bare strings → 1,682 objects** carrying a
+real county and a real distance. Source is GeoNames (2.24M US records), 50-mile
+radius from each metro's own coordinates. 88/88 metros resolved. 1,673 of 1,682
+rows have a county, 1,676 have a distance.
+
+**The sanity check earned its keep.** My first pass ranked suburbs by
+residential population and reproduced only **77%** of the existing hand-curated
+list. The 23% it missed were the entries that matter most: City of Industry and
+Vernon (a few hundred residents each, two of the densest industrial zones in
+the country), Santa Fe Springs, Carson, Fife and Sumner near Seattle. Population
+is a bad proxy for industrial relevance — it actively hides the industrial
+suburbs, because nobody lives in them. Rebuilt so **curation leads and keeps its
+order**, with GeoNames topping up behind it: 807 curated entries enriched, 6
+kept as-is where GeoNames had no record, 869 added.
+
+**Amended my own plan while doing it.** §5 promised "the industrial driver" as a
+column per suburb. No dataset supplies that — it is editorial knowledge, and
+writing 1,682 of them would be exactly the fabrication §1 of the plan argues
+against. The table is town / county / distance, all verifiable. The industrial
+driver stays at metro level where it is researched and true.
+
+**Shipped:** new `lib/places.js` so all five consumers format towns identically;
+coverage table on every service-city page and city hub; cross-state suburbs
+label correctly (Vancouver, WA under Portland); table styled in the graph-paper
+theme with `thead`/`tbody` and `scope="col"`. Detroit rigging 2,042 → 2,326 words.
+
+**Verify:** full `node build.js` green — 67,895 internal links 0 broken, 661
+pages 0 duplicate titles, sitemap still **650 URLs, zero new pages**. Live spot
+checks on 3 pages: 24 county rows each, CSS deployed.
+
+**Could not do:** a visual render check. Dev servers can't start in an
+unattended session and the preview pane would not load a standalone file, so
+the table was verified structurally instead — braces balanced, every selector
+matched against emitted markup, all CSS variables defined. **Worth a 10-second
+eyeball by Sam on any city page.**
+
+**Next blocker is different from what the plan assumed.** Suburb data came free
+from a public dataset. The `sectors: []` enrichment that wave 3 needs does not
+exist in any dataset — it is per-metro research (health systems, data-centre
+campuses, print plants, utility territories). That is now the wave 3 blocker,
+not the suburb lists.
+
+**Still deliberately not done:** the `cnc-machine-movers` consolidation. Beyond
+being Sam's call, consolidating it now would destroy the 2026-10-19 measurement
+baseline set in the retitle entry above — cnc is one arm of that live test and
+removing it mid-flight would make the result unreadable. Revisit after 10-19.
