@@ -95,7 +95,7 @@ for (const c of plan.campaigns) {
     row({ Campaign: c.name, Location: loc }, 'set');
   }
   for (const day of ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']) {
-    row({ Campaign: c.name, 'Ad Schedule': `${day} 6:00 AM 8:00 PM` }, 'set');
+    row({ Campaign: c.name, 'Ad Schedule': `${day} 7:00 AM 7:00 PM` }, 'set');
   }
 }
 
