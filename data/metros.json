@@ -121,5 +121,1898 @@
     { "rank": 115, "city": "Harrisburg",     "state": "PA", "region": "Northeast",     "tier": 3, "status": "queued", "industry": "logistics & manufacturing" },
     { "rank": 116, "city": "Fresno",         "state": "CA", "region": "West",          "tier": 3, "status": "queued", "industry": "ag processing & manufacturing" },
     { "rank": 117, "city": "Stockton",       "state": "CA", "region": "West",          "tier": 3, "status": "queued", "industry": "inland port & distribution" }
-  ]
+  ],
+  "_detailNote": "PER-METRO SUBSTANCE, researched 2026-09-21. This is the matrix differentiation fix. A service x city page runs ~1,550 words and the only per-city input used to be the 4-word 'industry' string above (Omaha: 'rail & ag manufacturing'), which measured the four city matrices at 31-32% page-specific content against a 33% floor, with 86-88 of 113 pages under it. build-service-cities.js now reads these fields and each service frames them in its own words - see METRO_COPY there, and note that each service deliberately draws a DIFFERENT mix so the same facts do not produce the same sentences across four pages for one city. Every value is a verifiable public fact: named industrial districts and parks, the Class I railroads that actually serve the metro, real navigable freight water access, the dominant industrial building stock. An absent field means the research could not confirm it - 'port' is absent for inland metros by design, and 15 metros have no 'stock'. NEVER add an unverified fact here: it lands on four live pages per metro, and an unverifiable claim repeated across 88 metros is worse than a generic one. Metros with no entry keep their previous page output byte-for-byte.",
+  "detail": {
+    "Houston|TX": {
+      "sectors": [
+        "petrochemical processing",
+        "oil and gas equipment fabrication",
+        "plastics and resin manufacturing",
+        "industrial valve and pipe fabrication"
+      ],
+      "corridors": [
+        "the Houston Ship Channel industrial corridor through Pasadena, Deer Park and Galena Park",
+        "the Baytown petrochemical complex",
+        "the Jacintoport Industrial District"
+      ],
+      "rail": "Served by Union Pacific, BNSF and CPKC, all interchanging through the Port Terminal Railroad Association switching network along the Ship Channel",
+      "port": "The Port of Houston on the Houston Ship Channel anchors the largest petrochemical complex in the Western Hemisphere, handling breakbulk, bulk and project cargo",
+      "stock": "heavy industrial process plants and tank farms along the Ship Channel built around fixed piping runs and pipe racks that constrain crane and rigging access",
+      "equipment": [
+        "pressure vessels and reactors",
+        "distillation columns",
+        "industrial valves and pumps",
+        "pipe fabrication equipment"
+      ]
+    },
+    "Chicago|IL": {
+      "sectors": [
+        "food processing and packaging",
+        "plastics injection molding",
+        "metal stamping and fabrication",
+        "printing and packaging equipment"
+      ],
+      "corridors": [
+        "the Kinzie Industrial Corridor near the Near West Side",
+        "the Pullman industrial district on the far South Side",
+        "the Little Village industrial corridor along the Sanitary and Ship Canal",
+        "the Calumet industrial area along Lake Calumet"
+      ],
+      "rail": "Served by BNSF, Union Pacific, CSX, Norfolk Southern, Canadian National and CPKC, with Chicago functioning as the largest rail interchange hub in North America",
+      "port": "The Illinois International Port District on Lake Calumet handles bulk and breakbulk cargo with access to the Great Lakes and, via the Illinois Waterway, the Mississippi River system",
+      "stock": "a mix of older multi-storey brick loft buildings in corridors like Kinzie and Little Village with tight column spacing and small freight elevators, alongside larger single-storey clear-span plants further from the core",
+      "equipment": [
+        "stamping presses",
+        "injection molding machines",
+        "packaging lines",
+        "CNC machining centers",
+        "material handling conveyors"
+      ]
+    },
+    "Detroit|MI": {
+      "sectors": [
+        "automotive stamping and body shops",
+        "tool-and-die and mold shops",
+        "Tier-1 and Tier-2 supplier plants",
+        "steel service centers"
+      ],
+      "corridors": [
+        "the Milwaukee Junction industrial district near downtown",
+        "the I-94 industrial corridor through Warren and Roseville",
+        "the Rouge complex in Dearborn",
+        "the Detroit Terminal Railroad district"
+      ],
+      "rail": "Served by CSX and Norfolk Southern, with Conrail Shared Assets switching the Detroit terminal district.",
+      "port": "The Port of Detroit on the Detroit River handles bulk and break-bulk cargo on the Great Lakes-St. Lawrence Seaway system.",
+      "stock": "a mix of older multi-storey brick shops with tight column spacing and larger mid-century single-storey stamping and assembly plants with clear-span bays",
+      "equipment": [
+        "stamping presses",
+        "die handling equipment",
+        "CNC machining centers",
+        "robotic weld cells"
+      ]
+    },
+    "Dallas|TX": {
+      "sectors": [
+        "electronics and telecom equipment manufacturing",
+        "aerospace component manufacturing",
+        "distribution and fulfillment logistics",
+        "food and beverage processing"
+      ],
+      "corridors": [
+        "the Great Southwest Industrial District spanning Arlington and Grand Prairie",
+        "the Alliance Logistics District anchored by BNSF's Alliance intermodal terminal in north Fort Worth",
+        "the DFW Airport logistics corridor"
+      ],
+      "rail": "Served by BNSF and Union Pacific, with BNSF's Alliance intermodal facility functioning as one of the largest inland rail ports in the country",
+      "stock": "large single-storey clear-span distribution and light-assembly buildings concentrated around Alliance and the Great Southwest District, built for dock-high trailer loading rather than heavy floor loads",
+      "equipment": [
+        "surface-mount electronics lines",
+        "CNC machining centers",
+        "injection molding machines",
+        "palletizers and conveyor systems"
+      ]
+    },
+    "Atlanta|GA": {
+      "sectors": [
+        "warehousing and distribution logistics",
+        "aerospace manufacturing",
+        "beverage bottling and processing"
+      ],
+      "corridors": [
+        "the Fulton Industrial Boulevard industrial corridor on the city's west side",
+        "the Norcross distribution and warehouse district in Gwinnett County",
+        "the Lockheed Martin aircraft assembly complex in Marietta",
+        "the CSX Fairburn Intermodal Terminal district south of the airport"
+      ],
+      "rail": "Served by CSX and Norfolk Southern, with CSX's Fairburn Intermodal Terminal and Norfolk Southern's Austell yard handling much of the metro's carload and intermodal traffic",
+      "stock": "a mix of large clear-span postwar distribution warehouses along Fulton Industrial Boulevard and older brick industrial buildings near the historic rail corridors east of downtown",
+      "equipment": [
+        "aircraft assembly and structural tooling",
+        "bottling and packaging lines",
+        "material handling and conveyor systems",
+        "warehouse racking and dock equipment"
+      ]
+    },
+    "Cleveland|OH": {
+      "sectors": [
+        "steel and metals processing",
+        "fabricated metal and forging shops",
+        "polymer and coatings manufacturing",
+        "industrial machinery and pump manufacturing"
+      ],
+      "corridors": [
+        "the Cuyahoga Valley industrial flats along the river",
+        "the Warehouse District near the Lake Erie waterfront",
+        "the Midtown Cleveland industrial corridor along Euclid Avenue",
+        "the Brooklyn/Steelyard industrial area south of downtown"
+      ],
+      "rail": "Served by CSX and Norfolk Southern, with on-dock switching in the Cuyahoga Valley flats handled by the Cleveland Commercial Railroad and the Flats Industrial Railroad",
+      "port": "The Port of Cleveland on the Cuyahoga River and Lake Erie handles bulk and breakbulk cargo on the Great Lakes-St. Lawrence Seaway system",
+      "stock": "century-old multi-storey brick mill buildings with tight column spacing in the Flats alongside newer clear-span steel plants further from the river, both constrained by narrow valley access roads and rail-adjacent loading",
+      "equipment": [
+        "overhead traveling cranes",
+        "electric arc furnaces and rolling mill stands",
+        "forging presses",
+        "CNC machining centers",
+        "industrial pumps and compressors"
+      ]
+    },
+    "Charlotte|NC": {
+      "sectors": [
+        "motorsports fabrication and race shop machine work",
+        "chemical manufacturing plants",
+        "big-box retail distribution and fulfillment centers",
+        "legacy textile and apparel finishing mills"
+      ],
+      "corridors": [
+        "the Motorsports Industrial Park in Concord",
+        "the Mooresville race shop cluster known as Race City USA",
+        "the Charlotte Inland Port district near NC 16 and I-85",
+        "the Washburn Switch Business Park along the CSX line"
+      ],
+      "rail": "Served by CSX and Norfolk Southern, with Norfolk Southern operating a major intermodal terminal near Charlotte Douglas International Airport",
+      "stock": "a mix of multi-storey brick textile mills converted to other uses and newer clear-span distribution and motorsports fabrication buildings along the I-85/I-77 corridor",
+      "equipment": [
+        "CNC machining centers and race-shop fabrication equipment",
+        "chemical process tanks and reactors",
+        "high-bay pallet racking and conveyor sortation systems",
+        "legacy textile finishing and dye equipment"
+      ]
+    },
+    "Indianapolis|IN": {
+      "sectors": [
+        "pharmaceutical manufacturing and distribution",
+        "automotive and diesel parts and components",
+        "aerospace and jet engine component manufacturing",
+        "intermodal freight and warehouse distribution"
+      ],
+      "corridors": [
+        "the CSX Avon Yard and I-70 West corridor through Plainfield and Avon",
+        "the Norfolk Southern Hawthorne Yard rail district",
+        "the Airport Cargo District near Indianapolis International Airport",
+        "the I-465 South industrial corridor"
+      ],
+      "rail": "Served by CSX and Norfolk Southern, with Canadian National also reaching the metro; CSX's Avon Yard and Norfolk Southern's Hawthorne Yard anchor the region's rail freight.",
+      "stock": "large clear-span single-storey distribution and warehouse buildings concentrated along the I-70 West corridor and near the airport",
+      "equipment": [
+        "pharmaceutical production and packaging equipment",
+        "CNC machining centers",
+        "jet engine assembly and test equipment",
+        "conveyor and sortation systems"
+      ]
+    },
+    "Columbus|OH": {
+      "sectors": [
+        "third-party logistics and distribution warehousing",
+        "food and beverage processing",
+        "plastics and rubber product manufacturing",
+        "steel service centers and metal fabrication"
+      ],
+      "corridors": [
+        "the Rickenbacker Global Logistics Park south of the city",
+        "the Southeast industrial submarket along I-270 and US-33",
+        "the Buckeye Yard rail-served industrial area"
+      ],
+      "rail": "Served by CSX, which operates Buckeye Yard, and Norfolk Southern, which runs the Rickenbacker Intermodal Terminal near Rickenbacker International Airport",
+      "stock": "large clear-span speculative distribution buildings with high dock-door counts near Rickenbacker alongside older lower-clearance manufacturing buildings closer to the urban core",
+      "equipment": [
+        "conveyor and sortation systems",
+        "forklifts and reach trucks",
+        "injection molding machines",
+        "extrusion lines",
+        "packaging and palletizing equipment"
+      ]
+    },
+    "Milwaukee|WI": {
+      "sectors": [
+        "heavy machinery and machine-tool manufacturing",
+        "industrial automation and controls",
+        "motorcycle and powersports manufacturing",
+        "food and beverage processing"
+      ],
+      "corridors": [
+        "the Menomonee Valley industrial corridor, historically known as the \"Machine Shop of the World\"",
+        "the Port of Milwaukee harbor district on Jones Island",
+        "the Muskego Yard rail corridor through the valley"
+      ],
+      "rail": "Served by Canadian Pacific Kansas City, operating through its Soo Line subsidiary, and Union Pacific's Milwaukee Subdivision, with CPKC's Muskego Yard switching much of the valley's freight",
+      "port": "The Port of Milwaukee on Lake Michigan handles bulk and breakbulk cargo including grain, salt and project cargo on the Great Lakes–St. Lawrence system",
+      "stock": "a mix of early-1900s multi-storey brick machine shops with tight column spacing in the Menomonee Valley and larger postwar single-storey plants with clear-span bays in the outer suburbs",
+      "equipment": [
+        "CNC machine tools",
+        "stamping presses",
+        "motorcycle assembly and paint-line equipment",
+        "industrial control-panel assembly lines"
+      ]
+    },
+    "Nashville|TN": {
+      "sectors": [
+        "automotive assembly and Tier supplier plants",
+        "big-box retail and parcel distribution centers",
+        "book and media distribution warehousing",
+        "healthcare product distribution centers"
+      ],
+      "corridors": [
+        "the Nissan assembly corridor along I-24 through La Vergne and Smyrna",
+        "the Elm Hill Pike industrial cluster near Nashville International Airport",
+        "the MetroCenter industrial park north of downtown",
+        "the Antioch industrial corridor south of the city"
+      ],
+      "rail": "Served by CSX and Norfolk Southern, with Norfolk Southern's Radnor Yard functioning as the metro's classification hub",
+      "stock": "dominated by large clear-span assembly and distribution buildings built from the 1980s onward, exemplified by the Nissan plant's multi-million-square-foot single-storey footprint, with little of the tight multi-storey mill stock found in older manufacturing cities",
+      "equipment": [
+        "stamping presses",
+        "robotic weld cells",
+        "paint-line conveyors",
+        "high-bay pallet racking and sortation conveyors"
+      ]
+    },
+    "Pittsburgh|PA": {
+      "sectors": [
+        "steel and metals fabrication",
+        "natural gas equipment manufacturing",
+        "robotics and advanced manufacturing"
+      ],
+      "corridors": [
+        "the Mon Valley steel corridor along the Monongahela River",
+        "the Neville Island industrial district",
+        "the Findlay Township industrial area near Pittsburgh International Airport"
+      ],
+      "rail": "Served by CSX and Norfolk Southern, with Norfolk Southern's Mon Line running the length of the Monongahela River corridor",
+      "port": "The Port of Pittsburgh spans more than 200 miles of navigable waterway across the Allegheny, Monongahela and Ohio rivers, moving bulk cargo including steel, coal and chemicals by barge",
+      "stock": "older multi-storey brick mill buildings in the river valleys with narrow street access, steep grades and limited crane clearance",
+      "equipment": [
+        "steel rolling and forming equipment",
+        "CNC machining centers",
+        "welding and fabrication equipment",
+        "material handling cranes"
+      ]
+    },
+    "Phoenix|AZ": {
+      "sectors": [
+        "semiconductor manufacturing",
+        "aerospace component manufacturing",
+        "electronics assembly",
+        "distribution and fulfillment logistics"
+      ],
+      "corridors": [
+        "the TSMC campus corridor along I-17 in north Phoenix",
+        "the Intel Ocotillo campus in Chandler",
+        "the West Valley industrial belt around Goodyear and Glendale"
+      ],
+      "rail": "Served by Union Pacific and BNSF, with BNSF developing its Logistics Park Phoenix intermodal project in the northwest Valley",
+      "stock": "newer large single-storey clear-span industrial and cleanroom buildings concentrated in the West Valley and Chandler, built with wide bays for semiconductor and logistics floor plans",
+      "equipment": [
+        "wafer fabrication and cleanroom equipment",
+        "CNC machining centers",
+        "surface-mount electronics lines",
+        "material handling conveyors"
+      ]
+    },
+    "Kansas City|MO": {
+      "sectors": [
+        "automotive final assembly and stamping",
+        "animal health and biosciences manufacturing",
+        "food processing and grain milling",
+        "engine and transmission manufacturing"
+      ],
+      "corridors": [
+        "the Ford Kansas City Assembly Plant complex in Claycomo",
+        "the GM Fairfax Assembly and Stamping Plant in Kansas City, Kansas",
+        "the Kansas City Animal Health Corridor",
+        "the West Bottoms warehouse district"
+      ],
+      "rail": "Served by BNSF, Union Pacific, Norfolk Southern and CPKC, anchored by BNSF's Argentine Yard, Union Pacific's Neff Yard and four intermodal terminals across the metro",
+      "stock": "large-footprint single-storey stamping and final-assembly plants in the automotive corridors alongside older multi-storey warehouse buildings in the historic West Bottoms district",
+      "equipment": [
+        "stamping presses",
+        "robotic weld cells",
+        "engine and transmission machining lines",
+        "bulk grain handling and milling equipment",
+        "biologics and animal health process equipment"
+      ]
+    },
+    "St. Louis|MO": {
+      "sectors": [
+        "aerospace and defense manufacturing",
+        "automotive assembly plants",
+        "brewing and food and beverage processing",
+        "chemical and agri-science manufacturing",
+        "stainless steel process equipment fabrication"
+      ],
+      "corridors": [
+        "the Earth City Industrial area near the Missouri River",
+        "America's Central Port and River's Edge Business Park in Granite City, Illinois",
+        "the Kelsey Business & Technology Park",
+        "the St. Louis riverfront port district along the Mississippi"
+      ],
+      "rail": "Served by BNSF, Union Pacific, Norfolk Southern, CSX, Canadian National and CPKC (formerly Kansas City Southern), with the Terminal Railroad Association of St. Louis switching the terminal district",
+      "port": "St. Louis sits at the confluence of the Mississippi, Missouri and Illinois rivers and hosts the nation's second-largest inland port by tonnage, with barge terminals along the riverfront and at America's Central Port in Granite City, Illinois",
+      "stock": "large single-storey aerospace and automotive assembly plants alongside older multi-storey brick industrial buildings near the riverfront with tighter dock access",
+      "equipment": [
+        "aircraft assembly jigs and tooling",
+        "stamping presses",
+        "brewing and packaging line equipment",
+        "chemical process vessels",
+        "CNC machining centers"
+      ]
+    },
+    "Denver|CO": {
+      "sectors": [
+        "aerospace and satellite manufacturing",
+        "craft brewing and beverage production",
+        "petroleum refining",
+        "food processing and cold storage distribution"
+      ],
+      "corridors": [
+        "the Waterton Canyon aerospace campus in Jefferson County",
+        "the Centennial Airport aerospace corridor in Arapahoe County",
+        "the Commerce City refining and rail district north of downtown",
+        "the Globeville and Elyria-Swansea industrial corridor along the South Platte River"
+      ],
+      "rail": "Served by BNSF and Union Pacific, each operating an intermodal yard in the metro — BNSF's 31st Street Yard and Union Pacific's North Yard",
+      "stock": "a mix of century-old brick and heavy-timber industrial buildings in the Globeville and Elyria-Swansea corridor with rail spurs and narrow bays, and newer clear-span distribution buildings along the I-70 and I-76 corridors",
+      "equipment": [
+        "satellite and spacecraft assembly tooling",
+        "brewing and fermentation vessels",
+        "refinery process equipment",
+        "cold storage and food processing machinery"
+      ]
+    },
+    "Minneapolis|MN": {
+      "sectors": [
+        "medical device manufacturing and contract sterilization",
+        "grain milling and food processing",
+        "industrial electronics and controls",
+        "outdoor power and turf equipment manufacturing"
+      ],
+      "corridors": [
+        "the Medical Alley device-manufacturing cluster centered on Fridley",
+        "the Midway industrial district straddling Minneapolis and St. Paul",
+        "the Mississippi riverfront milling and grain-processing district"
+      ],
+      "rail": "Served by BNSF, Union Pacific, Canadian Pacific Kansas City and Canadian National, with BNSF's Midway Terminal switching much of the metro's carload traffic",
+      "port": "The Port of Minneapolis/St. Paul on the Mississippi River handles barge shipments of grain, aggregates and other bulk commodities",
+      "stock": "a mix of postwar single-storey suburban plants in Fridley and Eagan with clear-span bays alongside older multi-storey brick mill buildings along the riverfront with narrow freight elevators and tight floor plates",
+      "equipment": [
+        "cleanroom device-assembly lines",
+        "sterilization and packaging equipment",
+        "CNC machining centers",
+        "grain milling and conveying equipment",
+        "stamping presses"
+      ]
+    },
+    "Louisville|KY": {
+      "sectors": [
+        "chemical and synthetic materials manufacturing",
+        "parcel and logistics distribution",
+        "home appliance manufacturing",
+        "bulk commodity transloading"
+      ],
+      "corridors": [
+        "the Rubbertown chemical manufacturing district along the Ohio River in west Louisville",
+        "the Park Hill industrial corridor near the city center",
+        "the Jefferson Riverport International industrial park near the airport"
+      ],
+      "rail": "Served by CSX, Norfolk Southern and the regional Paducah & Louisville Railway, all of which reach the Louisville Riverport terminal on the Ohio River",
+      "port": "The Louisville Riverport Authority on the Ohio River operates a bulk terminal transferring coal, grain, fertilizer and potash between barge, rail and truck, and is one of the few U.S. inland sites served directly by three railroads",
+      "stock": "large single-storey chemical processing plants with tank farms in Rubbertown alongside older multi-storey industrial buildings in the Park Hill corridor with narrower floor plates",
+      "equipment": [
+        "process reactors and tank/vessel equipment",
+        "bulk material-handling conveyors",
+        "forklifts and rail car movers",
+        "packaging and palletizing lines"
+      ]
+    },
+    "San Antonio|TX": {
+      "sectors": [
+        "automotive assembly and stamping",
+        "automotive drivetrain and axle component manufacturing",
+        "aircraft maintenance and modification",
+        "military depot-level maintenance and logistics"
+      ],
+      "corridors": [
+        "the Port San Antonio campus and East Kelly Railport on the city's south side",
+        "the automotive assembly and stamping campus on the far south side",
+        "the Interstate 10/Interstate 35 interchange industrial corridor"
+      ],
+      "rail": "Served by BNSF Railway and Union Pacific, with direct rail switching into the East Kelly Railport at Port San Antonio from Union Pacific's South San Yard",
+      "stock": "a mix of large clear-span automotive assembly and stamping buildings on the far south side and older single-storey hangar and shop buildings at the former Kelly Air Force Base now part of Port San Antonio",
+      "equipment": [
+        "stamping presses",
+        "vehicle assembly line robotics",
+        "aircraft engine and airframe overhaul equipment",
+        "CNC machining centers",
+        "railcar transload and handling equipment"
+      ]
+    },
+    "Memphis|TN": {
+      "sectors": [
+        "distribution and air-cargo logistics",
+        "food and agricultural processing",
+        "chemical manufacturing",
+        "agricultural equipment manufacturing"
+      ],
+      "corridors": [
+        "the Frank C. Pidgeon Industrial Park on President's Island",
+        "the Memphis International Airport air-cargo corridor",
+        "the President's Island Mississippi River industrial district"
+      ],
+      "rail": "Served by BNSF, Union Pacific, Canadian National, CSX and Norfolk Southern, making Memphis one of only a few US metros with five Class I railroads, with Canadian National operating its second-largest classification yard in the country here",
+      "port": "The Port of Memphis on the Mississippi River at President's Island is one of the largest inland ports in the country, handling bulk grain, fertilizer and industrial cargo by barge",
+      "stock": "large single-storey clear-span distribution buildings around the airport corridor alongside older industrial buildings on President's Island built around barge and rail-served docks",
+      "equipment": [
+        "material handling conveyors",
+        "palletizers and sortation equipment",
+        "food processing lines",
+        "grain and bulk handling equipment"
+      ]
+    },
+    "Los Angeles|CA": {
+      "sectors": [
+        "apparel and textile manufacturing",
+        "aerospace component manufacturing",
+        "food and beverage processing",
+        "furniture and cabinetry manufacturing"
+      ],
+      "corridors": [
+        "the Vernon industrial district south of downtown",
+        "the City of Industry business park in the San Gabriel Valley",
+        "the Alameda Corridor rail belt through Commerce and Carson",
+        "the harbor-area industrial district near the ports"
+      ],
+      "rail": "Served by BNSF and Union Pacific, both routed through the Alameda Corridor rail expressway connecting the San Pedro Bay ports to the transcontinental rail yards near downtown",
+      "port": "The adjoining Port of Los Angeles and Port of Long Beach form the busiest container port complex in the country, handling containerized and breakbulk cargo",
+      "stock": "older multi-tenant industrial buildings in Vernon and Commerce with tight column spacing, low dock heights and narrow street access built long before modern trailer traffic",
+      "equipment": [
+        "industrial sewing and cutting equipment",
+        "CNC machining centers",
+        "injection molding machines",
+        "food processing lines"
+      ]
+    },
+    "Seattle|WA": {
+      "sectors": [
+        "aerospace manufacturing and final assembly",
+        "maritime and shipbuilding operations",
+        "commercial fishing fleet support and seafood processing",
+        "electronics and precision manufacturing"
+      ],
+      "corridors": [
+        "the Greater Duwamish Manufacturing and Industrial Center along the Duwamish River, including the SODO and Georgetown areas",
+        "the Ballard-Interbay Northend manufacturing and industrial area",
+        "Fisherman's Terminal on Salmon Bay, home port to the nation's largest fishing fleet"
+      ],
+      "rail": "Served by BNSF, whose SIG Yard sits in the SODO area of the Duwamish industrial district and connects to Port of Seattle cargo terminals.",
+      "port": "The Port of Seattle operates container and cargo terminals on Elliott Bay and along the Duwamish River waterway as part of the Puget Sound gateway to Asia-Pacific trade.",
+      "stock": "a mix of early-20th-century brick and heavy-timber warehouses near the waterfront with tight column spacing and low dock heights, and newer clear-span industrial buildings further south along the Duwamish",
+      "equipment": [
+        "aircraft assembly jigs and tooling",
+        "shipyard cranes and dry-dock equipment",
+        "commercial fish-processing and flash-freezing equipment",
+        "CNC machining centers"
+      ]
+    },
+    "Portland|OR": {
+      "sectors": [
+        "semiconductor and electronics manufacturing",
+        "athletic footwear and apparel distribution",
+        "metal fabrication and machine shops",
+        "food and beverage processing",
+        "timber and wood products manufacturing"
+      ],
+      "corridors": [
+        "the Rivergate Industrial District at the confluence of the Columbia and Willamette Rivers",
+        "the Swan Island Industrial Park close to downtown",
+        "the Columbia Corridor running 18 miles along the Columbia River to the Troutdale Industrial District",
+        "the Silicon Forest technology corridor around Hillsboro"
+      ],
+      "rail": "Served by BNSF and Union Pacific, both of which cross the Rivergate Industrial District and connect to the Port of Portland's marine terminals.",
+      "port": "The Port of Portland operates marine terminals on the Willamette and Columbia Rivers, including the Terminal 6 container facility and the Terminal 5 bulk terminal in the Rivergate district.",
+      "equipment": [
+        "semiconductor wafer-fab and cleanroom equipment",
+        "CNC machining centers",
+        "commercial food-processing and cold-storage lines",
+        "sawmill and wood-planing equipment"
+      ]
+    },
+    "Birmingham|AL": {
+      "sectors": [
+        "steel and iron foundry manufacturing",
+        "pipe and tubular products manufacturing",
+        "cast-iron and metal fabrication",
+        "industrial machinery manufacturing"
+      ],
+      "corridors": [
+        "the US Steel Fairfield Works steel complex",
+        "the historic Ensley industrial district",
+        "the CSX Boyles Yard rail corridor",
+        "Port Birmingham on the Locust Fork of the Black Warrior River"
+      ],
+      "rail": "Served by CSX (Boyles Yard), Norfolk Southern (Norris Yard) and BNSF interchange through the Birmingham Terminal Railway",
+      "port": "Port Birmingham, on the Locust Fork of the Black Warrior River in northwestern Jefferson County, is a rail-served barge terminal moving steel, aggregates and other bulk materials toward Mobile and the Gulf",
+      "stock": "a legacy of large single-storey steel mill and foundry buildings with heavy crane bays alongside older multi-storey industrial buildings in the Ensley and Fairfield districts",
+      "equipment": [
+        "foundry and casting equipment",
+        "pipe-forming and tubular mills",
+        "overhead cranes and heavy material handling equipment",
+        "steel cutting and fabrication equipment"
+      ]
+    },
+    "New Orleans|LA": {
+      "sectors": [
+        "bulk grain and agricultural export handling",
+        "coffee import and roasting warehousing",
+        "large-scale aerospace structure fabrication",
+        "steel and heavy-lift break-bulk cargo handling"
+      ],
+      "corridors": [
+        "the Michoud industrial corridor in New Orleans East, anchored by NASA's Michoud Assembly Facility",
+        "the Almonaster Avenue industrial corridor near the Inner Harbor Navigation Canal",
+        "the Chalmette refining district downriver in St. Bernard Parish",
+        "the Napoleon Avenue container terminal district along the Mississippi River"
+      ],
+      "rail": "Served by BNSF, Canadian National, CSX, Norfolk Southern, Union Pacific and CPKC, switched through the New Orleans Public Belt Railroad",
+      "port": "The Port of New Orleans handles bulk grain, coffee, steel and containerized cargo on the Mississippi River, including through its Napoleon Avenue Container Terminal",
+      "stock": "a mix of century-old riverfront wharf warehouses with rail spurs and elevated dock platforms against flooding, and newer single-storey pre-engineered buildings in the eastern industrial corridor",
+      "equipment": [
+        "grain elevator conveying equipment",
+        "coffee roasting and bagging lines",
+        "large-diameter tank and cylinder assembly tooling",
+        "dockside gantry cranes"
+      ]
+    },
+    "Oklahoma City|OK": {
+      "sectors": [
+        "aircraft maintenance, repair and overhaul",
+        "oil and gas equipment manufacturing",
+        "livestock and cattle marketing"
+      ],
+      "corridors": [
+        "the Tinker Air Force Base and Oklahoma City Air Logistics Complex on the city's southeast side",
+        "the BNSF logistics hub east of Flynn Yard",
+        "the Oklahoma National Stockyards district in historic Stockyards City"
+      ],
+      "rail": "Served by BNSF and Union Pacific, with interchange at BNSF's North Yard and a logistics hub east of BNSF's Flynn Yard",
+      "stock": "a mix of large clear-span hangar and depot buildings on the Tinker Air Force Base complex and older single-storey stockyard and warehouse buildings with limited dock heights near Stockyards City",
+      "equipment": [
+        "aircraft engine and airframe overhaul equipment",
+        "oilfield equipment fabrication machinery",
+        "livestock handling equipment",
+        "CNC machining centers"
+      ]
+    },
+    "Salt Lake City|UT": {
+      "sectors": [
+        "medical device manufacturing",
+        "aerospace and precision-machined components",
+        "mining and mineral-processing equipment",
+        "outdoor-gear and apparel manufacturing"
+      ],
+      "corridors": [
+        "the Redwood Road Industrial District",
+        "the Beck Street Industrial District",
+        "the Union Pacific-developed Pioneer Business Park and Centennial Business Park on the west side",
+        "the Salt Lake City intermodal terminal district tied to the Utah Inland Port"
+      ],
+      "rail": "Served by Union Pacific and BNSF, both routing through Salt Lake City's west-side rail-served industrial districts and the Salt Lake City intermodal terminal",
+      "stock": "a mix of older Union Pacific-era single-storey industrial buildings across the west-side rail districts alongside newer distribution buildings built around the inland port",
+      "equipment": [
+        "CNC machining centers",
+        "mining and mineral-processing equipment",
+        "cleanroom medical-device assembly lines",
+        "packaging and sterilization equipment"
+      ]
+    },
+    "Philadelphia|PA": {
+      "sectors": [
+        "pharmaceutical manufacturing",
+        "food processing",
+        "shipbuilding and marine fabrication",
+        "chemical processing"
+      ],
+      "corridors": [
+        "the Philadelphia Navy Yard redevelopment south of the city",
+        "the Tacony-Bridesburg-Kensington riverfront industrial belt",
+        "PhilaPort's Southport terminal district"
+      ],
+      "rail": "Served by CSX and Norfolk Southern, with a CSX intermodal yard and Norfolk Southern trackage both adjoining PhilaPort's Delaware River terminals",
+      "port": "PhilaPort on the Delaware River handles containerized, breakbulk and auto import-export cargo",
+      "stock": "older multi-storey brick industrial buildings along the Kensington and Port Richmond riverfront with tight column spacing and small freight elevators, alongside newer single-storey buildings at the Navy Yard",
+      "equipment": [
+        "pharmaceutical process and packaging equipment",
+        "food processing lines",
+        "marine fabrication equipment",
+        "CNC machining centers"
+      ]
+    },
+    "Baltimore|MD": {
+      "sectors": [
+        "automobile import/export and roll-on/roll-off processing",
+        "coal export",
+        "chemical and petroleum processing",
+        "warehousing and e-commerce distribution"
+      ],
+      "corridors": [
+        "the Tradepoint Atlantic complex at Sparrows Point",
+        "the Fairfield and Curtis Bay chemical and petroleum district",
+        "the Dundalk Marine Terminal port district"
+      ],
+      "rail": "Served by CSX and Norfolk Southern, with the short-line Canton Railroad switching port terminals and CSX operating the Curtis Bay coal piers.",
+      "port": "The Port of Baltimore is the nation's largest automobile import/export and roll-on/roll-off port on the East Coast, with deep-water terminals including Dundalk Marine Terminal and the redeveloped Sparrows Point site.",
+      "stock": "large former heavy-industrial buildings at the Sparrows Point site now repurposed into big-box distribution space, alongside older chemical and petroleum tank farms in Fairfield and Curtis Bay",
+      "equipment": [
+        "roll-on/roll-off vehicle handling equipment",
+        "coal loading and bulk material handling equipment",
+        "chemical processing and storage tank equipment",
+        "conveyor and sortation systems"
+      ]
+    },
+    "New York|NY": {
+      "sectors": [
+        "wholesale food distribution",
+        "garment cutting and sample production",
+        "film and television production",
+        "metal fabrication and structural steel"
+      ],
+      "corridors": [
+        "the Hunts Point Food Distribution Center and industrial park in the South Bronx",
+        "the Bush Terminal / Industry City waterfront industrial complex in Sunset Park, Brooklyn",
+        "the Maspeth Industrial Business Zone in western Queens"
+      ],
+      "rail": "Served by CSX and Norfolk Southern through the New York New Jersey Rail car-float operation across Upper New York Bay between Jersey City and Brooklyn",
+      "port": "The Port of New York and New Jersey is the largest container port on the US East Coast",
+      "stock": "a mix of early-20th-century multi-storey loft and warehouse buildings with narrow freight elevators and low dock clearances in Sunset Park and Maspeth, alongside single-storey market and cold-storage buildings at Hunts Point",
+      "equipment": [
+        "refrigeration and cold-storage systems",
+        "produce and meat-market handling equipment",
+        "garment cutting and pattern equipment",
+        "structural steel fabrication equipment"
+      ]
+    },
+    "Boston|MA": {
+      "sectors": [
+        "biotechnology and pharmaceutical manufacturing",
+        "seafood processing and cold storage",
+        "wholesale produce distribution",
+        "commercial printing and publishing"
+      ],
+      "corridors": [
+        "the Chelsea and Everett industrial district south of Route 16, anchored by the New England Produce Center",
+        "the Grand Junction Railroad corridor linking Allston, Cambridge, Charlestown, Everett and Chelsea",
+        "the Conley Terminal container-port district in South Boston"
+      ],
+      "rail": "Served by CSX, with the Grand Junction line providing the primary active freight connection into the Boston-area industrial waterfront",
+      "port": "The Port of Boston's Conley Terminal in South Boston is New England's largest full-service container terminal",
+      "stock": "a mix of dense multi-storey brick mill buildings in Chelsea and Everett with narrow loading bays and older waterfront warehouses with low dock clearances",
+      "equipment": [
+        "bioreactors and cleanroom process skids",
+        "refrigeration and cold-storage equipment",
+        "printing presses",
+        "seafood processing lines"
+      ]
+    },
+    "Jacksonville|FL": {
+      "sectors": [
+        "port logistics and vehicle import/export processing",
+        "naval and commercial ship repair",
+        "aviation and aerospace maintenance"
+      ],
+      "corridors": [
+        "the Blount Island vehicle import/export terminal",
+        "the Cecil Commerce Center on the former Cecil Field Naval Air Station",
+        "Imeson Industrial Park near the airport",
+        "the Talleyrand Marine Terminal rail-served port district"
+      ],
+      "rail": "Served by CSX and Norfolk Southern, plus the regional Florida East Coast Railway, with on-dock rail at the Talleyrand Marine Terminal and near-dock rail at Dames Point.",
+      "port": "JAXPORT is one of the nation's top vehicle-handling ports, with the Blount Island Marine Terminal serving as one of the largest vehicle import/export centers in the United States.",
+      "equipment": [
+        "vehicle processing and staging equipment",
+        "ship repair shiplift and drydock equipment",
+        "aircraft maintenance and overhaul equipment",
+        "container handling cranes and yard equipment"
+      ]
+    },
+    "Miami|FL": {
+      "sectors": [
+        "apparel and fashion distribution",
+        "pharmaceutical and medical distribution",
+        "perishable produce and seafood import handling",
+        "aviation parts and MRO distribution"
+      ],
+      "corridors": [
+        "the Airport West industrial market around Beacon Lakes near Miami International Airport",
+        "the Doral and Medley warehouse district",
+        "the Hialeah rail yard district"
+      ],
+      "rail": "Served by CSX into the Hialeah freight yard, with the Florida East Coast Railway interchanging Norfolk Southern and CSX traffic through to PortMiami's on-dock rail yard",
+      "port": "PortMiami handles containerized and breakbulk cargo on Biscayne Bay, with on-dock rail service provided by the Florida East Coast Railway",
+      "stock": "predominantly older single-storey concrete tilt-wall and CBS warehouses on tight, narrow-lot parcels with shallow truck courts and lower clear heights than newer distribution stock",
+      "equipment": [
+        "conveyor sortation systems",
+        "cold storage and blast-freezer racking",
+        "aircraft engine and component test stands",
+        "pallet-wrapping and case-picking automation"
+      ]
+    },
+    "Charleston|SC": {
+      "sectors": [
+        "aerospace manufacturing and completions",
+        "automotive and commercial van assembly",
+        "port logistics and container distribution"
+      ],
+      "corridors": [
+        "the Palmetto Commerce Parkway corridor in North Charleston",
+        "Camp Hall Commerce Park in Ridgeville near the Volvo plant",
+        "the Boeing 787 campus at Charleston International Airport",
+        "the North Charleston Terminal port district"
+      ],
+      "rail": "Served by CSX and Norfolk Southern, which jointly own the North Charleston Terminal Company serving the port's rail yards.",
+      "port": "The Port of Charleston operates deep-water container terminals in North Charleston with direct CSX and Norfolk Southern rail service.",
+      "stock": "large modern clear-span distribution and assembly buildings with high ceiling clearances concentrated along the Palmetto Commerce Parkway corridor",
+      "equipment": [
+        "aircraft cabin completion and paint equipment",
+        "automotive and van body assembly equipment",
+        "container handling and yard equipment",
+        "conveyor and sortation systems"
+      ]
+    },
+    "Norfolk|VA": {
+      "sectors": [
+        "shipbuilding and ship repair",
+        "naval and defense equipment manufacturing",
+        "coal export and bulk terminal operations",
+        "container port and intermodal logistics"
+      ],
+      "corridors": [
+        "the Lambert's Point coal terminal district",
+        "the Norfolk International Terminals complex",
+        "the Virginia International Gateway in Portsmouth",
+        "the Norfolk Naval Shipyard and Naval Station Norfolk industrial waterfront"
+      ],
+      "rail": "Served by CSX and Norfolk Southern, both with on-dock rail service at the Norfolk International Terminals and Virginia International Gateway container terminals, and Norfolk Southern operating the Lambert's Point coal terminal",
+      "port": "The Port of Virginia's Hampton Roads terminals, including Norfolk International Terminals and Virginia International Gateway, are among the deepest container ports on the East Coast, and Norfolk Southern's Lambert's Point pier loads export coal directly onto ocean-going vessels",
+      "stock": "heavy waterfront industrial buildings built around shipyards and naval facilities, with dry docks, high-bay fabrication shops and rail-served pier structures rather than typical inland warehouse stock",
+      "equipment": [
+        "dry dock and ship-lift equipment",
+        "overhead gantry cranes",
+        "ship loaders and rotary railcar dumpers",
+        "welding and steel fabrication equipment for hull work"
+      ]
+    },
+    "Midland|TX": {
+      "sectors": [
+        "oilfield equipment manufacturing and repair",
+        "pressure pumping and well-completion equipment",
+        "drilling rig component fabrication",
+        "frac sand transload and proppant handling"
+      ],
+      "corridors": [
+        "the David Mims Business Park along I-20 west of Loop 250",
+        "the Loop 250 industrial strip encircling the city"
+      ],
+      "rail": "Served by Union Pacific along the former Texas and Pacific main line through the city",
+      "stock": "dominated by outdoor pipe and equipment laydown yards and pre-engineered metal fabrication shops with overhead bridge cranes for rig components, rather than multi-storey buildings",
+      "equipment": [
+        "workover and drilling rig components",
+        "pressure pumping units",
+        "wellhead and pipe fabrication equipment",
+        "frac sand transload equipment"
+      ]
+    },
+    "Sacramento|CA": {
+      "sectors": [
+        "food and beverage processing",
+        "ethanol and biofuel production",
+        "rocket propulsion and aerospace component manufacturing",
+        "building products manufacturing"
+      ],
+      "corridors": [
+        "McClellan Business Park, the former McClellan Air Force Base now switched by the Sacramento Valley Railroad",
+        "the historic Sacramento Railyards district near downtown",
+        "the Port of West Sacramento"
+      ],
+      "rail": "Served by Union Pacific and BNSF, with the short-line Sacramento Valley Railroad switching McClellan Business Park",
+      "port": "The Port of West Sacramento on the Sacramento Deep Water Ship Channel handles bulk cargo such as rice, cement and fertilizer, connecting to San Francisco Bay",
+      "stock": "a mix of former Air Force base warehouse buildings at McClellan Business Park and older rail-served industrial buildings near the historic Railyards district",
+      "equipment": [
+        "grain handling and rice-milling equipment",
+        "ethanol processing equipment",
+        "bulk material-handling and conveying equipment",
+        "precision CNC machining centers"
+      ]
+    },
+    "Bakersfield|CA": {
+      "sectors": [
+        "oilfield equipment and well-service operations",
+        "petroleum refining and distribution",
+        "almond and citrus packing and processing",
+        "produce cold storage and food processing"
+      ],
+      "corridors": [
+        "the 7th Standard Road industrial corridor in northwest Bakersfield, anchored by the rail-served Rosedale Ranch site",
+        "the Kern River oil field district north-northeast of the city",
+        "the rail-served corridor running through southeast Bakersfield along the parallel BNSF and Union Pacific lines"
+      ],
+      "rail": "Served by BNSF and Union Pacific, which run roughly parallel through Kern County along SR 43 and SR 99 and interchange with the short-line San Joaquin Valley Railroad at Bakersfield.",
+      "equipment": [
+        "oilfield pump jacks and wellhead equipment",
+        "hydraulic well-service rigs",
+        "almond hulling and shelling lines",
+        "packing-house conveyors and sorters"
+      ]
+    },
+    "Spokane|WA": {
+      "sectors": [
+        "medical and dental equipment manufacturing",
+        "wood and paper products manufacturing",
+        "metals fabrication and machining",
+        "aerospace component manufacturing",
+        "food and agribusiness processing"
+      ],
+      "corridors": [
+        "the West Plains industrial area near Spokane International Airport",
+        "the Spokane Valley industrial corridor between Interstate 90 and State Route 290",
+        "the Spokane Business & Industrial Park in Spokane Valley"
+      ],
+      "rail": "Served by BNSF Railway and Union Pacific, both running mainlines through the Spokane Valley industrial corridor with local spur access",
+      "stock": "a mix of new clear-span warehouse buildings recently built on the West Plains and older postwar single-storey industrial buildings in the Spokane Valley corridor",
+      "equipment": [
+        "CNC machining centers",
+        "medical and dental device assembly equipment",
+        "wood processing and planing equipment",
+        "metal fabrication and welding equipment",
+        "aerospace tooling and fixtures"
+      ]
+    },
+    "Boise|ID": {
+      "sectors": [
+        "semiconductor memory-chip manufacturing",
+        "potato and frozen-food processing",
+        "wood products and building-materials manufacturing"
+      ],
+      "corridors": [
+        "the Micron Technology semiconductor campus on the city's southeast side",
+        "the Nampa rail-served industrial corridor along Union Pacific's Boise Branch"
+      ],
+      "rail": "Served by Union Pacific, whose Boise Branch runs from Nampa to Boise Airport with a classification yard at Nampa",
+      "stock": "a mix of large single-storey high-clearance semiconductor fabrication buildings on the Micron campus and older low-rise food-processing and warehouse buildings along the rail corridor",
+      "equipment": [
+        "semiconductor wafer-fabrication and cleanroom equipment",
+        "food processing and freezing equipment",
+        "grain and potato handling conveyors",
+        "wood products manufacturing equipment"
+      ]
+    },
+    "Las Vegas|NV": {
+      "sectors": [
+        "gaming and casino equipment manufacturing",
+        "plastics and chemical processing",
+        "food and beverage processing",
+        "warehousing and logistics distribution"
+      ],
+      "corridors": [
+        "the Henderson Industrial Park, served by the city-owned BMI Branch rail spur",
+        "the Apex Industrial Park north of the city off Interstate 15"
+      ],
+      "rail": "Served by Union Pacific, whose original Los Angeles–Salt Lake City main line runs through the valley with dedicated spurs into Henderson Industrial Park and Apex Industrial Park",
+      "stock": "large-format distribution and logistics buildings concentrated in the Henderson and Apex industrial parks, built around rail spur access rather than an older urban industrial core",
+      "equipment": [
+        "injection-molding and plastics-processing equipment",
+        "chemical mixing and packaging equipment",
+        "gaming-machine assembly equipment",
+        "palletizing and material-handling equipment"
+      ]
+    },
+    "Albuquerque|NM": {
+      "sectors": [
+        "semiconductor and microelectronics fabrication",
+        "aerospace and defense engineering",
+        "national laboratory and nuclear research support"
+      ],
+      "corridors": [
+        "the Intel semiconductor campus in nearby Rio Rancho",
+        "the Sandia National Laboratories and Kirtland Air Force Base research complex on the city's southeast side",
+        "the Mesa del Sol industrial and aerospace development near the Sunport"
+      ],
+      "rail": "Served by BNSF along its Southern Transcon main line through the metro",
+      "stock": "a mix of single-storey high-bay semiconductor fabrication buildings in Rio Rancho alongside low-rise research and hangar buildings on the Kirtland Air Force Base and Sandia complex",
+      "equipment": [
+        "semiconductor wafer-fabrication tools",
+        "cleanroom HVAC and gas-handling systems",
+        "precision test and measurement equipment",
+        "aerospace tooling and hangar support equipment"
+      ]
+    },
+    "Omaha|NE": {
+      "sectors": [
+        "meatpacking and food processing",
+        "grain handling and agribusiness",
+        "railroad equipment and railcar maintenance",
+        "cold-chain distribution and warehousing"
+      ],
+      "corridors": [
+        "the Highway 370 industrial corridor through Sarpy County and Papillion",
+        "the South Omaha meatpacking and food-processing district",
+        "the Omaha Rail and Commerce Historic District downtown"
+      ],
+      "rail": "Served by Union Pacific and BNSF, with Union Pacific headquartered in Omaha and operating its Omaha Shops railcar and locomotive maintenance facility in the city.",
+      "stock": "older multi-storey brick packing plants in the South Omaha district alongside newer single-storey distribution buildings along the Highway 370 corridor",
+      "equipment": [
+        "packing and rendering line equipment",
+        "grain elevators and conveying systems",
+        "railcar and locomotive shop equipment",
+        "cold storage and refrigeration systems"
+      ]
+    },
+    "Fargo|ND": {
+      "sectors": [
+        "heavy agricultural and construction equipment manufacturing (four-wheel-drive tractors and wheel loaders)",
+        "grain elevator and processing operations",
+        "farm implement parts fabrication and service"
+      ],
+      "corridors": [
+        "Dakota Commerce Center industrial park off Interstate 29",
+        "Veterans Industrial Park in north Fargo"
+      ],
+      "rail": "Served by BNSF and Canadian Pacific Kansas City (CPKC), both of which cross the city; BNSF also carries Amtrak's Empire Builder through Fargo alongside grain and manufactured-goods traffic.",
+      "equipment": [
+        "four-wheel-drive tractor and wheel-loader assembly equipment",
+        "CNC machining and metal fabrication equipment",
+        "grain elevator and handling equipment",
+        "farm implement service and parts equipment"
+      ]
+    },
+    "Casper|WY": {
+      "sectors": [
+        "oil and gas field services and equipment",
+        "petroleum refining",
+        "oilfield machine shop and fabrication work",
+        "wellhead and downhole tooling manufacturing"
+      ],
+      "corridors": [
+        "the Platte River Commons industrial park on the site of the former refinery",
+        "the Old Yellowstone Highway oilfield services corridor west of downtown"
+      ],
+      "rail": "Served by BNSF Railway and Union Pacific, with a crude-by-rail terminal on BNSF's main line capable of loading unit trains",
+      "equipment": [
+        "wellhead and cased-hole tooling",
+        "oilfield fabrication and welding equipment",
+        "crude oil storage and railcar loading equipment",
+        "CNC machine shop equipment"
+      ]
+    },
+    "Billings|MT": {
+      "sectors": [
+        "petroleum refining",
+        "sugar beet and food processing",
+        "agricultural equipment and grain handling",
+        "oilfield and energy equipment services"
+      ],
+      "corridors": [
+        "the Lockwood Industrial Park straddling the BNSF mainline east of the city",
+        "the refinery row along the Yellowstone River northeast of downtown"
+      ],
+      "rail": "Served by BNSF Railway, which took over the former Montana Rail Link lines in 2024 and runs sidings directly into the Lockwood Industrial Park",
+      "equipment": [
+        "refinery process and turnaround equipment",
+        "sugar processing equipment",
+        "grain handling and storage equipment",
+        "oilfield service equipment"
+      ]
+    },
+    "Little Rock|AR": {
+      "sectors": [
+        "aerospace and defense manufacturing",
+        "food and poultry processing",
+        "steel and metals distribution",
+        "warehousing and bulk distribution"
+      ],
+      "corridors": [
+        "the Little Rock Port Industrial Park on the McClellan-Kerr Arkansas River Navigation System",
+        "the Dassault Falcon Jet manufacturing campus near Clinton National Airport",
+        "Little Rock Air Force Base in nearby Jacksonville"
+      ],
+      "rail": "Served by Union Pacific and BNSF, with the Little Rock Port Authority Railroad switching the port industrial district",
+      "port": "Little Rock sits on the McClellan-Kerr Arkansas River Navigation System, with barge terminals at the Little Rock Port Industrial Park connecting to the Mississippi River and on to the Gulf via New Orleans",
+      "equipment": [
+        "aircraft completion and structures assembly tooling",
+        "food and poultry processing lines",
+        "steel service center cutting and coil-handling equipment",
+        "bulk material handling equipment"
+      ]
+    },
+    "Jackson|MS": {
+      "sectors": [
+        "automotive assembly and supplier manufacturing",
+        "furniture and upholstery manufacturing",
+        "fabricated metals manufacturing",
+        "food processing"
+      ],
+      "corridors": [
+        "the Nissan Canton Assembly Plant and its supplier park north of Jackson",
+        "the CPKC (formerly Kansas City Southern) intermodal terminal near the airport"
+      ],
+      "rail": "Served by Canadian National and CPKC, with a CPKC intermodal terminal near Jackson-Medgar Wiley Evers International Airport",
+      "equipment": [
+        "stamping and body-in-white welding equipment",
+        "injection molding machinery",
+        "upholstery and furniture fabrication equipment",
+        "fabricated metal cutting and forming equipment"
+      ]
+    },
+    "Cincinnati|OH": {
+      "sectors": [
+        "machine tool and industrial equipment manufacturing",
+        "chemical and plastics processing",
+        "consumer products manufacturing",
+        "metal fabrication and stamping"
+      ],
+      "corridors": [
+        "the Queensgate rail and industrial district along the Mill Creek valley",
+        "the Sharonville industrial corridor north of downtown",
+        "the Cincinnati Barge and Rail Terminal area on the Ohio River"
+      ],
+      "rail": "Served by CSX, Norfolk Southern and Canadian National, with CSX operating the Queensgate Intermodal Terminal and Norfolk Southern serving the Gest Street and Sharonville intermodal facilities",
+      "port": "The Cincinnati Barge and Rail Terminal on the Ohio River handles bulk transloading between barge, rail and truck",
+      "stock": "a mix of older multi-storey brick machine-tool shops in the Mill Creek valley with narrow column bays and newer single-storey plants in the Sharonville corridor with clear-span floors",
+      "equipment": [
+        "lathes and CNC machining centers",
+        "metal stamping presses",
+        "injection molding machines",
+        "material-handling and conveying equipment"
+      ]
+    },
+    "San Jose|CA": {
+      "sectors": [
+        "semiconductor and electronics manufacturing",
+        "biotech and life-sciences manufacturing",
+        "advanced manufacturing and precision prototyping",
+        "computer hardware and component assembly"
+      ],
+      "corridors": [
+        "the North San Jose tech corridor of flex-industrial R&D and light-manufacturing buildings",
+        "the Edenvale Industrial Park in South San Jose, home to advanced-manufacturing, medical and nanotechnology tenants"
+      ],
+      "rail": "Served by Union Pacific, successor to Southern Pacific's original valley rail network, which retains freight rights along the Caltrain corridor from Tamien to Gilroy",
+      "stock": "a mix of flex-industrial R&D and light-manufacturing buildings in the North San Jose tech corridor and newer clean-manufacturing buildings in the Edenvale Industrial Park",
+      "equipment": [
+        "cleanroom semiconductor and wafer-handling equipment",
+        "precision CNC machining and prototyping equipment",
+        "electronic test and calibration equipment",
+        "biotech and life-sciences production equipment"
+      ]
+    },
+    "Greenville|SC": {
+      "sectors": [
+        "automotive assembly and supplier plants",
+        "tire and advanced materials manufacturing",
+        "aerospace and advanced manufacturing",
+        "legacy textile mills"
+      ],
+      "corridors": [
+        "the SCTAC business park (South Carolina Technology & Aviation Center)",
+        "the I-85 corridor between Greenville and Greer anchored by the BMW Manufacturing plant",
+        "the AXIAL Crosspoint industrial park",
+        "the SC Inland Port Greer intermodal district"
+      ],
+      "rail": "Served by CSX and Norfolk Southern, with the SC Inland Port Greer providing Norfolk Southern intermodal connections to the Port of Charleston",
+      "stock": "large clear-span automotive supplier plants built since the 1990s along the I-85 corridor, alongside older multi-storey brick textile mills near downtown Greenville",
+      "equipment": [
+        "stamping presses and robotic weld cells",
+        "tire-building and curing equipment",
+        "CNC machining centers",
+        "legacy textile looms and finishing equipment"
+      ]
+    },
+    "Grand Rapids|MI": {
+      "sectors": [
+        "office furniture manufacturing",
+        "automotive stamping, tool-and-die and axle supplier plants",
+        "metal fabrication shops",
+        "food and beverage processing"
+      ],
+      "corridors": [
+        "the Site 36 Industrial Park served by the Grand Elk Railroad",
+        "the Earthway Rail Park industrial corridor",
+        "the Wyoming industrial district south of downtown, home to CSX's classification yard"
+      ],
+      "rail": "Served directly by CSX, with Norfolk Southern, Canadian National and Canadian Pacific reaching the metro through interchange with the regional Grand Elk Railroad short line",
+      "stock": "a mix of century-old multi-storey brick furniture factories near the Grand River and larger clear-span single-storey stamping and assembly plants in outlying industrial parks like Wyoming and Site 36",
+      "equipment": [
+        "stamping presses",
+        "CNC machining centers",
+        "tool-and-die equipment",
+        "wood and metal furniture assembly lines"
+      ]
+    },
+    "Peoria|IL": {
+      "sectors": [
+        "heavy equipment and diesel engine manufacturing",
+        "foundry and metal casting",
+        "agricultural equipment and machinery manufacturing",
+        "repair-parts and remanufacturing operations"
+      ],
+      "corridors": [
+        "the Peoria Warehouse Historic District southwest of downtown",
+        "the heavy equipment manufacturing and foundry complex spanning East Peoria and Mapleton",
+        "the Illinois River levee riverfront industrial district"
+      ],
+      "rail": "Served by BNSF Railway, Union Pacific, Norfolk Southern and Canadian National, with the short-line Tazewell & Peoria Railroad handling local switching for most area industry before interchange",
+      "port": "The Illinois River, navigable to the Mississippi River system, carries barge freight through Peoria's riverfront terminals",
+      "stock": "a mix of large clear-span heavy-equipment assembly and foundry buildings in East Peoria and Mapleton and older multi-storey brick warehouses in the Peoria Warehouse Historic District with tighter freight access",
+      "equipment": [
+        "heavy equipment assembly line machinery",
+        "foundry and casting equipment",
+        "CNC machining centers",
+        "engine test stands",
+        "overhead cranes for heavy component handling"
+      ]
+    },
+    "Wichita|KS": {
+      "sectors": [
+        "aircraft fuselage and structures manufacturing",
+        "general aviation and business jet final assembly",
+        "aerospace tooling and precision machining",
+        "aerospace composites fabrication"
+      ],
+      "corridors": [
+        "the aerospace manufacturing district surrounding Wichita Dwight D. Eisenhower National Airport",
+        "the Spirit AeroSystems campus",
+        "the Textron Aviation (Cessna and Beechcraft) campus"
+      ],
+      "rail": "Served by BNSF and Union Pacific",
+      "stock": "large clear-span single-storey aircraft assembly and fabrication hangars built for full fuselage and wing sections",
+      "equipment": [
+        "fuselage and wing assembly jigs",
+        "CNC machining centers",
+        "autoclaves and composite curing equipment",
+        "sheet-metal forming presses",
+        "riveting and structures assembly tooling"
+      ]
+    },
+    "Toledo|OH": {
+      "sectors": [
+        "flat glass and automotive glass manufacturing",
+        "automotive assembly and Tier 1/2/3 parts supply",
+        "solar panel manufacturing",
+        "tool-and-die and stamping shops"
+      ],
+      "corridors": [
+        "the Toledo Assembly Complex industrial area",
+        "the Great Black Swamp industrial belt tied to the glass and auto trades",
+        "the Toledo waterfront rail and terminal district on the Maumee River"
+      ],
+      "rail": "Served by CSX, Norfolk Southern and Canadian National, with the Ann Arbor Railroad and Wheeling and Lake Erie Railway also interchanging in the metro",
+      "port": "The Toledo-Lucas County Port Authority on the Maumee River and Lake Erie handles bulk cargo including ore, coal and stone on the Great Lakes system",
+      "stock": "large single-storey automotive assembly and glass-manufacturing plants with high clear spans built for continuous production lines, alongside older brick tool-and-die shops near the waterfront rail district",
+      "equipment": [
+        "glass-forming and tempering lines",
+        "automotive stamping presses",
+        "robotic weld cells",
+        "die handling equipment",
+        "overhead cranes"
+      ]
+    },
+    "Chattanooga|TN": {
+      "sectors": [
+        "automotive assembly and supplier plants",
+        "chemical processing plants",
+        "battery and graphite materials manufacturing",
+        "fulfillment and e-commerce distribution centers"
+      ],
+      "corridors": [
+        "the Enterprise South Industrial Park in the northeast of the city",
+        "the DeButts Yard rail district",
+        "the Tennessee River barge terminal district anchored by Mid-South Terminals and Centre South Riverport"
+      ],
+      "rail": "Served by CSX and Norfolk Southern, with Norfolk Southern's DeButts Yard functioning as the metro's classification hub",
+      "port": "The Port of Chattanooga on the Tennessee River provides barge access into the Tennessee-Tombigbee Waterway system, with terminals including Mid-South Terminals and Centre South Riverport transferring cargo between barge, rail and truck",
+      "stock": "large clear-span single-storey plants built since the 2000s around Enterprise South, such as the Volkswagen assembly complex, alongside older Tennessee River-adjacent industrial buildings with barge-level dock access",
+      "equipment": [
+        "stamping presses and robotic weld cells",
+        "paint-line conveyors",
+        "chemical process reactors and storage tanks",
+        "graphite and battery materials processing equipment",
+        "barge-to-truck bulk material handlers"
+      ]
+    },
+    "Huntsville|AL": {
+      "sectors": [
+        "aerospace and missile defense manufacturing",
+        "automotive and powersports assembly",
+        "biotech and pharmaceutical manufacturing",
+        "engine and precision component manufacturing"
+      ],
+      "corridors": [
+        "Cummings Research Park, the nation's second-largest research park",
+        "the automotive and powersports manufacturing campus in the Greenbrier area of Limestone County",
+        "the Jetplex Industrial Park at the Port of Huntsville"
+      ],
+      "rail": "Served by Norfolk Southern, with a five-mile rail spur connecting the Port of Huntsville's International Intermodal Center to the Norfolk Southern mainline and daily intermodal service to the Port of Charleston",
+      "stock": "a mix of large clear-span automotive assembly buildings in the Greenbrier corridor and modern low-rise research and light-manufacturing buildings across Cummings Research Park",
+      "equipment": [
+        "automotive stamping and assembly line equipment",
+        "engine machining and test equipment",
+        "aerospace and missile component machining",
+        "cleanroom biotech production equipment",
+        "intermodal container handling equipment"
+      ]
+    },
+    "Mobile|AL": {
+      "sectors": [
+        "aerospace final assembly manufacturing",
+        "shipbuilding and ship repair",
+        "steel and metals handling",
+        "port and terminal warehousing"
+      ],
+      "corridors": [
+        "the Mobile Aeroplex at Brookley aerospace campus, home to Airbus U.S. Manufacturing",
+        "the Alabama State Docks port complex"
+      ],
+      "rail": "Served by BNSF, CSX, Norfolk Southern, Canadian National and CPKC, with the Terminal Railway Alabama State Docks switching the port district",
+      "port": "The Port of Mobile on Mobile Bay is a full-service deepwater seaport handling containerized, breakbulk, steel and heavy-lift cargo, with Airbus fuselage sections transferred by barge from the port to the Brookley complex",
+      "stock": "large clear-span aerospace final-assembly hangars at Brookley alongside heavy-lift-rated port warehouses and steel terminal buildings",
+      "equipment": [
+        "aircraft final assembly jigs and tooling",
+        "dry-dock and shipbuilding equipment",
+        "steel slab and coil handling equipment",
+        "port cranes and heavy-lift material handling equipment"
+      ]
+    },
+    "Tulsa|OK": {
+      "sectors": [
+        "aviation maintenance and repair",
+        "oil and gas equipment manufacturing and fabrication",
+        "inland barge and rail logistics"
+      ],
+      "corridors": [
+        "the Tulsa Port of Catoosa industrial park along the Verdigris River",
+        "the BNSF Cherokee Yard rail district",
+        "the Tulsa International Airport aviation maintenance complex"
+      ],
+      "rail": "Served by BNSF, whose Cherokee Yard is the region's largest rail yard, with Union Pacific and Canadian Pacific Kansas City reaching the metro via the South Kansas and Oklahoma short line.",
+      "port": "The Tulsa Port of Catoosa is an inland barge terminal on the McClellan-Kerr Arkansas River Navigation System, one of the furthest-inland ports connected to the Gulf of Mexico.",
+      "equipment": [
+        "oilfield fabrication and welding equipment",
+        "aircraft maintenance and overhaul equipment",
+        "barge loading and bulk material handling equipment",
+        "CNC machining centers"
+      ]
+    },
+    "Rockford|IL": {
+      "sectors": [
+        "aerospace component manufacturing",
+        "large-format machine tool manufacturing",
+        "automotive supplier plants",
+        "fastener and hardware manufacturing"
+      ],
+      "corridors": [
+        "the Chicago Rockford International Airport aerospace and logistics district within Foreign-Trade Zone 176",
+        "the Rock 39 Industrial Park in Cherry Valley",
+        "the Loves Park Corporate Center at Bell School Road and Riverside Drive"
+      ],
+      "rail": "Served by Union Pacific, with Canadian Pacific dispatching freight over portions of the Chicago-Rockford rail corridor",
+      "stock": "large clear-span floors built to house very large machine-tool and aerospace manufacturing equipment such as large-format machining centers",
+      "equipment": [
+        "large-format machine tools",
+        "CNC machining and milling centers",
+        "aerospace component manufacturing equipment",
+        "fastener and hardware production machinery"
+      ]
+    },
+    "Dayton|OH": {
+      "sectors": [
+        "aerospace and defense component manufacturing",
+        "precision machining and tooling shops",
+        "advanced materials manufacturing",
+        "automotive parts supply plants"
+      ],
+      "corridors": [
+        "the Tech Town innovation district near downtown",
+        "the industrial corridor surrounding Wright-Patterson Air Force Base",
+        "the Dayton District rail corridor toward Springfield"
+      ],
+      "rail": "Served by Norfolk Southern along its Dayton District line, with CSX intermodal service reached through nearby Columbus and Cincinnati terminals",
+      "stock": "older single-storey machine shops and precision manufacturing buildings clustered near Wright-Patterson with modest clear heights and tight urban lot lines",
+      "equipment": [
+        "precision CNC machining centers",
+        "grinding and tooling equipment",
+        "test and calibration equipment",
+        "stamping and forming presses"
+      ]
+    },
+    "San Diego|CA": {
+      "sectors": [
+        "shipbuilding and marine vessel repair",
+        "defense and aerospace manufacturing",
+        "biotech and pharmaceutical manufacturing",
+        "cross-border logistics and light manufacturing"
+      ],
+      "corridors": [
+        "the roughly 1,400-acre Kearny Mesa industrial park near MCAS Miramar, developed for aerospace and electronics tenants",
+        "the Otay Mesa cross-border industrial and logistics district near the Otay Mesa Port of Entry",
+        "the Tenth Avenue Marine Terminal shipbuilding district on San Diego Bay"
+      ],
+      "rail": "Served by BNSF, which runs roughly eight trains a day through the harbor corridor with a rail spur serving the NASSCO shipyard",
+      "port": "The Port of San Diego's Tenth Avenue Marine Terminal on San Diego Bay handles breakbulk, ro-ro and bulk cargo alongside the NASSCO shipyard",
+      "stock": "a mix of 1950s-and-60s low-rise aerospace and electronics buildings in Kearny Mesa and newer large-format cross-border distribution buildings in Otay Mesa",
+      "equipment": [
+        "marine fabrication and welding equipment",
+        "precision CNC machining centers",
+        "cleanroom biotech and pharmaceutical production equipment",
+        "electronic test equipment"
+      ]
+    },
+    "Riverside|CA": {
+      "sectors": [
+        "big-box e-commerce fulfillment centers",
+        "third-party logistics (3PL) distribution operations",
+        "food and beverage distribution warehousing",
+        "import transload and cross-dock operations"
+      ],
+      "corridors": [
+        "the Inland Empire warehouse corridor stretching through Eastvale, Mira Loma and Ontario",
+        "the March Inland Port industrial area near March Air Reserve Base",
+        "the rail-served industrial belt along SR-60 and I-215"
+      ],
+      "rail": "Served by BNSF and Union Pacific, whose transcontinental main lines cross at Riverside and feed BNSF's San Bernardino intermodal facility and Union Pacific's West Colton yard nearby.",
+      "stock": "large-format big-box distribution buildings with high clear-span ceilings and long truck-court dock walls, built for pallet flow and racking rather than heavy floor loads",
+      "equipment": [
+        "pallet racking and conveyor sortation systems",
+        "forklifts and reach trucks",
+        "dock levelers and dock plates",
+        "cross-dock transfer equipment"
+      ]
+    },
+    "Savannah|GA": {
+      "sectors": [
+        "aerospace manufacturing and completions",
+        "port logistics and container warehousing",
+        "wood products and paper manufacturing"
+      ],
+      "corridors": [
+        "the Crossroads Business Park aerospace campus",
+        "the Savannah Gateway Industrial Hub near the port",
+        "the Garden City Terminal port district",
+        "the Pooler logistics corridor near I-95"
+      ],
+      "rail": "Served by CSX and Norfolk Southern, which both operate dual rail service into the Port of Savannah's terminals.",
+      "port": "The Port of Savannah's Garden City Terminal on the Savannah River is one of the largest and fastest-growing container ports in the United States.",
+      "stock": "large modern clear-span distribution buildings concentrated near the port alongside older break-bulk warehouse buildings closer to the river",
+      "equipment": [
+        "aircraft cabin completion and paint equipment",
+        "pulp and paper processing machinery",
+        "container handling cranes and yard equipment",
+        "cold storage refrigeration systems"
+      ]
+    },
+    "Baton Rouge|LA": {
+      "sectors": [
+        "integrated oil refining",
+        "specialty and commodity chemical manufacturing",
+        "polymer and plastics resin production",
+        "chemical logistics and tank-terminal operations"
+      ],
+      "corridors": [
+        "the petrochemical corridor along the Mississippi River anchored by ExxonMobil's Baton Rouge refining and chemical complex",
+        "the Scenic Highway industrial strip north of downtown",
+        "the Port Allen rail and tank-terminal district in West Baton Rouge Parish",
+        "the Geismar chemical corridor in Ascension Parish downriver"
+      ],
+      "rail": "Served by Union Pacific and Canadian National, both routing tank car traffic directly into the river corridor's refineries and chemical plants",
+      "port": "The Port of Greater Baton Rouge on the Mississippi River is one of the highest-tonnage ports in the country, handling bulk petroleum, chemicals and grain",
+      "stock": "dominated by elevated pipe racks, tank farms and process unit structures rather than open-floor warehouses, with access constrained by pipe rack clearances and tight unit battery limits",
+      "equipment": [
+        "distillation and cracking unit components",
+        "process vessels and heat exchangers",
+        "tank and vessel internals",
+        "pump and compressor skids"
+      ]
+    },
+    "Greensboro|NC": {
+      "sectors": [
+        "aerospace maintenance, repair and overhaul",
+        "aircraft component manufacturing",
+        "furniture manufacturing and finishing",
+        "legacy textile and hosiery mills"
+      ],
+      "corridors": [
+        "the Piedmont Triad International Airport aerospace corridor along I-40",
+        "the Norfolk Southern Pomona Yard rail district",
+        "the High Point furniture manufacturing and showroom district"
+      ],
+      "rail": "Served by Norfolk Southern, whose Pomona Yard functions as the metro's classification hub",
+      "stock": "a mix of early-20th-century multi-storey brick textile and hosiery mills, many converted to other uses, and newer clear-span aerospace hangars and MRO facilities built up around the airport",
+      "equipment": [
+        "aircraft maintenance stands and tooling",
+        "CNC woodworking and furniture finishing machinery",
+        "legacy textile looms and finishing equipment"
+      ]
+    },
+    "Knoxville|TN": {
+      "sectors": [
+        "automotive electronics and components manufacturing",
+        "canned food and beverage processing",
+        "medical device manufacturing",
+        "nuclear and specialty research manufacturing around Oak Ridge"
+      ],
+      "corridors": [
+        "the Forks of the River Industrial Park on the south side",
+        "the Norfolk Southern bulk rail terminal district off Interstate 275",
+        "the Oak Ridge research and manufacturing corridor in Anderson County"
+      ],
+      "rail": "Served by Norfolk Southern and CSX, with the short-line Knoxville and Holston River Railroad handling local switching to the Forks of the River Industrial Park before interchange",
+      "port": "Knoxville sits at the head of the Tennessee River's navigable channel, with active river terminals moving barge freight south through the Tennessee-Tombigbee Waterway system",
+      "equipment": [
+        "CNC machining centers",
+        "automotive electronics assembly equipment",
+        "canning and food processing lines",
+        "cleanroom and sterilization equipment for medical device production"
+      ]
+    },
+    "Akron|OH": {
+      "sectors": [
+        "polymer, plastics and rubber product manufacturing",
+        "chemical and coatings production",
+        "fabricated metal and machinery shops",
+        "tire and rubber R&D and pilot-scale production"
+      ],
+      "corridors": [
+        "the I-76/I-77 polymer manufacturing corridor through Summit County",
+        "the former rubber-industry district near downtown Akron"
+      ],
+      "rail": "Served by Norfolk Southern, with the Wheeling and Lake Erie Railway, a regional carrier descended from the former Akron, Canton and Youngstown Railroad, also serving local industry",
+      "stock": "a mix of older multi-storey rubber-plant buildings near downtown with tight floor loading and newer single-storey polymer processing plants along the I-76/I-77 corridor with clear-span bays",
+      "equipment": [
+        "extruders and compounding lines",
+        "injection and blow molding machines",
+        "mixing and calendering equipment",
+        "material-handling conveyors"
+      ]
+    },
+    "Fort Wayne|IN": {
+      "sectors": [
+        "truck assembly and automotive stamping",
+        "defense and aerospace electronics manufacturing",
+        "electric motor and electrical equipment manufacturing"
+      ],
+      "corridors": [
+        "the GM Fort Wayne Assembly complex near Roanoke",
+        "the BAE Systems electronics campus in Fort Wayne",
+        "the Chicago, Fort Wayne & Eastern Railroad's Fort Wayne Yard rail district",
+        "the Tom Henry Industrial Park in southwest Fort Wayne"
+      ],
+      "rail": "Served by CSX and Norfolk Southern, which interchange with the Chicago, Fort Wayne & Eastern Railroad at its Fort Wayne Yard and connect on to the Indiana Northeastern Railroad",
+      "stock": "large single-storey clear-span final-assembly and electronics manufacturing buildings, such as GM's Fort Wayne Assembly plant and BAE Systems' Fort Wayne facility, built with wide structural bays to carry heavy production equipment",
+      "equipment": [
+        "robotic weld cells",
+        "stamping presses",
+        "vehicle body framing systems",
+        "avionics and electronics test equipment",
+        "CNC machining centers"
+      ]
+    },
+    "Lansing|MI": {
+      "sectors": [
+        "automotive final assembly",
+        "metal stamping plants",
+        "tool-and-die shops",
+        "automotive parts supplier plants"
+      ],
+      "corridors": [
+        "the GM Lansing Grand River Assembly complex near downtown",
+        "the GM Lansing Delta Township Assembly campus",
+        "the CSX Lansing Ensel Yard rail corridor"
+      ],
+      "rail": "Served by CSX, whose east-west main line runs through the Lansing Ensel Yard connecting Detroit to Grand Rapids and on into Indiana",
+      "stock": "large single-storey clear-span final-assembly plants at the GM complexes, alongside smaller multi-storey brick shops from the city's early automotive era",
+      "equipment": [
+        "robotic weld cells",
+        "stamping presses",
+        "vehicle body framing systems",
+        "paint-line conveyors",
+        "CNC machining centers"
+      ]
+    },
+    "Buffalo|NY": {
+      "sectors": [
+        "steel and metal fabrication",
+        "grain processing and milling",
+        "chemical and specialty manufacturing",
+        "advanced manufacturing supplier plants"
+      ],
+      "corridors": [
+        "the Steelworks Industrial Park and Renaissance Commerce Park on the former Bethlehem Steel site in Lackawanna",
+        "the Tonawanda Street industrial corridor",
+        "the Buffalo River waterfront industrial district",
+        "the Gateway Trade Center terminal complex at the Port of Buffalo"
+      ],
+      "rail": "Served by CSX, Norfolk Southern, Canadian Pacific and Canadian National, with the South Buffalo Railway and the Buffalo & Pittsburgh Railroad switching the harbor and industrial districts",
+      "port": "The Port of Buffalo, at the eastern end of Lake Erie, handles bulk and general cargo across roughly 28 terminals on the Great Lakes-St. Lawrence Seaway system, including the Gateway Trade Center",
+      "stock": "large multi-storey brick mill buildings and grain elevators along the Buffalo River, alongside newer single-storey clear-span space on the redeveloped former Bethlehem Steel site in Lackawanna",
+      "equipment": [
+        "overhead cranes",
+        "steel fabrication and welding equipment",
+        "grain handling and milling machinery",
+        "CNC machining centers"
+      ]
+    },
+    "Hartford|CT": {
+      "sectors": [
+        "aerospace engine and component manufacturing",
+        "precision machining and tooling shops",
+        "aerospace aftermarket and MRO facilities"
+      ],
+      "corridors": [
+        "the Pratt & Whitney campus at Rentschler Field in East Hartford",
+        "the Silver Lane and Main Street industrial corridor in East Hartford",
+        "the Connecticut Southern Railroad's Hartford Yard and East Hartford Yard rail district"
+      ],
+      "rail": "Served by CSX, reached from the Hartford area via the regional Connecticut Southern Railroad's Hartford Yard and East Hartford Yard and its interchange points in West Springfield, Massachusetts and North Haven, Connecticut",
+      "equipment": [
+        "CNC turbine and jet-engine component machining centers",
+        "precision grinding and machining equipment",
+        "engine test stands",
+        "large multi-axis machining centers"
+      ]
+    },
+    "Allentown|PA": {
+      "sectors": [
+        "heavy truck assembly",
+        "steel and metal fabrication legacy shops",
+        "warehouse and distribution operations",
+        "confectionery and food manufacturing"
+      ],
+      "corridors": [
+        "the Lehigh Valley Industrial Park (LVIP) campuses along I-78",
+        "the Bethlehem Commerce Center on the former Bethlehem Steel site, home to the BethIntermodal rail terminal",
+        "the Mack Trucks Lehigh Valley Operations complex in Macungie"
+      ],
+      "rail": "Served by Norfolk Southern and Canadian Pacific, with the BethIntermodal terminal at the Bethlehem Commerce Center handling rail-to-truck transfers",
+      "stock": "large modern single-storey big-box distribution buildings built across Lehigh Valley industrial parks and the former Bethlehem Steel site, alongside older multi-storey brick steel-era buildings that remain nearby",
+      "equipment": [
+        "heavy truck cab and chassis assembly lines",
+        "engine grooming and truck modification equipment",
+        "material handling and conveyor systems",
+        "CNC machining centers"
+      ]
+    },
+    "Erie|PA": {
+      "sectors": [
+        "locomotive and heavy rail equipment manufacturing",
+        "plastics injection molding",
+        "metal fabrication and machine shop work",
+        "marine fabrication and ship repair"
+      ],
+      "corridors": [
+        "the locomotive manufacturing campus on the city's east side",
+        "the Port of Erie waterfront industrial district on Lake Erie"
+      ],
+      "rail": "Served by CSX and Norfolk Southern, with CSX's former New York Central mainline running directly through the city and carrying substantial daily traffic",
+      "port": "The Port of Erie on Lake Erie operates a full-service shipyard with the largest dry-dock and crane on the Great Lakes, plus deep-draft dock face for bulk and breakbulk cargo",
+      "stock": "a mix of large clear-span locomotive assembly buildings on the city's east side and older multi-storey brick manufacturing buildings near the lakefront with tighter dock access",
+      "equipment": [
+        "locomotive assembly and fabrication equipment",
+        "injection molding machines",
+        "overhead cranes for heavy rail component handling",
+        "CNC machining centers",
+        "marine fabrication and ship repair equipment"
+      ]
+    },
+    "Richmond|VA": {
+      "sectors": [
+        "pharmaceutical and biotechnology manufacturing",
+        "chemical processing plants along the James River",
+        "tobacco processing and manufacturing",
+        "distribution and warehousing near the I-95/I-64 interchange"
+      ],
+      "corridors": [
+        "the James River chemical corridor",
+        "the Virginia Bio+Tech Park near VCU's Medical College of Virginia",
+        "the Petersburg pharmaceutical manufacturing cluster",
+        "the Richmond Marine Terminal industrial district"
+      ],
+      "rail": "Served by CSX, which controls rail access to the Richmond Marine Terminal and operates the Acca Yard classification hub, and by Norfolk Southern",
+      "port": "The Richmond Marine Terminal on the James River is a Port of Virginia facility handling barge, rail and truck cargo, linked to the Hampton Roads ocean terminals by container-on-barge service",
+      "stock": "a mix of large-footprint chemical process plants and tank farms along the James River and newer clean single-storey pharmaceutical manufacturing buildings around the Petersburg cluster",
+      "equipment": [
+        "chemical process reactors and storage tanks",
+        "pharmaceutical manufacturing and packaging line equipment",
+        "tobacco processing machinery",
+        "barge-to-rail bulk material handling equipment"
+      ]
+    },
+    "Tampa|FL": {
+      "sectors": [
+        "phosphate and fertilizer processing",
+        "food and beverage manufacturing and bottling",
+        "aggregate and bulk materials handling",
+        "logistics and e-commerce distribution centers"
+      ],
+      "corridors": [
+        "the Port Tampa Bay industrial waterfront along the shipping channel",
+        "the CSX Tampa Gateway Rail Terminal district",
+        "the historic Tampa Industrial Park near the old brewery district",
+        "the Tampa Foreign Trade Zone No. 79"
+      ],
+      "rail": "Served by CSX, which operates the Tampa Gateway Rail Terminal and a Transflo bulk-transfer terminal linking Port Tampa Bay to the CSX network",
+      "port": "Port Tampa Bay is Florida's largest port by tonnage, handling phosphate, fertilizer, aggregate and containerized cargo with direct CSX rail access from the terminal",
+      "equipment": [
+        "bulk material handling and conveyor systems for phosphate and aggregate",
+        "bottling and packaging line equipment",
+        "ship-to-rail and ship-to-truck transfer equipment",
+        "forklifts and warehouse racking for foreign-trade-zone distribution"
+      ]
+    },
+    "Beaumont|TX": {
+      "sectors": [
+        "petroleum refining and refinery turnaround work",
+        "petrochemical and polyethylene manufacturing",
+        "marine fabrication and vessel repair",
+        "government reserve-fleet ship maintenance"
+      ],
+      "corridors": [
+        "the ExxonMobil refining and chemical complex along the Neches River",
+        "the Port of Beaumont turning-basin district",
+        "the Beaumont Reserve Fleet anchorage on the Neches River"
+      ],
+      "rail": "Served by BNSF, Union Pacific and CPKC, all reaching the Port of Beaumont's rail-served terminals",
+      "port": "The Port of Beaumont sits at the head of navigation on the Neches River within the Sabine-Neches Waterway, with a 1,100-foot turning basin and roll-on/roll-off, bulk and rail-served terminals",
+      "stock": "large refinery and chemical process units with elevated pipe racks and tank farms, plus waterfront fabrication yards built for barge and vessel loadout rather than truck dock doors",
+      "equipment": [
+        "process piping and pipe rack modules",
+        "polyethylene reactors and extrusion equipment",
+        "marine fabrication skids and barge sections",
+        "dockside cranes at the turning basin"
+      ]
+    },
+    "Corpus Christi|TX": {
+      "sectors": [
+        "crude oil and refined products export terminals",
+        "petroleum refining along Refinery Row",
+        "LNG liquefaction and export",
+        "petrochemical and polyethylene manufacturing"
+      ],
+      "corridors": [
+        "Refinery Row along the Inner Harbor north of the Harbor Bridge",
+        "the Ingleside crude oil export terminals on the north shore of Corpus Christi Bay",
+        "the La Quinta Channel LNG and petrochemical corridor"
+      ],
+      "rail": "Served by BNSF, Union Pacific and CPKC, all reaching the port via the Port of Corpus Christi's own Texas Coastal Bend Railroad switching line",
+      "port": "The Port of Corpus Christi is a leading US crude oil export gateway, with deepwater terminals at Ingleside built to load very large crude carriers",
+      "stock": "large refinery process units and tank farms along the Inner Harbor, plus deepwater tank and pipeline terminal infrastructure at Ingleside built for tanker loading rather than truck or building access",
+      "equipment": [
+        "crude distillation and refining process equipment",
+        "storage tank and pipeline terminal components",
+        "LNG liquefaction train equipment",
+        "dockside loading arms and marine terminal equipment"
+      ]
+    },
+    "El Paso|TX": {
+      "sectors": [
+        "automotive parts and wire-harness manufacturing",
+        "medical device and electronics assembly",
+        "cross-border warehousing and distribution for Juárez maquiladoras",
+        "produce and chile pepper distribution"
+      ],
+      "corridors": [
+        "the Butterfield Trail Industrial Park near El Paso International Airport",
+        "the Santa Teresa Gateway Rail Park across the New Mexico state line",
+        "the Union Pacific and BNSF rail yards on the city's east side"
+      ],
+      "rail": "Served by BNSF and Union Pacific, both routing intermodal and manufacturing traffic across the border to Ciudad Juárez",
+      "stock": "single-storey tilt-wall and pre-engineered warehouse space built for cross-border trucking rather than heavy floor loads, concentrated in dense industrial parks near the ports of entry",
+      "equipment": [
+        "wire-harness and cable assembly lines",
+        "injection-molding machines",
+        "electronics and medical-device assembly equipment",
+        "cross-dock material handling equipment"
+      ]
+    },
+    "Reno|NV": {
+      "sectors": [
+        "battery and EV component manufacturing",
+        "e-commerce warehousing and fulfillment",
+        "building products manufacturing",
+        "cold-storage and food distribution"
+      ],
+      "corridors": [
+        "the Tahoe Reno Industrial Center (TRIC) in Storey County east of Reno",
+        "Union Pacific's Sparks Yard classification and intermodal district"
+      ],
+      "rail": "Served by Union Pacific, which owns and operates the historic Overland Route through Reno and Sparks and controls the Sparks classification and intermodal yard, with BNSF holding trackage rights across the line",
+      "stock": "large-format, tilt-up distribution and manufacturing buildings concentrated in the Tahoe Reno Industrial Center rather than an older urban industrial core",
+      "equipment": [
+        "battery and cell-assembly equipment",
+        "large-scale material-handling and conveyor systems",
+        "cold-storage refrigeration equipment",
+        "packaging and palletizing equipment"
+      ]
+    },
+    "Colorado Springs|CO": {
+      "sectors": [
+        "aerospace and defense systems manufacturing",
+        "space and satellite component manufacturing",
+        "semiconductor manufacturing",
+        "electronics and precision-instrument assembly"
+      ],
+      "corridors": [
+        "the Colorado Aerospace Business Center near the Colorado Springs Airport and Peterson Space Force Base",
+        "Peak Innovation Park near Schriever Space Force Base"
+      ],
+      "rail": "Served by BNSF and Union Pacific, which share the Colorado Joint Line running through the city as BNSF's Pikes Peak Subdivision and Union Pacific's Colorado Springs Subdivision",
+      "stock": "concentrated in newer single-storey business parks built for aerospace, defense and semiconductor work rather than an older legacy industrial core",
+      "equipment": [
+        "precision CNC machining centers",
+        "cleanroom wafer-processing equipment",
+        "electronic test and calibration equipment",
+        "precision assembly and inspection stations"
+      ]
+    },
+    "Ogden|UT": {
+      "sectors": [
+        "aerospace and defense component manufacturing supplying nearby Hill Air Force Base",
+        "outdoor-recreation equipment manufacturing",
+        "food processing",
+        "warehousing and distribution"
+      ],
+      "corridors": [
+        "Business Depot Ogden, the redeveloped former Defense Depot Ogden site now used for light manufacturing and warehousing",
+        "the Union Pacific-developed Ogden Industrial District on the city's west side"
+      ],
+      "rail": "Served by Union Pacific, which made Ogden a historic rail junction as the 'Crossroads of the West' and still switches trackage within Business Depot Ogden",
+      "stock": "a mix of former military depot warehouse buildings at Business Depot Ogden and older Union Pacific-era rail-served industrial buildings",
+      "equipment": [
+        "CNC machining centers",
+        "aerospace component fabrication equipment",
+        "packaging and palletizing equipment"
+      ]
+    },
+    "Davenport|IA": {
+      "sectors": [
+        "heavy construction and forestry equipment manufacturing",
+        "aluminum rolling and metals processing",
+        "grain and agricultural commodity handling",
+        "river barge freight transload operations"
+      ],
+      "corridors": [
+        "the Davenport Motor Row and Industrial Historic District east of downtown",
+        "the Crescent Warehouse Historic District near the riverfront",
+        "the rail and barge terminal district west of downtown along the Mississippi River"
+      ],
+      "rail": "Served by Union Pacific and Canadian Pacific Kansas City (CPKC), with CPKC based out of its Nahant Yard west of downtown Davenport along the Mississippi River and BNSF reaching the area on trackage rights.",
+      "port": "Davenport sits on the Mississippi River as part of the Quad Cities inland port complex, among the nation's largest inland ports, with barge terminals handling grain and bulk metal commodities.",
+      "stock": "a legacy of early-20th-century brick factory and warehouse buildings near downtown with narrow bays and low dock heights, alongside larger modern clear-span plants further from the river",
+      "equipment": [
+        "heavy construction equipment assembly lines",
+        "aluminum rolling and coil-handling equipment",
+        "grain elevator and barge-loading equipment",
+        "heavy machining and fabrication equipment"
+      ]
+    },
+    "Cedar Rapids|IA": {
+      "sectors": [
+        "corn wet-milling and grain processing",
+        "aerospace avionics and electronics manufacturing",
+        "yeast and food-ingredient manufacturing",
+        "industrial bioprocessing"
+      ],
+      "corridors": [
+        "the riverfront corn wet-milling district along the Cedar River",
+        "the Rompot rail yard district on the city's northwest side",
+        "the aerospace and electronics manufacturing campus on the northeast side"
+      ],
+      "rail": "Served by Union Pacific and Canadian National, which connect into the city's grain-processing and manufacturing plants through the Cedar Rapids and Iowa City Railway (CRANDIC) short line.",
+      "equipment": [
+        "corn wet-milling and grain-processing equipment",
+        "avionics and electronics assembly equipment",
+        "food-ingredient processing tanks",
+        "bioprocessing fermentation equipment"
+      ]
+    },
+    "Green Bay|WI": {
+      "sectors": [
+        "pulp and paper manufacturing",
+        "corrugated packaging and paper converting",
+        "bulk-cargo terminal handling",
+        "food and meat processing"
+      ],
+      "corridors": [
+        "the Shipyard District along the west side of the Fox River, a legacy of the city's lumber, paper and maritime industries",
+        "the Fox River paper-mill corridor running through downtown and the west side",
+        "Grandview Industrial Park on the city's east side",
+        "the Port of Green Bay terminal district at the mouth of the Fox River"
+      ],
+      "rail": "Served by Canadian National, which reaches the Fox River terminal and mill district over former Wisconsin Central trackage.",
+      "port": "The Port of Green Bay sits at the westernmost point of Lake Michigan at the mouth of the Fox River, moving dry-bulk cargo such as coal, limestone, salt and cement along with wood pulp and forest products for the paper industry.",
+      "equipment": [
+        "paper machines and pulpers",
+        "corrugating and converting lines",
+        "bulk-cargo conveyors and ship-loading equipment",
+        "meat processing and cold-storage equipment"
+      ]
+    },
+    "South Bend|IN": {
+      "sectors": [
+        "heavy vehicle and military truck manufacturing",
+        "aerospace component manufacturing and MRO",
+        "metal stamping and forming shops"
+      ],
+      "corridors": [
+        "the AM General manufacturing complex",
+        "the Ignition Park and Renaissance District on the former Studebaker plant site",
+        "the Norfolk Southern rail corridor along the former New York Central mainline"
+      ],
+      "rail": "Served by Norfolk Southern along the former New York Central mainline through South Bend, with CSX and Canadian National also reaching the metro",
+      "stock": "large multi-storey brick buildings from the former Studebaker complex, now subdivided into smaller industrial and tech-park space at Ignition Park and the Renaissance District, alongside newer clear-span plants like AM General's assembly facility",
+      "equipment": [
+        "stamping presses",
+        "body and chassis assembly line equipment",
+        "CNC machining centers",
+        "aerospace component test and machining equipment"
+      ]
+    },
+    "Lexington|KY": {
+      "sectors": [
+        "automotive assembly and Tier 1/2/3 parts supply",
+        "material-handling equipment manufacturing",
+        "aircraft component repair and overhaul",
+        "precision metal fabrication"
+      ],
+      "corridors": [
+        "the Bluegrass region's automotive supplier belt around Georgetown",
+        "the industrial area surrounding Blue Grass Airport"
+      ],
+      "rail": "Served by Norfolk Southern, with the regional R.J. Corman Central Kentucky Lines handling local switching and interchange in the metro",
+      "stock": "large single-storey automotive assembly and supplier plants with clear-span production floors, typical of buildings built for continuous vehicle-line manufacturing",
+      "equipment": [
+        "automotive stamping presses",
+        "robotic weld cells",
+        "CNC machining centers",
+        "forklifts and lift trucks"
+      ]
+    },
+    "Montgomery|AL": {
+      "sectors": [
+        "automotive assembly and engine manufacturing",
+        "automotive supplier manufacturing",
+        "warehousing and distribution"
+      ],
+      "corridors": [
+        "the Hyundai Motor Manufacturing Alabama campus",
+        "the Montgomery CNJ industrial site along US Highway 31",
+        "the future Montgomery Intermodal Container Transfer Facility linked to the Port of Mobile"
+      ],
+      "rail": "Served by CSX and Norfolk Southern",
+      "equipment": [
+        "stamping presses",
+        "engine machining and assembly lines",
+        "robotic weld cells",
+        "automotive supplier injection molding equipment"
+      ]
+    }
+  }
 }

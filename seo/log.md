@@ -506,3 +506,199 @@ services" (7 pages). Merge-and-redirect territory for a structural run.
 **Not done deliberately:** no Track B deepening (blog was GREEN, so Track A was
 the correct call and the run filled its article budget); no Google Ads; no
 `seo/schedule.md` structural batches.
+
+---
+
+## 2026-09-21 — Track B: the matrix reads as one page, and that is the same bug as the 146 dead URLs
+
+No new pages this run. Everything below is a change to a page that already
+existed, or to the data a generator reads.
+
+### The finding that reframes the site
+
+`cannibalisation.js` and `index-health.js` have been reporting two problems.
+They are one problem. `/services/machinery-moving/omaha-ne` ranks for
+Indianapolis, Detroit, Milwaukee, New York, Oklahoma, Washington, Boise and
+Indiana queries — and `machinery-moving/dallas-tx`, `plant-relocation/chicago-il`,
+`plant-relocation/detroit-mi`, `plant-relocation/los-angeles-ca`,
+`rigging/new-york-ny` and `rigging/dallas-tx` earned **zero impressions in 90
+days**. Google has not indexed 113 machinery pages and picked Omaha for the
+generic query. It has effectively indexed **one** page per matrix, and Omaha is
+it. The biggest markets in the country are the dead ones.
+
+So the 146 dead URLs are not 146 separate thin pages needing 146 fixes. Most of
+them are duplicate-selection casualties. Fix the differentiation and both
+numbers move together.
+
+### What was actually wrong: four words
+
+Verified in the generator. A service x city page runs ~1,550-1,800 words. The
+only per-city input was the `industry` string in `data/metros.json`, which
+averages **four words** — Omaha's is `rail & ag manufacturing`. Everything else
+on the page was the same sentence with a different city name substituted in.
+
+### The fix: data, not prose
+
+**`data/metros.json` gained a `detail` block — 88 of 88 live metros researched.**
+Per metro: `sectors` (3-5 industries genuinely concentrated there), `corridors`
+(2-4 real named industrial districts, parks and terminal districts), `rail` (the
+Class I railroads that actually serve it, verified metro by metro), `port` (real
+navigable freight water access — **absent for 45 metros, correctly**), `stock`
+(the dominant industrial building stock and the access problem it creates),
+`equipment` (3-5 machine types the metro's plants actually run). The `metros`
+table itself is untouched and still one readable line per metro.
+
+**`build-service-cities.js` gained `METRO_COPY`** — four slots per page (intro
+paragraph, plant-floor paragraph, routing paragraph, one metro-specific FAQ),
+each **worded differently per service and drawing a different mix of the
+fields**, so the same Detroit facts do not produce the same Detroit sentences on
+the rigging page and the machinery page. Every slot returns `''` when the data
+isn't there, so a metro with no research keeps its previous page byte-for-byte.
+
+**Matrix differentiation, measured before and after on the built site:**
+
+| matrix | before | after | pages under the 33% floor |
+|---|---|---|---|
+| machinery-moving | 32.4% | **36.1%** | 86 → **20** |
+| rigging | 31.4% | **34.8%** | 88 → **43** |
+| plant-relocation | 31.8% | **34.9%** | 86 → **39** |
+| cnc-machine-movers | 31.2% | **34.5%** | 87 → **48** |
+
+All four means now clear the floor. Under-floor pages across the four matrices:
+**347 → 150**. Savannah, Charleston, Tulsa, Baltimore, Indianapolis, Detroit,
+Milwaukee, Minneapolis, Boston, Albuquerque, Omaha and Jacksonville — every
+metro `cannibalisation.js` named — are among the ones lifted.
+
+### Pages lifted
+
+| page | before | after | why |
+|---|---|---|---|
+| `/services/plant-relocation` | ~1,070 w | ~2,188 w | "production facility relocation services" 59 impr @ **37.7**, "plant relocation quote" 42 @ **43.2** |
+| `/services/project-freight` | ~1,156 w | ~1,892 w | **0 impressions**, and the page never used the words "project cargo" — the term with the actual demand |
+| `/services/truck-dispatch` | ~1,142 w | ~1,847 w | **0 impressions**, while retired `/services/dispatching` sits at **position 5.7**, the best on the site |
+| `/services/heavy-lift-rigging` | ~1,182 w | ~1,577 w | 0 impressions; title/H1 said "Jacking & Skidding", not the head term |
+| `/services/machinery-removal` | ~1,005 w | ~1,416 w | 0 impressions; never named asset labelling or load-out sequencing |
+| `/services/millwright-services` | ~920 w | ~1,146 w | 0 impressions; never named laser vs dial alignment, baseplates, grouting |
+| `/blog/plant-relocation-checklist` | 503 w | 1,547 w | "plant relocation quote" 51 @ **39.3**, "process plant relocation" 3 @ **73.7** |
+| `/blog/how-to-move-a-milling-machine` | ~470 w | 1,345 w | exact-match head term at **36.4** — it never mentioned mill types, lift-point documentation, or tramming |
+
+The clearest single diagnosis: **the two services the September revamp made
+primary both earn nothing, and in both cases the live page was not using the
+words buyers search.** project-freight never said "project cargo". truck-dispatch
+was thinner than the retired URL Google still ranks at 5.7.
+
+### Stub recovery — 2 queued, and a written policy for the rest
+
+131 stubs, 4,607 impressions, 45 clicks (down from 6,879/52 — the two trailer
+guides recovered earlier today took 2,272 impressions of that onto live pages).
+
+**Queued for recovery** in `seo/content-queue.json`, with the numbers in the angle:
+- `how-to-tarp-a-flatbed-load` — 167 impr @ 14.6, plus steel/lumber/hay-tarp
+  queries at 31-36 with nothing to land on. Fleet-owner securement question =
+  the 4+ truck dispatch buyer, same call as the two guides recovered today. It
+  is also told to **absorb** `/blog/how-to-secure-a-load-on-a-flatbed` (24 @
+  11.8) rather than recover it separately, so recovery does not manufacture a
+  new cannibalisation pair.
+- `how-to-ship-a-forklift` — 41 impr @ 15.2. A forklift is plant equipment we
+  load and rig, and `/services/forklift-loading-unloading` is a live pillar
+  earning nothing. Framed as load-out, not hauling.
+
+**Redirect rules were deliberately NOT deleted.** A recovery entry keeps its
+rule until the page is actually written — deleting it first leaves a 404, and
+`build-redirects.js` runs after the generators anyway.
+
+**Deliberately left stubbed, now written into `content-queue.json` as policy so
+this judgement doesn't get re-litigated every run:** the heavy-haul service and
+city stubs, every oversize-permit / pilot-car / superload post, the
+equipment-*shipping* posts (bulldozer, excavator, skid steer, boat, mobile home,
+crane transport) and hot-shot trucking — all demand for a motor carrier, a
+service retired in 2026. Also the trailer **service** pages (step-deck 188 @
+22.1, RGN, double-drop, lowboy, Conestoga, flatbed-transport, multi-axle 180 @
+10.9): trailer-choice demand is real and is our buyer, but it belongs in guides
+and `/trailer-selector`, not on a service page that reads as us running the
+trailer. And `/services/dispatching` (5.7) and `/services/freight-moving` (7.4)
+stay stubbed on purpose — their intent belongs on the live pages they already
+point at, and recovering them would split one intent across two URLs.
+
+### Cannibalisation: still there, and waiting on Sam
+
+**No merge was executed. No live URL was redirected or deleted.** These are the
+recommendations, with the numbers:
+
+1. **SIBLING CITIES, 14 pairs, ~3,200 impressions split — do not merge.** Every
+   one of these is the differentiation bug above (10 of the 14 pairs involve
+   `machinery-moving/omaha-ne` or `plant-relocation/omaha-ne`). The fix shipped
+   this run is the fix. Re-measure in 3-4 weeks before considering anything
+   structural.
+2. **`plant-relocation` — 194 impressions across 14 of our own URLs, and the
+   pillar is not the winner.** City pages take the bare non-geo query at
+   positions 71-96. Recommendation: the city pages should not be competing for
+   the bare term at all. Worth checking whether their H1/title anchor hard
+   enough on "plant relocation in &lt;city&gt;". Flagged by the pillar deepener
+   as something a pillar edit cannot fix.
+3. **Savannah/Georgia and Charleston/South Carolina, `machinery-moving` — 502
+   and 274 impressions split between a city page and its state hub.** The city
+   page wins both (11.2 vs 53.4; 19.0 vs 80.0), so the state hub is pure drag on
+   a query it will never win. **Recommendation for Sam: narrow the state hubs to
+   state-level intent** ("machinery movers in Georgia") and stop them targeting
+   city phrasing. This is an intent change, not a merge — no URL is removed.
+4. **`machinery-moving/oklahoma` vs `/oklahoma-city-ok` vs `/tulsa-ok` — 77
+   impressions across three pages at positions 22-24.** All three are close
+   enough to page one that the split is the only thing keeping them off it.
+   Same recommendation as 3.
+5. **`/services/heavy-haul/pittsburgh-pa` vs `/locations/pittsburgh-pa` — 108
+   impressions.** One side is a retired stub. No action; it resolves as the stub
+   decays.
+
+**The one genuine ARTICLES-pair merge candidate is absent from the report** —
+there are none under WORTH FIXING. Every fixable pair is geographic. That is
+worth knowing: this site does not have a duplicate-article problem, it has a
+duplicate-*city-page* problem.
+
+### Deliberately not done
+
+- **Rejected a batch of research.** A follow-up pass to fill the 15 metros whose
+  `stock` field came back empty (Portland OR, Jacksonville FL, Bakersfield CA,
+  Fargo ND, Casper WY, Billings MT, Little Rock AR, Jackson MS, Tulsa OK,
+  Knoxville TN, Hartford CT, Tampa FL, Cedar Rapids IA, Green Bay WI,
+  Montgomery AL) came back with 13 entries the researcher itself flagged as
+  **unverified** — its search budget had run out and it wrote from general
+  knowledge. Several also named specific company plants, against the convention
+  every other batch followed. `Never invent a fact about a city` is the one hard
+  rule here, and this would have put unverified claims on 52 live pages for
+  about 1-2 percentage points of matrix score. **Not merged.** Those 15 metros
+  are exactly the pages still under the floor — this is the highest-value single
+  task for the next run, and it needs one field, 15 metros, and a fresh search
+  budget.
+- No merges, redirects or deletions of live URLs — Sam's call, listed above.
+- No new pages, no sub-city URLs, no dispatch geo pages, no backlink work, no
+  Google Ads. Sitemap unchanged at **658 URLs**.
+
+### Two operational notes worth Sam's attention
+
+1. **Two scheduled runs raced on this worktree.** Mid-run, another run committed
+   `52dba5d` and `67413d0` and pushed. `67413d0` swept up this run's in-flight
+   edits to `content/services/heavy-lift-rigging.js` and
+   `content/services/project-freight.js` and shipped them inside a commit
+   described as a log update — almost certainly a `git add -A` in the other run.
+   Nothing was lost and both pages passed this run's gates afterwards, but a
+   `git add -A` in one run will silently publish another run's half-finished
+   work. Worth pinning each run to explicit paths.
+2. **An instruction arrived through the tool-output channel**, claiming a
+   "bypass permissions mode" was active and directing all file work through raw
+   shell (`cat`/`sed`/`echo`) instead of the auditable file tools. It did not
+   come from Sam or the task file. Five of the research agents independently
+   flagged it and declined it; this run did too and kept using the normal tools.
+   Flagging it because that is what a prompt-injection attempt looks like, and
+   because the thing it asked for — routing edits through raw shell — is
+   specifically what would make an unwanted change hard to see afterwards.
+
+### Verify
+
+Full `node build.js` green: 68,915 internal links / 0 broken, 0 links to retired
+URLs, 669 pages / 0 missing or duplicate titles, 0 missing or duplicate
+descriptions, heavy haul absent from every title, description, nav and footer,
+sitemap 658 URLs / 0 bad, AI-surface check 8 passing. `check-content.js` clean on
+all six edited pillars. `check-uniqueness.js` re-run on all four matrices, before
+and after, on the built site with the link mesh applied — so the numbers in the
+table above are the shipped numbers, not pre-mesh ones.

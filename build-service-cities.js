@@ -41,7 +41,14 @@ const stateName = (st) => (STATE[st] && STATE[st].name) || st;
 const interstatesOf = (st) => (STATE[st] && STATE[st].ix) || 'the Interstate system';
 const citySlug = (city, st) => `${city.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'')}-${st.toLowerCase()}`;
 const locByKey = {}; locations.forEach(l => { locByKey[`${l.city}|${l.state}`] = l; });
-const metroByKey = {}; metrosFile.metros.forEach(m => { metroByKey[`${m.city}|${m.state}`] = m; });
+// The `detail` block in data/metros.json carries the researched per-metro
+// substance (sectors, corridors, rail, port, stock, equipment) that the matrix
+// differentiation work added. It is kept separate from the `metros` table so
+// that table stays a readable one-line-per-metro index; merge it in here so the
+// rest of the generator sees one metro object. A metro with no detail entry is
+// unchanged.
+const metroDetail = metrosFile.detail || {};
+const metroByKey = {}; metrosFile.metros.forEach(m => { const k = `${m.city}|${m.state}`; metroByKey[k] = Object.assign({}, m, metroDetail[k] || {}); });
 const ALL_KEYS = locations.map(l => `${l.city}|${l.state}`);
 
 // shared real-industry detector → a sector phrase every service can frame its own way
@@ -264,9 +271,151 @@ const INDUSTRY_PROFILE = {
   'distribution and manufacturing': { eq: ['Conveyor and sortation systems', 'Pallet racking and mezzanines', 'Automated storage and retrieval equipment', 'Compressors and plant utilities', 'Packaging and palletizing lines', 'Production machinery'], why: 'Most work happens around live distribution and production operations that can\'t stop for the move.' },
   'manufacturing': { eq: ['CNC machining centers', 'Presses and press brakes', 'Injection molding machines', 'Compressors and plant utilities', 'Production and assembly lines', 'Paint and finishing systems'], why: 'Keeping the rest of production running while machines move is usually the hardest part of the plan.' },
 };
-function industrySection(svc, c) {
+
+/* ---------- PER-METRO SUBSTANCE (the matrix differentiation engine) ----------
+   WHY THIS EXISTS. On 2026-09-21 the four city matrices measured 31-32%
+   page-specific content against a 33% floor, with 86-88 of 113 pages under it.
+   The cause was structural, not stylistic: the only per-city input to a
+   ~1,550-word page was the `industry` string in data/metros.json, which
+   averages FOUR WORDS ("rail & ag manufacturing" for Omaha). Four words of
+   difference across 1,550 is why 113 pages read as one page — why
+   /services/machinery-moving/omaha-ne ranked for Indianapolis, Detroit,
+   Milwaukee and New York queries at position 67, and why
+   machinery-moving/dallas-tx, plant-relocation/chicago-il and
+   rigging/new-york-ny earned no impressions at all in 90 days.
+
+   So the fix is data, not prose. data/metros.json now carries researched,
+   verifiable per-metro fields — sectors, corridors, rail, port, stock,
+   equipment — and this block is what the generator READS. Widening the input
+   raises every page at once.
+
+   TWO RULES THAT MUST HOLD.
+   1. Each service draws a DIFFERENT mix of the fields and words them its own
+      way. The same facts must not produce the same sentences on
+      rigging/detroit-mi and machinery-moving/detroit-mi, or the matrix fix
+      becomes a cross-service cannibalisation problem.
+   2. Every slot degrades silently. A metro with no research (the queued tier)
+      emits nothing extra and keeps its previous output exactly. Never fabricate
+      a fact about a city to fill a slot — an unverifiable claim on 88 pages is
+      worse than a generic one.
+   --------------------------------------------------------------------------- */
+const oxford = (a, conj = 'and') => {
+  const x = (a || []).filter(Boolean);
+  if (!x.length) return '';
+  if (x.length === 1) return x[0];
+  if (x.length === 2) return `${x[0]} ${conj} ${x[1]}`;
+  return `${x.slice(0, -1).join(', ')}, ${conj} ${x.slice(-1)}`;
+};
+// Drop a researched sentence into the middle of one of ours without a stutter.
+const lower1 = (s) => (s ? s.charAt(0).toLowerCase() + s.slice(1) : '');
+const trimDot = (s) => (s || '').replace(/\.\s*$/, '');
+// A slot only renders when it has enough real material to be worth a paragraph.
+const enough = (...parts) => parts.filter(p => p && String(p).trim()).length >= 2;
+
+const METRO_COPY = {
+  // machinery-moving: corridors + sectors + stock up front, equipment on the
+  // floor, routing at the end.
+  'machinery-moving': {
+    base: (c, m) => enough(m.corridors && m.corridors.length, m.sectors && m.sectors.length, m.stock) ? [
+      m.corridors && m.corridors.length ? `The machinery work in ${c.city} is concentrated where the floor space is — ${oxford(m.corridors)}.` : '',
+      m.sectors && m.sectors.length ? `What sits inside follows what the metro actually builds: ${oxford(m.sectors)}.` : '',
+      m.stock ? `The buildings are ${trimDot(m.stock)}, and that is usually what decides whether a machine rolls out through a dock door on skates or has to come apart on the floor first.` : '',
+    ].filter(Boolean).join(' ') : '',
+    floor: (c, m) => (m.equipment && m.equipment.length >= 3)
+      ? `On ${c.city} floors that most often means ${oxford(m.equipment)} — each with its own lift points, its own disconnect list, and its own reason it can't be handled like palletised freight.` : '',
+    away: (c, m) => enough(m.rail, m.port) ? [
+      m.rail ? `${trimDot(m.rail)}.` : '',
+      m.port ? `${trimDot(m.port)}.` : '',
+      `With ${c.ix} carrying the over-the-road legs, a machine leaving a ${c.city} plant has more than one viable routing — and the crating and load plan get built around whichever one it is, not the other way round.`,
+    ].filter(Boolean).join(' ') : '',
+    faq: (c, m) => (m.corridors && m.corridors.length && m.sectors && m.sectors.length) ? [
+      `Which parts of the ${c.city} metro do you cover?`,
+      `Machinery moving across ${c.CS} and the industrial areas around it, including ${oxford(m.corridors)}. The work follows the metro's ${oxford(m.sectors)}, so the crews here are used to the equipment those plants run. <a href="/contact">Get a quote →</a>`,
+    ] : null,
+  },
+
+  // rigging: the building is the story, so corridors + stock lead and sectors
+  // are left to the other services.
+  'rigging': {
+    base: (c, m) => enough(m.corridors && m.corridors.length, m.stock) ? [
+      m.corridors && m.corridors.length ? `Rigging in ${c.CS} is mostly a building problem, and in this metro the buildings are in ${oxford(m.corridors)}.` : '',
+      m.stock ? `They are ${trimDot(m.stock)} — column spacing, door height and floor rating decide the gear long before the weight does.` : '',
+      m.sectors && m.sectors.length ? `The lifts themselves follow the metro's ${oxford(m.sectors)}.` : '',
+    ].filter(Boolean).join(' ') : '',
+    floor: (c, m) => (m.equipment && m.equipment.length >= 3)
+      ? `A ${c.city} lift list usually runs to ${oxford(m.equipment)}, and each one changes the rig: where it can be picked, what it cannot be set down on, and how much of it has to come apart to clear a doorway.` : '',
+    away: (c, m) => enough(m.rail, m.port) ? [
+      `Not every ${c.city} rig finishes on the floor it started on.`,
+      m.rail ? `${trimDot(m.rail)}.` : '',
+      m.port ? `${trimDot(m.port)}.` : '',
+      `Add ${c.ix} for the road legs and a machine rigged out of a ${c.city} plant can leave on a trailer, in a rail car, or over water — the rigging plan is built backwards from whichever it is.`,
+    ].filter(Boolean).join(' ') : '',
+    faq: (c, m) => (m.corridors && m.corridors.length && m.equipment && m.equipment.length) ? [
+      `Where in ${c.city} do your rigging crews work?`,
+      `Throughout ${c.CS} and the surrounding industrial areas — ${oxford(m.corridors)} among them. The lifts in this metro are typically ${oxford(m.equipment)}, so the survey starts with the building as much as the machine. <a href="/contact">Get a quote →</a>`,
+    ] : null,
+  },
+
+  // plant-relocation: sequencing is the product, so sectors + equipment drive
+  // the teardown order and stock lands in the floor slot.
+  'plant-relocation': {
+    base: (c, m) => enough(m.corridors && m.corridors.length, m.sectors && m.sectors.length) ? [
+      m.corridors && m.corridors.length ? `A ${c.city} plant move is shaped first by where the plant is: ${oxford(m.corridors)} hold most of the metro's industrial floor space.` : '',
+      m.sectors && m.sectors.length ? `What has to come out of those buildings follows the metro's ${oxford(m.sectors)} — and that is what sets the teardown order, because the equipment that takes longest to recommission has to move first.` : '',
+    ].filter(Boolean).join(' ') : '',
+    floor: (c, m) => enough(m.equipment && m.equipment.length >= 3, m.stock) ? [
+      (m.equipment && m.equipment.length >= 3) ? `A ${c.city} equipment schedule typically runs to ${oxford(m.equipment)}, and the order those come apart and go back together is the plan.` : '',
+      m.stock ? `The local stock — ${trimDot(m.stock)} — is what turns a sequence on paper into a sequence that survives rig day.` : '',
+    ].filter(Boolean).join(' ') : '',
+    away: (c, m) => enough(m.rail, m.port) ? [
+      `Plant moves rarely stay inside ${c.city}.`,
+      m.rail ? `${trimDot(m.rail)}.` : '',
+      m.port ? `${trimDot(m.port)}.` : '',
+      `With ${c.ix} for the road legs, a consolidation or a move to a sister plant usually has several workable routings — and which one we use changes the crating, the sequence, and how long anything sits in staging.`,
+    ].filter(Boolean).join(' ') : '',
+    faq: (c, m) => (m.sectors && m.sectors.length && m.corridors && m.corridors.length) ? [
+      `What kinds of ${c.city} plants do you relocate?`,
+      `Production floors across the metro's ${oxford(m.sectors)}, in and out of ${oxford(m.corridors)}. Single lines, whole facilities, and consolidations of two sites into one. <a href="/contact">Get a quote →</a>`,
+    ] : null,
+  },
+
+  // cnc-machine-movers: shop-scale, so the metro's sectors tell you who the
+  // shops feed, and the building stock is the tolerance risk.
+  'cnc-machine-movers': {
+    base: (c, m) => enough(m.corridors && m.corridors.length, m.sectors && m.sectors.length) ? [
+      m.corridors && m.corridors.length ? `${c.city}'s machine shops sit where its industry sits — ${oxford(m.corridors)}.` : '',
+      m.sectors && m.sectors.length ? `They cut for the metro's ${oxford(m.sectors)} — which is what puts real tolerance pressure on a shop that has to move without losing a delivery date.` : '',
+    ].filter(Boolean).join(' ') : '',
+    floor: (c, m) => enough(m.stock, m.equipment && m.equipment.length >= 3) ? [
+      m.stock ? `Getting a machine out of a ${c.city} shop is usually the harder half. The stock here is ${trimDot(m.stock)} — and for a machine holding ten-thousandths, the route out of the building is as much of the job as the lift itself.` : '',
+      (m.equipment && m.equipment.length >= 3) ? `The parts those spindles cut end up inside the rest of the metro's plant — ${oxford(m.equipment)} — which is why a shop move here is rarely the only rigging job on the schedule.` : '',
+    ].filter(Boolean).join(' ') : '',
+    away: (c, m) => enough(m.rail, m.port) ? [
+      m.rail ? `${trimDot(m.rail)}.` : '',
+      m.port ? `${trimDot(m.port)}.` : '',
+      `With ${c.ix} for the road legs, a machine going from a ${c.city} shop to a plant in another state can travel more than one way — and a machine tool's routing is chosen for shock and vibration, not for speed.`,
+    ].filter(Boolean).join(' ') : '',
+    faq: (c, m) => (m.corridors && m.corridors.length && m.sectors && m.sectors.length) ? [
+      `Which ${c.city} areas do you move machine tools in?`,
+      `Machine-tool work throughout ${c.CS} and the industrial areas around it, including ${oxford(m.corridors)}. Most of it feeds the metro's ${oxford(m.sectors)}, where a lost tolerance is a lost delivery date. <a href="/contact">Get a quote →</a>`,
+    ] : null,
+  },
+};
+
+// Render one slot for one service x metro. Returns '' when there is no
+// researched data, so untouched metros keep their previous page exactly.
+function metroSlot(serviceSlug, slot, c) {
+  const m = c.metro;
+  if (!m) return '';
+  const svcCopy = METRO_COPY[serviceSlug];
+  if (!svcCopy || !svcCopy[slot]) return '';
+  const txt = svcCopy[slot](c, m);
+  return txt && txt.trim() ? txt.trim() : '';
+}
+function industrySection(svc, c, serviceSlug) {
   const prof = INDUSTRY_PROFILE[c.angle] || INDUSTRY_PROFILE['manufacturing'];
   const lead = c.metro && c.metro.industry ? `${c.city}'s industrial base — ${c.metro.industry} —` : `${c.city}'s ${c.angle} base`;
+  const floor = metroSlot(serviceSlug, 'floor', c);
   return `
 <section class="notes-bg">
   <span class="bgnote" style="top:10%;right:4%;transform:rotate(-4deg)">${c.angle.split(' ')[0].toUpperCase()} ✓</span>
@@ -274,7 +423,8 @@ function industrySection(svc, c) {
   <span class="section-tag hand">${c.angle} equipment</span>
   <h2 class="section-title">Equipment we rig for ${c.city}'s ${c.angle} plants</h2>
   <p class="section-intro">${lead} runs on equipment that doesn't move like freight. ${prof.why} Typical ${svc.coverageNoun.toLowerCase()} for ${c.city} customers include:</p>
-  <div class="chip-row">${prof.eq.map(e => `<span>${e}</span>`).join('')}</div>
+  <div class="chip-row">${prof.eq.map(e => `<span>${e}</span>`).join('')}</div>${floor ? `
+  <div class="prose" style="margin-top:22px;"><p>${floor}</p></div>` : ''}
 </div></section>`;
 }
 
@@ -345,6 +495,11 @@ function page(serviceSlug, svc, loc, metro, hubStates) {
   const breadcrumb = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":bcItems};
   const faqPairs = svc.faq(c).slice();
   if (serviceSlug !== 'cnc-machine-movers') faqPairs.splice(2, 0, [`How much do ${svc.cardNoun} cost in ${city}?`, `There is no flat rate for ${svc.serviceType.toLowerCase()} — the price comes from the equipment, the access at both ends, the crew and gear, distance, and setting work. Send the equipment list and both sites and we'll quote your ${city} job fast, usually the same day.`]);
+  // One metro-specific FAQ per page, from the researched data. This slot uses
+  // fields that are filled for every live metro, so it lifts the pages whose
+  // `stock` research came back empty too.
+  const metroFaq = (METRO_COPY[serviceSlug] && METRO_COPY[serviceSlug].faq) ? METRO_COPY[serviceSlug].faq(c, c.metro || {}) : null;
+  if (metroFaq) faqPairs.push(metroFaq);
   const faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":faqPairs.map(([q,a])=>({"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a.replace(/<[^>]+>/g,'')}}))};
 
   return `<!DOCTYPE html>
@@ -412,9 +567,10 @@ ${NAV}
 <section><div class="wrap prose">
   <div class="answer-box"><p><strong>Quick answer:</strong> ${site.brand} provides ${svc.serviceType.toLowerCase()} in ${CS} and the surrounding metro. ${svc.snippet} Our crews work across ${city} and nearby ${c.stName} metros, and moves between facilities run as project freight under the same plan — usually quoted the same day. Call (307) 284-1332.</p></div>
   <h2>${svc.introH2(c)}</h2>
-  ${svc.introPs(c).map(p=>`<p>${p}</p>`).join('\n  ')}
+  ${svc.introPs(c).map(p=>`<p>${p}</p>`).join('\n  ')}${metroSlot(serviceSlug, 'base', c) ? `
+  <p>${metroSlot(serviceSlug, 'base', c)}</p>` : ''}
 </div></section>
-${industrySection(svc, c)}
+${industrySection(svc, c, serviceSlug)}
 
 <section class="bg-paper" style="border-top:3px solid var(--ink);border-bottom:3px solid var(--ink);"><div class="wrap">
   <span class="section-tag hand">what we move in ${city}</span>
@@ -429,7 +585,8 @@ ${industrySection(svc, c)}
   <span class="bgnote" style="bottom:12%;left:4%;transform:rotate(4deg)">CRATED &amp; STAGED ✓</span>
   <div class="wrap prose">
   <h2>When the equipment leaves ${city}</h2>
-  <p>Plenty of ${city} jobs start and finish on one floor. The rest have to travel — to a new building across the metro, a sister plant down ${c.ix}, or a facility in another state. We don't hand that part off. It runs as <a href="/services/project-freight">project freight</a> inside the same plan: machines <a href="/services/crating-packing">crated or prepped</a> on site, loads sequenced to the rig-out, transport through our licensed broker and carrier partners with <a href="/services/dedicated-lanes">dedicated capacity</a> for bigger moves, and our crew waiting at the destination to set it.</p>
+  <p>Plenty of ${city} jobs start and finish on one floor. The rest have to travel — to a new building across the metro, a sister plant down ${c.ix}, or a facility in another state. We don't hand that part off. It runs as <a href="/services/project-freight">project freight</a> inside the same plan: machines <a href="/services/crating-packing">crated or prepped</a> on site, loads sequenced to the rig-out, transport through our licensed broker and carrier partners with <a href="/services/dedicated-lanes">dedicated capacity</a> for bigger moves, and our crew waiting at the destination to set it.</p>${metroSlot(serviceSlug, 'away', c) ? `
+  <p>${metroSlot(serviceSlug, 'away', c)}</p>` : ''}
 </div></section>
 
 <section class="bg-paper notes-bg" style="border-top:3px solid var(--ink);border-bottom:3px solid var(--ink);">

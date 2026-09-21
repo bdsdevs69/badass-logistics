@@ -2,8 +2,8 @@
 module.exports = {
   slug: 'heavy-lift-rigging',
   cardBlurb: 'Hydraulic gantries, jack-and-slide, toe jacks, and air skates — heavy moves where a crane can\'t reach.',
-  title: 'Heavy Lift Rigging Services — Gantries, Jacking & Skidding | Badass Logistics',
-  description: 'Heavy lift rigging services — hydraulic gantries, jacking and cribbing, skidding on slide systems and rollers, and engineered lift plans for critical lifts where a crane can\'t reach.',
+  title: 'Heavy Lift Rigging — Gantries & Skidding | Badass Logistics',
+  description: 'Heavy lift rigging services — hydraulic gantries, jacking and cribbing, and skidding for critical lifts where a crane can\'t reach or set up.',
   serviceType: 'Heavy Lift Rigging — Jacking, Skidding & Gantry',
   hero: '/assets/img/loads/load-rigging-equipment.jpg',
   band: '/assets/img/mri-lift.jpg',

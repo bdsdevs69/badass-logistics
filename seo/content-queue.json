@@ -1,627 +1,671 @@
 {
-  "_note": "Backlog for the semi-weekly SEO routine (seo/routine.md). Topics are ordered — the routine takes the first item with status 'todo', writes it as a content/blog-new/<slug>.js module, and flips it to 'done' with the date. Track A topics come from scripts/topic-gaps.js (90d, 2026-09-21) — article-shaped demand with no page. The equipment and process topics serve the clusters index-health.js grades GREEN; seo/schedule.md is explicit that equipment demand is national and how-to shaped, so it gets articles and never an equipment x city matrix. Refill with scripts/topic-gaps.js, never from a brainstorm.",
-  "clusters": {
-    "medical": "Highest priority. The site has only 2 medical posts against a service page that Google barely ranks. Commercial intent here lives in 'movers / moving company / relocation', NOT in device names — 'ct scanner' and 'mri machine' alone are consumer queries about cost and scan results.",
-    "machinery": "Already well covered (9 posts). Fill genuine equipment gaps only, do not write another generic machinery post.",
-    "crane": "Normal priority. Decision-stage queries convert better here than how-tos.",
-    "dispatch": "Low priority by instruction — the brand should not read as a dispatch company. 3 posts is enough; only add if a query proves itself in Search Console."
+ "_note": "Backlog for the semi-weekly SEO routine (seo/routine.md). Topics are ordered — the routine takes the first item with status 'todo', writes it as a content/blog-new/<slug>.js module, and flips it to 'done' with the date. Track A topics come from scripts/topic-gaps.js (90d, 2026-09-21) — article-shaped demand with no page. The equipment and process topics serve the clusters index-health.js grades GREEN; seo/schedule.md is explicit that equipment demand is national and how-to shaped, so it gets articles and never an equipment x city matrix. Refill with scripts/topic-gaps.js, never from a brainstorm.",
+ "clusters": {
+  "medical": "Highest priority. The site has only 2 medical posts against a service page that Google barely ranks. Commercial intent here lives in 'movers / moving company / relocation', NOT in device names — 'ct scanner' and 'mri machine' alone are consumer queries about cost and scan results.",
+  "machinery": "Already well covered (9 posts). Fill genuine equipment gaps only, do not write another generic machinery post.",
+  "crane": "Normal priority. Decision-stage queries convert better here than how-tos.",
+  "dispatch": "Low priority by instruction — the brand should not read as a dispatch company. 3 posts is enough; only add if a query proves itself in Search Console."
+ },
+ "queue": [
+  {
+   "slug": "how-to-load-and-secure-a-conestoga-trailer",
+   "cluster": "dispatch",
+   "cat": "Dispatch",
+   "target": "conestoga trailer loading, how to secure a load on a conestoga, conestoga securement, what is a conestoga trailer",
+   "angle": "RECOVERY: currently a redirect stub still earning 543 impressions at position 13.9. Rebuild for a fleet owner running Conestogas: how the curtain system works, loading sequence, securement inside a rolling tarp, what it protects against versus a tarped flatbed, cargo-claim exposure, and when a Conestoga wins freight a flatbed cannot. Dispatch-framed — we dispatch Conestoga fleets. Never imply Badass hauls. No oversize or permit service framing.",
+   "links": [
+    "services/truck-dispatch",
+    "services/dedicated-lanes"
+   ],
+   "hero": "loads/conestoga-interior-load-securement-strap.jpg",
+   "status": "done",
+   "published": "2026-09-21"
   },
-  "queue": [
-    {
-      "slug": "how-to-load-and-secure-a-conestoga-trailer",
-      "cluster": "dispatch",
-      "cat": "Dispatch",
-      "target": "conestoga trailer loading, how to secure a load on a conestoga, conestoga securement, what is a conestoga trailer",
-      "angle": "RECOVERY: currently a redirect stub still earning 543 impressions at position 13.9. Rebuild for a fleet owner running Conestogas: how the curtain system works, loading sequence, securement inside a rolling tarp, what it protects against versus a tarped flatbed, cargo-claim exposure, and when a Conestoga wins freight a flatbed cannot. Dispatch-framed — we dispatch Conestoga fleets. Never imply Badass hauls. No oversize or permit service framing.",
-      "links": [
-        "services/truck-dispatch",
-        "services/dedicated-lanes"
-      ],
-      "hero": "loads/conestoga-interior-load-securement-strap.jpg",
-      "status": "done",
-      "published": "2026-09-21"
-    },
-    {
-      "slug": "step-deck-vs-drop-deck-trailers",
-      "cluster": "dispatch",
-      "cat": "Dispatch",
-      "target": "step deck vs drop deck, drop deck vs step deck, what is a step deck trailer, step deck trailer dimensions, ground clearance of a step deck trailer, how high can you load a step deck, step deck vs lowboy, what is a double drop trailer",
-      "angle": "RECOVERY: this URL is currently a redirect stub still earning 1,729 impressions at position 17.5 — the biggest page on the site — and it bounces every visitor to the trailer selector. Rebuild it as the definitive answer, written for a FLEET OWNER deciding what to run, not for a shipper hiring a hauler. Cover the whole cluster in one page: what a step deck is and why it exists, step deck vs drop deck (they are the same trailer, different regional names — say so plainly, that is the query), deck heights and legal load heights, ground clearance, where a lowboy or double drop takes over, and what each trailer type means for the freight a fleet can book. Frame throughout as dispatch: we dispatch fleets running flatbed, step deck, reefer and Conestoga. NEVER imply Badass hauls anything or holds authority. No permits/escort/oversize service framing — that line is retired; mention legal limits only as facts a fleet plans around.",
-      "links": [
-        "services/truck-dispatch",
-        "services/dedicated-lanes"
-      ],
-      "hero": "loads/load-lowboy-warehouse.jpg",
-      "status": "done",
-      "published": "2026-09-21"
-    },
-    {
-      "slug": "how-to-move-a-linear-accelerator",
-      "cluster": "medical",
-      "cat": "Medical Rigging",
-      "target": "linear accelerator removal, linac relocation, linear accelerator rigging",
-      "angle": "Vault work: shielding, the maze, component sequence, OEM de-install, crane-in vs knock-out panel, decommissioning an old linac. Almost no competitor content exists on this and the jobs are large.",
-      "links": [
-        "services/mri-medical-equipment-rigging",
-        "services/machinery-removal",
-        "blog/how-to-move-an-mri-machine"
-      ],
-      "hero": "loads/ct-mri-scanner-enclosed-air-ride.jpg",
-      "status": "done",
-      "published": "2026-09-18"
-    },
-    {
-      "slug": "how-to-move-an-x-ray-machine",
-      "cluster": "medical",
-      "cat": "Medical Rigging",
-      "target": "x ray machine moving, radiography room relocation, c-arm moving",
-      "angle": "Fixed radiographic rooms, C-arms, fluoroscopy and mammo. Tube and detector handling, ceiling-suspended rails, lead-lined wall openings, working around a live department.",
-      "links": [
-        "services/mri-medical-equipment-rigging",
-        "services/lab-equipment-movers"
-      ],
-      "hero": "loads/ct-scanner-medical-imaging-move.jpg",
-      "status": "done",
-      "published": "2026-09-18"
-    },
-    {
-      "slug": "hospital-equipment-relocation-guide",
-      "cluster": "medical",
-      "cat": "Medical Rigging",
-      "target": "hospital equipment movers, hospital equipment relocation, healthcare facility move",
-      "angle": "Department-level moves: who owns what between the OEM, biomed, EHS, facilities and the rigger. Decon sign-off, infection control risk assessment, elevator embargoes, night windows.",
-      "links": [
-        "services/mri-medical-equipment-rigging",
-        "services/lab-equipment-movers",
-        "services/plant-relocation"
-      ],
-      "hero": "loads/white-glove-crated-equipment-delivery.jpg",
-      "status": "done",
-      "published": "2026-09-18"
-    },
-    {
-      "slug": "how-much-does-it-cost-to-move-medical-equipment",
-      "cluster": "medical",
-      "cat": "Medical Rigging",
-      "target": "medical equipment moving cost, mri move cost, what affects imaging equipment move price",
-      "angle": "Cost-factor piece with no prices — the same structure as the machinery-movers cost post that already ranks. Drivers: system weight and class, floor and route, OEM time, after-hours windows, wall work, distance.",
-      "links": [
-        "services/mri-medical-equipment-rigging",
-        "blog/how-much-do-machinery-movers-cost"
-      ],
-      "hero": "loads/ct-mri-scanner-enclosed-air-ride.jpg",
-      "status": "done",
-      "published": "2026-09-18"
-    },
-    {
-      "slug": "how-to-move-an-injection-molding-machine",
-      "cluster": "machinery",
-      "cat": "Machinery Moving",
-      "target": "injection molding machine moving, molding machine rigging, press relocation",
-      "angle": "Real gap — the site covers CNC, lathes, mills and press brakes but not molding. Tie-bar and platen protection, splitting clamp and injection units, hopper and dryer systems, oil drain, leveling to tie-bar parallelism.",
-      "links": [
-        "services/machinery-moving",
-        "services/millwright-services"
-      ],
-      "hero": "loads/load-machine-loadout.jpg",
-      "status": "done",
-      "published": "2026-09-18"
-    },
-    {
-      "slug": "switchgear-and-substation-equipment-moving",
-      "cluster": "machinery",
-      "cat": "Machinery Moving",
-      "target": "switchgear installation companies, substation equipment moving, switchgear rigging",
-      "angle": "Autocomplete shows real demand for switchgear installation. Lineups moved in sections, bus alignment, pad and anchor tolerance, working around energized gear, coordination with the electrical contractor.",
-      "links": [
-        "services/transformer-generator-rigging",
-        "services/millwright-services"
-      ],
-      "hero": "loads/load-flatbed-electrical.jpg",
-      "status": "done",
-      "published": "2026-09-18"
-    },
-    {
-      "slug": "crane-rental-vs-rigging-company",
-      "cluster": "crane",
-      "cat": "Rigging",
-      "target": "crane rental with operator, crane service vs rigging company, who do I hire for a lift",
-      "angle": "Decision-stage post for the exact confusion the crane ad group runs into: renting steel and an operator versus hiring a crew that owns the whole pick. Where each one is correct.",
-      "links": [
-        "services/crane-services",
-        "services/rigging",
-        "blog/what-is-a-critical-lift"
-      ],
-      "hero": "rigging-crane.jpg",
-      "status": "done",
-      "published": "2026-09-18"
-    },
-    {
-      "slug": "how-to-move-a-compressor",
-      "cluster": "machinery",
-      "cat": "Machinery Moving",
-      "target": "air compressor moving, industrial compressor relocation, rotary screw compressor move",
-      "angle": "Rotary screw and centrifugal units, receiver tanks and dryers, oil and condensate, vibration isolation pads, reconnecting plant air without leaks.",
-      "links": [
-        "services/machinery-moving",
-        "services/hvac-chiller-rigging"
-      ],
-      "hero": "loads/flatbed-industrial-dust-collectors-strapped.jpg",
-      "status": "done",
-      "published": "2026-09-18"
-    },
-    {
-      "slug": "forklift-vs-crane-for-machine-loading",
-      "cluster": "crane",
-      "cat": "Rigging",
-      "target": "forklift vs crane loading, machinery loading and unloading services, how to load a machine on a truck",
-      "angle": "Load-center derating on forklifts is the thing most people get wrong. When a forklift is right, when it is not, and what a crane pick or gantry changes.",
-      "links": [
-        "services/forklift-loading-unloading",
-        "services/crane-services"
-      ],
-      "hero": "loads/load-lowboy-warehouse.jpg",
-      "status": "done",
-      "published": "2026-09-21"
-    },
-    {
-      "slug": "what-is-a-machinery-move-survey",
-      "cluster": "machinery",
-      "cat": "Rigging",
-      "target": "machine move site survey, rigging site survey, what riggers check before a move",
-      "angle": "AEO-shaped explainer of the site walk: weights and drawings, door and corridor measurements, floor loading, elevator ratings, utilities, the things that turn into change orders when they are skipped.",
-      "links": [
-        "services/rigging",
-        "services/machinery-moving",
-        "blog/plant-relocation-checklist"
-      ],
-      "hero": "rigging-hero.jpg",
-      "status": "done",
-      "published": "2026-09-21"
-    },
-    {
-      "slug": "how-to-move-a-data-center",
-      "cluster": "machinery",
-      "cat": "Rigging",
-      "target": "data center relocation, server rack moving, data center rigging",
-      "angle": "The service page exists with no supporting guide. Rack roll-out vs de-stack, floor tile loading, ramps, shock monitoring, sequencing against a migration window.",
-      "links": [
-        "services/data-center-rigging",
-        "services/lab-equipment-movers"
-      ],
-      "hero": "loads/enclosed-trailer-machinery-loaded.jpg",
-      "status": "done",
-      "published": "2026-09-21"
-    },
-    {
-      "slug": "how-to-move-a-transformer-into-a-building",
-      "cluster": "machinery",
-      "cat": "Machinery Moving",
-      "target": "transformer moving company, indoor transformer rigging, transformer replacement",
-      "angle": "Distinct from the existing transport post: this is the rigging half. Getting a unit into an electrical room, skidding on steel, temporary steel, removing the old one, oil handling.",
-      "links": [
-        "services/transformer-generator-rigging",
-        "services/heavy-lift-rigging"
-      ],
-      "hero": "loads/load-flatbed-electrical.jpg",
-      "status": "done",
-      "published": "2026-09-21"
-    },
-    {
-      "slug": "how-to-choose-a-plant-relocation-contractor",
-      "cluster": "aeo",
-      "cat": "Plant Relocation",
-      "target": "best plant relocation companies, which plant relocation contractor, plant relocation companies track record",
-      "angle": "The buyer-guide the LLM-shaped queries are asking for: what separates contractors, what to ask, what a real track record looks like, who owns what between the OEM, the millwright and the rigger. Sits at position 60-76 today with nothing targeting it. No self-promotion in the body — answer the question honestly and the credibility does the selling.",
-      "links": [
-        "services/plant-relocation",
-        "services/rigging",
-        "blog/plant-relocation-checklist"
-      ],
-      "hero": "loads/load-machine-loadout.jpg",
-      "status": "done",
-      "published": "2026-09-21"
-    },
-    {
-      "slug": "in-house-team-vs-relocation-contractor",
-      "cluster": "aeo",
-      "cat": "Plant Relocation",
-      "target": "industrial relocation contractors vs in-house facilities teams, should we move equipment ourselves",
-      "angle": "Already at position 7 with no dedicated page. Honest decision piece: what an in-house maintenance team can genuinely handle, where the line is (rigging gear, insurance, lift planning, downtime risk), and what it actually costs to get it wrong. Must be even-handed or it reads as a sales page and loses the query.",
-      "links": [
-        "services/plant-relocation",
-        "services/millwright-services"
-      ],
-      "hero": "rigging-hero.jpg",
-      "status": "done",
-      "published": "2026-09-21"
-    },
-    {
-      "slug": "single-source-plant-relocation-explained",
-      "cluster": "aeo",
-      "cat": "Plant Relocation",
-      "target": "single source plant relocation, turnkey plant relocation services, who offers turnkey plant relocation",
-      "angle": "Defines the term buyers are searching without knowing what it means: one contract covering de-install, rigging, transport, set and level, versus coordinating four vendors. Where single-source genuinely helps and where it is just a markup.",
-      "links": [
-        "services/plant-relocation",
-        "services/machinery-moving",
-        "services/millwright-services"
-      ],
-      "hero": "loads/white-glove-crated-equipment-delivery.jpg",
-      "status": "todo"
-    },
-    {
-      "slug": "how-to-vet-an-industrial-rigging-company",
-      "cluster": "aeo",
-      "cat": "Rigging",
-      "target": "top riggers for high-value industrial equipment, how to choose a rigging company, questions to ask a rigger",
-      "angle": "The vetting checklist: insurance limits and what they actually cover, lift plans, rigging gear ownership vs rental, crew experience, references that matter. Pairs with the crane-rental-vs-rigging-company post — link it, do not repeat it.",
-      "links": [
-        "services/rigging",
-        "services/heavy-lift-rigging",
-        "blog/crane-rental-vs-rigging-company"
-      ],
-      "hero": "rigging-crane.jpg",
-      "status": "todo"
-    },
-    {
-      "slug": "how-to-move-a-surface-grinder",
-      "cluster": "machinery",
-      "cat": "Machinery Moving",
-      "target": "surface grinder moving, grinder rigging, precision machine relocation",
-      "angle": "Precision-machine angle the site has not covered: granite and cast-iron bases, way protection, why a grinder is more sensitive to racking than a mill, re-leveling to tenths after the move.",
-      "links": [
-        "services/machinery-moving",
-        "services/millwright-services"
-      ],
-      "hero": "loads/load-machine-loadout.jpg",
-      "status": "todo"
-    },
-    {
-      "slug": "how-to-move-an-edm-machine",
-      "cluster": "machinery",
-      "cat": "Machinery Moving",
-      "target": "edm machine moving, wire edm relocation, sinker edm rigging",
-      "angle": "Wire and sinker EDM: dielectric fluid drain and disposal, filtration units, the wire path and guides, thermal stability on reinstall, why EDMs punish a sloppy level.",
-      "links": [
-        "services/machinery-moving",
-        "services/cnc-machine-movers"
-      ],
-      "hero": "loads/enclosed-trailer-machinery-loaded.jpg",
-      "status": "todo"
-    },
-    {
-      "slug": "how-to-move-a-waterjet-cutter",
-      "cluster": "machinery",
-      "cat": "Machinery Moving",
-      "target": "waterjet moving, waterjet cutter relocation, abrasive waterjet rigging",
-      "angle": "Catch tank drain and abrasive removal (the weight nobody budgets for), the intensifier pump as a separate lift, plumbing and garnet handling, tank re-level and seal.",
-      "links": [
-        "services/machinery-moving",
-        "services/millwright-services"
-      ],
-      "hero": "loads/load-machine-loadout.jpg",
-      "status": "todo"
-    },
-    {
-      "slug": "how-to-move-a-laser-cutter",
-      "cluster": "machinery",
-      "cat": "Machinery Moving",
-      "target": "laser cutter moving, fiber laser relocation, laser cutting machine rigging",
-      "angle": "Fiber and CO2: resonator or source handling, optics and beam path protection, chiller and assist-gas systems, shock limits in transit, alignment on reinstall.",
-      "links": [
-        "services/machinery-moving",
-        "services/cnc-machine-movers"
-      ],
-      "hero": "loads/enclosed-trailer-machinery-loaded.jpg",
-      "status": "todo"
-    },
-    {
-      "slug": "how-to-move-a-horizontal-boring-mill",
-      "cluster": "machinery",
-      "cat": "Machinery Moving",
-      "target": "horizontal boring mill moving, boring mill rigging, table type boring mill relocation",
-      "angle": "Large-format machine: column and table split, way and spindle protection, counterweights, foundation and grout requirements, the multi-day reassembly and alignment that follows.",
-      "links": [
-        "services/machinery-moving",
-        "services/heavy-lift-rigging",
-        "services/millwright-services"
-      ],
-      "hero": "loads/load-lowboy-warehouse.jpg",
-      "status": "todo"
-    },
-    {
-      "slug": "how-to-move-a-stamping-press",
-      "cluster": "machinery",
-      "cat": "Machinery Moving",
-      "target": "stamping press moving, punch press relocation, mechanical press rigging",
-      "angle": "Distinct from the injection-molding post: flywheel and crown weight distribution, pit-mounted presses, die handling, bolster and cushion systems, isolation pads and foundation bolts.",
-      "links": [
-        "services/machinery-moving",
-        "services/heavy-lift-rigging"
-      ],
-      "hero": "loads/load-lowboy-warehouse.jpg",
-      "status": "todo"
-    },
-    {
-      "slug": "how-to-move-a-cmm",
-      "cluster": "machinery",
-      "cat": "Machinery Moving",
-      "target": "cmm moving, coordinate measuring machine relocation, granite cmm rigging",
-      "angle": "The most shock-sensitive thing in most plants: granite table handling, air-bearing protection, transport shock monitoring, environmental requirements, and the re-certification a move triggers.",
-      "links": [
-        "services/machinery-moving",
-        "services/lab-equipment-movers"
-      ],
-      "hero": "loads/white-glove-crated-equipment-delivery.jpg",
-      "status": "todo"
-    },
-    {
-      "slug": "how-to-move-an-industrial-oven-or-furnace",
-      "cluster": "machinery",
-      "cat": "Machinery Moving",
-      "target": "industrial oven moving, furnace relocation, heat treat equipment rigging",
-      "angle": "Refractory fragility and why it cracks in transit, burner and control systems, gas and electrical disconnect, stack and ducting, curing the refractory after reinstall.",
-      "links": [
-        "services/machinery-moving",
-        "services/plant-relocation"
-      ],
-      "hero": "loads/flatbed-industrial-dust-collectors-strapped.jpg",
-      "status": "todo"
-    },
-    {
-      "slug": "how-to-move-a-conveyor-system",
-      "cluster": "machinery",
-      "cat": "Machinery Moving",
-      "target": "conveyor system moving, conveyor relocation, material handling system move",
-      "angle": "Sequenced dismantling and tagging so it goes back together, drive and gearbox handling, structural supports, mezzanine work, and why a conveyor move is a mapping job before it is a lifting job.",
-      "links": [
-        "services/machinery-moving",
-        "services/plant-relocation"
-      ],
-      "hero": "loads/load-lowboy-warehouse.jpg",
-      "status": "todo"
-    },
-    {
-      "slug": "how-to-move-a-robotic-work-cell",
-      "cluster": "machinery",
-      "cat": "Machinery Moving",
-      "target": "robotic cell moving, industrial robot relocation, automation cell move",
-      "angle": "Robot arm and controller as separate problems, mastering and calibration loss, safety fencing and light curtains, end effectors, and the re-teach that follows every move.",
-      "links": [
-        "services/machinery-moving",
-        "services/millwright-services"
-      ],
-      "hero": "loads/enclosed-trailer-machinery-loaded.jpg",
-      "status": "todo"
-    },
-    {
-      "slug": "how-to-move-a-packaging-line",
-      "cluster": "machinery",
-      "cat": "Machinery Moving",
-      "target": "packaging line moving, bottling line relocation, filling line move",
-      "angle": "Multi-machine line as one sequenced project: fillers, cappers, labellers, conveyors between them, sanitary requirements on food and beverage lines, commissioning order.",
-      "links": [
-        "services/machinery-moving",
-        "services/plant-relocation"
-      ],
-      "hero": "loads/load-machine-loadout.jpg",
-      "status": "todo"
-    },
-    {
-      "slug": "how-to-move-an-extruder",
-      "cluster": "machinery",
-      "cat": "Machinery Moving",
-      "target": "extruder moving, plastic extruder relocation, extrusion line rigging",
-      "angle": "Barrel and screw handling and why the screw travels separately, heater bands and thermocouples, downstream equipment, alignment of the whole line on reinstall.",
-      "links": [
-        "services/machinery-moving",
-        "services/millwright-services"
-      ],
-      "hero": "loads/load-machine-loadout.jpg",
-      "status": "todo"
-    },
-    {
-      "slug": "rigging-load-charts-explained",
-      "cluster": "crane",
-      "cat": "Rigging",
-      "target": "crane load chart, how to read a load chart, crane capacity radius",
-      "angle": "Why the number on the side of the crane is not the capacity: radius, boom length, configuration, outrigger position, chart deductions. AEO-shaped and genuinely useful — the kind of page that earns citations.",
-      "links": [
-        "services/crane-services",
-        "services/heavy-lift-rigging",
-        "blog/what-is-a-critical-lift"
-      ],
-      "hero": "rigging-crane.jpg",
-      "status": "todo"
-    },
-    {
-      "slug": "how-to-calculate-rigging-capacity",
-      "cluster": "crane",
-      "cat": "Rigging",
-      "target": "sling angle factor, rigging capacity calculation, wire rope sling capacity",
-      "angle": "Sling angles and the tension multiplier that surprises people, D/d ratio, shackle and hook ratings, centre of gravity, why the weakest component sets the capacity.",
-      "links": [
-        "services/rigging",
-        "services/heavy-lift-rigging",
-        "blog/types-of-rigging"
-      ],
-      "hero": "rigging-hero.jpg",
-      "status": "todo"
-    },
-    {
-      "slug": "what-is-a-lift-plan",
-      "cluster": "crane",
-      "cat": "Rigging",
-      "target": "lift plan, rigging plan, what is in a lift plan",
-      "angle": "What a real lift plan contains and who signs it, when one is required, how it differs from a critical lift plan. Ties directly to the crane ad group, which meets this confusion constantly.",
-      "links": [
-        "services/crane-services",
-        "services/rigging",
-        "blog/what-is-a-critical-lift"
-      ],
-      "hero": "rigging-crane.jpg",
-      "status": "todo"
-    },
-    {
-      "slug": "moving-machinery-through-a-tight-plant",
-      "cluster": "rigging",
-      "cat": "Rigging",
-      "target": "moving machinery through a doorway, low headroom rigging, tight access machine move",
-      "angle": "The problem that actually defines most jobs: door and corridor limits, low headroom gantries, floor loading, turning radii, when a wall opening is cheaper than dismantling.",
-      "links": [
-        "services/rigging",
-        "services/machinery-moving",
-        "services/heavy-lift-rigging"
-      ],
-      "hero": "loads/load-lowboy-warehouse.jpg",
-      "status": "todo"
-    },
-    {
-      "slug": "floor-loading-for-machinery",
-      "cluster": "rigging",
-      "cat": "Rigging",
-      "target": "floor load capacity machinery, slab loading rigging, mezzanine machine load",
-      "angle": "Point loads vs distributed loads, slab thickness and subgrade, load spreading with mats and steel, upper floors and mezzanines, when a structural engineer has to sign off.",
-      "links": [
-        "services/rigging",
-        "services/machinery-moving"
-      ],
-      "hero": "rigging-hero.jpg",
-      "status": "todo"
-    },
-    {
-      "slug": "machine-foundations-and-grouting",
-      "cluster": "rigging",
-      "cat": "Machinery Moving",
-      "target": "machine foundation, epoxy grouting machinery, anchor bolt installation",
-      "angle": "Why the foundation decides whether the machine holds tolerance: isolation vs rigid mounting, anchor types, epoxy vs cementitious grout, cure time, and the leveling sequence on top of it.",
-      "links": [
-        "services/millwright-services",
-        "services/machinery-moving",
-        "blog/machine-leveling-and-alignment"
-      ],
-      "hero": "loads/load-machine-loadout.jpg",
-      "status": "todo"
-    },
-    {
-      "slug": "how-to-move-a-pet-ct-scanner",
-      "cluster": "medical",
-      "cat": "Medical Rigging",
-      "target": "pet ct moving, nuclear medicine equipment relocation, pet scanner rigging",
-      "angle": "Distinct from the CT and MRI posts: radioactive-source handling and licensing, hot lab decommissioning, survey and release before the rigger touches anything, shielding.",
-      "links": [
-        "services/mri-medical-equipment-rigging",
-        "services/lab-equipment-movers"
-      ],
-      "hero": "loads/ct-mri-scanner-enclosed-air-ride.jpg",
-      "status": "todo"
-    },
-    {
-      "slug": "how-to-move-a-lab-freezer",
-      "cluster": "medical",
-      "cat": "Medical Rigging",
-      "target": "ultra low freezer moving, -80 freezer relocation, laboratory freezer move",
-      "angle": "Sample chain of custody and the real constraint — time off power. Backup strategy, defrost vs cold move, compressor and vibration limits, validation after.",
-      "links": [
-        "services/lab-equipment-movers",
-        "services/mri-medical-equipment-rigging"
-      ],
-      "hero": "loads/white-glove-crated-equipment-delivery.jpg",
-      "status": "todo"
-    },
-    {
-      "slug": "how-to-move-an-autoclave",
-      "cluster": "medical",
-      "cat": "Medical Rigging",
-      "target": "autoclave moving, sterilizer relocation, steam sterilizer rigging",
-      "angle": "Pressure vessel paperwork, steam and drain disconnect, recessed and pit-mounted units, door and chamber alignment, re-validation and re-certification after the move.",
-      "links": [
-        "services/lab-equipment-movers",
-        "services/machinery-moving"
-      ],
-      "hero": "loads/white-glove-crated-equipment-delivery.jpg",
-      "status": "todo"
-    },
-    {
-      "slug": "how-to-move-a-ups-or-battery-plant",
-      "cluster": "machinery",
-      "cat": "Machinery Moving",
-      "target": "ups relocation, battery plant moving, data center ups move",
-      "angle": "Battery strings as a hazmat and weight problem, module-by-module removal, DC bus work, load-bank testing after. Supports the data-center rigging service page, which has no article behind it.",
-      "links": [
-        "services/data-center-rigging",
-        "services/transformer-generator-rigging"
-      ],
-      "hero": "loads/load-flatbed-electrical.jpg",
-      "status": "todo"
-    },
-    {
-      "slug": "how-to-move-a-chiller",
-      "cluster": "machinery",
-      "cat": "Machinery Moving",
-      "target": "chiller relocation, centrifugal chiller moving, rooftop chiller rigging",
-      "angle": "Refrigerant recovery and who is legally allowed to do it, roof and crane access, vibration isolation, water-side reconnection, start-up commissioning. The existing boiler/chiller post is a transport piece — this is the rigging half.",
-      "links": [
-        "services/hvac-chiller-rigging",
-        "services/crane-services"
-      ],
-      "hero": "loads/flatbed-industrial-dust-collectors-strapped.jpg",
-      "status": "todo"
-    },
-    {
-      "slug": "how-to-move-a-dust-collector",
-      "cluster": "machinery",
-      "cat": "Machinery Moving",
-      "target": "dust collector moving, baghouse relocation, dust collection system rigging",
-      "angle": "Baghouse and cyclone sections, ductwork mapping, explosion-vent and NFPA considerations, structural steel and outdoor crane picks.",
-      "links": [
-        "services/machinery-moving",
-        "services/crane-services"
-      ],
-      "hero": "loads/flatbed-industrial-dust-collectors-strapped.jpg",
-      "status": "todo"
-    },
-    {
-      "slug": "how-to-evaluate-a-dispatch-service",
-      "cluster": "dispatch",
-      "cat": "Dispatch",
-      "target": "how to choose a truck dispatch service, dispatch service questions, evaluating a dispatcher",
-      "angle": "For a fleet owner with 4+ trucks: what to ask, what a real desk looks like versus one person with a phone, how freight is actually sourced, what reporting to expect. No prices anywhere.",
-      "links": [
-        "services/truck-dispatch",
-        "services/dedicated-lanes",
-        "blog/truck-dispatcher-vs-freight-broker"
-      ],
-      "hero": "dispatch-hero.jpg",
-      "status": "todo"
-    },
-    {
-      "slug": "dedicated-lanes-vs-spot-freight",
-      "cluster": "dispatch",
-      "cat": "Dispatch",
-      "target": "dedicated lanes vs spot market, consistent freight lanes, spot vs contract freight",
-      "angle": "The trade a growing fleet actually faces: predictability and planning against spot upside, what it takes to earn dedicated freight, how a lane gets built.",
-      "links": [
-        "services/dedicated-lanes",
-        "services/truck-dispatch",
-        "blog/dedicated-freight-lanes-explained"
-      ],
-      "hero": "dispatch-hero.jpg",
-      "status": "todo"
-    },
-    {
-      "slug": "scaling-a-fleet-past-ten-trucks",
-      "cluster": "dispatch",
-      "cat": "Dispatch",
-      "target": "scaling a trucking fleet, growing from 5 to 10 trucks, fleet growth operations",
-      "angle": "Where dispatch, compliance and cash flow break as a fleet grows, and what has to change at each step. Squarely aimed at the 4+ truck buyer the ads qualify for.",
-      "links": [
-        "services/truck-dispatch",
-        "services/dedicated-lanes"
-      ],
-      "hero": "dispatch-hero.jpg",
-      "status": "todo"
-    }
-  ]
+  {
+   "slug": "step-deck-vs-drop-deck-trailers",
+   "cluster": "dispatch",
+   "cat": "Dispatch",
+   "target": "step deck vs drop deck, drop deck vs step deck, what is a step deck trailer, step deck trailer dimensions, ground clearance of a step deck trailer, how high can you load a step deck, step deck vs lowboy, what is a double drop trailer",
+   "angle": "RECOVERY: this URL is currently a redirect stub still earning 1,729 impressions at position 17.5 — the biggest page on the site — and it bounces every visitor to the trailer selector. Rebuild it as the definitive answer, written for a FLEET OWNER deciding what to run, not for a shipper hiring a hauler. Cover the whole cluster in one page: what a step deck is and why it exists, step deck vs drop deck (they are the same trailer, different regional names — say so plainly, that is the query), deck heights and legal load heights, ground clearance, where a lowboy or double drop takes over, and what each trailer type means for the freight a fleet can book. Frame throughout as dispatch: we dispatch fleets running flatbed, step deck, reefer and Conestoga. NEVER imply Badass hauls anything or holds authority. No permits/escort/oversize service framing — that line is retired; mention legal limits only as facts a fleet plans around.",
+   "links": [
+    "services/truck-dispatch",
+    "services/dedicated-lanes"
+   ],
+   "hero": "loads/load-lowboy-warehouse.jpg",
+   "status": "done",
+   "published": "2026-09-21"
+  },
+  {
+   "slug": "how-to-move-a-linear-accelerator",
+   "cluster": "medical",
+   "cat": "Medical Rigging",
+   "target": "linear accelerator removal, linac relocation, linear accelerator rigging",
+   "angle": "Vault work: shielding, the maze, component sequence, OEM de-install, crane-in vs knock-out panel, decommissioning an old linac. Almost no competitor content exists on this and the jobs are large.",
+   "links": [
+    "services/mri-medical-equipment-rigging",
+    "services/machinery-removal",
+    "blog/how-to-move-an-mri-machine"
+   ],
+   "hero": "loads/ct-mri-scanner-enclosed-air-ride.jpg",
+   "status": "done",
+   "published": "2026-09-18"
+  },
+  {
+   "slug": "how-to-move-an-x-ray-machine",
+   "cluster": "medical",
+   "cat": "Medical Rigging",
+   "target": "x ray machine moving, radiography room relocation, c-arm moving",
+   "angle": "Fixed radiographic rooms, C-arms, fluoroscopy and mammo. Tube and detector handling, ceiling-suspended rails, lead-lined wall openings, working around a live department.",
+   "links": [
+    "services/mri-medical-equipment-rigging",
+    "services/lab-equipment-movers"
+   ],
+   "hero": "loads/ct-scanner-medical-imaging-move.jpg",
+   "status": "done",
+   "published": "2026-09-18"
+  },
+  {
+   "slug": "hospital-equipment-relocation-guide",
+   "cluster": "medical",
+   "cat": "Medical Rigging",
+   "target": "hospital equipment movers, hospital equipment relocation, healthcare facility move",
+   "angle": "Department-level moves: who owns what between the OEM, biomed, EHS, facilities and the rigger. Decon sign-off, infection control risk assessment, elevator embargoes, night windows.",
+   "links": [
+    "services/mri-medical-equipment-rigging",
+    "services/lab-equipment-movers",
+    "services/plant-relocation"
+   ],
+   "hero": "loads/white-glove-crated-equipment-delivery.jpg",
+   "status": "done",
+   "published": "2026-09-18"
+  },
+  {
+   "slug": "how-much-does-it-cost-to-move-medical-equipment",
+   "cluster": "medical",
+   "cat": "Medical Rigging",
+   "target": "medical equipment moving cost, mri move cost, what affects imaging equipment move price",
+   "angle": "Cost-factor piece with no prices — the same structure as the machinery-movers cost post that already ranks. Drivers: system weight and class, floor and route, OEM time, after-hours windows, wall work, distance.",
+   "links": [
+    "services/mri-medical-equipment-rigging",
+    "blog/how-much-do-machinery-movers-cost"
+   ],
+   "hero": "loads/ct-mri-scanner-enclosed-air-ride.jpg",
+   "status": "done",
+   "published": "2026-09-18"
+  },
+  {
+   "slug": "how-to-move-an-injection-molding-machine",
+   "cluster": "machinery",
+   "cat": "Machinery Moving",
+   "target": "injection molding machine moving, molding machine rigging, press relocation",
+   "angle": "Real gap — the site covers CNC, lathes, mills and press brakes but not molding. Tie-bar and platen protection, splitting clamp and injection units, hopper and dryer systems, oil drain, leveling to tie-bar parallelism.",
+   "links": [
+    "services/machinery-moving",
+    "services/millwright-services"
+   ],
+   "hero": "loads/load-machine-loadout.jpg",
+   "status": "done",
+   "published": "2026-09-18"
+  },
+  {
+   "slug": "switchgear-and-substation-equipment-moving",
+   "cluster": "machinery",
+   "cat": "Machinery Moving",
+   "target": "switchgear installation companies, substation equipment moving, switchgear rigging",
+   "angle": "Autocomplete shows real demand for switchgear installation. Lineups moved in sections, bus alignment, pad and anchor tolerance, working around energized gear, coordination with the electrical contractor.",
+   "links": [
+    "services/transformer-generator-rigging",
+    "services/millwright-services"
+   ],
+   "hero": "loads/load-flatbed-electrical.jpg",
+   "status": "done",
+   "published": "2026-09-18"
+  },
+  {
+   "slug": "crane-rental-vs-rigging-company",
+   "cluster": "crane",
+   "cat": "Rigging",
+   "target": "crane rental with operator, crane service vs rigging company, who do I hire for a lift",
+   "angle": "Decision-stage post for the exact confusion the crane ad group runs into: renting steel and an operator versus hiring a crew that owns the whole pick. Where each one is correct.",
+   "links": [
+    "services/crane-services",
+    "services/rigging",
+    "blog/what-is-a-critical-lift"
+   ],
+   "hero": "rigging-crane.jpg",
+   "status": "done",
+   "published": "2026-09-18"
+  },
+  {
+   "slug": "how-to-move-a-compressor",
+   "cluster": "machinery",
+   "cat": "Machinery Moving",
+   "target": "air compressor moving, industrial compressor relocation, rotary screw compressor move",
+   "angle": "Rotary screw and centrifugal units, receiver tanks and dryers, oil and condensate, vibration isolation pads, reconnecting plant air without leaks.",
+   "links": [
+    "services/machinery-moving",
+    "services/hvac-chiller-rigging"
+   ],
+   "hero": "loads/flatbed-industrial-dust-collectors-strapped.jpg",
+   "status": "done",
+   "published": "2026-09-18"
+  },
+  {
+   "slug": "forklift-vs-crane-for-machine-loading",
+   "cluster": "crane",
+   "cat": "Rigging",
+   "target": "forklift vs crane loading, machinery loading and unloading services, how to load a machine on a truck",
+   "angle": "Load-center derating on forklifts is the thing most people get wrong. When a forklift is right, when it is not, and what a crane pick or gantry changes.",
+   "links": [
+    "services/forklift-loading-unloading",
+    "services/crane-services"
+   ],
+   "hero": "loads/load-lowboy-warehouse.jpg",
+   "status": "done",
+   "published": "2026-09-21"
+  },
+  {
+   "slug": "what-is-a-machinery-move-survey",
+   "cluster": "machinery",
+   "cat": "Rigging",
+   "target": "machine move site survey, rigging site survey, what riggers check before a move",
+   "angle": "AEO-shaped explainer of the site walk: weights and drawings, door and corridor measurements, floor loading, elevator ratings, utilities, the things that turn into change orders when they are skipped.",
+   "links": [
+    "services/rigging",
+    "services/machinery-moving",
+    "blog/plant-relocation-checklist"
+   ],
+   "hero": "rigging-hero.jpg",
+   "status": "done",
+   "published": "2026-09-21"
+  },
+  {
+   "slug": "how-to-move-a-data-center",
+   "cluster": "machinery",
+   "cat": "Rigging",
+   "target": "data center relocation, server rack moving, data center rigging",
+   "angle": "The service page exists with no supporting guide. Rack roll-out vs de-stack, floor tile loading, ramps, shock monitoring, sequencing against a migration window.",
+   "links": [
+    "services/data-center-rigging",
+    "services/lab-equipment-movers"
+   ],
+   "hero": "loads/enclosed-trailer-machinery-loaded.jpg",
+   "status": "done",
+   "published": "2026-09-21"
+  },
+  {
+   "slug": "how-to-move-a-transformer-into-a-building",
+   "cluster": "machinery",
+   "cat": "Machinery Moving",
+   "target": "transformer moving company, indoor transformer rigging, transformer replacement",
+   "angle": "Distinct from the existing transport post: this is the rigging half. Getting a unit into an electrical room, skidding on steel, temporary steel, removing the old one, oil handling.",
+   "links": [
+    "services/transformer-generator-rigging",
+    "services/heavy-lift-rigging"
+   ],
+   "hero": "loads/load-flatbed-electrical.jpg",
+   "status": "done",
+   "published": "2026-09-21"
+  },
+  {
+   "slug": "how-to-choose-a-plant-relocation-contractor",
+   "cluster": "aeo",
+   "cat": "Plant Relocation",
+   "target": "best plant relocation companies, which plant relocation contractor, plant relocation companies track record",
+   "angle": "The buyer-guide the LLM-shaped queries are asking for: what separates contractors, what to ask, what a real track record looks like, who owns what between the OEM, the millwright and the rigger. Sits at position 60-76 today with nothing targeting it. No self-promotion in the body — answer the question honestly and the credibility does the selling.",
+   "links": [
+    "services/plant-relocation",
+    "services/rigging",
+    "blog/plant-relocation-checklist"
+   ],
+   "hero": "loads/load-machine-loadout.jpg",
+   "status": "done",
+   "published": "2026-09-21"
+  },
+  {
+   "slug": "in-house-team-vs-relocation-contractor",
+   "cluster": "aeo",
+   "cat": "Plant Relocation",
+   "target": "industrial relocation contractors vs in-house facilities teams, should we move equipment ourselves",
+   "angle": "Already at position 7 with no dedicated page. Honest decision piece: what an in-house maintenance team can genuinely handle, where the line is (rigging gear, insurance, lift planning, downtime risk), and what it actually costs to get it wrong. Must be even-handed or it reads as a sales page and loses the query.",
+   "links": [
+    "services/plant-relocation",
+    "services/millwright-services"
+   ],
+   "hero": "rigging-hero.jpg",
+   "status": "done",
+   "published": "2026-09-21"
+  },
+  {
+   "slug": "how-to-tarp-a-flatbed-load",
+   "cluster": "dispatch",
+   "cat": "Dispatch",
+   "target": "how to tarp a flatbed load, flatbed tarping, how to secure a steel tarp on a flatbed, how to secure a lumber tarp on a flatbed, how to secure a hay tarp on a flatbed, how to secure a load on a flatbed",
+   "angle": "RECOVERY: currently a redirect stub still earning 167 impressions at position 14.6, plus a long tail of tarp-type queries (steel, lumber and hay tarps) sitting at position 31-36 with nothing of ours to land on. Same buyer as the two trailer guides recovered on 2026-09-21: a fleet owner deciding how to run the load, which is the 4+ truck dispatch buyer. Write it dispatch-framed — the fleet tarps, we dispatch it. Cover tarp types and what each is for, the tarping sequence, edge and corner protection, strap and bungee pattern, how tarping interacts with securement underneath, what wind does to a badly tarped load, winter tarping, and cargo-claim exposure. ALSO ABSORB /blog/how-to-secure-a-load-on-a-flatbed (24 impressions at position 11.8, currently stubbed to blocking-bracing-and-dunnage-explained) so this is one page and not a new cannibalisation pair — repoint that rule here instead of recovering it separately. Never imply Badass hauls. No oversize, permit or escort framing.",
+   "links": [
+    "services/truck-dispatch",
+    "services/dedicated-lanes",
+    "blog/step-deck-vs-drop-deck-trailers",
+    "blog/how-to-load-and-secure-a-conestoga-trailer",
+    "blog/blocking-bracing-and-dunnage-explained"
+   ],
+   "recovery": {
+    "stub": "/blog/how-to-tarp-a-flatbed-load",
+    "impressions": 167,
+    "position": 14.6,
+    "measured": "2026-09-21",
+    "alsoAbsorbs": [
+     "/blog/how-to-secure-a-load-on-a-flatbed"
+    ]
+   },
+   "status": "todo"
+  },
+  {
+   "slug": "how-to-ship-a-forklift",
+   "cluster": "machinery",
+   "cat": "Machinery",
+   "target": "how to ship a forklift, forklift transport, loading a forklift on a trailer, forklift load-out",
+   "angle": "RECOVERY: currently a redirect stub still earning 41 impressions at position 15.2. This one is on the right side of the line because a forklift is plant equipment we load and rig, and /services/forklift-loading-unloading is a live pillar that earns nothing. Write it as a rigging and load-out guide, not a hauling guide: forks and mast down and secured, battery or fuel handling on electric versus IC trucks, tie-down points and what not to chain to, counterweight and centre of gravity, ramp versus dock versus forklift-on-forklift loading, and receiving it at the other end. Never imply Badass hauls — transport runs through our licensed broker and carrier partners. No oversize, permit or escort framing.",
+   "links": [
+    "services/forklift-loading-unloading",
+    "services/machinery-moving",
+    "services/project-freight"
+   ],
+   "recovery": {
+    "stub": "/blog/how-to-ship-a-forklift",
+    "impressions": 41,
+    "position": 15.2,
+    "measured": "2026-09-21"
+   },
+   "status": "todo"
+  },
+  {
+   "slug": "single-source-plant-relocation-explained",
+   "cluster": "aeo",
+   "cat": "Plant Relocation",
+   "target": "single source plant relocation, turnkey plant relocation services, who offers turnkey plant relocation",
+   "angle": "Defines the term buyers are searching without knowing what it means: one contract covering de-install, rigging, transport, set and level, versus coordinating four vendors. Where single-source genuinely helps and where it is just a markup.",
+   "links": [
+    "services/plant-relocation",
+    "services/machinery-moving",
+    "services/millwright-services"
+   ],
+   "hero": "loads/white-glove-crated-equipment-delivery.jpg",
+   "status": "todo"
+  },
+  {
+   "slug": "how-to-vet-an-industrial-rigging-company",
+   "cluster": "aeo",
+   "cat": "Rigging",
+   "target": "top riggers for high-value industrial equipment, how to choose a rigging company, questions to ask a rigger",
+   "angle": "The vetting checklist: insurance limits and what they actually cover, lift plans, rigging gear ownership vs rental, crew experience, references that matter. Pairs with the crane-rental-vs-rigging-company post — link it, do not repeat it.",
+   "links": [
+    "services/rigging",
+    "services/heavy-lift-rigging",
+    "blog/crane-rental-vs-rigging-company"
+   ],
+   "hero": "rigging-crane.jpg",
+   "status": "todo"
+  },
+  {
+   "slug": "how-to-move-a-surface-grinder",
+   "cluster": "machinery",
+   "cat": "Machinery Moving",
+   "target": "surface grinder moving, grinder rigging, precision machine relocation",
+   "angle": "Precision-machine angle the site has not covered: granite and cast-iron bases, way protection, why a grinder is more sensitive to racking than a mill, re-leveling to tenths after the move.",
+   "links": [
+    "services/machinery-moving",
+    "services/millwright-services"
+   ],
+   "hero": "loads/load-machine-loadout.jpg",
+   "status": "todo"
+  },
+  {
+   "slug": "how-to-move-an-edm-machine",
+   "cluster": "machinery",
+   "cat": "Machinery Moving",
+   "target": "edm machine moving, wire edm relocation, sinker edm rigging",
+   "angle": "Wire and sinker EDM: dielectric fluid drain and disposal, filtration units, the wire path and guides, thermal stability on reinstall, why EDMs punish a sloppy level.",
+   "links": [
+    "services/machinery-moving",
+    "services/cnc-machine-movers"
+   ],
+   "hero": "loads/enclosed-trailer-machinery-loaded.jpg",
+   "status": "todo"
+  },
+  {
+   "slug": "how-to-move-a-waterjet-cutter",
+   "cluster": "machinery",
+   "cat": "Machinery Moving",
+   "target": "waterjet moving, waterjet cutter relocation, abrasive waterjet rigging",
+   "angle": "Catch tank drain and abrasive removal (the weight nobody budgets for), the intensifier pump as a separate lift, plumbing and garnet handling, tank re-level and seal.",
+   "links": [
+    "services/machinery-moving",
+    "services/millwright-services"
+   ],
+   "hero": "loads/load-machine-loadout.jpg",
+   "status": "todo"
+  },
+  {
+   "slug": "how-to-move-a-laser-cutter",
+   "cluster": "machinery",
+   "cat": "Machinery Moving",
+   "target": "laser cutter moving, fiber laser relocation, laser cutting machine rigging",
+   "angle": "Fiber and CO2: resonator or source handling, optics and beam path protection, chiller and assist-gas systems, shock limits in transit, alignment on reinstall.",
+   "links": [
+    "services/machinery-moving",
+    "services/cnc-machine-movers"
+   ],
+   "hero": "loads/enclosed-trailer-machinery-loaded.jpg",
+   "status": "todo"
+  },
+  {
+   "slug": "how-to-move-a-horizontal-boring-mill",
+   "cluster": "machinery",
+   "cat": "Machinery Moving",
+   "target": "horizontal boring mill moving, boring mill rigging, table type boring mill relocation",
+   "angle": "Large-format machine: column and table split, way and spindle protection, counterweights, foundation and grout requirements, the multi-day reassembly and alignment that follows.",
+   "links": [
+    "services/machinery-moving",
+    "services/heavy-lift-rigging",
+    "services/millwright-services"
+   ],
+   "hero": "loads/load-lowboy-warehouse.jpg",
+   "status": "todo"
+  },
+  {
+   "slug": "how-to-move-a-stamping-press",
+   "cluster": "machinery",
+   "cat": "Machinery Moving",
+   "target": "stamping press moving, punch press relocation, mechanical press rigging",
+   "angle": "Distinct from the injection-molding post: flywheel and crown weight distribution, pit-mounted presses, die handling, bolster and cushion systems, isolation pads and foundation bolts.",
+   "links": [
+    "services/machinery-moving",
+    "services/heavy-lift-rigging"
+   ],
+   "hero": "loads/load-lowboy-warehouse.jpg",
+   "status": "todo"
+  },
+  {
+   "slug": "how-to-move-a-cmm",
+   "cluster": "machinery",
+   "cat": "Machinery Moving",
+   "target": "cmm moving, coordinate measuring machine relocation, granite cmm rigging",
+   "angle": "The most shock-sensitive thing in most plants: granite table handling, air-bearing protection, transport shock monitoring, environmental requirements, and the re-certification a move triggers.",
+   "links": [
+    "services/machinery-moving",
+    "services/lab-equipment-movers"
+   ],
+   "hero": "loads/white-glove-crated-equipment-delivery.jpg",
+   "status": "todo"
+  },
+  {
+   "slug": "how-to-move-an-industrial-oven-or-furnace",
+   "cluster": "machinery",
+   "cat": "Machinery Moving",
+   "target": "industrial oven moving, furnace relocation, heat treat equipment rigging",
+   "angle": "Refractory fragility and why it cracks in transit, burner and control systems, gas and electrical disconnect, stack and ducting, curing the refractory after reinstall.",
+   "links": [
+    "services/machinery-moving",
+    "services/plant-relocation"
+   ],
+   "hero": "loads/flatbed-industrial-dust-collectors-strapped.jpg",
+   "status": "todo"
+  },
+  {
+   "slug": "how-to-move-a-conveyor-system",
+   "cluster": "machinery",
+   "cat": "Machinery Moving",
+   "target": "conveyor system moving, conveyor relocation, material handling system move",
+   "angle": "Sequenced dismantling and tagging so it goes back together, drive and gearbox handling, structural supports, mezzanine work, and why a conveyor move is a mapping job before it is a lifting job.",
+   "links": [
+    "services/machinery-moving",
+    "services/plant-relocation"
+   ],
+   "hero": "loads/load-lowboy-warehouse.jpg",
+   "status": "todo"
+  },
+  {
+   "slug": "how-to-move-a-robotic-work-cell",
+   "cluster": "machinery",
+   "cat": "Machinery Moving",
+   "target": "robotic cell moving, industrial robot relocation, automation cell move",
+   "angle": "Robot arm and controller as separate problems, mastering and calibration loss, safety fencing and light curtains, end effectors, and the re-teach that follows every move.",
+   "links": [
+    "services/machinery-moving",
+    "services/millwright-services"
+   ],
+   "hero": "loads/enclosed-trailer-machinery-loaded.jpg",
+   "status": "todo"
+  },
+  {
+   "slug": "how-to-move-a-packaging-line",
+   "cluster": "machinery",
+   "cat": "Machinery Moving",
+   "target": "packaging line moving, bottling line relocation, filling line move",
+   "angle": "Multi-machine line as one sequenced project: fillers, cappers, labellers, conveyors between them, sanitary requirements on food and beverage lines, commissioning order.",
+   "links": [
+    "services/machinery-moving",
+    "services/plant-relocation"
+   ],
+   "hero": "loads/load-machine-loadout.jpg",
+   "status": "todo"
+  },
+  {
+   "slug": "how-to-move-an-extruder",
+   "cluster": "machinery",
+   "cat": "Machinery Moving",
+   "target": "extruder moving, plastic extruder relocation, extrusion line rigging",
+   "angle": "Barrel and screw handling and why the screw travels separately, heater bands and thermocouples, downstream equipment, alignment of the whole line on reinstall.",
+   "links": [
+    "services/machinery-moving",
+    "services/millwright-services"
+   ],
+   "hero": "loads/load-machine-loadout.jpg",
+   "status": "todo"
+  },
+  {
+   "slug": "rigging-load-charts-explained",
+   "cluster": "crane",
+   "cat": "Rigging",
+   "target": "crane load chart, how to read a load chart, crane capacity radius",
+   "angle": "Why the number on the side of the crane is not the capacity: radius, boom length, configuration, outrigger position, chart deductions. AEO-shaped and genuinely useful — the kind of page that earns citations.",
+   "links": [
+    "services/crane-services",
+    "services/heavy-lift-rigging",
+    "blog/what-is-a-critical-lift"
+   ],
+   "hero": "rigging-crane.jpg",
+   "status": "todo"
+  },
+  {
+   "slug": "how-to-calculate-rigging-capacity",
+   "cluster": "crane",
+   "cat": "Rigging",
+   "target": "sling angle factor, rigging capacity calculation, wire rope sling capacity",
+   "angle": "Sling angles and the tension multiplier that surprises people, D/d ratio, shackle and hook ratings, centre of gravity, why the weakest component sets the capacity.",
+   "links": [
+    "services/rigging",
+    "services/heavy-lift-rigging",
+    "blog/types-of-rigging"
+   ],
+   "hero": "rigging-hero.jpg",
+   "status": "todo"
+  },
+  {
+   "slug": "what-is-a-lift-plan",
+   "cluster": "crane",
+   "cat": "Rigging",
+   "target": "lift plan, rigging plan, what is in a lift plan",
+   "angle": "What a real lift plan contains and who signs it, when one is required, how it differs from a critical lift plan. Ties directly to the crane ad group, which meets this confusion constantly.",
+   "links": [
+    "services/crane-services",
+    "services/rigging",
+    "blog/what-is-a-critical-lift"
+   ],
+   "hero": "rigging-crane.jpg",
+   "status": "todo"
+  },
+  {
+   "slug": "moving-machinery-through-a-tight-plant",
+   "cluster": "rigging",
+   "cat": "Rigging",
+   "target": "moving machinery through a doorway, low headroom rigging, tight access machine move",
+   "angle": "The problem that actually defines most jobs: door and corridor limits, low headroom gantries, floor loading, turning radii, when a wall opening is cheaper than dismantling.",
+   "links": [
+    "services/rigging",
+    "services/machinery-moving",
+    "services/heavy-lift-rigging"
+   ],
+   "hero": "loads/load-lowboy-warehouse.jpg",
+   "status": "todo"
+  },
+  {
+   "slug": "floor-loading-for-machinery",
+   "cluster": "rigging",
+   "cat": "Rigging",
+   "target": "floor load capacity machinery, slab loading rigging, mezzanine machine load",
+   "angle": "Point loads vs distributed loads, slab thickness and subgrade, load spreading with mats and steel, upper floors and mezzanines, when a structural engineer has to sign off.",
+   "links": [
+    "services/rigging",
+    "services/machinery-moving"
+   ],
+   "hero": "rigging-hero.jpg",
+   "status": "todo"
+  },
+  {
+   "slug": "machine-foundations-and-grouting",
+   "cluster": "rigging",
+   "cat": "Machinery Moving",
+   "target": "machine foundation, epoxy grouting machinery, anchor bolt installation",
+   "angle": "Why the foundation decides whether the machine holds tolerance: isolation vs rigid mounting, anchor types, epoxy vs cementitious grout, cure time, and the leveling sequence on top of it.",
+   "links": [
+    "services/millwright-services",
+    "services/machinery-moving",
+    "blog/machine-leveling-and-alignment"
+   ],
+   "hero": "loads/load-machine-loadout.jpg",
+   "status": "todo"
+  },
+  {
+   "slug": "how-to-move-a-pet-ct-scanner",
+   "cluster": "medical",
+   "cat": "Medical Rigging",
+   "target": "pet ct moving, nuclear medicine equipment relocation, pet scanner rigging",
+   "angle": "Distinct from the CT and MRI posts: radioactive-source handling and licensing, hot lab decommissioning, survey and release before the rigger touches anything, shielding.",
+   "links": [
+    "services/mri-medical-equipment-rigging",
+    "services/lab-equipment-movers"
+   ],
+   "hero": "loads/ct-mri-scanner-enclosed-air-ride.jpg",
+   "status": "todo"
+  },
+  {
+   "slug": "how-to-move-a-lab-freezer",
+   "cluster": "medical",
+   "cat": "Medical Rigging",
+   "target": "ultra low freezer moving, -80 freezer relocation, laboratory freezer move",
+   "angle": "Sample chain of custody and the real constraint — time off power. Backup strategy, defrost vs cold move, compressor and vibration limits, validation after.",
+   "links": [
+    "services/lab-equipment-movers",
+    "services/mri-medical-equipment-rigging"
+   ],
+   "hero": "loads/white-glove-crated-equipment-delivery.jpg",
+   "status": "todo"
+  },
+  {
+   "slug": "how-to-move-an-autoclave",
+   "cluster": "medical",
+   "cat": "Medical Rigging",
+   "target": "autoclave moving, sterilizer relocation, steam sterilizer rigging",
+   "angle": "Pressure vessel paperwork, steam and drain disconnect, recessed and pit-mounted units, door and chamber alignment, re-validation and re-certification after the move.",
+   "links": [
+    "services/lab-equipment-movers",
+    "services/machinery-moving"
+   ],
+   "hero": "loads/white-glove-crated-equipment-delivery.jpg",
+   "status": "todo"
+  },
+  {
+   "slug": "how-to-move-a-ups-or-battery-plant",
+   "cluster": "machinery",
+   "cat": "Machinery Moving",
+   "target": "ups relocation, battery plant moving, data center ups move",
+   "angle": "Battery strings as a hazmat and weight problem, module-by-module removal, DC bus work, load-bank testing after. Supports the data-center rigging service page, which has no article behind it.",
+   "links": [
+    "services/data-center-rigging",
+    "services/transformer-generator-rigging"
+   ],
+   "hero": "loads/load-flatbed-electrical.jpg",
+   "status": "todo"
+  },
+  {
+   "slug": "how-to-move-a-chiller",
+   "cluster": "machinery",
+   "cat": "Machinery Moving",
+   "target": "chiller relocation, centrifugal chiller moving, rooftop chiller rigging",
+   "angle": "Refrigerant recovery and who is legally allowed to do it, roof and crane access, vibration isolation, water-side reconnection, start-up commissioning. The existing boiler/chiller post is a transport piece — this is the rigging half.",
+   "links": [
+    "services/hvac-chiller-rigging",
+    "services/crane-services"
+   ],
+   "hero": "loads/flatbed-industrial-dust-collectors-strapped.jpg",
+   "status": "todo"
+  },
+  {
+   "slug": "how-to-move-a-dust-collector",
+   "cluster": "machinery",
+   "cat": "Machinery Moving",
+   "target": "dust collector moving, baghouse relocation, dust collection system rigging",
+   "angle": "Baghouse and cyclone sections, ductwork mapping, explosion-vent and NFPA considerations, structural steel and outdoor crane picks.",
+   "links": [
+    "services/machinery-moving",
+    "services/crane-services"
+   ],
+   "hero": "loads/flatbed-industrial-dust-collectors-strapped.jpg",
+   "status": "todo"
+  },
+  {
+   "slug": "how-to-evaluate-a-dispatch-service",
+   "cluster": "dispatch",
+   "cat": "Dispatch",
+   "target": "how to choose a truck dispatch service, dispatch service questions, evaluating a dispatcher",
+   "angle": "For a fleet owner with 4+ trucks: what to ask, what a real desk looks like versus one person with a phone, how freight is actually sourced, what reporting to expect. No prices anywhere.",
+   "links": [
+    "services/truck-dispatch",
+    "services/dedicated-lanes",
+    "blog/truck-dispatcher-vs-freight-broker"
+   ],
+   "hero": "dispatch-hero.jpg",
+   "status": "todo"
+  },
+  {
+   "slug": "dedicated-lanes-vs-spot-freight",
+   "cluster": "dispatch",
+   "cat": "Dispatch",
+   "target": "dedicated lanes vs spot market, consistent freight lanes, spot vs contract freight",
+   "angle": "The trade a growing fleet actually faces: predictability and planning against spot upside, what it takes to earn dedicated freight, how a lane gets built.",
+   "links": [
+    "services/dedicated-lanes",
+    "services/truck-dispatch",
+    "blog/dedicated-freight-lanes-explained"
+   ],
+   "hero": "dispatch-hero.jpg",
+   "status": "todo"
+  },
+  {
+   "slug": "scaling-a-fleet-past-ten-trucks",
+   "cluster": "dispatch",
+   "cat": "Dispatch",
+   "target": "scaling a trucking fleet, growing from 5 to 10 trucks, fleet growth operations",
+   "angle": "Where dispatch, compliance and cash flow break as a fleet grows, and what has to change at each step. Squarely aimed at the 4+ truck buyer the ads qualify for.",
+   "links": [
+    "services/truck-dispatch",
+    "services/dedicated-lanes"
+   ],
+   "hero": "dispatch-hero.jpg",
+   "status": "todo"
+  }
+ ],
+ "_recoveryNote": "STUB RECOVERY POLICY, reviewed 2026-09-21 (Track B run). 131 redirect stubs still earn 4,607 impressions and 45 clicks. Most of it is deliberately NOT recovered: the heavy-haul service and city stubs, the oversize-permit and pilot-car and superload posts, the equipment-shipping posts (bulldozer, excavator, skid steer, boat, mobile home, crane transport) and hot-shot trucking are all demand for a motor carrier, a service retired in 2026, and rebuilding them would undo the revamp and put build.js check 8 in conflict with the site. The trailer SERVICE pages (step-deck, RGN, double-drop, lowboy, Conestoga, flatbed-transport, multi-axle) also stay stubbed — trailer-choice demand is real and is the dispatch buyer, but it belongs in editorial guides and /trailer-selector, not on a service page that reads as us running the trailer. /services/dispatching (position 5.7, the best on the site) and /services/freight-moving (position 7.4) stay stubbed on purpose too: their intent belongs on the live /services/truck-dispatch and /services/project-freight they already point at, and recovering them would split one intent across two URLs. A recovery entry keeps its redirect rule in data/redirects.json until the page is actually written — deleting the rule first leaves a 404, and build-redirects.js runs after the generators so a rule left in place re-stubs the URL no matter what was written."
 }

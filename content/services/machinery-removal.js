@@ -2,7 +2,7 @@
 module.exports = {
   slug: 'machinery-removal',
   cardBlurb: 'Old machines, dead lines, and whole plants rigged out cleanly — disconnected, dismantled, and removed so the floor is ready.',
-  title: 'Machinery Removal Services & Equipment Decommissioning | Badass Logistics',
+  title: 'Machinery Removal & Equipment Decommissioning | Badass Logistics',
   description: 'Industrial machinery removal and equipment decommissioning — single machines, production lines, and plant closures rigged out safely and the floor handed back.',
   serviceType: 'Machinery Removal & Equipment Decommissioning',
   hero: '/assets/img/loads/load-pallet-racking.jpg',
@@ -14,7 +14,7 @@ module.exports = {
   cta: 'Get a Machinery Removal Quote',
   annots: ['LOTO VERIFIED', 'ANCHORS CUT FLUSH', 'PIT COVERED ✓', 'LINE 3 — OUT'],
   bgnotes: ['UTILITIES LOCKED OUT', 'FLUIDS DRAINED', 'TAG FOR RESALE', 'CUT ANCHORS FLUSH', 'COVER THE PIT', 'LINE 3 OUT', 'DOOR 8\'0" — SPLIT IT', 'FLOOR SWEPT ✓', 'SCRAP OR SELL?', 'DAY 2 OF 5', 'KEEP LINE 2 RUNNING', 'EMPTY BY FRIDAY'],
-  quickAnswer: 'Machinery removal is the safe disconnection, rigging out, and removal of industrial equipment that is being retired, sold, or replaced — from a single press to a full plant decommissioning. Badass Logistics coordinates lockout with your team, drains and secures the machine, dismantles what won\'t fit through the openings, rigs it out without damaging the building, and moves it to a buyer, storage, or recycler as part of the project.',
+  quickAnswer: 'Machinery removal is the safe disconnection, rigging out, and removal of industrial equipment that is being retired, sold, or replaced — from a single press to a full plant decommissioning. Badass Logistics coordinates lockout with your team, identifies and tags every asset, drains and secures the machine, dismantles what won\'t fit through the openings, sequences the load-out so nothing blocks the dock, and moves it to a buyer, storage, or recycler depending on whether it\'s being resold, relocated, or scrapped.',
   intro: {
     h2: 'Removal is rigging, not junk hauling',
     paragraphs: [
@@ -33,6 +33,8 @@ module.exports = {
       { k: 'resale', h: 'Removal for Resale', p: 'Machines prepped, protected, and loaded so the buyer gets them working.' },
       { k: 'building', h: 'Tight-Access Removal', p: 'Equipment split to fit doorways, or rigged out through walls and roofs.' },
       { k: 'floor', h: 'Floor Make-Ready', p: 'Anchors cut flush, pits covered or flagged, and the area left clean and safe.' },
+      { k: 'identification', h: 'Asset Identification &amp; Labelling', p: 'Every machine tagged, photographed, and logged against an asset list before anything gets disconnected.' },
+      { k: 'sequencing', h: 'Load-Out Sequencing', p: 'A dock and truck sequence built so buyer pickups, relocation loads, and scrap don\'t stack up or block each other.' },
     ],
   },
   sections: [
@@ -60,6 +62,29 @@ module.exports = {
         'When the last machine is out, anchors are cut flush, pits are covered or clearly marked, and the floor is swept — the space is handed back in a condition you can walk a landlord or a buyer through.',
       ],
     },
+    {
+      tag: 'destinations',
+      h2: 'Scrap, resale, or relocation — decided per machine',
+      paragraphs: [
+        'Not every machine on a removal list leaves the building the same way, and mixing that up is how a piece worth reselling ends up on a scrap truck. Before rigging starts, each item on the equipment list gets a destination: resale to a buyer, relocation to another facility, or scrap. That call comes from your team or the dealer handling the sale — we don\'t make it — but it drives how the machine gets handled.',
+        'A machine going to a buyer gets identified, tagged, and handled the way <a href="/services/crating-packing">crated equipment</a> is: protected, drained, and loaded so it arrives working, not just out of the building. A machine relocating runs as a <a href="/services/plant-relocation">plant relocation</a> or <a href="/services/project-freight">project freight</a> load. Scrap gets separated and sent to the recycler your team has approved. Keeping those three streams apart from the first walk-through is what keeps a removal job from turning into a pile in the parking lot.',
+      ],
+    },
+    {
+      bg: 'paper',
+      tag: 'before the crew shows up',
+      h2: 'What a facility manager needs ready',
+      paragraphs: [
+        'A removal job moves faster when a few things are settled before rigging starts:',
+      ],
+      list: [
+        'An equipment list with each machine\'s destination — resale, relocation, or scrap — decided in advance',
+        'Confirmation of who performs lockout and utility disconnects, and when they\'re available on-site',
+        'Site access details: dock hours, forklift or crane restrictions, and any areas that have to stay operating',
+        'A hard deadline, if the job is tied to a lease exit or a landlord walk-through',
+        'Approved destinations for fluids and scrap, since we move equipment but don\'t make disposal decisions for you',
+      ],
+    },
   ],
   process: {
     h2: 'How a machinery removal runs',
@@ -82,9 +107,12 @@ module.exports = {
     { q: 'Do you handle full plant decommissioning?', a: 'Yes — whole-facility equipment removal for closures and consolidations, sequenced around buyers, relocation loads, and scrap so everything is out by the deadline.' },
     { q: 'Do you disconnect electrical and utilities?', a: 'Utility disconnects are done by qualified personnel — your maintenance team or licensed trades. We coordinate the lockout sequence and don\'t touch the machine until it\'s verified safe.' },
     { q: 'Is this a junk removal service?', a: 'No. This is industrial rigging for heavy equipment. We don\'t haul household junk or office clean-outs.' },
+    { q: 'How do you decide what gets scrapped versus resold or relocated?', a: 'That call comes from you or the dealer handling the sale, made per machine before removal starts. We keep the three streams separate through disconnect, rigging, and load-out so a machine bound for resale never gets mixed in with scrap.' },
+    { q: 'Do you tag and track equipment during a removal?', a: 'Yes. Every machine on the list gets identified, tagged, and logged before it\'s disconnected, so nothing gets misrouted on a job with multiple destinations.' },
+    { q: 'Does a rigger or a millwright handle the mechanical disconnect?', a: 'Our riggers handle the physical disconnect, dismantling, and rig-out. For equipment that needs precision teardown of alignment-sensitive components, our <a href="/services/millwright-services">millwright</a> crew handles that scope on the same job.' },
   ],
   faqTitle: 'Machinery removal FAQ',
-  related: ['plant-relocation', 'machinery-moving', 'crane-services', 'crating-packing', 'project-freight'],
+  related: ['rigging', 'plant-relocation', 'machinery-moving', 'crane-services', 'crating-packing', 'millwright-services', 'project-freight'],
   guides: [
     ['plant-relocation-checklist', 'The Plant Relocation Checklist'],
     ['how-to-prepare-a-machine-for-shipping', 'How to Prepare a Machine for Shipping'],

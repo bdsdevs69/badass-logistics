@@ -3,7 +3,7 @@ module.exports = {
   slug: 'project-freight',
   cardBlurb: 'Project cargo and project freight — container to warehouse, crating, and dedicated lanes managed as one plan, never one-off loads.',
   title: 'Project Cargo & Project Freight Logistics | Badass Logistics',
-  description: 'Project cargo and project freight for industrial jobs — container receiving, crating, staging, documentation, and dedicated capacity planned with the rigging crew, not booked as spot loads.',
+  description: 'Project cargo and project freight for industrial jobs — receiving, crating, sequencing, and dedicated capacity planned with the rigging crew, not spot-booked.',
   serviceType: 'Project Freight Management',
   hero: '/assets/img/loads/tarped-machinery-flatbed-warehouse-loadout.jpg',
   band: '/assets/img/loads/load-reels-container.jpg',
@@ -31,8 +31,9 @@ module.exports = {
     items: [
       { k: 'planning', h: 'Load &amp; Sequence Planning', p: 'Loads built around weights, dimensions, and the order things have to be installed.' },
       { k: 'receiving', h: 'Container Receiving', p: 'Containers picked up at port or rail, devanned, inspected, and staged.' },
-      { k: 'packing', h: 'Crating &amp; Prep', p: 'Machines drained, locked, wrapped, and crated on site or at staging.' },
+      { k: 'packing', h: 'Crating, Export &amp; Prep', p: 'Machines drained, locked, wrapped, crated, and prepped for container or truck moves, on site or at staging.' },
       { k: 'capacity', h: 'FTL &amp; Dedicated Lanes', p: 'Truckload and dedicated capacity for the life of the project, not whatever\'s available.' },
+      { k: 'paperwork', h: 'Documentation', p: 'Packing lists, bills of lading, and import paperwork kept with the load plan, not scattered across vendors.' },
       { k: 'visibility', h: 'Tracking &amp; Updates', p: 'Pickup, in-transit, and delivery updates, with photos and signed paperwork.' },
       { k: 'on site', h: 'Delivery to the Crew', p: 'Delivery windows synced with the rigging crew so freight lands when it can be set.' },
     ],
@@ -43,6 +44,34 @@ module.exports = {
     intro: 'Each piece is part of the same project plan. Most jobs use two or three of them.',
   },
   sections: [
+    {
+      tag: 'project freight vs. ordinary freight',
+      h2: 'What makes a load "project freight" instead of ordinary freight?',
+      paragraphs: [
+        'Ordinary freight is one shipment: one bill of lading, one truck, a pickup and delivery date that don\'t depend on anything else. Project freight is freight that can\'t be booked that way, because it\'s only one piece of a larger move.',
+      ],
+      list: [
+        'It\'s tied to a sequence — a piece has to arrive before or after another piece, not just "sometime this week"',
+        'It spans multiple loads that all have to land on a plan, not a single pickup',
+        'It carries equipment, not boxes — machines that need crating, draining, or specific trailer types',
+        'It has a receiving or install crew waiting on the other end, so a missed window costs labor, not just a delivery fee',
+        'It often starts at a port or rail ramp with a container, not a dock door',
+      ],
+      after: [
+        'A single machine going from a dealer to a shop floor is ordinary freight. A production line landing in six containers, staged, crated, and delivered in install order over three weeks is project freight — the version we run.',
+      ],
+    },
+    {
+      tag: 'two common triggers',
+      h2: 'Plant-to-plant moves and inbound new equipment',
+      paragraphs: [
+        'Project freight almost always starts one of two ways: equipment that already exists moving between facilities, or new equipment arriving from a manufacturer or overseas for the first time. Both need the same thing — a plan built around the install, not the shipping date.',
+      ],
+      subsections: [
+        { h: 'Plant-to-plant moves', paragraphs: ['A line, cell, or department moving from one facility to another — a consolidation, a lease ending, a plant closing. Machines get <a href="/services/machinery-moving">rigged out</a>, freighted to the new site, and rigged back in on the same schedule, so equipment isn\'t sitting on a trailer any longer than it has to.'] },
+        { h: 'Inbound new-equipment deliveries', paragraphs: ['New machines arriving from a factory or importer, often by container, sometimes as a single oversized crate. We schedule receiving against the install date, not the ship date, so equipment isn\'t staged in a warehouse for months waiting on a foundation that isn\'t poured yet.'] },
+      ],
+    },
     {
       tag: 'a typical project',
       h2: 'From the container to the foundation',
@@ -59,7 +88,7 @@ module.exports = {
     {
       bg: 'paper',
       tag: 'why one team',
-      h2: 'Why project freight beats three separate vendors',
+      h2: 'Why does project freight need one team instead of three vendors?',
       paragraphs: [
         'When freight is bought separately from rigging, it gets bought on price and timed to the carrier\'s schedule. When it\'s planned with the rigging, it\'s timed to the job. That difference shows up in the places projects actually lose money:',
       ],
@@ -71,7 +100,25 @@ module.exports = {
         'Nobody accountable when something goes wrong between vendors',
       ],
       after: [
-        'One project team doesn\'t make freight free of problems. It makes someone responsible for solving them before they cost the job a day.',
+        'One project team doesn\'t make freight free of problems. It makes someone responsible for solving them before they cost the job a day. That\'s the hand-off a rigger, a carrier, and a warehouse never fix on their own — the plan has to belong to one team, not pass between three.',
+      ],
+    },
+    {
+      bg: 'paper',
+      tag: 'paperwork that keeps a project moving',
+      h2: 'What documentation does a project freight move need?',
+      paragraphs: [
+        'A project move generates more paperwork than a single shipment, and one missing piece can hold up a whole load. We keep it with the freight plan, not scattered across separate vendors:',
+      ],
+      list: [
+        'A packing list for every container and crate, checked against what actually shows up',
+        'A bill of lading and sequence number for each load, tied to the install order',
+        'Commercial invoices and country-of-origin paperwork that travels with imported equipment',
+        'Crating and export-prep records for anything that moved by container',
+        'Delivery photos and a signed proof of delivery for every load, not just the last one',
+      ],
+      after: [
+        'None of that replaces a customs broker or freight forwarder\'s own paperwork on an import — it\'s the documentation that keeps the receiving crew, the install schedule, and the freight plan reading from the same page.',
       ],
     },
   ],
@@ -90,10 +137,13 @@ module.exports = {
     items: ['Manufacturers installing new lines', 'Plant relocations &amp; consolidations', 'Importers of industrial machinery', 'General contractors &amp; EPC firms', 'Data center build-outs', 'Hospital &amp; imaging projects', 'Energy &amp; utility projects', 'Equipment OEMs &amp; dealers', 'Food &amp; beverage expansions', 'Warehouse &amp; automation installs'],
   },
   faq: [
-    { q: 'What is project freight?', a: 'Freight planned and managed as part of one project — containers, crated equipment, machines, and materials moved in a set sequence to a set schedule — instead of booked one shipment at a time. See our guide to <a href="/blog/what-is-project-cargo">project cargo</a>.' },
+    { q: 'What is project freight, and is it the same as project cargo?', a: 'Yes — project freight and project cargo are the same thing said two ways: freight planned and managed as part of one project, with containers, crated equipment, machines, and materials moved in a set sequence to a set schedule instead of booked one shipment at a time. See our guide to <a href="/blog/what-is-project-cargo">project cargo</a>.' },
+    { q: 'How is project freight different from regular freight?', a: 'Regular freight is a single shipment with its own pickup and delivery date. Project freight is one piece of a larger move — a container, a crate, or a truckload that has to land in sequence with everything else on an install schedule, not on its own timeline.' },
     { q: 'Do you take single one-off loads?', a: 'No. We handle project-based moves: relocations, installs, build-outs, and equipment packages with multiple shipments. We don\'t sell spot loads.' },
     { q: 'Do you own the trucks?', a: 'No. Transport runs on our network of licensed broker and carrier partners, coordinated inside the project plan. Our own crews handle the rigging, devanning, and setting.' },
     { q: 'Can you receive containers of imported equipment?', a: 'Yes — pickup at port or rail, drayage to a warehouse or staging site, devanning with riggers on the heavy pieces, inspection, and staging. See <a href="/services/container-to-warehouse">container to warehouse</a>.' },
+    { q: 'Do you handle plant-to-plant equipment moves?', a: 'Yes. Machines coming out of one facility and going into another are freighted on the same schedule they\'re <a href="/services/rigging">rigged</a> and <a href="/services/plant-relocation">relocated</a> on, so equipment isn\'t sitting on a trailer between the two ends of the move.' },
+    { q: 'What documentation do you handle on a project freight move?', a: 'Packing lists checked against every container and crate, bills of lading tied to install sequence, commercial invoices and country-of-origin paperwork on imported equipment, and delivery photos and signed proof of delivery for every load — kept with the freight plan.' },
     { q: 'What equipment types can you use for project freight?', a: 'Whatever the freight calls for — dry van, air-ride, flatbed, step deck, conestoga, and enclosed trailers — matched to each load\'s weight, dimensions, and how sensitive it is.' },
     { q: 'Do I need to use your riggers to use project freight?', a: 'Project freight works best when it\'s planned with the rigging, and most of our freight comes out of jobs we rig. If you have your own install team, we\'ll plan deliveries around their schedule instead.' },
   ],

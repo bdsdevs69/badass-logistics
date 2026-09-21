@@ -72,7 +72,7 @@ OEMs, data centre operators, and fleet owners needing dispatch.
 
 ## Project freight
 
-- [Project Freight](https://badasslogistics.com/services/project-freight): Container to warehouse, crating, and dedicated lanes — freight managed as part of the project, never one-off loads.
+- [Project Freight](https://badasslogistics.com/services/project-freight): Project cargo and project freight — container to warehouse, crating, and dedicated lanes managed as one plan, never one-off loads.
 - [Container to Warehouse](https://badasslogistics.com/services/container-to-warehouse): Containers of machinery pulled from port or rail, drayed to staging, devanned by riggers, inspected, and released to the project.
 - [Industrial Crating & Packing](https://badasslogistics.com/services/crating-packing): Custom crates, skids, export packing, and machine prep — done on site by the crew that rigs it out.
 - [Dedicated Lanes & Project FTL](https://badasslogistics.com/services/dedicated-lanes): Truckload and dedicated capacity reserved for the life of a project — same lane, same schedule, synced with the crew.
@@ -125,7 +125,7 @@ offer are the ones listed above.
 - [How to Move an Industrial Boiler or Chiller](https://badasslogistics.com/blog/how-to-move-a-boiler-or-chiller): How to move an industrial boiler or chiller: weight and rigging, roof and mechanical-room access, trailer choice, upright handling, and reconnection.
 - [How to Move an Industrial Air Compressor](https://badasslogistics.com/blog/how-to-move-a-compressor): Moving an industrial air compressor: depressurizing, draining oil and condensate, rigging the skid, receiver tanks and dryers, and reconnecting plant air cleanly.
 - [How to Move a Metal Lathe Without Twisting the Bed](https://badasslogistics.com/blog/how-to-move-a-lathe): How to move a metal lathe without twisting the bed: weights, rigging points, tailstock and chuck prep, skating, air-ride vs flatbed, and re-leveling to spec.
-- [How to Move a Milling Machine (Bridgeport & Knee Mills)](https://badasslogistics.com/blog/how-to-move-a-milling-machine): How to move a milling machine: weight and top-heavy geometry, rigging points, ram and table prep, skating, air-ride transport, and re-leveling to spec.
+- [How to Move a Milling Machine (Knee Mills, Bed Mills & VMCs)](https://badasslogistics.com/blog/how-to-move-a-milling-machine): How to move a milling machine: knee mill vs. bed mill vs. VMC geometry, builder-documented lift points, what to drain and lock, way protection, skating, and re-level and tram at the destination.
 - [How to Move a Press Brake Without Wrecking It](https://badasslogistics.com/blog/how-to-move-a-press-brake): Press brakes are top-heavy machines that tip before they warn you. Ram locking, rigging points, skates, trailer choice, and securement — from the dispatch desk.
 - [How to Move a Transformer Into a Building](https://badasslogistics.com/blog/how-to-move-a-transformer-into-a-building): Rigging a transformer into an electrical room: access survey, steel-plate skidding, temporary steel over trenches, pulling the old unit, and handling the oil.
 - [How to Move an Injection Molding Machine](https://badasslogistics.com/blog/how-to-move-an-injection-molding-machine): How to move an injection molding machine: draining oil, protecting tie bars and platens, splitting the clamp and injection units, rigging out, and leveling back in.
@@ -137,7 +137,7 @@ offer are the ones listed above.
 
 - [How to Choose a Plant Relocation Contractor](https://badasslogistics.com/blog/how-to-choose-a-plant-relocation-contractor): What separates plant relocation contractors: track record, who owns what between OEM, millwright and rigger, and the questions worth asking before you sign.
 - [In-House Team or Relocation Contractor: How to Decide](https://badasslogistics.com/blog/in-house-team-vs-relocation-contractor): What a maintenance team can genuinely move itself, where the line sits, and what it actually costs when a job crosses that line without a contractor.
-- [Plant Relocation: The Checklist for Moving an Entire Facility](https://badasslogistics.com/blog/plant-relocation-checklist): Moving a plant is not one big move — it is dozens of coordinated moves in the right order, with the least downtime. Here is the checklist: survey and tag, sequence by production priority, disconnect, rig, transport, and recommission.
+- [Plant Relocation Checklist: What a Quote Needs to Cover](https://badasslogistics.com/blog/plant-relocation-checklist): The plant relocation checklist: what a comparable relocation quote must include, what to have ready before you ask for one, and how a process plant move differs from a discrete-manufacturing move.
 
 ### Guides: Project Freight
 
