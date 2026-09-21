@@ -518,62 +518,112 @@
     ]
   },
   "assets": {
-    "sitelinks": [
-      [
-        "Crane & Rigging",
-        "/services/crane-services",
-        "Cranes with operators",
-        "Lift plan before rig day"
+    "_note": "Two sets. The rigging set goes on Crane & Rigging and Machinery & Medical Equipment; the dispatch set goes on Fleet Dispatch, because a trucking company owner does not need a 'Lifts to 200,000+ Lbs' callout — though the rigging sitelinks do quietly make the dispatch pitch, since the rigging work is where the freight comes from.",
+    "rigging": {
+      "sitelinks": [
+        [
+          "Crane & Rigging",
+          "/services/crane-services",
+          "Cranes with operators",
+          "Lift plan before rig day"
+        ],
+        [
+          "Industrial Rigging",
+          "/services/rigging",
+          "Every kind of rigging",
+          "Lifts to 200,000+ lbs"
+        ],
+        [
+          "Machinery Moving",
+          "/services/machinery-moving",
+          "Rigged, moved and set",
+          "Leveled to spec"
+        ],
+        [
+          "Medical & MRI Rigging",
+          "/services/mri-medical-equipment-rigging",
+          "MRI, CT, X-ray, linac",
+          "Monitored in transit"
+        ],
+        [
+          "Plant Relocation",
+          "/services/plant-relocation",
+          "Whole plants, in sequence",
+          "Tagged and rebuilt in order"
+        ],
+        [
+          "About Badass Logistics",
+          "/about",
+          "Riggers first",
+          "88 locations, all 50 states"
+        ]
       ],
-      [
-        "Industrial Rigging",
-        "/services/rigging",
-        "Every kind of rigging",
-        "Lifts to 200,000+ lbs"
+      "callouts": [
+        "Lifts to 200,000+ Lbs",
+        "Operators & Riggers",
+        "Same-Day Quotes",
+        "Own Crews & Rigging Gear",
+        "One Crew, No Hand-Offs",
+        "Set & Leveled to Spec"
       ],
-      [
-        "Machinery Moving",
-        "/services/machinery-moving",
-        "Rigged, moved and set",
-        "Leveled to spec"
+      "structuredSnippet": {
+        "header": "Service catalog",
+        "values": [
+          "Crane & Rigging Services",
+          "Industrial Rigging",
+          "Machinery Moving",
+          "Plant Relocation",
+          "Medical Equipment Rigging",
+          "Machine Installation"
+        ]
+      }
+    },
+    "dispatch": {
+      "sitelinks": [
+        [
+          "Truck Dispatch",
+          "/services/truck-dispatch",
+          "US-based dispatch desk",
+          "Built for fleets of 4+ trucks"
+        ],
+        [
+          "Dedicated Lanes",
+          "/services/dedicated-lanes",
+          "Steady, planned freight lanes",
+          "Not load-board scraps"
+        ],
+        [
+          "Project Freight",
+          "/services/project-freight",
+          "Freight our rigging work makes",
+          "Your trucks run it"
+        ],
+        [
+          "About Badass Logistics",
+          "/about",
+          "Riggers first",
+          "88 locations, all 50 states"
+        ]
       ],
-      [
-        "Medical & MRI Rigging",
-        "/services/mri-medical-equipment-rigging",
-        "MRI, CT, X-ray, linac",
-        "Monitored in transit"
+      "callouts": [
+        "US-Based Dispatch Desk",
+        "Built For 4+ Truck Fleets",
+        "Freight From Our Network",
+        "Dedicated Lane Planning",
+        "A Team, Not One Person",
+        "Same-Day Response"
       ],
-      [
-        "Plant Relocation",
-        "/services/plant-relocation",
-        "Whole plants, in sequence",
-        "Tagged and rebuilt in order"
-      ],
-      [
-        "About Badass Logistics",
-        "/about",
-        "Riggers first",
-        "88 locations, all 50 states"
-      ]
-    ],
-    "callouts": [
-      "Lifts to 200,000+ Lbs",
-      "Operators & Riggers",
-      "Same-Day Quotes",
-      "Own Crews & Rigging Gear",
-      "One Crew, No Hand-Offs",
-      "Set & Leveled to Spec"
-    ],
-    "structuredSnippet": {
-      "header": "Service catalog",
-      "values": [
-        "Crane & Rigging Services",
-        "Industrial Rigging",
-        "Machinery Moving",
-        "Plant Relocation",
-        "Medical Equipment Rigging",
-        "Machine Installation"
-      ]
+      "structuredSnippet": {
+        "header": "Services",
+        "values": [
+          "Load Sourcing",
+          "Rate Negotiation",
+          "Lane Planning",
+          "Broker Setups",
+          "Check Calls",
+          "Billing Support"
+        ]
+      }
     }
   },
   "rules": [

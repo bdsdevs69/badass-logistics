@@ -58,7 +58,9 @@ for (const c of plan.campaigns) {
 }
 
 // --- assets -------------------------------------------------
-for (const s of plan.assets.sitelinks) {
+const assetSets = [plan.assets.rigging, plan.assets.dispatch];
+for (const set of assetSets) {
+for (const s of set.sitelinks) {
   const [text, href, d1, d2] = s;
   if (text.length > LIMITS.sitelinkText) errs.push(`sitelink text ${text.length}/25 — "${text}"`);
   for (const d of [d1, d2]) {
@@ -66,11 +68,12 @@ for (const s of plan.assets.sitelinks) {
   }
   if (!href.startsWith('/')) errs.push(`sitelink href must be root-relative — ${href}`);
 }
-for (const c of plan.assets.callouts) {
+for (const c of set.callouts) {
   if (c.length > LIMITS.callout) errs.push(`callout ${c.length}/25 — "${c}"`);
 }
-for (const v of plan.assets.structuredSnippet.values) {
+for (const v of set.structuredSnippet.values) {
   if (v.length > LIMITS.snippet) errs.push(`snippet value ${v.length}/25 — "${v}"`);
+}
 }
 
 // --- positioning lint ---------------------------------------
@@ -114,7 +117,8 @@ for (const c of plan.campaigns) {
 // --- live URL check -----------------------------------------
 async function checkLive() {
   const urls = [...new Set(plan.campaigns.flatMap(c => c.adGroups.map(g => g.finalUrl)))];
-  const sitelinks = plan.assets.sitelinks.map(s => 'https://badasslogistics.com' + s[1]);
+  const sitelinks = [...plan.assets.rigging.sitelinks, ...plan.assets.dispatch.sitelinks]
+    .map(s => 'https://badasslogistics.com' + s[1]);
   for (const u of [...urls, ...sitelinks]) {
     try {
       const res = await fetch(u, { redirect: 'follow' });
