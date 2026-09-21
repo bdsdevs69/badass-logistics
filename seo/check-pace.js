@@ -58,12 +58,12 @@ for (const q of queue.queue) {
 // --- backlog depth ------------------------------------------
 const todo = queue.queue.filter(q => q.status === 'todo');
 if (todo.length === 0) {
-  errs.push('queue is empty — backfill it with `node gsc-gaps.js 90` before writing anything');
+  errs.push('queue is empty — backfill it with `node scripts/topic-gaps.js 90` before writing anything');
 } else if (todo.length < need) {
   errs.push(
     `queue holds ${todo.length} topics; run ${next ? next.n : '?'} needs ${need}.\n` +
     `    This is not a blocker for Sam — backfilling is the first job of the run:\n` +
-    `      node gsc-gaps.js 90    (queries earning impressions with no page)\n` +
+    `      node scripts/topic-gaps.js 90   (article-shaped demand with no post)\n` +
     `    Add the topics to content-queue.json, re-run this, then start writing.\n` +
     `    Never backfill from a brainstorm.`
   );

@@ -1,4 +1,68 @@
-# Semi-weekly SEO run — Badass Logistics
+# SEO runs — Badass Logistics
+
+## The runs, and who owns what
+
+Five scheduled tasks share this repo. They are staggered by day so no
+two of them touch git at once, and each one always `git pull --rebase`
+before pushing.
+
+| when | task | owns |
+|---|---|---|
+| Mon/Wed/Thu 10:00 | `badass-seo-articles` | articles, written by parallel writer agents |
+| Tue/Fri 11:00 | `badass-seo-semiweekly` | the structural batch in `seo/schedule.md`, plus its articles |
+| Sat 10:00 | `badass-seo-upgrade` | Track B — lift existing pages, de-cannibalise, differentiate the matrix |
+| daily 07:00 | `badass-index-watch` | health check, live-URL check, IndexNow re-ping |
+| Mon 18:00 | `badass-ads-weekly` | Google Ads only — never content |
+
+## The gates, and why volume needs them
+
+Publishing fast is safe only while these hold. Run them in this order.
+
+```bash
+node scripts/index-health.js 90        # may we add to this cluster at all?
+node seo/check-pace.js                 # is the backlog deep enough?
+node scripts/topic-gaps.js 90          # what to write, and what to fix instead
+node scripts/check-content.js <slug>   # shape: fields, lengths, FAQ, links
+node scripts/check-uniqueness.js <slug># is it a rehash of what we already have?
+node scripts/cannibalisation.js 90     # are our own pages fighting each other?
+node scripts/check-uniqueness.js --matrix <service>   # is the matrix differentiated?
+```
+
+- **`index-health.js`** grades every cluster GREEN / AMBER / RED by the
+  share of it earning no impressions. **Only add pages to GREEN
+  clusters.** This is the governor: it ties how fast we publish to
+  whether Google absorbed the last batch, instead of to a number
+  someone guessed.
+- **`check-uniqueness.js`** fails above 22% shingle overlap with any
+  single existing post. Calibrated on 2026-09-21 against the 38
+  documents then on disk, whose worst honest pair was 8.9%.
+- **`cannibalisation.js`** is the one fault that gets *worse* the
+  faster we publish. On 2026-09-21, 264 queries had two or more of our
+  own URLs competing. Writing into a cannibalised cluster adds a
+  competitor; it does not win the cluster.
+- **`--matrix`** measures how much of each generated city page is its
+  own rather than template. The floor is 33%. `machinery-moving`
+  averaged 32.4% with 86 of 113 pages under it, which is why
+  `machinery-moving/omaha-ne` ranked for Indianapolis, Detroit,
+  Milwaukee and New York at position 67 with zero clicks. **Raise this
+  before growing the matrix**, or the new pages inherit the defect at
+  a larger scale.
+
+## Writing at volume without dropping quality
+
+Articles are written by **parallel `badass-blog-writer` agents**, one
+topic each, spawned in a single message. Everything they produce then
+goes to **`badass-content-reviewer`**, which catches what no script
+can: wrong technical detail, an answer buried under preamble, padding
+that satisfies the word count, paraphrased positioning breaches, and
+duplicate intent. Anything it marks HOLD does not ship.
+
+`badass-page-deepener` is the Track B equivalent — one agent per page
+that already exists and ranks badly.
+
+---
+
+## Per-article standards
 
 Runs **Tuesday and Friday**. This file holds the per-article standards.
 **`seo/schedule.md` owns the pace and the batch** — it is Sam's plan and
