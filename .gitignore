@@ -7,3 +7,11 @@ content-drafts/
 # GSC service-account credential (never commit)
 gsc-key.json
 data/gsc-trend.csv
+
+# Bulk-upload artefacts for the Ads UI. GitHub Pages serves every committed
+# file, so a committed upload.csv publishes the whole keyword and negative
+# list at a guessable URL. They are generated: node ads/build-upload.js
+ads/upload.csv
+ads/upload-negatives.csv
+ads/upload-settings.csv
+ads/shared-negatives.txt
