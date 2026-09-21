@@ -34,8 +34,8 @@
     "bidding": "Manual CPC, bid set per ad group",
     "biddingNote": "Below ~30 conversions a month the automated strategies have no signal to work with, and Maximize clicks actively misallocates: it buys the cheapest clicks, which is how heavy haul took 74% of spend and returned nothing. Manual CPC per ad group is what stops that without fragmenting the account into campaigns too small to learn from.",
     "aiMax": "OFF",
-    "schedule": "Monday-Friday 07:00-19:00, account TZ = ET. No weekends.",
-    "scheduleNote": "Office hours, not 24/7. The account clock is Eastern and Google applies ONE window to every metro, so 07:00-19:00 ET lands as 7am-7pm Eastern, 6am-6pm Central, 5am-5pm Denver and 4am-4pm Phoenix. That covers a 9-to-5 everywhere except Phoenix, which loses 4pm-5pm local -- the one metro on MST year-round. Widening to 20:00 ET would buy that hour back at the price of an Eastern evening hour and a slightly thinner pace across the day; it is worth doing only if Phoenix shows real afternoon volume. Most of the 20 metros are Eastern or Central, so the western early-morning tail is small and cheap. 22 billable weekdays a month; $25/day lands at ~$550.",
+    "schedule": "Monday-Friday 07:00-21:00, account TZ = ET. No weekends.",
+    "scheduleNote": "Office hours, not 24/7, and never overnight. The account clock is Eastern and Google applies ONE window to every metro, so 07:00-21:00 ET lands as 7am-9pm Eastern, 6am-8pm Central, 5am-7pm Denver and 4am-6pm Phoenix. Widened from 07:00-19:00 on 2026-09-21 (Sam's call): the old band clipped Phoenix at 4pm local and Denver at 5pm, so the two western metros lost the end of their working day. The cost is an Eastern evening tail and a slightly thinner hourly pace; at this volume the campaigns are impression-limited, not budget-limited, so that is cheap. The early-morning western tail (4am-7am local) is dead air and bills nothing. 22 billable weekdays a month; $25/day lands at ~$550.",
     "callAsset": "(307) 284-1332"
   },
   "campaigns": [

@@ -17,9 +17,17 @@ which one is right and update the other in the same run.
 | Machinery & Medical Equipment | $10.00 | Machinery Moving $4.50 · CNC & Machine Tools $4.50 · Medical & Imaging Equipment $7.00 | /quote-machinery, /quote-medical |
 | Fleet Dispatch | $5.00 | Dispatch For Fleets $3.00 | /quote-dispatch |
 
-All three run **Monday–Friday, 07:00–19:00, account time zone ET**, on
+All three run **Monday–Friday, 07:00–21:00, account time zone ET**, on
 **Manual CPC**, targeting the **20 GBP metros** (canonical
 `City, State, United States` form), and carry their own negative lists.
+
+That window looks wide on purpose. Google applies **one** schedule in the
+account's Eastern clock to every metro, so 07:00–21:00 ET is 7am–9pm
+Eastern, 6am–8pm Central, 5am–7pm Denver and **4am–6pm Phoenix**. The
+earlier 07:00–19:00 band cut Phoenix off at 4pm local and Denver at 5pm.
+Do not narrow the evening back without checking what it costs the two
+western metros — the early-morning western hours bill nothing because
+nobody is searching, so the band is cheaper than it looks.
 
 Assets: the **rigging set** (6 sitelinks, 6 callouts, one "Service
 catalog" structured snippet) sits at **account level** so it covers both
