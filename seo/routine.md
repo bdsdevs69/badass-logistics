@@ -8,7 +8,13 @@ Everything here happens in `~/badass-logistics`.
 
 ## 1. Write the post
 
-Take the first `status: "todo"` item from `seo/content-queue.json`.
+Take the first `status: "todo"` item from `seo/content-queue.json` —
+**one item, not the first few.** A run on 2026-09-18 shipped four posts
+in one afternoon and burned two thirds of the researched backlog, so
+`seo/check-pace.js` now fails the run if two items carry the same
+publish date. If a run feels like it has room for more, the right use
+of that time is refilling the queue, not emptying it faster.
+
 Write it as a module at `content/blog-new/<slug>.js`, matching the shape
 of the existing ones:
 
@@ -42,8 +48,12 @@ matching page, not from a brainstorm.
 
 ```bash
 node scripts/check-content.js <slug>
+node seo/check-pace.js
 node build.js
 ```
+
+`check-pace.js` is the guard on step 1: one post per run, every `done`
+item has a module on disk, and the queue never runs dry.
 
 **Always `node build.js`** — never a single generator. The bare
 generators wipe the link passes, and that has broken the live site
