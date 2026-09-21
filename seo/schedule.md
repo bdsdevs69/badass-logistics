@@ -26,6 +26,20 @@ equipment×city matrix and it is the **worst performer on the site at 50%
 indexed**. Building 300 more would repeat that mistake at four times the scale.
 Equipment gets *articles* and national service pages instead.
 
+**0. MEASURED 2026-09-21 — the stub number was understated.** `scripts/stub-traffic.js`
+says **133 retired pages still earn 6,879 impressions and 52 clicks**, which is roughly
+half of everything this site earns, all landing on pages that bounce the visitor away.
+`/services/dispatching` sits at **position 5.7** — the best ranking on the site — on a stub.
+Run 4 below says "~2,000 stub impressions"; the real recoverable figure is larger. But only
+part of it is ours to take: trailer and fleet-operations queries are fleet owners choosing
+what to run, which is the 4+ truck dispatch buyer, and those are worth recovering. The
+heavy-haul service pages, oversize-permit guides, pilot-car and superload posts are demand
+for a motor carrier we retired in 2026 — leave those stubbed. Recovering a URL means deleting
+its rule from `data/redirects.json`; `build-redirects.js` runs after the generators and will
+re-stub anything still listed. Two were recovered on 21 Sep as the pattern:
+`step-deck-vs-drop-deck-trailers` (1,729 impr, pos 17.5) and
+`how-to-load-and-secure-a-conestoga-trailer` (543, pos 13.9).
+
 **2. The biggest quick win is trailer content, routed through dispatch.**
 Comparison demand is 220 impressions and it is almost entirely trailer
 comparisons — "step deck vs drop deck" 60 impressions at position 12, "drop

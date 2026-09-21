@@ -8,6 +8,32 @@
   },
   "queue": [
     {
+      "slug": "how-to-load-and-secure-a-conestoga-trailer",
+      "cluster": "dispatch",
+      "cat": "Dispatch",
+      "target": "conestoga trailer loading, how to secure a load on a conestoga, conestoga securement, what is a conestoga trailer",
+      "angle": "RECOVERY: currently a redirect stub still earning 543 impressions at position 13.9. Rebuild for a fleet owner running Conestogas: how the curtain system works, loading sequence, securement inside a rolling tarp, what it protects against versus a tarped flatbed, cargo-claim exposure, and when a Conestoga wins freight a flatbed cannot. Dispatch-framed — we dispatch Conestoga fleets. Never imply Badass hauls. No oversize or permit service framing.",
+      "links": [
+        "services/truck-dispatch",
+        "services/dedicated-lanes"
+      ],
+      "hero": "loads/conestoga-interior-load-securement-strap.jpg",
+      "status": "todo"
+    },
+    {
+      "slug": "step-deck-vs-drop-deck-trailers",
+      "cluster": "dispatch",
+      "cat": "Dispatch",
+      "target": "step deck vs drop deck, drop deck vs step deck, what is a step deck trailer, step deck trailer dimensions, ground clearance of a step deck trailer, how high can you load a step deck, step deck vs lowboy, what is a double drop trailer",
+      "angle": "RECOVERY: this URL is currently a redirect stub still earning 1,729 impressions at position 17.5 — the biggest page on the site — and it bounces every visitor to the trailer selector. Rebuild it as the definitive answer, written for a FLEET OWNER deciding what to run, not for a shipper hiring a hauler. Cover the whole cluster in one page: what a step deck is and why it exists, step deck vs drop deck (they are the same trailer, different regional names — say so plainly, that is the query), deck heights and legal load heights, ground clearance, where a lowboy or double drop takes over, and what each trailer type means for the freight a fleet can book. Frame throughout as dispatch: we dispatch fleets running flatbed, step deck, reefer and Conestoga. NEVER imply Badass hauls anything or holds authority. No permits/escort/oversize service framing — that line is retired; mention legal limits only as facts a fleet plans around.",
+      "links": [
+        "services/truck-dispatch",
+        "services/dedicated-lanes"
+      ],
+      "hero": "loads/load-lowboy-warehouse.jpg",
+      "status": "todo"
+    },
+    {
       "slug": "how-to-move-a-linear-accelerator",
       "cluster": "medical",
       "cat": "Medical Rigging",
