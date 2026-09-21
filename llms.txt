@@ -99,11 +99,14 @@ offer are the ones listed above.
 ### Guides: Rigging
 
 - [Crane Rental vs Rigging Company: Which Do You Need?](https://badasslogistics.com/blog/crane-rental-vs-rigging-company): Crane rental gives you a machine and an operator. A rigging company owns the whole lift. Here is which one your job actually needs, and what each scope covers.
+- [Forklift vs Crane for Loading a Machine: How to Choose](https://badasslogistics.com/blog/forklift-vs-crane-for-machine-loading): A forklift works until load-center derating eats its capacity. Here is how to tell whether your machine is a forklift load-out or a crane pick, and why.
 - [How to Move a CNC Machine Without Wrecking It](https://badasslogistics.com/blog/how-to-move-a-cnc-machine): Moving a CNC machine or machining center: OEM prep, rigging with toe jacks and skates, why you never lift from the wrong points, transport on air-ride, and re-leveling at the destination.
+- [How to Move a Data Center: Rack Sequencing and Rigging](https://badasslogistics.com/blog/how-to-move-a-data-center): How a data center relocation actually runs: de-stack vs roll-out racks, floor tile ratings, ramps, shock monitoring, and sequencing against the migration window.
 - [How to Move a Printing Press: Teardown, Rigging, and Reassembly](https://badasslogistics.com/blog/how-to-move-a-printing-press): How to move a printing press — documenting the line, separating units with technicians, rigging each unit, and setting the press for reassembly.
 - [Jacking and Skidding Explained: How Heavy Loads Move Without a Crane](https://badasslogistics.com/blog/jacking-and-skidding-explained): What jacking and skidding is, how jack-and-slide systems and hydraulic gantries work, when they beat a crane, and what gets checked before a heavy skid move.
 - [Types of Rigging: Every Kind of Industrial Rigging, Explained](https://badasslogistics.com/blog/types-of-rigging): The main types of industrial rigging — machinery moving, plant relocation, crane lifts, jacking and skidding, millwright, MRI, data center, HVAC — explained.
 - [What Is a Critical Lift? Criteria, Lift Plans, and What Goes in One](https://badasslogistics.com/blog/what-is-a-critical-lift): What is considered a critical lift, the common criteria companies use, and what a crane lift plan includes — weight, radius, rigging, and ground bearing.
+- [What Is a Machinery Move Survey? What Riggers Check First](https://badasslogistics.com/blog/what-is-a-machinery-move-survey): What a machinery move survey covers: weights and drawings, door and corridor clearances, floor loading, elevator ratings, and utilities — before a quote is real.
 - [What Is Industrial Rigging? A Plain-English Guide](https://badasslogistics.com/blog/what-is-industrial-rigging): Industrial rigging explained: what riggers do, the equipment they use (cranes, gantries, jacks, skates, slings), common jobs, and why every lift is an engineering problem.
 
 ### Guides: Specialized Rigging
@@ -124,6 +127,7 @@ offer are the ones listed above.
 - [How to Move a Metal Lathe Without Twisting the Bed](https://badasslogistics.com/blog/how-to-move-a-lathe): How to move a metal lathe without twisting the bed: weights, rigging points, tailstock and chuck prep, skating, air-ride vs flatbed, and re-leveling to spec.
 - [How to Move a Milling Machine (Bridgeport & Knee Mills)](https://badasslogistics.com/blog/how-to-move-a-milling-machine): How to move a milling machine: weight and top-heavy geometry, rigging points, ram and table prep, skating, air-ride transport, and re-leveling to spec.
 - [How to Move a Press Brake Without Wrecking It](https://badasslogistics.com/blog/how-to-move-a-press-brake): Press brakes are top-heavy machines that tip before they warn you. Ram locking, rigging points, skates, trailer choice, and securement — from the dispatch desk.
+- [How to Move a Transformer Into a Building](https://badasslogistics.com/blog/how-to-move-a-transformer-into-a-building): Rigging a transformer into an electrical room: access survey, steel-plate skidding, temporary steel over trenches, pulling the old unit, and handling the oil.
 - [How to Move an Injection Molding Machine](https://badasslogistics.com/blog/how-to-move-an-injection-molding-machine): How to move an injection molding machine: draining oil, protecting tie bars and platens, splitting the clamp and injection units, rigging out, and leveling back in.
 - [How to Prepare a Machine for Shipping: The Pre-Move Checklist](https://badasslogistics.com/blog/how-to-prepare-a-machine-for-shipping): A blunt pre-shipping checklist for machinery: drain the coolant, lock every axis, set shipping brackets, verify weight and dimensions, clear the path out.
 - [How to Ship an Industrial Generator: Trailer, Rigging, and Securement by Weight Class](https://badasslogistics.com/blog/how-to-ship-a-generator): Gensets ship upright on the base frame — flatbed, step-deck, or RGN by weight, with fuel run down, chains on the skid, and state permits for oversize units.
@@ -131,6 +135,8 @@ offer are the ones listed above.
 
 ### Guides: Plant Relocation
 
+- [How to Choose a Plant Relocation Contractor](https://badasslogistics.com/blog/how-to-choose-a-plant-relocation-contractor): What separates plant relocation contractors: track record, who owns what between OEM, millwright and rigger, and the questions worth asking before you sign.
+- [In-House Team or Relocation Contractor: How to Decide](https://badasslogistics.com/blog/in-house-team-vs-relocation-contractor): What a maintenance team can genuinely move itself, where the line sits, and what it actually costs when a job crosses that line without a contractor.
 - [Plant Relocation: The Checklist for Moving an Entire Facility](https://badasslogistics.com/blog/plant-relocation-checklist): Moving a plant is not one big move — it is dozens of coordinated moves in the right order, with the least downtime. Here is the checklist: survey and tag, sequence by production priority, disconnect, rig, transport, and recommission.
 
 ### Guides: Project Freight
