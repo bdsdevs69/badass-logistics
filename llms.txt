@@ -162,6 +162,8 @@ offer are the ones listed above.
 ### Guides: Dispatch
 
 - [How Do Truck Dispatchers Get Paid? Pricing Models Explained for Fleets](https://badasslogistics.com/blog/how-do-truck-dispatchers-get-paid): How truck dispatch services get paid — percentage of gross, flat per-truck fees, and hybrid models — plus what the fee should include and red flags.
+- [Conestoga Trailer Loading and Securement: A Fleet Guide](https://badasslogistics.com/blog/how-to-load-and-secure-a-conestoga-trailer): How a Conestoga curtain system works, the loading sequence, and how securement inside it differs from an open flatbed — written for fleets that run them.
+- [Step Deck vs Drop Deck Trailers: Same Trailer, Explained](https://badasslogistics.com/blog/step-deck-vs-drop-deck-trailers): Step deck and drop deck are the same trailer under two regional names. Deck heights, legal load heights, ground clearance, and when to run a lowboy instead.
 - [Truck Dispatch Services for Small Fleets (4+ Trucks): What to Expect](https://badasslogistics.com/blog/truck-dispatch-for-small-fleets): What a fleet truck dispatch service does, when outsourcing dispatch makes sense for 4 to 20 trucks, what to ask before signing, and the red flags to avoid.
 - [Truck Dispatcher vs Freight Broker: What's the Difference?](https://badasslogistics.com/blog/truck-dispatcher-vs-freight-broker): Dispatchers and brokers are not the same thing. Who each one works for, what they legally can and cannot do, and which one an owner-operator actually needs.
 
