@@ -35,7 +35,7 @@
     "biddingNote": "Below ~30 conversions a month the automated strategies have no signal to work with, and Maximize clicks actively misallocates: it buys the cheapest clicks, which is how heavy haul took 74% of spend and returned nothing. Manual CPC per ad group is what stops that without fragmenting the account into campaigns too small to learn from.",
     "aiMax": "OFF",
     "schedule": "Monday-Friday 07:00-19:00, account TZ = ET. No weekends.",
-    "scheduleNote": "Office hours, not 24/7. The account clock is Eastern and Google applies one window everywhere, so 07:00-19:00 ET is the tightest band that still covers the working day in every target metro: 7am-7pm Eastern, 6am-6pm Central, 5am-5pm Mountain. Most of the 20 metros are Eastern or Central, so the western early-morning tail is small and cheap. 22 billable weekdays a month; $25/day lands at ~$550.",
+    "scheduleNote": "Office hours, not 24/7. The account clock is Eastern and Google applies ONE window to every metro, so 07:00-19:00 ET lands as 7am-7pm Eastern, 6am-6pm Central, 5am-5pm Denver and 4am-4pm Phoenix. That covers a 9-to-5 everywhere except Phoenix, which loses 4pm-5pm local -- the one metro on MST year-round. Widening to 20:00 ET would buy that hour back at the price of an Eastern evening hour and a slightly thinner pace across the day; it is worth doing only if Phoenix shows real afternoon volume. Most of the 20 metros are Eastern or Central, so the western early-morning tail is small and cheap. 22 billable weekdays a month; $25/day lands at ~$550.",
     "callAsset": "(307) 284-1332"
   },
   "campaigns": [
