@@ -15,22 +15,13 @@ Edit this file — it beats everything below.
 
 ---
 
-## Two things the data killed, before you read the runs
+## What the data says, before you read the runs
 
-**1. Equipment × city is a trap — do not build it.** I was going to add 10
-equipment types × 30 metros = 300 pages. The 90-day data says no: equipment
-queries pull 629 impressions and **almost none carry a city** — "lathe" 152
-impressions across 15 queries, zero with a city. Equipment demand is national
-and how-to shaped. And we already have the proof: `cnc-machine-movers` IS an
-equipment×city matrix and it is the **worst performer on the site at 50%
-indexed**. Building 300 more would repeat that mistake at four times the scale.
-Equipment gets *articles* and national service pages instead.
-
-**0. MEASURED 2026-09-21 — the stub number was understated.** `scripts/stub-traffic.js`
+**1. Half this site's traffic lands on retired pages.** `scripts/stub-traffic.js`
 says **133 retired pages still earn 6,879 impressions and 52 clicks**, which is roughly
 half of everything this site earns, all landing on pages that bounce the visitor away.
 `/services/dispatching` sits at **position 5.7** — the best ranking on the site — on a stub.
-Run 4 below says "~2,000 stub impressions"; the real recoverable figure is larger. But only
+Run 4 below says "~2,000 stub impressions"; the real recoverable figure is larger (see item 3). But only
 part of it is ours to take: trailer and fleet-operations queries are fleet owners choosing
 what to run, which is the 4+ truck dispatch buyer, and those are worth recovering. The
 heavy-haul service pages, oversize-permit guides, pilot-car and superload posts are demand
@@ -40,7 +31,16 @@ re-stub anything still listed. Two were recovered on 21 Sep as the pattern:
 `step-deck-vs-drop-deck-trailers` (1,729 impr, pos 17.5) and
 `how-to-load-and-secure-a-conestoga-trailer` (543, pos 13.9).
 
-**2. The biggest quick win is trailer content, routed through dispatch.**
+**2. Equipment × city is a trap — do not build it.** I was going to add 10
+equipment types × 30 metros = 300 pages. The 90-day data says no: equipment
+queries pull 629 impressions and **almost none carry a city** — "lathe" 152
+impressions across 15 queries, zero with a city. Equipment demand is national
+and how-to shaped. And we already have the proof: `cnc-machine-movers` IS an
+equipment×city matrix and it is the **worst performer on the site at 50%
+indexed**. Building 300 more would repeat that mistake at four times the scale.
+Equipment gets *articles* and national service pages instead.
+
+**3. The biggest quick win is trailer content, routed through dispatch.**
 Comparison demand is 220 impressions and it is almost entirely trailer
 comparisons — "step deck vs drop deck" 60 impressions at position 12, "drop
 deck vs step deck" 54 at position 7. Add the stubs: `/blog/step-deck-vs-drop-deck-trailers`
@@ -52,7 +52,7 @@ Conestoga fleets** — "step deck dispatch services" is already a live query at
 position 15. Trailer content belongs to dispatch, on-brand, and recovers the
 traffic. Biggest single unlock identified this month.
 
-**3. AEO is wide open.** 56 question-shaped queries, 324 impressions, **zero
+**4. AEO is wide open.** 56 question-shaped queries, 324 impressions, **zero
 clicks**. And LLM-shaped queries are already showing: *"what are the best plant
 relocation companies for large-scale manufacturing moves in the united states?"*
 (25 impressions) and *"industrial relocation contractors vs in-house facilities
