@@ -18,7 +18,8 @@
         "services/dedicated-lanes"
       ],
       "hero": "loads/conestoga-interior-load-securement-strap.jpg",
-      "status": "todo"
+      "status": "writing",
+      "claimed": "2026-09-21 interactive session — writer agents in flight, do not pick up"
     },
     {
       "slug": "step-deck-vs-drop-deck-trailers",
@@ -31,7 +32,8 @@
         "services/dedicated-lanes"
       ],
       "hero": "loads/load-lowboy-warehouse.jpg",
-      "status": "todo"
+      "status": "writing",
+      "claimed": "2026-09-21 interactive session — writer agents in flight, do not pick up"
     },
     {
       "slug": "how-to-move-a-linear-accelerator",

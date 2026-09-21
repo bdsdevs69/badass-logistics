@@ -71,7 +71,9 @@ if (todo.length === 0) {
   warns.push(`queue holds ${todo.length} topics — enough for this run, not the next. Backfill while you are in here.`);
 }
 
-console.log(`\n▸ queue:    ${queue.queue.length} topics, ${queue.queue.length - todo.length} done, ${todo.length} todo`);
+const done = queue.queue.filter(q => q.status === 'done').length;
+const claimed = queue.queue.filter(q => q.status === 'writing').length;
+console.log(`\n▸ queue:    ${queue.queue.length} topics, ${done} done, ${todo.length} todo${claimed ? `, ${claimed} claimed by a run in flight` : ''}`);
 if (next) console.log(`▸ next run: #${next.n} on ${next.date.toDateString()} — ${next.articles} articles`);
 else console.log('▸ next run: no future row in seo/schedule.md — the plan has run out, write the next block');
 if (todo.length) console.log(`▸ first up: ${todo[0].slug}  (${todo[0].cluster})`);
