@@ -1,22 +1,23 @@
 # Semi-weekly SEO run — Badass Logistics
 
-Runs **Tuesday and Friday**. One post per run, plus the technical and
-AEO checks. Two posts a week is a pace this site can sustain without
-the quality falling off, which is the only pace worth keeping.
+Runs **Tuesday and Friday**. This file holds the per-article standards.
+**`seo/schedule.md` owns the pace and the batch** — it is Sam's plan and
+it wins over anything here. As of the 2026-09-22 → 2026-10-23 block that
+is 6 to 8 articles per run alongside a structural batch, not one.
 
 Everything here happens in `~/badass-logistics`.
 
-## 1. Write the post
+## 1. Write the posts
 
-Take the first `status: "todo"` item from `seo/content-queue.json` —
-**one item, not the first few.** A run on 2026-09-18 shipped four posts
-in one afternoon and burned two thirds of the researched backlog, so
-`seo/check-pace.js` now fails the run if two items carry the same
-publish date. If a run feels like it has room for more, the right use
-of that time is refilling the queue, not emptying it faster.
+Take the next `status: "todo"` items from `seo/content-queue.json` — as
+many as today's row in `seo/schedule.md` calls for. Run
+`node seo/check-pace.js` first: at this rate the queue empties in two
+runs, and a run that starts with an empty queue writes thin posts off a
+brainstorm. If it says the backlog is short, backfill with
+`node gsc-gaps.js 90` before writing a word.
 
-Write it as a module at `content/blog-new/<slug>.js`, matching the shape
-of the existing ones:
+Write each as a module at `content/blog-new/<slug>.js`, matching the
+shape of the existing ones:
 
 ```
 slug, cat, hero, date, title, desc, dek, tldr, keywords, body, faq, related
@@ -47,13 +48,9 @@ matching page, not from a brainstorm.
 ## 2. Build and verify
 
 ```bash
-node scripts/check-content.js <slug>
-node seo/check-pace.js
+node scripts/check-content.js <slug>   # once per new article
 node build.js
 ```
-
-`check-pace.js` is the guard on step 1: one post per run, every `done`
-item has a module on disk, and the queue never runs dry.
 
 **Always `node build.js`** — never a single generator. The bare
 generators wipe the link passes, and that has broken the live site
