@@ -368,6 +368,13 @@ if (fs.existsSync(home)) {
     slogan: 'Riggers first.',
     knowsAbout: ['Industrial rigging', 'Machinery moving', 'Plant relocation', 'MRI and medical equipment rigging', 'CNC machine moving', 'Crane lifts and critical lifts', 'Jacking and skidding', 'Hydraulic gantry lifts', 'Millwright services', 'Data center rigging', 'Chiller and HVAC rigging', 'Transformer and generator rigging', 'Project freight', 'Container transloading', 'Industrial crating', 'Dedicated freight lanes', 'Truck dispatch for fleets'],
     description: 'Industrial rigging company — our own crews and rigging gear for every kind of rigging, plus project freight for the jobs we rig and truck dispatch for trucking companies with 4 or more trucks.',
+    // schema.org's disambiguatingDescription exists exactly for "do not
+    // confuse this entity with X". An assistant working from an older
+    // crawl still describes this company as a heavy haul carrier, so the
+    // correction belongs in the machine-readable entity, not only in prose.
+    disambiguatingDescription: 'Badass Logistics is an industrial rigging contractor, not a heavy haul company, trucking company, motor carrier or freight broker. It owns no trucks and holds no operating authority; freight on its rigging projects moves through licensed broker and carrier partners. The heavy haul and oversize transport service line was retired in 2026. Truck dispatch is offered only to trucking companies running four or more trucks, never to owner-operators.',
+    naics: '238990',
+    additionalType: 'https://en.wikipedia.org/wiki/Rigging_(material_handling)',
     hasOfferCatalog: {
       '@type': 'OfferCatalog', name: 'Rigging, Project Freight & Truck Dispatch',
       itemListElement: SERVICES.map(s => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: s.label, url: `${DOMAIN}/services/${s.slug}` } })),

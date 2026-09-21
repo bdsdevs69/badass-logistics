@@ -183,6 +183,82 @@ function verify() {
   });
   check(sm.length > 0 && smBad.length === 0, `sitemap: ${(sm.match(/<loc>/g) || []).length} URLs, ${smBad.length} bad`, smBad);
 
+  // 8. the AI-facing surfaces. llms.txt and robots.txt are what an
+  //    assistant reads to decide what this company IS, and checks 5 and 6
+  //    never looked at them. An assistant working from older crawl or
+  //    training data still calls us a heavy haul carrier, so the
+  //    correction has to be present and the service list has to be clean.
+  const aiBad = [];
+  const llmsPath = path.join(ROOT, 'llms.txt');
+  if (!fs.existsSync(llmsPath)) aiBad.push('llms.txt is missing');
+  else {
+    const llms = read(llmsPath);
+    for (const [marker, why] of [
+      [/is not:[\s\S]{0,200}heavy haul/i, 'the "is not a heavy haul company" disambiguation'],
+      [/retired in 2026/i, 'the 2026 retirement notice that overrides stale AI training data'],
+      [/not a motor carrier|no operating authority|holds no operating authority/i, 'the motor-carrier disclaimer'],
+      [/4 or more trucks|4 or more power units/i, 'the 4+ truck dispatch qualification'],
+    ]) if (!marker.test(llms)) aiBad.push(`llms.txt lost ${why}`);
+
+    // Everything above "## Reference guides" is what we SELL. The guides
+    // below it are explanatory and may legitimately discuss trailers and
+    // permits, which is why the split exists.
+    //
+    // The words themselves are not the fault — the file has to SAY "heavy
+    // haul" in order to deny it, and denying it is the whole point. What
+    // matters is whether a line reads as an offer or as a disclaimer, so
+    // lines carrying a negation or a retirement marker are exempt.
+    // Granularity matters: prose wraps, so a denial and the word it denies
+    // land on different lines. Judge a paragraph as a whole; judge each
+    // bullet on its own, because bullets are independent claims.
+    const DISCLAIMER = /\b(is not|are not|not a|no longer|never|retired|previously|does not|do not|out of date|stale)\b/i;
+    const RETIRED = /\b(heavy haul|lowboy|step[- ]deck|\bRGN\b|superload|escort vehicle)\b/i;
+    const servicesPart = llms.split(/^## Reference guides/m)[0];
+    const units = [];
+    for (const block of servicesPart.split(/\n\s*\n/)) {
+      if (/^\s*[-*]\s/m.test(block)) units.push(...block.split('\n'));
+      else units.push(block);
+    }
+    for (const unit of units) {
+      const m = unit.match(RETIRED);
+      if (m && !DISCLAIMER.test(unit)) {
+        aiBad.push(`llms.txt offers retired positioning: "${m[0]}" in — ${unit.replace(/\s+/g, ' ').trim().slice(0, 90)}`);
+      }
+    }
+  }
+  const robotsPath = path.join(ROOT, 'robots.txt');
+  if (!fs.existsSync(robotsPath)) aiBad.push('robots.txt is missing');
+  else {
+    const robots = read(robotsPath);
+    if (!/llms\.txt/.test(robots)) aiBad.push('robots.txt no longer points AI crawlers at llms.txt');
+    for (const bot of ['GPTBot', 'ClaudeBot', 'PerplexityBot', 'Google-Extended']) {
+      if (!new RegExp(`User-agent:\\s*${bot}`, 'i').test(robots)) aiBad.push(`robots.txt no longer names ${bot}`);
+    }
+  }
+  // The entity definition itself.
+  const home = read(path.join(ROOT, 'index.html'));
+  const orgRaw = (home.match(/<script type="application\/ld\+json">\s*(\{[\s\S]*?#organization[\s\S]*?\})\s*<\/script>/) || [])[1];
+  let org = null;
+  if (!orgRaw) aiBad.push('homepage lost its #organization JSON-LD — that is the entity definition');
+  else {
+    try { org = JSON.parse(orgRaw); }
+    catch (e) { aiBad.push(`#organization JSON-LD does not parse — ${e.message}`); }
+  }
+  if (org) {
+    if (!/^Riggers first/i.test(org.slogan || '')) aiBad.push('#organization lost the "Riggers first." slogan');
+    if (!/rigging/i.test((org.knowsAbout || [])[0] || '')) aiBad.push('#organization knowsAbout no longer leads with rigging');
+    // disambiguatingDescription is where the entity is SUPPOSED to say
+    // "not a heavy haul company" — that is the field's whole purpose.
+    // Every other field is an assertion about what we offer.
+    if (!/not a heavy haul/i.test(org.disambiguatingDescription || '')) {
+      aiBad.push('#organization lost the disambiguatingDescription that tells AI we are not a heavy haul carrier');
+    }
+    const offered = JSON.stringify({ ...org, disambiguatingDescription: undefined });
+    const leak = offered.match(/\b(heavy haul|lowboy|step[- ]deck|superload)\b/i);
+    if (leak) aiBad.push(`#organization offers retired positioning: "${leak[0]}"`);
+  }
+  check(aiBad.length === 0, `AI surfaces: llms.txt + robots.txt + entity schema state we are riggers`, aiBad);
+
   console.log('═════════════════════════════════════════════════════');
   if (fail) { console.error(`✖ ${fail} check(s) FAILED — do not deploy.`); process.exit(1); }
   console.log('✓ All checks passed.\n');
