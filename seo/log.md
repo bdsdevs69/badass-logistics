@@ -421,3 +421,88 @@ zero mentions of heavy haul and zero of the retirement. Homepage and
 `/services/project-freight`, and phrase it to answer the yes/no directly.
 
 Steps 3a and 4 skipped (Wednesday / Sunday only).
+
+---
+
+## 2026-09-21 — article run (Mon/Wed/Thu)
+
+**Shipped 6, held 0.** All from Track A queue items, written in parallel, all
+gates clean on the first or second pass:
+
+| slug | words | top overlap |
+|---|---|---|
+| `forklift-vs-crane-for-machine-loading` | 1758 | 0.3% |
+| `what-is-a-machinery-move-survey` | 1718 | 0.3% |
+| `how-to-move-a-data-center` | 1782 | 0.2% |
+| `how-to-move-a-transformer-into-a-building` | 1643 | 0.1% |
+| `how-to-choose-a-plant-relocation-contractor` | 1625 | 0.1% |
+| `in-house-team-vs-relocation-contractor` | 1656 | 0.2% |
+
+**Index health (90d) — publishing was allowed because `blog` is GREEN:**
+
+```
+blog              45 URLs   34 earning   24% dead    4478 impr   GREEN
+dispatch           3          0         100% dead       0        NEW
+service pillars   17          9          47% dead    1785        AMBER
+rigging x city   113        104           8% dead    2534        GREEN
+machinery x city 113        107           5% dead    5098        GREEN
+plant x city     113         85          25% dead    1742        GREEN
+cnc x city       113         62          45% dead     250        AMBER
+city hubs        128         99          23% dead     871        GREEN
+SITE             652        506          22% dead
+```
+
+Nothing was added to `service pillars` or `cnc x city`.
+
+**Reviewer: SHIP on all six, no HOLDs.** It verified the three claim sets the
+writers had flagged as written from general engineering knowledge with no house
+precedent — forklift load-center derating, raised-floor rolling-vs-static load
+ratings and the N+1/2N redundant-pair rule, and temporary steel plus the
+pre-1979 PCB-testing framing. All held. Only imprecision found was the
+container-floor wording in the forklift piece (ISO 1496 rates axle load, not
+"distributed rolling load"); directionally correct and hedged, so not a HOLD.
+Confirmed the #5/#6 split is clean (choose-a-vendor vs decide-whether-to-hire)
+and that the new transformer piece is the rigging half only, no overlap with
+the existing transport post.
+
+Applied its three surgical edits before building: cross-linked #5 and #6 in
+both directions, and **removed the related-block link from the new transformer
+rigging post into `blog/how-to-transport-a-transformer.html`.**
+
+**⚠ FOR SAM — the one thing worth attention.**
+`blog/how-to-transport-a-transformer.html` is live, in `sitemap.xml`, and
+carries the retired heavy-haul positioning in force: 33 mentions of permits,
+plus oversize, superload, escorts and bridge-engineer language, and it is
+dispatch-framed as though Badass hauls directly ("we will coordinate the
+trailer, permits, and rigging at both ends"). It has **no source module** in
+`content/blog-new/`, so it is legacy built HTML and no generator touches it —
+which is why `build.js` check 8 passes: that gate covers titles, descriptions,
+nav and footer, not legacy body prose. I cut the new article's link into it so
+this run was not feeding it fresh internal links, but the page itself still
+needs a rewrite. That is a structural job, not an article job — it belongs to a
+semiweekly or upgrade run, and it will need a source module written for it
+first.
+
+**Build:** full `node build.js`, all verify checks passed — 68,538 internal
+links, 0 broken, 0 links to retired URLs, 0 heavy haul in titles/descriptions/
+nav/footer. `llms.txt` 20 services / 51 guides. `sitemap.xml` 658 indexable.
+
+**Live check:** all six return 200 with real pages (32–34 KB), no meta refresh,
+correct titles, and Article + BreadcrumbList + FAQPage schema parsing on every
+one. All six present in both `sitemap.xml` and `llms.txt`.
+
+**Ping:** 465 URLs, IndexNow 200 ✓, Google sitemap 204 ✓ (652 URLs, 0 errors).
+
+**Cannibalisation (checked before writing, not acted on):** 264 queries with
+self-competition, 6,997 impressions split — but **zero blog-on-blog conflicts**,
+so this batch was not writing into a split cluster. The whole split is the city
+matrix (state vs city siblings; `omaha-ne` appears in 6 of the top 13 pairs)
+plus `/services/plant-relocation` competing with its own city pages on
+"plant relocation quote" (11 pages) and "production facility relocation
+services" (7 pages). Merge-and-redirect territory for a structural run.
+
+**Queue:** 16 done / 29 todo. Deep enough; no refill needed this run.
+
+**Not done deliberately:** no Track B deepening (blog was GREEN, so Track A was
+the correct call and the run filled its article budget); no Google Ads; no
+`seo/schedule.md` structural batches.

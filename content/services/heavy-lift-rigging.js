@@ -2,8 +2,8 @@
 module.exports = {
   slug: 'heavy-lift-rigging',
   cardBlurb: 'Hydraulic gantries, jack-and-slide, toe jacks, and air skates — heavy moves where a crane can\'t reach.',
-  title: 'Jacking & Skidding and Hydraulic Gantry Services | Badass Logistics',
-  description: 'Heavy lift rigging with hydraulic gantries, jack-and-slide skidding, toe jacks, and air skates — for heavy loads inside buildings and where cranes can\'t reach.',
+  title: 'Heavy Lift Rigging Services — Gantries, Jacking & Skidding | Badass Logistics',
+  description: 'Heavy lift rigging services — hydraulic gantries, jacking and cribbing, skidding on slide systems and rollers, and engineered lift plans for critical lifts where a crane can\'t reach.',
   serviceType: 'Heavy Lift Rigging — Jacking, Skidding & Gantry',
   hero: '/assets/img/loads/load-rigging-equipment.jpg',
   band: '/assets/img/mri-lift.jpg',
@@ -14,12 +14,13 @@ module.exports = {
   cta: 'Get a Heavy Lift Quote',
   annots: ['4-LEG GANTRY', 'CRIB STACK ✓', 'SKID TRACK 40 FT', 'TOE JACK × 4'],
   bgnotes: ['CRIB — NO GAPS', 'JACK EVEN ✓', 'GANTRY SYNC', 'TRACK SHIMMED', 'PUSH-PULL 2 IN/STROKE', 'HEADROOM 14\'2"', 'FLOOR PSI ✓', 'SKATES × 4', 'NO LIFT OVER PEOPLE', 'CG MARKED', 'STEEL PLATE DOWN', 'SET ON ANCHORS ✓'],
-  quickAnswer: 'Jacking, skidding, and gantry lifts are rigging methods for moving very heavy equipment without a crane. Hydraulic jacks and cribbing raise the load, hydraulic gantries lift and travel it on track, and jack-and-slide skidding systems push it horizontally in controlled strokes. Badass Logistics uses these methods to move machines, transformers, vessels, and presses inside buildings, under low headroom, and where cranes can\'t go.',
+  quickAnswer: 'Heavy lift rigging is the set of methods for lifting and moving very heavy equipment without a crane, or alongside one, when the load is too heavy, the space too tight, or the headroom too low for a hook to do the job. It covers hydraulic gantry systems, jacking and cribbing, and skidding on slide systems and rollers, planned under an engineered lift plan and tracked with load monitoring on the heaviest or most critical lifts. Badass Logistics uses these methods to move machines, transformers, vessels, and presses inside live plants, under low headroom, and where cranes can\'t go.',
   intro: {
     h2: 'When a crane isn\'t the right tool',
     paragraphs: [
       'A crane needs room: a place to set up, ground that can take the outrigger loads, and a clear path through the air. Inside a plant, a substation, a basement mechanical room, or a hospital, you often have none of that. What you have is a heavy load, a slab, a doorway, and a few inches of headroom.',
-      'That\'s where the old-school heavy rigging methods earn their keep. Hydraulic jacks and cribbing raise a load in controlled lifts. Gantry systems pick it and travel it along track. Jack-and-slide skidding systems push it sideways in short strokes across a prepared path. Toe jacks, air skates, and roller dollies take it the rest of the way. None of it is fast, and that\'s the point: every inch is controlled.',
+      'Heavy lift rigging beats a crane in a specific set of conditions: no crane access to the load, the work is indoors, headroom is too low for a boom or a hook path, the setup radius is restricted by walls, equipment, or overhead bus duct, or the load has to move through a live production area where a crane\'s swing radius simply doesn\'t fit. In those conditions the load gets raised, traveled, and set without ever leaving the ground.',
+      'That\'s where the old-school heavy rigging methods earn their keep. Hydraulic jacks and cribbing raise a load in controlled lifts, with hydraulic climbing systems stepping it up in stages when the height adds up. Gantry systems pick it and travel it along track. Jack-and-slide skidding systems push it sideways in short strokes across a prepared path on slide systems and rollers. Toe jacks, air skates, and roller dollies take it the rest of the way. None of it is fast, and that\'s the point: every inch is controlled and, on the heaviest or highest-consequence lifts, tracked with load monitoring so nothing shifts weight without the crew knowing.',
       'These methods sit at the heart of our <a href="/services/rigging">rigging</a> work. They\'re how <a href="/services/transformer-generator-rigging">transformers get set on pads</a>, presses get skidded into pits, <a href="/services/mri-medical-equipment-rigging">MRI magnets</a> get walked into shielded rooms, and big machines get moved across plants that were never built to let them out.',
     ],
   },
@@ -33,6 +34,8 @@ module.exports = {
       { k: 'low clearance', h: 'Toe Jacks', p: 'Low-profile jacks that get under machines with little ground clearance.' },
       { k: 'rolling', h: 'Skates &amp; Rollers', p: 'Machinery skates, roller dollies, and air skates for moving loads across prepared floors.' },
       { k: 'protection', h: 'Floor Protection', p: 'Steel plate and load-spreading materials over slabs, trenches, and finished floors.' },
+      { k: 'engineering', h: 'Engineered Lift Plans', p: 'Written lift plans with weights, center of gravity, rigging points, and equipment sizing for every heavy or critical lift.' },
+      { k: 'monitoring', h: 'Load Monitoring', p: 'Load cells and monitoring on multi-point jacking and gantry lifts, so every leg carries what the plan says it should.' },
     ],
   },
   sections: [
@@ -65,7 +68,15 @@ module.exports = {
         'Synchronization of multi-point jacking and gantry legs so the load stays level',
       ],
       after: [
-        'When the load leaves the building afterward, the same crew plans its <a href="/services/project-freight">project freight</a> and meets it at the other end.',
+        'When the load leaves the building afterward, the same crew plans its <a href="/services/project-freight">project freight</a> and meets it at the other end, or gets it <a href="/services/crating-packing">crated</a> first if it\'s going to a buyer or another site.',
+      ],
+    },
+    {
+      tag: 'critical lifts',
+      h2: 'What a critical lift classification changes',
+      paragraphs: [
+        'Some lifts get planned like any other rigging job. Others get flagged as a critical lift — one where the load, the rigging configuration, or the consequences of a mistake put it in a different category. A lift is usually treated as critical when it approaches the rated capacity of the gear, uses more than one crane or gantry leg to share the load, moves over occupied space or live equipment, or involves a load with no obvious rigging points, like a lathe, a press bed, or an odd-shaped vessel.',
+        'A critical lift classification changes the paperwork and the crew on site, not just the caution level: a written engineered lift plan with calculated rigging loads, a second rigger dedicated to watching the load instead of running gear, load monitoring on every jacking or gantry point, and a pre-lift walk-through of every rigging point on the machine itself. Machine tools like lathes and boring mills are a common example — the casting rarely has a rigging point where you\'d expect one, so the plan has to work from the machine\'s actual weight distribution, not a guess. See <a href="/blog/what-is-a-critical-lift">what makes a lift critical</a> for more on how that classification gets made.',
       ],
     },
   ],
@@ -89,9 +100,12 @@ module.exports = {
     { q: 'When is a gantry better than a crane?', a: 'Indoors, under low headroom, when the setup area is too small for a crane, or when the load only needs to be lifted and moved a short distance with very precise control.' },
     { q: 'Can you move a heavy machine across a plant floor?', a: 'Yes — on skates, rollers, or skid track over steel plate, after checking floor capacity along the path. See <a href="/services/machinery-moving">machinery moving</a>.' },
     { q: 'How heavy can jacking and skidding move?', a: 'The methods scale with the gear and the planning. We rig loads from a few hundred pounds to 200,000 lbs and beyond, and every job is sized from the actual load, support points, and floor.' },
+    { q: 'What makes a lift a critical lift?', a: 'Loads near the rated capacity of the rigging gear, multi-point jacking or gantry lifts, moves over occupied or live areas, and machines with no obvious rigging points — like a lathe or a press bed — are typically classified as critical lifts and get a written engineered lift plan and load monitoring.' },
+    { q: 'How do you lift a machine tool like a lathe with no clear rigging points?', a: 'We work from the machine\'s actual weight and center of gravity, identify structural points on the casting that can carry load, and use jacking and cribbing or a spreader arrangement to lift it evenly rather than guessing at a sling location.' },
+    { q: 'Can you rig heavy equipment inside a plant that stays running?', a: 'Yes. Heavy lift rigging is built for exactly that — moving loads on jacks, gantries, and skid track through aisles and around live equipment, with the path and timing planned around what keeps running nearby.' },
   ],
-  faqTitle: 'Jacking &amp; skidding FAQ',
-  related: ['crane-services', 'transformer-generator-rigging', 'machinery-moving', 'millwright-services'],
+  faqTitle: 'Heavy lift rigging FAQ',
+  related: ['rigging', 'crane-services', 'transformer-generator-rigging', 'machinery-moving', 'plant-relocation', 'millwright-services'],
   guides: [
     ['jacking-and-skidding-explained', 'Jacking &amp; Skidding Explained'],
     ['types-of-rigging', 'Types of Rigging, Explained'],
