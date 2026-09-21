@@ -161,7 +161,7 @@
         "services/crane-services"
       ],
       "hero": "loads/load-lowboy-warehouse.jpg",
-      "status": "todo"
+      "status": "writing"
     },
     {
       "slug": "what-is-a-machinery-move-survey",
@@ -175,7 +175,7 @@
         "blog/plant-relocation-checklist"
       ],
       "hero": "rigging-hero.jpg",
-      "status": "todo"
+      "status": "writing"
     },
     {
       "slug": "how-to-move-a-data-center",
@@ -188,7 +188,7 @@
         "services/lab-equipment-movers"
       ],
       "hero": "loads/enclosed-trailer-machinery-loaded.jpg",
-      "status": "todo"
+      "status": "writing"
     },
     {
       "slug": "how-to-move-a-transformer-into-a-building",
@@ -201,7 +201,7 @@
         "services/heavy-lift-rigging"
       ],
       "hero": "loads/load-flatbed-electrical.jpg",
-      "status": "todo"
+      "status": "writing"
     },
     {
       "slug": "how-to-choose-a-plant-relocation-contractor",
@@ -215,7 +215,7 @@
         "blog/plant-relocation-checklist"
       ],
       "hero": "loads/load-machine-loadout.jpg",
-      "status": "todo"
+      "status": "writing"
     },
     {
       "slug": "in-house-team-vs-relocation-contractor",
@@ -228,7 +228,7 @@
         "services/millwright-services"
       ],
       "hero": "rigging-hero.jpg",
-      "status": "todo"
+      "status": "writing"
     },
     {
       "slug": "single-source-plant-relocation-explained",

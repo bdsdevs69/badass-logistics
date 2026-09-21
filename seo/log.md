@@ -361,3 +361,63 @@ not the suburb lists.
 being Sam's call, consolidating it now would destroy the 2026-10-19 measurement
 baseline set in the retitle entry above — cnc is one arm of that live test and
 removing it mid-flight would make the result unreadable. Revisit after 10-19.
+
+
+---
+
+## 2026-09-21 — daily health check (Mon)
+
+**Absorption (90d) — no RED, first table recorded so no prior day to compare.**
+
+| cluster | URLs | dead% | verdict |
+|---|---|---|---|
+| blog | 45 | 24% | GREEN |
+| dispatch | 3 | 100% | NEW (shipped 09-18, too young to read) |
+| service pillars | 17 | 47% | AMBER |
+| rigging × city | 113 | 8% | GREEN |
+| machinery × city | 113 | 5% | GREEN |
+| plant × city | 113 | 25% | GREEN |
+| cnc × city | 113 | 45% | AMBER |
+| city hubs | 128 | 23% | GREEN |
+| **site** | **652** | **22%** | — |
+
+HOLD on service pillars and cnc × city; everything else clear to expand.
+
+**Last run's URLs are live.** Both recoveries from `d67c9db` return 200 with the
+new titles, no meta refresh left behind, and both are in `sitemap.xml` and
+`llms.txt`: `/blog/step-deck-vs-drop-deck-trailers` (31.9 KB served, was a
+23-word stub) and `/blog/how-to-load-and-secure-a-conestoga-trailer`. Pages
+deploy matches local HEAD.
+
+**Ping:** 459 URLs, IndexNow 200 ✓, Google sitemap 204 ✓ (650 URLs, 0 errors,
+last pulled 03:10Z today). No credential trouble — the reissued key is holding.
+
+**AEO identity check (Perplexity, verbatim):**
+
+- *"What does Badass Logistics do?"* → **"Badass Logistics is an industrial
+  rigging company with its own crews and rigging gear, offering machinery
+  moving, plant relocation, MRI/medical equipment handling, crane lifts,
+  jacking and skidding, millwright installation, and related services. They
+  also run project freight for the jobs they rig and provide truck dispatch
+  for fleets (4+ trucks) nationwide across all 50 states."** Cited us. Correct.
+- *"Is Badass Logistics a heavy haul company?"* → **"Yes. Badass Logistics is
+  an industrial rigging company that also handles project freight and trucking
+  dispatch, but they identify as riggers first, not a traditional heavy-haul
+  carrier. They provide heavy-haul capabilities as part of project freight and
+  rigging work…"** Cited us, but **leads with "Yes" and asserts heavy-haul
+  capability we do not have.** Half-landed.
+- *"Who are the best industrial rigging companies for moving MRI machines?"* →
+  MM Solutions, Sims Crane/SimsHD, Eagle Rigging. **Not cited.** Pure authority
+  gap — same finding as the 4-non-brand-clicks number.
+
+**Diagnosis: this is not an `llms.txt` weakness.** `llms.txt` is explicit
+("that service line was retired in 2026", plus a flat *No* in the is/is-not
+block) and both surfaces verify live — 2 hits for "retired in 2026", 3 AI
+crawlers in `robots.txt`. Perplexity answers from retrieved **HTML**, and
+`/services/project-freight` — the page a heavy-haul question pulls — carries
+zero mentions of heavy haul and zero of the retirement. Homepage and
+`/services/rigging` carry it; the freight page does not. **For the Saturday
+`badass-seo-upgrade` run:** put the retirement line in prose on
+`/services/project-freight`, and phrase it to answer the yes/no directly.
+
+Steps 3a and 4 skipped (Wednesday / Sunday only).
