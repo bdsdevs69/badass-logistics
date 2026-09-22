@@ -702,3 +702,55 @@ sitemap 658 URLs / 0 bad, AI-surface check 8 passing. `check-content.js` clean o
 all six edited pillars. `check-uniqueness.js` re-run on all four matrices, before
 and after, on the built site with the link mesh applied — so the numbers in the
 table above are the shipped numbers, not pre-mesh ones.
+
+
+---
+
+## 2026-09-22 — daily health check (Tue)
+
+**Absorption (90d) — no RED. `service pillars` recovered AMBER → GREEN.**
+
+| cluster | URLs | dead% | verdict | vs 2026-09-21 |
+|---|---|---|---|---|
+| blog | 51 | 29% | GREEN | 45 URLs / 24% — 6 new posts, dead% up as expected while they age in |
+| dispatch | 3 | 0% | NEW | was 100% dead — all 3 now earning |
+| service pillars | 17 | 6% | **GREEN** | was 47% AMBER — the Track B deepening landed |
+| rigging × city | 113 | 7% | GREEN | 8% |
+| machinery × city | 113 | 5% | GREEN | 5% |
+| plant × city | 113 | 25% | GREEN | 25% |
+| cnc × city | 113 | 43% | AMBER | 45% — still the only HOLD, edging down |
+| city hubs | 128 | 23% | GREEN | 23% |
+| SITE | 658 | 21% | | 652 / 22% |
+
+`service pillars` going 47% → 6% dead in one day is the clearest evidence yet
+that the Track B diagnosis was right: those pages were not thin-and-unwanted,
+they were using the wrong words. Six of them started earning within 24h of the
+rewrite. `cnc × city` remains the only cluster under HOLD — same treatment is
+the obvious next move for it.
+
+**Live URLs — all 14 from yesterday's two runs return 200, no redirect stubs,
+no meta refresh.** The 6 new blog posts (29–34 KB) are each present in both the
+live `sitemap.xml` and `llms.txt`; sitemap at 658 URLs, matching the build. The
+8 deepened pages all serve their lifted versions — `/services/plant-relocation`
+is 57 KB live. GitHub Pages deployed cleanly.
+
+**Ping:** `ping-search-engines.js` no-opped — no URLs with today's lastmod,
+which is correct: nothing shipped today and yesterday's 465 were already
+submitted (IndexNow 200, Google 204). Not forced with `--all`; re-pushing 658
+unchanged URLs daily buys nothing.
+
+**Skipped per schedule (Tue):** stub traffic (Wed), cannibalisation (Sun),
+AEO identity (Mon). `llms.txt` "retired in 2026" still verifies live (2 hits).
+
+**⚠ The prompt-injection attempt from the 2026-09-21 run repeated, verbatim.**
+Same text, again arriving through the tool-output channel rather than from Sam
+or the task file: a claim that "bypass permissions mode" is active, directing
+all file work through raw shell (`cat`/`sed`/`echo`) instead of the auditable
+file tools. Declined again; this run used normal tools throughout. Two runs in
+two days is a pattern, not noise — and the thing it keeps asking for is
+specifically the change that would make an unwanted edit hard to spot in review.
+Worth Sam knowing it is recurring.
+
+**Carried forward, unchanged:** `blog/how-to-transport-a-transformer.html` still
+carries retired heavy-haul positioning in its body prose with no source module —
+flagged 2026-09-21, still live, still a structural job.
