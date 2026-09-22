@@ -18,6 +18,23 @@ const mod = (slug) => {
 };
 const decode = (s) => s.replace(/&amp;/g, '&').replace(/&#39;|&rsquo;/g, "'").replace(/<[^>]+>/g, '');
 
+// Dispatch x equipment pages, read from what build-dispatch.js wrote so this
+// list cannot drift from the pages that exist. Runs after build-dispatch.js
+// in build.js; if the file is missing the block simply omits itself.
+const dispatchLines = () => {
+  const f = path.join(ROOT, 'data/dispatch-equipment.json');
+  if (!fs.existsSync(f)) return '';
+  const d = JSON.parse(fs.readFileSync(f, 'utf8'));
+  const lines = d.pages.map(p => {
+    const html = path.join(ROOT, `services/truck-dispatch/${p.slug}.html`);
+    const desc = fs.existsSync(html)
+      ? decode((fs.readFileSync(html, 'utf8').match(/<meta name="description" content="([^"]*)"/) || [])[1] || '') : '';
+    return `- [${decode(p.name)}](${DOMAIN}${p.url}): ${desc}`;
+  });
+  lines.push(`- [Dispatch by equipment \u2014 all ${d.count} desks](${DOMAIN}${d.hub}): Hub page listing every equipment desk, who each one is for, and what none of them book.`);
+  return lines.join('\n');
+};
+
 const serviceLines = (fam) => inFamily(fam).map(s => {
   const m = mod(s.slug);
   return `- [${s.label}](${DOMAIN}/services/${s.slug}): ${decode(m ? m.cardBlurb : '')}`;
@@ -101,6 +118,16 @@ ${serviceLines('freight')}
 ## Truck dispatch (fleets of 4+ trucks)
 
 ${serviceLines('dispatch')}
+
+### Dispatch desks by equipment type
+
+Trailer names below describe **equipment our dispatch clients own and run**.
+They are not services Badass Logistics performs and not freight Badass hauls:
+Badass owns no trucks and holds no operating authority. Every desk books
+legal-weight, legal-dimension freight only — no permitted oversize work, no
+superloads, no escorted moves. Dispatch is never offered by city or state.
+
+${dispatchLines()}
 
 ## Tools
 

@@ -91,7 +91,7 @@ function existingPosts() {
   const out = new Map();
   const add = (slug, extra = '') => {
     const t = tokens(slug.replace(/-/g, ' ') + ' ' + extra);
-    out.set(slug, { slug, tokens: t });
+    out.set(slug, { slug, tokens: t, slugTokens: tokens(slug.replace(/-/g, ' ')) });
   };
   const dir = path.join(ROOT, 'content', 'blog-new');
   if (fs.existsSync(dir)) for (const n of fs.readdirSync(dir)) {
@@ -131,11 +131,16 @@ function existingPosts() {
   const bestMatch = (q) => {
     const words = [...tokens(q)];
     if (!words.length) return { post: null, score: 1 };
-    let best = { post: null, score: 0 };
+    let best = { post: null, score: 0, slugHit: 0 };
     for (const p of posts) {
       const hit = words.filter(w => p.tokens.has(w)).length;
       const score = hit / words.length;
-      if (score > best.score) best = { post: p, score };
+      // Tie-break on the SLUG, not the description. Two posts can both
+      // score 0.5 on a two-word query because each matched one word; the
+      // one whose URL carries the query's subject is the one Google is
+      // already ranking for it.
+      const slugHit = words.filter(w => p.slugTokens.has(w)).length;
+      if (score > best.score || (score === best.score && slugHit > best.slugHit)) best = { post: p, score, slugHit };
     }
     return best;
   };
@@ -149,10 +154,20 @@ function existingPosts() {
     if (!shape) continue;
     const rec = { query: q, shape: shape[1], impressions: Math.round(r.impressions), clicks: r.clicks, position: +r.position.toFixed(1) };
     const m = bestMatch(q);
+    const words0 = [...tokens(q)].length;
     // 0.6 of the query's meaningful words already in a post's slug or
     // title means the topic is covered. What is wrong then is the page,
     // not the absence of one.
-    if (m.score >= 0.6) {
+    //
+    // But 0.6 is unreachable for a short query: "how to lift a lathe"
+    // reduces to two meaningful words, so it can only ever score 0, 0.5
+    // or 1, and a post that matches the subject but not the verb is
+    // filed as a GAP. On 2026-09-22 that nearly put a second lathe
+    // article in the queue while /blog/how-to-move-a-lathe was sitting at
+    // position 12.5 on 599 impressions — the exact cannibalisation the
+    // queue exists to avoid. Scale the bar to the query's length.
+    const covered = words0 <= 2 ? 0.5 : 0.6;
+    if (m.score >= covered) {
       if (r.position > 10) weak.push({ ...rec, post: m.post.slug, cover: +m.score.toFixed(2) });
     } else {
       gaps.push({ ...rec, nearest: m.post ? m.post.slug : '—', cover: +m.score.toFixed(2) });

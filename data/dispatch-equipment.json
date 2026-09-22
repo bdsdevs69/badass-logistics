@@ -1,0 +1,57 @@
+{
+  "generated": "2026-09-22",
+  "hub": "/services/truck-dispatch/equipment",
+  "count": 10,
+  "pages": [
+    {
+      "slug": "dry-van",
+      "url": "/services/truck-dispatch/dry-van",
+      "name": "Dry Van Dispatch"
+    },
+    {
+      "slug": "reefer",
+      "url": "/services/truck-dispatch/reefer",
+      "name": "Reefer Dispatch"
+    },
+    {
+      "slug": "flatbed",
+      "url": "/services/truck-dispatch/flatbed",
+      "name": "Flatbed Dispatch"
+    },
+    {
+      "slug": "step-deck",
+      "url": "/services/truck-dispatch/step-deck",
+      "name": "Step Deck Dispatch"
+    },
+    {
+      "slug": "conestoga",
+      "url": "/services/truck-dispatch/conestoga",
+      "name": "Conestoga Dispatch"
+    },
+    {
+      "slug": "rgn-lowboy",
+      "url": "/services/truck-dispatch/rgn-lowboy",
+      "name": "RGN & Lowboy Dispatch"
+    },
+    {
+      "slug": "power-only",
+      "url": "/services/truck-dispatch/power-only",
+      "name": "Power Only Dispatch"
+    },
+    {
+      "slug": "hotshot",
+      "url": "/services/truck-dispatch/hotshot",
+      "name": "Hotshot Dispatch"
+    },
+    {
+      "slug": "car-hauler",
+      "url": "/services/truck-dispatch/car-hauler",
+      "name": "Car Hauler Dispatch"
+    },
+    {
+      "slug": "ltl-partial",
+      "url": "/services/truck-dispatch/ltl-partial",
+      "name": "LTL & Partial Dispatch"
+    }
+  ]
+}

@@ -108,6 +108,10 @@ module.exports = {
       { h: 'Run &amp; review', p: 'Daily dispatch, in-transit follow-through, and regular reviews of lanes, revenue, and deadhead.' },
     ],
   },
+  metrosSentinel: 'DISPATCH_EQUIP',
+  metrosTag: 'dispatch by equipment',
+  metrosH2: 'Dispatch desks by equipment type',
+  metrosIntro: 'A van dispatcher and a flatbed dispatcher are not doing the same job. Pick the equipment your fleet runs \u2014 each desk covers the freight it targets, what we do differently with it, and what moves the rate. <a href="/services/truck-dispatch/equipment">See all ten \u2192</a>',
   industries: {
     h2: 'Equipment we dispatch',
     items: ['Dry van', 'Reefer', 'Flatbed', 'Step deck', 'Conestoga', 'Power only', 'Project freight lanes', 'Dedicated regional runs'],

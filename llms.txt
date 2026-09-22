@@ -81,6 +81,26 @@ OEMs, data centre operators, and fleet owners needing dispatch.
 
 - [Truck Dispatch for Trucking Companies](https://badasslogistics.com/services/truck-dispatch): Dispatch for trucking companies running 4+ trucks — freight from our project network, rate work, and the full back office.
 
+### Dispatch desks by equipment type
+
+Trailer names below describe **equipment our dispatch clients own and run**.
+They are not services Badass Logistics performs and not freight Badass hauls:
+Badass owns no trucks and holds no operating authority. Every desk books
+legal-weight, legal-dimension freight only — no permitted oversize work, no
+superloads, no escorted moves. Dispatch is never offered by city or state.
+
+- [Dry Van Dispatch](https://badasslogistics.com/services/truck-dispatch/dry-van): Dry van dispatch for trucking companies running 4+ trucks. Lane planning, drop-and-hook programs, appointment freight, detention and lumper recovery, full back office.
+- [Reefer Dispatch](https://badasslogistics.com/services/truck-dispatch/reefer): Reefer dispatch for trucking companies running 4+ trucks. Temperature-controlled freight, set points confirmed in writing, washouts, multi-stop planning and claims defence.
+- [Flatbed Dispatch](https://badasslogistics.com/services/truck-dispatch/flatbed): Flatbed dispatch for trucking companies running 4+ trucks. Open-deck freight, tarp pay negotiated up front, securement planned before booking, mill and yard time priced in.
+- [Step Deck Dispatch](https://badasslogistics.com/services/truck-dispatch/step-deck): Step deck dispatch for trucking companies running 4+ trucks. Drop-deck freight that needs the lower deck to stay legal height, ramps, tarping and securement planned before booking.
+- [Conestoga Dispatch](https://badasslogistics.com/services/truck-dispatch/conestoga): Conestoga dispatch for trucking companies running 4+ trucks. Rolling-tarp freight that must stay dry, side-load access, curtain condition and availability premium handled by the desk.
+- [RGN & Lowboy Dispatch](https://badasslogistics.com/services/truck-dispatch/rgn-lowboy): RGN and lowboy dispatch for trucking companies running 4+ trucks — legal-weight, legal-dimension drive-on freight. We do not book permitted oversize, escorts or superloads.
+- [Power Only Dispatch](https://badasslogistics.com/services/truck-dispatch/power-only): Power only dispatch for trucking companies running 4+ tractors. Drop-trailer programs, interchange agreements, trailer condition documentation and program-based lane planning.
+- [Hotshot Dispatch](https://badasslogistics.com/services/truck-dispatch/hotshot): Hotshot dispatch for trucking companies running 4+ trucks. Expedited gooseneck freight, weight-ceiling economics, deadhead control and back-office paperwork handled by the desk.
+- [Car Hauler Dispatch](https://badasslogistics.com/services/truck-dispatch/car-hauler): Car hauler dispatch for trucking companies running 4+ trucks. Open and enclosed auto transport, auction and dealer windows, per-unit rate work and damage inspection discipline.
+- [LTL & Partial Dispatch](https://badasslogistics.com/services/truck-dispatch/ltl-partial): LTL and partial truckload dispatch for trucking companies running 4+ trucks. Linear-foot pricing, co-loading partials, accessorial recovery and freight-class reclass exposure.
+- [Dispatch by equipment — all 10 desks](https://badasslogistics.com/services/truck-dispatch/equipment): Hub page listing every equipment desk, who each one is for, and what none of them book.
+
 ## Tools
 
 - [Equipment Trailer Selector](https://badasslogistics.com/trailer-selector): Free interactive tool — enter a machine's length, width, height, and weight and it suggests a trailer type and flags whether oversize or overweight permits are likely, using standard U.S. legal limits.
@@ -103,6 +123,7 @@ offer are the ones listed above.
 - [How to Move a CNC Machine Without Wrecking It](https://badasslogistics.com/blog/how-to-move-a-cnc-machine): Moving a CNC machine or machining center: OEM prep, rigging with toe jacks and skates, why you never lift from the wrong points, transport on air-ride, and re-leveling at the destination.
 - [How to Move a Data Center: Rack Sequencing and Rigging](https://badasslogistics.com/blog/how-to-move-a-data-center): How a data center relocation actually runs: de-stack vs roll-out racks, floor tile ratings, ramps, shock monitoring, and sequencing against the migration window.
 - [How to Move a Printing Press: Teardown, Rigging, and Reassembly](https://badasslogistics.com/blog/how-to-move-a-printing-press): How to move a printing press — documenting the line, separating units with technicians, rigging each unit, and setting the press for reassembly.
+- [How to Vet an Industrial Rigging Company](https://badasslogistics.com/blog/how-to-vet-an-industrial-rigging-company): What separates a rigging company you can trust with a high-value machine: insurance that covers the load, a real lift plan, owned gear, and crew depth.
 - [Jacking and Skidding Explained: How Heavy Loads Move Without a Crane](https://badasslogistics.com/blog/jacking-and-skidding-explained): What jacking and skidding is, how jack-and-slide systems and hydraulic gantries work, when they beat a crane, and what gets checked before a heavy skid move.
 - [Types of Rigging: Every Kind of Industrial Rigging, Explained](https://badasslogistics.com/blog/types-of-rigging): The main types of industrial rigging — machinery moving, plant relocation, crane lifts, jacking and skidding, millwright, MRI, data center, HVAC — explained.
 - [What Is a Critical Lift? Criteria, Lift Plans, and What Goes in One](https://badasslogistics.com/blog/what-is-a-critical-lift): What is considered a critical lift, the common criteria companies use, and what a crane lift plan includes — weight, radius, rigging, and ground bearing.
@@ -127,7 +148,9 @@ offer are the ones listed above.
 - [How to Move a Metal Lathe Without Twisting the Bed](https://badasslogistics.com/blog/how-to-move-a-lathe): How to move a metal lathe without twisting the bed: weights, rigging points, tailstock and chuck prep, skating, air-ride vs flatbed, and re-leveling to spec.
 - [How to Move a Milling Machine (Knee Mills, Bed Mills & VMCs)](https://badasslogistics.com/blog/how-to-move-a-milling-machine): How to move a milling machine: knee mill vs. bed mill vs. VMC geometry, builder-documented lift points, what to drain and lock, way protection, skating, and re-level and tram at the destination.
 - [How to Move a Press Brake Without Wrecking It](https://badasslogistics.com/blog/how-to-move-a-press-brake): Press brakes are top-heavy machines that tip before they warn you. Ram locking, rigging points, skates, trailer choice, and securement — from the dispatch desk.
+- [How to Move a Surface Grinder Without Losing Tenths](https://badasslogistics.com/blog/how-to-move-a-surface-grinder): How to move a surface grinder: protecting the ways and spindle, why racking wrecks a grinder faster than a mill, and re-leveling to tenths at the new site.
 - [How to Move a Transformer Into a Building](https://badasslogistics.com/blog/how-to-move-a-transformer-into-a-building): Rigging a transformer into an electrical room: access survey, steel-plate skidding, temporary steel over trenches, pulling the old unit, and handling the oil.
+- [How to Move a Wire or Sinker EDM Machine](https://badasslogistics.com/blog/how-to-move-an-edm-machine): How to move an EDM machine: draining dielectric fluid, handling the filtration unit, protecting the wire path, and resetting level on reinstall.
 - [How to Move an Injection Molding Machine](https://badasslogistics.com/blog/how-to-move-an-injection-molding-machine): How to move an injection molding machine: draining oil, protecting tie bars and platens, splitting the clamp and injection units, rigging out, and leveling back in.
 - [How to Prepare a Machine for Shipping: The Pre-Move Checklist](https://badasslogistics.com/blog/how-to-prepare-a-machine-for-shipping): A blunt pre-shipping checklist for machinery: drain the coolant, lock every axis, set shipping brackets, verify weight and dimensions, clear the path out.
 - [How to Ship an Industrial Generator: Trailer, Rigging, and Securement by Weight Class](https://badasslogistics.com/blog/how-to-ship-a-generator): Gensets ship upright on the base frame — flatbed, step-deck, or RGN by weight, with fuel run down, chains on the skid, and state permits for oversize units.
@@ -138,6 +161,7 @@ offer are the ones listed above.
 - [How to Choose a Plant Relocation Contractor](https://badasslogistics.com/blog/how-to-choose-a-plant-relocation-contractor): What separates plant relocation contractors: track record, who owns what between OEM, millwright and rigger, and the questions worth asking before you sign.
 - [In-House Team or Relocation Contractor: How to Decide](https://badasslogistics.com/blog/in-house-team-vs-relocation-contractor): What a maintenance team can genuinely move itself, where the line sits, and what it actually costs when a job crosses that line without a contractor.
 - [Plant Relocation Checklist: What a Quote Needs to Cover](https://badasslogistics.com/blog/plant-relocation-checklist): The plant relocation checklist: what a comparable relocation quote must include, what to have ready before you ask for one, and how a process plant move differs from a discrete-manufacturing move.
+- [Single-Source Plant Relocation Explained](https://badasslogistics.com/blog/single-source-plant-relocation-explained): What 
 
 ### Guides: Project Freight
 
@@ -169,6 +193,7 @@ offer are the ones listed above.
 
 - [How Do Truck Dispatchers Get Paid? Pricing Models Explained for Fleets](https://badasslogistics.com/blog/how-do-truck-dispatchers-get-paid): How truck dispatch services get paid — percentage of gross, flat per-truck fees, and hybrid models — plus what the fee should include and red flags.
 - [Conestoga Trailer Loading and Securement: A Fleet Guide](https://badasslogistics.com/blog/how-to-load-and-secure-a-conestoga-trailer): How a Conestoga curtain system works, the loading sequence, and how securement inside it differs from an open flatbed — written for fleets that run them.
+- [How to Tarp a Flatbed Load: Sequence, Tarps, Claims](https://badasslogistics.com/blog/how-to-tarp-a-flatbed-load): How a flatbed load actually gets tarped — steel, lumber, and hay tarps, corner protection, strap pattern, and how tarping sits on top of securement underneath.
 - [Step Deck vs Drop Deck Trailers: Same Trailer, Explained](https://badasslogistics.com/blog/step-deck-vs-drop-deck-trailers): Step deck and drop deck are the same trailer under two regional names. Deck heights, legal load heights, ground clearance, and when to run a lowboy instead.
 - [Truck Dispatch Services for Small Fleets (4+ Trucks): What to Expect](https://badasslogistics.com/blog/truck-dispatch-for-small-fleets): What a fleet truck dispatch service does, when outsourcing dispatch makes sense for 4 to 20 trucks, what to ask before signing, and the red flags to avoid.
 - [Truck Dispatcher vs Freight Broker: What's the Difference?](https://badasslogistics.com/blog/truck-dispatcher-vs-freight-broker): Dispatchers and brokers are not the same thing. Who each one works for, what they legally can and cannot do, and which one an owner-operator actually needs.
@@ -179,6 +204,10 @@ offer are the ones listed above.
 - [What Drives the Cost of Moving Medical Equipment?](https://badasslogistics.com/blog/how-much-does-it-cost-to-move-medical-equipment): What actually sets the price of a medical equipment move: system class, room access, OEM time, physics testing, downtime windows and reinstall scope.
 - [How to Move a Linear Accelerator: Vault, Rigging & Reinstall](https://badasslogistics.com/blog/how-to-move-a-linear-accelerator): How a linear accelerator move really runs — physics release, OEM de-install, getting the gantry out through the maze or a shield panel, rigging, and reinstall.
 - [How to Move an X-Ray Machine, C-Arm or Radiography Room](https://badasslogistics.com/blog/how-to-move-an-x-ray-machine): Moving an x-ray machine: fixed radiographic rooms, C-arms, fluoroscopy and mammo. Tube and detector handling, ceiling rails, lead-lined walls, live departments.
+
+### Guides: Machinery
+
+- [How to Ship a Forklift: Rigging and Load-Out Guide](https://badasslogistics.com/blog/how-to-ship-a-forklift): How to rig and load a forklift for transport: forks and mast down, battery or fuel handling, tie-down points, counterweight, and ramp vs dock loading.
 
 ## Company
 

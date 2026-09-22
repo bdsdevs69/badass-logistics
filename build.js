@@ -29,6 +29,7 @@ const STEPS = [
   ['build-blog.js',           'field-guide articles + blog index'],
   ['build-service-pages.js',  '17 service pages from content/services + homepage grid'],
   ['build-service-cities.js', 'service x city pages + state hubs + pillar metro grids'],
+  ['build-dispatch.js',       'dispatch x equipment pages + hub (NEVER geo)'],
   ['seo-polish.js',           'head upgrades for hand-written pages'],
   ['link-city-mesh.js',       'LINK PASS — lateral nearby-city mesh'],
   ['build-redirects.js',      'redirect stubs for retired URLs'],
@@ -213,6 +214,21 @@ function verify() {
     // bullet on its own, because bullets are independent claims.
     const DISCLAIMER = /\b(is not|are not|not a|no longer|never|retired|previously|does not|do not|out of date|stale)\b/i;
     const RETIRED = /\b(heavy haul|lowboy|step[- ]deck|\bRGN\b|superload|escort vehicle)\b/i;
+    // Two of those words are not the same kind of word.
+    //
+    // "heavy haul", "superload" and "escort vehicle" name the SERVICE LINE
+    // retired in 2026. They may only ever appear in a denial, no exceptions.
+    //
+    // "step deck", "lowboy" and "RGN" name TRAILERS. Per seo/schedule.md:
+    // "This is not reviving heavy haul. We dispatch flatbed, step deck,
+    // reefer and Conestoga fleets" — the fleet owns the trailer, we run its
+    // dispatch desk, and "step deck dispatch services" is a live query we
+    // already rank for. So a trailer name is allowed in a line that is
+    // plainly about dispatching a fleet, and nowhere else. The heading above
+    // those bullets carries the full "we own no trucks, no permitted work"
+    // disclaimer; this exemption covers the bullets under it.
+    const HARD_RETIRED = /\b(heavy haul|superload|escort vehicle)\b/i;
+    const DISPATCH_CONTEXT = /\bdispatch(es|ing|ed)?\b/i;
     const servicesPart = llms.split(/^## Reference guides/m)[0];
     const units = [];
     for (const block of servicesPart.split(/\n\s*\n/)) {
@@ -221,7 +237,8 @@ function verify() {
     }
     for (const unit of units) {
       const m = unit.match(RETIRED);
-      if (m && !DISCLAIMER.test(unit)) {
+      const dispatchOk = m && !HARD_RETIRED.test(unit) && DISPATCH_CONTEXT.test(unit);
+      if (m && !DISCLAIMER.test(unit) && !dispatchOk) {
         aiBad.push(`llms.txt offers retired positioning: "${m[0]}" in — ${unit.replace(/\s+/g, ' ').trim().slice(0, 90)}`);
       }
     }
@@ -258,6 +275,22 @@ function verify() {
     if (leak) aiBad.push(`#organization offers retired positioning: "${leak[0]}"`);
   }
   check(aiBad.length === 0, `AI surfaces: llms.txt + robots.txt + entity schema state we are riggers`, aiBad);
+
+  // ── 9–13. GUARDRAILS (lib/guardrails.js) ────────────────────────────
+  // Added 2026-09-22, before the volume lands. Checks 1–8 above were
+  // written for a 660-page site every page of which a person had read.
+  // These five are what makes generating another 500 safe: they fail the
+  // build rather than warn, because at 1,250 pages a warning is a thing
+  // nobody reads. See lib/guardrails.js for what each one is defending.
+  const guards = require('./lib/guardrails');
+  const { STATE_NAMES, interstatesOf } = require('./lib/states');
+  const locations = JSON.parse(read(path.join(ROOT, 'data/locations.json')));
+  const gctx = { ROOT, locations, STATE_NAMES, interstatesOf, check };
+  guards.noSubCityUrls(gctx);
+  guards.noDispatchGeo(gctx);
+  guards.matrixUniquenessFloor(gctx);
+  guards.matrixCap(gctx);
+  guards.generatorPositioning(gctx);
 
   console.log('═════════════════════════════════════════════════════');
   if (fail) { console.error(`✖ ${fail} check(s) FAILED — do not deploy.`); process.exit(1); }
