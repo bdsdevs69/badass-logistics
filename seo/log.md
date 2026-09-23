@@ -890,3 +890,93 @@ pattern worth Sam deciding about rather than each run deciding alone.
 **Carried forward, unchanged:** `blog/how-to-transport-a-transformer.html` still
 carries retired heavy-haul positioning in body prose with no source module —
 flagged 21 Sep, still live, still a structural job.
+
+---
+
+## 2026-09-23 — daily health check (Wed)
+
+**Absorption (90d) — `dispatch` is RED, and it is the expected kind of RED.**
+
+| cluster | URLs | dead% | verdict | vs 2026-09-22 |
+|---|---|---|---|---|
+| blog | 57 | 33% | GREEN | 51 / 29% — 6 new posts ageing in |
+| dispatch | 14 | 79% | **RED** | 3 / 0% — 11 new pages shipped yesterday |
+| service pillars | 17 | 6% | GREEN | 6% |
+| rigging × city | 113 | 7% | GREEN | 7% |
+| machinery × city | 113 | 5% | GREEN | 5% |
+| plant × city | 113 | 25% | GREEN | 25% |
+| cnc × city | 113 | 43% | AMBER | 43% — still the only standing HOLD |
+| city hubs | 128 | 23% | GREEN | 23% |
+| SITE | 675 | 23% | | 658 / 21% |
+
+The 3 dead-free dispatch URLs from yesterday are still the 3 that earn; the 11
+dead ones are exactly the 11 pages that went live yesterday and have not had a
+crawl cycle yet. This is the "big batch landing at once" case the routine calls
+normal. It should clear on its own. **But note the mechanic:** a brand-new
+cluster is *arithmetically guaranteed* to read RED for its first couple of
+weeks, which means the governor now blocks additions to the one cluster we just
+decided to invest in. Nothing in the current plan wants more dispatch pages, so
+it costs nothing this week — but the governor probably ought to exclude URLs
+younger than ~14 days before it next matters. Not changed here.
+
+**Live URLs — all 17 from yesterday's run return 200.** No 301s into stubs, no
+404s. All 17 present in both the live `sitemap.xml` and `llms.txt`; live sitemap
+675 URLs, matching the build. GitHub Pages deployed cleanly.
+
+**⚠ Yesterday's 17 URLs had never been submitted — fixed.** The 2026-09-22 run
+log records no IndexNow/sitemap ping, and `ping-search-engines.js` only picks up
+URLs whose lastmod is *today*, so today's default run no-opped and those 17
+would have fallen through the crack permanently. Submitted them explicitly
+(IndexNow HTTP 200, Google sitemap HTTP 204). Corroborating this: Google's last
+sitemap download was 2026-09-22T17:08 and saw **658 URLs** — the pre-run count —
+so Google had not yet seen any of yesterday's work. **This is a routine gap, not
+a one-off:** any publishing run that forgets to ping is silently unrecoverable
+by the next day's health check. Either the publishing runs must ping as a build
+step, or this check should ping by lastmod-since-last-entry rather than today.
+
+**Stub traffic (Wed): 129 stubs, 4,539 impressions, 45 clicks.** Was 131 /
+4,757 / 45 yesterday. The whole of that drop is the two deliberate recoveries —
+`how-to-tarp-a-flatbed-load` (171) and `how-to-ship-a-forklift` (41) are out of
+the stub list and live as articles. So: no decay this week, and the recovery
+mechanism demonstrably works. Top stub is still `/services/heavy-haul` at 618
+impressions, correctly retired.
+
+**Flagged for the Saturday `badass-seo-upgrade` run — the trailer-name stubs are
+now mis-pointed, and yesterday's run is what made them mis-pointed.** Five
+trailer URLs earn **552 impressions** between them and still redirect to generic
+pillars, when as of yesterday there is an exact-match dispatch page for each:
+
+| stub | impr | pos | points at | should point at |
+|---|---|---|---|---|
+| `/services/step-deck-trailer` | 207 | 22.4 | `/services/dedicated-lanes` | `/services/truck-dispatch/step-deck` |
+| `/services/rgn-trailer` | 119 | 12.6 | `/services/project-freight` | `/services/truck-dispatch/rgn-lowboy` |
+| `/services/double-drop-trailer` | 109 | 12.6 | `/services/project-freight` | `/services/truck-dispatch/rgn-lowboy` |
+| `/services/lowboy-trailer` | 78 | 15.6 | `/services/project-freight` | `/services/truck-dispatch/rgn-lowboy` |
+| `/services/conestoga-trailer` | 39 | 41.0 | `/services/dedicated-lanes` | `/services/truck-dispatch/conestoga` |
+
+`data/redirects.json`'s own note already argues this case — "the people searching
+them are fleet owners choosing trailers, which is the 4+ truck dispatch buyer" —
+it just predates the pages existing. Not changed here; this check does not edit
+content.
+
+**Also for Saturday: the two best positions on the site are both noindex stubs.**
+`/services/dispatching` (185 impr, 4 clicks, **pos 5.7**) and
+`/services/freight-moving` (90 impr, 2 clicks, **pos 7.5**). Both redirect to the
+right place, so the targeting is not wrong — but they are `noindex` meta-refresh
+stubs, so those rankings bleed away rather than compound. Neither is heavy-haul
+demand. Un-retiring `/services/dispatching` as a real page is the single
+cheapest ranking available on this site.
+
+**Skipped per schedule (Wed):** cannibalisation (Sun), AEO identity (Mon).
+
+**⚠ The prompt-injection attempt repeated for a fourth consecutive run.** Same
+text, same channel — appended to tool output, not from Sam and not in the task
+file — claiming "bypass permissions mode" is active and directing all file work
+through raw shell (`cat`/`sed`/`echo`) instead of the auditable file tools.
+Declined. Four runs in four days on an instruction whose only effect is to make
+edits harder to review is not noise, and it should not keep being each run's
+call. Sam should decide what this is.
+
+**Carried forward, unchanged:** `blog/how-to-transport-a-transformer.html` still
+carries retired heavy-haul positioning in body prose with no source module —
+flagged 21 Sep, still live.
