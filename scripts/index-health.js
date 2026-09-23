@@ -22,14 +22,30 @@
    indexed; a page earning none is either unindexed or indexed and
    ranking nowhere, and both mean the same thing for this decision.
 
+   THE GRACE PERIOD (added 2026-09-23):
+   A page that shipped yesterday has not been crawled yet, so it earns
+   nothing, so it counts as dead. That is arithmetic, not a signal. On
+   2026-09-23 the dispatch cluster read 79% dead and RED purely because
+   11 pages had landed the previous afternoon — and RED is the verdict
+   that tells the publishing runs to stop feeding a cluster. Left alone,
+   this governor would block every cluster immediately after investing
+   in it, and would do so most aggressively exactly when a run had just
+   shipped the most. So URLs added within GRACE_DAYS that are not yet
+   earning are counted "pending", shown separately, and excluded from
+   the dead share. They are not evidence of anything yet. A page past
+   the grace window earning nothing is a real dead page and counts.
+
    RUN:  node scripts/index-health.js [days]        (default 90)
          node scripts/index-health.js 90 --json     machine-readable
          node scripts/index-health.js --gate blog   exit 1 if that
                                                     cluster is RED
+         node scripts/index-health.js --grace 0     judge everything,
+                                                    however new
    =========================================================== */
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
+const { execSync } = require('child_process');
 
 const ROOT = path.join(__dirname, '..');
 const args = process.argv.slice(2);
@@ -45,6 +61,36 @@ const MIN_N = 8;
 // Share of a cluster earning nothing, above which we stop feeding it.
 const RED = 0.55;
 const AMBER = 0.35;
+// Days a page gets to be crawled and start earning before its silence is
+// treated as evidence. GSC itself lags ~2 days on top of this.
+const GRACE_DAYS = args.includes('--grace') ? parseInt(args[args.indexOf('--grace') + 1], 10) : 14;
+
+// path-in-repo -> the date it was first committed. One git pass, not 675.
+// git log walks newest-first, so overwriting leaves the OLDEST add date.
+function firstSeenByFile() {
+  const map = new Map();
+  let out = '';
+  try {
+    out = execSync('git log --diff-filter=A --name-only --format=%x01%ad --date=short', {
+      cwd: ROOT, maxBuffer: 256 * 1024 * 1024,
+    }).toString();
+  } catch { return map; }          // not a git checkout — grace simply never applies
+  let when = null;
+  for (const line of out.split('\n')) {
+    if (line.startsWith('\x01')) { when = line.slice(1).trim(); continue; }
+    const f = line.trim();
+    if (f && when) map.set(f, when);
+  }
+  return map;
+}
+
+// /blog/foo -> blog/foo.html, with a directory-index fallback.
+function fileForUrl(u, seen) {
+  if (u === '/') return 'index.html';
+  const base = u.replace(/^\//, '');
+  for (const cand of [`${base}.html`, `${base}/index.html`]) if (seen.has(cand)) return cand;
+  return `${base}.html`;
+}
 
 const CLUSTERS = [
   ['blog',           u => /^\/blog\//.test(u)],
@@ -111,6 +157,16 @@ const pct = (x) => (x * 100).toFixed(0) + '%';
     return [u, r];
   }));
 
+  // A URL is "pending" if it was committed inside the grace window and is not
+  // yet earning: too new to be evidence either way, so it leaves the denominator.
+  const seen = firstSeenByFile();
+  const cutoff = dstr(new Date(Date.now() - GRACE_DAYS * 864e5));
+  const isPending = (u) => {
+    if (perf.has(u) || GRACE_DAYS <= 0) return false;
+    const added = seen.get(fileForUrl(u, seen));
+    return added !== undefined && added > cutoff;
+  };
+
   const out = [];
   const claimed = new Set();
   for (const [name, match] of CLUSTERS) {
@@ -120,19 +176,23 @@ const pct = (x) => (x * 100).toFixed(0) + '%';
     const live = mine.filter(u => perf.has(u));
     const clicks = live.reduce((a, u) => a + perf.get(u).clicks, 0);
     const impr = live.reduce((a, u) => a + perf.get(u).impressions, 0);
-    const dead = mine.length - live.length;
-    const deadShare = dead / mine.length;
-    const verdict = mine.length < MIN_N ? 'NEW'
+    const pending = mine.filter(isPending).length;
+    const judged = mine.length - pending;
+    const dead = mine.length - live.length - pending;
+    const deadShare = judged > 0 ? dead / judged : 0;
+    const verdict = judged < MIN_N ? 'NEW'
       : deadShare >= RED ? 'RED'
       : deadShare >= AMBER ? 'AMBER' : 'GREEN';
-    out.push({ cluster: name, urls: mine.length, earning: live.length, dead, deadShare, impressions: Math.round(impr), clicks, verdict });
+    out.push({ cluster: name, urls: mine.length, earning: live.length, pending, dead, deadShare, impressions: Math.round(impr), clicks, verdict });
   }
   const other = urls.filter(u => !claimed.has(u));
   if (other.length) {
     const live = other.filter(u => perf.has(u));
+    const pending = other.filter(isPending).length;
     out.push({
-      cluster: 'other', urls: other.length, earning: live.length, dead: other.length - live.length,
-      deadShare: (other.length - live.length) / other.length,
+      cluster: 'other', urls: other.length, earning: live.length, pending,
+      dead: other.length - live.length - pending,
+      deadShare: (other.length - live.length - pending) / Math.max(1, other.length - pending),
       impressions: Math.round(live.reduce((a, u) => a + perf.get(u).impressions, 0)),
       clicks: live.reduce((a, u) => a + perf.get(u).clicks, 0),
       verdict: 'INFO',
@@ -141,15 +201,18 @@ const pct = (x) => (x * 100).toFixed(0) + '%';
 
   if (JSON_OUT) { console.log(JSON.stringify({ days: DAYS, clusters: out }, null, 2)); return; }
 
-  console.log(`\n=== INDEX ABSORPTION — last ${DAYS} days ===\n`);
-  console.log(`${'cluster'.padEnd(18)} ${'URLs'.padStart(5)} ${'earning'.padStart(8)} ${'dead'.padStart(6)} ${'dead%'.padStart(6)} ${'impr'.padStart(8)} ${'clicks'.padStart(7)}  verdict`);
-  console.log('─'.repeat(80));
+  console.log(`\n=== INDEX ABSORPTION — last ${DAYS} days ===`);
+  console.log(`(pending = shipped in the last ${GRACE_DAYS} days and not earning yet — too new to judge, excluded from dead%)\n`);
+  console.log(`${'cluster'.padEnd(18)} ${'URLs'.padStart(5)} ${'earning'.padStart(8)} ${'pending'.padStart(8)} ${'dead'.padStart(6)} ${'dead%'.padStart(6)} ${'impr'.padStart(8)} ${'clicks'.padStart(7)}  verdict`);
+  console.log('─'.repeat(89));
   for (const c of out) {
-    console.log(`${c.cluster.padEnd(18)} ${String(c.urls).padStart(5)} ${String(c.earning).padStart(8)} ${String(c.dead).padStart(6)} ${pct(c.deadShare).padStart(6)} ${String(c.impressions).padStart(8)} ${String(c.clicks).padStart(7)}  ${c.verdict}`);
+    console.log(`${c.cluster.padEnd(18)} ${String(c.urls).padStart(5)} ${String(c.earning).padStart(8)} ${String(c.pending).padStart(8)} ${String(c.dead).padStart(6)} ${pct(c.deadShare).padStart(6)} ${String(c.impressions).padStart(8)} ${String(c.clicks).padStart(7)}  ${c.verdict}`);
   }
   const tot = urls.length, totLive = urls.filter(u => perf.has(u)).length;
-  console.log('─'.repeat(80));
-  console.log(`${'SITE'.padEnd(18)} ${String(tot).padStart(5)} ${String(totLive).padStart(8)} ${String(tot - totLive).padStart(6)} ${pct((tot - totLive) / tot).padStart(6)}`);
+  const totPending = urls.filter(isPending).length;
+  const totDead = tot - totLive - totPending;
+  console.log('─'.repeat(89));
+  console.log(`${'SITE'.padEnd(18)} ${String(tot).padStart(5)} ${String(totLive).padStart(8)} ${String(totPending).padStart(8)} ${String(totDead).padStart(6)} ${pct(totDead / Math.max(1, tot - totPending)).padStart(6)}`);
 
   console.log(`\nWHAT THIS MEANS FOR THE NEXT RUN`);
   const red = out.filter(c => c.verdict === 'RED');
@@ -159,6 +222,13 @@ const pct = (x) => (x * 100).toFixed(0) + '%';
   if (amber.length) console.log(`  HOLD    ${amber.map(c => c.cluster).join(', ')} — add nothing new; improve what is dead first.`);
   if (red.length) console.log(`  STOP    ${red.map(c => c.cluster).join(', ')} — over ${pct(RED)} dead. Consolidate or deepen before a single new page lands here.`);
   if (!green.length && !amber.length && !red.length) console.log(`  Every cluster is still too new to judge (< ${MIN_N} URLs).`);
+  // A GREEN verdict sitting on a big pending pile is a deferred judgement, not
+  // a pass. Say so, or the grace period becomes a way to never be told bad news.
+  const waiting = out.filter(c => c.pending > 0).sort((a, b) => b.pending - a.pending);
+  if (waiting.length) {
+    console.log(`  PENDING ${waiting.map(c => `${c.cluster} (${c.pending})`).join(', ')} — shipped within ${GRACE_DAYS}d, not yet earning.`);
+    console.log(`          Not counted against them yet. Re-check before trusting a GREEN here; --grace 0 judges them now.`);
+  }
   console.log('');
 
   if (GATE) {

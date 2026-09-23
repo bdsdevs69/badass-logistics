@@ -17,9 +17,21 @@
    sitemap resubmit plus real inbound links is the honest lever.
 
    RUN:
-     node ping-search-engines.js                 # today's lastmod URLs from sitemap.xml
+     node ping-search-engines.js                 # everything new or changed since the last successful submit
      node ping-search-engines.js /services/x /blog/y   # explicit paths
      node ping-search-engines.js --all           # every URL in the sitemap (use sparingly)
+     node ping-search-engines.js --dry-run       # print the selection, submit nothing
+
+   WHY THIS IS NOT "TODAY'S LASTMOD" ANY MORE (2026-09-23):
+   It used to select URLs whose lastmod was today. That silently loses work.
+   The 2026-09-22 run shipped 17 pages and never pinged; the next morning the
+   default selection was empty, because by then those URLs were stamped
+   *yesterday*. They were invisible to the tool that exists to find them, and
+   Google's last sitemap read still showed the pre-run URL count. A missed ping
+   has to stay visible until it is actually done, so selection is now "what the
+   search engines have not been told about", tracked in data/ping-state.json as
+   url -> the lastmod we last submitted. New URL, or changed lastmod, means it
+   is owed a ping — however many days ago it shipped.
 
    Needs gsc-key.json for the Google half; the IndexNow half works
    without it. IndexNow key file lives at the repo root and must stay
@@ -36,6 +48,7 @@ const INDEXNOW_KEY = 'e83558048c9c1b4d6767f314ca9cb757';
 const SITE = 'sc-domain:badasslogistics.com';
 const SITEMAP = `${DOMAIN}/sitemap.xml`;
 const KEY_PATH = process.env.GSC_KEY || path.join(ROOT, 'gsc-key.json');
+const STATE_PATH = path.join(ROOT, 'data', 'ping-state.json');
 
 // IndexNow caps a submission at 10,000 URLs; we stay well under by default.
 const MAX_URLS = 10000;
@@ -46,6 +59,21 @@ function sitemapUrls() {
     .map(m => ({ loc: m[1], lastmod: m[2] || '' }));
 }
 
+// url -> the lastmod value that was in the sitemap when we last submitted it.
+function readState() {
+  try { return JSON.parse(fs.readFileSync(STATE_PATH, 'utf8')).submitted || {}; }
+  catch { return {}; }
+}
+
+function writeState(submitted) {
+  const sorted = Object.fromEntries(Object.keys(submitted).sort().map(k => [k, submitted[k]]));
+  fs.writeFileSync(STATE_PATH, JSON.stringify({
+    _note: 'Written by ping-search-engines.js. url -> the sitemap lastmod at the time we last told the search engines about it. A URL missing here, or carrying a different lastmod, is owed a ping. Delete this file to force a full resubmit.',
+    updated: new Date().toISOString(),
+    submitted: sorted,
+  }, null, 2) + '\n');
+}
+
 function pickUrls(argv) {
   const paths = argv.filter(a => !a.startsWith('--'));
   if (paths.length) return paths.map(p => (p.startsWith('http') ? p : DOMAIN + (p.startsWith('/') ? p : '/' + p)));
@@ -53,12 +81,14 @@ function pickUrls(argv) {
   const all = sitemapUrls();
   if (argv.includes('--all')) return all.map(u => u.loc);
 
-  // Default: whatever the sitemap says changed today. The generators stamp
-  // lastmod on every page they rewrite, so a rebuild marks far more than you
-  // actually edited — hence the cap and the printed count.
-  const today = new Date().toISOString().slice(0, 10);
-  const fresh = all.filter(u => u.lastmod === today).map(u => u.loc);
-  return fresh;
+  // Default: everything the search engines have not been told about yet —
+  // never submitted, or submitted under a different lastmod. Unlike the old
+  // "lastmod === today" rule this does not expire, so a run that forgets to
+  // ping is picked up by the next one instead of being lost. The generators
+  // keep lastmod stable per page (they stamp only what they rewrite), so a
+  // plain rebuild does not re-fire the whole site.
+  const state = readState();
+  return all.filter(u => state[u.loc] !== u.lastmod).map(u => u.loc);
 }
 
 async function googleToken() {
@@ -79,15 +109,22 @@ async function googleToken() {
 }
 
 (async () => {
-  const urls = pickUrls(process.argv.slice(2)).slice(0, MAX_URLS);
+  const argv = process.argv.slice(2);
+  const dryRun = argv.includes('--dry-run');
+  const urls = pickUrls(argv).slice(0, MAX_URLS);
   if (!urls.length) {
-    console.log('Nothing to ping — no URLs with today\'s lastmod in sitemap.xml.');
+    console.log('Nothing to ping — every URL in sitemap.xml has already been submitted at its current lastmod.');
     console.log('Pass paths explicitly, or --all, if that is not what you expected.');
     return;
   }
-  console.log(`Pinging ${urls.length} URL${urls.length === 1 ? '' : 's'}\n`);
+  console.log(`Pinging ${urls.length} URL${urls.length === 1 ? '' : 's'}${dryRun ? ' (DRY RUN — nothing submitted)' : ''}\n`);
+  if (dryRun) {
+    for (const u of urls) console.log(`  ${u}`);
+    return;
+  }
 
   // ---- 1. IndexNow (Bing, Yandex) ----
+  let indexNowOk = false;
   try {
     const res = await fetch('https://api.indexnow.org/IndexNow', {
       method: 'POST',
@@ -95,9 +132,28 @@ async function googleToken() {
       body: JSON.stringify({ host: HOST, key: INDEXNOW_KEY, keyLocation: `${DOMAIN}/${INDEXNOW_KEY}.txt`, urlList: urls }),
     });
     // 200 accepted, 202 accepted but key still validating, 422 = url/key mismatch.
-    console.log(`IndexNow          HTTP ${res.status} ${res.status === 200 || res.status === 202 ? '✓ accepted' : '✖ ' + (await res.text()).slice(0, 200)}`);
+    indexNowOk = res.status === 200 || res.status === 202;
+    console.log(`IndexNow          HTTP ${res.status} ${indexNowOk ? '✓ accepted' : '✖ ' + (await res.text()).slice(0, 200)}`);
   } catch (e) {
     console.log(`IndexNow          ✖ ${e.message}`);
+  }
+
+  // Only record what was actually accepted. On a failure we deliberately leave
+  // the state alone so the same URLs are still owed a ping tomorrow — the whole
+  // point of the state file is that a miss stays visible.
+  if (indexNowOk) {
+    const lastmods = Object.fromEntries(sitemapUrls().map(u => [u.loc, u.lastmod]));
+    const state = readState();
+    let recorded = 0;
+    for (const u of urls) {
+      if (lastmods[u] === undefined) continue;   // explicit path not in the sitemap
+      state[u] = lastmods[u];
+      recorded++;
+    }
+    writeState(state);
+    console.log(`                  recorded ${recorded} URL${recorded === 1 ? '' : 's'} in data/ping-state.json`);
+  } else {
+    console.log('                  state NOT updated — these URLs stay owed and will be retried next run');
   }
 
   // ---- 2. Google: resubmit the sitemap ----

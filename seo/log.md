@@ -980,3 +980,74 @@ call. Sam should decide what this is.
 **Carried forward, unchanged:** `blog/how-to-transport-a-transformer.html` still
 carries retired heavy-haul positioning in body prose with no source module —
 flagged 21 Sep, still live.
+
+---
+
+## 2026-09-23 (Wed) — the health check's three findings, fixed
+
+Sam said fix it. All three defects from this morning's check are closed. No new
+pages, no articles — these are repairs.
+
+**1. The five trailer stubs now point at the dispatch desks (552 impressions).**
+`data/redirects.json`: `step-deck-trailer` → `/services/truck-dispatch/step-deck`,
+`conestoga-trailer` → `.../conestoga`, and `rgn-trailer`, `lowboy-trailer` and
+`double-drop-trailer` → `.../rgn-lowboy`. Also `hot-shot-trucking-explained` →
+`.../hotshot`, which had no impressions but was strictly less precise than it
+needed to be. **A second-order win:** the stub inherits its `<title>` and
+description from its target, so `/services/step-deck-trailer` — still ranking at
+position 22.4 on 207 impressions — now presents step-deck dispatch copy in the
+SERP instead of dedicated-lanes copy. Left alone deliberately: the four
+comparison URLs stay on `/trailer-selector` (comparison intent, not one-trailer
+intent) and `/services/flatbed-transport` stays on `/services/dedicated-lanes`
+(someone buying transport, not a fleet owner shopping trailers).
+
+**2. `ping-search-engines.js` can no longer lose a batch.** The default was
+"URLs whose lastmod is today", which is why yesterday's 17 pages were invisible
+to it this morning — by then they were stamped yesterday. Selection is now
+"what the search engines have not been told about", tracked in
+`data/ping-state.json` as url → the lastmod we last submitted. A URL that is new
+or changed stays owed **until it is actually submitted**, however many days
+pass, so a run that forgets to ping is picked up by the next one instead of
+falling through. State is only written when IndexNow actually returns 200/202 —
+a failure deliberately leaves the URLs owed. Added `--dry-run`. Seeded with a
+one-time full submit: 675 URLs, IndexNow 200, Google 204. Verified idempotent
+(immediate re-run selects nothing) and verified a bumped lastmod selects exactly
+that one URL. **Google's sitemap read now shows 675 URLs, up from the 658 it
+still had this morning** — this morning's explicit ping landed.
+
+**3. The governor no longer marks a cluster RED for being new.**
+`scripts/index-health.js` now classes a URL committed within `GRACE_DAYS` (14)
+and not yet earning as **pending** rather than dead, with its own column, and
+excludes it from the dead share. Page age comes from one `git log
+--diff-filter=A` pass, not 675 calls. `dispatch` moves RED → NEW: judged on the
+3 pages old enough to judge, which is honest, rather than on 11 pages that
+landed the previous afternoon. Verified `--grace 0` reproduces this morning's
+output exactly, line for line.
+
+To stop the grace period becoming a way of never hearing bad news, a PENDING
+line now names every cluster with deferred URLs and says a GREEN above it is not
+yet trustworthy. That matters immediately: **blog reads 33% dead at `--grace 0`
+and 0% at 14 days**, i.e. every single non-earning blog post is from the last
+week. That is genuinely good news that the old flat number was hiding — blog has
+no long-term dead pages at all — but it is also 19 URLs of judgement deferred to
+early October, and the run that reads GREEN there should know it.
+
+**⚠ A correction to this morning's report.** I said `/services/dispatching` and
+`/services/freight-moving` were `noindex` stubs whose rankings were bleeding
+away, and called un-retiring them the cheapest ranking on the site. **The stubs
+are not noindex** — checked on disk and live, they are canonical + meta refresh
+with no robots directive, which is correct and deliberate: noindex plus a
+canonical is a contradictory instruction that would tell Google to drop the URL
+instead of passing its equity to the target. Google treats the instant refresh
+as a permanent redirect, so those rankings are being **consolidated into
+`/services/truck-dispatch`, not lost**. Impressions still logged against the old
+URL are the lagging record of a redirect already followed.
+
+I took the claim from `redirects.json`'s own `_note`, which said "noindex" and
+was wrong; the note is corrected. **This reverses the recommendation**: building
+a real page at `/services/dispatching` would put a second dispatch pillar
+alongside `/services/truck-dispatch` and manufacture exactly the cannibalisation
+this site keeps fighting. Nothing to do here. Removed from the Saturday list.
+
+**Build: all 20 checks pass.** 686 pages, 70,349 internal links, 0 broken, 0
+pointing at a stub, 145 redirect stubs, sitemap 675.
