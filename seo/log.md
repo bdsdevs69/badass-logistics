@@ -1051,3 +1051,78 @@ this site keeps fighting. Nothing to do here. Removed from the Saturday list.
 
 **Build: all 20 checks pass.** 686 pages, 70,349 internal links, 0 broken, 0
 pointing at a stub, 145 redirect stubs, sitemap 675.
+
+## 2026-09-23 (Wed) — articles run: six machinery guides, one positioning fix
+
+**Shipped 6/6.** `how-to-move-a-waterjet-cutter`, `how-to-move-a-laser-cutter`,
+`how-to-move-a-horizontal-boring-mill`, `how-to-move-a-stamping-press`,
+`how-to-move-a-cmm`, `how-to-move-an-industrial-oven-or-furnace` — all
+Machinery Moving, 1,791–1,999 words. Queue 22→28 done, 21 todo. llms.txt
+57→63 guides, sitemap 675→681.
+
+**Index health — cleared to publish.**
+
+```
+cluster             URLs  earning  dead  dead%     impr  clicks  verdict(14d / 0d)
+blog                  57       38    19    33%     5033      38  GREEN  / GREEN
+dispatch              14        3    11    79%        8       0  NEW    / RED
+service pillars       17       16     1     6%     1857      12  GREEN  / GREEN
+rigging x city       113      105     8     7%     2588      19  GREEN  / GREEN
+machinery x city     113      107     6     5%     5211      24  GREEN  / GREEN
+plant x city         113       85    28    25%     1663       3  GREEN  / GREEN
+cnc x city           113       64    49    43%      262       4  AMBER  / AMBER
+city hubs            128       99    29    23%      898      13  GREEN  / GREEN
+SITE                 675      523   152    23%
+```
+
+Blog holds GREEN at **both** grace settings, so the 19 not-yet-earning posts
+are not propping up the verdict. `cnc x city` stays HOLD and got nothing.
+
+**`dispatch` reads RED at `--grace 0` — do not act on it.** Those 14 pages
+shipped *yesterday* ("Guard the build, then open the dispatch desk by
+equipment"). A one-day-old cluster has no impressions because it has not been
+crawled, not because it failed; the STOP verdict is arithmetic on an empty
+window. Re-judge it around **2026-10-06**, not before. Flagging it here so a
+future run does not consolidate a cluster that never got a chance to rank.
+
+**Gates re-run as a batch, and that was not redundant.** Each writer ran
+`check-uniqueness.js` when it finished, against a corpus that did not yet
+contain its siblings — the waterjet writer was compared against a corpus with
+no laser-cutter post in it. Re-ran both gates across all six once every module
+existed: top overlap 1.4% (laser vs the existing EDM post), recycled under 2%.
+
+**Reviewer held nothing, and found one thing worth the run.** The waterjet
+piece described the intensifier lockout and the pre-first-cut pressure ramp
+without ever saying *who does them*, which left in-house high-pressure
+capability implied — the one spot in six articles that broke the pattern the
+rest of the cluster follows. Fixed in place rather than bounced: both passages
+now attribute the work to the qualified operator, the OEM service tech, or
+whoever commissions the machine. Verified live. The positioning lint cannot
+catch this class — it greps for banned strings, and the breach here was the
+*absence* of an attribution, not the presence of a bad phrase.
+
+**Live check.** All six HTTP/2 200 direct (no 301 into a stub), all six in
+sitemap.xml and llms.txt, all six carry Article + BreadcrumbList + FAQPage with
+6 FAQ entries and zero JSON-LD parse failures. Build: all checks pass, 692
+pages, 70,831 internal links, 0 broken, 0 pointing at a retired URL. IndexNow
+accepted 7 URLs; Google sitemap resubmitted (HTTP 204).
+
+**Not done, deliberately.** No Track B — blog was GREEN so Track A was the
+correct branch, and the queue was already deep enough that no refill was owed.
+Did not touch `seo/schedule.md` batches (Tue/Fri task owns those), Google Ads
+(Monday task), or the `cnc x city` cluster.
+
+**For Sam — the cannibalisation report needs reading with a filter.** It lists
+270 split queries, but most of the top pairs are noise: `omaha-ne` appears in 15
+lines across 8 pairs purely because it ranks at position 70–95 for head terms
+like "plant relocation" and co-appears with other pages that also rank nowhere.
+Page size is normal (32.5KB vs 35.7KB for Detroit) — no structural defect. Two
+pages both failing to rank is not cannibalisation.
+
+The **real** pattern underneath it is state page vs city page, and it is
+consistent: "industrial relocation georgia" splits 136 impressions between
+`/plant-relocation/georgia` (pos 28.3) and `/plant-relocation/atlanta-ga` (pos
+71.0). Same shape for georgia/savannah-ga, oklahoma/tulsa-ok,
+florida/jacksonville-fl, south-carolina/charleston-sc. The state page wins every
+time; the city page bleeds demand from behind it. That is a merge-and-redirect
+decision, which is Sam's call, not a scheduled run's — flagging, not acting.
