@@ -350,7 +350,8 @@
         "services/millwright-services"
       ],
       "hero": "loads/load-machine-loadout.jpg",
-      "status": "todo"
+      "status": "done",
+      "published": "2026-09-23"
     },
     {
       "slug": "how-to-move-a-laser-cutter",
@@ -363,7 +364,8 @@
         "services/cnc-machine-movers"
       ],
       "hero": "loads/enclosed-trailer-machinery-loaded.jpg",
-      "status": "todo"
+      "status": "done",
+      "published": "2026-09-23"
     },
     {
       "slug": "how-to-move-a-horizontal-boring-mill",
@@ -377,7 +379,8 @@
         "services/millwright-services"
       ],
       "hero": "loads/load-lowboy-warehouse.jpg",
-      "status": "todo"
+      "status": "done",
+      "published": "2026-09-23"
     },
     {
       "slug": "how-to-move-a-stamping-press",
@@ -390,7 +393,8 @@
         "services/heavy-lift-rigging"
       ],
       "hero": "loads/load-lowboy-warehouse.jpg",
-      "status": "todo"
+      "status": "done",
+      "published": "2026-09-23"
     },
     {
       "slug": "how-to-move-a-cmm",
@@ -403,7 +407,8 @@
         "services/lab-equipment-movers"
       ],
       "hero": "loads/white-glove-crated-equipment-delivery.jpg",
-      "status": "todo"
+      "status": "done",
+      "published": "2026-09-23"
     },
     {
       "slug": "how-to-move-an-industrial-oven-or-furnace",
@@ -416,7 +421,8 @@
         "services/plant-relocation"
       ],
       "hero": "loads/flatbed-industrial-dust-collectors-strapped.jpg",
-      "status": "todo"
+      "status": "done",
+      "published": "2026-09-23"
     },
     {
       "slug": "how-to-move-a-conveyor-system",
