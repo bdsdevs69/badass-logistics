@@ -1,6 +1,6 @@
 {
   "_note": "Written by ping-search-engines.js. url -> the sitemap lastmod at the time we last told the search engines about it. A URL missing here, or carrying a different lastmod, is owed a ping. Delete this file to force a full resubmit.",
-  "updated": "2026-09-23T03:50:27.912Z",
+  "updated": "2026-09-23T03:53:01.955Z",
   "submitted": {
     "https://badasslogistics.com/": "2026-09-21",
     "https://badasslogistics.com/about": "2026-09-17",
