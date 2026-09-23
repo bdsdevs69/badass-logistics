@@ -5,6 +5,76 @@ Newest entry at the top. Playbook: `ads/review.md`. Blueprint: `ads/campaigns.js
 
 ---
 
+## 2026-09-23 (later) — daily cap raised $25 → $40 on Sam's call
+
+Follow-up to the review below, same day. Sam overrode the standing
+"never exceed $25.00/day" rule after reading the budget-constraint finding.
+Asked him to pick the number rather than guessing at it; he chose $40/day.
+
+| Campaign | Was | Now | Verified |
+|---|---|---|---|
+| Crane & Rigging | $10.00/day | **$15.00/day** | ✓ after full page reload |
+| Machinery & Medical Equipment | $10.00/day | **$15.00/day** | ✓ after full page reload |
+| Fleet Dispatch | $5.00/day | **$10.00/day** | ✓ after full page reload |
+| **Account total** | $25.00/day | **$40.00/day** | ✓ |
+
+$40.00/day × 22 billable weekdays = **$880/mo** (was $550).
+
+### Why
+
+The review below found all three campaigns losing **42–52% of impressions to
+budget**, not to rank — each had already overdelivered past its daily cap on its
+single serving day and still ran out. Bids could not fix that; only the cap
+could. Split keeps the two rigging/machinery campaigns level at $15 and gives
+Fleet Dispatch $10, preserving the rough 1.5 : 1.5 : 1 shape of the old
+$10/$10/$5.
+
+### Repo synced to match
+
+- `ads/campaigns.json` — `dailyBudget` 10/10/5 → **15/15/10**;
+  `monthlyBudget` 550 → **880**; `sharedSettings.scheduleNote` updated.
+- `ads/review.md` — header budget line, the account table, and the
+  "keep the three daily budgets summing to $25.00/day or less" rule all moved
+  to $40.00/day. Section retitled to the 2026-09-23 budget raise.
+- `ads/check-ads.js` — no change needed; it reads the cap from
+  `plan.monthlyBudget`. Re-ran `--live`: **$40.00/day = $880.00/mo of $880,
+  blueprint valid**, all 15 URLs still 200.
+
+### Gotchas hit, for the next run
+
+- **Google interrupted the first save with a "Confirm it's you" identity
+  check.** It needed only a confirm click — no password, no 2FA. But the budget
+  panel behind it **silently discarded the entry**: the row still read $10.00
+  afterwards. Had to redo the edit from scratch. Add this to the list of ways
+  Google's panels throw away input — verify the row value after *every* budget
+  save, and expect the auth prompt once per session on the first write action.
+- Budget edits are two clicks, not one: hover the row, then click the pencil
+  that appears next to the budget. The first click only raises the tooltip.
+
+### Not changed
+
+Bids, negatives, keywords, ad copy, schedule, targeting — all untouched, for
+the reasons in the review below. Still **Manual CPC** on all three; the raise
+does not change the bidding rule. The 60-click reallocation bar still has not
+been met, so the split above is a proportional scale-up, not a reallocation
+based on performance.
+
+### Watch next week
+
+The raise is untested. What to check on Monday:
+
+1. **Did lost IS (budget) actually fall?** If it is still ~50% at $40/day, the
+   metros are deeper than the budget can reach and the next lever is narrowing
+   geography, not more money.
+2. **Did CPC inflate?** Crane & Rigging already pays $3.13 against a $4.00 ad
+   group bid. More budget on the same bids should buy more clicks at a similar
+   CPC; if CPC climbs instead, the extra budget is being spent on worse auctions.
+3. **Cost is now real.** $880/mo against 0 conversions to date. If the build is
+   still at zero after a full week at $40/day, that is ~60+ clicks and the
+   reallocation rule finally has the evidence it needs to fire.
+
+---
+
 ## 2026-09-23 — first review after the 2026-09-21 rebuild
 
 Scheduled Monday run. Data window **23 Aug – 21 Sept 2026** (Google's "last 30
@@ -57,8 +127,13 @@ constraint is now the $25.00/day cap itself.
 
 ### Changed
 
-**Nothing in the account.** No budget moved, no bid moved, no negative added, no
-keyword paused, no ad edited. One documentation fix in the repo (below).
+**Nothing in the account at the time of this review.** No budget moved, no bid
+moved, no negative added, no keyword paused, no ad edited. One documentation fix
+in the repo (below).
+
+> **Superseded the same day** — see the 2026-09-23 (later) entry above: Sam
+> raised the daily cap to $40.00/day ($15 / $15 / $10) after reading the
+> budget-constraint finding.
 
 - `ads/campaigns.json` — `rules[7]` said "Stay on Manual CPC until a campaign
   has **30+** conversions in 30 days". `ads/review.md` and the standing brief

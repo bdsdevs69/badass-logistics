@@ -1,7 +1,7 @@
 # Weekly Google Ads review — Badass Logistics
 
-Run every **Monday**. Budget is $25.00/day across three campaigns on a
-weekday-only schedule — about $550/month — so a week of drift is a
+Run every **Monday**. Budget is $40.00/day across three campaigns on a
+weekday-only schedule — about $880/month — so a week of drift is a
 quarter of the month. The whole job should take one pass.
 
 Account **788-067-9748**, owner **abdul.samad9k@gmail.com**.
@@ -9,13 +9,13 @@ Account **788-067-9748**, owner **abdul.samad9k@gmail.com**.
 *supposed* to look like — if the account and the file disagree, decide
 which one is right and update the other in the same run.
 
-## What the account is, as of the 2026-09-21 rebuild
+## What the account is, as of the 2026-09-23 budget raise
 
 | Campaign | Daily | Ad groups (Manual CPC bid) | Landing page |
 |---|---|---|---|
-| Crane & Rigging | $10.00 | Crane & Rigging Services $4.00 · Industrial Rigging & Millwright $4.00 · Crating, Loading & Handling $3.50 | /quote-crane, /quote-rigging |
-| Machinery & Medical Equipment | $10.00 | Machinery Moving $4.50 · CNC & Machine Tools $4.50 · Medical & Imaging Equipment $7.00 | /quote-machinery, /quote-medical |
-| Fleet Dispatch | $5.00 | Dispatch For Fleets $3.00 | /quote-dispatch |
+| Crane & Rigging | $15.00 | Crane & Rigging Services $4.00 · Industrial Rigging & Millwright $4.00 · Crating, Loading & Handling $3.50 | /quote-crane, /quote-rigging |
+| Machinery & Medical Equipment | $15.00 | Machinery Moving $4.50 · CNC & Machine Tools $4.50 · Medical & Imaging Equipment $7.00 | /quote-machinery, /quote-medical |
+| Fleet Dispatch | $10.00 | Dispatch For Fleets $3.00 | /quote-dispatch |
 
 All three run **Monday–Friday, 07:00–21:00, account time zone ET**, on
 **Manual CPC**, targeting the **20 GBP metros** (canonical
@@ -82,7 +82,7 @@ budget.** The reallocation rule:
 - A campaign under **$100 CPA** gets first claim on any freed budget.
 - Never take a campaign below $1.50/day — under that Google stops
   serving it consistently and the data becomes meaningless.
-- Keep the three daily budgets summing to **$25.00/day or less**, which
+- Keep the three daily budgets summing to **$40.00/day or less**, which
   `check-ads.js` enforces at 22 billable weekdays a month.
 
 **3. Search terms, 30 days, sorted by cost.** Add negatives for anything

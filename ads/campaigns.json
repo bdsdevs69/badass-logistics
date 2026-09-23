@@ -2,7 +2,7 @@
   "_note": "Source of truth for Google Ads account 788-067-9748. Rebuilt 2026-09-18 from the Keyword Planner data in ads/keyword-research.md, which overturned the first draft: 'crane and rigging services' is 1,600/mo at Low competition and a $3.00 entry bid — three times any other term and among the cheapest — while every medical device term is below Google's reporting floor. Crane leads. Medical runs on a high bid and a small share rather than a big budget. Bidding is Manual CPC because the old account's $1.96 CPC sat below the top-of-page bid on nearly every keyword, which is why 72.8% of impression share was lost to Ad Rank. ads/review.md is the Monday routine that reads this file.",
   "account": "788-067-9748",
   "owner": "abdul.samad9k@gmail.com",
-  "monthlyBudget": 550,
+  "monthlyBudget": 880,
   "tag": "AW-18295250442",
   "conversionLabel": "AW-18295250442/yvjJCK3VhdEcEIq87ZNE",
   "sharedSettings": {
@@ -35,13 +35,13 @@
     "biddingNote": "Below ~30 conversions a month the automated strategies have no signal to work with, and Maximize clicks actively misallocates: it buys the cheapest clicks, which is how heavy haul took 74% of spend and returned nothing. Manual CPC per ad group is what stops that without fragmenting the account into campaigns too small to learn from.",
     "aiMax": "OFF",
     "schedule": "Monday-Friday 07:00-21:00, account TZ = ET. No weekends.",
-    "scheduleNote": "Office hours, not 24/7, and never overnight. The account clock is Eastern and Google applies ONE window to every metro, so 07:00-21:00 ET lands as 7am-9pm Eastern, 6am-8pm Central, 5am-7pm Denver and 4am-6pm Phoenix. Widened from 07:00-19:00 on 2026-09-21 (Sam's call): the old band clipped Phoenix at 4pm local and Denver at 5pm, so the two western metros lost the end of their working day. The cost is an Eastern evening tail and a slightly thinner hourly pace; at this volume the campaigns are impression-limited, not budget-limited, so that is cheap. The early-morning western tail (4am-7am local) is dead air and bills nothing. 22 billable weekdays a month; $25/day lands at ~$550.",
+    "scheduleNote": "Office hours, not 24/7, and never overnight. The account clock is Eastern and Google applies ONE window to every metro, so 07:00-21:00 ET lands as 7am-9pm Eastern, 6am-8pm Central, 5am-7pm Denver and 4am-6pm Phoenix. Widened from 07:00-19:00 on 2026-09-21 (Sam's call): the old band clipped Phoenix at 4pm local and Denver at 5pm, so the two western metros lost the end of their working day. The cost is an Eastern evening tail and a slightly thinner hourly pace; at this volume the campaigns are impression-limited, not budget-limited, so that is cheap. The early-morning western tail (4am-7am local) is dead air and bills nothing. 22 billable weekdays a month; $40/day lands at ~$880. Raised from $25/day ($550) on 2026-09-23 on Sam's explicit call, after the first post-rebuild review found all three campaigns losing 42-52% of impressions to budget rather than to rank.",
     "callAsset": "(307) 284-1332"
   },
   "campaigns": [
     {
       "name": "Crane & Rigging",
-      "dailyBudget": 10.0,
+      "dailyBudget": 15.0,
       "why": "Carries 'crane and rigging services' (1,600/mo, Low competition, $3.00 entry) plus rigging services, millwright and industrial crating — roughly 2,700 searches/month, the highest-volume and cheapest cluster in the account.",
       "adGroups": [
         {
@@ -172,7 +172,7 @@
     },
     {
       "name": "Machinery & Medical Equipment",
-      "dailyBudget": 10.0,
+      "dailyBudget": 15.0,
       "why": "Machinery terms (~1,300/mo) fund the campaign; medical rides along on a deliberately high bid. Medical is only ~210/mo nationally and every device term is below Google's reporting floor, so it cannot spend a budget of its own — but nobody is bidding on it and the jobs are large, so it gets bid position instead of budget share.",
       "adGroups": [
         {
@@ -305,7 +305,7 @@
     },
     {
       "name": "Fleet Dispatch",
-      "dailyBudget": 5.0,
+      "dailyBudget": 10.0,
       "why": "Anchored on 'truck dispatch company' — 480/mo at a $1.99 entry bid. 'Dispatch services for trucking companies' is 30/mo at $6.51, sixteen times less volume at three times the price, so it is kept only as a long-tail term. Capped on purpose: dispatch should produce leads without defining the brand.",
       "adGroups": [
         {
