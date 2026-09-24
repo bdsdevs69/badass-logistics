@@ -1126,3 +1126,18 @@ consistent: "industrial relocation georgia" splits 136 impressions between
 florida/jacksonville-fl, south-carolina/charleston-sc. The state page wins every
 time; the city page bleeds demand from behind it. That is a merge-and-redirect
 decision, which is Sam's call, not a scheduled run's — flagging, not acting.
+
+## 2026-09-24 — daily health check (Thu)
+
+**Absorption (90d, 14-day grace):** blog GREEN (63 URLs, 0% dead, 15 pending) ·
+dispatch **NEW** (11 of 14 pending — the governor now applies a grace window, so
+the Wednesday "expected RED" no longer shows) · service pillars GREEN 0% ·
+rigging × city GREEN 7% · machinery × city GREEN 5% · plant × city GREEN 25% ·
+cnc × city AMBER 42% (43% yesterday, still the only HOLD) · city hubs GREEN 22% ·
+SITE 681 / 18% dead. No cluster moved to RED.
+
+**Live check:** all six 2026-09-23 guides (waterjet, laser, boring mill, stamping
+press, CMM, oven/furnace) return 200 direct and are in sitemap.xml and llms.txt.
+
+**Ping:** nothing owed — every sitemap URL already submitted at its current
+lastmod. Committed the articles run's uncommitted `data/ping-state.json` update.
