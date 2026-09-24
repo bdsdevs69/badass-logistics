@@ -1141,3 +1141,30 @@ press, CMM, oven/furnace) return 200 direct and are in sitemap.xml and llms.txt.
 
 **Ping:** nothing owed — every sitemap URL already submitted at its current
 lastmod. Committed the articles run's uncommitted `data/ping-state.json` update.
+
+## 2026-09-24 — articles run (Thu)
+
+**Gate:** blog GREEN (63 URLs, 0% dead, 15 pending) — cleared to publish. Queue
+deep enough (21 todo), no refill needed. cnc × city still AMBER 42% (untouched).
+
+**Shipped (6):** how-to-move-a-conveyor-system · how-to-move-a-robotic-work-cell ·
+how-to-move-a-packaging-line · how-to-move-an-extruder ·
+rigging-load-charts-explained · moving-machinery-through-a-tight-plant. All pass
+check-content + check-uniqueness (top overlap ≤1.2%), full `node build.js` green,
+all six 200 live, in sitemap.xml + llms.txt, Article + FAQPage schema parse.
+IndexNow + Google sitemap pinged.
+
+**Dropped:** what-is-a-lift-plan — writer found `what-is-a-critical-lift` already
+owns the intent (a lift-plan contents section + 2 FAQs on the exact queries). Replaced
+with moving-machinery-through-a-tight-plant. If lift-plan queries show up in GSC,
+deepen the critical-lift post rather than splitting.
+
+**Reviewer:** 5 SHIP, 1 SHIP-WITH-EDITS. tight-plant reused the survey post's
+"42-inch door measures 38–39" example and its base/skates/forklift floor-load
+paragraph; cut both to a link + the tight-access-specific point before build.
+Verified: extruder L/D 20:1–36:1 accurate (a physical spec, not a %/price);
+chain-hoist headroom 12–18 in. holds for ½–2 ton hoists; robot mastering /
+encoder-battery / light-curtain safe-distance claims correct. Nothing held.
+
+**Not done:** Track B (no time pressure, publishing gate was open). Commit used
+explicit paths, not `git add -A`.
