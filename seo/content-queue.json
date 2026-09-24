@@ -435,7 +435,8 @@
         "services/plant-relocation"
       ],
       "hero": "loads/load-lowboy-warehouse.jpg",
-      "status": "todo"
+      "status": "done",
+      "shipped": "2026-09-24"
     },
     {
       "slug": "how-to-move-a-robotic-work-cell",
@@ -448,7 +449,8 @@
         "services/millwright-services"
       ],
       "hero": "loads/enclosed-trailer-machinery-loaded.jpg",
-      "status": "todo"
+      "status": "done",
+      "shipped": "2026-09-24"
     },
     {
       "slug": "how-to-move-a-packaging-line",
@@ -461,7 +463,8 @@
         "services/plant-relocation"
       ],
       "hero": "loads/load-machine-loadout.jpg",
-      "status": "todo"
+      "status": "done",
+      "shipped": "2026-09-24"
     },
     {
       "slug": "how-to-move-an-extruder",
@@ -474,7 +477,8 @@
         "services/millwright-services"
       ],
       "hero": "loads/load-machine-loadout.jpg",
-      "status": "todo"
+      "status": "done",
+      "shipped": "2026-09-24"
     },
     {
       "slug": "rigging-load-charts-explained",
@@ -488,7 +492,8 @@
         "blog/what-is-a-critical-lift"
       ],
       "hero": "rigging-crane.jpg",
-      "status": "todo"
+      "status": "done",
+      "shipped": "2026-09-24"
     },
     {
       "slug": "how-to-calculate-rigging-capacity",
@@ -516,7 +521,8 @@
         "blog/what-is-a-critical-lift"
       ],
       "hero": "rigging-crane.jpg",
-      "status": "todo"
+      "status": "dropped",
+      "note": "2026-09-24: intent already owned by blog/what-is-a-critical-lift (lift-plan section + FAQ). Deepen that post instead of a near-duplicate."
     },
     {
       "slug": "moving-machinery-through-a-tight-plant",
@@ -530,7 +536,8 @@
         "services/heavy-lift-rigging"
       ],
       "hero": "loads/load-lowboy-warehouse.jpg",
-      "status": "todo"
+      "status": "done",
+      "shipped": "2026-09-24"
     },
     {
       "slug": "floor-loading-for-machinery",

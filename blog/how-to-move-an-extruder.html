@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Move a Plastic Extruder Without Wrecking the Line | Badass Logistics</title>
+<meta name="description" content="How to move a plastic extruder: why the screw travels separately from the barrel, protecting heater bands and thermocouples, and realigning the line on reinstall.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#141414">
+<link rel="canonical" href="https://badasslogistics.com/blog/how-to-move-an-extruder">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to Move a Plastic Extruder Without Wrecking the Line">
+<meta property="og:description" content="How to move a plastic extruder: why the screw travels separately from the barrel, protecting heater bands and thermocouples, and realigning the line on reinstall.">
+<meta property="og:url" content="https://badasslogistics.com/blog/how-to-move-an-extruder">
+<meta property="og:image" content="https://badasslogistics.com/assets/img/loads/load-machine-loadout.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Move a Plastic Extruder Without Wrecking the Line">
+<meta name="twitter:description" content="How to move a plastic extruder: why the screw travels separately from the barrel, protecting heater bands and thermocouples, and realigning the line on reinstall.">
+<meta name="twitter:image" content="https://badasslogistics.com/assets/img/loads/load-machine-loadout.jpg">
+<link rel="sitemap" type="application/xml" href="https://badasslogistics.com/sitemap.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Architects+Daughter&family=Barlow:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Architects+Daughter&family=Barlow:wght@400;500;600;700&display=swap"></noscript>
+<link rel="icon" href="../assets/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+<link rel="preload" as="image" href="../assets/img/loads/load-machine-loadout.jpg" fetchpriority="high">
+<link rel="stylesheet" href="../css/styles.css">
+<style>
+  .blog-hero { padding:60px 0 30px; border-bottom:3px solid var(--ink); background:var(--paper,#f7f4ea); }
+  .post { max-width:820px; margin:0 auto; }
+  .post .meta { font-family:"Barlow",sans-serif; font-weight:600; font-size:14px; letter-spacing:.5px; text-transform:uppercase; color:var(--yellow-deep); margin-bottom:10px; }
+  .post-body h2 { font-family:"Anton",sans-serif; font-size:30px; margin:38px 0 12px; line-height:1.15; }
+  .post-body h3 { font-size:22px; margin:26px 0 8px; }
+  .post-body p, .post-body li { font-size:18px; line-height:1.7; }
+  .post-body ul { margin:10px 0 10px 22px; }
+  .post-body li { margin-bottom:7px; }
+  .post-body a { color:var(--yellow-deep); text-decoration:underline; font-weight:600; }
+  .keyfacts { border:3px solid var(--ink); box-shadow:var(--shadow); background:var(--white); padding:22px 26px; margin:26px 0; }
+  .keyfacts h3 { margin-top:0; }
+  .post-img { width:100%; border:3px solid var(--ink); box-shadow:var(--shadow); margin:8px 0 6px; display:block; }
+  .blog-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:22px; margin-top:30px; }
+  .blog-card { border:3px solid var(--ink); box-shadow:var(--shadow); background:var(--white); text-decoration:none; color:var(--ink); display:flex; flex-direction:column; overflow:hidden; transition:transform .08s; }
+  .blog-card:hover { transform:translate(-2px,-2px); }
+  .blog-card .thumb { height:160px; background-size:cover; background-position:center; border-bottom:3px solid var(--ink); }
+  .blog-card .pad { padding:18px 20px 22px; }
+  .blog-card .cat { font-family:"Barlow",sans-serif; font-weight:700; font-size:12px; letter-spacing:1px; text-transform:uppercase; color:var(--yellow-deep); }
+  .blog-card h3 { font-family:"Anton",sans-serif; font-size:21px; line-height:1.2; margin:6px 0 8px; }
+  .blog-card p { font-size:15px; opacity:.85; margin:0; }
+  .related { border-top:3px solid var(--ink); margin-top:46px; padding-top:24px; }
+  .related a { display:inline-block; margin:0 10px 10px 0; background:var(--ink); color:var(--white); padding:8px 14px; box-shadow:3px 3px 0 var(--yellow-deep); text-decoration:none; font-weight:700; font-size:15px; }
+  .related a:hover { background:var(--yellow-deep); color:var(--ink); }
+  .tldr { border:3px solid var(--ink); background:var(--yellow,#ffd21e); box-shadow:var(--shadow); padding:18px 24px; margin:6px 0 30px; }
+  .tldr-tag { display:block; font-size:14px; letter-spacing:1px; text-transform:uppercase; opacity:.75; margin-bottom:4px; }
+  .tldr p { font-size:19px; line-height:1.6; font-weight:600; margin:0; }
+  .post-body figure { margin:26px 0; }
+  .post-body figure img { width:100%; height:auto; border:3px solid var(--ink); box-shadow:var(--shadow); display:block; }
+  .post-body figcaption { font-family:"Barlow",sans-serif; font-size:14px; opacity:.72; margin-top:8px; font-style:italic; }
+  .post-body .takeaways { border-left:6px solid var(--yellow-deep); background:var(--paper,#f7f4ea); padding:16px 22px; margin:24px 0; }
+  .post-body .takeaways h3 { margin:0 0 8px; font-size:18px; text-transform:uppercase; letter-spacing:.5px; }
+  .post-body .takeaways li { margin-bottom:6px; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Move a Plastic Extruder Without Wrecking the Line",
+  "description": "How to move a plastic extruder: why the screw travels separately from the barrel, protecting heater bands and thermocouples, and realigning the line on reinstall.",
+  "image": [
+    "https://badasslogistics.com/assets/img/loads/load-machine-loadout.jpg"
+  ],
+  "datePublished": "2026-09-24",
+  "dateModified": "2026-09-24",
+  "wordCount": 2019,
+  "articleSection": "Machinery Moving",
+  "inLanguage": "en-US",
+  "author": {
+    "@type": "Organization",
+    "name": "Badass Logistics",
+    "url": "https://badasslogistics.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Badass Logistics",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://badasslogistics.com/assets/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://badasslogistics.com/blog/how-to-move-an-extruder"
+  },
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".tldr",
+      ".lead"
+    ]
+  },
+  "keywords": "extruder moving, plastic extruder relocation, extrusion line rigging, extruder screw removal, extruder installation, extrusion line alignment"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://badasslogistics.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://badasslogistics.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "How to Move a Plastic Extruder Without Wrecking the Line",
+      "item": "https://badasslogistics.com/blog/how-to-move-an-extruder"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you have to remove the screw before moving an extruder?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, on any move that involves jacking, skating, craning or trailering the machine. The screw is a long, precision-ground shaft — often 20 to 36 times its diameter in length — that has nothing holding it centered inside the barrel once the base is off its mounts. Left inside, it can sag, bind against the bore, or take a shock load that scores the barrel or peens the flights. It comes out on the OEM screw-pulling fixture, travels cradled and supported along its length, and is checked for straightness before it goes back in."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can an extruder be lifted by the barrel or gearbox?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The barrel is not designed to carry a point load in bending, and the gearbox is a precision-cased assembly with its own internal alignment to the barrel centerline that a sling squeeze can throw off. The machine is lifted and jacked from underneath at the base or bedplate, using the OEM's designated lift points or lifting lugs where they exist."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What has to happen to the heater bands and thermocouples before a move?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The barrel gets purged and fully cooled first, since removing bands from a warm barrel causes uneven warping. Heater bands then get removed or protected in place depending on how far the machine is traveling, and every thermocouple lead gets labeled with its zone number before disconnection. A relabeled or swapped thermocouple on reinstall puts the wrong sensor on the wrong control loop, which runs that zone blind on temperature."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the downstream equipment aligned after an extruder move?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It sets to a single centerline running out from the die, not to whatever floor space is available. The calibration table or sizing die, cooling trough, haul-off and cutter are separate rigging items, but once running they are one aligned train — if any piece lands off the extruder's centerline or at the wrong height, the profile will rub, pull crooked or cut off-square, and the fix is re-shimming the whole line rather than a simple adjustment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does an extruder barrel need before you can run resin after reinstall?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Long enough to bring it up to temperature on its normal ramp schedule, not faster. Heating a cold barrel too quickly after a move risks uneven thermal expansion against the screw. The barrel should reach full operating temperature, the screw should turn free with the drive engaged before load, and the line should be confirmed square before resin goes back through the throat."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the most common mistake when moving an extruder?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Leaving the screw inside the barrel during the rig-out. It is the single most expensive failure because a scored bore or a bent screw usually means pulling the screw for rework before the line can restart at all — far more downtime than the extra step of pulling and cradling it separately would have cost."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap"><div>📍 88 locations nationwide &nbsp;·&nbsp; <strong>All 50 states</strong> &nbsp;·&nbsp; Riggers first</div><div><a href="tel:3072841332">📞 (307) 284-1332</a> &nbsp;·&nbsp; <a href="/contact"><strong>Get a Quote</strong></a></div></div></div>
+<header class="site-header"><div class="wrap">
+  <a class="logo" href="/"><span class="brand"><span class="l1">BADASS</span><span class="l2">LOGISTICS</span></span></a>
+  <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+  <nav class="main" id="nav">
+    <a href="/">Home</a>
+    <div class="nav-drop"><a href="/services/rigging">Rigging</a><div class="drop drop-2col"><a href="/services/rigging">Industrial Rigging</a><a href="/services/machinery-moving">Machinery Moving</a><a href="/services/plant-relocation">Plant Relocation</a><a href="/services/machinery-removal">Machinery Removal</a><a href="/services/mri-medical-equipment-rigging">MRI & Medical</a><a href="/services/lab-equipment-movers">Lab & Precision</a><a href="/services/cnc-machine-movers">CNC Machine Movers</a><a href="/services/printing-press-movers">Printing Press Movers</a><a href="/services/crane-services">Crane & Rigging</a><a href="/services/heavy-lift-rigging">Jacking & Skidding</a><a href="/services/millwright-services">Millwright Services</a><a href="/services/forklift-loading-unloading">Loading & Unloading</a><a href="/services/data-center-rigging">Data Center Rigging</a><a href="/services/hvac-chiller-rigging">Chiller & Boiler</a><a href="/services/transformer-generator-rigging">Transformers & Generators</a></div></div>
+    <div class="nav-drop"><a href="/services/project-freight">Project Freight</a><div class="drop"><a href="/services/project-freight">Project Freight</a><a href="/services/container-to-warehouse">Container to Warehouse</a><a href="/services/crating-packing">Crating & Packing</a><a href="/services/dedicated-lanes">Dedicated Lanes & FTL</a></div></div>
+    <a href="/services/truck-dispatch">Truck Dispatch</a>
+    <a href="/locations">Locations</a>
+    <a href="/blog/">Blog</a>
+    <a href="/about">About</a>
+    <a class="btn" style="font-size:14px;padding:9px 16px;box-shadow:3px 3px 0 var(--ink)" href="/contact">Get a Quote</a>
+  </nav>
+</div></header>
+
+<div class="wrap breadcrumb"><a href="/">Home</a> / <a href="/">Blog</a> / Machinery Moving</div>
+
+<section class="page-hero photo" style="background-image:url('../assets/img/loads/load-machine-loadout.jpg')"><div class="wrap">
+  <span class="section-tag hand">// machinery moving</span>
+  <h1>How to Move a Plastic Extruder Without Wrecking the Line</h1>
+  <p class="lead">The barrel is not the fragile part. The screw is. Here is why it comes out first and travels on its own, and what the rest of the line needs before it runs again.</p>
+</div>
+  <span class="annot hand tag warn a1">FIELD GUIDE</span>
+  <span class="annot hand a4">BY THE CREW ✓</span>
+</section>
+
+<section class="notes-bg">
+  <span class="bgnote" style="top:6%;right:4%;transform:rotate(-4deg)">REAL LOADS — REAL NUMBERS</span>
+  <span class="bgnote" style="top:38%;right:6%;transform:rotate(3deg)">NO FLUFF, JUST SPECS</span>
+  <span class="bgnote" style="top:70%;right:4%;transform:rotate(-3deg)">FROM THE DISPATCH DESK</span>
+  <div class="wrap">
+  <article class="post prose post-body">
+    <p class="meta">Machinery Moving · By the Badass Logistics crew · September 24, 2026</p>
+    
+    <div class="tldr" id="quick-answer">
+      <span class="tldr-tag hand">// quick answer</span>
+      <p>To move a plastic extruder, pull the screw out of the barrel and crate it separately so it never takes a shock load the barrel absorbs, then remove heater bands and thermocouples, disconnect the die and downstream equipment as its own set of rigging items, and reinstall with the barrel, gearbox and downstream line realigned to a single centerline before the screw goes back in.</p>
+    </div>
+    <p>An extruder does not look like much to move. It is a long, low machine — a feed throat, a barrel with heater bands clamped along it, a gearbox and drive at one end, a die at the other — sitting on a base that looks no more complicated than a lathe bed. Crews who have not moved one before treat it that way and rig it as one long box. What they miss is that there is a precision-ground screw living inside that barrel, running clearances measured in thousandths against the bore, and that screw does not tolerate being dragged, dropped, or left inside the barrel while the whole assembly gets walked across a shop floor.</p>
+
+<p>The barrel survives handling that would ruin the screw. That single fact is what an extruder move is actually organized around, and it is the piece plant engineers who have only moved presses or CNC machines tend to underestimate.</p>
+
+<h2>Why does the screw travel separately from the barrel?</h2>
+<p>Because the screw is a long, slender, precision-ground shaft, and a barrel is a short, thick-walled tube — and length-to-diameter is the whole problem. Extruder screws commonly run 20 to 36 times their diameter in length (a 30:1 L/D screw on a 3.5-inch machine is over eight feet of hardened steel with flights machined to a tight clearance against the bore), which makes them behave like a long unsupported beam any time they are picked up, set down, or ride in a trailer. Left inside the barrel during a rig-out, the screw has nothing holding it centered once the machine is off its mounts and being jacked, skated or craned — it can sag under its own weight, bind against the bore, or take a shock load through the barrel wall that peens the flights or scores the bore surface. Either one shows up later as inconsistent melt pressure and a screw that has to be pulled and reworked within months of restart.</p>
+<p>So the screw comes out before the barrel goes anywhere. It is pulled straight out the back of the barrel using the machine's own screw-pulling fixture or an extension rig built for the length, supported along its length as it comes out rather than let cantilever off the end, and then cradled — not just laid on the trailer deck, but supported in a purpose-built cradle or V-blocks at multiple points so it cannot bow. Flights get wrapped and the shaft gets rust preventive the moment it is exposed, because bare tool steel sitting in a trailer overnight will flash-rust in the wrong humidity. It travels as its own crated item, and it is the first thing checked for straightness with a dial indicator when it comes back out at the new site, before it goes anywhere near the barrel.</p>
+
+<h2>What has to be done to the barrel and heater bands before the machine is rigged?</h2>
+<p>The barrel gets purged and cooled, the heater bands come off or get protected in place, and every thermocouple lead gets labeled before anything is disconnected. None of that is optional and none of it is rigging work — it is process and electrical work that has to be finished before the crew touches the machine.</p>
+<ul>
+  <li><strong>Purge the barrel.</strong> Run the resin out, especially anything filled, glass-reinforced or corrosive, so the barrel is not shipping with material solidifying inside it. A barrel purged clean also weighs and balances the way the manual says it should.</li>
+  <li><strong>Let it cool fully.</strong> A barrel that is still warm when heater bands come off will warp unevenly. Cool it on its own schedule, not the move's schedule.</li>
+  <li><strong>Remove or protect the heater bands.</strong> Band heaters clamp directly to the barrel OD in zones, each wired to its own thermocouple and controller channel. On a short in-plant move, some crews leave them clamped and just protect the leads; on any move where the barrel is craned or trailered, pull them. A heater band crushed under a strap is a zone the machine cannot run without.</li>
+  <li><strong>Label every thermocouple.</strong> Each barrel zone has its own thermocouple feeding its own control loop. Tag each lead with its zone number before disconnecting — not after — because a relabeled thermocouple on reinstall puts the wrong sensor on the wrong heater zone, and the control system will run that zone blind.</li>
+  <li><strong>Cap the feed throat and any vent ports.</strong> Vented extruders have a degassing port partway down the barrel; it gets capped so debris and moisture cannot get in during transit.</li>
+  <li><strong>Disconnect the die.</strong> The die and any breaker plate or screen changer come off as their own items, faces protected, and travel separately — they are precision-machined flow surfaces, not structural parts of the barrel.</li>
+</ul>
+
+<figure>
+  <img class="post-img" src="../assets/img/loads/load-machine-loadout.jpg" alt="Industrial machine rigged and loaded out of a plant" loading="lazy" width="800" height="600">
+  <figcaption class="hand" style="font-size:16px;opacity:.8;">Screw out, barrel cooled and capped, heater bands protected — then the base gets picked.</figcaption>
+</figure>
+
+<h2>How is the extruder base rigged out of the plant?</h2>
+<p>From underneath, at the base or bedplate, the same rule that governs any long precision machine — the barrel housing, the gearbox casing and the die carry no rigging load. Most extruders sit on a fabricated steel base that runs the full length of the machine, sometimes with the gearbox and drive motor on their own sub-base bolted to the main one. That base is the lift and jack point.</p>
+<p>On the floor, the same <a href="jacking-and-skidding-explained">jacking and skidding</a> approach used on any long, low machine tool applies: toe jacks under the base, machinery skates, and the machine walked out on plate rather than dragged. Where a crane pick is needed to clear the barrel over racking or a mezzanine edge, the sling points go on the base or on lifting lugs the OEM cast or welded in for exactly this — never around the barrel itself, which is not designed to carry a point load in bending, and never around the gearbox, which is a precision-cased assembly with its own internal alignment to the barrel centerline that a squeeze from a sling can throw off.</p>
+<p>Where the extruder is long enough that it needs two picks or two sets of skates to move as a rigid unit, the crew treats it as one continuous beam under load — supported near both ends and near the center, not just at the ends, because an unsupported midspan on a barrel this length can flex enough to matter even without the screw inside it.</p>
+
+<div class="keyfacts">
+  <h3>What the site walk has to capture</h3>
+  <ul>
+    <li>Barrel length, screw L/D and overall machine length with the die and screen changer attached</li>
+    <li>Base weight and center of gravity from the OEM manual — gearbox end is usually the heavy end</li>
+    <li>OEM lift and jack points on the base, and whether a screw-pulling fixture exists on site</li>
+    <li>Number of heater zones and thermocouples, for labeling and reconnection planning</li>
+    <li>Downstream equipment train: puller, cooling trough or tank, cutter, and any calibration sizing tooling</li>
+    <li>Route dimensions — barrel length is often the dimension that decides whether it splits at all</li>
+    <li>New site slab condition, power feed for the drive and heater load, and floor space for the full downstream run</li>
+  </ul>
+</div>
+
+<h2>What happens to the downstream equipment?</h2>
+<p>It moves as its own train of machines, and it gets planned as carefully as the extruder itself, because an extrusion line is only as good as its alignment from the die to the last piece of downstream tooling. A typical line downstream of the extruder runs a calibration table or sizing die, a vacuum or water cooling trough, a haul-off or puller, and a cutter or saw, sometimes followed by a coiler or stacker. Every one of those is a separate rigging item — most roll on their own casters or skids and move as ordinary <a href="../services/machinery-moving">machinery moving</a> work — but they are not independent machines once they are running. They are all set to a single line centerline running out from the die.</p>
+<p>That is the detail crews miss when they move the extruder and treat the downstream equipment as an afterthought to be dealt with once the press is back in place. If the puller, the cooling trough and the cutter go back down on the new floor at slightly different heights or off the extruder's centerline by even a modest amount, the profile coming off the die will not track straight through the line — it will rub a trough wall, pull crooked through the haul-off, or cut off-square. The fix at that point is not a bolt adjustment, it is re-shimming and re-aligning a train of machines that should have gone down on a laid-out centerline from the start.</p>
+
+<h2>How is the extruder aligned and started up at the new plant?</h2>
+<p>The base goes down first, leveled to the OEM tolerance the same way any precision machine bed is leveled — pad by pad, checked across the full length, not just at two points. Because the barrel is long, a base that is level at both ends but slightly bowed in the middle will still put the barrel and gearbox out of true relative to each other.</p>
+<p>Barrel and gearbox alignment comes next, and this is where <a href="../services/millwright-services">millwright</a> work takes over from rigging: the barrel centerline gets checked against the gearbox output shaft and coupling alignment is verified, and only once that is confirmed does the screw go back in — supported through the insertion, checked for free rotation by hand before power reaches the drive.</p>
+<p>Then the line gets strung out. The die goes on, downstream equipment lands on the laid-out centerline, and heights get set so the profile runs straight through the trough, the puller and the cutter. Heater bands go back on in their original zones — this is where labeled thermocouples pay off, because a swapped lead means a zone reading the wrong temperature and either scorching resin or running too cold to melt it. The barrel comes up to temperature on its normal ramp schedule, not hurried, because heating a cold barrel too fast risks uneven expansion against the screw. Only after the barrel is at temperature, the screw turns free, and the line is confirmed square does resin go back through the throat.</p>
+
+<h2>What goes wrong most often?</h2>
+<p>Three things, in roughly this order of how expensive they are to fix. Leaving the screw in the barrel during the move, so it takes a shock load and comes out scored or bent — a screw that gets pulled for rework before the line ever restarts. Losing track of which thermocouple belongs to which heater zone, which does not stop the machine from running but makes it run blind on temperature control until someone traces every lead by hand. And setting the downstream equipment down without reference to the extruder's centerline, which does not show up until the first profile comes off the die and will not track straight through the trough. All three are avoided by treating the screw, the heater zones and the downstream train as their own planned items on the site walk, the same discipline that governs any <a href="plant-relocation-checklist">plant relocation</a>.</p>
+
+<div class="takeaways">
+  <h3>Bottom line</h3>
+  <ul>
+    <li>Pull the screw before the barrel moves. It is a long precision shaft, not a rigid part of the base, and it does not survive shock loading the barrel absorbs fine.</li>
+    <li>Purge and cool the barrel, then remove or protect the heater bands and label every thermocouple by zone before disconnecting.</li>
+    <li>Lift and jack from the base only — never the barrel housing, gearbox casing or die.</li>
+    <li>Downstream equipment — trough, puller, cutter — sets to the extruder's centerline, not to whatever floor space is open.</li>
+    <li>Level the base full-length, align barrel to gearbox before the screw goes back in, and bring the barrel to temperature on its normal ramp before running resin.</li>
+  </ul>
+</div>
+
+<p>Moving an extruder, a full extrusion line, or a plastics floor with multiple lines? That is core <a href="../services/machinery-moving">machinery moving</a> and <a href="../services/millwright-services">millwright</a> work, with the same cost drivers covered in <a href="how-much-do-machinery-movers-cost">what machinery movers charge for</a>. Send the line list with screw dimensions and the route out of the building and we will build the plan — <a href="../contact">start here</a>.</p>
+    <div class="faq" style="margin-top:40px;">
+      <h2>Frequently asked questions</h2>
+      
+    <details><summary>Do you have to remove the screw before moving an extruder?</summary><div class="a">Yes, on any move that involves jacking, skating, craning or trailering the machine. The screw is a long, precision-ground shaft — often 20 to 36 times its diameter in length — that has nothing holding it centered inside the barrel once the base is off its mounts. Left inside, it can sag, bind against the bore, or take a shock load that scores the barrel or peens the flights. It comes out on the OEM screw-pulling fixture, travels cradled and supported along its length, and is checked for straightness before it goes back in.</div></details>
+    <details><summary>Can an extruder be lifted by the barrel or gearbox?</summary><div class="a">No. The barrel is not designed to carry a point load in bending, and the gearbox is a precision-cased assembly with its own internal alignment to the barrel centerline that a sling squeeze can throw off. The machine is lifted and jacked from underneath at the base or bedplate, using the OEM's designated lift points or lifting lugs where they exist.</div></details>
+    <details><summary>What has to happen to the heater bands and thermocouples before a move?</summary><div class="a">The barrel gets purged and fully cooled first, since removing bands from a warm barrel causes uneven warping. Heater bands then get removed or protected in place depending on how far the machine is traveling, and every thermocouple lead gets labeled with its zone number before disconnection. A relabeled or swapped thermocouple on reinstall puts the wrong sensor on the wrong control loop, which runs that zone blind on temperature.</div></details>
+    <details><summary>How is the downstream equipment aligned after an extruder move?</summary><div class="a">It sets to a single centerline running out from the die, not to whatever floor space is available. The calibration table or sizing die, cooling trough, haul-off and cutter are separate rigging items, but once running they are one aligned train — if any piece lands off the extruder's centerline or at the wrong height, the profile will rub, pull crooked or cut off-square, and the fix is re-shimming the whole line rather than a simple adjustment.</div></details>
+    <details><summary>How long does an extruder barrel need before you can run resin after reinstall?</summary><div class="a">Long enough to bring it up to temperature on its normal ramp schedule, not faster. Heating a cold barrel too quickly after a move risks uneven thermal expansion against the screw. The barrel should reach full operating temperature, the screw should turn free with the drive engaged before load, and the line should be confirmed square before resin goes back through the throat.</div></details>
+    <details><summary>What is the most common mistake when moving an extruder?</summary><div class="a">Leaving the screw inside the barrel during the rig-out. It is the single most expensive failure because a scored bore or a bent screw usually means pulling the screw for rework before the line can restart at all — far more downtime than the extra step of pulling and cradling it separately would have cost.</div></details>
+    </div>
+    <div class="related">
+      <strong style="display:block;margin-bottom:12px;font-family:'Anton',sans-serif;font-size:20px;">Keep reading</strong>
+      <a href="../services/machinery-moving">Machinery Moving & Installation</a>
+      <a href="../services/millwright-services">Millwright Services</a>
+      <a href="how-to-move-an-injection-molding-machine">How to Move an Injection Molding Machine</a>
+      <a href="jacking-and-skidding-explained">Jacking and Skidding Explained</a>
+    </div>
+  </article>
+</div></section>
+
+<div class="cta-band"><div class="wrap" style="padding-top:56px;padding-bottom:56px;text-align:center;">
+  <h2>Got something that needs rigging?</h2>
+  <p>Tell us what's moving, where it's going, and the deadline. We'll plan the rest.</p>
+  <a class="btn dark" href="../contact">Get a Free Quote</a>
+</div></div>
+<footer><div class="wrap"><div class="cols">
+  <div><h4>Badass Logistics</h4><p style="opacity:.85;max-width:300px;">Riggers first. Every kind of industrial rigging — machinery moving, plant relocation, MRI and medical equipment, crane lifts, millwright work — plus project freight for the jobs we rig, and truck dispatch for fleets of 4+ trucks.</p></div>
+  <div><h4>Rigging Services</h4><a href="/services/rigging">Industrial Rigging</a><a href="/services/machinery-moving">Machinery Moving</a><a href="/services/plant-relocation">Factory & Plant Relocation</a><a href="/services/machinery-removal">Machinery Removal & Decommissioning</a><a href="/services/mri-medical-equipment-rigging">Medical Equipment & MRI Rigging</a><a href="/services/lab-equipment-movers">Lab & Precision Equipment Movers</a><a href="/services/cnc-machine-movers">CNC Machine Movers</a><a href="/services/printing-press-movers">Printing Press Movers</a><a href="/services/crane-services">Crane & Rigging Services</a><a href="/services/heavy-lift-rigging">Jacking, Skidding & Gantry Lifts</a><a href="/services/millwright-services">Millwright & Machine Installation</a><a href="/services/forklift-loading-unloading">Machinery Loading & Unloading</a><a href="/services/data-center-rigging">Data Center Rigging</a><a href="/services/hvac-chiller-rigging">Chiller, Boiler & HVAC Rigging</a><a href="/services/transformer-generator-rigging">Transformer & Generator Moving</a></div>
+  <div><h4>Project Freight</h4><a href="/services/project-freight">Project Freight</a><a href="/services/container-to-warehouse">Container to Warehouse</a><a href="/services/crating-packing">Industrial Crating & Packing</a><a href="/services/dedicated-lanes">Dedicated Lanes & Project FTL</a><h4 style="margin-top:22px;">Fleets</h4><a href="/services/truck-dispatch">Truck Dispatch for Trucking Companies</a></div>
+  <div><h4>Company</h4><a href="/about">About Us</a><a href="/locations">Locations</a><a href="/blog/">Blog</a><a href="/trailer-selector">Trailer Selector</a><a href="/contact">Contact</a><a href="/privacy">Privacy</a></div>
+</div><div class="covstrip">Coverage: <a href="/locations/texas">Texas</a> · <a href="/locations/california">California</a> · <a href="/locations/florida">Florida</a> · <a href="/locations/georgia">Georgia</a> · <a href="/locations/illinois">Illinois</a> · <a href="/locations/ohio">Ohio</a> · <a href="/locations/pennsylvania">Pennsylvania</a> · <a href="/locations/new-york">New York</a> · <a href="/locations"><strong>All 88 locations →</strong></a></div><div class="footer-nap"><span class="nap-name">Badass Logistics</span><span>1001 S Main St, STE 500, Kalispell, MT 59901</span><span><a href="tel:3072841332">(307) 284-1332</a></span><span><a href="mailto:info@badasslogistics.com">info@badasslogistics.com</a></span></div>
+<div class="legal"><span>© 2022–2026 Badass Logistics. All rights reserved.</span><span class="hand">riggers first. made to move heavy things.</span></div></div></footer>
+
+</body>
+</html>
