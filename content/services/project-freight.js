@@ -137,7 +137,7 @@ module.exports = {
     items: ['Manufacturers installing new lines', 'Plant relocations &amp; consolidations', 'Importers of industrial machinery', 'General contractors &amp; EPC firms', 'Data center build-outs', 'Hospital &amp; imaging projects', 'Energy &amp; utility projects', 'Equipment OEMs &amp; dealers', 'Food &amp; beverage expansions', 'Warehouse &amp; automation installs'],
   },
   faq: [
-    { q: 'What is project freight, and is it the same as project cargo?', a: 'Yes — project freight and project cargo are the same thing said two ways: freight planned and managed as part of one project, with containers, crated equipment, machines, and materials moved in a set sequence to a set schedule instead of booked one shipment at a time. See our guide to <a href="/blog/what-is-project-cargo">project cargo</a>.' },
+    { q: 'What is project freight, and is it the same as project cargo?', a: 'Yes — project freight and project cargo are the same thing said two ways: freight planned and managed as part of one project, with containers, crated equipment, machines, and materials moved in a set sequence to a set schedule instead of booked one shipment at a time.' },
     { q: 'How is project freight different from regular freight?', a: 'Regular freight is a single shipment with its own pickup and delivery date. Project freight is one piece of a larger move — a container, a crate, or a truckload that has to land in sequence with everything else on an install schedule, not on its own timeline.' },
     { q: 'Do you take single one-off loads?', a: 'No. We handle project-based moves: relocations, installs, build-outs, and equipment packages with multiple shipments. We don\'t sell spot loads.' },
     { q: 'Do you own the trucks?', a: 'No. Transport runs on our network of licensed broker and carrier partners, coordinated inside the project plan. Our own crews handle the rigging, devanning, and setting.' },
@@ -149,7 +149,7 @@ module.exports = {
   ],
   faqTitle: 'Project freight FAQ',
   guides: [
-    ['what-is-project-cargo', 'What Is Project Cargo?'],
+    ['single-source-plant-relocation-explained', 'Single-Source Plant Relocation, Explained'],
     ['what-is-transloading', 'What Is Transloading?'],
     ['what-is-drayage', 'What Is Drayage?'],
     ['white-glove-freight-and-custom-crating', 'White-Glove Freight &amp; Custom Crating'],

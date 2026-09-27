@@ -84,8 +84,8 @@ module.exports = {
   related: ['transformer-generator-rigging', 'hvac-chiller-rigging', 'crane-services', 'project-freight'],
   guides: [
     ['types-of-rigging', 'Types of Rigging, Explained'],
-    ['how-to-ship-a-generator', 'How to Ship an Industrial Generator'],
-    ['how-to-transport-a-transformer', 'How to Transport a Transformer'],
+    ['how-to-ship-a-generator', 'Generator Rigging: Moving a Standby Generator'],
+    ['how-to-move-a-transformer-into-a-building', 'How to Move a Transformer Into a Building'],
   ],
   ctaBand: { h2: 'Building out or refreshing a data center?', p: 'Send the equipment schedule and the site. We\'ll plan the rigging around the build.' },
 };

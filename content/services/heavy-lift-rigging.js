@@ -109,8 +109,8 @@ module.exports = {
   guides: [
     ['jacking-and-skidding-explained', 'Jacking &amp; Skidding Explained'],
     ['types-of-rigging', 'Types of Rigging, Explained'],
-    ['how-to-transport-a-transformer', 'How to Transport a Transformer'],
-    ['how-to-transport-a-storage-tank', 'How to Transport a Storage Tank'],
+    ['how-to-move-a-transformer-into-a-building', 'How to Move a Transformer Into a Building'],
+    ['how-to-transport-a-storage-tank', 'How to Move a Storage Tank'],
   ],
   ctaBand: { h2: 'Too heavy for the crane to reach?', p: 'Send the load, the building, and where it has to land. We\'ll plan the lift without a hook.' },
 };

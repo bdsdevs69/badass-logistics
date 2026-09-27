@@ -100,8 +100,8 @@ module.exports = {
   related: [
     { h: 'Truck Dispatch for Fleets', u: '../services/truck-dispatch.html' },
     { h: 'Dedicated Lanes &amp; Project FTL', u: '../services/dedicated-lanes.html' },
-    { h: 'How to Ship Industrial Machinery on a Flatbed', u: 'how-to-ship-industrial-machinery-on-a-flatbed.html' },
-    { h: 'Enclosed vs Flatbed Transport', u: 'enclosed-vs-flatbed-transport.html' },
+    { h: 'How to Tarp a Flatbed Load', u: 'how-to-tarp-a-flatbed-load.html' },
+    { h: 'Trailer Selector', u: '../trailer-selector.html' },
     { h: 'Truck Dispatch Services for Small Fleets (4+ Trucks)', u: 'truck-dispatch-for-small-fleets.html' },
   ],
 };

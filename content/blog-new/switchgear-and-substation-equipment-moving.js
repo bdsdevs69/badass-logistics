@@ -48,7 +48,7 @@ module.exports = {
 
 <h2>How is substation equipment set?</h2>
 <p>Outdoor apparatus is a crane job, then a precision job. Breakers, reactors and instrument transformers are picked from the trailer onto their foundations, and the pick is planned around a crane position that can reach every foundation without repositioning more than it has to.</p>
-<p>Transformers are the exception worth calling out: a large unit is usually rolled or jacked and slid into final position on its rails or pads rather than flown into place, because the last few inches need control that a crane does not give. That work — jacks, slide plates, rollers, coming up to the anchor pattern — is covered in more depth in <a href="how-to-transport-a-transformer.html">moving a transformer</a>, and setting one indoors is <a href="../services/transformer-generator-rigging.html">its own service</a>. E-houses are a single pick on a rigging study, usually with the building's own designated lifting lugs and a spreader sized to keep the walls from racking.</p>
+<p>Transformers are the exception worth calling out: a large unit is usually rolled or jacked and slid into final position on its rails or pads rather than flown into place, because the last few inches need control that a crane does not give. That work — jacks, slide plates, rollers, coming up to the anchor pattern — is covered in more depth in <a href="how-to-move-a-transformer-into-a-building.html">moving a transformer into a building</a>, and setting one indoors is <a href="../services/transformer-generator-rigging.html">its own service</a>. E-houses are a single pick on a rigging study, usually with the building's own designated lifting lugs and a spreader sized to keep the walls from racking.</p>
 
 <div class="keyfacts">
   <h3>What the site walk has to capture</h3>
@@ -101,7 +101,7 @@ module.exports = {
   related: [
     { h: 'Transformer & Generator Rigging', u: '../services/transformer-generator-rigging.html' },
     { h: 'Millwright Services', u: '../services/millwright-services.html' },
-    { h: 'How to Transport a Transformer', u: 'how-to-transport-a-transformer.html' },
+    { h: 'How to Move a Transformer Into a Building', u: 'how-to-move-a-transformer-into-a-building.html' },
     { h: 'Jacking and Skidding Explained', u: 'jacking-and-skidding-explained.html' },
   ],
 };

@@ -79,7 +79,7 @@ module.exports = {
   related: [
     { h: 'Jacking, Skidding &amp; Gantry Lifts', u: '../services/heavy-lift-rigging.html' },
     { h: 'What Is a Critical Lift?', u: 'what-is-a-critical-lift.html' },
-    { h: 'How to Transport a Transformer', u: 'how-to-transport-a-transformer.html' },
+    { h: 'How to Move a Transformer Into a Building', u: 'how-to-move-a-transformer-into-a-building.html' },
     { h: 'Get a Quote', u: '../contact.html' },
   ],
 };

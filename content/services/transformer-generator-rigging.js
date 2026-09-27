@@ -20,7 +20,7 @@ module.exports = {
     paragraphs: [
       'A large transformer isn\'t just heavy. Its core and windings are sensitive to shock, it may ship with an impact recorder that the manufacturer will read before accepting it, and it can only be jacked and lifted from specific points built for the purpose. Lift from the tank wall or jack from the wrong spot and the damage may not show until testing — or worse, until it\'s energized.',
       'Generators and switchgear bring their own problems: long enclosures with off-center weight, shipping splits that have to line up perfectly, and pads in tight equipment yards surrounded by things you don\'t want to hit. Our crews plan every set from the manufacturer\'s drawings, weights, and handling instructions, and choose the method that puts the least stress on the equipment and the site.',
-      'Many of these jobs don\'t use a crane at all. A transformer is often rolled off the trailer onto cribbing and <a href="/services/heavy-lift-rigging">jacked and skidded</a> onto its pad. Generators and enclosures in open yards are usually <a href="/services/crane-services">crane lifts</a>. Either way, the same crew runs the plan from the truck to the foundation. For the transport side, see <a href="/blog/how-to-transport-a-transformer">how to transport a transformer</a>.',
+      'Many of these jobs don\'t use a crane at all. A transformer is often rolled off the trailer onto cribbing and <a href="/services/heavy-lift-rigging">jacked and skidded</a> onto its pad. Generators and enclosures in open yards are usually <a href="/services/crane-services">crane lifts</a>. Either way, the same crew runs the plan from the truck to the foundation. For the move-in itself, see <a href="/blog/how-to-move-a-transformer-into-a-building">how to move a transformer into a building</a>.',
     ],
   },
   capabilities: {
@@ -92,8 +92,8 @@ module.exports = {
   related: ['heavy-lift-rigging', 'crane-services', 'data-center-rigging', 'project-freight'],
   guides: [
     ['jacking-and-skidding-explained', 'Jacking &amp; Skidding Explained'],
-    ['how-to-transport-a-transformer', 'How to Transport a Transformer'],
-    ['how-to-ship-a-generator', 'How to Ship an Industrial Generator'],
+    ['how-to-move-a-transformer-into-a-building', 'How to Move a Transformer Into a Building'],
+    ['how-to-ship-a-generator', 'Generator Rigging: Moving a Standby Generator'],
     ['types-of-rigging', 'Types of Rigging, Explained'],
   ],
   ctaBand: { h2: 'Setting a transformer or generator?', p: 'Send the OEM data sheet and the site. We\'ll plan the set from the truck to the pad.' },

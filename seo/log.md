@@ -1331,3 +1331,49 @@ how-to-ship-a-generator 33 · how-to-transport-a-transformer 30 · enclosed-vs-f
 transport 12 · freight-broker-vs-forwarder-vs-3pl 8 · how-to-move-a-press-brake 7 ·
 how-to-move-a-boiler-or-chiller 6. Rewrite-as-rigging vs retire-and-redirect is a
 structural call; not done here. build.js check 8 should also lint legacy blog body.
+
+## 2026-09-27 (Sun) — legacy blog body-prose cleanup (heavy-haul positioning)
+
+Closes the ⚠ flagged above and carried since 2026-09-21. GSC 90d to 2026-09-25 per post,
+recommendation put to Sam, **approved as recommended**:
+
+| post | impr | clk | pos | action |
+|---|---|---|---|---|
+| how-to-transport-a-transformer | 364 | 2 | 8.3 | **retired → /blog/how-to-move-a-transformer-into-a-building** (consolidate, not cannibalise the rigging sibling) |
+| how-to-transport-a-storage-tank | 141 | 0 | 11.7 | rewritten: tank rigging, gas-free, tailing, ringwall set. Gives up "oversize storage tank transport" on purpose |
+| how-to-move-a-press-brake | 109 | 5 | 4.8 | surgical: RGN/permit/escort lines only; title + H2s kept |
+| how-to-ship-a-generator | 100 | 0 | 25.0 | rewritten as "Generator Rigging" (query @30) |
+| what-is-project-cargo | 55 | 0 | 82.3 | **retired → /services/project-freight** (every query heavy-haul shipping @80–95) |
+| how-to-move-a-boiler-or-chiller | 21 | 0 | 6.6 | hero swap (load-oversize-tank.jpg) + expanded ~460 → ~1,200 |
+| freight-broker-vs-forwarder-vs-3pl | 14 | 0 | 20.6 | heavy-haul examples out; broker-vs-3PL and forwarder-vs-3PL H2s |
+| how-to-ship-industrial-machinery-on-a-flatbed | 12 | 0 | 4.8 | **retired → /blog/how-to-prepare-a-machine-for-shipping** |
+| enclosed-vs-flatbed-transport | 4 | 0 | 7.3 | **retired → /trailer-selector** |
+
+- The 5 rewrites were migrated out of build-blog.js into content/blog-new/ with the original `date`
+  and `updated: 2026-09-27`, so check-content/check-uniqueness now see them. All pass; top overlap ≤1.5%.
+- Chains collapsed: what-is-considered-an-oversize-load → /services/project-freight;
+  conestoga-shipping-guide → how-to-load-and-secure-a-conestoga-trailer (exact match).
+- Every source link to the 4 retired posts was repointed (8 service modules, 5 blog modules,
+  build-blog.js, build-service-cities.js). The link walker had been silently relying on remapRetired.
+- Small leaks fixed in place in 5 other legacy posts: prepare-a-machine-for-shipping, what-is-a-millwright,
+  cost-to-move-a-cnc, plant-relocation-checklist (RGN), move-a-lathe. Also fixed "permit thresholds"
+  (conestoga guide) and "Oversized equipment" (transloading).
+- **Reviewer:** press-brake and generator SHIP. Storage-tank shipped with edits (tldr trim, "hauling"
+  keyword). Boiler/chiller was HOLD, now fixed: a CTA said "we'll plan the rig-out, haul, and set"
+  (Badass hauling), two H2s answered crane-vs-skid twice (merged), and a "rated tilt limit" claim couldn't
+  be verified (softened). Broker-vs-3PL was HOLD, now fixed: it said the forwarder *files* the
+  customs entry, but only a licensed customs broker can.
+- **New build.js check 5b:** blog body prose + JSON-LD linted for retired positioning, matched by phrase
+  so real rigging language still passes (hospital/substation escorts, crane street-use permits, ICRA
+  permits, "oversized sleeve"). Run against the pre-fix HTML it catches 8 of the 9 posts; the 9th
+  (boiler) only leaked through a hero filename, which the check deliberately ignores.
+- Build green: 1057 pages, 0 broken, 0 links to retired URLs, sitemap 1046.
+
+**Not done, for Sam / next run:**
+1. `trailer-selector.html` (live, a redirect target) still explains oversize/overweight permits,
+   state permits, escorts and superloads in its body and FAQ schema. It's outside check 5b, which is blog-only.
+2. Reviewer flag: `truck-dispatcher-vs-freight-broker` (June 2026) is written for owner-operators, and it
+   quotes a broker bond dollar figure. `what-is-drayage` quotes per-diem dollar figures. Neither is heavy
+   haul, but both conflict with the no-prices and 4+ truck rules.
+3. The press-brake rewrite stays ~980 words on purpose (best legacy performer). Don't expand it until GSC
+   shows the edit held position.

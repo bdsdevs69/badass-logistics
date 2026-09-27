@@ -93,7 +93,7 @@ module.exports = {
   guides: [
     ['how-to-move-a-boiler-or-chiller', 'How to Move a Boiler or Chiller'],
     ['types-of-rigging', 'Types of Rigging, Explained'],
-    ['how-to-transport-a-storage-tank', 'How to Transport a Storage Tank'],
+    ['how-to-transport-a-storage-tank', 'How to Move a Storage Tank'],
   ],
   ctaBand: { h2: 'Replacing a chiller or rooftop unit?', p: 'Send the old unit, the new unit, and the building. We\'ll find the route and plan the lift.' },
 };

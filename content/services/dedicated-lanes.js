@@ -96,7 +96,7 @@ module.exports = {
   guides: [
     ['dedicated-freight-lanes-explained', 'Dedicated Freight Lanes, Explained'],
     ['ltl-vs-ftl-freight', 'LTL vs FTL Freight'],
-    ['how-to-ship-industrial-machinery-on-a-flatbed', 'How to Ship Industrial Machinery on a Flatbed'],
+    ['how-to-tarp-a-flatbed-load', 'How to Tarp a Flatbed Load'],
   ],
   ctaBand: { h2: 'Got a project with a lot of loads?', p: 'Send the asset list, the sites, and the schedule. We\'ll size the lane and the equipment.' },
 };

@@ -1,5 +1,5 @@
 {
-  "_note": "Retired URLs -> where they now point. build-redirects.js writes a redirect stub (canonical + meta refresh + JS) at each old path. NOTE 2026-09-23: this note used to say the stubs were noindex. They are not, and must not be — noindex plus a canonical is a contradictory instruction and would tell Google to drop the URL rather than pass its signals to the target. The stubs are deliberately indexable so the meta refresh reads as a permanent redirect and the old URL's equity consolidates into the new one. Impressions still logged against a stub in Search Console are the lagging record of a redirect Google has already followed, not evidence that the ranking is being thrown away. GitHub Pages has no server-side 301s; Google treats an instant meta refresh as a permanent redirect. Rules expand at build time: '*' in a key matches a single path segment and is substituted into the target. Heavy haul was retired as a service line in the 2026-09 revamp. 2026-09-21: two trailer URLs were un-retired and rebuilt as dispatch-framed guides because they still rank (1,729 and 543 impressions) and the people searching them are fleet owners choosing trailers, which is the 4+ truck dispatch buyer. The heavy-haul, oversize-permit, pilot-car and superload stubs stay stubbed on purpose: that demand wants a motor carrier. 2026-09-23: the five remaining trailer-name stubs (552 impressions between them) were repointed off the generic pillars and onto the matching dispatch desk built on 2026-09-22 — step deck, RGN/lowboy and Conestoga now have exact-match targets, so sending trailer-shoppers to /services/project-freight was throwing away the match. Same reasoning as the 09-21 note, now that the pages exist. Comparison queries (flatbed-vs-step-deck, rgn-vs-lowboy, drop-deck-vs-flatbed, step-deck-dimensions) stay on /trailer-selector: that is comparison intent, not one-trailer intent. /services/flatbed-transport stays on /services/dedicated-lanes because 'flatbed transport' is someone buying transport, not a fleet owner shopping trailers.",
+  "_note": "Retired URLs -> where they now point. build-redirects.js writes a redirect stub (canonical + meta refresh + JS) at each old path. NOTE 2026-09-23: this note used to say the stubs were noindex. They are not, and must not be — noindex plus a canonical is a contradictory instruction and would tell Google to drop the URL rather than pass its signals to the target. The stubs are deliberately indexable so the meta refresh reads as a permanent redirect and the old URL's equity consolidates into the new one. Impressions still logged against a stub in Search Console are the lagging record of a redirect Google has already followed, not evidence that the ranking is being thrown away. GitHub Pages has no server-side 301s; Google treats an instant meta refresh as a permanent redirect. Rules expand at build time: '*' in a key matches a single path segment and is substituted into the target. Heavy haul was retired as a service line in the 2026-09 revamp. 2026-09-21: two trailer URLs were un-retired and rebuilt as dispatch-framed guides because they still rank (1,729 and 543 impressions) and the people searching them are fleet owners choosing trailers, which is the 4+ truck dispatch buyer. The heavy-haul, oversize-permit, pilot-car and superload stubs stay stubbed on purpose: that demand wants a motor carrier. 2026-09-23: the five remaining trailer-name stubs (552 impressions between them) were repointed off the generic pillars and onto the matching dispatch desk built on 2026-09-22 — step deck, RGN/lowboy and Conestoga now have exact-match targets, so sending trailer-shoppers to /services/project-freight was throwing away the match. Same reasoning as the 09-21 note, now that the pages exist. Comparison queries (flatbed-vs-step-deck, rgn-vs-lowboy, drop-deck-vs-flatbed, step-deck-dimensions) stay on /trailer-selector: that is comparison intent, not one-trailer intent. /services/flatbed-transport stays on /services/dedicated-lanes because 'flatbed transport' is someone buying transport, not a fleet owner shopping trailers. 2026-09-27: four legacy blog posts whose body prose was still heavy-haul (permits, escorts, oversize) were retired per Sam: how-to-transport-a-transformer -> the rigging-framed how-to-move-a-transformer-into-a-building (consolidates its 364 impressions instead of cannibalising the sibling), what-is-project-cargo -> /services/project-freight, how-to-ship-industrial-machinery-on-a-flatbed -> how-to-prepare-a-machine-for-shipping, enclosed-vs-flatbed-transport -> /trailer-selector. Chains that used to land on them were repointed: what-is-considered-an-oversize-load -> /services/project-freight, conestoga-shipping-guide -> the exact-match how-to-load-and-secure-a-conestoga-trailer.",
   "rules": {
     "/services/heavy-haul": "/services/project-freight",
     "/services/heavy-haul/*": "/services/machinery-moving/*",
@@ -20,19 +20,23 @@
     "/blog/texas-oversize-load-permits": "/services/project-freight",
     "/blog/pilot-car-escort-requirements": "/services/project-freight",
     "/blog/what-is-a-superload": "/services/heavy-lift-rigging",
-    "/blog/what-is-considered-an-oversize-load": "/blog/what-is-project-cargo",
+    "/blog/what-is-considered-an-oversize-load": "/services/project-freight",
     "/blog/hot-shot-trucking-explained": "/services/truck-dispatch/hotshot",
     "/blog/flatbed-vs-step-deck-vs-rgn-trailers": "/trailer-selector",
     "/blog/rgn-vs-lowboy-trailers": "/trailer-selector",
     "/blog/step-deck-trailer-dimensions": "/trailer-selector",
     "/blog/drop-deck-vs-flatbed": "/trailer-selector",
-    "/blog/conestoga-shipping-guide": "/blog/how-to-ship-industrial-machinery-on-a-flatbed",
+    "/blog/conestoga-shipping-guide": "/blog/how-to-load-and-secure-a-conestoga-trailer",
     "/blog/how-to-secure-a-load-on-a-flatbed": "/blog/how-to-tarp-a-flatbed-load",
     "/blog/how-to-ship-a-bulldozer": "/services/project-freight",
     "/blog/how-to-ship-an-excavator": "/services/project-freight",
     "/blog/how-to-ship-a-skid-steer": "/services/project-freight",
     "/blog/how-to-transport-a-boat": "/services/project-freight",
     "/blog/how-to-move-a-mobile-home": "/services/project-freight",
-    "/blog/how-to-transport-a-crane": "/services/crane-services"
+    "/blog/how-to-transport-a-crane": "/services/crane-services",
+    "/blog/how-to-transport-a-transformer": "/blog/how-to-move-a-transformer-into-a-building",
+    "/blog/what-is-project-cargo": "/services/project-freight",
+    "/blog/how-to-ship-industrial-machinery-on-a-flatbed": "/blog/how-to-prepare-a-machine-for-shipping",
+    "/blog/enclosed-vs-flatbed-transport": "/trailer-selector"
   }
 }

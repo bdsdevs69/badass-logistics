@@ -142,8 +142,7 @@ offer are the ones listed above.
 
 - [How to Move an MRI Machine: Rigging, Transport & Reinstallation](https://badasslogistics.com/blog/how-to-move-an-mri-machine): Moving an MRI scanner is a rigging job, not a furniture move. Magnet weight, cryogens, shock/tilt sensitivity, tight-access crane-ins, and how the move actually gets done.
 - [How to Transport a CT Scanner Without a Six-Figure Mistake](https://badasslogistics.com/blog/how-to-transport-a-ct-scanner): A CT scanner is heavy, precision-aligned, and worth more than the truck it rides in. Moving one means de-installing to OEM spec, rigging each component out through tight hospital corridors, air-ride transport, and reinstallation with recalibration. Here is the process.
-- [How to Transport a Storage Tank or Pressure Vessel](https://badasslogistics.com/blog/how-to-transport-a-storage-tank): How to transport a storage tank or pressure vessel: diameter-driven oversize permits, trailer and cradle choice, saddle support, escorts, and superload routing.
-- [How to Transport a Transformer: Trailer, Permits, and Rigging by Weight Class](https://badasslogistics.com/blog/how-to-transport-a-transformer): Transformers ship upright on flatbeds, step-decks, RGNs, or multi-axle trailers by weight, with impact recorders, tilt limits, and rigging planned at both ends.
+- [How to Move a Storage Tank: Rigging, Setting & Transport](https://badasslogistics.com/blog/how-to-transport-a-storage-tank): How to move a storage tank: crane picks and spreader bars, tailing a vertical tank upright, purging before rigging, and setting and anchoring it on a new foundation.
 - [Machine Leveling and Alignment After a Move (and Why It Matters)](https://badasslogistics.com/blog/machine-leveling-and-alignment): Why a machine cuts bad parts until it's re-leveled to the builder's spec after a move: bed twist, circularity, foundations, thermal drift, and test cuts.
 - [What Is a Millwright — and Where They Fit in a Machine Move](https://badasslogistics.com/blog/what-is-a-millwright): What millwrights do — install, level, align, dismantle, and reassemble precision machinery — how the trade differs from rigging, and when a move needs both.
 
@@ -151,7 +150,7 @@ offer are the ones listed above.
 
 - [How Much Do Machinery Movers Cost? What Actually Drives the Price](https://badasslogistics.com/blog/how-much-do-machinery-movers-cost): What drives machinery moving costs — weight, site access, rigging method, disconnects, distance, crating, and installation — and how to get a real quote.
 - [What Drives the Cost of Moving a CNC Machine?](https://badasslogistics.com/blog/how-much-does-it-cost-to-move-a-cnc-machine): There is no flat rate to move a CNC machine — the price is built from weight and size, rigging complexity at both ends, distance, transport type, and prep. Here are the levers that decide the number, and how to get an accurate quote.
-- [How to Move an Industrial Boiler or Chiller](https://badasslogistics.com/blog/how-to-move-a-boiler-or-chiller): How to move an industrial boiler or chiller: weight and rigging, roof and mechanical-room access, trailer choice, upright handling, and reconnection.
+- [How to Move an Industrial Boiler or Chiller](https://badasslogistics.com/blog/how-to-move-a-boiler-or-chiller): How to move an industrial boiler or chiller: tube-bundle and refractory protection, water/glycol drain, mechanical-room access, and setting for reconnection.
 - [How to Move a CMM: Granite Table & Air Bearing Care](https://badasslogistics.com/blog/how-to-move-a-cmm): How to move a coordinate measuring machine: granite table lifting, air bearing protection, shock monitoring in transit, environment, and requalification.
 - [How to Move an Industrial Air Compressor](https://badasslogistics.com/blog/how-to-move-a-compressor): Moving an industrial air compressor: depressurizing, draining oil and condensate, rigging the skid, receiver tanks and dryers, and reconnecting plant air cleanly.
 - [How to Move a Conveyor System Without Losing the Layout](https://badasslogistics.com/blog/how-to-move-a-conveyor-system): How to move a conveyor system: mapping every span before dismantling, tagging sections and drives, handling gearboxes, and structural and mezzanine work.
@@ -160,7 +159,7 @@ offer are the ones listed above.
 - [How to Move a Metal Lathe Without Twisting the Bed](https://badasslogistics.com/blog/how-to-move-a-lathe): How to move a metal lathe without twisting the bed: weights, rigging points, tailstock and chuck prep, skating, air-ride vs flatbed, and re-leveling to spec.
 - [How to Move a Milling Machine (Knee Mills, Bed Mills & VMCs)](https://badasslogistics.com/blog/how-to-move-a-milling-machine): How to move a milling machine: knee mill, bed mill, and VMC lift points, what to drain and lock, way protection, and re-leveling on reinstall.
 - [How to Move a Packaging or Bottling Line](https://badasslogistics.com/blog/how-to-move-a-packaging-line): How to move a packaging, bottling, or filling line as one sequenced project: teardown order, sanitary requirements, transport, and commissioning back to spec.
-- [How to Move a Press Brake Without Wrecking It](https://badasslogistics.com/blog/how-to-move-a-press-brake): Press brakes are top-heavy machines that tip before they warn you. Ram locking, rigging points, skates, trailer choice, and securement — from the dispatch desk.
+- [How to Move a Press Brake Without Wrecking It](https://badasslogistics.com/blog/how-to-move-a-press-brake): Press brakes are top-heavy machines that tip before they warn you. Ram locking, rigging points, skates, and re-leveling — from the dispatch desk.
 - [How to Move a Robotic Work Cell](https://badasslogistics.com/blog/how-to-move-a-robotic-work-cell): How to move a robotic work cell: arm vs. controller, mastering loss, fencing and light curtains, end effectors, and the re-teach every move needs.
 - [How to Move a Stamping Press: Rigging a Mechanical Press](https://badasslogistics.com/blog/how-to-move-a-stamping-press): How to move a stamping press: flywheel and crown weight, splitting the die, freeing a pit-mounted press, bolster handling, and foundation bolts on reinstall.
 - [How to Move a Surface Grinder Without Losing Tenths](https://badasslogistics.com/blog/how-to-move-a-surface-grinder): How to move a surface grinder: protecting the ways and spindle, why racking wrecks a grinder faster than a mill, and re-leveling to tenths at the new site.
@@ -171,7 +170,7 @@ offer are the ones listed above.
 - [How to Move an Industrial Oven or Furnace](https://badasslogistics.com/blog/how-to-move-an-industrial-oven-or-furnace): Moving an industrial oven or furnace: why refractory cracks in transit, burner and control handling, gas and electrical disconnect, stack removal, and curing.
 - [How to Move an Injection Molding Machine](https://badasslogistics.com/blog/how-to-move-an-injection-molding-machine): How to move an injection molding machine: draining oil, protecting tie bars and platens, splitting the clamp and injection units, rigging out, and leveling back in.
 - [How to Prepare a Machine for Shipping: The Pre-Move Checklist](https://badasslogistics.com/blog/how-to-prepare-a-machine-for-shipping): A blunt pre-shipping checklist for machinery: drain the coolant, lock every axis, set shipping brackets, verify weight and dimensions, clear the path out.
-- [How to Ship an Industrial Generator: Trailer, Rigging, and Securement by Weight Class](https://badasslogistics.com/blog/how-to-ship-a-generator): Gensets ship upright on the base frame — flatbed, step-deck, or RGN by weight, with fuel run down, chains on the skid, and state permits for oversize units.
+- [Generator Rigging: How to Move a Standby or Industrial Generator](https://badasslogistics.com/blog/how-to-ship-a-generator): Generator rigging in order: skid lift points, draining fuel and fluids, disconnects, enclosure protection, setting the pad, anchoring, and alignment before startup.
 - [Machine Foundations and Grouting: Anchors, Grout, Cure Time](https://badasslogistics.com/blog/machine-foundations-and-grouting): How machine foundations get built: isolated vs rigid mounting, anchor bolt types, epoxy vs cementitious grout, cure time, and the leveling sequence after that.
 - [Switchgear and Substation Equipment Moving](https://badasslogistics.com/blog/switchgear-and-substation-equipment-moving): Moving switchgear and substation equipment: shipping splits, bus alignment, anchoring tolerance, keeping gear dry, and working safely around energized lineups.
 
@@ -186,7 +185,6 @@ offer are the ones listed above.
 
 - [Dedicated Freight Lanes: When a Project Needs Its Own Trucks](https://badasslogistics.com/blog/dedicated-freight-lanes-explained): Dedicated vs spot vs contract freight explained, when dedicated capacity makes sense for industrial projects, and how to plan a dedicated lane that holds up.
 - [Export Crating Requirements: ISPM-15, Marking, and Machinery Packing](https://badasslogistics.com/blog/export-crating-requirements): Export crate requirements explained — ISPM-15 heat-treated wood and the IPPC mark, moisture and corrosion protection, CG marking, and machinery prep.
-- [How to Ship Large Industrial Machinery on a Flatbed](https://badasslogistics.com/blog/how-to-ship-industrial-machinery-on-a-flatbed): Shipping oversized industrial equipment on a flatbed comes down to five things: the right trailer, a real load plan, blocking and bracing, secure tie-downs, and permits. Here is how a heavy, awkward machine gets from plant to plant intact.
 - [What Is Transloading? Container to Warehouse, Explained](https://badasslogistics.com/blog/what-is-transloading): What transloading is, how it differs from cross-docking and devanning, when to transload imported machinery, and how to keep containers off demurrage.
 
 ### Guides: Specialized Freight
@@ -195,14 +193,9 @@ offer are the ones listed above.
 
 ### Guides: Freight & Trucking
 
-- [Freight Broker vs Freight Forwarder vs 3PL: What's the Difference?](https://badasslogistics.com/blog/freight-broker-vs-forwarder-vs-3pl): Freight broker vs forwarder vs 3PL, in plain English: who arranges your freight, who takes possession of it, who runs your whole supply chain — and which you need.
+- [Freight Broker vs Freight Forwarder vs 3PL: What's the Difference?](https://badasslogistics.com/blog/freight-broker-vs-forwarder-vs-3pl): Freight broker vs forwarder vs 3PL, in plain English: who holds the freight, who is liable, and which one a shipper actually needs for the job.
 - [LTL vs FTL Freight: Which One Actually Saves You Money?](https://badasslogistics.com/blog/ltl-vs-ftl-freight): Less-than-truckload vs full truckload, explained with real decision rules: weight and pallet thresholds, transit time, handling risk, and when partial loads beat both.
 - [What Is Drayage? Container Trucking From Port to Door, Explained](https://badasslogistics.com/blog/what-is-drayage): Drayage is the short-haul truck move that gets shipping containers from ports and rail ramps to warehouses. How it works, what per diem and demurrage really mean, and how to avoid the fees.
-- [What Is Project Cargo? Moving Oversized, Complex Shipments](https://badasslogistics.com/blog/what-is-project-cargo): What project cargo is, why it's different from standard freight, and how oversized multi-piece industrial moves get engineered, permitted, and coordinated.
-
-### Guides: Trailers & Equipment
-
-- [Enclosed vs Flatbed Transport: Which One Does Your Equipment Need?](https://badasslogistics.com/blog/enclosed-vs-flatbed-transport): Flatbed is faster to load and handles oversized freight; enclosed protects sensitive equipment from weather, road grit, and eyes. The right call depends on size, fragility, and value. Here is how to choose.
 
 ### Guides: How It's Done
 

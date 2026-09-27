@@ -39,7 +39,7 @@ module.exports = {
 <h3>1. Size the volume and cadence</h3>
 <p>Start from the asset list and schedule. How many loads, over how many days, and how many per day can the loading crew actually load and the receiving crew actually set? A lane that delivers faster than the site can absorb just moves the backlog to the dock.</p>
 <h3>2. Match equipment to the freight</h3>
-<p>Precision machines ride air-ride. Tall or crane-loaded pieces go on flatbeds or step decks. Crated parts and sensitive electronics often go enclosed. A lane may need a mix of equipment types, planned load by load. For the tradeoffs, see <a href="ltl-vs-ftl-freight.html">LTL vs FTL freight</a> and <a href="how-to-ship-industrial-machinery-on-a-flatbed.html">shipping machinery on a flatbed</a>.</p>
+<p>Precision machines ride air-ride. Tall or crane-loaded pieces go on flatbeds or step decks. Crated parts and sensitive electronics often go enclosed. A lane may need a mix of equipment types, planned load by load. For the tradeoffs, see <a href="ltl-vs-ftl-freight.html">LTL vs FTL freight</a> and <a href="how-to-tarp-a-flatbed-load.html">tarping a flatbed load</a>.</p>
 <h3>3. Set loading and delivery windows</h3>
 <p>Both ends need windows the crews can hit, including dock limits, site access rules, and quiet hours. Consistent windows are one of the biggest advantages of a dedicated lane.</p>
 <h3>4. Build weight and dimensions into every load</h3>

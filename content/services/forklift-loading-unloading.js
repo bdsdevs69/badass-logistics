@@ -93,7 +93,7 @@ module.exports = {
   related: ['container-to-warehouse', 'machinery-moving', 'crane-services', 'crating-packing'],
   guides: [
     ['how-to-prepare-a-machine-for-shipping', 'How to Prepare a Machine for Shipping'],
-    ['how-to-ship-industrial-machinery-on-a-flatbed', 'How to Ship Industrial Machinery on a Flatbed'],
+    ['forklift-vs-crane-for-machine-loading', 'Forklift vs Crane for Machine Loading'],
     ['what-is-transloading', 'What Is Transloading?'],
   ],
   metrosSentinel: 'FL_METROS',

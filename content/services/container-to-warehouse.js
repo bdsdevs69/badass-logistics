@@ -119,7 +119,7 @@ module.exports = {
     ['what-is-drayage', 'What Is Drayage?'],
     ['what-is-transloading', 'What Is Transloading?'],
     ['blocking-bracing-and-dunnage-explained', 'Blocking, Bracing &amp; Dunnage Explained'],
-    ['what-is-project-cargo', 'What Is Project Cargo?'],
+    ['how-to-prepare-a-machine-for-shipping', 'How to Prepare a Machine for Shipping'],
   ],
   ctaBand: { h2: 'Containers of equipment on the way?', p: 'Send the booking, the packing list, and the site. We\'ll plan the pickup, the unload, and the staging.' },
 };

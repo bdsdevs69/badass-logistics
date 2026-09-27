@@ -280,7 +280,7 @@ const CITY_GUIDES = {
   'millwright-services': [['what-is-a-millwright','What Is a Millwright?'],['machine-leveling-and-alignment','Machine Leveling &amp; Alignment'],['how-to-move-a-conveyor-system','How to Move a Conveyor System']],
   'machinery-removal': [['how-to-prepare-a-machine-for-shipping','How to Prepare a Machine for Shipping'],['plant-relocation-checklist','The Plant Relocation Checklist'],['how-much-do-machinery-movers-cost','How Much Do Machinery Movers Cost?']],
   'crane-services': [['what-is-a-critical-lift','What Is a Critical Lift?'],['crane-rental-vs-rigging-company','Crane Rental vs a Rigging Company'],['rigging-load-charts-explained','Rigging Load Charts, Explained'],['how-to-move-a-boiler-or-chiller','How to Move a Boiler or Chiller']],
-  'forklift-loading-unloading': [['forklift-vs-crane-for-machine-loading','Forklift vs Crane for Machine Loading'],['how-to-ship-industrial-machinery-on-a-flatbed','How to Ship Machinery on a Flatbed'],['what-is-transloading','What Is Transloading?']],
+  'forklift-loading-unloading': [['forklift-vs-crane-for-machine-loading','Forklift vs Crane for Machine Loading'],['how-to-prepare-a-machine-for-shipping','How to Prepare a Machine for Shipping'],['what-is-transloading','What Is Transloading?']],
 };
 
 // ---------- SIBLING-SERVICE MESH ----------

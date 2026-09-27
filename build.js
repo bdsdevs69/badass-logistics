@@ -152,6 +152,40 @@ function verify() {
     if (/heavy[- ]haul/i.test(head + chrome)) leaks.push('/' + path.relative(ROOT, f));
   }
   check(leaks.length === 0, `heavy haul in titles/descriptions/nav/footer: ${leaks.length} pages`, leaks);
+
+  // 5b. positioning in blog BODY prose. The check above only reads the
+  //     head and chrome, so on 2026-09-27 nine legacy posts were found live
+  //     and indexed with up to 45 permit/oversize/escort mentions each in
+  //     their article text. A field guide explains rigging; it never has a
+  //     reason to talk road permits, so unlike llms.txt and the dispatch
+  //     desks there is no disclaimer exemption here.
+  //     Matched by phrase, not bare word: hospital escorts, crane street-use
+  //     permits, ICRA permits and "an oversized sleeve" are real rigging
+  //     language and must pass. Includes the JSON-LD (FAQ answers are body
+  //     text too), with URLs stripped so image filenames don't count.
+  const BODY_RETIRED = new RegExp([
+    String.raw`heavy[- ]haul`, String.raw`\bsuperloads?\b`, String.raw`\bover-?dimension(al)?\b`,
+    String.raw`\bwide loads?\b`, String.raw`\bpilot cars?\b`,
+    String.raw`\bescort (vehicles?|cars?|trucks?)\b`,
+    String.raw`\b(with|needs?|requires?|required|possibly|and|plus|or) escorts\b`,
+    String.raw`\bescorts? (are |is )?(required|needed)\b`,
+    String.raw`\bover-?(size|weight)d? (loads?|freight|shipments?|cargo|equipment|machines?|machinery|permits?|moves?|hauls?|trucks?|trailers?)\b`,
+    String.raw`\b(oversize|overweight|transport|state|route|travel|trip|single-trip|annual|hauling|DOT)[- ]permits?\b`,
+    String.raw`\bpermit (loads?|thresholds?|lead[- ]times?|costs?|fees?|office|requirements?)\b`,
+    String.raw`\bpermitted (loads?|freight|moves?|routes?)\b`,
+  ].join('|'), 'i');
+  const bodyLeaks = [];
+  for (const f of files) {
+    const rel = '/' + path.relative(ROOT, f);
+    if (!rel.startsWith('/blog/')) continue;
+    const html = read(f);
+    if (/name="robots"[^>]*noindex/i.test(html)) continue;
+    const text = html.replace(/<header[\s\S]*?<\/header>/, '').replace(/<footer[\s\S]*?<\/footer>/, '')
+      .replace(/<[^>]+>/g, ' ').replace(/https?:\/\/\S+/g, ' ').replace(/\s+/g, ' ');
+    const m = text.match(BODY_RETIRED);
+    if (m) bodyLeaks.push(`${rel}: "${m[0]}" — …${text.slice(Math.max(0, m.index - 50), m.index + 40).trim()}…`);
+  }
+  check(bodyLeaks.length === 0, `retired heavy-haul positioning in blog body prose: ${bodyLeaks.length} pages`, bodyLeaks);
   const hhLeft = fs.existsSync(path.join(ROOT, 'services/heavy-haul'))
     ? fs.readdirSync(path.join(ROOT, 'services/heavy-haul')).filter(n => !isStubCached(path.join(ROOT, 'services/heavy-haul', n))) : [];
   check(hhLeft.length === 0, `retired heavy-haul city pages still live: ${hhLeft.length} (${stubs.length} redirect stubs total)`, hhLeft);
