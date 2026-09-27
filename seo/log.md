@@ -1184,3 +1184,13 @@ dead. No cluster moved to RED.
 drift, not a jump. Top pairs are the same state-vs-city (georgia/savannah-ga,
 charleston-sc/south-carolina, oklahoma/tulsa-ok) and omaha-ne noise already flagged;
 the merge-and-redirect call is still Sam's.
+
+**Addendum 07:10 (second health-check run, same day):** a concurrent run has ~620
+uncommitted files in the shared worktree — a service × city expansion (millwright,
+removal, crane ×73, loading ×48 = 347 new pages, all 404 live). `index-health.js`
+reads the worktree sitemap, so it now prints those four clusters RED 100% / SITE
+1040 / 45% dead. That is an artefact of unshipped pages, not real decay — live
+sitemap is still 687 URLs and the verdicts above stand. Deliberately did NOT run
+`ping-search-engines.js`: it reads the local sitemap and would IndexNow 347 404s and
+mark them submitted in ping-state.json, so they'd never be re-pinged once live.
+Note for that run: all four new clusters land at once on top of cnc × city AMBER.
