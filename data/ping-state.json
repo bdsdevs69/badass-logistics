@@ -1,6 +1,6 @@
 {
   "_note": "Written by ping-search-engines.js. url -> the sitemap lastmod at the time we last told the search engines about it. A URL missing here, or carrying a different lastmod, is owed a ping. Delete this file to force a full resubmit.",
-  "updated": "2026-09-27T02:42:11.376Z",
+  "updated": "2026-09-27T03:12:23.383Z",
   "submitted": {
     "https://badasslogistics.com/": "2026-09-21",
     "https://badasslogistics.com/about": "2026-09-17",
@@ -70,12 +70,12 @@
     "https://badasslogistics.com/blog/step-deck-vs-drop-deck-trailers": "2026-09-27",
     "https://badasslogistics.com/blog/switchgear-and-substation-equipment-moving": "2026-09-27",
     "https://badasslogistics.com/blog/truck-dispatch-for-small-fleets": "2026-09-17",
-    "https://badasslogistics.com/blog/truck-dispatcher-vs-freight-broker": "2026-09-17",
+    "https://badasslogistics.com/blog/truck-dispatcher-vs-freight-broker": "2026-09-27",
     "https://badasslogistics.com/blog/types-of-rigging": "2026-09-17",
     "https://badasslogistics.com/blog/what-is-a-critical-lift": "2026-09-17",
     "https://badasslogistics.com/blog/what-is-a-machinery-move-survey": "2026-09-21",
     "https://badasslogistics.com/blog/what-is-a-millwright": "2026-09-27",
-    "https://badasslogistics.com/blog/what-is-drayage": "2026-09-17",
+    "https://badasslogistics.com/blog/what-is-drayage": "2026-09-27",
     "https://badasslogistics.com/blog/what-is-industrial-rigging": "2026-09-17",
     "https://badasslogistics.com/blog/what-is-project-cargo": "2026-09-17",
     "https://badasslogistics.com/blog/what-is-transloading": "2026-09-27",
@@ -1051,6 +1051,6 @@
     "https://badasslogistics.com/services/truck-dispatch/reefer": "2026-09-27",
     "https://badasslogistics.com/services/truck-dispatch/rgn-lowboy": "2026-09-27",
     "https://badasslogistics.com/services/truck-dispatch/step-deck": "2026-09-27",
-    "https://badasslogistics.com/trailer-selector": "2026-09-17"
+    "https://badasslogistics.com/trailer-selector": "2026-09-27"
   }
 }
