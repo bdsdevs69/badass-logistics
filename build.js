@@ -153,7 +153,8 @@ function verify() {
   }
   check(leaks.length === 0, `heavy haul in titles/descriptions/nav/footer: ${leaks.length} pages`, leaks);
 
-  // 5b. positioning in blog BODY prose. The check above only reads the
+  // 5b. positioning in blog BODY prose (and /trailer-selector, which was
+  //     a permit calculator until 2026-09-27 and is a redirect target). The check above only reads the
   //     head and chrome, so on 2026-09-27 nine legacy posts were found live
   //     and indexed with up to 45 permit/oversize/escort mentions each in
   //     their article text. A field guide explains rigging; it never has a
@@ -177,7 +178,7 @@ function verify() {
   const bodyLeaks = [];
   for (const f of files) {
     const rel = '/' + path.relative(ROOT, f);
-    if (!rel.startsWith('/blog/')) continue;
+    if (!rel.startsWith('/blog/') && rel !== '/trailer-selector.html') continue;
     const html = read(f);
     if (/name="robots"[^>]*noindex/i.test(html)) continue;
     const text = html.replace(/<header[\s\S]*?<\/header>/, '').replace(/<footer[\s\S]*?<\/footer>/, '')

@@ -107,7 +107,7 @@ superloads, no escorted moves. Dispatch is never offered by city or state.
 
 ## Tools
 
-- [Equipment Trailer Selector](https://badasslogistics.com/trailer-selector): Free interactive tool — enter a machine's length, width, height, and weight and it suggests a trailer type and flags whether oversize or overweight permits are likely, using standard U.S. legal limits.
+- [Trailer Selector](https://badasslogistics.com/trailer-selector): Free interactive tool — enter a load's height, width, length, and weight and it suggests which deck (flatbed, step deck, Conestoga, RGN, double drop) carries it inside standard U.S. legal size, linked to the matching fleet dispatch desk, or says to ship a machine in sections when none does.
 
 ## Reference guides
 
@@ -208,7 +208,7 @@ offer are the ones listed above.
 - [How to Tarp a Flatbed Load: Sequence, Tarps, Claims](https://badasslogistics.com/blog/how-to-tarp-a-flatbed-load): How a flatbed load actually gets tarped — steel, lumber, and hay tarps, corner protection, strap pattern, and how tarping sits on top of securement underneath.
 - [Step Deck vs Drop Deck Trailers: Same Trailer, Explained](https://badasslogistics.com/blog/step-deck-vs-drop-deck-trailers): Step deck and drop deck are the same trailer under two regional names. Deck heights, legal load heights, ground clearance, and when to run a lowboy instead.
 - [Truck Dispatch Services for Small Fleets (4+ Trucks): What to Expect](https://badasslogistics.com/blog/truck-dispatch-for-small-fleets): What a fleet truck dispatch service does, when outsourcing dispatch makes sense for 4 to 20 trucks, what to ask before signing, and the red flags to avoid.
-- [Truck Dispatcher vs Freight Broker: What's the Difference?](https://badasslogistics.com/blog/truck-dispatcher-vs-freight-broker): Dispatchers and brokers are not the same thing. Who each one works for, what they legally can and cannot do, and which one an owner-operator actually needs.
+- [Truck Dispatcher vs Freight Broker: What's the Difference?](https://badasslogistics.com/blog/truck-dispatcher-vs-freight-broker): Dispatchers and brokers are not the same thing. Who each one works for, what they legally can and cannot do, and which one a trucking company actually needs.
 
 ### Guides: Medical Rigging
 

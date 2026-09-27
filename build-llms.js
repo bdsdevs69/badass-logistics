@@ -131,7 +131,7 @@ ${dispatchLines()}
 
 ## Tools
 
-- [Equipment Trailer Selector](${DOMAIN}/trailer-selector): Free interactive tool — enter a machine's length, width, height, and weight and it suggests a trailer type and flags whether oversize or overweight permits are likely, using standard U.S. legal limits.
+- [Trailer Selector](${DOMAIN}/trailer-selector): Free interactive tool — enter a load's height, width, length, and weight and it suggests which deck (flatbed, step deck, Conestoga, RGN, double drop) carries it inside standard U.S. legal size, linked to the matching fleet dispatch desk, or says to ship a machine in sections when none does.
 
 ## Reference guides
 

@@ -1377,3 +1377,21 @@ recommendation put to Sam, **approved as recommended**:
    haul, but both conflict with the no-prices and 4+ truck rules.
 3. The press-brake rewrite stays ~980 words on purpose (best legacy performer). Don't expand it until GSC
    shows the edit held position.
+
+### 2026-09-27 addendum — the three "not done" items above (Sam: "ok go")
+
+- **`/trailer-selector` reframed, same URL.** It was a load → trailer → *permit* calculator:
+  oversize/overweight/superload FAQs, pilot-car flags, a Multi-Axle & Superload tile, and a
+  "we'll flag any permits and quote" CTA. It had 19 impressions, but 5 redirects point at it and it
+  sits in the footer on every page. Now it's a **legal-size deck-fit tool**: height + width + length +
+  weight + how it loads (lifted / drives on / must stay dry) → flatbed, step deck, Conestoga, RGN or
+  double drop, each linking the matching fleet dispatch desk. Anything outside legal size gets
+  "ship it in sections": riggers take it down, millwrights rebuild it. Tested 8 scenarios in the
+  browser. Title, meta, WebApplication/FAQ schema and the llms.txt entry are all rewritten.
+  **build.js check 5b now also covers /trailer-selector.**
+- `truck-dispatcher-vs-freight-broker`: owner-operator framing → trucking companies / 4+ trucks.
+  The $75,000 bond figure → "surety bond (BMC-84) or trust (BMC-85)". The "How we dispatch"
+  section now links the desk + the small-fleets guide. Related links went from about/contact to
+  dispatch pages.
+- `what-is-drayage`: the "$75 to several hundred dollars per container per day" figures are out (x2).
+  build-blog.js now has no dollar figures left.

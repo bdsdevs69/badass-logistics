@@ -178,10 +178,10 @@ const POSTS = [
     hero: 'dispatch-hero.jpg',
     date: '2026-06-09',
     title: 'Truck Dispatcher vs Freight Broker: What\'s the Difference?',
-    desc: 'Dispatchers and brokers are not the same thing. Who each one works for, what they legally can and cannot do, and which one an owner-operator actually needs.',
+    desc: 'Dispatchers and brokers are not the same thing. Who each one works for, what they legally can and cannot do, and which one a trucking company actually needs.',
     dek: 'They both touch loads and rates — but a dispatcher works for you, the carrier. A broker is the middleman. That difference is the whole point.',
     body: `
-<p>Owner-operators get pitched by both "dispatchers" and "brokers," and the terms get blurred constantly. They are not the same role, and the difference is not just semantics — it changes who is on your side, who is legally responsible for what, and how you get paid.</p>
+<p>Trucking companies get pitched by both "dispatchers" and "brokers," and the terms get blurred constantly. They are not the same role, and the difference is not just semantics — it changes who is on your side, who is legally responsible for what, and how you get paid.</p>
 
 <h2>The short version</h2>
 <div class="keyfacts">
@@ -190,7 +190,7 @@ const POSTS = [
 </div>
 
 <h2>What a freight broker is</h2>
-<p>A freight broker connects shippers who have freight with carriers who have trucks. Brokers operate under <strong>FMCSA broker authority</strong> (an MC number) and are required to carry a <strong>$75,000 surety bond (BMC-84)</strong>. They contract with the shipper, mark up the freight, and pay the carrier — and the spread between those two numbers is their margin. A good broker brings volume and handles the shipper relationship; the tradeoff is that they sit between you and the rate.</p>
+<p>A freight broker connects shippers who have freight with carriers who have trucks. Brokers operate under <strong>FMCSA broker authority</strong> (an MC number) and must carry <strong>financial security</strong> — a surety bond (BMC-84) or trust fund (BMC-85) — set by federal rule. They contract with the shipper, mark up the freight, and pay the carrier — and the spread between those two numbers is their margin. A good broker brings volume and handles the shipper relationship; the tradeoff is that they sit between you and the rate.</p>
 
 <h2>What a truck dispatcher does</h2>
 <p>A dispatcher is the carrier's back office. Working as <em>your</em> agent, a dispatcher will:</p>
@@ -204,20 +204,22 @@ const POSTS = [
 <p>A dispatcher acting purely as the carrier's agent generally does not need its own broker authority, because it is not brokering freight to third parties — it is representing one carrier.</p>
 
 <h2>Which one do you need?</h2>
-<p>If you are an owner-operator or small fleet and you want someone <strong>on your side of the table</strong> — keeping your wheels turning, fighting for your rate, and taking the admin off your plate — that is dispatching. If you are a shipper trying to move freight and you want someone to find capacity, that is a broker.</p>
+<p>If you run trucks and you want someone <strong>on your side of the table</strong> — keeping your wheels turning, fighting for your rate, and taking the admin off your plate — that is dispatching. If you are a shipper trying to move freight and you want someone to find capacity, that is a broker.</p>
 
 <h2>How we dispatch</h2>
-<p>A truck dispatcher works <em>for the carrier</em> — you are the client, not the freight. A dispatching service sources loads, negotiates the rate up, and handles the paperwork, 24/7, so the driver can focus on driving.</p>
+<p>Our <a href="../services/truck-dispatch.html">dispatch desk</a> works for trucking companies running <strong>4 or more trucks</strong>. You are the client, not the freight: the desk sources loads, negotiates the rate up, and handles the paperwork, 24/7, so your drivers can focus on driving. If you are still dispatching your own fleet, <a href="truck-dispatch-for-small-fleets.html">truck dispatch for small fleets</a> covers when handing it off starts to pay.</p>
 
 <p><a href="../contact.html">Talk to us about dispatch</a> and we'll keep your trucks loaded and rolling.</p>
 `,
     faq: [
-      { q: 'Is a truck dispatcher the same as a freight broker?', a: 'No. A dispatcher works for the carrier as their agent — finding loads and negotiating rates on the carrier\'s behalf. A broker is an independent middleman between shipper and carrier, operating under FMCSA broker authority and a $75,000 bond.' },
+      { q: 'Is a truck dispatcher the same as a freight broker?', a: 'No. A dispatcher works for the carrier as their agent — finding loads and negotiating rates on the carrier\'s behalf. A broker is an independent middleman between shipper and carrier, operating under FMCSA broker authority and backed by a federally required bond or trust.' },
       { q: 'Does a truck dispatcher need an MC number or broker authority?', a: 'A dispatcher acting solely as the carrier\'s agent generally does not need its own broker authority, because it represents one carrier rather than brokering freight to third parties.' },
       { q: 'Do dispatchers get you better rates?', a: 'A good dispatcher negotiates on your behalf to push the rate up and reduce deadhead, and charges you a flat fee or percentage — versus a broker, whose margin comes from the spread between the shipper\'s rate and yours.' },
     ],
     related: [
-      { h: 'About Badass Logistics', u: '../about.html' },
+      { h: 'Truck Dispatch for Fleets', u: '../services/truck-dispatch.html' },
+      { h: 'Truck Dispatch for Small Fleets', u: 'truck-dispatch-for-small-fleets.html' },
+      { h: 'Freight Broker vs Forwarder vs 3PL', u: 'freight-broker-vs-forwarder-vs-3pl.html' },
       { h: 'Get a Quote', u: '../contact.html' },
     ],
   },
@@ -288,7 +290,7 @@ const POSTS = [
 <p><strong>Drayage</strong> is the short-haul trucking that moves shipping containers between a port or rail ramp and a nearby warehouse, yard, or doorstep. It's the shortest leg of an international shipment and routinely the most operationally painful — because it's where ocean schedules, terminal appointments, chassis availability, and free-time clocks all collide.</p>
 
 <h2>How a drayage move works</h2>
-<p>Drayage is the short-haul truck move that picks up your shipping container from a port terminal or rail ramp and delivers it to your warehouse — usually within about 50 miles. A credentialed driver with a TWIC card and a terminal appointment picks the box up on a chassis inside the port's free-time window, then either live-unloads at your dock or drops the container for a later pickup. The critical variable is not the truck rate; it is whether the box moves before free time expires. Miss that window and demurrage charges from the terminal and per-diem charges from the ocean carrier start stacking daily — typically $75 to several hundred dollars per container, per day. Step by step, it looks like this:</p>
+<p>Drayage is the short-haul truck move that picks up your shipping container from a port terminal or rail ramp and delivers it to your warehouse — usually within about 50 miles. A credentialed driver with a TWIC card and a terminal appointment picks the box up on a chassis inside the port's free-time window, then either live-unloads at your dock or drops the container for a later pickup. The critical variable is not the truck rate; it is whether the box moves before free time expires. Miss that window and demurrage charges from the terminal and per-diem charges from the ocean carrier start stacking up for every container, every day. Step by step, it looks like this:</p>
 <ul>
   <li><strong>Your container discharges</strong> from the vessel (or arrives at the rail ramp) and the terminal makes it available for pickup.</li>
   <li><strong>The clock starts.</strong> Terminals give a few free days ("free time") before storage charges — <strong>demurrage</strong> — begin accruing daily.</li>
@@ -302,7 +304,7 @@ const POSTS = [
   <p><strong>Demurrage:</strong> the terminal charging you for the container sitting at the port past free time.<br>
   <strong>Per diem (detention):</strong> the ocean carrier charging you for keeping their container/chassis out too long.<br>
   <strong>Chassis split:</strong> an extra trip because the chassis wasn't where the container was.<br>
-  These run from roughly $75 to several hundred dollars per container per day — and they compound fast over a weekend.</p>
+  Demurrage and per diem are charged per container, per day — and they compound fast over a weekend.</p>
   <p class="hand" style="font-size:13px;opacity:.7;margin-top:8px;">Last reviewed June 2026</p>
 </div>
 
