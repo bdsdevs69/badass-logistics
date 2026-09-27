@@ -35,6 +35,10 @@ const SERVICES = {
   'rigging':            { label: 'industrial rigging', anchor: 'Industrial Rigging' },
   'cnc-machine-movers': { label: 'CNC machine moving', anchor: 'CNC Machine Movers' },
   'plant-relocation':   { label: 'plant relocation',  anchor: 'Plant Relocation' },
+  'millwright-services':        { label: 'millwright services', anchor: 'Millwright Services' },
+  'machinery-removal':          { label: 'machinery removal', anchor: 'Machinery Removal' },
+  'crane-services':             { label: 'crane and rigging services', anchor: 'Crane &amp; Rigging Services' },
+  'forklift-loading-unloading': { label: 'machinery loading and unloading', anchor: 'Machinery Loading &amp; Unloading' },
 };
 
 const cities = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/service-cities.json'), 'utf8'));
@@ -83,11 +87,11 @@ function intro(target, svc, peers) {
 
   if (driver && sameState >= 2) {
     return `Plenty of ${where} work — ${driver} — moves across state lines before it lands. `
-         + `We run the same ${svc.label} crews and permits through these ${target.state} and regional markets:`;
+         + `We run the same ${svc.label} crews through these ${target.state} and regional markets:`;
   }
   if (driver) {
     return `${where} runs on ${driver}, and almost none of it stays put. `
-         + `Same crews, same permits, same ${svc.label} standards in the markets nearest you:`;
+         + `Same crews and the same ${svc.label} standards across the region:`;
   }
   return `Loads out of ${where} rarely stop at the county line. `
        + `We cover ${svc.label} in the neighboring markets too:`;

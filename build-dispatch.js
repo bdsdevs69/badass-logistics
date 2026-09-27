@@ -3,7 +3,8 @@
    Badass Logistics — DISPATCH × EQUIPMENT generator
 
    Builds /services/truck-dispatch/<equipment> for each entry in
-   EQUIPMENT, plus the hub at /services/truck-dispatch/equipment, then
+   EQUIPMENT, /services/truck-dispatch/<fleet-model> for each entry in
+   FLEET (4-10, 10-25, 25+ trucks, after-hours), plus the hub at /services/truck-dispatch/equipment, then
    fills the DISPATCH_EQUIP sentinel on the truck-dispatch pillar.
 
    WHY EQUIPMENT AND NEVER GEO:
@@ -561,6 +562,220 @@ const EQUIPMENT = {
 
 const ORDER = ['dry-van', 'reefer', 'flatbed', 'step-deck', 'conestoga', 'rgn-lowboy', 'power-only', 'hotshot', 'car-hauler', 'ltl-partial'];
 
+// ---------- FLEET MODEL (2026-09-27, seo/schedule.md run 2) ----------
+// Same template as EQUIPMENT, cut by how big the fleet is instead of what it
+// pulls. Each size breaks dispatch in a different place, and the `desk` block
+// is written to that break — if two of these could swap desks, one should go.
+// Never geo. Never under four power units. The 4-10 page is the service
+// counterpart to /blog/truck-dispatch-for-small-fleets (a buyer's guide) and
+// links to it rather than re-answering "what should I ask".
+const FLEET = {
+  'fleets-4-to-10-trucks': {
+    name: 'Dispatch for 4–10 Truck Fleets',
+    short: '4–10 Trucks',
+    blurb: 'The size where the owner is still the dispatcher — the desk takes the evenings back and plans reloads across every truck.',
+    title: 'Truck Dispatch for 4–10 Truck Fleets | Badass Logistics',
+    description: 'Dispatch for trucking companies running 4 to 10 trucks: one dispatcher who knows every driver, reloads planned across the fleet, setups, billing and factoring handled.',
+    tag: 'fleet dispatch — 4 to 10 power units',
+    hero: '/assets/img/dispatch-truck.jpg',
+    annots: ['MIN. 4 POWER UNITS', 'ONE DISPATCHER', 'OWNER OFF THE BOARD', 'YOU APPROVE LOADS'],
+    h1: 'Dispatch for <span class="y">4–10 Truck</span> Fleets',
+    lead: 'At four to ten trucks, the owner is usually still the dispatcher — booking loads at night after running the business all day. Our desk takes that job over: one dispatcher who knows every truck and every driver, reloads planned across the whole fleet, and the setups, rate cons and billing handled so the owner can run the company instead of the load board.',
+    quick: 'Dispatch for a 4–10 truck fleet is load sourcing, reload planning and back-office work for a trucking company that has outgrown the owner booking every load. Badass Logistics assigns one dispatcher to the fleet, plans freight across all of its trucks, and handles carrier setups, rate confirmations, check calls and invoice packets. You keep your authority and approve every load.',
+    whatH2: 'Where dispatch breaks at four to ten trucks',
+    what: [
+      'One or two trucks can be dispatched from a phone between other jobs. Somewhere around four, that stops working. Each truck needs its next load lined up before it empties, drivers need home time planned rather than promised, and every broker setup, rate confirmation and detention claim lands on the same person who is also handling insurance, maintenance and payroll. The usual result is trucks that run, but run whatever was left on the board at 9pm.',
+      'That is the gap the desk fills at this size. It is not about finding more loads — it is about planning four to ten trucks as one fleet, so a load is chosen for where it leaves the truck as much as for what it pays. If you are still deciding whether to outsource at all, our <a href="/blog/truck-dispatch-for-small-fleets">guide to dispatch for small fleets</a> covers what to ask any provider before signing.',
+    ],
+    freightH2: 'What a 4–10 truck fleet gets on the desk',
+    freight: [
+      ['one dispatcher', 'A dispatcher who knows the fleet', 'The same person books every truck, so drivers, equipment quirks and home-time commitments are known, not re-explained.'],
+      ['reloads', 'Reloads planned across trucks', 'Next loads lined up before each truck empties, with the whole fleet in view rather than one truck at a time.'],
+      ['setups', 'Carrier packets kept current', 'Authority, insurance and W-9 on file so new brokers and shippers can be set up the same day.'],
+      ['billing', 'Paperwork to cash', 'BOLs and PODs collected, invoice packets built, and factoring submissions sent so cash does not wait on the owner\'s weekend.'],
+    ],
+    deskH2: 'What the desk does differently for a small fleet',
+    desk: [
+      { h: 'Lanes chosen for the next load, not just this one', p: 'With a handful of trucks, one bad reload market costs a meaningful share of the week. The desk books against where each truck will empty and what freight is there, and will pass on a high number into a market the truck cannot get out of.' },
+      { h: 'Home time planned into the week, not squeezed in after', p: 'Small fleets live and die on keeping good drivers. Home time is scheduled when the week is planned, and loads are chosen to land drivers home on the day they were promised.' },
+      { h: 'Freight sources a small carrier cannot reach alone', p: 'Our own rigging and project work generates loads, and those go first to fleets on our desk alongside direct shippers and vetted brokers. A four-truck carrier rarely gets in front of that freight on its own.' },
+      { h: 'The owner stays in charge', p: 'Every load is sent for approval before it is booked. The desk makes the plan; the owner makes the call. No forced dispatch, and no truck put on a lane you have said no to.' },
+    ],
+    rateH2: 'What the onboarding call covers for a 4–10 truck fleet',
+    rates: [
+      'How many power units, what equipment, and where the trucks are based',
+      'Which lanes and regions the drivers will and will not run',
+      'Home-time commitments for each driver',
+      'How much of the back office you want the desk to take — setups, billing, factoring submissions',
+      'Where the fleet is headed: holding at this size, or building toward the next',
+    ],
+    faq: [
+      ['Is four trucks really enough for fleet dispatch?', 'Yes — four power units is our floor, because that is where reloads can be planned across trucks and dispatch starts working as a system. We do not dispatch single-truck owner-operators. <a href="/quote-dispatch">Apply for fleet dispatch →</a>'],
+      ['Will I get the same dispatcher every day?', 'At this size, yes. One dispatcher runs the fleet so that drivers, equipment and home-time commitments are known, with desk cover when that dispatcher is off.'],
+      ['Do I still approve every load?', 'Always. Each load is sent to you before it is booked. You keep your authority, your insurance and your drivers.'],
+      ['Can you handle billing and factoring paperwork?', 'Yes. BOLs and PODs are collected, invoice packets are built, and submissions go to your factoring company or directly to the broker, depending on how you run cash.'],
+      ['What if we are growing past ten trucks?', 'Tell us on the onboarding call. The desk scales with the fleet, and the way it plans changes as the fleet grows — see <a href="/services/truck-dispatch/fleets-10-to-25-trucks">dispatch for 10–25 truck fleets</a>.'],
+    ],
+    siblings: ['fleets-10-to-25-trucks', 'after-hours-dispatch'],
+    guides: [['truck-dispatch-for-small-fleets', 'Truck Dispatch for Small Fleets'], ['how-do-truck-dispatchers-get-paid', 'How Do Truck Dispatchers Get Paid?']],
+    cta: 'Running four to ten trucks?',
+  },
+
+  'fleets-10-to-25-trucks': {
+    name: 'Dispatch for 10–25 Truck Fleets',
+    short: '10–25 Trucks',
+    blurb: 'Too big for one dispatcher, not yet big enough for a department — the desk splits planning from paperwork and runs lanes as a network.',
+    title: 'Truck Dispatch for 10–25 Truck Fleets | Badass Logistics',
+    description: 'Dispatch for trucking companies running 10 to 25 trucks: lane networks instead of load lists, planning split from back office, regular reviews of deadhead and revenue per truck.',
+    tag: 'fleet dispatch — 10 to 25 power units',
+    hero: '/assets/img/dispatch-agent.jpg',
+    annots: ['LANE NETWORK', 'PLANNING ≠ PAPERWORK', 'WEEKLY REVIEW', 'YOU APPROVE LOADS'],
+    h1: 'Dispatch for <span class="y">10–25 Truck</span> Fleets',
+    lead: 'Somewhere past ten trucks, one dispatcher stops being enough — and a full in-house department is still more than the business needs. Our desk covers that middle: planning split from the back office, lanes run as a network instead of a list of loads, and a regular review of where each truck made and lost money.',
+    quick: 'Dispatch for a 10–25 truck fleet means planning freight as a lane network across the whole fleet, with the back office run separately so planning time is not eaten by paperwork. Badass Logistics dispatches fleets of this size as a full desk or alongside an in-house dispatcher, and reviews deadhead, revenue per truck and lane performance with the owner on a regular schedule.',
+    whatH2: 'Where dispatch breaks at ten to twenty-five trucks',
+    what: [
+      'The single-dispatcher model fails quietly at this size. One person can book fifteen trucks, but not while also chasing rate cons, detention, check calls and invoice packets — so planning gets squeezed into whatever time is left, and trucks start getting booked one at a time again. The fleet looks busy and the margin slides.',
+      'Fleets here usually either hire a second dispatcher or hand the desk out. Either way, the fix is the same: separate the planning from the paperwork, and plan lanes as a connected network — which markets the fleet loads out of, which it reloads in, and which it avoids — rather than as a pile of individual loads.',
+    ],
+    freightH2: 'What a 10–25 truck fleet gets on the desk',
+    freight: [
+      ['network', 'Lanes run as a network', 'Core outbound markets, reliable reload markets, and lanes the fleet stays out of, planned across every truck.'],
+      ['split desk', 'Planning separate from back office', 'Dispatchers plan and book; setups, billing and claims run in parallel so planning time is protected.'],
+      ['steady freight', 'Freight that repeats', 'Direct shippers, project freight and dedicated-lane opportunities pursued ahead of one-off board loads.'],
+      ['review', 'Regular performance review', 'Deadhead, revenue per truck and lane results reviewed with the owner, and the plan adjusted.'],
+    ],
+    deskH2: 'What the desk does differently at this size',
+    desk: [
+      { h: 'Works with an in-house dispatcher, or replaces the gap', p: 'Plenty of fleets here already have one dispatcher they trust. The desk can run the whole fleet, take a group of trucks, or take the back office so the in-house dispatcher plans full-time. The split is agreed on the onboarding call.' },
+      { h: 'Repeating freight over the board', p: 'At fifteen or twenty trucks, the board cannot carry the fleet profitably. The desk pushes toward freight that repeats — direct shippers, <a href="/services/dedicated-lanes">dedicated lanes</a>, and multi-load project moves out of our own rigging work.' },
+      { h: 'Numbers the owner actually sees', p: 'Deadhead, loaded miles, revenue per truck per week and detention recovered are reviewed with the owner regularly, so lane decisions come from the fleet\'s own results rather than a feeling about a market.' },
+      { h: 'Driver pods, not a queue', p: 'Trucks are grouped by equipment, home base or lane so the dispatcher planning them knows those drivers and those lanes, rather than working one queue for the whole fleet.' },
+    ],
+    rateH2: 'What the onboarding call covers for a 10–25 truck fleet',
+    rates: [
+      'Fleet size, equipment mix and home terminals',
+      'Whether an in-house dispatcher stays, and how work splits between them and the desk',
+      'The lanes the fleet runs today, and which ones are losing money',
+      'Existing shipper relationships and any contract or dedicated freight',
+      'What gets reviewed, how often, and with whom',
+    ],
+    faq: [
+      ['Can you work alongside our in-house dispatcher?', 'Yes. The desk can run the whole fleet, a group of trucks, or the back office only so your dispatcher can plan full-time. That split is set on the onboarding call.'],
+      ['How do you reduce deadhead across a bigger fleet?', 'By planning lanes as a network — where the fleet loads out, where it reloads, and which markets it avoids — and by booking each load for where it leaves the truck. Results are reviewed with you regularly. See <a href="/blog/dedicated-freight-lanes-explained">dedicated freight lanes explained</a>.'],
+      ['Do you help fleets get dedicated or contract freight?', 'We pursue repeating freight for fleets on the desk — direct shippers, dedicated lanes, and multi-load project moves from our own rigging work — and put your trucks in front of it.'],
+      ['Do I still approve every load?', 'Yes. You keep your authority, insurance and drivers, and every load is sent for approval before it is booked.'],
+      ['What if we are past 25 trucks?', 'The desk works with larger fleets too, usually alongside an existing operations team — see <a href="/services/truck-dispatch/fleets-25-plus-trucks">dispatch for 25+ truck fleets</a>.'],
+    ],
+    siblings: ['fleets-4-to-10-trucks', 'fleets-25-plus-trucks', 'after-hours-dispatch'],
+    guides: [['dedicated-freight-lanes-explained', 'Dedicated Freight Lanes, Explained'], ['truck-dispatcher-vs-freight-broker', 'Truck Dispatcher vs Freight Broker']],
+    cta: 'Running ten to twenty-five trucks?',
+  },
+
+  'fleets-25-plus-trucks': {
+    name: 'Dispatch for 25+ Truck Fleets',
+    short: '25+ Trucks',
+    blurb: 'Fleets with an operations team already — the desk takes a division, a terminal, overflow or nights, and brings project freight with it.',
+    title: 'Truck Dispatch for 25+ Truck Fleets | Badass Logistics',
+    description: 'Dispatch support for trucking companies running 25+ trucks: a division, terminal or overflow desk alongside your ops team, plus multi-load project freight from our rigging work.',
+    tag: 'fleet dispatch — 25+ power units',
+    hero: '/assets/img/dispatch-hero.jpg',
+    annots: ['PLUGS INTO YOUR OPS', 'DIVISION OR OVERFLOW', 'PROJECT FREIGHT', 'YOU APPROVE LOADS'],
+    h1: 'Dispatch for <span class="y">25+ Truck</span> Fleets',
+    lead: 'A fleet of twenty-five trucks or more usually has an operations team already. Our desk works alongside it — running a division, a terminal, a new equipment type or overflow, or covering nights and weekends — and brings multi-load project freight out of our own rigging work that a load-board shop cannot offer.',
+    quick: 'Dispatch for a 25+ truck fleet is usually a desk working alongside an existing operations team rather than replacing it. Badass Logistics takes a defined slice of the fleet — a division, terminal, equipment type, overflow or after-hours coverage — works to your procedures and systems, and offers multi-load project freight from our rigging and plant-relocation work. You keep your authority and approve every load.',
+    whatH2: 'Where dispatch breaks past twenty-five trucks',
+    what: [
+      'Bigger fleets rarely lack dispatchers. What they lack is elastic capacity: a new terminal that needs a desk before it justifies a hire, a trailer type the existing team does not know, a surge of trucks after an acquisition, or nights and weekends that nobody wants to cover. Hiring for each of those is slow, and leaving them uncovered costs loads.',
+      'That is where an outside desk fits at this size — as a defined slice of the operation that follows your procedures, uses your approval rules and reports into your team, not as a replacement for the people already running the fleet.',
+    ],
+    freightH2: 'How the desk plugs into a larger fleet',
+    freight: [
+      ['division', 'A division or terminal', 'A group of trucks by region, terminal or customer, dispatched end to end by our desk.'],
+      ['equipment', 'A new equipment type', 'Reefer, flatbed, step deck or Conestoga trucks added to a fleet whose team knows vans — or the reverse.'],
+      ['overflow', 'Overflow and growth', 'Trucks added faster than the ops team can hire, covered until the in-house desk catches up.'],
+      ['project freight', 'Multi-load project moves', 'Plant relocations and equipment programs from our own rigging work that need several trucks, sequenced.'],
+    ],
+    deskH2: 'What the desk does differently for a large fleet',
+    desk: [
+      { h: 'Your procedures, not ours', p: 'Approval rules, customer requirements, check-call cadence and hand-off notes follow how your operation already runs. The desk works to your playbook and escalates to your people.' },
+      { h: 'Freight that needs a fleet, not a truck', p: 'A <a href="/services/plant-relocation">plant relocation</a> can generate dozens of loads that have to move in sequence over days or weeks, through our licensed broker and carrier partners. That is freight built for a fleet with depth, and fleets on our desk are in front of it.' },
+      { h: 'A clean boundary with your team', p: 'Which trucks the desk owns, when a load hands back to your dispatchers, and who talks to which customer is agreed before the first booking, so there is never a truck two people think they are running.' },
+      { h: 'Reporting in your format', p: 'Loads, revenue, deadhead and exceptions for the trucks on our desk reported the way your ops team already reviews the rest of the fleet.' },
+    ],
+    rateH2: 'What the onboarding call covers for a 25+ truck fleet',
+    rates: [
+      'Which slice of the fleet the desk takes, and why',
+      'Your approval rules, customer requirements and escalation contacts',
+      'Systems access, and how loads and notes hand back to your team',
+      'Reporting format and review cadence',
+      'Interest in multi-load project freight, and on which equipment',
+    ],
+    faq: [
+      ['We already have dispatchers. Why use an outside desk?', 'For the parts that are hard to staff: a new terminal or equipment type, overflow after growth, or nights and weekends. The desk takes a defined slice and works to your procedures.'],
+      ['Can the desk work in our systems?', 'That is agreed on the onboarding call. The goal is that loads, notes and exceptions for the trucks on our desk land where your team already looks.'],
+      ['What is multi-load project freight?', 'Freight from our own rigging work — plant relocations, equipment programs, dedicated project lanes — where several trucks move in sequence. It moves through our licensed broker and carrier partners, and fleets on our desk are offered it first.'],
+      ['Do you book oversize or permitted loads?', 'No. The desk books legal-weight, legal-dimension freight only. That line was retired in 2026.'],
+      ['Do I keep control of the fleet?', 'Yes. You keep your authority, insurance and drivers, and you set the approval rules the desk works to.'],
+    ],
+    siblings: ['fleets-10-to-25-trucks', 'after-hours-dispatch'],
+    guides: [['dedicated-freight-lanes-explained', 'Dedicated Freight Lanes, Explained'], ['truck-dispatcher-vs-freight-broker', 'Truck Dispatcher vs Freight Broker']],
+    cta: 'Running twenty-five trucks or more?',
+  },
+
+  'after-hours-dispatch': {
+    name: 'After-Hours Dispatch for Fleets',
+    short: 'After-Hours Desk',
+    blurb: 'Nights, weekends and holidays covered for fleets with a daytime desk — breakdowns, missed appointments and early reloads handled as they happen.',
+    title: 'After-Hours Truck Dispatch for Fleets | Badass Logistics',
+    description: 'After-hours and weekend dispatch for trucking companies running 4+ trucks: breakdown coordination, missed appointments, reloads for early starts, and detention clocks started on time.',
+    tag: 'after-hours dispatch — fleets of 4+',
+    hero: '/assets/img/dispatch-hero.jpg',
+    annots: ['NIGHTS & WEEKENDS', 'YOUR DAY DESK STAYS', 'HANDOFF AT 07:00', 'MIN. 4 POWER UNITS'],
+    h1: 'After-Hours Dispatch for <span class="y">Fleets</span>',
+    lead: 'Trucks do not stop at 5pm, and neither do the problems: a receiver that will not unload, a truck down on the shoulder, a reload that has to be booked tonight for a 4am start. Our after-hours desk covers nights, weekends and holidays for fleets that already run their own day desk — and hands everything back in the morning.',
+    quick: 'After-hours dispatch is night, weekend and holiday coverage for a trucking company that dispatches its own trucks during the day. Badass Logistics answers driver calls, coordinates breakdowns with your maintenance contacts, handles missed and rescheduled appointments, starts detention clocks, books approved reloads for early starts, and hands a written summary back to your day desk. Fleets of four or more power units.',
+    whatH2: 'What actually happens after the office closes',
+    what: [
+      'Most of what goes wrong on a load goes wrong outside office hours. Receivers turn trucks away at night, appointments slip, weather closes a pass, a driver runs out of hours short of the consignee, a truck breaks down. When nobody answers the phone, the driver makes the call alone — or waits until morning, and the detention clock that should have started at 11pm starts at 8am instead.',
+      'An after-hours desk exists so those decisions get made on time, by someone who can reach the broker, the receiver and your maintenance contact, and so your day team walks in to a clear summary instead of a pile of voicemails.',
+    ],
+    freightH2: 'What the after-hours desk handles',
+    freight: [
+      ['driver calls', 'Driver support', 'A person answers, logs the issue and works it — not a voicemail box.'],
+      ['breakdowns', 'Breakdown coordination', 'Your roadside and maintenance contacts called, the broker and receiver updated, and the load re-planned.'],
+      ['appointments', 'Missed and moved appointments', 'Reschedules worked with the receiver, and detention, layover and TONU documented as they happen.'],
+      ['reloads', 'Early-start reloads', 'Loads for the next morning booked within the approval rules you set, so trucks roll at first light.'],
+    ],
+    deskH2: 'How the after-hours desk works with your day team',
+    desk: [
+      { h: 'Your rules decide what we can book', p: 'Before the first night, you set what the desk may approve on its own — rate floors, lanes, customers — and what has to wait for you. Anything outside those rules waits, or gets an on-call call if you want one.' },
+      { h: 'Written handoff every morning', p: 'Every call, decision and open issue from the night is written up for your day desk: which trucks moved, which are waiting, what was claimed, and what needs a decision.' },
+      { h: 'Maintenance stays yours', p: 'The desk does not repair trucks or pick vendors. It calls the roadside and shop contacts you give us, keeps the load moving around the breakdown, and keeps the broker informed.' },
+      { h: 'Time-stamped as it happens', p: 'Arrival, refusal and release times are logged in real time, which is the difference between detention that gets paid and detention that gets argued about.' },
+    ],
+    rateH2: 'What the onboarding call covers for after-hours coverage',
+    rates: [
+      'The hours and days the desk covers, including holidays',
+      'What the desk may approve on its own, and what waits for you',
+      'Your roadside, maintenance and on-call contacts',
+      'Which systems the desk works in, and how the morning handoff arrives',
+      'Fleet size and equipment — four power units minimum',
+    ],
+    faq: [
+      ['Do you only cover after hours, or the whole day?', 'Either. Fleets with their own day desk use after-hours coverage only; fleets without one use the full desk. See <a href="/services/truck-dispatch">fleet dispatch</a>.'],
+      ['Can the after-hours desk book loads?', 'Within the rules you set — rate floors, lanes, customers. Anything outside them waits for your approval.'],
+      ['Do you handle breakdowns?', 'We coordinate them: call your roadside and maintenance contacts, update the broker and receiver, and re-plan the load. Repairs and vendor choice stay with you.'],
+      ['How does my day team know what happened overnight?', 'A written handoff every morning covering each call, decision and open issue.'],
+      ['Do you do after-hours dispatch for owner-operators?', 'No. Four power units is the floor for every desk we run.'],
+    ],
+    siblings: ['fleets-4-to-10-trucks', 'fleets-10-to-25-trucks', 'fleets-25-plus-trucks'],
+    guides: [['how-do-truck-dispatchers-get-paid', 'How Do Truck Dispatchers Get Paid?'], ['truck-dispatcher-vs-freight-broker', 'Truck Dispatcher vs Freight Broker']],
+    cta: 'Need nights and weekends covered?',
+  },
+};
+const FLEET_ORDER = ['fleets-4-to-10-trucks', 'fleets-10-to-25-trucks', 'fleets-25-plus-trucks', 'after-hours-dispatch'];
+
 // ---------- shared blocks ----------
 const HUB_URL = '/services/truck-dispatch/equipment';
 
@@ -594,7 +809,9 @@ const ctaBand = (h2, p) => `
 </div></section>`;
 
 // ---------- equipment page ----------
-function equipmentPage(slug, e) {
+function equipmentPage(slug, e, kind = 'equipment') {
+  const isFleet = kind === 'fleet';
+  const POOL = isFleet ? FLEET : EQUIPMENT;
   const url = `${DOMAIN}/services/truck-dispatch/${slug}`;
   const rel = `services/truck-dispatch/${slug}.html`;
   assertImg(e.hero, slug);
@@ -614,8 +831,8 @@ function equipmentPage(slug, e) {
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: `${DOMAIN}/` },
       { '@type': 'ListItem', position: 2, name: 'Truck Dispatch', item: `${DOMAIN}/services/truck-dispatch` },
-      { '@type': 'ListItem', position: 3, name: 'Dispatch by Equipment', item: `${DOMAIN}${HUB_URL}` },
-      { '@type': 'ListItem', position: 4, name: strip(e.name), item: url },
+      ...(isFleet ? [] : [{ '@type': 'ListItem', position: 3, name: 'Dispatch by Equipment', item: `${DOMAIN}${HUB_URL}` }]),
+      { '@type': 'ListItem', position: isFleet ? 3 : 4, name: strip(e.name), item: url },
     ],
   };
   const faqSchema = {
@@ -625,7 +842,7 @@ function equipmentPage(slug, e) {
   const webPage = { '@context': 'https://schema.org', '@type': 'WebPage', url, name: strip(e.title), speakable: { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.answer-box'] } };
 
   const guides = (e.guides || []).filter(([g]) => liveGuide(g));
-  const siblings = (e.siblings || []).filter(s => EQUIPMENT[s]);
+  const siblings = (e.siblings || []).filter(s => POOL[s]);
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -636,7 +853,7 @@ ${headBlock({ title: e.title, description: e.description, url, hero: e.hero, ext
 ${topbar()}
 ${header()}
 
-<div class="wrap breadcrumb"><a href="/">Home</a> / <a href="/services/truck-dispatch">Truck Dispatch</a> / <a href="${HUB_URL}">Equipment</a> / ${strip(e.short)}</div>
+<div class="wrap breadcrumb"><a href="/">Home</a> / <a href="/services/truck-dispatch">Truck Dispatch</a> / ${isFleet ? '' : `<a href="${HUB_URL}">Equipment</a> / `}${strip(e.short)}</div>
 
 <section class="page-hero photo" style="background-image:url('${e.hero}')"><div class="wrap">
   <span class="section-tag hand">// ${e.tag}</span>
@@ -654,7 +871,7 @@ ${header()}
 </div></section>
 
 <section class="bg-paper" style="border-top:3px solid var(--ink);border-bottom:3px solid var(--ink);"><div class="wrap">
-  <span class="section-tag hand">what the desk books</span>
+  <span class="section-tag hand">${isFleet ? 'what the fleet gets' : 'what the desk books'}</span>
   <h2 class="section-title">${e.freightH2}</h2>
   <div class="cap-grid">
     ${e.freight.map(([k, h, p]) => `<div class="cap"><div class="k">${k}</div><h3>${h}</h3><p>${p}</p></div>`).join('\n    ')}
@@ -673,9 +890,9 @@ ${header()}
 <section class="bg-paper notes-bg" style="border-top:3px solid var(--ink);border-bottom:3px solid var(--ink);">
   <span class="bgnote" style="top:10%;right:5%;transform:rotate(-4deg)">NO FLAT RATES</span>
   <div class="wrap prose">
-  <span class="section-tag hand">rate work</span>
+  <span class="section-tag hand">${isFleet ? 'getting started' : 'rate work'}</span>
   <h2>${e.rateH2}</h2>
-  <p>Every load is negotiated against the lane and the work the freight actually takes. These are the factors the desk argues from — no rate sheet, and no number quoted before we know your fleet:</p>
+  <p>${isFleet ? 'Pricing is set on the onboarding call once we know the fleet — no number before that. These are the things the call works through:' : `Every load is negotiated against the lane and the work the freight actually takes. These are the factors the desk argues from — no rate sheet, and no number quoted before we know your fleet:`}</p>
   <ul class="checklist" style="margin-bottom:18px;">${e.rates.map(r => `<li><span>${r}</span></li>`).join('')}</ul>
 </div></section>
 
@@ -684,14 +901,15 @@ ${header()}
   <h2>What stays yours</h2>
   <p>You keep your operating authority, your insurance and your drivers. You approve every load before it is booked — no forced dispatch. Hiring, maintenance, and your safety and compliance program stay in-house; the desk plugs into your company rather than replacing it.</p>
   <p>Badass Logistics is an industrial <a href="/services/rigging">rigging</a> company first, which is where the freight advantage comes from: our own projects generate loads that need covering, and <a href="/services/project-freight">project freight</a> between sites moves through our licensed broker and carrier partners. Badass holds no operating authority and owns no trucks — your fleet hauls the freight, our desk finds and papers it.</p>
-  <p>See the full <a href="/services/truck-dispatch">fleet dispatch service</a>, or browse <a href="${HUB_URL}">dispatch by equipment type</a>.</p>
+  <p>See the full <a href="/services/truck-dispatch">fleet dispatch service</a>, browse <a href="${HUB_URL}">dispatch by equipment type</a>, or see how the desk works for ${FLEET_ORDER.filter(f => f !== slug).map(f => `<a href="/services/truck-dispatch/${f}">${FLEET[f].short.toLowerCase().replace('desk', 'coverage')}</a>`).join(', ')}.</p>
 </div></section>
 
 <section class="bg-paper" style="border-top:3px solid var(--ink);border-bottom:3px solid var(--ink);"><div class="wrap">
-  <span class="section-tag hand">other equipment</span>
-  <h2 class="section-title">Dispatch for other equipment</h2>
+  <span class="section-tag hand">${isFleet ? 'other fleet sizes' : 'other equipment'}</span>
+  <h2 class="section-title">${isFleet ? 'How the desk works at other sizes' : 'Dispatch for other equipment'}</h2>
   <div class="grid-services" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:22px;">
-    ${siblings.map(s => `<a class="svc-card" href="/services/truck-dispatch/${s}"><div class="num">// dispatch</div><h3>${EQUIPMENT[s].short}</h3><p>${EQUIPMENT[s].blurb}</p><span class="more">${strip(EQUIPMENT[s].name)} →</span></a>`).join('\n    ')}
+    ${siblings.map(s => `<a class="svc-card" href="/services/truck-dispatch/${s}"><div class="num">// dispatch</div><h3>${POOL[s].short}</h3><p>${POOL[s].blurb}</p><span class="more">${strip(POOL[s].name)} →</span></a>`).join('\n    ')}${isFleet ? `
+    <a class="svc-card" href="${HUB_URL}"><div class="num">// dispatch</div><h3>By Equipment</h3><p>Van, reefer, flatbed, step deck, Conestoga and more — what the desk does with each.</p><span class="more">Dispatch by equipment →</span></a>` : ''}
   </div>
 </div></section>
 ${guides.length ? `
@@ -705,10 +923,10 @@ ${guides.length ? `
 
 <section class="notes-bg"><div class="wrap prose">
   <span class="section-tag hand">questions</span>
-  <h2>${strip(e.short)} dispatch FAQ</h2>
+  <h2>${isFleet ? strip(e.name) : `${strip(e.short)} dispatch`} FAQ</h2>
   ${e.faq.map(([q, a]) => `<h3>${q}</h3>\n  <p>${a}</p>`).join('\n  ')}
 </div></section>
-${ctaBand(`Running four ${strip(e.short).toLowerCase()} trucks or more?`, 'Tell us your fleet, your equipment and the lanes you want to run. We\'ll set up an onboarding call and get your trucks covered.')}
+${ctaBand(isFleet ? e.cta : `Running four ${strip(e.short).toLowerCase()} trucks or more?`, 'Tell us your fleet, your equipment and the lanes you want to run. We\'ll set up an onboarding call and get your trucks covered.')}
 
 ${footer(rel)}
 </body>
@@ -788,6 +1006,15 @@ ${header()}
   </div>
 </div></section>
 
+<section><div class="wrap">
+  <span class="section-tag hand">by fleet size</span>
+  <h2 class="section-title">Dispatch by fleet size</h2>
+  <p class="section-intro">Four trucks and twenty-five trucks break dispatch in different places. Here is how the desk works at each size — and after hours.</p>
+  <div class="grid-services" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:22px;">
+    ${FLEET_ORDER.map(s => `<a class="svc-card" href="/services/truck-dispatch/${s}"><div class="num">// fleet</div><h3>${FLEET[s].short}</h3><p>${FLEET[s].blurb}</p><span class="more">${strip(FLEET[s].name)} →</span></a>`).join('\n    ')}
+  </div>
+</div></section>
+
 <section class="notes-bg"><div class="wrap prose">
   <span class="section-tag hand">the limit, stated plainly</span>
   <h2>What this desk does not book</h2>
@@ -818,6 +1045,13 @@ for (const slug of ORDER) {
   fs.writeFileSync(path.join(OUT_DIR, `${slug}.html`), equipmentPage(slug, e));
   built.push({ slug, url: `/services/truck-dispatch/${slug}`, name: strip(e.name) });
 }
+for (const slug of FLEET_ORDER) {
+  const e = FLEET[slug];
+  if (!e) throw new Error(`FLEET_ORDER lists ${slug} with no FLEET entry`);
+  if (EQUIPMENT[slug]) throw new Error(`${slug} is both an equipment and a fleet page`);
+  fs.writeFileSync(path.join(OUT_DIR, `${slug}.html`), equipmentPage(slug, e, 'fleet'));
+  built.push({ slug, url: `/services/truck-dispatch/${slug}`, name: strip(e.name), kind: 'fleet' });
+}
 fs.writeFileSync(path.join(OUT_DIR, 'equipment.html'), hubPage());
 
 // pillar grid (sentinel)
@@ -839,8 +1073,10 @@ fs.writeFileSync(path.join(ROOT, 'data/dispatch-equipment.json'), JSON.stringify
   generated: new Date().toISOString().slice(0, 10),
   hub: HUB_URL,
   count: built.length,
+  equipment: ORDER.length,
+  fleet: FLEET_ORDER.length,
   pages: built,
 }, null, 2) + '\n');
 
-console.log(`✓ Built ${built.length} dispatch × equipment pages + 1 hub (${HUB_URL})`);
+console.log(`✓ Built ${ORDER.length} dispatch × equipment + ${FLEET_ORDER.length} fleet-model pages + 1 hub (${HUB_URL})`);
 console.log(`✓ Updated truck-dispatch pillar grid + data/dispatch-equipment.json`);

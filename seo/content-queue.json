@@ -436,7 +436,7 @@
       ],
       "hero": "loads/load-lowboy-warehouse.jpg",
       "status": "done",
-      "shipped": "2026-09-24"
+      "published": "2026-09-24"
     },
     {
       "slug": "how-to-move-a-robotic-work-cell",
@@ -450,7 +450,7 @@
       ],
       "hero": "loads/enclosed-trailer-machinery-loaded.jpg",
       "status": "done",
-      "shipped": "2026-09-24"
+      "published": "2026-09-24"
     },
     {
       "slug": "how-to-move-a-packaging-line",
@@ -464,7 +464,7 @@
       ],
       "hero": "loads/load-machine-loadout.jpg",
       "status": "done",
-      "shipped": "2026-09-24"
+      "published": "2026-09-24"
     },
     {
       "slug": "how-to-move-an-extruder",
@@ -478,7 +478,7 @@
       ],
       "hero": "loads/load-machine-loadout.jpg",
       "status": "done",
-      "shipped": "2026-09-24"
+      "published": "2026-09-24"
     },
     {
       "slug": "rigging-load-charts-explained",
@@ -493,7 +493,7 @@
       ],
       "hero": "rigging-crane.jpg",
       "status": "done",
-      "shipped": "2026-09-24"
+      "published": "2026-09-24"
     },
     {
       "slug": "how-to-calculate-rigging-capacity",
@@ -507,7 +507,8 @@
         "blog/types-of-rigging"
       ],
       "hero": "rigging-hero.jpg",
-      "status": "todo"
+      "status": "done",
+      "published": "2026-09-27"
     },
     {
       "slug": "what-is-a-lift-plan",
@@ -537,7 +538,7 @@
       ],
       "hero": "loads/load-lowboy-warehouse.jpg",
       "status": "done",
-      "shipped": "2026-09-24"
+      "published": "2026-09-24"
     },
     {
       "slug": "floor-loading-for-machinery",
@@ -550,7 +551,8 @@
         "services/machinery-moving"
       ],
       "hero": "rigging-hero.jpg",
-      "status": "todo"
+      "status": "done",
+      "published": "2026-09-27"
     },
     {
       "slug": "machine-foundations-and-grouting",
@@ -564,7 +566,8 @@
         "blog/machine-leveling-and-alignment"
       ],
       "hero": "loads/load-machine-loadout.jpg",
-      "status": "todo"
+      "status": "done",
+      "published": "2026-09-27"
     },
     {
       "slug": "how-to-move-a-pet-ct-scanner",
@@ -577,7 +580,8 @@
         "services/lab-equipment-movers"
       ],
       "hero": "loads/ct-mri-scanner-enclosed-air-ride.jpg",
-      "status": "todo"
+      "status": "done",
+      "published": "2026-09-27"
     },
     {
       "slug": "how-to-move-a-lab-freezer",
@@ -590,7 +594,8 @@
         "services/mri-medical-equipment-rigging"
       ],
       "hero": "loads/white-glove-crated-equipment-delivery.jpg",
-      "status": "todo"
+      "status": "done",
+      "published": "2026-09-27"
     },
     {
       "slug": "how-to-move-an-autoclave",
@@ -603,7 +608,8 @@
         "services/machinery-moving"
       ],
       "hero": "loads/white-glove-crated-equipment-delivery.jpg",
-      "status": "todo"
+      "status": "done",
+      "published": "2026-09-27"
     },
     {
       "slug": "how-to-move-a-ups-or-battery-plant",

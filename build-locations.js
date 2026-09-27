@@ -8,6 +8,21 @@
    Re-run any time:  node build-locations.js
    =========================================================== */
 const fs = require('fs');
+const { inWave } = require('./lib/waves');
+// Wave-2 service x city pages that exist for this metro (lib/waves.js is the
+// same list the matrix generator builds from, so these links always resolve).
+const CITY_WAVE2 = [
+  ['millwright-services', 'Millwright services', 'setting, leveling, and alignment'],
+  ['machinery-removal', 'Machinery removal', 'retired machines and plant closures'],
+  ['crane-services', 'Crane &amp; rigging services', 'planned picks and rooftop crane-ins'],
+  ['forklift-loading-unloading', 'Machinery loading &amp; unloading', 'load-outs and container unloads'],
+];
+function cityWave2(city, state, slug) {
+  const have = CITY_WAVE2.filter(([s]) => inWave(s, `${city}|${state}`));
+  if (!have.length) return '';
+  return `
+  <p style="margin-top:22px;font-weight:600;">Also in ${city}: ${have.map(([s, label, what]) => `<a href="../services/${s}/${slug}.html" style="color:var(--yellow-deep);text-decoration:underline;">${label}</a> (${what})`).join(' · ')}.</p>`;
+}
 const PLACES = require('./lib/places');
 const path = require('path');
 
@@ -250,7 +265,7 @@ ${NAV}
     <a class="svc-card" href="../services/plant-relocation/${slug}.html"><div class="thumb" style="background-image:url('../assets/img/loads/load-pallet-racking.jpg')"></div><div class="num">// 04</div><h3>Plant Relocation</h3><p>Full facility and production-line relocations sequenced around ${city} uptime.</p><span class="more">${city} Plant Relocation →</span></a>
     <a class="svc-card" href="../services/project-freight.html"><div class="thumb" style="background-image:url('../assets/img/loads/tarped-machinery-flatbed-warehouse-loadout.jpg')"></div><div class="num">// 05</div><h3>Project Freight</h3><p>Container to warehouse, crating, and dedicated lanes for the ${city} jobs we rig — project moves, not one-off loads.</p><span class="more">Project Freight →</span></a>
     <a class="svc-card" href="../services/truck-dispatch.html"><div class="thumb" style="background-image:url('../assets/img/dispatch-truck.jpg')"></div><div class="num">// 06</div><h3>Truck Dispatch</h3><p>Running 4+ trucks out of ${city}? Freight from our project network plus a full dispatch desk. No owner-operators.</p><span class="more">Fleet Dispatch →</span></a>
-  </div>
+  </div>${cityWave2(city, state, slug)}
 </div></section>
 
 <section class="notes-bg">

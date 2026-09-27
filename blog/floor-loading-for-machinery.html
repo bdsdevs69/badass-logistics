@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Floor Loading for Machinery: Point Loads vs. Distributed | Badass Logistics</title>
+<meta name="description" content="How riggers check floor load capacity: point loads vs distributed loads, slab and subgrade, mat and plate spreading, mezzanine limits, and engineer sign-off.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#141414">
+<link rel="canonical" href="https://badasslogistics.com/blog/floor-loading-for-machinery">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Floor Loading for Machinery: Point Loads vs. Distributed">
+<meta property="og:description" content="How riggers check floor load capacity: point loads vs distributed loads, slab and subgrade, mat and plate spreading, mezzanine limits, and engineer sign-off.">
+<meta property="og:url" content="https://badasslogistics.com/blog/floor-loading-for-machinery">
+<meta property="og:image" content="https://badasslogistics.com/assets/img/rigging-hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Floor Loading for Machinery: Point Loads vs. Distributed">
+<meta name="twitter:description" content="How riggers check floor load capacity: point loads vs distributed loads, slab and subgrade, mat and plate spreading, mezzanine limits, and engineer sign-off.">
+<meta name="twitter:image" content="https://badasslogistics.com/assets/img/rigging-hero.jpg">
+<link rel="sitemap" type="application/xml" href="https://badasslogistics.com/sitemap.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Architects+Daughter&family=Barlow:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Architects+Daughter&family=Barlow:wght@400;500;600;700&display=swap"></noscript>
+<link rel="icon" href="../assets/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+<link rel="preload" as="image" href="../assets/img/rigging-hero.jpg" fetchpriority="high">
+<link rel="stylesheet" href="../css/styles.css">
+<style>
+  .blog-hero { padding:60px 0 30px; border-bottom:3px solid var(--ink); background:var(--paper,#f7f4ea); }
+  .post { max-width:820px; margin:0 auto; }
+  .post .meta { font-family:"Barlow",sans-serif; font-weight:600; font-size:14px; letter-spacing:.5px; text-transform:uppercase; color:var(--yellow-deep); margin-bottom:10px; }
+  .post-body h2 { font-family:"Anton",sans-serif; font-size:30px; margin:38px 0 12px; line-height:1.15; }
+  .post-body h3 { font-size:22px; margin:26px 0 8px; }
+  .post-body p, .post-body li { font-size:18px; line-height:1.7; }
+  .post-body ul { margin:10px 0 10px 22px; }
+  .post-body li { margin-bottom:7px; }
+  .post-body a { color:var(--yellow-deep); text-decoration:underline; font-weight:600; }
+  .keyfacts { border:3px solid var(--ink); box-shadow:var(--shadow); background:var(--white); padding:22px 26px; margin:26px 0; }
+  .keyfacts h3 { margin-top:0; }
+  .post-img { width:100%; border:3px solid var(--ink); box-shadow:var(--shadow); margin:8px 0 6px; display:block; }
+  .blog-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:22px; margin-top:30px; }
+  .blog-card { border:3px solid var(--ink); box-shadow:var(--shadow); background:var(--white); text-decoration:none; color:var(--ink); display:flex; flex-direction:column; overflow:hidden; transition:transform .08s; }
+  .blog-card:hover { transform:translate(-2px,-2px); }
+  .blog-card .thumb { height:160px; background-size:cover; background-position:center; border-bottom:3px solid var(--ink); }
+  .blog-card .pad { padding:18px 20px 22px; }
+  .blog-card .cat { font-family:"Barlow",sans-serif; font-weight:700; font-size:12px; letter-spacing:1px; text-transform:uppercase; color:var(--yellow-deep); }
+  .blog-card h3 { font-family:"Anton",sans-serif; font-size:21px; line-height:1.2; margin:6px 0 8px; }
+  .blog-card p { font-size:15px; opacity:.85; margin:0; }
+  .related { border-top:3px solid var(--ink); margin-top:46px; padding-top:24px; }
+  .related a { display:inline-block; margin:0 10px 10px 0; background:var(--ink); color:var(--white); padding:8px 14px; box-shadow:3px 3px 0 var(--yellow-deep); text-decoration:none; font-weight:700; font-size:15px; }
+  .related a:hover { background:var(--yellow-deep); color:var(--ink); }
+  .tldr { border:3px solid var(--ink); background:var(--yellow,#ffd21e); box-shadow:var(--shadow); padding:18px 24px; margin:6px 0 30px; }
+  .tldr-tag { display:block; font-size:14px; letter-spacing:1px; text-transform:uppercase; opacity:.75; margin-bottom:4px; }
+  .tldr p { font-size:19px; line-height:1.6; font-weight:600; margin:0; }
+  .post-body figure { margin:26px 0; }
+  .post-body figure img { width:100%; height:auto; border:3px solid var(--ink); box-shadow:var(--shadow); display:block; }
+  .post-body figcaption { font-family:"Barlow",sans-serif; font-size:14px; opacity:.72; margin-top:8px; font-style:italic; }
+  .post-body .takeaways { border-left:6px solid var(--yellow-deep); background:var(--paper,#f7f4ea); padding:16px 22px; margin:24px 0; }
+  .post-body .takeaways h3 { margin:0 0 8px; font-size:18px; text-transform:uppercase; letter-spacing:.5px; }
+  .post-body .takeaways li { margin-bottom:6px; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Floor Loading for Machinery: Point Loads vs. Distributed",
+  "description": "How riggers check floor load capacity: point loads vs distributed loads, slab and subgrade, mat and plate spreading, mezzanine limits, and engineer sign-off.",
+  "image": [
+    "https://badasslogistics.com/assets/img/rigging-hero.jpg"
+  ],
+  "datePublished": "2026-09-27",
+  "dateModified": "2026-09-27",
+  "wordCount": 2017,
+  "articleSection": "Rigging",
+  "inLanguage": "en-US",
+  "author": {
+    "@type": "Organization",
+    "name": "Badass Logistics",
+    "url": "https://badasslogistics.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Badass Logistics",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://badasslogistics.com/assets/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://badasslogistics.com/blog/floor-loading-for-machinery"
+  },
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".tldr",
+      ".lead"
+    ]
+  },
+  "keywords": "floor load capacity machinery, slab loading rigging, mezzanine machine load, point load vs distributed load, floor loading for heavy equipment, structural engineer sign off machine floor"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://badasslogistics.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://badasslogistics.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Floor Loading for Machinery: Point Loads vs. Distributed",
+      "item": "https://badasslogistics.com/blog/floor-loading-for-machinery"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is floor load capacity for machinery?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is how much weight a specific section of floor can carry safely, and it has to be checked two ways: the floor's general, per-square-foot rating for evenly distributed weight, and its separate capacity for concentrated point loads like a machine foot, jack pad, or skate wheel. A machine can be well within a floor's general rating and still exceed what that floor can take at one small contact point."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a point load and a distributed load?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A distributed load spreads weight evenly over an area, measured in pounds per square foot — the number on most building ratings. A point load, or concentrated load, delivers the same kind of weight through a much smaller contact area, like a machine leg, a jack pad, or a skate wheel, and it is measured as a total force over that small footprint rather than spread across the room. The same machine creates very different point loads depending on whether it is standing on its base, riding on skates, or supported on jack stands."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a mezzanine hold industrial machinery?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sometimes, but its published uniform load rating is not the number that matters most. Mezzanines are built on framing like steel bar joists that carry far more load near their supported ends than at mid-span, so a machine's actual point loads have to be checked against where the joists and beams run, not just against the mezzanine's general psf rating. Landing the machine's feet over beam and column lines, adding transfer steel, or spreading the load with plate are the usual fixes when the loading does not line up with the structure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do steel plate and timber mats spread a floor load?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "By taking a concentrated load and distributing it over a wider area before it reaches the floor, so the pressure per square foot the slab actually feels drops to something within its rating. The plate or mat has to be stiff enough to do that spreading itself — one that flexes under the load just shifts the concentration to whatever spot underneath is stiffest. Sizing comes from dividing the point load by the floor's allowable bearing pressure to get the minimum contact area needed, then choosing plate or timber rigid enough to actually deliver that spread."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does slab thickness alone determine how much weight a floor can carry?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — the subgrade underneath the slab matters as much as the concrete itself. A slab-on-grade transfers concentrated loads down into the soil beneath it, so two slabs poured to identical thickness can have very different real-world capacities if one sits on well-compacted fill and the other sits on soft or poorly compacted ground. Structural drawings, or a conservative estimate backed by an engineer where drawings don't exist, are what actually answer the question."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When does a machine installation need a structural engineer to sign off on floor loading?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When the calculated load is close to or exceeds the floor's documented rating, when no structural drawings exist for that section of floor, on any elevated floor or mezzanine taking a machine as a permanent installation, and whenever the machine produces dynamic or cyclic loading — a stamping press or anything with a reciprocating ram or flywheel — rather than a simple static weight once it's set and leveled."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap"><div>📍 88 locations nationwide &nbsp;·&nbsp; <strong>All 50 states</strong> &nbsp;·&nbsp; Riggers first</div><div><a href="tel:3072841332">📞 (307) 284-1332</a> &nbsp;·&nbsp; <a href="/contact"><strong>Get a Quote</strong></a></div></div></div>
+<header class="site-header"><div class="wrap">
+  <a class="logo" href="/"><span class="brand"><span class="l1">BADASS</span><span class="l2">LOGISTICS</span></span></a>
+  <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+  <nav class="main" id="nav">
+    <a href="/">Home</a>
+    <div class="nav-drop"><a href="/services/rigging">Rigging</a><div class="drop drop-2col"><a href="/services/rigging">Industrial Rigging</a><a href="/services/machinery-moving">Machinery Moving</a><a href="/services/plant-relocation">Plant Relocation</a><a href="/services/machinery-removal">Machinery Removal</a><a href="/services/mri-medical-equipment-rigging">MRI & Medical</a><a href="/services/lab-equipment-movers">Lab & Precision</a><a href="/services/cnc-machine-movers">CNC Machine Movers</a><a href="/services/printing-press-movers">Printing Press Movers</a><a href="/services/crane-services">Crane & Rigging</a><a href="/services/heavy-lift-rigging">Jacking & Skidding</a><a href="/services/millwright-services">Millwright Services</a><a href="/services/forklift-loading-unloading">Loading & Unloading</a><a href="/services/data-center-rigging">Data Center Rigging</a><a href="/services/hvac-chiller-rigging">Chiller & Boiler</a><a href="/services/transformer-generator-rigging">Transformers & Generators</a></div></div>
+    <div class="nav-drop"><a href="/services/project-freight">Project Freight</a><div class="drop"><a href="/services/project-freight">Project Freight</a><a href="/services/container-to-warehouse">Container to Warehouse</a><a href="/services/crating-packing">Crating & Packing</a><a href="/services/dedicated-lanes">Dedicated Lanes & FTL</a></div></div>
+    <a href="/services/truck-dispatch">Truck Dispatch</a>
+    <a href="/locations">Locations</a>
+    <a href="/blog/">Blog</a>
+    <a href="/about">About</a>
+    <a class="btn" style="font-size:14px;padding:9px 16px;box-shadow:3px 3px 0 var(--ink)" href="/contact">Get a Quote</a>
+  </nav>
+</div></header>
+
+<div class="wrap breadcrumb"><a href="/">Home</a> / <a href="/">Blog</a> / Rigging</div>
+
+<section class="page-hero photo" style="background-image:url('../assets/img/rigging-hero.jpg')"><div class="wrap">
+  <span class="section-tag hand">// rigging</span>
+  <h1>Floor Loading for Machinery: Point Loads vs. Distributed</h1>
+  <p class="lead">A slab rated for a hundred people standing on it can still crack under one machine leg. The difference is how the weight lands, not how much of it there is.</p>
+</div>
+  <span class="annot hand tag warn a1">FIELD GUIDE</span>
+  <span class="annot hand a4">BY THE CREW ✓</span>
+</section>
+
+<section class="notes-bg">
+  <span class="bgnote" style="top:6%;right:4%;transform:rotate(-4deg)">REAL LOADS — REAL NUMBERS</span>
+  <span class="bgnote" style="top:38%;right:6%;transform:rotate(3deg)">NO FLUFF, JUST SPECS</span>
+  <span class="bgnote" style="top:70%;right:4%;transform:rotate(-3deg)">FROM THE DISPATCH DESK</span>
+  <div class="wrap">
+  <article class="post prose post-body">
+    <p class="meta">Rigging · By the Badass Logistics crew · September 27, 2026</p>
+    
+    <div class="tldr" id="quick-answer">
+      <span class="tldr-tag hand">// quick answer</span>
+      <p>Floor loading for machinery fails when a point load — a machine foot, jack pad, or skate wheel — exceeds what one spot on a slab can carry, even if the general rating looks fine. Point loads and distributed loads are checked separately, slab capacity depends on subgrade as much as thickness, mats and plate spread loads back out, and mezzanines need their point-load checked, not just their psf rating.</p>
+    </div>
+    <p>A floor's rating usually gets quoted as one number — a slab is "good for 150 pounds per square foot," a mezzanine is "rated for light manufacturing." That number describes a load spread evenly across the whole floor. A machine does not load a floor that way. It stands on four feet, or rides on skate wheels, or sits under jack stands during the set — a handful of small, specific spots each carrying a share of the total weight that is nowhere close to even. The floor can pass its general rating with room to spare and still fail directly under one of those spots, because point loading and distributed loading are two different questions with two different answers.</p>
+
+<h2>What is the difference between a point load and a distributed load?</h2>
+<p>A distributed load spreads weight evenly over an area and is expressed as pounds per square foot — the number on a building's structural rating, meant for uniform loads like stored pallets, foot traffic, or a shelving system. A point load, also called a concentrated load, is the same kind of weight delivered through a much smaller contact area — a machine foot, a jack pad, a crane outrigger, or a skate wheel — measured as a total force over that small footprint, not spread across the room.</p>
+<p>The same machine produces very different loading conditions depending on how it is sitting. Resting flat on four leveling pads, a ten-thousand-pound machine might put twenty-five hundred pounds under each pad, over a base a few inches across — already a serious concentration compared to the floor's per-square-foot rating. Put that same machine on skates for the move and the same weight lands on four steel wheels each a couple of inches wide, multiplying the pressure per square inch several times over even though the total weight has not changed. A floor's psf rating tells a rigger almost nothing about whether it will survive that skate move; a separate point-load capacity has to be checked, and most buildings' structural information does not volunteer that number without asking for it specifically.</p>
+
+<h2>How do you find out what a slab can actually carry?</h2>
+<p>By pulling the structural drawings for that specific section of floor, because slab capacity is not one property of a building — it changes bay to bay, and it depends on what is underneath the concrete as much as the concrete itself. Two slabs poured to the same thickness with the same rebar can have very different point-load capacities if one sits on well-compacted gravel fill and the other sits on soft or poorly compacted subgrade, because a slab-on-grade does not carry a concentrated load by itself — it transfers that load down into the soil beneath it, and a slab is only as good as the ground supporting it. Riggers do not need the engineering term for that support, but they do need to know whether the subgrade under a given stretch of floor was ever engineered for machinery loads or just for a warehouse floor that only saw racking and forklifts.</p>
+<p>Where drawings do not survive — a common problem in plants that have changed hands or been added onto more than once — capacity gets estimated conservatively from slab thickness and visible reinforcement at a core sample or saw-cut edge, then confirmed with an engineer before anything heavy sits on it long enough to matter. A slab that looks identical to the one next to it can be four inches thicker or poured to a different mix design, because it was built for a press line while the aisle beside it was only ever built for foot traffic and shelving.</p>
+<p>The failure mode worth understanding, not just avoiding, is punching shear — a concentrated load pushed through a small footprint can punch a cone-shaped failure straight through a slab that would carry the same total weight without complaint if it were spread over a larger area. That is why a rigger asks about the contact area of every foot, pad, and wheel before asking about the total weight; a slab that easily carries an evenly distributed ten thousand pounds can still fail locally under twenty-five hundred pounds concentrated into four square inches.</p>
+
+<div class="keyfacts">
+  <h3>What changes the loading condition on the same machine</h3>
+  <ul>
+    <li>Resting on leveling pads — moderate concentration, four or more contact points</li>
+    <li>Riding on machinery skates — high concentration, small steel wheel footprint</li>
+    <li>Under jack stands during the set — very high concentration, momentary, often the worst case of the whole move</li>
+    <li>Under forklift tires — high concentration, plus the forklift's own weight added to the machine's</li>
+    <li>Set on its permanent foundation — usually the best-supported condition, if the pad was built for it</li>
+  </ul>
+</div>
+
+<h2>How does spreading the load with mats and steel plate actually work?</h2>
+<p>A mat or a steel plate does not reduce the weight — it takes a concentrated load and pushes it back out over a wider footprint before it reaches the floor, so the pressure per square foot the slab actually feels drops to something the floor was already rated for. The plate or mat has to be stiff enough to do that spreading on its own; one that flexes under the load just relocates the concentration to whatever spot underneath happens to be stiffest, which defeats the purpose. Plate thickness and mat construction get sized to the specific load, not picked because a sheet of steel was sitting in the yard — an undersized plate spreads the load by a few inches and calls it done, while the slab underneath still sees most of the original concentration.</p>
+<p>Timber mats — heavy oak or laminated construction mats, often stacked — do this job well for ground-level work and for spreading crane outrigger loads over soft or unknown subgrade, because timber compresses and seats itself against an uneven surface. Steel plate does the same job with less thickness for a given spread and holds up better under repeated skate-wheel passes, laid end to end to give skates or dollies a continuous, evenly loaded running surface instead of walking off one mat onto bare concrete. Sizing either one comes down to the same math: divide the point load by the floor's allowable bearing pressure to get the minimum contact area needed, then pick a plate or mat rigid enough to actually deliver that spread rather than just cover that much ground.</p>
+<p>On an elevated floor, spreading the load sideways only helps if there is somewhere stronger nearby to spread it toward. Plate or a runway of dunnage laid across a floor bay carries the point load toward the columns, beams, or bearing walls at the edges of that bay — the parts of the structure actually built to take weight — rather than concentrating it mid-span, where a floor system is at its weakest. That distinction, spreading into stronger structure versus just spreading pressure over more slab, is what separates a plate that genuinely fixes an underrated floor from one that just makes the problem look better on paper.</p>
+
+<h2>What's different about floor loading on a mezzanine or upper floor?</h2>
+<p>A mezzanine's published rating is almost always a uniform, per-square-foot number aimed at storage or light manufacturing, which is a separate question from what any single point on that mezzanine can take under a machine's feet. Codes that set mezzanine design loads typically require the structure to also handle a specified concentrated load at any point — but that code-minimum concentrated load is sized for things like a forklift wheel, and a heavier machine's per-foot loading can exceed it even when the overall psf number looks generous.</p>
+<p>The framing itself matters as much as the rating. Most mezzanines are built on steel bar joists spanning between beams, and bar joists carry load well near their supported ends and progressively less toward mid-span. A machine parked at the center of a joist span loads the weakest part of that joist, even if the same machine sitting directly over a beam or a column line would be a non-issue on the identical structure. That is the detail a mezzanine's general rating never communicates and a floor plan never shows: where the joists and beams actually run under the deck, and whether the machine's footprint lines up with them or straddles the gap between.</p>
+<p>Where a machine's point loads exceed what the mezzanine can take at its planned location, the fix usually runs one of three ways: relocate the machine to land its feet over the beam and column lines instead of mid-span, add steel to transfer the load from mid-span to the supports, or spread the load with plate across enough joists that no single one carries the full concentration alone. None of that gets decided by eye from the mezzanine floor — it comes from pulling the framing plan before the machine goes up, not after it is already sitting there.</p>
+
+<h2>When does floor loading require a structural engineer's sign-off?</h2>
+<p>Whenever the calculated load is close to or over the floor's documented rating, whenever no structural drawings exist to calculate against, and always on an elevated floor or mezzanine taking a machine as a permanent installation rather than a brief pass-through. A ground-floor slab-on-grade with known reinforcement and a load comfortably inside a conservative, documented rating is often a rigger's call to make with plate and standard practice. The same load on a floor with unknown structural history, on an upper level, or under a machine that will sit there for years rather than minutes is a different risk, and it is an engineer's signature that carries that risk, not a rigger's judgment call.</p>
+<p>Dynamic and cyclic loading raises the bar further. A machine that runs static — most CNC equipment, most assembly fixtures — imposes close to its dead weight once it is set and leveled. A stamping press, a forge, or anything with a reciprocating ram or a flywheel puts impact and vibration loads into the floor on top of its static weight, exactly the kind of load a general floor rating was never written to cover. Older buildings add their own wrinkle: a slab or mezzanine that predates current structural codes may carry loads fine in practice but was never designed against the standard a new engineer's calculation would use — one more reason a rigger's estimate and a stamped calculation are not interchangeable once real risk is riding on the answer.</p>
+<p>The practical rule that keeps a job out of a change order: any floor loading question that comes up on <a href="what-is-a-machinery-move-survey">the pre-move survey</a> gets answered before the machine ships, not while it is sitting on the dock. A wrong guess about floor capacity does not announce itself gradually — a slab either holds or it does not, and the second option shows up as a cracked floor or a tilted machine with the crew already committed to the move.</p>
+
+<div class="takeaways">
+  <h3>Bottom line</h3>
+  <ul>
+    <li>A floor's psf rating describes distributed load — it does not tell you what a machine foot, jack pad, or skate wheel will do to that same floor.</li>
+    <li>Slab capacity depends on the subgrade underneath as much as the concrete itself; two identical-looking slabs can carry very different point loads.</li>
+    <li>Mats and plate work by spreading a concentrated load into a wider footprint or toward stronger structure — a plate that flexes under load does neither.</li>
+    <li>A mezzanine's uniform rating and its concentrated-load capacity are two different numbers, and bar-joist framing carries far less at mid-span than at its supports.</li>
+    <li>Get a structural engineer's sign-off when drawings don't exist, when the load is close to the floor's rating, on any elevated floor taking a permanent installation, or when the load is dynamic rather than static.</li>
+  </ul>
+</div>
+
+<p>Every one of these questions gets answered on the walkthrough, before a crew or a machine is committed to a route or a resting spot. <a href="../services/rigging">Industrial rigging</a> and <a href="../services/machinery-moving">machinery moving</a> both start there — send the machine list and the floor plans and the floor loading gets checked before it becomes a change order, not after. <a href="../contact">Start here</a>.</p>
+    <div class="faq" style="margin-top:40px;">
+      <h2>Frequently asked questions</h2>
+      
+    <details><summary>What is floor load capacity for machinery?</summary><div class="a">It is how much weight a specific section of floor can carry safely, and it has to be checked two ways: the floor's general, per-square-foot rating for evenly distributed weight, and its separate capacity for concentrated point loads like a machine foot, jack pad, or skate wheel. A machine can be well within a floor's general rating and still exceed what that floor can take at one small contact point.</div></details>
+    <details><summary>What is the difference between a point load and a distributed load?</summary><div class="a">A distributed load spreads weight evenly over an area, measured in pounds per square foot — the number on most building ratings. A point load, or concentrated load, delivers the same kind of weight through a much smaller contact area, like a machine leg, a jack pad, or a skate wheel, and it is measured as a total force over that small footprint rather than spread across the room. The same machine creates very different point loads depending on whether it is standing on its base, riding on skates, or supported on jack stands.</div></details>
+    <details><summary>Can a mezzanine hold industrial machinery?</summary><div class="a">Sometimes, but its published uniform load rating is not the number that matters most. Mezzanines are built on framing like steel bar joists that carry far more load near their supported ends than at mid-span, so a machine's actual point loads have to be checked against where the joists and beams run, not just against the mezzanine's general psf rating. Landing the machine's feet over beam and column lines, adding transfer steel, or spreading the load with plate are the usual fixes when the loading does not line up with the structure.</div></details>
+    <details><summary>How do steel plate and timber mats spread a floor load?</summary><div class="a">By taking a concentrated load and distributing it over a wider area before it reaches the floor, so the pressure per square foot the slab actually feels drops to something within its rating. The plate or mat has to be stiff enough to do that spreading itself — one that flexes under the load just shifts the concentration to whatever spot underneath is stiffest. Sizing comes from dividing the point load by the floor's allowable bearing pressure to get the minimum contact area needed, then choosing plate or timber rigid enough to actually deliver that spread.</div></details>
+    <details><summary>Does slab thickness alone determine how much weight a floor can carry?</summary><div class="a">No — the subgrade underneath the slab matters as much as the concrete itself. A slab-on-grade transfers concentrated loads down into the soil beneath it, so two slabs poured to identical thickness can have very different real-world capacities if one sits on well-compacted fill and the other sits on soft or poorly compacted ground. Structural drawings, or a conservative estimate backed by an engineer where drawings don't exist, are what actually answer the question.</div></details>
+    <details><summary>When does a machine installation need a structural engineer to sign off on floor loading?</summary><div class="a">When the calculated load is close to or exceeds the floor's documented rating, when no structural drawings exist for that section of floor, on any elevated floor or mezzanine taking a machine as a permanent installation, and whenever the machine produces dynamic or cyclic loading — a stamping press or anything with a reciprocating ram or flywheel — rather than a simple static weight once it's set and leveled.</div></details>
+    </div>
+    <div class="related">
+      <strong style="display:block;margin-bottom:12px;font-family:'Anton',sans-serif;font-size:20px;">Keep reading</strong>
+      <a href="../services/rigging">Industrial Rigging</a>
+      <a href="../services/machinery-moving">Machinery Moving & Installation</a>
+      <a href="what-is-a-machinery-move-survey">What Is a Machinery Move Survey?</a>
+      <a href="moving-machinery-through-a-tight-plant">Moving Machinery Through a Tight Plant</a>
+      <a href="jacking-and-skidding-explained">Jacking & Skidding Explained</a>
+    </div>
+  </article>
+</div></section>
+
+<div class="cta-band"><div class="wrap" style="padding-top:56px;padding-bottom:56px;text-align:center;">
+  <h2>Got something that needs rigging?</h2>
+  <p>Tell us what's moving, where it's going, and the deadline. We'll plan the rest.</p>
+  <a class="btn dark" href="../contact">Get a Free Quote</a>
+</div></div>
+<footer><div class="wrap"><div class="cols">
+  <div><h4>Badass Logistics</h4><p style="opacity:.85;max-width:300px;">Riggers first. Every kind of industrial rigging — machinery moving, plant relocation, MRI and medical equipment, crane lifts, millwright work — plus project freight for the jobs we rig, and truck dispatch for fleets of 4+ trucks.</p></div>
+  <div><h4>Rigging Services</h4><a href="/services/rigging">Industrial Rigging</a><a href="/services/machinery-moving">Machinery Moving</a><a href="/services/plant-relocation">Factory & Plant Relocation</a><a href="/services/machinery-removal">Machinery Removal & Decommissioning</a><a href="/services/mri-medical-equipment-rigging">Medical Equipment & MRI Rigging</a><a href="/services/lab-equipment-movers">Lab & Precision Equipment Movers</a><a href="/services/cnc-machine-movers">CNC Machine Movers</a><a href="/services/printing-press-movers">Printing Press Movers</a><a href="/services/crane-services">Crane & Rigging Services</a><a href="/services/heavy-lift-rigging">Jacking, Skidding & Gantry Lifts</a><a href="/services/millwright-services">Millwright & Machine Installation</a><a href="/services/forklift-loading-unloading">Machinery Loading & Unloading</a><a href="/services/data-center-rigging">Data Center Rigging</a><a href="/services/hvac-chiller-rigging">Chiller, Boiler & HVAC Rigging</a><a href="/services/transformer-generator-rigging">Transformer & Generator Moving</a></div>
+  <div><h4>Project Freight</h4><a href="/services/project-freight">Project Freight</a><a href="/services/container-to-warehouse">Container to Warehouse</a><a href="/services/crating-packing">Industrial Crating & Packing</a><a href="/services/dedicated-lanes">Dedicated Lanes & Project FTL</a><h4 style="margin-top:22px;">Fleets</h4><a href="/services/truck-dispatch">Truck Dispatch for Trucking Companies</a></div>
+  <div><h4>Company</h4><a href="/about">About Us</a><a href="/locations">Locations</a><a href="/blog/">Blog</a><a href="/trailer-selector">Trailer Selector</a><a href="/contact">Contact</a><a href="/privacy">Privacy</a></div>
+</div><div class="covstrip">Coverage: <a href="/locations/texas">Texas</a> · <a href="/locations/california">California</a> · <a href="/locations/florida">Florida</a> · <a href="/locations/georgia">Georgia</a> · <a href="/locations/illinois">Illinois</a> · <a href="/locations/ohio">Ohio</a> · <a href="/locations/pennsylvania">Pennsylvania</a> · <a href="/locations/new-york">New York</a> · <a href="/locations"><strong>All 88 locations →</strong></a></div><div class="footer-nap"><span class="nap-name">Badass Logistics</span><span>1001 S Main St, STE 500, Kalispell, MT 59901</span><span><a href="tel:3072841332">(307) 284-1332</a></span><span><a href="mailto:info@badasslogistics.com">info@badasslogistics.com</a></span></div>
+<div class="legal"><span>© 2022–2026 Badass Logistics. All rights reserved.</span><span class="hand">riggers first. made to move heavy things.</span></div></div></footer>
+
+</body>
+</html>

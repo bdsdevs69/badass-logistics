@@ -99,5 +99,9 @@ module.exports = {
     ['machine-leveling-and-alignment', 'Machine Leveling &amp; Alignment'],
     ['plant-relocation-checklist', 'The Plant Relocation Checklist'],
   ],
+  metrosSentinel: 'MW_METROS',
+  metrosTag: 'millwrights by metro',
+  metrosH2: 'Where we install',
+  metrosIntro: 'Millwright crews for machine setting, leveling, alignment, and line reassembly in the country\'s biggest industrial metros — backed by a nationwide network of 88 locations.',
   ctaBand: { h2: 'Machine going in?', p: 'Send the equipment, the foundation drawings, and the install date. We\'ll plan the set and the alignment.' },
 };

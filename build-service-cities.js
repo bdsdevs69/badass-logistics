@@ -13,7 +13,7 @@
    + state Interstates/DOT permits — and each SERVICE supplies genuinely
    distinct copy so same-city pages across services don't cannibalize.
 
-   Add a service: add a SERVICES{} block + a WAVES{} entry. ('ALL' = all 88.)
+   Add a service: add a SERVICES{} block + an entry in lib/waves.js. ('ALL' = all 88.)
    Run AFTER build-locations.js (it owns sitemap.xml). Re-run any time.
    =========================================================== */
 const fs = require('fs');
@@ -165,6 +165,109 @@ const SERVICES = {
     quoteFactors:['The load: weight, dimensions, and center of gravity','The method: skates and jacks, gantry, forklift, or crane — and who supplies the crane','Site access, headroom, floor ratings, and any street or site closures','Crew size and schedule, including nights and weekends around production','Setting, leveling, and anchoring at the final position'],
     pillarFile:'services/rigging.html', sentinel:'RIG_METROS', cardNoun:'riggers',
   },
+
+  // ---------- WAVE 2 (2026-09-27) — seo/geo-architecture-plan.md §4 ----------
+  // Volume-led: millwright 320/mo, crane-and-rigging 1,600/mo, plus the
+  // machinery-removal SERP (riggers next to junk haulers) and the
+  // market-validated forklift load/unload matrix. Each block is written from
+  // its own job, not find-replaced from rigging — the same city must not
+  // produce the same sentences on two services.
+
+  'millwright-services': {
+    name:'Millwright Services', serviceType:'Millwright & Machine Installation', hero:'/assets/img/rigging-crane.jpg', band:'/assets/img/loads/load-machine-loadout.jpg',
+    tag:'millwright services', quote:'Millwright', coverageNoun:'Millwright jobs',
+    snippet:`We set, anchor, level, and align industrial machinery and reassemble conveyors and lines, so equipment is handed off ready for utilities and start-up.`,
+    lead:(c)=>`Getting a machine onto its pad in ${c.city} is rigging. Getting it to run true is millwright work — set on its anchors, leveled to the builder's spec, shafts and couplings aligned, and the line put back together in order. Across the ${c.city} metro, the crew that moved it is the crew that makes it ready to run.`,
+    introH2:(c)=>`Millwright services in ${c.CS}`,
+    introPs:(c)=>[
+      `A machine that arrives in one piece can still fail on start-up. A soft foot, a coupling a few thousandths out, a conveyor transfer that sits proud of the next section — those are installation faults, not transport faults, and they show up as vibration, bearing wear, and scrap. ${c.metro?`In ${c.city}'s ${c.metro.industry} plants`:`On ${c.city} production floors`}, that is the work a millwright is there to prevent.`,
+      `Badass Logistics sets equipment on baseplates and foundations, positions anchor bolts, chocks, and shim packs to the layout, levels to the builder's spec with precision and optical tools, and aligns motors, pumps, and gearboxes by laser or dial indicator. Electrical, piping, and grouting stay with the trades that own them — we sequence around them. When the machine is new, it can arrive as <a href="/services/project-freight">project freight</a>; when it is being relocated, <a href="/services/machinery-moving">the move</a> and the installation are one job.`,
+    ],
+    movesH2:(c)=>`Millwright work we do in ${c.city}`,
+    moves:[['setting','Setting &amp; Anchoring','Equipment set on baseplates and foundations, anchors and shim packs positioned to the layout'],['leveling','Precision Leveling','Machines leveled to the builder\'s installation spec'],['alignment','Shaft &amp; Coupling Alignment','Motors, pumps, gearboxes, and driven equipment aligned by laser or dial indicator'],['lines','Conveyor &amp; Line Assembly','Conveyor sections, transfers, and production lines reassembled in order']],
+    faq:(c)=>[
+      [`Do you provide millwright services in ${c.city}?`,`Yes — machine setting, anchoring, precision leveling, shaft alignment, and conveyor and line installation throughout ${c.CS} and the surrounding metro, serving its ${c.angle} base. <a href="/contact">Get a quote →</a>`],
+      [`What's the difference between a rigger and a millwright?`,`A rigger gets the load to its position. A millwright makes it run right once it's there — leveling, alignment, anchoring, and reassembly. On a ${c.city} job we do both, so there is no handoff between the crew that moved it and the crew that installs it. <a href="/blog/what-is-a-millwright">What is a millwright? →</a>`],
+      [`Do you install new equipment or only machines you moved?`,`Both. New equipment arriving from the builder can be received, set, and leveled, and relocated machines are reinstalled to the same spec they left.`],
+      [`Do you handle grouting and electrical hookups?`,`Grouting, electrical, controls, and piping are done by the trades or OEM that own them. We set and level the machine ready for their work and sequence the job around them.`],
+    ],
+    titleFn:(CS)=>`Millwright Services in ${CS} | Badass Logistics`,
+    descFn:(CS)=>`Millwright services in ${CS} — machine installation, setting, anchoring, precision leveling and shaft alignment, and line reassembly. Same-day quotes.`,
+    quoteFactors:['What is being installed, and the builder\'s installation and leveling spec','Foundation or baseplate status — new pour, existing pad, or anchors to relocate','Alignment scope: how many drive trains, couplings, and transfers','Which trades and OEM technicians have to be sequenced in','Whether we also rig and move the equipment to the pad'],
+    pillarFile:'services/millwright-services.html', sentinel:'MW_METROS', cardNoun:'millwrights',
+  },
+
+  'machinery-removal': {
+    name:'Machinery Removal', serviceType:'Machinery Removal & Decommissioning', hero:'/assets/img/loads/load-pallet-racking.jpg', band:'/assets/img/warehouse-loadout.jpg',
+    tag:'machinery removal', quote:'Removal', coverageNoun:'Removal jobs',
+    snippet:`We disconnect, rig out, and remove retired machines, production lines, and whole plants — sequenced around buyers, relocation loads, and scrap so the floor is handed back clean.`,
+    lead:(c)=>`Getting an old machine out of a ${c.city} plant is often harder than the day it went in — the building grew around it, the door got smaller, and nobody labeled the utilities. We rig out retired machines, production lines, and whole plants across the ${c.city} metro, and hand the floor back ready for what comes next.`,
+    introH2:(c)=>`Machinery removal in ${c.CS}`,
+    introPs:(c)=>[
+      `Removal is not junk hauling. A machine being sold has to reach its buyer working; one being scrapped still has to come out without damaging the building, the machines staying behind, or the people around it. ${c.metro?`Across ${c.city}'s ${c.metro.industry} base`:`Across the ${c.city} metro`}, most removals are one of three things — a single machine being replaced, a line being retired, or a whole floor coming out for a closure or lease exit.`,
+      `Badass Logistics coordinates lockout with your maintenance team or licensed trades, tags every asset, drains and secures what has to be drained, splits what won't fit the opening, and sequences the load-out so nothing blocks the dock. Resale units are prepped and loaded for the buyer, relocation units run as <a href="/services/project-freight">project freight</a> through our licensed broker and carrier partners, and when the rest of the plant is moving too, it becomes a <a href="/services/plant-relocation">plant relocation</a>.`,
+    ],
+    movesH2:(c)=>`What we remove in ${c.city}`,
+    moves:[['single machines','Machine Removal','Presses, machine tools, molding machines, and compressors disconnected and rigged out'],['lines','Line Teardown','Production lines and cells dismantled in sequence, tagged, and removed'],['closures','Plant Decommissioning','Whole-floor removal for closures, consolidations, and lease exits'],['resale','Removal for Resale','Machines prepped, protected, and loaded so the buyer receives them working']],
+    faq:(c)=>[
+      [`Do you do machinery removal in ${c.city}?`,`Yes — single machines, production lines, and full plant decommissioning throughout ${c.CS} and the surrounding metro, serving its ${c.angle} base. <a href="/contact">Get a quote →</a>`],
+      [`Can you remove a machine we sold to a buyer?`,`Yes. We prep and protect it so it arrives working, then load it for the buyer's carrier or run the freight as part of the project through our licensed broker and carrier partners.`],
+      [`What if the machine won't fit through the door?`,`It gets split at factory joints where the builder allows it, or rigged out through a wall opening or the roof. The ${c.city} site walk decides which, before anything is quoted.`],
+      [`Who disconnects the power and utilities?`,`Qualified personnel — your maintenance team or licensed trades. We coordinate the lockout sequence and don't touch the machine until it's verified safe.`],
+    ],
+    titleFn:(CS)=>`Machinery Removal in ${CS} | Badass Logistics`,
+    descFn:(CS)=>`Machinery removal in ${CS} — retired machines, production lines and plant closures disconnected, rigged out and removed. Floor left clean. Same-day quotes.`,
+    quoteFactors:['The asset list, weights, and which units are resale, relocation, or scrap','The route out: doors, aisles, docks, and whether anything has to be split','Lockout, draining, and disconnect coordination with your team or trades','The deadline — lease end, closure date, or the buyer\'s pickup window','Floor make-ready: anchors cut flush, pits covered, area left clean'],
+    pillarFile:'services/machinery-removal.html', sentinel:'MR_METROS', cardNoun:'machinery removal',
+  },
+
+  'crane-services': {
+    name:'Crane & Rigging Services', serviceType:'Crane & Rigging Services', hero:'/assets/img/rigging-crane2.jpg', band:'/assets/img/rigging-crane.jpg',
+    tag:'crane and rigging services', quote:'Crane Lift', coverageNoun:'Crane lifts',
+    snippet:`We plan the lift, bring in the crane sized to the load, radius, and site, and rig, signal, and set the pick with our own crew.`,
+    lead:(c)=>`Finding a crane in ${c.city} is the easy part. The hard part is the lift plan, the rigging, the ground under the outriggers, and the crew that signals the pick. We plan and rig crane lifts across the ${c.city} metro from start to finish — and bring in the right crane for the load, the radius, and the site.`,
+    introH2:(c)=>`Crane and rigging services in ${c.CS}`,
+    introPs:(c)=>[
+      `A crane rental gets you a machine and an operator. It does not get you the load weight and center of gravity, the rigging that attaches to the right points, the ground-bearing check under the outriggers, the street or site closure, or the crew that takes the load off the hook and moves it into the building. ${c.metro?`On ${c.city}'s ${c.metro.industry} jobs`:`On ${c.city} jobs`}, those are the parts that decide whether a pick goes to plan.`,
+      `Badass Logistics owns the lift, not just the hook time. We size the crane to the load and radius, write the lift plan, rig and signal the pick, and set the load — and where the crane can only reach the door or the dock, the same crew takes it the rest of the way with <a href="/services/heavy-lift-rigging">jacks, skates, and gantries</a>. <a href="/blog/crane-rental-vs-rigging-company">Crane rental vs a rigging company →</a>`,
+    ],
+    movesH2:(c)=>`Crane lifts we plan in ${c.city}`,
+    moves:[['rooftop','Rooftop Crane-Ins','RTUs, chillers, cooling towers, and mechanical equipment picked onto roofs'],['machinery','Machine Picks','Presses and production equipment lifted on and off trucks or into buildings'],['critical','Critical &amp; Tandem Lifts','Close-to-capacity, high-value, and two-crane picks with detailed plans'],['setting','Equipment Setting','Tanks, vessels, generators, and skids placed on foundations and pads']],
+    faq:(c)=>[
+      [`Do you provide crane services in ${c.city}?`,`Yes — planned crane lifts, rooftop crane-ins, critical and tandem picks, and equipment setting throughout ${c.CS} and the surrounding metro, serving its ${c.angle} base. <a href="/contact">Get a quote →</a>`],
+      [`Do you supply the crane for a ${c.city} lift?`,`We plan the lift and bring in the crane sized for the load, radius, and site, then rig, signal, and set the pick with our own crew — one team accountable for the whole lift.`],
+      [`What makes a crane lift a critical lift?`,`Generally a pick close to the crane's rated capacity, a two-crane lift, a lift over occupied areas or live equipment, or a load that is hard to replace. Those get a more detailed plan and review. <a href="/blog/what-is-a-critical-lift">What is a critical lift? →</a>`],
+      [`What if the crane can't reach inside the building?`,`The crane sets the load at the door, dock, or roof opening, and our crew moves it the rest of the way on skates, jacks, or a gantry.`],
+    ],
+    titleFn:(CS)=>`Crane & Rigging Services in ${CS} | Badass Logistics`,
+    descFn:(CS)=>`Crane and rigging services in ${CS} — lift plans, rooftop crane-ins, critical and tandem picks, rigged and signaled by our crew. Same-day quotes.`,
+    quoteFactors:['Load weight, dimensions, and center of gravity — from the nameplate or builder data','Pick radius, set height, and what is between the crane and the set point','Ground conditions and outrigger bearing, and whether mats are needed','Street, lot, or site closures and the approvals the location requires','What happens after the pick: set on a pad, or moved inside on skates'],
+    pillarFile:'services/crane-services.html', sentinel:'CR_METROS', cardNoun:'crane services',
+  },
+
+  'forklift-loading-unloading': {
+    name:'Machinery Loading & Unloading', serviceType:'Machinery Loading & Unloading', hero:'/assets/img/loads/palletized-equipment-curbside-unload.jpg', band:'/assets/img/warehouse-loadout.jpg',
+    tag:'machinery loading and unloading', quote:'Loading', coverageNoun:'Load and unload jobs',
+    snippet:`We load and unload machines, crated equipment, and containers as rigging work — weight and center of gravity verified, forklifts sized to the real load, and a crew that can take it into the building.`,
+    lead:(c)=>`The riskiest minutes of a machine's trip are the ones at each end. Across the ${c.city} metro we load and unload machinery, crated equipment, and containers with high-capacity forklifts and rigging gear — weight and center of gravity checked, forks positioned, and the load secured before anything leaves the ground.`,
+    introH2:(c)=>`Machinery loading and unloading in ${c.CS}`,
+    introPs:(c)=>[
+      `Most loading damage happens in a few seconds: forks set under the wrong point, a top-heavy machine tipped on a slope, a forklift picking a load past its rated load center. ${c.metro?`In a metro built on ${c.metro.industry}`:`Around ${c.city}`}, machines and crated equipment arrive and leave every day at buildings that were never laid out for them — no dock, a gravel lot, a container that has to be emptied from the doors inward.`,
+      `Badass Logistics treats loading and unloading as rigging, not labor. We verify weight and center of gravity, size the forklift to the actual load and ground, and position and secure the load for the carrier — and when the machine has to go further than the tailgate, the crew skates it through the door and <a href="/services/millwright-services">sets it in place</a>. We don't rent forklifts; we provide the crew, the lift, and the gear as one job. <a href="/blog/forklift-vs-crane-for-machine-loading">Forklift vs crane for machine loading →</a>`,
+    ],
+    movesH2:(c)=>`What we load and unload in ${c.city}`,
+    moves:[['load-out','Machine Load-Outs','Machines rigged out and loaded onto trucks, positioned and secured for transit'],['receiving','Equipment Receiving','Crated and skidded equipment unloaded, inspected, and staged or moved in'],['containers','Container Unloading','Heavy machines and crates pulled from containers with rollers, jacks, and forklifts'],['no dock','Dock-Less Deliveries','Heavy freight unloaded at ground level where there is no loading dock']],
+    faq:(c)=>[
+      [`Do you offer machinery loading and unloading in ${c.city}?`,`Yes — machine load-outs, equipment receiving, container unloads, and dock-less deliveries throughout ${c.CS} and the surrounding metro, serving its ${c.angle} base. <a href="/contact">Get a quote →</a>`],
+      [`Do you rent forklifts in ${c.city}?`,`No. Loading and unloading is provided as rigging work — the crew, a forklift sized to the load, and the rigging gear together — not equipment rental.`],
+      [`Can you unload heavy equipment without a loading dock?`,`Yes. We unload at ground level from open-deck and enclosed trailers with forklifts, rigging gear, or a crane, depending on the load and the site.`],
+      [`Can you move the equipment into the building too?`,`Yes. The crew can take it through the door on skates, set it, and level it — or stage it until the floor is ready.`],
+    ],
+    titleFn:(CS)=>`Machinery Loading & Unloading in ${CS} | Badass Logistics`,
+    descFn:(CS)=>`Machinery loading and unloading in ${CS} — machine load-outs, container unloads and dock-less deliveries with forklifts sized to the load. Same-day quotes.`,
+    quoteFactors:['Weight, dimensions, and center of gravity of each piece','Trailer or container type, and whether there is a dock','Ground conditions and the path from the truck to the door','Loading, blocking, and securement requirements for the carrier','Whether the crew also moves it inside, sets it, or stages it'],
+    pillarFile:'services/forklift-loading-unloading.html', sentinel:'FL_METROS', cardNoun:'loading crews',
+  },
 };
 
 // Per-service internal links to the highest-value blog "movers" (from GSC: pages already
@@ -174,6 +277,10 @@ const CITY_GUIDES = {
   'cnc-machine-movers': [['how-to-move-a-cnc-machine','How to Move a CNC Machine'],['machine-leveling-and-alignment','Machine Leveling &amp; Alignment'],['how-to-move-a-lathe','How to Move a Metal Lathe']],
   'machinery-moving': [['how-much-do-machinery-movers-cost','How Much Do Machinery Movers Cost?'],['machine-leveling-and-alignment','Machine Leveling &amp; Alignment'],['how-to-move-an-mri-machine','How to Move an MRI Machine']],
   'plant-relocation': [['plant-relocation-checklist','The Plant Relocation Checklist'],['blocking-bracing-and-dunnage-explained','Blocking, Bracing &amp; Dunnage Explained'],['machine-leveling-and-alignment','Machine Leveling &amp; Alignment']],
+  'millwright-services': [['what-is-a-millwright','What Is a Millwright?'],['machine-leveling-and-alignment','Machine Leveling &amp; Alignment'],['how-to-move-a-conveyor-system','How to Move a Conveyor System']],
+  'machinery-removal': [['how-to-prepare-a-machine-for-shipping','How to Prepare a Machine for Shipping'],['plant-relocation-checklist','The Plant Relocation Checklist'],['how-much-do-machinery-movers-cost','How Much Do Machinery Movers Cost?']],
+  'crane-services': [['what-is-a-critical-lift','What Is a Critical Lift?'],['crane-rental-vs-rigging-company','Crane Rental vs a Rigging Company'],['rigging-load-charts-explained','Rigging Load Charts, Explained'],['how-to-move-a-boiler-or-chiller','How to Move a Boiler or Chiller']],
+  'forklift-loading-unloading': [['forklift-vs-crane-for-machine-loading','Forklift vs Crane for Machine Loading'],['how-to-ship-industrial-machinery-on-a-flatbed','How to Ship Machinery on a Flatbed'],['what-is-transloading','What Is Transloading?']],
 };
 
 // ---------- SIBLING-SERVICE MESH ----------
@@ -219,8 +326,12 @@ function hashPick(str, n) {
   return h % n;
 }
 
-function siblingMesh(serviceSlug, svc, city, slug) {
+const { inWave } = require('./lib/waves');
+const WAVE2 = [['millwright-services','millwright services'],['machinery-removal','machinery removal'],['crane-services','crane and rigging services'],['forklift-loading-unloading','machinery loading and unloading']];
+
+function siblingMesh(serviceSlug, svc, city, slug, key) {
   const sibs = CROSS_ORDER.filter(s => s !== serviceSlug);
+  const w2 = WAVE2.filter(([s]) => s !== serviceSlug && inWave(s, key));
   const cards = sibs.map(s => {
     const x = CROSS[s];
     const variants = x.anchors(city);
@@ -239,7 +350,8 @@ function siblingMesh(serviceSlug, svc, city, slug) {
   <div class="grid-services" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:22px;">
 ${cards}
   </div>
-  <p style="margin-top:22px;font-weight:600;">In ${city} we also run ${inlineList}, plus <a href="/services/project-freight" style="color:var(--yellow-deep);text-decoration:underline;">project freight</a> for the jobs we rig &mdash; or see <a href="/locations/${slug}" style="color:var(--yellow-deep);text-decoration:underline;">every service we offer in ${city}</a>.</p>
+  <p style="margin-top:22px;font-weight:600;">In ${city} we also run ${inlineList}, plus <a href="/services/project-freight" style="color:var(--yellow-deep);text-decoration:underline;">project freight</a> for the jobs we rig &mdash; or see <a href="/locations/${slug}" style="color:var(--yellow-deep);text-decoration:underline;">every service we offer in ${city}</a>.</p>${w2.length ? `
+  <p style="margin-top:12px;font-weight:600;">The same ${city} crew also handles ${oxford(w2.map(([s, label]) => `<a href="/services/${s}/${slug}" style="color:var(--yellow-deep);text-decoration:underline;">${label}</a>`))}.</p>` : ''}
 </div></section>`;
 }
 
@@ -387,6 +499,97 @@ const METRO_COPY = {
       `Machine-tool work throughout ${c.CS} and the industrial areas around it, including ${oxford(m.corridors)}. Most of it feeds the metro's ${oxford(m.sectors)}, where a lost tolerance is a lost delivery date. <a href="/contact">Get a quote →</a>`,
     ] : null,
   },
+
+  // ---------- WAVE 2 services — each reads the same researched fields
+  // through its own job, so millwright/detroit-mi and crane-services/detroit-mi
+  // never produce the same sentence from the same fact.
+
+  // millwright-services: the machine on the pad is the story, so equipment
+  // and sectors lead; the building shows up as foundations, not doors.
+  'millwright-services': {
+    base: (c, m) => enough(m.equipment && m.equipment.length >= 3, m.sectors && m.sectors.length) ? [
+      (m.equipment && m.equipment.length >= 3) ? `Millwright work in ${c.city} is set by what has to be installed: ${oxford(m.equipment)}, each with its own foundation, anchor pattern, and leveling tolerance.` : '',
+      m.sectors && m.sectors.length ? `Those machines serve the metro's ${oxford(m.sectors)}, where a drive train a few thousandths out shows up as vibration, bearing wear, and scrap long before anyone calls it an installation fault.` : '',
+    ].filter(Boolean).join(' ') : '',
+    floor: (c, m) => enough(m.stock, m.corridors && m.corridors.length) ? [
+      m.stock ? `The floors matter as much as the machines. ${c.city}'s plants are ${trimDot(m.stock)}, and an older slab is often why a machine needs a new pad, re-drilled anchors, or a grout crew before it can be leveled at all.` : '',
+      m.corridors && m.corridors.length ? `Most of our ${c.city} installation work lands in ${oxford(m.corridors)}.` : '',
+    ].filter(Boolean).join(' ') : '',
+    away: (c, m) => enough(m.rail, m.port) ? [
+      `New equipment for ${c.city} plants rarely arrives by one road.`,
+      m.port ? `${trimDot(m.port)}.` : '',
+      m.rail ? `${trimDot(m.rail)}.` : '',
+      `However it comes in, the installation clock starts at receiving — the crate is checked against the builder's packing list and the anchor layout before the pad is released for setting.`,
+    ].filter(Boolean).join(' ') : '',
+    faq: (c, m) => (m.equipment && m.equipment.length && m.sectors && m.sectors.length) ? [
+      `What equipment do your ${c.city} millwrights install?`,
+      `Most often ${oxford(m.equipment)} — the machinery behind the metro's ${oxford(m.sectors)}. Set, anchored, leveled to the builder's spec, and aligned before hand-off. <a href="/contact">Get a quote →</a>`,
+    ] : null,
+  },
+
+  // machinery-removal: the way OUT of the building is the job, so stock and
+  // corridors lead and the freight routing decides where the asset ends up.
+  'machinery-removal': {
+    base: (c, m) => enough(m.stock, m.corridors && m.corridors.length) ? [
+      m.stock ? `Removals in ${c.city} are decided by the building before the machine. The stock here is ${trimDot(m.stock)} — and a door, column line, or mezzanine installed after the machine went in is the most common reason one has to be split to come out.` : '',
+      m.corridors && m.corridors.length ? `Most of the retired equipment we pull in this metro sits in ${oxford(m.corridors)}.` : '',
+    ].filter(Boolean).join(' ') : '',
+    floor: (c, m) => enough(m.equipment && m.equipment.length >= 3, m.sectors && m.sectors.length) ? [
+      (m.equipment && m.equipment.length >= 3) ? `The units coming out of ${c.city} plants are usually ${oxford(m.equipment)}. Each has its own drain-down, lockout points, and resale value — which is why they are tagged by destination before the first one is disconnected.` : '',
+      m.sectors && m.sectors.length ? `Removals here track the churn in the metro's ${oxford(m.sectors)}: a line retired for a model change, a floor cleared for a consolidation, or a building handed back at lease end.` : '',
+    ].filter(Boolean).join(' ') : '',
+    away: (c, m) => enough(m.rail, m.port) ? [
+      `Where a removed machine goes decides how it leaves.`,
+      m.rail ? `${trimDot(m.rail)}.` : '',
+      m.port ? `${trimDot(m.port)}.` : '',
+      `Resale units bound for another state or overseas are prepped and loaded for whichever routing the buyer uses, while scrap goes local — so a ${c.city} decommissioning usually runs two or three load-out streams at once.`,
+    ].filter(Boolean).join(' ') : '',
+    faq: (c, m) => (m.sectors && m.sectors.length && m.corridors && m.corridors.length) ? [
+      `What kinds of ${c.city} plants do you decommission?`,
+      `Floors across the metro's ${oxford(m.sectors)}, in ${oxford(m.corridors)} and the areas around them — single machines, retired lines, and full closures. <a href="/contact">Get a quote →</a>`,
+    ] : null,
+  },
+
+  // crane-services: the site is the story — ground, reach, and access — so
+  // corridors and stock lead and equipment is framed as what gets picked.
+  'crane-services': {
+    base: (c, m) => enough(m.corridors && m.corridors.length, m.stock) ? [
+      m.corridors && m.corridors.length ? `Crane work in ${c.CS} concentrates in ${oxford(m.corridors)}, and each of those sets up differently — lot space for outriggers, overhead lines, rail spurs, and neighbors that can't be shut down.` : '',
+      m.stock ? `The buildings are ${trimDot(m.stock)}, which usually decides whether the crane sets the load inside through a roof opening or at the door for the crew to skate in.` : '',
+    ].filter(Boolean).join(' ') : '',
+    floor: (c, m) => enough(m.equipment && m.equipment.length >= 3, m.sectors && m.sectors.length) ? [
+      (m.equipment && m.equipment.length >= 3) ? `The picks that come up most in ${c.city} are ${oxford(m.equipment)} — and the crane is sized to the heaviest of them at the longest radius the site forces, not to the weight alone.` : '',
+      m.sectors && m.sectors.length ? `Who is asking changes the plan as much as what is being lifted: a pick for ${c.city}'s ${oxford(m.sectors, 'or')} usually lands inside a running site, so the lift window, the exclusion zone, and the traffic plan are written around their operation.` : '',
+    ].filter(Boolean).join(' ') : '',
+    away: (c, m) => enough(m.rail, m.port) ? [
+      m.port ? `${trimDot(m.port)}.` : '',
+      m.rail ? `${trimDot(m.rail)}.` : '',
+      `Loads arriving that way often need a crane at both ends — off the railcar or dock and onto a trailer, then off the trailer and onto a pad in ${c.city} — and both picks go into the same lift plan.`,
+    ].filter(Boolean).join(' ') : '',
+    faq: (c, m) => (m.corridors && m.corridors.length && m.equipment && m.equipment.length) ? [
+      `Where in ${c.city} do you plan crane lifts?`,
+      `Throughout ${c.CS}, including ${oxford(m.corridors)}. Typical picks here are ${oxford(m.equipment)}, planned around the site as much as the load. <a href="/contact">Get a quote →</a>`,
+    ] : null,
+  },
+
+  // forklift-loading-unloading: the handoff between truck and building, so
+  // rail/port lead (that is where the loads come from) and stock is the dock.
+  'forklift-loading-unloading': {
+    base: (c, m) => enough(m.rail, m.port, m.corridors && m.corridors.length) ? [
+      m.port ? `A lot of what gets unloaded in ${c.city} arrives in containers. ${trimDot(m.port)}.` : '',
+      m.rail ? `${trimDot(m.rail)}.` : '',
+      m.corridors && m.corridors.length ? `The receiving end is usually ${oxford(m.corridors)}.` : '',
+    ].filter(Boolean).join(' ') : '',
+    floor: (c, m) => enough(m.stock, m.equipment && m.equipment.length >= 3) ? [
+      m.stock ? `The dock is the variable. ${c.city} buildings are ${trimDot(m.stock)} — so one delivery backs into a dock leveler and the next comes off a trailer at ground level onto a lot.` : '',
+      (m.equipment && m.equipment.length >= 3) ? `What comes off those trucks is mostly ${oxford(m.equipment)}, and every one of them gets a weight and center-of-gravity check before the forks go in.` : '',
+    ].filter(Boolean).join(' ') : '',
+    away: () => '',
+    faq: (c, m) => (m.sectors && m.sectors.length && m.equipment && m.equipment.length) ? [
+      `What do you load and unload for ${c.city} plants?`,
+      `Mostly ${oxford(m.equipment)} for the metro's ${oxford(m.sectors)} — machines, crates, and skids on and off trucks and containers, and into the building when needed. <a href="/contact">Get a quote →</a>`,
+    ] : null,
+  },
 };
 
 // Render one slot for one service x metro. Returns '' when there is no
@@ -462,7 +665,9 @@ function page(serviceSlug, svc, loc, metro, hubStates) {
   const near = PLACES.names(loc.near, 12);
   const nearRows = loc.near || [];
   // Other metros in the same state — real city→city internal links (hub-and-spoke mesh)
-  const nearbyMetros = locations.filter(l => l.state === state && l.city !== city).slice(0, 8);
+  // Only link cities this service actually has a page for — crane-services and
+  // forklift cover the top 60 / 40 metros, not all 88.
+  const nearbyMetros = locations.filter(l => l.state === state && l.city !== city && inWave(serviceSlug, `${l.city}|${l.state}`)).slice(0, 8);
   const url = `${DOMAIN}/services/${serviceSlug}/${slug}`;
   const cityHub = `/locations/${slug}`;
   const mapQ = encodeURIComponent(CS);
@@ -618,7 +823,7 @@ ${nearbyMetros.length ? `
   </div>${hasHub?`
   <p style="margin-top:22px;font-weight:600;"><a href="/services/${serviceSlug}/${stSlug}" style="color:var(--yellow-deep);text-decoration:underline;">See all ${svc.name} across ${c.stName} →</a></p>`:``}
 </div></section>` : ''}
-${siblingMesh(serviceSlug, svc, city, slug)}
+${siblingMesh(serviceSlug, svc, city, slug, `${city}|${state}`)}
 
 <section class="bg-paper" style="border-top:3px solid var(--ink);border-bottom:3px solid var(--ink);"><div class="wrap">
   <span class="section-tag hand">questions</span>
@@ -663,11 +868,16 @@ function statePage(serviceSlug, svc, st, cityMs) {
   const title = `${svc.name} in ${stName} | Badass Logistics`;
   // No phone here — the city list already eats the character budget and these
   // ran past 160 (truncated) with it.
-  const desc = `${svc.name} across ${stName} — ${names.slice(0,3).join(', ')} and metros statewide. Rigged, moved, and re-leveled to spec. Same-day quotes.`;
+  // State hubs carry state-level intent only. They used to lead with city names
+  // and sat at position 50-80 beside their own city page for "<service> <city>"
+  // queries (Georgia vs Savannah, South Carolina vs Charleston, Oklahoma vs
+  // Tulsa) — pure drag on a query the city page wins. City names stay on the
+  // cards and in the "which cities" FAQ, where they are navigation.
+  const desc = `${svc.name} anywhere in ${stName} — statewide, through a network of 88 locations. Rigged, moved, and re-leveled to spec. Same-day quotes.`;
   const svcSchema = {"@context":"https://schema.org","@type":"Service","serviceType":svc.serviceType,"areaServed":{"@type":"State","name":stName},"provider":{"@type":"LocalBusiness","@id":`${DOMAIN}/#organization`,"name":site.brand,"telephone":"+1-307-284-1332","url":`${DOMAIN}/`},"description":`${site.brand} provides ${svc.serviceType.toLowerCase()} across ${stName}.`};
   const breadcrumb = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":`${DOMAIN}/`},{"@type":"ListItem","position":2,"name":svc.name,"item":`${DOMAIN}/services/${serviceSlug}`},{"@type":"ListItem","position":3,"name":stName,"item":url}]};
   const faqPairs = [
-    [`Do you provide ${svc.name.toLowerCase()} across ${stName}?`,`Yes — ${svc.serviceType.toLowerCase()} in ${nameList} and metros throughout ${stName}, backed by a nationwide network of 88 locations. <a href="/contact">Get a quote →</a>`],
+    [`Do you provide ${svc.name.toLowerCase()} across ${stName}?`,`Yes — ${svc.serviceType.toLowerCase()} anywhere in ${stName}, backed by a nationwide network of 88 locations. <a href="/contact">Get a quote →</a>`],
     [`Which ${stName} cities do you cover?`,`We run ${svc.tag} in ${nameList}, and reach the rest of ${stName} through our nationwide network. Pick your metro below for a local page.`],
     [`Can you move equipment between ${stName} facilities?`,`Yes — equipment is rigged out, crated or prepped, moved as project freight through our licensed broker and carrier partners, and set by the same crew at the destination.`],
   ];
@@ -718,7 +928,7 @@ ${NAV}
 <section class="page-hero photo" style="background-image:url('${svc.hero}')"><div class="wrap">
   <span class="section-tag hand">// ${svc.tag} — ${stName.toLowerCase()}</span>
   <h1>${svc.name} in <span class="y">${stName}</span></h1>
-  <p class="lead">${svc.serviceType} across ${stName} — from ${names.slice(0,3).join(', ')} to metros statewide. One accountable crew surveys it, rigs it, manages the move, and sets it to spec.</p>
+  <p class="lead">${svc.serviceType} anywhere in ${stName}, statewide. One accountable crew surveys it, rigs it, manages the move, and sets it to spec.</p>
   <div class="cta-row" style="margin-top:24px;"><a class="btn" href="/contact">Get a ${stName} ${svc.quote} Quote</a></div>
 </div>
   <span class="annot hand tag warn a1">${stName.toUpperCase()}</span>
@@ -727,7 +937,7 @@ ${NAV}
 
 <section><div class="wrap prose">
   <h2>${svc.serviceType} statewide in ${stName}</h2>
-  <p>${stName}'s industrial base runs on machines that have to move — presses, machining centers, production lines, and the plants that house them. Badass Logistics provides ${svc.serviceType.toLowerCase()} in ${nameList}, and reaches every other corner of ${stName} through a nationwide network of 88 locations. One crew plans the lift, protects the floors, and sets the load to spec — and when equipment has to travel, the same team runs it as <a href="/services/project-freight">project freight</a>, so a ${stName} move never gets passed between a rigger, a trucking company, and an installer.</p>
+  <p>${stName}'s industrial base runs on machines that have to move — presses, machining centers, production lines, and the plants that house them. Badass Logistics provides ${svc.serviceType.toLowerCase()} statewide — the metros below each have their own local page — and reaches every other corner of ${stName} through a nationwide network of 88 locations. One crew plans the lift, protects the floors, and sets the load to spec — and when equipment has to travel, the same team runs it as <a href="/services/project-freight">project freight</a>, so a ${stName} move never gets passed between a rigger, a trucking company, and an installer.</p>
   <p>Work across ${stName} runs the ${ix} corridors between its industrial metros. Single machines, production lines, and full plant relocations all start the same way: a site survey, a documented plan, and a schedule built around your production calendar — then <a href="/services/rigging">rigging</a>, the move, and the reset handled by one crew.</p>
 </div></section>
 
@@ -761,12 +971,9 @@ ${FOOTER_FOR(`services/${serviceSlug}/${stSlug}.html`)}
 
 // ---------- WAVES (which service × which metros) ----------
 const TOP24 = ALL_KEYS.slice(); // ordered by locations.json; we slice per-service below
-const WAVES = {
-  'rigging': 'ALL',
-  'cnc-machine-movers': 'ALL',
-  'machinery-moving': 'ALL',
-  'plant-relocation':  'ALL',
-};
+// Which service x city pages exist lives in lib/waves.js — build-locations.js
+// reads the same list so city hubs never link a page that was not built.
+const { WAVES } = require('./lib/waves');
 
 // ---------- build ----------
 const manifest = [];

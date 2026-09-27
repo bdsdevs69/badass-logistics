@@ -99,5 +99,9 @@ module.exports = {
     ['what-is-industrial-rigging', 'What Is Industrial Rigging?'],
     ['how-to-move-a-boiler-or-chiller', 'How to Move a Boiler or Chiller'],
   ],
+  metrosSentinel: 'CR_METROS',
+  metrosTag: 'crane lifts by metro',
+  metrosH2: 'Where we plan crane lifts',
+  metrosIntro: 'Planned crane lifts, rooftop crane-ins, and critical picks in the 60 largest industrial metros we cover — cranes sized to the load and site, rigged and signaled by our crew.',
   ctaBand: { h2: 'Got a pick to plan?', p: 'Send the load, the site, and where it needs to land. We\'ll size the crane and write the lift plan.' },
 };

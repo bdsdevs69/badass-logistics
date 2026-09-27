@@ -96,5 +96,9 @@ module.exports = {
     ['how-to-ship-industrial-machinery-on-a-flatbed', 'How to Ship Industrial Machinery on a Flatbed'],
     ['what-is-transloading', 'What Is Transloading?'],
   ],
+  metrosSentinel: 'FL_METROS',
+  metrosTag: 'loading crews by metro',
+  metrosH2: 'Where we load and unload',
+  metrosIntro: 'Machinery loading and unloading crews in 44 of the industrial metros we cover — load-outs, container unloads, and dock-less deliveries.',
   ctaBand: { h2: 'Heavy freight arriving or leaving?', p: 'Send the equipment list, the weights, and the site. We\'ll size the forklift and the crew.' },
 };

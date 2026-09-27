@@ -1,7 +1,9 @@
 {
-  "generated": "2026-09-24",
+  "generated": "2026-09-27",
   "hub": "/services/truck-dispatch/equipment",
-  "count": 10,
+  "count": 14,
+  "equipment": 10,
+  "fleet": 4,
   "pages": [
     {
       "slug": "dry-van",
@@ -52,6 +54,30 @@
       "slug": "ltl-partial",
       "url": "/services/truck-dispatch/ltl-partial",
       "name": "LTL & Partial Dispatch"
+    },
+    {
+      "slug": "fleets-4-to-10-trucks",
+      "url": "/services/truck-dispatch/fleets-4-to-10-trucks",
+      "name": "Dispatch for 4–10 Truck Fleets",
+      "kind": "fleet"
+    },
+    {
+      "slug": "fleets-10-to-25-trucks",
+      "url": "/services/truck-dispatch/fleets-10-to-25-trucks",
+      "name": "Dispatch for 10–25 Truck Fleets",
+      "kind": "fleet"
+    },
+    {
+      "slug": "fleets-25-plus-trucks",
+      "url": "/services/truck-dispatch/fleets-25-plus-trucks",
+      "name": "Dispatch for 25+ Truck Fleets",
+      "kind": "fleet"
+    },
+    {
+      "slug": "after-hours-dispatch",
+      "url": "/services/truck-dispatch/after-hours-dispatch",
+      "name": "After-Hours Dispatch for Fleets",
+      "kind": "fleet"
     }
   ]
 }

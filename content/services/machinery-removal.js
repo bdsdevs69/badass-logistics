@@ -118,5 +118,9 @@ module.exports = {
     ['how-to-prepare-a-machine-for-shipping', 'How to Prepare a Machine for Shipping'],
     ['types-of-rigging', 'Types of Rigging, Explained'],
   ],
+  metrosSentinel: 'MR_METROS',
+  metrosTag: 'removal by metro',
+  metrosH2: 'Where we remove machinery',
+  metrosIntro: 'Machinery removal and plant decommissioning across 88 industrial metros — single machines, retired lines, and full closures, sequenced to your deadline.',
   ctaBand: { h2: 'Machines that need to go?', p: 'Send the equipment list, where it\'s going, and the deadline. We\'ll plan the removal.' },
 };

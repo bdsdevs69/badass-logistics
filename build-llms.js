@@ -31,7 +31,7 @@ const dispatchLines = () => {
       ? decode((fs.readFileSync(html, 'utf8').match(/<meta name="description" content="([^"]*)"/) || [])[1] || '') : '';
     return `- [${decode(p.name)}](${DOMAIN}${p.url}): ${desc}`;
   });
-  lines.push(`- [Dispatch by equipment \u2014 all ${d.count} desks](${DOMAIN}${d.hub}): Hub page listing every equipment desk, who each one is for, and what none of them book.`);
+  lines.push(`- [Dispatch by equipment \u2014 all ${d.equipment || d.count} equipment desks](${DOMAIN}${d.hub}): Hub page listing every equipment desk, who each one is for, and what none of them book.`);
   return lines.join('\n');
 };
 

@@ -111,7 +111,7 @@ module.exports = {
   metrosSentinel: 'DISPATCH_EQUIP',
   metrosTag: 'dispatch by equipment',
   metrosH2: 'Dispatch desks by equipment type',
-  metrosIntro: 'A van dispatcher and a flatbed dispatcher are not doing the same job. Pick the equipment your fleet runs \u2014 each desk covers the freight it targets, what we do differently with it, and what moves the rate. <a href="/services/truck-dispatch/equipment">See all ten \u2192</a>',
+  metrosIntro: 'A van dispatcher and a flatbed dispatcher are not doing the same job. Pick the equipment your fleet runs \u2014 each desk covers the freight it targets, what we do differently with it, and what moves the rate. <a href="/services/truck-dispatch/equipment">See all ten \u2192</a> By fleet size: <a href="/services/truck-dispatch/fleets-4-to-10-trucks">4\u201310 trucks</a>, <a href="/services/truck-dispatch/fleets-10-to-25-trucks">10\u201325 trucks</a>, <a href="/services/truck-dispatch/fleets-25-plus-trucks">25+ trucks</a>, and the <a href="/services/truck-dispatch/after-hours-dispatch">after-hours desk</a>.',
   industries: {
     h2: 'Equipment we dispatch',
     items: ['Dry van', 'Reefer', 'Flatbed', 'Step deck', 'Conestoga', 'Power only', 'Project freight lanes', 'Dedicated regional runs'],

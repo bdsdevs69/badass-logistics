@@ -2110,5 +2110,1685 @@
     "city": "Montgomery",
     "state": "AL",
     "url": "/services/plant-relocation/montgomery-al"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Los Angeles",
+    "state": "CA",
+    "url": "/services/millwright-services/los-angeles-ca"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Bakersfield",
+    "state": "CA",
+    "url": "/services/millwright-services/bakersfield-ca"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Sacramento",
+    "state": "CA",
+    "url": "/services/millwright-services/sacramento-ca"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Portland",
+    "state": "OR",
+    "url": "/services/millwright-services/portland-or"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Seattle",
+    "state": "WA",
+    "url": "/services/millwright-services/seattle-wa"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Spokane",
+    "state": "WA",
+    "url": "/services/millwright-services/spokane-wa"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Boise",
+    "state": "ID",
+    "url": "/services/millwright-services/boise-id"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Salt Lake City",
+    "state": "UT",
+    "url": "/services/millwright-services/salt-lake-city-ut"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Las Vegas",
+    "state": "NV",
+    "url": "/services/millwright-services/las-vegas-nv"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Phoenix",
+    "state": "AZ",
+    "url": "/services/millwright-services/phoenix-az"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Albuquerque",
+    "state": "NM",
+    "url": "/services/millwright-services/albuquerque-nm"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Denver",
+    "state": "CO",
+    "url": "/services/millwright-services/denver-co"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Casper",
+    "state": "WY",
+    "url": "/services/millwright-services/casper-wy"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Billings",
+    "state": "MT",
+    "url": "/services/millwright-services/billings-mt"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Fargo",
+    "state": "ND",
+    "url": "/services/millwright-services/fargo-nd"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Omaha",
+    "state": "NE",
+    "url": "/services/millwright-services/omaha-ne"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Minneapolis",
+    "state": "MN",
+    "url": "/services/millwright-services/minneapolis-mn"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Milwaukee",
+    "state": "WI",
+    "url": "/services/millwright-services/milwaukee-wi"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Kansas City",
+    "state": "MO",
+    "url": "/services/millwright-services/kansas-city-mo"
+  },
+  {
+    "service": "millwright-services",
+    "city": "St. Louis",
+    "state": "MO",
+    "url": "/services/millwright-services/st-louis-mo"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Chicago",
+    "state": "IL",
+    "url": "/services/millwright-services/chicago-il"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Indianapolis",
+    "state": "IN",
+    "url": "/services/millwright-services/indianapolis-in"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Detroit",
+    "state": "MI",
+    "url": "/services/millwright-services/detroit-mi"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Columbus",
+    "state": "OH",
+    "url": "/services/millwright-services/columbus-oh"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Cleveland",
+    "state": "OH",
+    "url": "/services/millwright-services/cleveland-oh"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Louisville",
+    "state": "KY",
+    "url": "/services/millwright-services/louisville-ky"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Houston",
+    "state": "TX",
+    "url": "/services/millwright-services/houston-tx"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Dallas",
+    "state": "TX",
+    "url": "/services/millwright-services/dallas-tx"
+  },
+  {
+    "service": "millwright-services",
+    "city": "San Antonio",
+    "state": "TX",
+    "url": "/services/millwright-services/san-antonio-tx"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Midland",
+    "state": "TX",
+    "url": "/services/millwright-services/midland-tx"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Oklahoma City",
+    "state": "OK",
+    "url": "/services/millwright-services/oklahoma-city-ok"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Little Rock",
+    "state": "AR",
+    "url": "/services/millwright-services/little-rock-ar"
+  },
+  {
+    "service": "millwright-services",
+    "city": "New Orleans",
+    "state": "LA",
+    "url": "/services/millwright-services/new-orleans-la"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Jackson",
+    "state": "MS",
+    "url": "/services/millwright-services/jackson-ms"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Memphis",
+    "state": "TN",
+    "url": "/services/millwright-services/memphis-tn"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Nashville",
+    "state": "TN",
+    "url": "/services/millwright-services/nashville-tn"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Birmingham",
+    "state": "AL",
+    "url": "/services/millwright-services/birmingham-al"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Atlanta",
+    "state": "GA",
+    "url": "/services/millwright-services/atlanta-ga"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Charleston",
+    "state": "SC",
+    "url": "/services/millwright-services/charleston-sc"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Charlotte",
+    "state": "NC",
+    "url": "/services/millwright-services/charlotte-nc"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Jacksonville",
+    "state": "FL",
+    "url": "/services/millwright-services/jacksonville-fl"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Miami",
+    "state": "FL",
+    "url": "/services/millwright-services/miami-fl"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Norfolk",
+    "state": "VA",
+    "url": "/services/millwright-services/norfolk-va"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Baltimore",
+    "state": "MD",
+    "url": "/services/millwright-services/baltimore-md"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Philadelphia",
+    "state": "PA",
+    "url": "/services/millwright-services/philadelphia-pa"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Pittsburgh",
+    "state": "PA",
+    "url": "/services/millwright-services/pittsburgh-pa"
+  },
+  {
+    "service": "millwright-services",
+    "city": "New York",
+    "state": "NY",
+    "url": "/services/millwright-services/new-york-ny"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Boston",
+    "state": "MA",
+    "url": "/services/millwright-services/boston-ma"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Cincinnati",
+    "state": "OH",
+    "url": "/services/millwright-services/cincinnati-oh"
+  },
+  {
+    "service": "millwright-services",
+    "city": "San Jose",
+    "state": "CA",
+    "url": "/services/millwright-services/san-jose-ca"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Greenville",
+    "state": "SC",
+    "url": "/services/millwright-services/greenville-sc"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Grand Rapids",
+    "state": "MI",
+    "url": "/services/millwright-services/grand-rapids-mi"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Peoria",
+    "state": "IL",
+    "url": "/services/millwright-services/peoria-il"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Wichita",
+    "state": "KS",
+    "url": "/services/millwright-services/wichita-ks"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Toledo",
+    "state": "OH",
+    "url": "/services/millwright-services/toledo-oh"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Chattanooga",
+    "state": "TN",
+    "url": "/services/millwright-services/chattanooga-tn"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Huntsville",
+    "state": "AL",
+    "url": "/services/millwright-services/huntsville-al"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Mobile",
+    "state": "AL",
+    "url": "/services/millwright-services/mobile-al"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Tulsa",
+    "state": "OK",
+    "url": "/services/millwright-services/tulsa-ok"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Rockford",
+    "state": "IL",
+    "url": "/services/millwright-services/rockford-il"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Dayton",
+    "state": "OH",
+    "url": "/services/millwright-services/dayton-oh"
+  },
+  {
+    "service": "millwright-services",
+    "city": "San Diego",
+    "state": "CA",
+    "url": "/services/millwright-services/san-diego-ca"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Riverside",
+    "state": "CA",
+    "url": "/services/millwright-services/riverside-ca"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Savannah",
+    "state": "GA",
+    "url": "/services/millwright-services/savannah-ga"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Baton Rouge",
+    "state": "LA",
+    "url": "/services/millwright-services/baton-rouge-la"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Greensboro",
+    "state": "NC",
+    "url": "/services/millwright-services/greensboro-nc"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Knoxville",
+    "state": "TN",
+    "url": "/services/millwright-services/knoxville-tn"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Akron",
+    "state": "OH",
+    "url": "/services/millwright-services/akron-oh"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Fort Wayne",
+    "state": "IN",
+    "url": "/services/millwright-services/fort-wayne-in"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Lansing",
+    "state": "MI",
+    "url": "/services/millwright-services/lansing-mi"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Buffalo",
+    "state": "NY",
+    "url": "/services/millwright-services/buffalo-ny"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Hartford",
+    "state": "CT",
+    "url": "/services/millwright-services/hartford-ct"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Allentown",
+    "state": "PA",
+    "url": "/services/millwright-services/allentown-pa"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Erie",
+    "state": "PA",
+    "url": "/services/millwright-services/erie-pa"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Richmond",
+    "state": "VA",
+    "url": "/services/millwright-services/richmond-va"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Tampa",
+    "state": "FL",
+    "url": "/services/millwright-services/tampa-fl"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Beaumont",
+    "state": "TX",
+    "url": "/services/millwright-services/beaumont-tx"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Corpus Christi",
+    "state": "TX",
+    "url": "/services/millwright-services/corpus-christi-tx"
+  },
+  {
+    "service": "millwright-services",
+    "city": "El Paso",
+    "state": "TX",
+    "url": "/services/millwright-services/el-paso-tx"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Reno",
+    "state": "NV",
+    "url": "/services/millwright-services/reno-nv"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Colorado Springs",
+    "state": "CO",
+    "url": "/services/millwright-services/colorado-springs-co"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Ogden",
+    "state": "UT",
+    "url": "/services/millwright-services/ogden-ut"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Davenport",
+    "state": "IA",
+    "url": "/services/millwright-services/davenport-ia"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Cedar Rapids",
+    "state": "IA",
+    "url": "/services/millwright-services/cedar-rapids-ia"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Green Bay",
+    "state": "WI",
+    "url": "/services/millwright-services/green-bay-wi"
+  },
+  {
+    "service": "millwright-services",
+    "city": "South Bend",
+    "state": "IN",
+    "url": "/services/millwright-services/south-bend-in"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Lexington",
+    "state": "KY",
+    "url": "/services/millwright-services/lexington-ky"
+  },
+  {
+    "service": "millwright-services",
+    "city": "Montgomery",
+    "state": "AL",
+    "url": "/services/millwright-services/montgomery-al"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Los Angeles",
+    "state": "CA",
+    "url": "/services/machinery-removal/los-angeles-ca"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Bakersfield",
+    "state": "CA",
+    "url": "/services/machinery-removal/bakersfield-ca"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Sacramento",
+    "state": "CA",
+    "url": "/services/machinery-removal/sacramento-ca"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Portland",
+    "state": "OR",
+    "url": "/services/machinery-removal/portland-or"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Seattle",
+    "state": "WA",
+    "url": "/services/machinery-removal/seattle-wa"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Spokane",
+    "state": "WA",
+    "url": "/services/machinery-removal/spokane-wa"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Boise",
+    "state": "ID",
+    "url": "/services/machinery-removal/boise-id"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Salt Lake City",
+    "state": "UT",
+    "url": "/services/machinery-removal/salt-lake-city-ut"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Las Vegas",
+    "state": "NV",
+    "url": "/services/machinery-removal/las-vegas-nv"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Phoenix",
+    "state": "AZ",
+    "url": "/services/machinery-removal/phoenix-az"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Albuquerque",
+    "state": "NM",
+    "url": "/services/machinery-removal/albuquerque-nm"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Denver",
+    "state": "CO",
+    "url": "/services/machinery-removal/denver-co"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Casper",
+    "state": "WY",
+    "url": "/services/machinery-removal/casper-wy"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Billings",
+    "state": "MT",
+    "url": "/services/machinery-removal/billings-mt"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Fargo",
+    "state": "ND",
+    "url": "/services/machinery-removal/fargo-nd"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Omaha",
+    "state": "NE",
+    "url": "/services/machinery-removal/omaha-ne"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Minneapolis",
+    "state": "MN",
+    "url": "/services/machinery-removal/minneapolis-mn"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Milwaukee",
+    "state": "WI",
+    "url": "/services/machinery-removal/milwaukee-wi"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Kansas City",
+    "state": "MO",
+    "url": "/services/machinery-removal/kansas-city-mo"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "St. Louis",
+    "state": "MO",
+    "url": "/services/machinery-removal/st-louis-mo"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Chicago",
+    "state": "IL",
+    "url": "/services/machinery-removal/chicago-il"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Indianapolis",
+    "state": "IN",
+    "url": "/services/machinery-removal/indianapolis-in"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Detroit",
+    "state": "MI",
+    "url": "/services/machinery-removal/detroit-mi"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Columbus",
+    "state": "OH",
+    "url": "/services/machinery-removal/columbus-oh"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Cleveland",
+    "state": "OH",
+    "url": "/services/machinery-removal/cleveland-oh"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Louisville",
+    "state": "KY",
+    "url": "/services/machinery-removal/louisville-ky"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Houston",
+    "state": "TX",
+    "url": "/services/machinery-removal/houston-tx"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Dallas",
+    "state": "TX",
+    "url": "/services/machinery-removal/dallas-tx"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "San Antonio",
+    "state": "TX",
+    "url": "/services/machinery-removal/san-antonio-tx"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Midland",
+    "state": "TX",
+    "url": "/services/machinery-removal/midland-tx"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Oklahoma City",
+    "state": "OK",
+    "url": "/services/machinery-removal/oklahoma-city-ok"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Little Rock",
+    "state": "AR",
+    "url": "/services/machinery-removal/little-rock-ar"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "New Orleans",
+    "state": "LA",
+    "url": "/services/machinery-removal/new-orleans-la"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Jackson",
+    "state": "MS",
+    "url": "/services/machinery-removal/jackson-ms"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Memphis",
+    "state": "TN",
+    "url": "/services/machinery-removal/memphis-tn"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Nashville",
+    "state": "TN",
+    "url": "/services/machinery-removal/nashville-tn"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Birmingham",
+    "state": "AL",
+    "url": "/services/machinery-removal/birmingham-al"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Atlanta",
+    "state": "GA",
+    "url": "/services/machinery-removal/atlanta-ga"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Charleston",
+    "state": "SC",
+    "url": "/services/machinery-removal/charleston-sc"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Charlotte",
+    "state": "NC",
+    "url": "/services/machinery-removal/charlotte-nc"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Jacksonville",
+    "state": "FL",
+    "url": "/services/machinery-removal/jacksonville-fl"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Miami",
+    "state": "FL",
+    "url": "/services/machinery-removal/miami-fl"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Norfolk",
+    "state": "VA",
+    "url": "/services/machinery-removal/norfolk-va"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Baltimore",
+    "state": "MD",
+    "url": "/services/machinery-removal/baltimore-md"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Philadelphia",
+    "state": "PA",
+    "url": "/services/machinery-removal/philadelphia-pa"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Pittsburgh",
+    "state": "PA",
+    "url": "/services/machinery-removal/pittsburgh-pa"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "New York",
+    "state": "NY",
+    "url": "/services/machinery-removal/new-york-ny"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Boston",
+    "state": "MA",
+    "url": "/services/machinery-removal/boston-ma"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Cincinnati",
+    "state": "OH",
+    "url": "/services/machinery-removal/cincinnati-oh"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "San Jose",
+    "state": "CA",
+    "url": "/services/machinery-removal/san-jose-ca"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Greenville",
+    "state": "SC",
+    "url": "/services/machinery-removal/greenville-sc"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Grand Rapids",
+    "state": "MI",
+    "url": "/services/machinery-removal/grand-rapids-mi"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Peoria",
+    "state": "IL",
+    "url": "/services/machinery-removal/peoria-il"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Wichita",
+    "state": "KS",
+    "url": "/services/machinery-removal/wichita-ks"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Toledo",
+    "state": "OH",
+    "url": "/services/machinery-removal/toledo-oh"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Chattanooga",
+    "state": "TN",
+    "url": "/services/machinery-removal/chattanooga-tn"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Huntsville",
+    "state": "AL",
+    "url": "/services/machinery-removal/huntsville-al"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Mobile",
+    "state": "AL",
+    "url": "/services/machinery-removal/mobile-al"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Tulsa",
+    "state": "OK",
+    "url": "/services/machinery-removal/tulsa-ok"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Rockford",
+    "state": "IL",
+    "url": "/services/machinery-removal/rockford-il"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Dayton",
+    "state": "OH",
+    "url": "/services/machinery-removal/dayton-oh"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "San Diego",
+    "state": "CA",
+    "url": "/services/machinery-removal/san-diego-ca"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Riverside",
+    "state": "CA",
+    "url": "/services/machinery-removal/riverside-ca"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Savannah",
+    "state": "GA",
+    "url": "/services/machinery-removal/savannah-ga"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Baton Rouge",
+    "state": "LA",
+    "url": "/services/machinery-removal/baton-rouge-la"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Greensboro",
+    "state": "NC",
+    "url": "/services/machinery-removal/greensboro-nc"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Knoxville",
+    "state": "TN",
+    "url": "/services/machinery-removal/knoxville-tn"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Akron",
+    "state": "OH",
+    "url": "/services/machinery-removal/akron-oh"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Fort Wayne",
+    "state": "IN",
+    "url": "/services/machinery-removal/fort-wayne-in"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Lansing",
+    "state": "MI",
+    "url": "/services/machinery-removal/lansing-mi"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Buffalo",
+    "state": "NY",
+    "url": "/services/machinery-removal/buffalo-ny"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Hartford",
+    "state": "CT",
+    "url": "/services/machinery-removal/hartford-ct"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Allentown",
+    "state": "PA",
+    "url": "/services/machinery-removal/allentown-pa"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Erie",
+    "state": "PA",
+    "url": "/services/machinery-removal/erie-pa"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Richmond",
+    "state": "VA",
+    "url": "/services/machinery-removal/richmond-va"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Tampa",
+    "state": "FL",
+    "url": "/services/machinery-removal/tampa-fl"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Beaumont",
+    "state": "TX",
+    "url": "/services/machinery-removal/beaumont-tx"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Corpus Christi",
+    "state": "TX",
+    "url": "/services/machinery-removal/corpus-christi-tx"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "El Paso",
+    "state": "TX",
+    "url": "/services/machinery-removal/el-paso-tx"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Reno",
+    "state": "NV",
+    "url": "/services/machinery-removal/reno-nv"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Colorado Springs",
+    "state": "CO",
+    "url": "/services/machinery-removal/colorado-springs-co"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Ogden",
+    "state": "UT",
+    "url": "/services/machinery-removal/ogden-ut"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Davenport",
+    "state": "IA",
+    "url": "/services/machinery-removal/davenport-ia"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Cedar Rapids",
+    "state": "IA",
+    "url": "/services/machinery-removal/cedar-rapids-ia"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Green Bay",
+    "state": "WI",
+    "url": "/services/machinery-removal/green-bay-wi"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "South Bend",
+    "state": "IN",
+    "url": "/services/machinery-removal/south-bend-in"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Lexington",
+    "state": "KY",
+    "url": "/services/machinery-removal/lexington-ky"
+  },
+  {
+    "service": "machinery-removal",
+    "city": "Montgomery",
+    "state": "AL",
+    "url": "/services/machinery-removal/montgomery-al"
+  },
+  {
+    "service": "crane-services",
+    "city": "Houston",
+    "state": "TX",
+    "url": "/services/crane-services/houston-tx"
+  },
+  {
+    "service": "crane-services",
+    "city": "Chicago",
+    "state": "IL",
+    "url": "/services/crane-services/chicago-il"
+  },
+  {
+    "service": "crane-services",
+    "city": "Detroit",
+    "state": "MI",
+    "url": "/services/crane-services/detroit-mi"
+  },
+  {
+    "service": "crane-services",
+    "city": "Dallas",
+    "state": "TX",
+    "url": "/services/crane-services/dallas-tx"
+  },
+  {
+    "service": "crane-services",
+    "city": "Atlanta",
+    "state": "GA",
+    "url": "/services/crane-services/atlanta-ga"
+  },
+  {
+    "service": "crane-services",
+    "city": "Cleveland",
+    "state": "OH",
+    "url": "/services/crane-services/cleveland-oh"
+  },
+  {
+    "service": "crane-services",
+    "city": "Charlotte",
+    "state": "NC",
+    "url": "/services/crane-services/charlotte-nc"
+  },
+  {
+    "service": "crane-services",
+    "city": "Indianapolis",
+    "state": "IN",
+    "url": "/services/crane-services/indianapolis-in"
+  },
+  {
+    "service": "crane-services",
+    "city": "Columbus",
+    "state": "OH",
+    "url": "/services/crane-services/columbus-oh"
+  },
+  {
+    "service": "crane-services",
+    "city": "Milwaukee",
+    "state": "WI",
+    "url": "/services/crane-services/milwaukee-wi"
+  },
+  {
+    "service": "crane-services",
+    "city": "Nashville",
+    "state": "TN",
+    "url": "/services/crane-services/nashville-tn"
+  },
+  {
+    "service": "crane-services",
+    "city": "Pittsburgh",
+    "state": "PA",
+    "url": "/services/crane-services/pittsburgh-pa"
+  },
+  {
+    "service": "crane-services",
+    "city": "Phoenix",
+    "state": "AZ",
+    "url": "/services/crane-services/phoenix-az"
+  },
+  {
+    "service": "crane-services",
+    "city": "Kansas City",
+    "state": "MO",
+    "url": "/services/crane-services/kansas-city-mo"
+  },
+  {
+    "service": "crane-services",
+    "city": "St. Louis",
+    "state": "MO",
+    "url": "/services/crane-services/st-louis-mo"
+  },
+  {
+    "service": "crane-services",
+    "city": "Denver",
+    "state": "CO",
+    "url": "/services/crane-services/denver-co"
+  },
+  {
+    "service": "crane-services",
+    "city": "Minneapolis",
+    "state": "MN",
+    "url": "/services/crane-services/minneapolis-mn"
+  },
+  {
+    "service": "crane-services",
+    "city": "Louisville",
+    "state": "KY",
+    "url": "/services/crane-services/louisville-ky"
+  },
+  {
+    "service": "crane-services",
+    "city": "San Antonio",
+    "state": "TX",
+    "url": "/services/crane-services/san-antonio-tx"
+  },
+  {
+    "service": "crane-services",
+    "city": "Memphis",
+    "state": "TN",
+    "url": "/services/crane-services/memphis-tn"
+  },
+  {
+    "service": "crane-services",
+    "city": "Los Angeles",
+    "state": "CA",
+    "url": "/services/crane-services/los-angeles-ca"
+  },
+  {
+    "service": "crane-services",
+    "city": "Seattle",
+    "state": "WA",
+    "url": "/services/crane-services/seattle-wa"
+  },
+  {
+    "service": "crane-services",
+    "city": "Portland",
+    "state": "OR",
+    "url": "/services/crane-services/portland-or"
+  },
+  {
+    "service": "crane-services",
+    "city": "Birmingham",
+    "state": "AL",
+    "url": "/services/crane-services/birmingham-al"
+  },
+  {
+    "service": "crane-services",
+    "city": "New Orleans",
+    "state": "LA",
+    "url": "/services/crane-services/new-orleans-la"
+  },
+  {
+    "service": "crane-services",
+    "city": "Oklahoma City",
+    "state": "OK",
+    "url": "/services/crane-services/oklahoma-city-ok"
+  },
+  {
+    "service": "crane-services",
+    "city": "Salt Lake City",
+    "state": "UT",
+    "url": "/services/crane-services/salt-lake-city-ut"
+  },
+  {
+    "service": "crane-services",
+    "city": "Philadelphia",
+    "state": "PA",
+    "url": "/services/crane-services/philadelphia-pa"
+  },
+  {
+    "service": "crane-services",
+    "city": "Baltimore",
+    "state": "MD",
+    "url": "/services/crane-services/baltimore-md"
+  },
+  {
+    "service": "crane-services",
+    "city": "New York",
+    "state": "NY",
+    "url": "/services/crane-services/new-york-ny"
+  },
+  {
+    "service": "crane-services",
+    "city": "Boston",
+    "state": "MA",
+    "url": "/services/crane-services/boston-ma"
+  },
+  {
+    "service": "crane-services",
+    "city": "Jacksonville",
+    "state": "FL",
+    "url": "/services/crane-services/jacksonville-fl"
+  },
+  {
+    "service": "crane-services",
+    "city": "Miami",
+    "state": "FL",
+    "url": "/services/crane-services/miami-fl"
+  },
+  {
+    "service": "crane-services",
+    "city": "Charleston",
+    "state": "SC",
+    "url": "/services/crane-services/charleston-sc"
+  },
+  {
+    "service": "crane-services",
+    "city": "Norfolk",
+    "state": "VA",
+    "url": "/services/crane-services/norfolk-va"
+  },
+  {
+    "service": "crane-services",
+    "city": "Midland",
+    "state": "TX",
+    "url": "/services/crane-services/midland-tx"
+  },
+  {
+    "service": "crane-services",
+    "city": "Sacramento",
+    "state": "CA",
+    "url": "/services/crane-services/sacramento-ca"
+  },
+  {
+    "service": "crane-services",
+    "city": "Bakersfield",
+    "state": "CA",
+    "url": "/services/crane-services/bakersfield-ca"
+  },
+  {
+    "service": "crane-services",
+    "city": "Spokane",
+    "state": "WA",
+    "url": "/services/crane-services/spokane-wa"
+  },
+  {
+    "service": "crane-services",
+    "city": "Boise",
+    "state": "ID",
+    "url": "/services/crane-services/boise-id"
+  },
+  {
+    "service": "crane-services",
+    "city": "Las Vegas",
+    "state": "NV",
+    "url": "/services/crane-services/las-vegas-nv"
+  },
+  {
+    "service": "crane-services",
+    "city": "Albuquerque",
+    "state": "NM",
+    "url": "/services/crane-services/albuquerque-nm"
+  },
+  {
+    "service": "crane-services",
+    "city": "Omaha",
+    "state": "NE",
+    "url": "/services/crane-services/omaha-ne"
+  },
+  {
+    "service": "crane-services",
+    "city": "Fargo",
+    "state": "ND",
+    "url": "/services/crane-services/fargo-nd"
+  },
+  {
+    "service": "crane-services",
+    "city": "Casper",
+    "state": "WY",
+    "url": "/services/crane-services/casper-wy"
+  },
+  {
+    "service": "crane-services",
+    "city": "Billings",
+    "state": "MT",
+    "url": "/services/crane-services/billings-mt"
+  },
+  {
+    "service": "crane-services",
+    "city": "Little Rock",
+    "state": "AR",
+    "url": "/services/crane-services/little-rock-ar"
+  },
+  {
+    "service": "crane-services",
+    "city": "Jackson",
+    "state": "MS",
+    "url": "/services/crane-services/jackson-ms"
+  },
+  {
+    "service": "crane-services",
+    "city": "Cincinnati",
+    "state": "OH",
+    "url": "/services/crane-services/cincinnati-oh"
+  },
+  {
+    "service": "crane-services",
+    "city": "San Jose",
+    "state": "CA",
+    "url": "/services/crane-services/san-jose-ca"
+  },
+  {
+    "service": "crane-services",
+    "city": "Greenville",
+    "state": "SC",
+    "url": "/services/crane-services/greenville-sc"
+  },
+  {
+    "service": "crane-services",
+    "city": "Grand Rapids",
+    "state": "MI",
+    "url": "/services/crane-services/grand-rapids-mi"
+  },
+  {
+    "service": "crane-services",
+    "city": "Peoria",
+    "state": "IL",
+    "url": "/services/crane-services/peoria-il"
+  },
+  {
+    "service": "crane-services",
+    "city": "Wichita",
+    "state": "KS",
+    "url": "/services/crane-services/wichita-ks"
+  },
+  {
+    "service": "crane-services",
+    "city": "Toledo",
+    "state": "OH",
+    "url": "/services/crane-services/toledo-oh"
+  },
+  {
+    "service": "crane-services",
+    "city": "Chattanooga",
+    "state": "TN",
+    "url": "/services/crane-services/chattanooga-tn"
+  },
+  {
+    "service": "crane-services",
+    "city": "Huntsville",
+    "state": "AL",
+    "url": "/services/crane-services/huntsville-al"
+  },
+  {
+    "service": "crane-services",
+    "city": "Mobile",
+    "state": "AL",
+    "url": "/services/crane-services/mobile-al"
+  },
+  {
+    "service": "crane-services",
+    "city": "Tulsa",
+    "state": "OK",
+    "url": "/services/crane-services/tulsa-ok"
+  },
+  {
+    "service": "crane-services",
+    "city": "Rockford",
+    "state": "IL",
+    "url": "/services/crane-services/rockford-il"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "Houston",
+    "state": "TX",
+    "url": "/services/forklift-loading-unloading/houston-tx"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "Chicago",
+    "state": "IL",
+    "url": "/services/forklift-loading-unloading/chicago-il"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "Detroit",
+    "state": "MI",
+    "url": "/services/forklift-loading-unloading/detroit-mi"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "Dallas",
+    "state": "TX",
+    "url": "/services/forklift-loading-unloading/dallas-tx"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "Atlanta",
+    "state": "GA",
+    "url": "/services/forklift-loading-unloading/atlanta-ga"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "Cleveland",
+    "state": "OH",
+    "url": "/services/forklift-loading-unloading/cleveland-oh"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "Charlotte",
+    "state": "NC",
+    "url": "/services/forklift-loading-unloading/charlotte-nc"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "Indianapolis",
+    "state": "IN",
+    "url": "/services/forklift-loading-unloading/indianapolis-in"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "Columbus",
+    "state": "OH",
+    "url": "/services/forklift-loading-unloading/columbus-oh"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "Milwaukee",
+    "state": "WI",
+    "url": "/services/forklift-loading-unloading/milwaukee-wi"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "Nashville",
+    "state": "TN",
+    "url": "/services/forklift-loading-unloading/nashville-tn"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "Pittsburgh",
+    "state": "PA",
+    "url": "/services/forklift-loading-unloading/pittsburgh-pa"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "Phoenix",
+    "state": "AZ",
+    "url": "/services/forklift-loading-unloading/phoenix-az"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "Kansas City",
+    "state": "MO",
+    "url": "/services/forklift-loading-unloading/kansas-city-mo"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "St. Louis",
+    "state": "MO",
+    "url": "/services/forklift-loading-unloading/st-louis-mo"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "Denver",
+    "state": "CO",
+    "url": "/services/forklift-loading-unloading/denver-co"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "Minneapolis",
+    "state": "MN",
+    "url": "/services/forklift-loading-unloading/minneapolis-mn"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "Louisville",
+    "state": "KY",
+    "url": "/services/forklift-loading-unloading/louisville-ky"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "San Antonio",
+    "state": "TX",
+    "url": "/services/forklift-loading-unloading/san-antonio-tx"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "Memphis",
+    "state": "TN",
+    "url": "/services/forklift-loading-unloading/memphis-tn"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "Los Angeles",
+    "state": "CA",
+    "url": "/services/forklift-loading-unloading/los-angeles-ca"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "Seattle",
+    "state": "WA",
+    "url": "/services/forklift-loading-unloading/seattle-wa"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "Portland",
+    "state": "OR",
+    "url": "/services/forklift-loading-unloading/portland-or"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "Birmingham",
+    "state": "AL",
+    "url": "/services/forklift-loading-unloading/birmingham-al"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "New Orleans",
+    "state": "LA",
+    "url": "/services/forklift-loading-unloading/new-orleans-la"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "Oklahoma City",
+    "state": "OK",
+    "url": "/services/forklift-loading-unloading/oklahoma-city-ok"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "Salt Lake City",
+    "state": "UT",
+    "url": "/services/forklift-loading-unloading/salt-lake-city-ut"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "Philadelphia",
+    "state": "PA",
+    "url": "/services/forklift-loading-unloading/philadelphia-pa"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "Baltimore",
+    "state": "MD",
+    "url": "/services/forklift-loading-unloading/baltimore-md"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "New York",
+    "state": "NY",
+    "url": "/services/forklift-loading-unloading/new-york-ny"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "Boston",
+    "state": "MA",
+    "url": "/services/forklift-loading-unloading/boston-ma"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "Jacksonville",
+    "state": "FL",
+    "url": "/services/forklift-loading-unloading/jacksonville-fl"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "Miami",
+    "state": "FL",
+    "url": "/services/forklift-loading-unloading/miami-fl"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "Charleston",
+    "state": "SC",
+    "url": "/services/forklift-loading-unloading/charleston-sc"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "Norfolk",
+    "state": "VA",
+    "url": "/services/forklift-loading-unloading/norfolk-va"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "Midland",
+    "state": "TX",
+    "url": "/services/forklift-loading-unloading/midland-tx"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "Sacramento",
+    "state": "CA",
+    "url": "/services/forklift-loading-unloading/sacramento-ca"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "Bakersfield",
+    "state": "CA",
+    "url": "/services/forklift-loading-unloading/bakersfield-ca"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "Spokane",
+    "state": "WA",
+    "url": "/services/forklift-loading-unloading/spokane-wa"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "Boise",
+    "state": "ID",
+    "url": "/services/forklift-loading-unloading/boise-id"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "Savannah",
+    "state": "GA",
+    "url": "/services/forklift-loading-unloading/savannah-ga"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "Lansing",
+    "state": "MI",
+    "url": "/services/forklift-loading-unloading/lansing-mi"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "Grand Rapids",
+    "state": "MI",
+    "url": "/services/forklift-loading-unloading/grand-rapids-mi"
+  },
+  {
+    "service": "forklift-loading-unloading",
+    "city": "Toledo",
+    "state": "OH",
+    "url": "/services/forklift-loading-unloading/toledo-oh"
   }
 ]

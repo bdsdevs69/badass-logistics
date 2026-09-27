@@ -100,6 +100,10 @@ const CLUSTERS = [
   ['machinery x city', u => /^\/services\/machinery-moving\//.test(u)],
   ['plant x city',   u => /^\/services\/plant-relocation\//.test(u)],
   ['cnc x city',     u => /^\/services\/cnc-machine-movers\//.test(u)],
+  ['millwright x city', u => /^\/services\/millwright-services\//.test(u)],
+  ['removal x city', u => /^\/services\/machinery-removal\//.test(u)],
+  ['crane x city',   u => /^\/services\/crane-services\//.test(u)],
+  ['loading x city', u => /^\/services\/forklift-loading-unloading\//.test(u)],
   ['city hubs',      u => /^\/locations\//.test(u)],
   ['state hubs',     u => /^\/(states|service-areas)\//.test(u)],
 ];
