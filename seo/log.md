@@ -1292,3 +1292,42 @@ the step-deck cluster at ~300 impr).
    in GSC, rigging should own the intent and crane narrows.
 3. Nearby-city mesh picks by same state, then same region, not distance. Casper's "nearby" list
    includes Phoenix. Not a positioning issue; worth a distance cap if it recurs.
+
+## 2026-09-27 (Sun) — Track B run (on Sam's "go cook")
+
+**Gate:** blog GREEN (75 URLs, 10% dead, 12 pending). Didn't write new articles:
+another session was mid-run in the same worktree (Wave 2 matrix + 6 guides,
+committed b4ee8aa at 07:13), the queue is down to ~2 todo, and topic-gaps Track A
+is thin (mostly "best plant relocation companies" AI-style queries a post already
+nearly owns). Waited for that run to commit, then did Track B. No cannibalisation
+on any target.
+
+**Shipped (6d2cc51):**
+- `step-deck-vs-drop-deck-trailers` (~300 impr across 15 queries, pos 11–61):
+  **removed 7 "oversize-height permit" mentions — a live retired-positioning
+  breach**; answer-first definition, drop-trailer (drop-and-hook) and flat-top
+  disambiguation, stepdeck spelling. Reviewer: cut a repeated dimensions para.
+- `how-to-choose-a-plant-relocation-contractor`: answers the "best / which / recommend
+  plant relocation companies" queries (~80 impr, pos 58–76), red flags. Reviewer:
+  turnkey section overlapped single-source-plant-relocation-explained → trimmed to
+  prose + link, FAQ and keywords removed.
+- `how-to-move-a-milling-machine` (32 impr, pos 36): migrated out of legacy
+  build-blog.js into content/blog-new so the gates see it; question H2s, site-walk
+  keyfacts, rigging + millwright links. Original date 2026-07-03 kept, `updated`
+  2026-09-27. Reviewer: restored dropped cnc-machine-movers link.
+- `plant-relocation-checklist`: no change — already rewritten for "quote" /
+  "process plant" in 04333cf; GSC hasn't caught up.
+
+Full build green (1061 pages, 0 broken links), all three 200 live, in sitemap +
+llms.txt, Article dateModified 2026-09-27 + FAQPage parse. IndexNow + Google pinged.
+Note: a deepener accidentally ran build-blog.js mid-task and reverted the other
+run's uncommitted data/ping-state.json — cost is at most a few duplicate pings.
+
+**⚠ FOR SAM — bigger than the transformer flag.** The heavy-haul body-prose problem
+is not one page. Live, indexed, in sitemap, legacy build-blog.js source (no gate
+reads their body text), counting oversize/permit mentions: what-is-project-cargo 45 ·
+how-to-ship-industrial-machinery-on-a-flatbed 38 · how-to-transport-a-storage-tank 37 ·
+how-to-ship-a-generator 33 · how-to-transport-a-transformer 30 · enclosed-vs-flatbed-
+transport 12 · freight-broker-vs-forwarder-vs-3pl 8 · how-to-move-a-press-brake 7 ·
+how-to-move-a-boiler-or-chiller 6. Rewrite-as-rigging vs retire-and-redirect is a
+structural call; not done here. build.js check 8 should also lint legacy blog body.
