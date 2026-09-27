@@ -1194,3 +1194,101 @@ sitemap is still 687 URLs and the verdicts above stand. Deliberately did NOT run
 `ping-search-engines.js`: it reads the local sitemap and would IndexNow 347 404s and
 mark them submitted in ping-state.json, so they'd never be re-pinged once live.
 Note for that run: all four new clusters land at once on top of cnc × city AMBER.
+
+## 2026-09-27 (Sun) — Run 2 of the Oct block, two days late: wave 2, dispatch by fleet size, 6 articles
+
+**Run 2 was scheduled for Fri 25 Sep and never ran**, so this run is that row. Tue 29 Sep (run 3)
+is unaffected.
+
+**Gates.** Blog GREEN (69 URLs, 0% dead, 12 pending); dispatch GREEN; rigging/machinery/plant ×
+city GREEN; cnc × city AMBER 36% — untouched. The queue was fine except for a pace-check fault:
+Thursday's six items carried `"shipped"` instead of `"published"`, which `check-pace.js` reads as
+done-without-a-date. Renamed.
+
+**Wave 2 — 280 city pages + 73 state roll-ups, all live (357/357 new service URLs return 200).**
+millwright-services ×88 · machinery-removal ×88 · crane-services ×60 (top 60 by metro rank) ·
+forklift-loading-unloading ×44. The plan said 40 for forklift. Search Console showed city-shaped
+loading demand in four metros ranked 52–70 ("forklift rigging savannah ga" 21 impr, "large
+equipment unloading lansing/grand rapids/toledo"), so they were added. Demand promotes a city,
+which is the plan's own rule. 276 → 280.
+
+- Which pages exist now lives in **`lib/waves.js`**, read by both the generator and the city
+  hubs, so a hub can never link a crane page that was not built. The partial waves exposed two
+  latent bugs this fixes: the same-state city cards and the sibling mesh both assumed every
+  service covers all 88 metros, and would have linked 28 crane and 44 forklift pages that don't exist.
+- Each new service got its own SERVICES block and a METRO_COPY block reading the researched
+  fields through its own job. Millwright leads with equipment and foundations, removal with the
+  way out of the building, crane with the site, and loading with rail, port and dock.
+- Wired through: pillar metro grids (4 new sentinels), a "same crew also handles" line on all
+  628 city pages, an "also in {city}" line on the 88 city hubs, the lateral city mesh, guardrails
+  (MATRIX_SERVICES now 8), build.js checks 1 and 3, and 4 new index-health clusters so their
+  absorption is graded separately from the start.
+- **Differentiation: at the Wave 1 baseline, not above it.** Mean page-specific content is
+  millwright 33.7%, removal 33.5%, crane 33.3%, forklift 34.6%, against Wave 1's 34.2–35.5%.
+  Roughly half of each new matrix sits under the 33% floor, as ~36% of rigging already does.
+  Thinnest pages are small metros with no `port`/`stock` data (Montgomery, Bakersfield, Jackson,
+  Billings). Run 3's `sectors:` research and the Saturday deepener are where this rises. Not a
+  build gate; logged so it is not mistaken for new debt.
+
+**Dispatch fleet model ×4, non-geo, live:** fleets-4-to-10-trucks · fleets-10-to-25-trucks ·
+fleets-25-plus-trucks · after-hours-dispatch. They use the same template as the equipment desks,
+with a separate `FLEET{}` block. The desk copy is written to where each fleet size breaks
+dispatch: the owner as dispatcher, then one dispatcher overloaded, then elastic capacity beside an
+ops team, then nights. The after-hours page stays within the pillar's existing "24/7 dispatch
+desk" claim. The 4–10 page is the service counterpart to the small-fleets buyer's guide and links to it.
+Linked from the pillar, the equipment hub (new "by fleet size" section), every fleet page, and llms.txt.
+Fixed llms.txt's hub line, which would otherwise have claimed "all 14 desks".
+
+**Articles (6), all SHIP from the reviewer:** how-to-calculate-rigging-capacity ·
+floor-loading-for-machinery · machine-foundations-and-grouting · how-to-move-a-pet-ct-scanner ·
+how-to-move-a-lab-freezer · how-to-move-an-autoclave. Top overlap 1.6%. The reviewer confirmed the
+flagged technical claims: sling-angle factors, shackle side-load derating, Ge-68/F-18 half-lives, the
+ULT 45° tilt limit, ASME re-registration, and grout cure times.
+
+**Reviewer HOLD, fixed before ship. This is the finding worth reading.** The shared city-mesh
+copy in `link-city-mesh.js` said *"the same {service} crews and permits"* and *"Same crews, same
+permits"*. It had been live on Wave 1 rigging and machinery pages, and this run was about to copy
+it onto 280 more, including millwright and forklift pages where "permits" means nothing except
+the retired oversize line. It's now gone from all 632 city pages. The positioning lint missed it
+because "permits" alone isn't a banned string. Same class as Wednesday's waterjet finding: the
+breach was in context, not in a phrase.
+
+**Stray edit reverted.** A writer agent added `/blog/jacking-and-skidding → …-explained` to
+`data/redirects.json`, a stub for a URL that never existed (no git history). It was probably
+routing around a bad link instead of fixing it. No article links the bad slug, so the revert was clean.
+Writers should not touch redirects.
+
+**Build/ship.** All 20 checks pass: 632 city pages, 0 broken links, 0 links to stubs, 0
+duplicate titles, sitemap 1,050 URLs (was 692). Commit b4ee8aa. IndexNow accepted 920 URLs (most
+existing city pages were rebuilt); Google sitemap resubmitted, HTTP 204. Live: 6 articles and 4
+fleet pages return 200 direct, are in the sitemap and llms.txt, and their schema parses (Article/FAQPage and
+Service/FAQPage/WebPage). All 357 new service URLs return 200.
+
+**Search Console, 90d to 2026-09-25, for what this batch targets:**
+
+| demand | queries | impr | clicks | wtd pos | where it lands today |
+|---|---|---|---|---|---|
+| machinery removal | 16 | 128 | 0 | 67.8 | machinery-moving city pages (Indianapolis, Cedar Rapids, Baton Rouge); no removal page was ranking |
+| loading / unloading | 22 | 141 | 0 | 34.2 | rigging/charleston-sc (56 impr, pos 33.8), heavy-haul stubs for Lansing/Grand Rapids; 93 of 141 impr city-shaped |
+| crane | 12 | 22 | 1 | 24.0 | homepage, rigging/tulsa-ok |
+| millwright | 4 | 9 | 0 | 28.7 | the pillar |
+| dispatch | 25 | 64 | 1 | 20.2 | **flatbed dispatch services pos 2.3**, hotshot dispatch pos 10–12 on 5-day-old equipment pages |
+
+Machinery removal is the clearest test of this wave: 128 impressions at position 68, currently landing on
+the wrong service. Check in run 9 whether `/services/machinery-removal/*` has taken it.
+
+**Queue: 8 todo, deliberately not backfilled.** `topic-gaps.js` Track A has 16 queries, and none
+are a new article: the plant-relocation comparison cluster is already queued, "what is a stepdeck"
+and "factoring agent vs dispatcher" are Run 4's dispatch pages, and critical-lift wording is Track B
+on `what-is-a-critical-lift`. 8 covers Tuesday's six. **Run 3 will be short for Run 4 unless
+Search Console grows; the data still says fixing beats writing** (Track B: 38 queries, led by
+the step-deck cluster at ~300 impr).
+
+**For Sam:**
+1. Real project stories. One real crane pick, removal or install per metro would do more for
+   Wave 2 differentiation than any template pass.
+2. Crane vs rigging city pages are split by intent (crane = the lift and the crane decision,
+   rigging = the broader job). If "crane services {city}" and "rigging company {city}" start splitting
+   in GSC, rigging should own the intent and crane narrows.
+3. Nearby-city mesh picks by same state, then same region, not distance. Casper's "nearby" list
+   includes Phoenix. Not a positioning issue; worth a distance cap if it recurs.
