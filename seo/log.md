@@ -1168,3 +1168,19 @@ encoder-battery / light-curtain safe-distance claims correct. Nothing held.
 
 **Not done:** Track B (no time pressure, publishing gate was open). Commit used
 explicit paths, not `git add -A`.
+
+## 2026-09-27 — daily health check (Sun)
+
+**Absorption (90d, 14-day grace):** blog GREEN (69 URLs, 0% dead, 12 pending) ·
+dispatch GREEN 0% (3 pending) · service pillars GREEN 0% · rigging × city GREEN 7% ·
+machinery × city GREEN 5% · plant × city GREEN 25% · cnc × city AMBER 36% (down
+from 42% — recovering, still the only HOLD) · city hubs GREEN 20% · SITE 687 / 16%
+dead. No cluster moved to RED.
+
+**Live check:** all six 2026-09-24 guides return 200 direct, in sitemap.xml + llms.txt.
+**Ping:** nothing owed.
+
+**Cannibalisation (Sun):** 287 competing queries vs 270 on 2026-09-23 (+17, +6%) —
+drift, not a jump. Top pairs are the same state-vs-city (georgia/savannah-ga,
+charleston-sc/south-carolina, oklahoma/tulsa-ok) and omaha-ne noise already flagged;
+the merge-and-redirect call is still Sam's.
