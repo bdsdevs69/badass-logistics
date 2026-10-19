@@ -5,6 +5,57 @@ Newest entry at the top. Playbook: `ads/review.md`. Blueprint: `ads/campaigns.js
 
 ---
 
+## 2026-10-20 — Follow-up check: yesterday's fixes held, nothing changed
+
+Scheduled run, one day after the full 2026-10-19 review. Sam was present. **Sam confirmed
+Fleet Dispatch stays paused** ("let it the dispatch paused and dont need that"). Do not
+propose re-enabling it, or rebuilding a dispatch campaign, in future runs.
+
+`node ads/check-ads.js --live`: all 15 final URLs and sitelinks returned 200. Blueprint valid.
+The only warning is the known "$660 of $880 allocated" (Fleet's freed $10/day).
+
+### Campaign table (30 days, 20 Sep – 19 Oct, all networks)
+
+The totals match the 2026-10-19 entry to the cent: Sunday 18 Oct does not serve, and the
+19 Oct partial day had not posted into the 30-day view yet.
+
+| Campaign | Budget | Impr. | CTR | Clicks | Cost | Conv. | CPA |
+|---|---|---|---|---|---|---|---|
+| Crane & Rigging | $15 | 4,081 | 4.61% | 188 | $409.76 | 5 | $81.95 |
+| Machinery & Medical Equipment | $15 | 3,441 | 6.31% | 217 | $403.02 | 6 | $67.17 |
+| Fleet Dispatch | paused | 6,461 | 3.30% | 213 | $268.78 | 0 | — |
+
+Today, Mon 19 Oct ET (partial, the first day after the changes): Crane 287 impr / 5 cl /
+$19.43. Machinery 62 impr / 0 cl / $0. Account total $29.36, so ~$9.93 came from Fleet
+Dispatch before yesterday's pause took effect.
+
+### Verified (nothing changed)
+
+- **Networks:** both campaigns' settings panels read **"Google Search Network"**, with Manual
+  CPC and $15.00/day. The network segment for today shows **no Display row at all**.
+  Search partners still shows impressions today (Crane 62, Machinery 6) but **$0 / 0 clicks**.
+  These are from the morning hours before the setting saved. Confirm next run that
+  Partners reads 0 impressions from 20 Oct on.
+- **Fleet Dispatch** is absent from the enabled-campaigns view and the account budget row
+  reads $30.00/day, so the pause holds.
+
+### Not done, and why
+
+- **No bid, budget, negative or ad changes.** One partial serving day since yesterday's
+  changes is not data. Machinery's new $6.00 bid and Medical's $8.50 need at least a
+  week before lost-IS(rank) and CPA can be read against them.
+- **Freed $10/day not reallocated**, and the medical keyword expansion and the Crane
+  negatives were not added. All three are still waiting on Sam (see 2026-10-19).
+- **Search terms not re-pulled.** Same 30-day window as yesterday, already reviewed.
+
+### Next run (Mon 26 Oct), check first
+
+1. Network segment from 20 Oct: Display and Search partners should both read 0.
+2. Machinery lost-IS(rank) (was 63%) and CPA at the $6.00 bid.
+3. Whether Sam has decided on the freed $10/day.
+
+---
+
 ## 2026-10-19 — Display leak found, Fleet Dispatch paused, two bids raised
 
 Scheduled Monday run, with Sam present partway through. Window **19 Sep – 18 Oct 2026**

@@ -309,7 +309,7 @@
     {
       "name": "Fleet Dispatch",
       "status": "paused",
-      "pausedNote": "PAUSED 2026-10-19 on Sam's instruction ('stop the dispatch ads at all'). 30 days: 213 clicks, $268.78, 0 conversions — past the 60-click rule. Paused, not removed: keeps the 90 negatives and history. Its $10/day is NOT reallocated yet; that needs Sam's go-ahead.",
+      "pausedNote": "PAUSED 2026-10-19 on Sam's instruction ('stop the dispatch ads at all'). 30 days: 213 clicks, $268.78, 0 conversions — past the 60-click rule. Paused, not removed: keeps the 90 negatives and history. Its $10/day is NOT reallocated yet; that needs Sam's go-ahead. 2026-10-20: Sam confirmed it stays paused and he does not need dispatch ads; do not propose re-enabling it.",
       "dailyBudget": 10.0,
       "why": "Anchored on 'truck dispatch company' — 480/mo at a $1.99 entry bid. 'Dispatch services for trucking companies' is 30/mo at $6.51, sixteen times less volume at three times the price, so it is kept only as a long-tail term. Capped on purpose: dispatch should produce leads without defining the brand.",
       "adGroups": [
