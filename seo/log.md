@@ -1642,3 +1642,56 @@ Wednesday article run will be short.
    are on disk, so it can't ship silently. If that check fires, that's the cause.
 4. Real project stories, still. One real MRI, transformer or press job per metro would lift Wave 3
    more than any copy pass.
+
+## 2026-10-19 — Track B (the 2026-09-27 scheduled run, finished three weeks late): metro fact corrections
+
+This scheduled run started 2026-09-27 07:00, launched 15 per-metro research agents for the 15 metros
+with no `stock` field, then lost GitHub/network access while waiting for two concurrent runs to push.
+It resumed 2026-10-19 23:30, by which time the 2026-10-19 Track B pass had already filled `stock` for
+the same 15 metros. **Its `stock` values were kept; nothing was overwritten.** What this run adds is the
+other half of the research brief: each agent also **audited the existing `sectors` and `corridors`** for
+its metro, and found errors that are still live on 4–9 pages per metro.
+
+**Fixed in `data/metros.json` (detail block only, every change sourced by the researcher):**
+- Wrong facts: Cedar Rapids Rompot yard is on the **southeast** side, not northwest · Casper's oilfield
+  corridor is **East** Yellowstone Hwy, east of downtown (the Old Yellowstone District west of downtown
+  is now a dining/arts district) · Knoxville's Forks of the River park is on the **east** side, not south ·
+  Tampa's "historic Tampa Industrial Park near the old brewery district" is the **North Tampa Industrial
+  Park** near Bougainvillea Ave · Tampa Gateway Rail is a Port Tampa Bay terminal developed with CSX and
+  Kinder Morgan, not a "CSX district" · Bakersfield: no source puts BNSF parallel to UP through the
+  southeast; now the UP-served Mount Vernon Ave corridor near Hwy 58.
+- Unverifiable, removed: Hartford "Silver Lane and Main Street industrial corridor" (sources describe a
+  retail strip under redevelopment) · Jackson MS **furniture and upholstery** sector + its equipment
+  item (MS furniture clusters ~150 mi north around Tupelo; Jackson's own plant closed in 1969).
+- Company names reworded neutral in corridors (Hyundai, Nissan, Dassault, Pratt & Whitney). Note: this
+  is not site-wide policy any more. `locations.json` blurbs, the `industry` strings and the Wave 3
+  `anchors` name plants deliberately, so this run did not chase those.
+
+**Also fixed:** `/blog/jacking-and-skidding` was a live **404 that Google was showing** (19 impressions in
+5 days, never existed in git, no internal link to it). Now redirects to `/blog/jacking-and-skidding-explained`.
+That was a 404, not a live URL, so the redirect needed no merge decision.
+
+**State hubs narrowed to state-level intent** (made 2026-09-27 in `statePage()`; another run's commit
+swept it in before this one could). The description, lead, body and first FAQ no longer lead with city
+names. City names stay on the cards and in the "which cities" FAQ. This targets the Georgia↔Savannah,
+SC↔Charleston, Oklahoma↔Tulsa and Florida↔Jacksonville pairs, where the state hub sat at 50–80 behind
+its own city page. No URL was removed.
+
+**Matrix (before → after this run):** machinery 35.7% / 15 under floor · rigging 34.7% / 36 · plant
+34.7% / 32 · cnc 34.2% / 41. **Unchanged, as expected.** These were like-for-like corrections, which
+make the pages accurate rather than more distinct.
+
+**Cannibalisation (5-day window, 2026-09-20→25):** Omaha had disappeared from every pair within days of
+the 2026-09-21 differentiation fix. That is an early sign the fix works, but the sample is small.
+
+**Not done, on purpose:** no new pages, no stub recoveries (the stub list is still all retired-carrier
+demand, and the 10-19 run's analysis holds), no merges, no backlinks, no Ads.
+
+**Flags:**
+- Montgomery `rail` says "CSX and Norfolk Southern". The researcher found only CSX-served industrial sites
+  and could not confirm direct NS service. Left as-is pending a dedicated check.
+- Knoxville `stock` (from the 10-19 pass) anchors on the Jackson Avenue Warehouse District, which the
+  researcher found is now lofts and bars, not industrial. The text is still physically true but reads as
+  current industrial stock. Worth a rewrite next pass.
+- Casper `stock` (10-19 pass) was a null in this run's research: no source could be found for its building
+  stock. Worth re-verifying.

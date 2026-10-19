@@ -2141,7 +2141,7 @@
       "corridors": [
         "the 7th Standard Road industrial corridor in northwest Bakersfield, anchored by the rail-served Rosedale Ranch site",
         "the Kern River oil field district north-northeast of the city",
-        "the rail-served corridor running through southeast Bakersfield along the parallel BNSF and Union Pacific lines"
+        "the rail-served Mount Vernon Avenue industrial corridor in southeast Bakersfield, served by the Union Pacific mainline near Highway 58"
       ],
       "rail": "Served by BNSF and Union Pacific, which run roughly parallel through Kern County along SR 43 and SR 99 and interchange with the short-line San Joaquin Valley Railroad at Bakersfield.",
       "stock": "single-storey concrete tilt-up buildings in the Rosedale oilfield-service submarket built for equipment fabrication and staging, with newer high-clearance logistics buildings in the Bakersfield Commons park",
@@ -2475,7 +2475,7 @@
       ],
       "corridors": [
         "the Platte River Commons industrial park on the site of the former refinery",
-        "the Old Yellowstone Highway oilfield services corridor west of downtown",
+        "the East Yellowstone Highway oilfield services and manufacturing corridor east of downtown",
         "the McMurry Business Park on East Second Street near Interstate 25"
       ],
       "rail": "Served by BNSF Railway and Union Pacific, with a crude-by-rail terminal on BNSF's main line capable of loading unit trains",
@@ -2562,7 +2562,7 @@
       ],
       "corridors": [
         "the Little Rock Port Industrial Park on the McClellan-Kerr Arkansas River Navigation System",
-        "the Dassault Falcon Jet manufacturing campus near Clinton National Airport",
+        "an aircraft completion and structures assembly campus near Clinton National Airport",
         "Little Rock Air Force Base in nearby Jacksonville"
       ],
       "rail": "Served by Union Pacific and BNSF, with the Little Rock Port Authority Railroad switching the port industrial district",
@@ -2605,12 +2605,11 @@
     "Jackson|MS": {
       "sectors": [
         "automotive assembly and supplier manufacturing",
-        "furniture and upholstery manufacturing",
         "fabricated metals manufacturing",
         "food processing"
       ],
       "corridors": [
-        "the Nissan Canton Assembly Plant and its supplier park north of Jackson",
+        "the Canton vehicle assembly plant and its supplier park north of Jackson",
         "the CPKC (formerly Kansas City Southern) intermodal terminal near the airport",
         "the Hawkins Field Industrial Park near Interstate 220"
       ],
@@ -2619,7 +2618,6 @@
       "equipment": [
         "stamping and body-in-white welding equipment",
         "injection molding machinery",
-        "upholstery and furniture fabrication equipment",
         "fabricated metal cutting and forming equipment"
       ],
       "anchors": {
@@ -3557,7 +3555,7 @@
         "nuclear and specialty research manufacturing around Oak Ridge"
       ],
       "corridors": [
-        "the Forks of the River Industrial Park on the south side",
+        "the Forks of the River Industrial Park on the east side",
         "the Norfolk Southern bulk rail terminal district off Interstate 275",
         "the Oak Ridge research and manufacturing corridor in Anderson County"
       ],
@@ -3813,8 +3811,7 @@
         "aerospace aftermarket and MRO facilities"
       ],
       "corridors": [
-        "the Pratt & Whitney campus at Rentschler Field in East Hartford",
-        "the Silver Lane and Main Street industrial corridor in East Hartford",
+        "the Rentschler Field aerospace engine manufacturing campus in East Hartford",
         "the Connecticut Southern Railroad's Hartford Yard and East Hartford Yard rail district"
       ],
       "rail": "Served by CSX, reached from the Hartford area via the regional Connecticut Southern Railroad's Hartford Yard and East Hartford Yard and its interchange points in West Springfield, Massachusetts and North Haven, Connecticut",
@@ -4013,8 +4010,8 @@
       ],
       "corridors": [
         "the Port Tampa Bay industrial waterfront along the shipping channel",
-        "the CSX Tampa Gateway Rail Terminal district",
-        "the historic Tampa Industrial Park near the old brewery district",
+        "the Port Tampa Bay Gateway Rail terminal, developed with CSX and Kinder Morgan for unit-train ethanol and intermodal transfer",
+        "the North Tampa Industrial Park near Bougainvillea Avenue, the city's former brewery manufacturing district",
         "the Tampa Foreign Trade Zone No. 79"
       ],
       "rail": "Served by CSX, which operates the Tampa Gateway Rail Terminal and a Transflo bulk-transfer terminal linking Port Tampa Bay to the CSX network",
@@ -4403,7 +4400,7 @@
       ],
       "corridors": [
         "the riverfront corn wet-milling district along the Cedar River",
-        "the Rompot rail yard district on the city's northwest side",
+        "the Rompot rail yard district on the city's southeast side",
         "the aerospace and electronics manufacturing campus on the northeast side"
       ],
       "rail": "Served by Union Pacific and Canadian National, which connect into the city's grain-processing and manufacturing plants through the Cedar Rapids and Iowa City Railway (CRANDIC) short line.",
@@ -4590,7 +4587,7 @@
         "warehousing and distribution"
       ],
       "corridors": [
-        "the Hyundai Motor Manufacturing Alabama campus",
+        "the vehicle assembly campus near Interstate 65",
         "the Montgomery CNJ industrial site along US Highway 31",
         "the future Montgomery Intermodal Container Transfer Facility linked to the Port of Mobile"
       ],
