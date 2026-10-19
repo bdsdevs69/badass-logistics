@@ -3,15 +3,33 @@ module.exports = {
   cat: 'Rigging',
   hero: 'loads/load-lowboy-warehouse.jpg',
   date: '2026-09-24',
-  title: 'Moving Machinery Through a Tight Plant: Doors, Headroom, Turns',
-  desc: 'How riggers move machinery through tight plants: solving doorway width, low headroom, floor loading, and turning radius, and when a wall opening beats a teardown.',
+  title: 'Moving Machinery Through a Tight Plant: Pre-Move Checklist',
+  desc: 'A pre-move checklist for moving machinery through a tight industrial plant: doorway clearance, floor loading, headroom, and when a wall opening beats a teardown.',
   dek: 'The machine almost never has to get smaller. The building has to get out of its own way for a few hours, and that is a rigging problem, not a demolition one.',
-  tldr: 'Most machinery moves are decided by the tightest doorway, turn, or ceiling on the route, not by weight. Riggers solve narrow openings by pivoting the load through on a diagonal, low headroom with jacking and skidding instead of a crane pick, and undersized floors with steel plate to spread the load. A wall opening usually beats a teardown once disassembly costs more than a controlled cut and patch.',
-  keywords: 'moving machinery through a doorway, low headroom rigging, tight access machine move, machinery move tight clearance, wall opening vs disassembly, rigging through narrow corridor',
+  tldr: 'Most machinery moves are decided by the tightest doorway, turn, or ceiling on the route, not by weight. Before move day, run the checklist: survey door clearances, column spacing, floor load rating, drain covers, and overhead obstructions; handle disconnects, lockout, drain-down, and anchor removal; stage floor protection; sequence around production; get the rigging plan signed off; then re-level and align once the machine is set.',
+  keywords: 'machinery moving checklist for industrial plants, moving machinery through a doorway, low headroom rigging, tight access machine move, machinery move tight clearance, wall opening vs disassembly, rigging through narrow corridor, pre-move checklist machinery',
   body: `
 <p>Ask a rigger what actually stops a machine from moving and the answer is almost never the weight. Cranes and gantries handle weight all day. What stops a move is a door four inches narrower than the crate, a corridor that turns before the machine can straighten out, a ceiling that will not clear a picked load, or a floor that was never built to carry anything on wheels. The machine is usually fine. The building is the obstacle, and the building is what the rigging plan has to solve for.</p>
 
 <p>This is the problem that actually defines most plant jobs, more than tonnage does. A ten-thousand-pound machine through a clean, wide route is a Tuesday. A three-thousand-pound machine through a nineteen-seventies office corridor with a ninety-degree turn and a drop ceiling is the job that needs a plan written before anyone touches a wrench.</p>
+
+<h2>What is the pre-move checklist for moving machinery through an industrial plant?</h2>
+<p>For a plant or facilities manager, the checklist below is what gets confirmed before a crew is booked — most of it answered by walking the route in person, not by reading the floor plan. This is the version scoped to one machine moving through a constrained building; a <a href="plant-relocation-checklist.html">whole-plant relocation</a> runs a longer sequence across every asset in the facility.</p>
+<ol>
+  <li><strong>Route survey — door clearances.</strong> Measure every doorway, frame, and closer on the path as it actually stands, not as the drawing shows it. Note which frames and trim can come out to buy back an inch or two.</li>
+  <li><strong>Route survey — column spacing.</strong> Confirm the gap between structural columns at every point the load has to pass between them, not just at the obvious pinch points.</li>
+  <li><strong>Route survey — floor load rating.</strong> Check the rated capacity of every stretch of floor the machine will cross — including mezzanines, loading docks, and older additions — against the concentrated load it will impose riding on its base, on skates, or under forklift tires.</li>
+  <li><strong>Route survey — trench and drain covers.</strong> Locate any trench grates, drain covers, or pit lids on the route and confirm what they are rated for before a skate wheel or forklift tire parks on one.</li>
+  <li><strong>Route survey — overhead obstructions.</strong> Walk the route with a stick or a laser at the machine's actual travel height, not eye level, checking sprinkler heads, conduit, cable tray, ductwork, and mezzanine framing.</li>
+  <li><strong>Disconnects and lockout.</strong> Schedule power, air, data, and coolant disconnects with the plant's electricians and lock out the circuits before riggers touch the machine.</li>
+  <li><strong>Drain-down.</strong> Drain coolant, hydraulic fluid, and any other reservoirs per the OEM manual before the machine moves — standing fluid is weight, a leak risk, and a hazard on the move itself.</li>
+  <li><strong>Anchor removal.</strong> Pull anchor bolts and break any grout connection at the base, and decide in advance whether the old footprint needs patching.</li>
+  <li><strong>Floor protection.</strong> Stage steel plate or timber mat along any section of the route where the floor's rated capacity does not match the concentrated load the move will put on it.</li>
+  <li><strong>Sequencing around production.</strong> Decide what has to keep running, what shuts down first, and in what order lines come back, so the move idles no more of the plant than it has to.</li>
+  <li><strong>Rigging plan sign-off.</strong> Get the route, the lift or skate method, and the floor protection plan reviewed and signed off before move day — not worked out with a crew already standing in the aisle.</li>
+  <li><strong>Post-set leveling and alignment.</strong> Once the machine lands on its new footprint, re-level and realign it to the builder's spec before production resumes — see <a href="machine-leveling-and-alignment.html">machine leveling and alignment</a> for that process in full.</li>
+</ol>
+<p>Everything on that list is covered in more depth below — the checklist is the scope, the rest of this page is why each line is on it.</p>
 
 <h2>How do you get a machine through a doorway that looks too narrow?</h2>
 <p>By stopping trying to push it through square and finding the diagonal instead. A rectangular load that will not clear a doorway on its width will often clear it presented on an angle, with one leading corner through first and the load walked and pivoted through the opening rather than slid straight in. This is standard technique on machinery skates, where the load is turned in short increments using come-alongs or hydraulic push-pull units rather than forced through in one motion.</p>
@@ -63,7 +81,7 @@ module.exports = {
 <p>The tightest point on the route decides the whole job before the crew ever picks up a jack. <a href="../services/rigging.html">Industrial rigging</a> and <a href="../services/machinery-moving.html">machinery moving</a> both start by walking that route in person, and where the load is heavy enough to need jacks, skid track, or a gantry to get past a tight point, that is <a href="../services/heavy-lift-rigging.html">heavy lift rigging</a> work. Send the machine list and the floor plan and we will find the tightest point before it finds your crew — <a href="../contact.html">start here</a>.</p>
 `,
   faq: [
-    { q: 'What is the biggest constraint on moving machinery through a plant?', a: 'Almost never the weight. Modern jacks, skates, and gantries handle heavy loads routinely. The real constraint is geometry on the route — a doorway narrower than the machine, a corridor turn the load cannot sweep through, low headroom that rules out a crane pick, or a floor that was never rated for a load riding on skates or forklift tires.' },
+    { q: 'What should be on a machinery moving checklist for an industrial plant?', a: 'A route survey of door clearances, column spacing, floor load rating, trench and drain covers, and overhead obstructions at the machine\'s real travel height; disconnects and lockout with the plant\'s electricians; draining coolant and other fluids; pulling anchor bolts; staging floor protection where the slab is not rated for the move; sequencing around what has to stay in production; a signed-off rigging plan before move day; and post-set leveling and alignment once the machine lands on its new footprint.' },
     { q: 'How do you move a machine through a doorway that is too narrow?', a: 'Start by measuring the opening as it actually exists, not as the drawing shows it — frames, closers, and trim routinely cost two or three inches. Pull the door hardware and frame trim first. If it still will not clear, present the load on a diagonal and walk it through in a pivot on machinery skates rather than pushing it straight in, or remove OEM ancillary hardware like a hopper, mast, or control cabinet to narrow the load without touching the machine itself.' },
     { q: 'Can machinery still be moved under low ceilings or low headroom?', a: 'Yes, by avoiding methods that need vertical clearance. A crane pick or a full-height gantry setup will not fit, but jacking and skidding keeps the load a few inches off the floor for the entire move, and a low-headroom hoist can do a short vertical lift in a fraction of the space a standard chain hoist needs. The route also needs checking for suspended obstructions — conduit, sprinkler heads, duct — at the machine\'s actual travel height, not eye level.' },
     { q: 'Why does a machine that fits a corridor still fail to make the turn?', a: 'Because a machine on skates or dollies sweeps a turning radius set by its full footprint, not its static width, and that swept path is usually wider than the corridor itself allows in one continuous motion. Riggers mock up the footprint against the actual turn beforehand and, where it does not clear, break the turn into shorter increments with the load rotated in place between pushes, or route around it entirely.' },
@@ -76,5 +94,7 @@ module.exports = {
     { h: 'Jacking, Skidding & Gantry Lifts', u: '../services/heavy-lift-rigging.html' },
     { h: 'What Is a Machinery Move Survey?', u: 'what-is-a-machinery-move-survey.html' },
     { h: 'Jacking & Skidding Explained', u: 'jacking-and-skidding-explained.html' },
+    { h: 'Plant Relocation Checklist', u: 'plant-relocation-checklist.html' },
+    { h: 'Machine Leveling & Alignment', u: 'machine-leveling-and-alignment.html' },
   ],
 };

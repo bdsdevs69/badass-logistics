@@ -122,7 +122,7 @@
     { "rank": 116, "city": "Fresno",         "state": "CA", "region": "West",          "tier": 3, "status": "queued", "industry": "ag processing & manufacturing" },
     { "rank": 117, "city": "Stockton",       "state": "CA", "region": "West",          "tier": 3, "status": "queued", "industry": "inland port & distribution" }
   ],
-  "_detailNote": "PER-METRO SUBSTANCE, researched 2026-09-21. This is the matrix differentiation fix. A service x city page runs ~1,550 words and the only per-city input used to be the 4-word 'industry' string above (Omaha: 'rail & ag manufacturing'), which measured the four city matrices at 31-32% page-specific content against a 33% floor, with 86-88 of 113 pages under it. build-service-cities.js now reads these fields and each service frames them in its own words - see METRO_COPY there, and note that each service deliberately draws a DIFFERENT mix so the same facts do not produce the same sentences across four pages for one city. Every value is a verifiable public fact: named industrial districts and parks, the Class I railroads that actually serve the metro, real navigable freight water access, the dominant industrial building stock. An absent field means the research could not confirm it - 'port' is absent for inland metros by design, and 15 metros have no 'stock'. NEVER add an unverified fact here: it lands on four live pages per metro, and an unverifiable claim repeated across 88 metros is worse than a generic one. Metros with no entry keep their previous page output byte-for-byte.",
+  "_detailNote": "PER-METRO SUBSTANCE, researched 2026-09-21. This is the matrix differentiation fix. A service x city page runs ~1,550 words and the only per-city input used to be the 4-word 'industry' string above (Omaha: 'rail & ag manufacturing'), which measured the four city matrices at 31-32% page-specific content against a 33% floor, with 86-88 of 113 pages under it. build-service-cities.js now reads these fields and each service frames them in its own words - see METRO_COPY there, and note that each service deliberately draws a DIFFERENT mix so the same facts do not produce the same sentences across four pages for one city. Every value is a verifiable public fact: named industrial districts and parks, the Class I railroads that actually serve the metro, real navigable freight water access, the dominant industrial building stock. An absent field means the research could not confirm it - 'port' is absent for inland metros by design; the 15 metros that had no 'stock' were filled 2026-10-19 from sourced research (CRE listings, NRHP/state historic records, port and economic-development pages), with single-listing figures such as clear heights deliberately left out. NEVER add an unverified fact here: it lands on four live pages per metro, and an unverifiable claim repeated across 88 metros is worse than a generic one. Metros with no entry keep their previous page output byte-for-byte.",
   "detail": {
     "Houston|TX": {
       "sectors": [
@@ -631,6 +631,7 @@
       ],
       "rail": "Served by BNSF and Union Pacific, both of which cross the Rivergate Industrial District and connect to the Port of Portland's marine terminals.",
       "port": "The Port of Portland operates marine terminals on the Willamette and Columbia Rivers, including the Terminal 6 container facility and the Terminal 5 bulk terminal in the Rivergate district.",
+      "stock": "older brick rail-served factory buildings in the Northwest Industrial District along the Willamette alongside newer distribution and manufacturing buildings on Swan Island, a former WWII shipyard now run by the Port of Portland",
       "equipment": [
         "semiconductor wafer-fab and cleanroom equipment",
         "CNC machining centers",
@@ -828,6 +829,7 @@
       ],
       "rail": "Served by CSX and Norfolk Southern, plus the regional Florida East Coast Railway, with on-dock rail at the Talleyrand Marine Terminal and near-dock rail at Dames Point.",
       "port": "JAXPORT is one of the nation's top vehicle-handling ports, with the Blount Island Marine Terminal serving as one of the largest vehicle import/export centers in the United States.",
+      "stock": "modern clear-span distribution buildings in business parks such as Imeson Commerce Center, alongside former Naval Air Station Cecil Field hangars at Cecil Commerce Center now leased to aviation and logistics tenants",
       "equipment": [
         "vehicle processing and staging equipment",
         "ship repair shiplift and drydock equipment",
@@ -957,6 +959,7 @@
         "the rail-served corridor running through southeast Bakersfield along the parallel BNSF and Union Pacific lines"
       ],
       "rail": "Served by BNSF and Union Pacific, which run roughly parallel through Kern County along SR 43 and SR 99 and interchange with the short-line San Joaquin Valley Railroad at Bakersfield.",
+      "stock": "single-storey concrete tilt-up buildings in the Rosedale oilfield-service submarket built for equipment fabrication and staging, with newer high-clearance logistics buildings in the Bakersfield Commons park",
       "equipment": [
         "oilfield pump jacks and wellhead equipment",
         "hydraulic well-service rigs",
@@ -1075,9 +1078,11 @@
       ],
       "corridors": [
         "Dakota Commerce Center industrial park off Interstate 29",
-        "Veterans Industrial Park in north Fargo"
+        "Veterans Industrial Park in north Fargo",
+        "the 7th Avenue Industrial Park in northwest Fargo"
       ],
       "rail": "Served by BNSF and Canadian Pacific Kansas City (CPKC), both of which cross the city; BNSF also carries Amtrak's Empire Builder through Fargo alongside grain and manufactured-goods traffic.",
+      "stock": "older brick freight warehouses and cold-storage buildings in the downtown railroad corridor alongside newer single-storey distribution buildings in the Dakota Commerce Center park off Interstate 29",
       "equipment": [
         "four-wheel-drive tractor and wheel-loader assembly equipment",
         "CNC machining and metal fabrication equipment",
@@ -1094,9 +1099,11 @@
       ],
       "corridors": [
         "the Platte River Commons industrial park on the site of the former refinery",
-        "the Old Yellowstone Highway oilfield services corridor west of downtown"
+        "the Old Yellowstone Highway oilfield services corridor west of downtown",
+        "the McMurry Business Park on East Second Street near Interstate 25"
       ],
       "rail": "Served by BNSF Railway and Union Pacific, with a crude-by-rail terminal on BNSF's main line capable of loading unit trains",
+      "stock": "pipe yards and oilfield equipment fabrication shops built for storing tubular goods and welding production tanks, separators and pressure vessels for the oil and gas industry",
       "equipment": [
         "wellhead and cased-hole tooling",
         "oilfield fabrication and welding equipment",
@@ -1116,6 +1123,7 @@
         "the refinery row along the Yellowstone River northeast of downtown"
       ],
       "rail": "Served by BNSF Railway, which took over the former Montana Rail Link lines in 2024 and runs sidings directly into the Lockwood Industrial Park",
+      "stock": "rail-served industrial and distribution buildings in the Lockwood district along the BNSF mainline, alongside the process and maintenance buildings of the refineries on the Yellowstone River",
       "equipment": [
         "refinery process and turnaround equipment",
         "sugar processing equipment",
@@ -1137,6 +1145,7 @@
       ],
       "rail": "Served by Union Pacific and BNSF, with the Little Rock Port Authority Railroad switching the port industrial district",
       "port": "Little Rock sits on the McClellan-Kerr Arkansas River Navigation System, with barge terminals at the Little Rock Port Industrial Park connecting to the Mississippi River and on to the Gulf via New Orleans",
+      "stock": "modern clear-span cross-dock distribution buildings in the Port of Little Rock's rail- and barge-served industrial park along the Arkansas River",
       "equipment": [
         "aircraft completion and structures assembly tooling",
         "food and poultry processing lines",
@@ -1153,9 +1162,11 @@
       ],
       "corridors": [
         "the Nissan Canton Assembly Plant and its supplier park north of Jackson",
-        "the CPKC (formerly Kansas City Southern) intermodal terminal near the airport"
+        "the CPKC (formerly Kansas City Southern) intermodal terminal near the airport",
+        "the Hawkins Field Industrial Park near Interstate 220"
       ],
       "rail": "Served by Canadian National and CPKC, with a CPKC intermodal terminal near Jackson-Medgar Wiley Evers International Airport",
+      "stock": "older single-storey warehouse and flex buildings dating from the 1960s and 1970s across Commerce Park and the Hawkins Field Industrial Park",
       "equipment": [
         "stamping and body-in-white welding equipment",
         "injection molding machinery",
@@ -1395,6 +1406,7 @@
       ],
       "rail": "Served by BNSF, whose Cherokee Yard is the region's largest rail yard, with Union Pacific and Canadian Pacific Kansas City reaching the metro via the South Kansas and Oklahoma short line.",
       "port": "The Tulsa Port of Catoosa is an inland barge terminal on the McClellan-Kerr Arkansas River Navigation System, one of the furthest-inland ports connected to the Gulf of Mexico.",
+      "stock": "large clear-span aircraft maintenance hangars at the American Airlines Tech Ops base at Tulsa International Airport alongside newer high-clearance bulk distribution buildings along the Highway 75 corridor in north Tulsa",
       "equipment": [
         "oilfield fabrication and welding equipment",
         "aircraft maintenance and overhaul equipment",
@@ -1566,6 +1578,7 @@
       ],
       "rail": "Served by Norfolk Southern and CSX, with the short-line Knoxville and Holston River Railroad handling local switching to the Forks of the River Industrial Park before interchange",
       "port": "Knoxville sits at the head of the Tennessee River's navigable channel, with active river terminals moving barge freight south through the Tennessee-Tombigbee Waterway system",
+      "stock": "older two- and three-storey red-brick wholesale warehouses in the Jackson Avenue Warehouse District alongside newer single-storey manufacturing buildings in Third Creek Industrial Park along Middlebrook Pike",
       "equipment": [
         "CNC machining centers",
         "automotive electronics assembly equipment",
@@ -1672,6 +1685,7 @@
         "the Connecticut Southern Railroad's Hartford Yard and East Hartford Yard rail district"
       ],
       "rail": "Served by CSX, reached from the Hartford area via the regional Connecticut Southern Railroad's Hartford Yard and East Hartford Yard and its interchange points in West Springfield, Massachusetts and North Haven, Connecticut",
+      "stock": "older multi-storey red-brick mill buildings in the Parkville Industrial Historic District along Bartholomew Avenue and Park Street, built for electrical and rubber-goods manufacturing",
       "equipment": [
         "CNC turbine and jet-engine component machining centers",
         "precision grinding and machining equipment",
@@ -1760,6 +1774,7 @@
       ],
       "rail": "Served by CSX, which operates the Tampa Gateway Rail Terminal and a Transflo bulk-transfer terminal linking Port Tampa Bay to the CSX network",
       "port": "Port Tampa Bay is Florida's largest port by tonnage, handling phosphate, fertilizer, aggregate and containerized cargo with direct CSX rail access from the terminal",
+      "stock": "older brick multi-storey cigar factory and warehouse buildings in the rail-served Ybor City district alongside newer clear-span distribution buildings in the East Tampa logistics corridor near Port Tampa Bay",
       "equipment": [
         "bulk material handling and conveyor systems for phosphate and aggregate",
         "bottling and packaging line equipment",
@@ -1926,6 +1941,7 @@
         "the aerospace and electronics manufacturing campus on the northeast side"
       ],
       "rail": "Served by Union Pacific and Canadian National, which connect into the city's grain-processing and manufacturing plants through the Cedar Rapids and Iowa City Railway (CRANDIC) short line.",
+      "stock": "multi-storey grain-milling buildings downtown on the Cedar River alongside newer food-grade precast distribution buildings in logistics parks along the I-380 corridor",
       "equipment": [
         "corn wet-milling and grain-processing equipment",
         "avionics and electronics assembly equipment",
@@ -1948,6 +1964,7 @@
       ],
       "rail": "Served by Canadian National, which reaches the Fox River terminal and mill district over former Wisconsin Central trackage.",
       "port": "The Port of Green Bay sits at the westernmost point of Lake Michigan at the mouth of the Fox River, moving dry-bulk cargo such as coal, limestone, salt and cement along with wood pulp and forest products for the paper industry.",
+      "stock": "early-1900s multi-building brick paper mill complexes along the Fox River expanded in phases through the 1950s, alongside newer high-clearance industrial buildings in Fox Valley parks built for food-processing and manufacturing tenants",
       "equipment": [
         "paper machines and pulpers",
         "corrugating and converting lines",
@@ -2007,6 +2024,7 @@
         "the future Montgomery Intermodal Container Transfer Facility linked to the Port of Mobile"
       ],
       "rail": "Served by CSX and Norfolk Southern",
+      "stock": "large modern automotive supplier buildings near the Hyundai Motor Manufacturing Alabama plant alongside older single-storey warehouse buildings with modest clear heights in Gunter Industrial Park",
       "equipment": [
         "stamping presses",
         "engine machining and assembly lines",

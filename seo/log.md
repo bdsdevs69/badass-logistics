@@ -1444,3 +1444,83 @@ All 200 live, no refresh, Article + FAQPage parse, in sitemap.xml + llms.txt. In
 **Not done:** Track B. A concurrent run was editing the shared checkout mid-run (lathe, crane-rental,
 tight-plant deepening + build-service-cities.js) — so this run built and pushed from an isolated worktree
 with only its own files, and left that in-flight work untouched and uncommitted for its owner.
+
+## 2026-10-19 — Track B improvement pass (Mon, late)
+
+No new pages. Sitemap URL set unchanged at **1,051** (only lastmod moved). Built + pushed from an isolated
+worktree off origin/main carrying only this run's five source files, so the concurrent article run's work
+was neither swept in nor broken.
+
+**Measure (90d):** all 12 clusters GREEN, site 97 dead / 1,046 (9%). Dead pages concentrate in plant × city
+(32) and cnc × city (30), i.e. the two matrices with the weakest per-city text. 138 redirect stubs still
+earn 6,494 impr / 74 clicks.
+
+**Stub recovery: nothing recovered, on purpose.** Every buyer-relevant stub already 301s to a live page with
+the *same* intent: /services/step-deck-trailer → truck-dispatch/step-deck, rgn/lowboy/double-drop →
+truck-dispatch/rgn-lowboy, conestoga → truck-dispatch/conestoga, /services/dispatching (pos 6) → truck-dispatch,
+how-to-transport-a-transformer → how-to-move-a-transformer-into-a-building, drop-deck-vs-flatbed →
+trailer-selector. Rebuilding any of those URLs would create a second page competing with its own redirect
+target. The rest of the top 30 (heavy-haul + cities, oversize/superload/permit/pilot-car posts, boat,
+mobile home, multi-axle) is motor-carrier demand → leave stubbed. The article run recovered
+how-to-transport-a-crane today; that was the last clean candidate in the top 30.
+
+**Cannibalisation:** 0 ARTICLES pairs under WORTH FIXING → **no merge recommendation for Sam this run.**
+What's there:
+- CROSS-SERVICE, Savannah + Charleston (10 of the 18 pairs). machinery-moving/savannah-ga takes 188 of 205
+  impr on "machinery movers savannah ga" at pos 10.5; the removal/forklift/millwright siblings show up with
+  2-5 impr each. That is one page winning with siblings tagging along, not a split — no action beyond
+  differentiation. Same pattern in Charleston (machinery-moving 139 of 144).
+- SIBLING CITIES: indianapolis ↔ omaha (21 queries, 225 impr) is the 2026-09-21 Omaha bug still in the
+  90-day window (most of it predates that fix) — re-check next month before acting. oklahoma ↔ tulsa and
+  florida ↔ jacksonville are state-hub-vs-city; the city page wins in both.
+- OTHER: how-to-choose-a-plant-relocation-contractor ↔ /services/plant-relocation (13 queries, 163 impr) —
+  different intents (choose a contractor vs hire the service), keep both. The article run's HOLD on
+  what-separates-plant-relocation-companies… is right: it would have made this a three-way split.
+
+**Lifted (3 posts, Track B):**
+- how-to-move-a-lathe (legacy, build-blog.js): body ~820 → ~1,240 words. New H2 "How do you level a lathe
+  after a move?" + lead FAQ for "how to level a lathe" (28 impr, pos 11.6 — closest to page 1 on the list).
+  Removed an unverifiable tolerance figure; points to the builder's manual instead. Links millwright + cnc.
+- crane-rental-vs-rigging-company: ~1,460 → ~1,785 words. Direct-answer H2 + 8-row decision table for
+  "when do you need a rigging company vs a crane" (12 @ 29.3); "Do any companies provide both crane and
+  rigging?" section for the St. Louis both-under-one-contract question (5 @ 10.4). No city claims.
+- moving-machinery-through-a-tight-plant: ~1,760 → ~2,240 words. 12-item pre-move checklist for
+  "machinery moving checklist for industrial plants" (12 @ 34.9), scoped to one machine in a constrained
+  building and linked to plant-relocation-checklist as the whole-plant version.
+- Deliberately skipped: step-deck-vs-drop-deck (deepened 09-27; most of the 90d window predates it — let it
+  settle), plant-relocation-checklist (deepened 09-21, same reason), what-is-drayage + flatbed tarp posts
+  (container/flatbed demand, off the rigging/4+-fleet buyer; tarp posts would cannibalise each other).
+
+**Matrix differentiation — data, not prose.**
+1. `stock` filled for the **15 metros** the 09-21 run named as the top next task (Portland, Jacksonville,
+   Tampa, Fargo, Casper, Billings, Little Rock, Jackson, Montgomery, Tulsa, Knoxville, Hartford, Bakersfield,
+   Cedar Rapids, Green Bay). 0 of 88 metros now lack it. Five research agents each returned source URLs per
+   claim (NRHP / state historic records, port + economic-development pages, CRE listings). I then cut every
+   figure that came from a single listing (clear heights, square footage) since one building isn't a metro's
+   stock, and dropped a Hartford clause the researcher flagged as snippet-only. +3 verified corridors
+   (Fargo 7th Avenue Industrial Park, Casper McMurry Business Park, Jackson Hawkins Field Industrial Park);
+   rejected a Billings corridor sourced only to Yelp/business-registry listings.
+2. build-service-cities.js: the `away` (routing) slot was gated on rail AND port, so it rendered nothing for
+   the **45 inland metros** — half the matrix lost its rail paragraph. Now rail alone is enough; rigging's
+   closing line drops "or over water" when there is no port.
+
+Matrix mean / pages under the 33% floor, before → after (built site):
+  machinery-moving    35.5% → 35.7%   19 → 16
+  rigging             34.2% → 34.7%   41 → 36
+  plant-relocation    34.4% → 34.7%   36 → 33
+  cnc-machine-movers  33.9% → 34.2%   43 → 42
+  millwright-services 33.7% → 34.1%   52 → 47
+  machinery-removal   33.5% → 33.8%   60 → 57
+  crane-services      33.3% → 33.6%   38 → 35
+  total under floor: 289 → 266.
+Honest read: a real but small move. The remaining gap is now structural, not missing data: every field is
+filled, and the pages are still ~1,800 words of shared template around ~100-150 words of metro facts. The
+next lever is the template itself (shorter shared sections on city pages), not more research. Thinnest page
+is still machinery-moving/casper-wy (14 local tokens).
+
+**Build:** node build.js green — 0 broken of 113,816 links, 0 retired-URL links, positioning lint clean on
+948 generated pages, AI-surface gate passing.
+
+**Not done, on purpose:** no new pages, no stub recoveries (see above), no merges/redirects, no backlinks,
+no Ads. Left the two locally edited article-run files (how-to-move-a-chiller.js, how-to-transport-a-crane.js
+differ from origin in the main checkout) untouched for their owner.

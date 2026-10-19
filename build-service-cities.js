@@ -409,6 +409,9 @@ const oxford = (a, conj = 'and') => {
 const lower1 = (s) => (s ? s.charAt(0).toLowerCase() + s.slice(1) : '');
 const trimDot = (s) => (s || '').replace(/\.\s*$/, '');
 // A slot only renders when it has enough real material to be worth a paragraph.
+// The `away` (routing) slots are the exception: rail alone is enough, because 45
+// of the 88 researched metros are inland with no port by design, and gating on
+// rail AND port silently dropped the paragraph from half the matrix (2026-10-19).
 const enough = (...parts) => parts.filter(p => p && String(p).trim()).length >= 2;
 
 const METRO_COPY = {
@@ -422,7 +425,7 @@ const METRO_COPY = {
     ].filter(Boolean).join(' ') : '',
     floor: (c, m) => (m.equipment && m.equipment.length >= 3)
       ? `On ${c.city} floors that most often means ${oxford(m.equipment)} — each with its own lift points, its own disconnect list, and its own reason it can't be handled like palletised freight.` : '',
-    away: (c, m) => enough(m.rail, m.port) ? [
+    away: (c, m) => (m.rail || m.port) ? [
       m.rail ? `${trimDot(m.rail)}.` : '',
       m.port ? `${trimDot(m.port)}.` : '',
       `With ${c.ix} carrying the over-the-road legs, a machine leaving a ${c.city} plant has more than one viable routing — and the crating and load plan get built around whichever one it is, not the other way round.`,
@@ -443,11 +446,11 @@ const METRO_COPY = {
     ].filter(Boolean).join(' ') : '',
     floor: (c, m) => (m.equipment && m.equipment.length >= 3)
       ? `A ${c.city} lift list usually runs to ${oxford(m.equipment)}, and each one changes the rig: where it can be picked, what it cannot be set down on, and how much of it has to come apart to clear a doorway.` : '',
-    away: (c, m) => enough(m.rail, m.port) ? [
+    away: (c, m) => (m.rail || m.port) ? [
       `Not every ${c.city} rig finishes on the floor it started on.`,
       m.rail ? `${trimDot(m.rail)}.` : '',
       m.port ? `${trimDot(m.port)}.` : '',
-      `Add ${c.ix} for the road legs and a machine rigged out of a ${c.city} plant can leave on a trailer, in a rail car, or over water — the rigging plan is built backwards from whichever it is.`,
+      `Add ${c.ix} for the road legs and a machine rigged out of a ${c.city} plant can leave on a trailer${m.port ? ', in a rail car, or over water' : ' or in a rail car'} — the rigging plan is built backwards from whichever it is.`,
     ].filter(Boolean).join(' ') : '',
     faq: (c, m) => (m.corridors && m.corridors.length && m.equipment && m.equipment.length) ? [
       `Where in ${c.city} do your rigging crews work?`,
@@ -466,7 +469,7 @@ const METRO_COPY = {
       (m.equipment && m.equipment.length >= 3) ? `A ${c.city} equipment schedule typically runs to ${oxford(m.equipment)}, and the order those come apart and go back together is the plan.` : '',
       m.stock ? `The local stock — ${trimDot(m.stock)} — is what turns a sequence on paper into a sequence that survives rig day.` : '',
     ].filter(Boolean).join(' ') : '',
-    away: (c, m) => enough(m.rail, m.port) ? [
+    away: (c, m) => (m.rail || m.port) ? [
       `Plant moves rarely stay inside ${c.city}.`,
       m.rail ? `${trimDot(m.rail)}.` : '',
       m.port ? `${trimDot(m.port)}.` : '',
@@ -489,7 +492,7 @@ const METRO_COPY = {
       m.stock ? `Getting a machine out of a ${c.city} shop is usually the harder half. The stock here is ${trimDot(m.stock)} — and for a machine holding ten-thousandths, the route out of the building is as much of the job as the lift itself.` : '',
       (m.equipment && m.equipment.length >= 3) ? `The parts those spindles cut end up inside the rest of the metro's plant — ${oxford(m.equipment)} — which is why a shop move here is rarely the only rigging job on the schedule.` : '',
     ].filter(Boolean).join(' ') : '',
-    away: (c, m) => enough(m.rail, m.port) ? [
+    away: (c, m) => (m.rail || m.port) ? [
       m.rail ? `${trimDot(m.rail)}.` : '',
       m.port ? `${trimDot(m.port)}.` : '',
       `With ${c.ix} for the road legs, a machine going from a ${c.city} shop to a plant in another state can travel more than one way — and a machine tool's routing is chosen for shock and vibration, not for speed.`,
@@ -515,7 +518,7 @@ const METRO_COPY = {
       m.stock ? `The floors matter as much as the machines. ${c.city}'s plants are ${trimDot(m.stock)}, and an older slab is often why a machine needs a new pad, re-drilled anchors, or a grout crew before it can be leveled at all.` : '',
       m.corridors && m.corridors.length ? `Most of our ${c.city} installation work lands in ${oxford(m.corridors)}.` : '',
     ].filter(Boolean).join(' ') : '',
-    away: (c, m) => enough(m.rail, m.port) ? [
+    away: (c, m) => (m.rail || m.port) ? [
       `New equipment for ${c.city} plants rarely arrives by one road.`,
       m.port ? `${trimDot(m.port)}.` : '',
       m.rail ? `${trimDot(m.rail)}.` : '',
@@ -538,7 +541,7 @@ const METRO_COPY = {
       (m.equipment && m.equipment.length >= 3) ? `The units coming out of ${c.city} plants are usually ${oxford(m.equipment)}. Each has its own drain-down, lockout points, and resale value — which is why they are tagged by destination before the first one is disconnected.` : '',
       m.sectors && m.sectors.length ? `Removals here track the churn in the metro's ${oxford(m.sectors)}: a line retired for a model change, a floor cleared for a consolidation, or a building handed back at lease end.` : '',
     ].filter(Boolean).join(' ') : '',
-    away: (c, m) => enough(m.rail, m.port) ? [
+    away: (c, m) => (m.rail || m.port) ? [
       `Where a removed machine goes decides how it leaves.`,
       m.rail ? `${trimDot(m.rail)}.` : '',
       m.port ? `${trimDot(m.port)}.` : '',
@@ -561,7 +564,7 @@ const METRO_COPY = {
       (m.equipment && m.equipment.length >= 3) ? `The picks that come up most in ${c.city} are ${oxford(m.equipment)} — and the crane is sized to the heaviest of them at the longest radius the site forces, not to the weight alone.` : '',
       m.sectors && m.sectors.length ? `Who is asking changes the plan as much as what is being lifted: a pick for ${c.city}'s ${oxford(m.sectors, 'or')} usually lands inside a running site, so the lift window, the exclusion zone, and the traffic plan are written around their operation.` : '',
     ].filter(Boolean).join(' ') : '',
-    away: (c, m) => enough(m.rail, m.port) ? [
+    away: (c, m) => (m.rail || m.port) ? [
       m.port ? `${trimDot(m.port)}.` : '',
       m.rail ? `${trimDot(m.rail)}.` : '',
       `Loads arriving that way often need a crane at both ends — off the railcar or dock and onto a trailer, then off the trailer and onto a pad in ${c.city} — and both picks go into the same lift plan.`,
