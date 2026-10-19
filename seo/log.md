@@ -1707,3 +1707,14 @@ instance's 5 articles (commit cf596a6) are this Monday's article run. No second 
 **Risk for Sam:** overdue scheduled runs share one worktree with no lock. After a sleep gap they fire
 together, and two of them picked identical topics. A lock file checked at the start of each run would
 prevent it.
+
+## 2026-10-20 — daily health check (Tue)
+
+**Absorption (90d):** all 12 judged clusters GREEN, no RED/AMBER. plant × city 28% · cnc × city 27% ·
+city hubs 13% · dispatch 11% · rest ≤5%. 7 Wave 3 clusters (heavy-lift, hvac, transformer, mri, lab,
+press, datacenter — 254 URLs) are NEW/pending, too new to judge. SITE 1,305 URLs / 9% dead.
+
+**Live check:** all 259 URLs from the 10-19 runs (217 Wave 3 city pages + 37 state hubs from bfcee5d,
+5 field guides from cf596a6) return 200 direct and are in sitemap.xml. The 5 guides and the 7 new
+service pillars are in llms.txt (city pages are not listed individually there, by design).
+/blog/jacking-and-skidding stub serves. **Ping:** nothing owed (all submitted at current lastmod).
