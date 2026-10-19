@@ -1524,3 +1524,5 @@ is still machinery-moving/casper-wy (14 local tokens).
 **Not done, on purpose:** no new pages, no stub recoveries (see above), no merges/redirects, no backlinks,
 no Ads. Left the two locally edited article-run files (how-to-move-a-chiller.js, how-to-transport-a-crane.js
 differ from origin in the main checkout) untouched for their owner.
+
+**Ping:** IndexNow 200 for the 351 rebuilt URLs. Google sitemap resubmit not repeated — the article run resubmitted it earlier today. Live check: lathe leveling H2 and rigging/casper-wy stock copy both serving.
