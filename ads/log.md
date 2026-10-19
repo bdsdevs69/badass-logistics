@@ -48,6 +48,27 @@ Dispatch before yesterday's pause took effect.
   negatives were not added. All three are still waiting on Sam (see 2026-10-19).
 - **Search terms not re-pulled.** Same 30-day window as yesterday, already reviewed.
 
+### Later the same day — fake quotes (Sam: "there are a lot of fake quotes")
+
+Two causes, both fixed in commit `c5892f9`:
+
+1. **The FormSubmit endpoint sat in plain HTML** on all 6 quote pages and /contact, with
+   `_captcha=false`. Scrapers could post straight to it without ever loading the site.
+   It is now attached at submit time by `/assets/form-guard.js`, and only when JS ran,
+   the visitor was on the page for 3s or more, and the honeypot is empty.
+2. **/thanks fired the "Request quote" conversion on every page load**: refreshes, direct
+   visits, bots. It now fires only when this browser submitted a form in the last 30
+   minutes, once, with a `transaction_id`.
+
+**What this means for the numbers above:** the 11 conversions (10 quote + 1 call) are
+an upper bound. Some of the 10 quote conversions may be junk, so true CPA is worse than
+$67–82. Read conversions from 20 Oct on as the clean series, and do not make the
+Maximize-conversions decision on pre-20-Oct data.
+
+**Still open (Sam):** bots that already harvested `formsubmit.co/info@…` can keep posting
+to it directly. Swap the guard to FormSubmit's random-string alias (from the activation
+email in info@), then fakes that still arrive point to the old harvested address.
+
 ### Next run (Mon 26 Oct), check first
 
 1. Network segment from 20 Oct: Display and Search partners should both read 0.
