@@ -622,7 +622,8 @@
         "services/transformer-generator-rigging"
       ],
       "hero": "loads/load-flatbed-electrical.jpg",
-      "status": "todo"
+      "status": "done",
+      "date": "2026-10-19"
     },
     {
       "slug": "how-to-move-a-chiller",
@@ -635,7 +636,8 @@
         "services/crane-services"
       ],
       "hero": "loads/flatbed-industrial-dust-collectors-strapped.jpg",
-      "status": "todo"
+      "status": "done",
+      "date": "2026-10-19"
     },
     {
       "slug": "how-to-move-a-dust-collector",
@@ -648,7 +650,8 @@
         "services/crane-services"
       ],
       "hero": "loads/flatbed-industrial-dust-collectors-strapped.jpg",
-      "status": "todo"
+      "status": "done",
+      "date": "2026-10-19"
     },
     {
       "slug": "how-to-evaluate-a-dispatch-service",
@@ -662,7 +665,8 @@
         "blog/truck-dispatcher-vs-freight-broker"
       ],
       "hero": "dispatch-hero.jpg",
-      "status": "todo"
+      "status": "done",
+      "date": "2026-10-19"
     },
     {
       "slug": "dedicated-lanes-vs-spot-freight",
@@ -718,7 +722,11 @@
         "measured": "2026-09-22",
         "source": "topic-gaps.js 90 Track A"
       },
-      "status": "todo"
+      "status": "todo",
+      "reviewHold": {
+        "date": "2026-10-19",
+        "reason": "Reviewer HOLD: track-record, in-house-crew and sequencing sections restate how-to-choose-a-plant-relocation-contractor (which already has an H2 \"What separates the best plant relocation companies for a large move?\"). Fix: cut those to 1-2 sentences pointing to that post; build around concurrent crew-count mechanics, lift-engineering throughput, millwright capacity vs arrival queue, and multi-month freight cadence. Draft kept at content-drafts/held/."
+      }
     },
     {
       "slug": "how-to-transport-a-crane",
@@ -739,7 +747,8 @@
         "measured": "2026-09-22",
         "source": "stub-traffic.js 90"
       },
-      "status": "todo"
+      "status": "done",
+      "date": "2026-10-19"
     }
   ],
   "_recoveryNote": "STUB RECOVERY POLICY, reviewed 2026-09-21 (Track B run). 131 redirect stubs still earn 4,607 impressions and 45 clicks. Most of it is deliberately NOT recovered: the heavy-haul service and city stubs, the oversize-permit and pilot-car and superload posts, the equipment-shipping posts (bulldozer, excavator, skid steer, boat, mobile home, crane transport) and hot-shot trucking are all demand for a motor carrier, a service retired in 2026, and rebuilding them would undo the revamp and put build.js check 8 in conflict with the site. The trailer SERVICE pages (step-deck, RGN, double-drop, lowboy, Conestoga, flatbed-transport, multi-axle) also stay stubbed — trailer-choice demand is real and is the dispatch buyer, but it belongs in editorial guides and /trailer-selector, not on a service page that reads as us running the trailer. /services/dispatching (position 5.7, the best on the site) and /services/freight-moving (position 7.4) stay stubbed on purpose too: their intent belongs on the live /services/truck-dispatch and /services/project-freight they already point at, and recovering them would split one intent across two URLs. A recovery entry keeps its redirect rule in data/redirects.json until the page is actually written — deleting the rule first leaves a 404, and build-redirects.js runs after the generators so a rule left in place re-stubs the URL no matter what was written."
