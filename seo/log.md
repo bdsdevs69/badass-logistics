@@ -1526,3 +1526,119 @@ no Ads. Left the two locally edited article-run files (how-to-move-a-chiller.js,
 differ from origin in the main checkout) untouched for their owner.
 
 **Ping:** IndexNow 200 for the 351 rebuilt URLs. Google sitemap resubmit not repeated — the article run resubmitted it earlier today. Live check: lathe leveling H2 and rigging/casper-wy stock copy both serving.
+
+## 2026-10-19 (Mon night) — Run 3 of the Oct block, three weeks late: Wave 3, sector-matched
+
+**Which run.** Runs 3–8 never fired over the 09-28 → 10-19 gap. Each later row builds on the one
+before (AEO across "every service page", a mesh over the "full 1,250-page graph"), so this run took
+the next undone row, **Run 3 — Wave 3 + `sectors:` research**, instead of jumping to run 9.
+Runs 4–8 are still owed; the dates in schedule.md no longer mean anything, and Sam should re-date them.
+
+**Gates.** All 13 clusters GREEN (blog 1% dead, cnc 27%, plant 28%). check-pace: 8 todo.
+
+**Articles: none from this run, deliberately.** Two `badass-seo-articles` sessions fired at the same
+minute and were writing the same queue items into the shared worktree (files appeared 23:10–23:11,
+before my writers could have produced them). I stopped my writers and left articles to their lane;
+that run shipped six (013b136). Two of my writers had already touched files before they were stopped:
+one trimmed the ups/battery `desc` to 155 chars, and one may have edited chiller/crane. The main
+checkout is clean against origin now. **Lesson, now in memory:** the Tue/Fri run worked in its own
+`git worktree` (~/badass-wave3) from here on, so a `git add -A` elsewhere can't sweep its generator edits.
+
+**Research (§6.1, the Wave 3 blocker): done.** 4 agents researched named, current anchors for all
+88 metros: health systems, research institutions, print plants, data-centre campuses, utilities and
+generation, plus a building-stock sentence, each graded strong/some/none. Merged as
+`detail[key].anchors` in data/metros.json (raw output kept in data/wave3-research/). Removed before
+merge because not operating: Intel Ohio One, Google West Memphis, Digital Realty Charlotte, Meta El Paso,
+Meta Montgomery, AWS Ridgeland, Duane Arnold. Many newspaper plants closed 2023–26 and were left out.
+
+**Wave 3 live: 217 city pages + 37 state hubs. Matrix 632 → 849.**
+
+| service | pages | match rule |
+|---|---|---|
+| heavy-lift-rigging | 50 | top 50 by rank |
+| hvac-chiller-rigging | 40 | `buildings` strong/some |
+| transformer-generator-rigging | 35 | `energy` or `datacenter` |
+| mri-medical-equipment-rigging | 30 | `health` |
+| lab-equipment-movers | 25 | `research` |
+| printing-press-movers | **17** (plan 25) | `print`, facilities that RUN PRESSES |
+| data-center-rigging | 20 | `datacenter` |
+
+- `lib/waves.js` takes `{ sector, max }`. `max` is a ceiling: only metros with a named anchor
+  qualify, strong before some. Printing came in at 17 because only 17 metros have a real press
+  operator. Paper, tissue and containerboard mills don't count.
+- The copy lives in `lib/wave3-copy.js`. Each service has its own SERVICES block, base/floor/away/faq
+  slots, and an `eqSection`, which replaces the "{city}'s plants" chip block that read wrong on a
+  hospital. Anchors are named as **what exists in the metro, never as clients**. Licensed and OEM
+  work (refrigerant recovery, magnet ramp-down, electrical disconnects, requalification, press
+  teardown) is stated as staying with them.
+- Wired through: pillar sentinels ×7, the "Specialty rigging in {city}" sibling line, city-hub
+  "Also in" line, rig-types grid (now links the city page where one exists), lateral mesh, guardrails
+  (MATRIX_SERVICES = 15), build.js check 3, and 7 new index-health clusters.
+- The mesh now falls back to out-of-region peers (by metro size, labelled "Other … markets we cover")
+  when a sparse service has fewer than two regional siblings. Previously 10 pages had no mesh.
+- `lc()` keeps MRI/HVAC/CNC/UPS upper-case where the generator lower-cases service names mid-sentence.
+
+**Reviewer: HOLD, then fixed.** Positioning was clean on all 259 files, and the technical scoping was
+called correct. Three must-fix items:
+1. **Print anchors that aren't press shops**: IP Prattville, IP Cedar River, Smurfit Westrock
+   Fernandina, IP Erie, GP Broadway (Brawny towels), Greif paperboard, plus two IP sheet plants. All
+   removed. Montgomery, Cedar Rapids, Jacksonville and Erie left the wave (21 → 17).
+2. **Verb agreement**: "Markley One Summer Street run chillers" on 10 HVAC pages. All four "X run"
+   joins now agree.
+3. **`industryPhrase()` labelled Fargo "ag & Bakken energy" as energy/petrochemical**, so the page
+   contradicted its own ag-equipment copy. The fix is narrow: when ag and energy are both named, the
+   one the string leads with wins. Only Fargo changes. A full earliest-match rewrite would have moved
+   12 metros and made New Orleans/Philadelphia worse, so it wasn't done.
+Not done (nice-to-have): state hub intros are still the generic "industrial base runs on machines" line
+on every service, which reads oddly on MRI/data-centre hubs.
+
+**Differentiation (sentences unique to a page within its service, crude metric):** Wave 1–2 run at
+37–44% mean. Wave 3: heavy-lift 36.9 · transformer 35.8 · MRI 35.4 · lab 34.9 · HVAC 34.4 ·
+press 32.1 · data centre 31.0. Data centre and press are the thinnest; that is small sets plus metros
+with no rail/port data. Saturday deepener targets, not a gate.
+
+**Build/ship.** All checks green: 849 city pages, thinnest still 14 local tokens, 0 broken of
+145k links, 0 duplicate titles, sitemap 1,305. Commit bfcee5d. IndexNow 200 (629 URLs); Google sitemap
+HTTP 204. Live: all 254 new URLs return 200 direct, 0 stubs, all in sitemap.xml, 0 JSON-LD parse
+failures (Service + BreadcrumbList + FAQPage). City pages aren't listed in llms.txt by design.
+
+**Search Console, 90d to 2026-10-16, demand Wave 3 now has a page for:**
+
+| sector | queries | impr | clk | wtd pos | geo-shaped | where it landed before tonight |
+|---|---|---|---|---|---|---|
+| heavy lift / jacking / gantry | 31 | 157 | 0 | 17.6 | 15 | jacking-and-skidding post 62, **locations/baton-rouge-la 56** |
+| lab / precision | 28 | 126 | 0 | 18.7 | 34 | lab-freezer post; **"lab equipment movers dallas" pos 2–6**, chicago pos 7, no city page existed |
+| MRI / medical | 25 | 104 | 0 | 27.2 | 14 | hospital-relocation post; "medical equipment movers detroit" pos 10 |
+| transformer / generator | 27 | 71 | 0 | 43.4 | 24 | the post + pillar; crane-services/peoria-il |
+| data centre | 19 | 49 | 0 | 27.6 | 7 | "data center movers kansas city" pos 10 |
+| chiller / HVAC | 17 | 28 | 0 | 48.4 | 15 | crane-services/phoenix-az (boiler *rental*, not ours) |
+| printing press | 6 | 23 | 0 | 15.0 | 0 | no geo demand. Press × city is the weakest bet in this wave; watch it first |
+
+**Run 9 measurement, early (nothing published 09-28 → 10-19, so this is just drift):**
+
+| page | 21 Sep | now | target |
+|---|---|---|---|
+| machinery-moving/omaha-ne | 691 · pos 67.5 · 0 | 224 · 68.4 · 0 | ✗ |
+| machinery-moving/savannah-ga | 607 · 21.0 · 0 | 888 · 18.0 · 0 | clicks still 0 |
+| rigging/savannah-ga | 362 · 25.6 · 0 | 406 · 24.2 · 1 | pos not < 20 yet |
+| non-brand clicks (query-attributed) | 4 of 120 | **15 of 143** | > 25 |
+| machinery removal demand | 128 impr, 0 on removal pages | 354 impr, **241 on /machinery-removal/*** | ✓ Wave 2 took it |
+
+**Queue: not backfilled.** topic-gaps Track A (30 queries) is the plant-relocation-companies
+cluster, which is already queued as `what-separates-plant-relocation-companies-on-large-moves`.
+It is still `todo`; the article run didn't ship it tonight. Beyond that: "what is a stepdeck",
+which belongs to Run 4's dispatch trailer pages, and single-digit queries. 3 todo left; the
+Wednesday article run will be short.
+
+**For Sam:**
+1. **Re-date schedule.md.** Runs 4–8 (trailer recovery, AEO layer, mesh + schema, depth pass,
+   conversion) are all still owed, and the next Tue/Fri run will take Run 4.
+2. **Concurrency.** Three Badass runs fired inside the same 15 minutes tonight (articles ×2,
+   upgrade, plus ads), all in one checkout. The article run fired twice. Worth checking the
+   scheduler, since the duplicate article sessions are the risky part.
+3. Another run still had uncommitted `data/metros.json` edits in the main checkout when this
+   shipped. It has to rebase over the new `anchors` block. If it resolves by taking its own side,
+   Wave 3 collapses to heavy-lift only. build.js's matrix-cap check then fails, because stale pages
+   are on disk, so it can't ship silently. If that check fires, that's the cause.
+4. Real project stories, still. One real MRI, transformer or press job per metro would lift Wave 3
+   more than any copy pass.
