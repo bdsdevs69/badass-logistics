@@ -14,9 +14,25 @@
   gtag('js', new Date());
   gtag('config', 'AW-18295250442');
 </script>
-<!-- Event snippet for 'Request quote' conversion — fires on this thank-you page load -->
+<!-- Event snippet for 'Request quote' conversion. Fires only when this browser
+     really submitted a form in the last 30 minutes (marker set by
+     /assets/form-guard.js), and only once, so refreshes, direct visits and
+     bots hitting /thanks no longer count as leads. If storage is blocked we
+     cannot tell, so it fires rather than lose a real lead. -->
 <script>
-  gtag('event', 'conversion', {'send_to': 'AW-18295250442/yvjJCK3VhdEcEIq87ZNE'});
+  (function () {
+    var sent = null;
+    try {
+      sent = localStorage.getItem('bl_quote_sent');
+      localStorage.removeItem('bl_quote_sent');
+    } catch (err) { sent = 'nostorage'; }
+    if (!sent) return;
+    if (sent !== 'nostorage' && Date.now() - Number(sent) > 30 * 60 * 1000) return;
+    gtag('event', 'conversion', {
+      'send_to': 'AW-18295250442/yvjJCK3VhdEcEIq87ZNE',
+      'transaction_id': sent === 'nostorage' ? '' : 'q' + sent
+    });
+  })();
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
