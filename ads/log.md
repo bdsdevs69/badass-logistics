@@ -5,6 +5,119 @@ Newest entry at the top. Playbook: `ads/review.md`. Blueprint: `ads/campaigns.js
 
 ---
 
+## 2026-10-19 — Display leak found, Fleet Dispatch paused, two bids raised
+
+Scheduled Monday run, with Sam present partway through. Window **19 Sep – 18 Oct 2026**
+(30 days, ET). First review since the $40/day raise. **No runs happened on 28 Sep,
+5 Oct or 12 Oct**, so this is four weeks of data with nobody watching.
+
+`node ads/check-ads.js --live`: all 15 final URLs and sitelinks returned 200.
+Conversions are real: 10 "Request quote" (the shared /thanks page fires the label on
+every quote form, including /quote-dispatch) + 1 phone-call lead.
+
+### Campaign table (30 days, all networks, as Google reports it)
+
+| Campaign | Budget | Impr. | CTR | Clicks | Cost | Conv. | CPA | Search IS | Lost IS rank | Lost IS budget |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Crane & Rigging | $15 | 4,081 | 4.61% | 188 | $409.76 | 5 | $81.95 | <10% | 20.60% | 76.19% |
+| Machinery & Medical Equipment | $15 | 3,441 | 6.31% | 217 | $403.02 | 6 | $67.17 | 16.83% | 63.11% | 20.06% |
+| Fleet Dispatch | $10 | 6,461 | 3.30% | 213 | $268.78 | **0** | — | <10% | 49.93% | 41.95% |
+| **Account** | $40 | 13,983 | 4.42% | 618 | $1,081.55 | 11 | $98.32 | | | |
+
+**Google Search only** (Network segment) — the real performance once the leak is removed:
+
+| Campaign | Impr. | CTR | Clicks | Cost | Conv. | CPA |
+|---|---|---|---|---|---|---|
+| Crane & Rigging | 1,661 | 5.36% | 89 | $343.81 | 5 | **$68.76** |
+| Machinery & Medical Equipment | 1,183 | 5.83% | 69 | $318.40 | 6 | **$53.07** |
+
+Ad groups (30 days): Machinery Moving 120 cl / $295.45 / 4 conv · Crane & Rigging Services
+117 / $275.03 / 4 · CNC 52 / $50.81 / 1 · Medical & Imaging 45 / $56.76 / 1 ·
+Crating, Loading & Handling 42 / ~$27.70 / 0 (all of it Display — every Crating keyword
+has 0 clicks) · Industrial Rigging & Millwright 29 / $107 / 1.
+
+### The one thing that matters this week
+
+**Display Network and Search Partners were switched ON in both live campaigns**, against
+the blueprint's "Search only". In 30 days Display took **$132.01 for 236 clicks and 0
+conversions**, and Partners took **$18.56 for 11 clicks and 0 conversions**. That is
+$150.57 (18.5%) of the two campaigns' spend producing nothing. It is also why keywords
+explained only 231 of 618 clicks, and why Crating "had 42 clicks" while none of its
+keywords had any. The 2026-09-23 review listed network settings as "not verified". They
+had drifted.
+
+### Changed (each verified after save)
+
+1. **Fleet Dispatch → Paused.** Sam's instruction ("stop the dispatch ads at all"). It
+   also meets the playbook rule: 0 conversions on 213 clicks / $268.78. Paused rather than
+   removed, so its 90 negatives and its history survive if it ever comes back. The
+   account budget row now reads $30.00/day.
+2. **Crane & Rigging networks → Google Search Network only.** Unticked Search partners
+   and Display. Verified: the settings row reads "Google Search Network".
+3. **Machinery & Medical Equipment networks → Google Search Network only.** Same edit,
+   same verification.
+4. **Machinery Moving bid $4.50 → $6.00.** Its converting keywords were "Below first page
+   bid": heavy machinery movers ($11.35), industrial equipment movers ($17.03), machinery
+   movers ($11.35), machinery moving company ($11.35). Campaign lost-IS(rank) was 63%.
+   Google's bid simulator: $6.00 ≈ +1.3 conv/week for +$112/week; $6.75 ≈ +1.9 for
+   +$167. Took $6.00 as the step.
+5. **Medical & Imaging Equipment bid $7.00 → $8.50.** Clears the $7.90 first-page bid on
+   "medical equipment movers", the ad group's one converting keyword. Average CPC was
+   $1.26, so the bid sets a ceiling, not the price.
+
+Repo: `campaigns.json` carries the new bids, `status: "paused"` on Fleet Dispatch, and a
+`networkNote`. `check-ads.js` now leaves paused campaigns out of the budget sum. It
+warns "$660 of $880 allocated", which is accurate: $10/day is free and waiting on Sam.
+
+### Not done, and why
+
+- **Budget not reallocated.** The freed $10/day was going to go $5 to Crane (76% lost to
+  budget) and $5 to Machinery. The tool's permission check blocked the edit because
+  Sam had not asked for a budget move. The change was cancelled with nothing typed, and
+  both budgets were verified still at $15.00. **Sam's decision.** Turning Display off
+  also frees ~$5/day inside the existing budgets, so it may be enough on its own.
+- **Medical keyword expansion not added.** Sam asked to improve medical. The proposal is
+  below. The same permission check blocked further navigation in the account, so it was
+  left for Sam's go-ahead.
+- **No Crane & Rigging negatives added**, for the same reason. Candidates are all 0-click /
+  $0 except `mi jack products inc` ($3.91): `liebherr`, `broderson`, `"mi jack"`,
+  `"crane operator"` (phrase only, so "crane rental with operator" stays clean), and
+  `"stevedoring"`. Do **not** negative `overhead crane` or `gantry crane`: riggers install
+  those.
+- **Crane bids not raised.** Crane loses 76% to *budget* and 21% to rank. More bid on a
+  budget-capped campaign buys fewer clicks.
+- **No ad copy edits.** The problem was where the ads showed (Display), not what they
+  said. Search-only CTRs are 5.4–5.8%.
+- **Manual CPC kept.** No campaign is near 15 conversions in 30 days.
+- **Search terms:** 504 visible terms, but they cover only ~29 clicks. Google hides the
+  rest below its privacy threshold, so search-term negatives can only ever be partial
+  here.
+
+### Why medical looks weak (for Sam)
+
+Medical is not underperforming per click. On Search it converts at roughly the account
+rate, and its $56.76 CPA is second-best in the account. **It is short on volume.**
+The keyword research puts the whole category at ~75 searches a month across the 20
+metros. Four of its 12 keywords are "Not eligible — low search volume" (mri machine
+movers, linear accelerator removal, imaging equipment movers, plus machine shop
+relocation in CNC). Better ads cannot create searches. The levers are:
+
+1. **More keywords** (proposed): `"medical equipment rigging"`, `"mri installation"`,
+   `"mri removal"`, `"imaging equipment relocation"`, `"hospital equipment moving"`,
+   `"medical imaging equipment movers"`, and possibly `"laboratory equipment movers"`.
+   Lab moves are the same rigging job with far more volume, if Sam wants that work.
+2. **Wider geography for medical only.** Hospitals buy MRI/CT moves from anywhere, so 20
+   metros starves it. This needs medical split into its own campaign with a national or
+   state-level target. That is a structural change, so it is Sam's call.
+
+### Next run, check first
+
+1. Network segment: Display and Partners should read $0.
+2. Did Machinery's lost-IS(rank) fall from 63%, and did CPA hold under ~$100 at $6.00?
+3. Is the Medical keyword "medical equipment movers" still below first page at $8.50?
+
+---
+
 ## 2026-09-23 (later) — daily cap raised $25 → $40 on Sam's call
 
 Follow-up to the review below, same day. Sam overrode the standing

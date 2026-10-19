@@ -7,6 +7,7 @@
   "conversionLabel": "AW-18295250442/yvjJCK3VhdEcEIq87ZNE",
   "sharedSettings": {
     "network": "Search only — Display OFF, Search Partners OFF",
+    "networkNote": "2026-10-19: found Display + Search Partners ON in both rigging/machinery campaigns (Google re-enables them; the boxes are pre-ticked). 30 days: Display $132.01 / 236 clicks / 0 conv, Partners $18.56 / 11 clicks / 0 conv. Switched off and verified. Check this row every run.",
     "locations": [
       "Houston, Texas, United States",
       "Chicago, Illinois, United States",
@@ -178,7 +179,8 @@
         {
           "name": "Machinery Moving",
           "finalUrl": "https://badasslogistics.com/quote-machinery",
-          "maxCpc": 4.5,
+          "maxCpc": 6.0,
+          "bidNote": "Raised 4.50 -> 6.00 on 2026-10-19: the converting keywords (heavy machinery movers, industrial equipment movers, machinery movers) were 'Below first page bid' at $11.35-$17.03. Google's simulator: $6.75 = +1.9 conv/wk for +$167/wk.",
           "keywords": [
             "\"machinery movers\"",
             "\"heavy machinery movers\"",
@@ -261,7 +263,8 @@
         {
           "name": "Medical & Imaging Equipment",
           "finalUrl": "https://badasslogistics.com/quote-medical",
-          "maxCpc": 7.0,
+          "maxCpc": 8.5,
+          "bidNote": "Raised 7.00 -> 8.50 on 2026-10-19 to clear the $7.90 first-page bid on \"medical equipment movers\", the ad group's only converting keyword. Avg CPC was $1.26, so the bid is a ceiling, not the price.",
           "why": "Bid deliberately high. 210 searches/month against a $5.81 entry bid and zero visible competitors — the way to win here is position on a thin stream of high-value queries, not budget.",
           "keywords": [
             "\"medical equipment movers\"",
@@ -305,6 +308,8 @@
     },
     {
       "name": "Fleet Dispatch",
+      "status": "paused",
+      "pausedNote": "PAUSED 2026-10-19 on Sam's instruction ('stop the dispatch ads at all'). 30 days: 213 clicks, $268.78, 0 conversions — past the 60-click rule. Paused, not removed: keeps the 90 negatives and history. Its $10/day is NOT reallocated yet; that needs Sam's go-ahead.",
       "dailyBudget": 10.0,
       "why": "Anchored on 'truck dispatch company' — 480/mo at a $1.99 entry bid. 'Dispatch services for trucking companies' is 30/mo at $6.51, sixteen times less volume at three times the price, so it is kept only as a long-tail term. Capped on purpose: dispatch should produce leads without defining the brand.",
       "adGroups": [

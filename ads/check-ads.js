@@ -20,7 +20,8 @@ const errs = [];
 const warns = [];
 
 // --- budget -------------------------------------------------
-const daily = plan.campaigns.reduce((s, c) => s + c.dailyBudget, 0);
+// Paused campaigns bill nothing, so they don't count against the cap.
+const daily = plan.campaigns.filter(c => c.status !== 'paused').reduce((s, c) => s + c.dailyBudget, 0);
 // Weekday-only schedule: 22 billable days a month, not 30.4.
 const BILLABLE_DAYS = 22;
 const monthly = daily * BILLABLE_DAYS;

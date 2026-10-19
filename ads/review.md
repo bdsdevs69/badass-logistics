@@ -14,8 +14,8 @@ which one is right and update the other in the same run.
 | Campaign | Daily | Ad groups (Manual CPC bid) | Landing page |
 |---|---|---|---|
 | Crane & Rigging | $15.00 | Crane & Rigging Services $4.00 · Industrial Rigging & Millwright $4.00 · Crating, Loading & Handling $3.50 | /quote-crane, /quote-rigging |
-| Machinery & Medical Equipment | $15.00 | Machinery Moving $4.50 · CNC & Machine Tools $4.50 · Medical & Imaging Equipment $7.00 | /quote-machinery, /quote-medical |
-| Fleet Dispatch | $10.00 | Dispatch For Fleets $3.00 | /quote-dispatch |
+| Machinery & Medical Equipment | $15.00 | Machinery Moving $6.00 · CNC & Machine Tools $4.50 · Medical & Imaging Equipment $8.50 | /quote-machinery, /quote-medical |
+| Fleet Dispatch | $10.00 — **PAUSED 2026-10-19** (Sam; 0 conv on 213 clicks) | Dispatch For Fleets $3.00 | /quote-dispatch |
 
 All three run **Monday–Friday, 07:00–21:00, account time zone ET**, on
 **Manual CPC**, targeting the **20 GBP metros** (canonical
@@ -139,6 +139,16 @@ notes are the ones that stop a future run from re-litigating a decision
 that was already made and tested.
 
 ## UI gotchas that keep costing time
+
+- **Check the Network segment every run.** On 2026-10-19 Display and
+  Search Partners were found ON in both rigging campaigns, against the
+  blueprint: $150 in 30 days for 0 conversions. Campaigns → Segment →
+  "Network (with search partners)". Anything but Google Search should be
+  $0. Fix it in Campaign settings → Networks. The two checkboxes shift
+  position after the first click, so find them by label, not by coordinate.
+- The keyword table's Status column shows "Below first page bid (US$X)".
+  That is the fastest way to read the top-of-page gap without adding
+  columns.
 
 - Search terms path is `/aw/keywords/searchterms` — no hyphen. The
   hyphenated URL 404s.
