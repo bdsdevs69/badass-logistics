@@ -44,7 +44,12 @@ function industryPhrase(industry) {
   if (/auto|tool-and-die|tool and die/.test(i)) return 'automotive and tool-and-die';
   if (/semiconductor|silicon/.test(i)) return 'semiconductor and precision-tool';
   if (/aerospace|aviation|defense/.test(i)) return 'aerospace and defense';
-  if (/oil|petrochem|energy|lng|refin/.test(i)) return 'energy and petrochemical';
+  // A hybrid "ag & Bakken energy" (Fargo) used to fall into energy because
+  // that test runs first; when a string names both, the one it leads with wins.
+  if (/oil|petrochem|energy|lng|refin/.test(i)) {
+    const ag = i.search(/\bag\b|agriculture|food/);
+    return ag >= 0 && ag < i.search(/oil|petrochem|energy|lng|refin/) ? 'ag-equipment and food-processing' : 'energy and petrochemical';
+  }
   if (/steel|metal|foundry/.test(i)) return 'steel and metal-fabrication';
   if (/ag\b|agriculture|food/.test(i)) return 'ag-equipment and food-processing';
   if (/pharma|biotech|medical/.test(i)) return 'pharma and medical-device';

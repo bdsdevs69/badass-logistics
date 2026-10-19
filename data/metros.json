@@ -123,7 +123,7 @@
     { "rank": 117, "city": "Stockton",       "state": "CA", "region": "West",          "tier": 3, "status": "queued", "industry": "inland port & distribution" }
   ],
   "_detailNote": "PER-METRO SUBSTANCE, researched 2026-09-21. This is the matrix differentiation fix. A service x city page runs ~1,550 words and the only per-city input used to be the 4-word 'industry' string above (Omaha: 'rail & ag manufacturing'), which measured the four city matrices at 31-32% page-specific content against a 33% floor, with 86-88 of 113 pages under it. build-service-cities.js now reads these fields and each service frames them in its own words - see METRO_COPY there, and note that each service deliberately draws a DIFFERENT mix so the same facts do not produce the same sentences across four pages for one city. Every value is a verifiable public fact: named industrial districts and parks, the Class I railroads that actually serve the metro, real navigable freight water access, the dominant industrial building stock. An absent field means the research could not confirm it - 'port' is absent for inland metros by design; the 15 metros that had no 'stock' were filled 2026-10-19 from sourced research (CRE listings, NRHP/state historic records, port and economic-development pages), with single-listing figures such as clear heights deliberately left out. NEVER add an unverified fact here: it lands on four live pages per metro, and an unverifiable claim repeated across 88 metros is worse than a generic one. Metros with no entry keep their previous page output byte-for-byte.",
-  "_anchorsNote": "WAVE 3 SECTOR ANCHORS, researched 2026-10-19 (raw per-batch output in data/wave3-research/). detail[key].anchors = { health, research, print, datacenter, energy: [named real institutions/facilities], buildings: one sentence, grade: {sector: strong|some|none} }. lib/waves.js sector-matches the 7 specialty services on these grades; a grade with an empty list never counts. Anchors are named on pages as what EXISTS in the metro, never as clients. Removed before merge because not operating as of 2026-10-19: Intel Ohio One, Google West Memphis, Digital Realty Charlotte, Meta El Paso, Meta Montgomery, AWS Ridgeland, Duane Arnold; Savannah research (Gulfstream/Hyundai are plants, not labs). Many newspaper print plants closed 2023-2026 and were deliberately left out - print is the thinnest sector. Tissue, newsprint and specialty-paper mills (Mobile, Baton Rouge, Savannah, Spokane, Hartford) and an unconfirmed LA mill were also dropped from print: a paper mill is not a press shop.",
+  "_anchorsNote": "WAVE 3 SECTOR ANCHORS, researched 2026-10-19 (raw per-batch output in data/wave3-research/). detail[key].anchors = { health, research, print, datacenter, energy: [named real institutions/facilities], buildings: one sentence, grade: {sector: strong|some|none} }. lib/waves.js sector-matches the 7 specialty services on these grades; a grade with an empty list never counts. Anchors are named on pages as what EXISTS in the metro, never as clients. Removed before merge because not operating as of 2026-10-19: Intel Ohio One, Google West Memphis, Digital Realty Charlotte, Meta El Paso, Meta Montgomery, AWS Ridgeland, Duane Arnold; Savannah research (Gulfstream/Hyundai are plants, not labs). Many newspaper print plants closed 2023-2026 and were deliberately left out - print is the thinnest sector. Tissue, newsprint and specialty-paper mills (Mobile, Baton Rouge, Savannah, Spokane, Hartford) and an unconfirmed LA mill were also dropped from print: a paper mill is not a press shop. Reviewer pass 2026-10-19: print now means a facility that RUNS PRESSES. Containerboard/kraft/tissue mills and converting-only sheet plants were removed (IP Prattville, IP Cedar River, Smurfit Westrock Fernandina, IP Erie, GP Broadway, Greif Cincinnati, IP Buffalo and North KC sheet plants), which took Montgomery, Cedar Rapids, Jacksonville and Erie out of the press-movers wave.",
   "detail": {
     "Houston|TX": {
       "sectors": [
@@ -874,7 +874,6 @@
           "Kansas City National Security Campus"
         ],
         "print": [
-          "International Paper North Kansas City sheet plant",
           "Modern Litho Kansas City"
         ],
         "datacenter": [
@@ -1865,9 +1864,7 @@
           "Mayo Clinic Florida research",
           "University of North Florida"
         ],
-        "print": [
-          "Smurfit Westrock Fernandina Beach mill"
-        ],
+        "print": [],
         "datacenter": [
           "Cologix JAX1",
           "Flexential Jacksonville"
@@ -1880,7 +1877,7 @@
         "grade": {
           "health": "strong",
           "research": "some",
-          "print": "some",
+          "print": "none",
           "datacenter": "some",
           "energy": "some",
           "buildings": "strong"
@@ -2687,7 +2684,6 @@
           "GE Aerospace Evendale"
         ],
         "print": [
-          "Greif Cincinnati paperboard mill",
           "Smurfit Westrock Blue Ash plant"
         ],
         "datacenter": [
@@ -3789,8 +3785,7 @@
           "UB Jacobs School of Medicine"
         ],
         "print": [
-          "MOD-PAC paperboard packaging plant",
-          "International Paper Buffalo sheet plant"
+          "MOD-PAC paperboard packaging plant"
         ],
         "datacenter": [
           "Yahoo Lockport data center"
@@ -3938,9 +3933,7 @@
           "Gannon University",
           "Wabtec Erie locomotive plant"
         ],
-        "print": [
-          "International Paper Industrial Papers Erie"
-        ],
+        "print": [],
         "datacenter": [],
         "energy": [
           "Penelec (FirstEnergy)",
@@ -3950,7 +3943,7 @@
         "grade": {
           "health": "some",
           "research": "some",
-          "print": "some",
+          "print": "none",
           "datacenter": "none",
           "energy": "some",
           "buildings": "some"
@@ -4430,9 +4423,7 @@
           "Collins Aerospace Cedar Rapids",
           "Coe College"
         ],
-        "print": [
-          "International Paper Cedar River Mill"
-        ],
+        "print": [],
         "datacenter": [
           "QTS Cedar Rapids campus (Big Cedar Industrial Center)"
         ],
@@ -4443,7 +4434,7 @@
         "grade": {
           "health": "some",
           "research": "some",
-          "print": "strong",
+          "print": "none",
           "datacenter": "strong",
           "energy": "some",
           "buildings": "some"
@@ -4482,7 +4473,6 @@
           "University of Wisconsin-Green Bay"
         ],
         "print": [
-          "Georgia-Pacific Broadway Mill",
           "Green Bay Packaging mill"
         ],
         "datacenter": [],
@@ -4622,9 +4612,7 @@
           "Maxwell Air Force Base",
           "Alabama State University"
         ],
-        "print": [
-          "International Paper Prattville Mill"
-        ],
+        "print": [],
         "datacenter": [],
         "energy": [
           "Alabama Power"
@@ -4633,7 +4621,7 @@
         "grade": {
           "health": "some",
           "research": "some",
-          "print": "some",
+          "print": "none",
           "datacenter": "none",
           "energy": "some",
           "buildings": "some"
