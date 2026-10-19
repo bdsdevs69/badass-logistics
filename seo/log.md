@@ -1395,3 +1395,25 @@ recommendation put to Sam, **approved as recommended**:
   dispatch pages.
 - `what-is-drayage`: the "$75 to several hundred dollars per container per day" figures are out (x2).
   build-blog.js now has no dollar figures left.
+
+## 2026-10-19 — daily health check (Mon)
+
+**Gap:** no scheduled run has fired since 2026-09-28 (Mac asleep/off?) — 3 weeks with no publishing,
+upgrade or watchdog runs. Last commit is still the 2026-09-27 trailer-selector work.
+
+**Absorption (90d):** all 12 clusters GREEN, 0 pending. cnc × city 27% (was AMBER 36% on 09-27, now
+recovered) · plant × city 28% · city hubs 13% · everything else ≤11%. SITE 1046 URLs / 9% dead
+(the 347-page service × city expansion has fully absorbed). No RED.
+
+**Live check:** the 09-27 run's 8 URLs (5 rewritten posts, trailer-selector, dispatcher-vs-broker,
+drayage) all 200 direct, in sitemap.xml + llms.txt; live trailer-selector has 0 "superload".
+**Ping:** nothing owed.
+
+**AEO (Mon):** llms.txt "retired in 2026" = 2, robots AI bots = 3 — live.
+- "What does Badass Logistics do?" → "one-stop shop for industrial rigging, heavy haul transportation,
+  truck dispatching, and freight moving … 48 locations" — **cited, but described as heavy haul + 48 locations (stale)**.
+- "Is Badass Logistics a heavy haul company?" → "Yes … specializes in moving oversized and overweight freight" — **still heavy haul**.
+- "Best industrial rigging companies / who moves MRI machines" → **not cited** (Clancy, Pyramid, Meyer, Eagle, Viking…).
+- Top result for both brand queries is the **GitHub repo** bdsdevs69/badass-logistics, whose description still
+  reads "rigging, heavy haul, dispatch & freight moving". That is a cheap, high-leverage fix for Sam (repo About text).
+  Homepage meta is correct (88 locations, rigging-first); the engine is using older crawl data plus the repo.
