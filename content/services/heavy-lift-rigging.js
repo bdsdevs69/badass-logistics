@@ -105,6 +105,10 @@ module.exports = {
     { q: 'Can you rig heavy equipment inside a plant that stays running?', a: 'Yes. Heavy lift rigging is built for exactly that — moving loads on jacks, gantries, and skid track through aisles and around live equipment, with the path and timing planned around what keeps running nearby.' },
   ],
   faqTitle: 'Heavy lift rigging FAQ',
+  metrosSentinel: 'HL_METROS',
+  metrosTag: "heavy lifts by metro",
+  metrosH2: "Where we jack, skid, and gantry",
+  metrosIntro: "Hydraulic gantry lifts, jacking and cribbing, and skidding in the 50 largest industrial metros we cover \u2014 planned from the load data and set by our crew.",
   related: ['rigging', 'crane-services', 'transformer-generator-rigging', 'machinery-moving', 'plant-relocation', 'millwright-services'],
   guides: [
     ['jacking-and-skidding-explained', 'Jacking &amp; Skidding Explained'],

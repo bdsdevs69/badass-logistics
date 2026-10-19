@@ -39,6 +39,14 @@ const SERVICES = {
   'machinery-removal':          { label: 'machinery removal', anchor: 'Machinery Removal' },
   'crane-services':             { label: 'crane and rigging services', anchor: 'Crane &amp; Rigging Services' },
   'forklift-loading-unloading': { label: 'machinery loading and unloading', anchor: 'Machinery Loading &amp; Unloading' },
+  // wave 3, 2026-10-19
+  'heavy-lift-rigging':            { label: 'heavy lift rigging', anchor: 'Heavy Lift Rigging' },
+  'hvac-chiller-rigging':          { label: 'chiller and HVAC rigging', anchor: 'Chiller &amp; HVAC Rigging' },
+  'transformer-generator-rigging': { label: 'transformer and generator rigging', anchor: 'Transformer &amp; Generator Rigging' },
+  'mri-medical-equipment-rigging': { label: 'MRI and medical equipment rigging', anchor: 'MRI &amp; Medical Equipment Rigging' },
+  'lab-equipment-movers':          { label: 'lab equipment moving', anchor: 'Lab Equipment Movers' },
+  'printing-press-movers':         { label: 'printing press moving', anchor: 'Printing Press Movers' },
+  'data-center-rigging':           { label: 'data center rigging', anchor: 'Data Center Rigging' },
 };
 
 const cities = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/service-cities.json'), 'utf8'));
@@ -68,11 +76,15 @@ function nearest(target, pool, n = 6) {
       let score;
       if (m.state.toUpperCase() === tm.state.toUpperCase()) score = 0;
       else if (m.region === tm.region) score = 1;
-      else return null;
+      else score = 2;
       return { c, m, score };
     })
     .filter(Boolean)
     .sort((a, b) => a.score - b.score || a.m.rank - b.m.rank)
+    // Out-of-region peers only fill in when the region can't supply two —
+    // the sector-matched wave-3 services (2026-10-19) are sparse by design,
+    // so a press-movers page in Green Bay may have no regional sibling.
+    .filter((x, i, all) => x.score < 2 || all.filter(y => y.score < 2).length < 2)
     .slice(0, n)
     .map(x => x.c);
 }
@@ -110,6 +122,8 @@ for (const [service, svc] of Object.entries(SERVICES)) {
 
     const peers = nearest(target, pool, 6);
     if (peers.length < 2) { noPeers++; continue; }
+    const tmeta = metaOf.get(`${target.city.toLowerCase()}|${target.state.toUpperCase()}`);
+    const regional = peers.every(p => { const m = metaOf.get(`${p.city.toLowerCase()}|${p.state.toUpperCase()}`); return m && tmeta && (m.state.toUpperCase() === tmeta.state.toUpperCase() || m.region === tmeta.region); });
 
     const links = peers.map(p =>
       `<a href="${p.url}">${svc.anchor} in ${p.city}, ${p.state}</a>`
@@ -123,8 +137,8 @@ for (const [service, svc] of Object.entries(SERVICES)) {
 `<section class="bg-paper" style="border-top:3px solid var(--ink);border-bottom:3px solid var(--ink);"><div class="wrap">
   ${S}
   <span class="section-tag hand">nearby coverage</span>
-  <h2 class="section-title">We work the markets around ${target.city}</h2>
-  <p class="section-intro">${intro(target, svc, peers)}</p>
+  <h2 class="section-title">${regional ? `We work the markets around ${target.city}` : `Other ${svc.label} markets we cover`}</h2>
+  <p class="section-intro">${regional ? intro(target, svc, peers) : `${svc.label.charAt(0).toUpperCase() + svc.label.slice(1)} is a specialist service, so we run it where the sector is concentrated. Outside ${target.city}, the largest of those markets are:`}</p>
   <div class="tt-grid">
     ${links}${hubExists ? `\n    <a href="${stateHub}"><strong>All ${target.state} coverage →</strong></a>` : ''}
   </div>

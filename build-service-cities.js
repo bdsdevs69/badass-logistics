@@ -332,6 +332,7 @@ const WAVE2 = [['millwright-services','millwright services'],['machinery-removal
 function siblingMesh(serviceSlug, svc, city, slug, key) {
   const sibs = CROSS_ORDER.filter(s => s !== serviceSlug);
   const w2 = WAVE2.filter(([s]) => s !== serviceSlug && inWave(s, key));
+  const w3 = require('./lib/wave3-copy').WAVE3.filter(([s]) => s !== serviceSlug && inWave(s, key));
   const cards = sibs.map(s => {
     const x = CROSS[s];
     const variants = x.anchors(city);
@@ -351,7 +352,8 @@ function siblingMesh(serviceSlug, svc, city, slug, key) {
 ${cards}
   </div>
   <p style="margin-top:22px;font-weight:600;">In ${city} we also run ${inlineList}, plus <a href="/services/project-freight" style="color:var(--yellow-deep);text-decoration:underline;">project freight</a> for the jobs we rig &mdash; or see <a href="/locations/${slug}" style="color:var(--yellow-deep);text-decoration:underline;">every service we offer in ${city}</a>.</p>${w2.length ? `
-  <p style="margin-top:12px;font-weight:600;">The same ${city} crew also handles ${oxford(w2.map(([s, label]) => `<a href="/services/${s}/${slug}" style="color:var(--yellow-deep);text-decoration:underline;">${label}</a>`))}.</p>` : ''}
+  <p style="margin-top:12px;font-weight:600;">The same ${city} crew also handles ${oxford(w2.map(([s, label]) => `<a href="/services/${s}/${slug}" style="color:var(--yellow-deep);text-decoration:underline;">${label}</a>`))}.</p>` : ''}${w3.length ? `
+  <p style="margin-top:12px;font-weight:600;">Specialty rigging in ${city}: ${oxford(w3.map(([s, label]) => `<a href="/services/${s}/${slug}" style="color:var(--yellow-deep);text-decoration:underline;">${label}</a>`))}.</p>` : ''}
 </div></section>`;
 }
 
@@ -406,6 +408,8 @@ const oxford = (a, conj = 'and') => {
   return `${x.slice(0, -1).join(', ')}, ${conj} ${x.slice(-1)}`;
 };
 // Drop a researched sentence into the middle of one of ours without a stutter.
+// Lower-case a service name for mid-sentence use without turning MRI into "mri".
+const lc = (s) => (s || '').toLowerCase().replace(/\b(mri|hvac|cnc|ups|ct|pet)\b/g, m => m.toUpperCase());
 const lower1 = (s) => (s ? s.charAt(0).toLowerCase() + s.slice(1) : '');
 const trimDot = (s) => (s || '').replace(/\.\s*$/, '');
 // A slot only renders when it has enough real material to be worth a paragraph.
@@ -606,6 +610,22 @@ function metroSlot(serviceSlug, slot, c) {
   return txt && txt.trim() ? txt.trim() : '';
 }
 function industrySection(svc, c, serviceSlug) {
+  // Wave-3 services bring their own section: "{city}'s plants" reads wrong on
+  // a hospital, a lab, or a data hall.
+  if (svc.eqSection) {
+    const e = svc.eqSection(c);
+    const floorTxt = metroSlot(serviceSlug, 'floor', c);
+    return `
+<section class="notes-bg">
+  <span class="bgnote" style="top:10%;right:4%;transform:rotate(-4deg)">${e.tag.toUpperCase()} ✓</span>
+  <div class="wrap">
+  <span class="section-tag hand">${e.tag}</span>
+  <h2 class="section-title">${e.h2}</h2>
+  <p class="section-intro">${e.intro}</p>
+  <div class="chip-row">${e.chips.map(x => `<span>${x}</span>`).join('')}</div>${floorTxt ? `
+  <div class="prose" style="margin-top:22px;"><p>${floorTxt}</p></div>` : ''}
+</div></section>`;
+  }
   const prof = INDUSTRY_PROFILE[c.angle] || INDUSTRY_PROFILE['manufacturing'];
   const lead = c.metro && c.metro.industry ? `${c.city}'s industrial base — ${c.metro.industry} —` : `${c.city}'s ${c.angle} base`;
   const floor = metroSlot(serviceSlug, 'floor', c);
@@ -642,7 +662,7 @@ const RIG_TYPE_PITCH = {
   'hvac-chiller-rigging': 'chillers, boilers, rooftop units, cooling towers',
   'transformer-generator-rigging': 'transformers, gensets, and switchgear',
 };
-function rigTypes(serviceSlug, city, CS) {
+function rigTypes(serviceSlug, city, CS, slug, key) {
   const items = inFamily('rigging').filter(x => x.slug !== 'rigging' && x.slug !== serviceSlug);
   return `
 <section class="notes-bg">
@@ -652,7 +672,7 @@ function rigTypes(serviceSlug, city, CS) {
   <h2 class="section-title">More rigging we do in ${city}</h2>
   <p class="section-intro">The same ${city} crews handle every kind of industrial rigging. If your job looks more like one of these, start here:</p>
   <div class="type-grid">
-${items.map(x => `    <a href="/services/${x.slug}"><span class="k">// ${RIG_TYPE_PITCH[x.slug] || x.short.toLowerCase()}</span><h3>${x.label}</h3></a>`).join('\n')}
+${items.map(x => `    <a href="/services/${x.slug}${key && inWave(x.slug, key) ? `/${slug}` : ''}"><span class="k">// ${RIG_TYPE_PITCH[x.slug] || x.short.toLowerCase()}</span><h3>${x.label}</h3></a>`).join('\n')}
   </div>
   <p style="margin-top:20px;font-weight:600;">Running a trucking fleet out of ${city}? See <a href="/services/truck-dispatch" style="color:var(--yellow-deep);text-decoration:underline;">truck dispatch for fleets of 4+ trucks</a>.</p>
 </div></section>`;
@@ -683,13 +703,13 @@ function page(serviceSlug, svc, loc, metro, hubStates) {
   // 9,979 impressions and 4 non-brand clicks. Each service now leads with the
   // phrase its own queries actually use.
   const desc = svc.descFn ? svc.descFn(CS) : `${svc.name} in ${CS} — surveyed, rigged, moved, and re-leveled to spec by one accountable crew. Same-day quotes: (307) 284-1332.`;
-  const svcSchema = {"@context":"https://schema.org","@type":"Service","serviceType":svc.serviceType,"areaServed":{"@type":"City","name":CS},"provider":{"@type":"LocalBusiness","@id":`${DOMAIN}/#organization`,"name":site.brand,"telephone":"+1-307-284-1332","url":`${DOMAIN}/`},"description":`${site.brand} provides ${svc.serviceType.toLowerCase()} across ${CS} and the surrounding metro.`};
+  const svcSchema = {"@context":"https://schema.org","@type":"Service","serviceType":svc.serviceType,"areaServed":{"@type":"City","name":CS},"provider":{"@type":"LocalBusiness","@id":`${DOMAIN}/#organization`,"name":site.brand,"telephone":"+1-307-284-1332","url":`${DOMAIN}/`},"description":`${site.brand} provides ${lc(svc.serviceType)} across ${CS} and the surrounding metro.`};
   const bcItems = [{"@type":"ListItem","position":1,"name":"Home","item":`${DOMAIN}/`},{"@type":"ListItem","position":2,"name":svc.name,"item":`${DOMAIN}/services/${serviceSlug}`}];
   if (hasHub) bcItems.push({"@type":"ListItem","position":3,"name":c.stName,"item":`${DOMAIN}/services/${serviceSlug}/${stSlug}`});
   bcItems.push({"@type":"ListItem","position":hasHub?4:3,"name":CS,"item":url});
   const breadcrumb = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":bcItems};
   const faqPairs = svc.faq(c).slice();
-  if (serviceSlug !== 'cnc-machine-movers') faqPairs.splice(2, 0, [`How much do ${svc.cardNoun} cost in ${city}?`, `There is no flat rate for ${svc.serviceType.toLowerCase()} — the price comes from the equipment, the access at both ends, the crew and gear, distance, and setting work. Send the equipment list and both sites and we'll quote your ${city} job fast, usually the same day.`]);
+  if (serviceSlug !== 'cnc-machine-movers') faqPairs.splice(2, 0, [`How much do ${svc.cardNoun} cost in ${city}?`, `There is no flat rate for ${lc(svc.serviceType)} — the price comes from the equipment, the access at both ends, the crew and gear, distance, and setting work. Send the equipment list and both sites and we'll quote your ${city} job fast, usually the same day.`]);
   // One metro-specific FAQ per page, from the researched data. This slot uses
   // fields that are filled for every live metro, so it lifts the pages whose
   // `stock` research came back empty too.
@@ -760,7 +780,7 @@ ${NAV}
 {"@context":"https://schema.org","@type":"WebPage","url":"${url}","name":"${title}","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".answer-box"]}}
 </script>
 <section><div class="wrap prose">
-  <div class="answer-box"><p><strong>Quick answer:</strong> ${site.brand} provides ${svc.serviceType.toLowerCase()} in ${CS} and the surrounding metro. ${svc.snippet} Our crews work across ${city} and nearby ${c.stName} metros, and moves between facilities run as project freight under the same plan — usually quoted the same day. Call (307) 284-1332.</p></div>
+  <div class="answer-box"><p><strong>Quick answer:</strong> ${site.brand} provides ${lc(svc.serviceType)} in ${CS} and the surrounding metro. ${svc.snippet} Our crews work across ${city} and nearby ${c.stName} metros, and moves between facilities run as project freight under the same plan — usually quoted the same day. Call (307) 284-1332.</p></div>
   <h2>${svc.introH2(c)}</h2>
   ${svc.introPs(c).map(p=>`<p>${p}</p>`).join('\n  ')}${metroSlot(serviceSlug, 'base', c) ? `
   <p>${metroSlot(serviceSlug, 'base', c)}</p>` : ''}
@@ -789,12 +809,12 @@ ${industrySection(svc, c, serviceSlug)}
   <span class="bgnote" style="bottom:12%;left:4%;transform:rotate(4deg)">SAME-DAY QUOTE</span>
   <div class="wrap prose">
   <span class="section-tag hand">how we quote</span>
-  <h2>How we price a ${city} ${svc.quote.toLowerCase()} job</h2>
-  <p>Every ${svc.serviceType.toLowerCase()} job in ${CS} is quoted from the actual work, not a rate sheet. These are the things that move the number — send them with your request and you'll get a real quote back fast:</p>
+  <h2>How we price a ${city} ${lc(svc.quote)} job</h2>
+  <p>Every ${lc(svc.serviceType)} job in ${CS} is quoted from the actual work, not a rate sheet. These are the things that move the number — send them with your request and you'll get a real quote back fast:</p>
   <ul class="checklist" style="margin-bottom:18px;">${(svc.quoteFactors||[]).map(f=>`<li><span>${f}</span></li>`).join('')}</ul>
   <p>Photos of the equipment, its nameplate, and the path out of the building save a site visit on smaller ${city} jobs. For bigger moves we walk both sites before we price anything.</p>
 </div></section>
-${rigTypes(serviceSlug, city, CS)}
+${rigTypes(serviceSlug, city, CS, slug, `${city}|${state}`)}
 
 <section><div class="wrap">
   <span class="section-tag hand">on the map</span>
@@ -820,7 +840,7 @@ ${nearbyMetros.length ? `
 <section class="bg-paper" style="border-top:3px solid var(--ink);border-bottom:3px solid var(--ink);"><div class="wrap">
   <span class="section-tag hand">more ${c.stName} coverage</span>
   <h2 class="section-title">${svc.name} across ${c.stName}</h2>
-  <p class="section-intro">We run ${svc.serviceType.toLowerCase()} in metros across ${c.stName} — pick the nearest crew:</p>
+  <p class="section-intro">We run ${lc(svc.serviceType)} in metros across ${c.stName} — pick the nearest crew:</p>
   <div class="grid-services" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:22px;">
     ${nearbyMetros.map(m=>`<a class="svc-card" href="/services/${serviceSlug}/${citySlug(m.city,m.state)}"><div class="num">// ${m.state}</div><h3>${m.city}</h3><span class="more">${m.city} ${svc.cardNoun} →</span></a>`).join('\n    ')}
   </div>${hasHub?`
@@ -850,7 +870,7 @@ ${(CITY_GUIDES[serviceSlug]||[]).length ? `
 </div>
 
 <div class="cta-band"><div class="wrap" style="padding-top:56px;padding-bottom:56px;text-align:center;">
-  <h2>Need ${svc.name.toLowerCase()} in ${city}?</h2>
+  <h2>Need ${lc(svc.name)} in ${city}?</h2>
   <p>Tell us what's moving and where. We'll route the nearest crew and quote it fast.</p>
   <a class="btn dark" href="/contact">Get a ${city} ${svc.quote} Quote</a>
 </div></div>
@@ -877,10 +897,10 @@ function statePage(serviceSlug, svc, st, cityMs) {
   // Tulsa) — pure drag on a query the city page wins. City names stay on the
   // cards and in the "which cities" FAQ, where they are navigation.
   const desc = `${svc.name} anywhere in ${stName} — statewide, through a network of 88 locations. Rigged, moved, and re-leveled to spec. Same-day quotes.`;
-  const svcSchema = {"@context":"https://schema.org","@type":"Service","serviceType":svc.serviceType,"areaServed":{"@type":"State","name":stName},"provider":{"@type":"LocalBusiness","@id":`${DOMAIN}/#organization`,"name":site.brand,"telephone":"+1-307-284-1332","url":`${DOMAIN}/`},"description":`${site.brand} provides ${svc.serviceType.toLowerCase()} across ${stName}.`};
+  const svcSchema = {"@context":"https://schema.org","@type":"Service","serviceType":svc.serviceType,"areaServed":{"@type":"State","name":stName},"provider":{"@type":"LocalBusiness","@id":`${DOMAIN}/#organization`,"name":site.brand,"telephone":"+1-307-284-1332","url":`${DOMAIN}/`},"description":`${site.brand} provides ${lc(svc.serviceType)} across ${stName}.`};
   const breadcrumb = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":`${DOMAIN}/`},{"@type":"ListItem","position":2,"name":svc.name,"item":`${DOMAIN}/services/${serviceSlug}`},{"@type":"ListItem","position":3,"name":stName,"item":url}]};
   const faqPairs = [
-    [`Do you provide ${svc.name.toLowerCase()} across ${stName}?`,`Yes — ${svc.serviceType.toLowerCase()} anywhere in ${stName}, backed by a nationwide network of 88 locations. <a href="/contact">Get a quote →</a>`],
+    [`Do you provide ${lc(svc.name)} across ${stName}?`,`Yes — ${lc(svc.serviceType)} anywhere in ${stName}, backed by a nationwide network of 88 locations. <a href="/contact">Get a quote →</a>`],
     [`Which ${stName} cities do you cover?`,`We run ${svc.tag} in ${nameList}, and reach the rest of ${stName} through our nationwide network. Pick your metro below for a local page.`],
     [`Can you move equipment between ${stName} facilities?`,`Yes — equipment is rigged out, crated or prepped, moved as project freight through our licensed broker and carrier partners, and set by the same crew at the destination.`],
   ];
@@ -940,7 +960,7 @@ ${NAV}
 
 <section><div class="wrap prose">
   <h2>${svc.serviceType} statewide in ${stName}</h2>
-  <p>${stName}'s industrial base runs on machines that have to move — presses, machining centers, production lines, and the plants that house them. Badass Logistics provides ${svc.serviceType.toLowerCase()} statewide — the metros below each have their own local page — and reaches every other corner of ${stName} through a nationwide network of 88 locations. One crew plans the lift, protects the floors, and sets the load to spec — and when equipment has to travel, the same team runs it as <a href="/services/project-freight">project freight</a>, so a ${stName} move never gets passed between a rigger, a trucking company, and an installer.</p>
+  <p>${stName}'s industrial base runs on machines that have to move — presses, machining centers, production lines, and the plants that house them. Badass Logistics provides ${lc(svc.serviceType)} statewide — the metros below each have their own local page — and reaches every other corner of ${stName} through a nationwide network of 88 locations. One crew plans the lift, protects the floors, and sets the load to spec — and when equipment has to travel, the same team runs it as <a href="/services/project-freight">project freight</a>, so a ${stName} move never gets passed between a rigger, a trucking company, and an installer.</p>
   <p>Work across ${stName} runs the ${ix} corridors between its industrial metros. Single machines, production lines, and full plant relocations all start the same way: a site survey, a documented plan, and a schedule built around your production calendar — then <a href="/services/rigging">rigging</a>, the move, and the reset handled by one crew.</p>
 </div></section>
 
@@ -962,7 +982,7 @@ ${cards}
 </div></section>
 
 <div class="cta-band"><div class="wrap" style="padding-top:56px;padding-bottom:56px;text-align:center;">
-  <h2>Need ${svc.name.toLowerCase()} in ${stName}?</h2>
+  <h2>Need ${lc(svc.name)} in ${stName}?</h2>
   <p>Tell us what's moving and where. We'll route the nearest crew and quote it fast.</p>
   <a class="btn dark" href="/contact">Get a ${stName} ${svc.quote} Quote</a>
 </div></div>
@@ -971,6 +991,14 @@ ${FOOTER_FOR(`services/${serviceSlug}/${stSlug}.html`)}
 </body>
 </html>`;
 }
+
+// ---------- WAVE 3 (2026-10-19) — the 7 specialty services ----------
+// Their copy reads the researched `anchors` field and lives in its own file;
+// merged here so the build loop below treats all 15 services the same way.
+const W3 = require('./lib/wave3-copy');
+Object.assign(SERVICES, W3.SERVICES);
+Object.assign(METRO_COPY, W3.METRO_COPY);
+Object.assign(CITY_GUIDES, W3.CITY_GUIDES);
 
 // ---------- WAVES (which service × which metros) ----------
 const TOP24 = ALL_KEYS.slice(); // ordered by locations.json; we slice per-service below

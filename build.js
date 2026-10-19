@@ -118,7 +118,7 @@ function verify() {
   check(toStub.size === 0, `links to retired URLs: ${toStub.size}`, [...toStub].map(([u, c]) => `${c}x ${u}`));
 
   // 3. every pillar with a city matrix still carries its city cards
-  for (const [svc, min] of [['machinery-moving', 50], ['rigging', 50], ['plant-relocation', 50], ['cnc-machine-movers', 50], ['millwright-services', 50], ['machinery-removal', 50], ['crane-services', 40], ['forklift-loading-unloading', 40]]) {
+  for (const [svc, min] of [['machinery-moving', 50], ['rigging', 50], ['plant-relocation', 50], ['cnc-machine-movers', 50], ['millwright-services', 50], ['machinery-removal', 50], ['crane-services', 40], ['heavy-lift-rigging', 45], ['hvac-chiller-rigging', 35], ['transformer-generator-rigging', 30], ['mri-medical-equipment-rigging', 25], ['lab-equipment-movers', 20], ['printing-press-movers', 18], ['data-center-rigging', 18], ['forklift-loading-unloading', 40]]) {
     const pillar = path.join(ROOT, `services/${svc}.html`);
     const ph = fs.existsSync(pillar) ? read(pillar) : '';
     const n = new Set([...ph.matchAll(new RegExp(`href="(?:/services/)?${svc}/([a-z-]+)"`, 'g'))].map(m => m[1])).size;

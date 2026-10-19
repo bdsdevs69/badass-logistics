@@ -82,6 +82,10 @@ module.exports = {
     { q: 'How much does it cost to move a printing press?', a: 'It depends on the press size and number of units, access at both sites, distance, and technician time. Send the model and both sites and we\'ll quote the rigging and freight.' },
   ],
   faqTitle: 'Printing press moving FAQ',
+  metrosSentinel: 'PP_METROS',
+  metrosTag: "press moves by metro",
+  metrosH2: "Where we move printing presses",
+  metrosIntro: "Press and bindery moves in the metros we cover with a working print, packaging, and converting base.",
   related: ['machinery-moving', 'plant-relocation', 'millwright-services', 'crating-packing', 'machinery-removal'],
   guides: [
     ['how-to-move-a-printing-press', 'How to Move a Printing Press'],

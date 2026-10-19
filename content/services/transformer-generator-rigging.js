@@ -89,6 +89,10 @@ module.exports = {
     { q: 'Do you fill transformers with oil or do testing?', a: 'No. Oil filling, nitrogen handling, dressing, testing, and connections are done by the manufacturer or specialized contractors. We set the equipment ready for their work.' },
   ],
   faqTitle: 'Transformer &amp; generator rigging FAQ',
+  metrosSentinel: 'TG_METROS',
+  metrosTag: "transformer rigging by metro",
+  metrosH2: "Where we set transformers and generators",
+  metrosIntro: "Transformer, generator, and switchgear setting in the metros we cover with the heaviest utility, generation, and data center build-out.",
   related: ['heavy-lift-rigging', 'crane-services', 'data-center-rigging', 'project-freight'],
   guides: [
     ['jacking-and-skidding-explained', 'Jacking &amp; Skidding Explained'],

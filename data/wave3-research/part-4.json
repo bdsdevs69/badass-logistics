@@ -1,0 +1,200 @@
+{
+  "Knoxville|TN": {
+    "health": ["University of Tennessee Medical Center", "Covenant Health Fort Sanders Regional", "East Tennessee Children's Hospital"],
+    "research": ["Oak Ridge National Laboratory", "University of Tennessee, Knoxville", "Y-12 National Security Complex"],
+    "print": [],
+    "datacenter": ["TenHats Knoxville data center", "Infinity Data Center (Webservio)"],
+    "energy": ["Tennessee Valley Authority (headquartered in Knoxville)", "Knoxville Utilities Board", "TVA Kingston Fossil Plant"],
+    "buildings": "UT's main campus and medical center, the downtown TVA towers and Gay Street office core, Oak Ridge lab buildings and McGhee Tyson Airport carry most of the large central plant.",
+    "grade": { "health": "some", "research": "strong", "print": "none", "datacenter": "some", "energy": "strong", "buildings": "some" }
+  },
+  "Akron|OH": {
+    "health": ["Cleveland Clinic Akron General", "Summa Health Akron Campus", "Akron Children's Hospital"],
+    "research": ["University of Akron polymer science", "Goodyear global HQ and Innovation Center", "Bridgestone Americas Technical Center"],
+    "print": [],
+    "datacenter": ["Ark Data Centers Akron campus", "Cogent Data Center Akron"],
+    "energy": ["FirstEnergy (headquartered in Akron)", "Ohio Edison"],
+    "buildings": "The Akron Children's, Summa and Akron General campuses, the University of Akron, Goodyear's East Akron HQ and downtown offices carry the large HVAC plant.",
+    "grade": { "health": "some", "research": "some", "print": "none", "datacenter": "some", "energy": "some", "buildings": "some" }
+  },
+  "Fort Wayne|IN": {
+    "health": ["Parkview Regional Medical Center", "Lutheran Hospital of Indiana", "Dupont Hospital"],
+    "research": ["Purdue University Fort Wayne", "BAE Systems Fort Wayne", "L3Harris Fort Wayne"],
+    "print": [],
+    "datacenter": ["Google Fort Wayne data center campus"],
+    "energy": ["Indiana Michigan Power (AEP)"],
+    "buildings": "Parkview and Lutheran hospital campuses, downtown towers around the Grand Wayne Center, Fort Wayne International Airport and large plants like GM Fort Wayne Assembly carry big HVAC loads.",
+    "grade": { "health": "some", "research": "some", "print": "none", "datacenter": "strong", "energy": "some", "buildings": "some" }
+  },
+  "Lansing|MI": {
+    "health": ["University of Michigan Health-Sparrow Lansing", "McLaren Greater Lansing"],
+    "research": ["Michigan State University", "Facility for Rare Isotope Beams (FRIB)"],
+    "print": [],
+    "datacenter": [],
+    "energy": ["Lansing Board of Water & Light", "Consumers Energy", "BWL Delta Energy Park"],
+    "buildings": "The Michigan State Capitol complex and state office buildings, the MSU campus with its central power plant, and the Sparrow and McLaren hospital campuses carry the large HVAC plant.",
+    "grade": { "health": "some", "research": "strong", "print": "none", "datacenter": "none", "energy": "some", "buildings": "some" }
+  },
+  "Buffalo|NY": {
+    "health": ["Buffalo Niagara Medical Campus", "Kaleida Health Buffalo General", "Roswell Park Comprehensive Cancer Center", "Erie County Medical Center"],
+    "research": ["University at Buffalo", "Roswell Park Comprehensive Cancer Center", "UB Jacobs School of Medicine"],
+    "print": ["MOD-PAC paperboard packaging plant", "International Paper Buffalo sheet plant"],
+    "datacenter": ["Yahoo Lockport data center"],
+    "energy": ["National Grid", "NYSEG", "NYPA Niagara Power Project"],
+    "buildings": "Downtown Buffalo towers, the Buffalo Niagara Medical Campus, UB's North and South campuses, Buffalo Niagara International Airport and the Seneca casinos carry large central plants.",
+    "grade": { "health": "strong", "research": "strong", "print": "some", "datacenter": "some", "energy": "strong", "buildings": "strong" }
+  },
+  "Hartford|CT": {
+    "health": ["Hartford Hospital", "Saint Francis Hospital (Trinity Health of New England)", "UConn Health (Farmington)", "Connecticut Children's"],
+    "research": ["UConn Health", "Jackson Laboratory for Genomic Medicine", "Pratt & Whitney East Hartford", "Trinity College"],
+    "print": ["Ahlstrom Windsor Locks specialty paper mill"],
+    "datacenter": ["Lumen Hartford 1", "Cigna Windsor data center"],
+    "energy": ["Eversource Energy"],
+    "buildings": "Downtown Hartford's insurance towers, the State Capitol complex, Hartford Hospital and UConn Health campuses, and Bradley International Airport carry large central plants.",
+    "grade": { "health": "strong", "research": "some", "print": "some", "datacenter": "some", "energy": "some", "buildings": "strong" }
+  },
+  "Allentown|PA": {
+    "health": ["Lehigh Valley Hospital-Cedar Crest", "St. Luke's University Hospital Bethlehem"],
+    "research": ["Lehigh University", "Air Products global HQ"],
+    "print": [],
+    "datacenter": [],
+    "energy": ["PPL Electric Utilities (headquartered in Allentown)"],
+    "buildings": "The LVHN and St. Luke's hospital campuses, Lehigh University, downtown Allentown's PPL tower district and the Wind Creek Bethlehem casino carry the large HVAC plant.",
+    "grade": { "health": "some", "research": "some", "print": "none", "datacenter": "none", "energy": "some", "buildings": "some" }
+  },
+  "Erie|PA": {
+    "health": ["UPMC Hamot", "Saint Vincent Hospital (AHN)"],
+    "research": ["Penn State Behrend", "Gannon University", "Wabtec Erie locomotive plant"],
+    "print": ["International Paper Industrial Papers Erie"],
+    "datacenter": [],
+    "energy": ["Penelec (FirstEnergy)", "Wabtec Erie plant"],
+    "buildings": "UPMC Hamot and Saint Vincent hospital campuses, Gannon and Penn State Behrend, downtown Erie offices and the Presque Isle Downs casino carry the large HVAC plant.",
+    "grade": { "health": "some", "research": "some", "print": "some", "datacenter": "none", "energy": "some", "buildings": "some" }
+  },
+  "Richmond|VA": {
+    "health": ["VCU Medical Center", "Bon Secours Richmond", "HCA Chippenham Hospital"],
+    "research": ["Virginia Commonwealth University", "Virginia Bio+Tech Park", "University of Richmond"],
+    "print": [],
+    "datacenter": ["QTS Richmond campus", "Meta Henrico data center", "White Oak Technology Park"],
+    "energy": ["Dominion Energy (headquartered in Richmond)", "Chesterfield Power Station"],
+    "buildings": "Downtown Richmond's bank and Dominion towers, the Virginia Capitol complex, the VCU Health campus and Richmond International Airport carry large central plants.",
+    "grade": { "health": "strong", "research": "some", "print": "none", "datacenter": "strong", "energy": "strong", "buildings": "strong" }
+  },
+  "Tampa|FL": {
+    "health": ["Tampa General Hospital", "Moffitt Cancer Center", "BayCare St. Joseph's Hospital", "AdventHealth Tampa"],
+    "research": ["University of South Florida", "Moffitt Cancer Center research", "USF Research Park"],
+    "print": [],
+    "datacenter": ["Flexential Tampa data centers"],
+    "energy": ["Tampa Electric (TECO)", "Big Bend Power Station", "Duke Energy Florida"],
+    "buildings": "Downtown Tampa and Water Street towers, Tampa General on Davis Islands, USF's campus, Tampa International Airport and the Seminole Hard Rock casino carry large central plants.",
+    "grade": { "health": "strong", "research": "strong", "print": "none", "datacenter": "some", "energy": "some", "buildings": "strong" }
+  },
+  "Beaumont|TX": {
+    "health": ["Baptist Hospitals of Southeast Texas", "CHRISTUS Southeast Texas St. Elizabeth"],
+    "research": ["Lamar University"],
+    "print": [],
+    "datacenter": [],
+    "energy": ["Entergy Texas", "ExxonMobil Beaumont Refinery", "Motiva Port Arthur Refinery", "Valero Port Arthur Refinery"],
+    "buildings": "The Golden Triangle's refinery and petrochemical control buildings, the Baptist and St. Elizabeth hospital campuses and Lamar University carry most of the large HVAC plant.",
+    "grade": { "health": "some", "research": "some", "print": "none", "datacenter": "none", "energy": "strong", "buildings": "some" }
+  },
+  "Corpus Christi|TX": {
+    "health": ["CHRISTUS Spohn Hospital Corpus Christi-Shoreline", "Driscoll Children's Hospital"],
+    "research": ["Texas A&M University-Corpus Christi"],
+    "print": [],
+    "datacenter": [],
+    "energy": ["AEP Texas", "Flint Hills Resources Corpus Christi Refinery", "Valero Corpus Christi Refinery", "Cheniere Corpus Christi LNG"],
+    "buildings": "Refinery Row process and control buildings, the CHRISTUS Spohn and Driscoll hospital campuses, TAMU-CC and the downtown bayfront towers carry the large HVAC plant.",
+    "grade": { "health": "some", "research": "some", "print": "none", "datacenter": "none", "energy": "strong", "buildings": "some" }
+  },
+  "El Paso|TX": {
+    "health": ["University Medical Center of El Paso", "Texas Tech Health Sciences Center El Paso", "Las Palmas Del Sol Healthcare"],
+    "research": ["University of Texas at El Paso", "Texas Tech Health Sciences Center El Paso"],
+    "print": [],
+    "datacenter": ["Meta El Paso data center campus"],
+    "energy": ["El Paso Electric", "Marathon El Paso Refinery", "Newman Generating Station"],
+    "buildings": "UMC and the Texas Tech medical campus, UTEP, Fort Bliss, downtown El Paso towers and El Paso International Airport carry large central plants.",
+    "grade": { "health": "some", "research": "some", "print": "none", "datacenter": "strong", "energy": "some", "buildings": "some" }
+  },
+  "Reno|NV": {
+    "health": ["Renown Regional Medical Center", "Saint Mary's Regional Medical Center"],
+    "research": ["University of Nevada, Reno", "Desert Research Institute", "Tesla Gigafactory Nevada"],
+    "print": [],
+    "datacenter": ["Switch Citadel Campus (Tahoe Reno Industrial Center)", "Apple Reno data center"],
+    "energy": ["NV Energy", "Tracy Generating Station"],
+    "buildings": "Downtown Reno casino-resorts like the Eldorado, Silver Legacy and Peppermill, the Renown campus, UNR and Reno-Tahoe International Airport carry large central plants.",
+    "grade": { "health": "some", "research": "some", "print": "none", "datacenter": "strong", "energy": "some", "buildings": "strong" }
+  },
+  "Colorado Springs|CO": {
+    "health": ["UCHealth Memorial Hospital Central", "Penrose Hospital (CommonSpirit)", "Children's Hospital Colorado, Colorado Springs"],
+    "research": ["University of Colorado Colorado Springs", "Microchip Technology Colorado Springs fab", "U.S. Air Force Academy"],
+    "print": [],
+    "datacenter": ["Novva Colorado Springs data center", "T5 Data Centers Colorado Springs"],
+    "energy": ["Colorado Springs Utilities", "Ray Nixon Power Plant"],
+    "buildings": "The UCHealth Memorial and Penrose hospital campuses, the Air Force Academy, Peterson and Schriever space-force bases, and the Broadmoor resort carry large central plants.",
+    "grade": { "health": "some", "research": "some", "print": "none", "datacenter": "some", "energy": "some", "buildings": "some" }
+  },
+  "Ogden|UT": {
+    "health": ["Intermountain McKay-Dee Hospital", "Ogden Regional Medical Center"],
+    "research": ["Weber State University", "Hill Air Force Base", "Northrop Grumman Roy"],
+    "print": [],
+    "datacenter": ["WebNX Ogden data center", "Lumen Ogden 1"],
+    "energy": ["Rocky Mountain Power"],
+    "buildings": "Hill Air Force Base hangars and depot buildings, the McKay-Dee hospital campus, Weber State University and downtown Ogden offices carry the large HVAC plant.",
+    "grade": { "health": "some", "research": "some", "print": "none", "datacenter": "some", "energy": "some", "buildings": "some" }
+  },
+  "Davenport|IA": {
+    "health": ["MercyOne Genesis Medical Center", "UnityPoint Health-Trinity"],
+    "research": ["Rock Island Arsenal"],
+    "print": [],
+    "datacenter": [],
+    "energy": ["MidAmerican Energy", "Quad Cities Generating Station (Constellation)"],
+    "buildings": "The Genesis and Trinity hospital campuses, Rock Island Arsenal, John Deere's Moline headquarters and the riverfront casinos carry the large HVAC plant across the Quad Cities.",
+    "grade": { "health": "some", "research": "some", "print": "none", "datacenter": "none", "energy": "strong", "buildings": "some" }
+  },
+  "Cedar Rapids|IA": {
+    "health": ["UnityPoint Health-St. Luke's Hospital", "Mercy Medical Center Cedar Rapids"],
+    "research": ["Collins Aerospace Cedar Rapids", "Coe College"],
+    "print": ["International Paper Cedar River Mill"],
+    "datacenter": ["QTS Cedar Rapids campus (Big Cedar Industrial Center)"],
+    "energy": ["Alliant Energy", "Duane Arnold Energy Center"],
+    "buildings": "The St. Luke's and Mercy hospital campuses, Collins Aerospace's main campus, the big food-processing plants (Quaker, Cargill, ADM) and downtown offices carry the large HVAC plant.",
+    "grade": { "health": "some", "research": "some", "print": "strong", "datacenter": "strong", "energy": "some", "buildings": "some" }
+  },
+  "Green Bay|WI": {
+    "health": ["Bellin Hospital", "HSHS St. Vincent Hospital", "Aurora BayCare Medical Center"],
+    "research": ["University of Wisconsin-Green Bay"],
+    "print": ["Georgia-Pacific Broadway Mill", "Green Bay Packaging mill", "Procter & Gamble Green Bay plant"],
+    "datacenter": [],
+    "energy": ["Wisconsin Public Service"],
+    "buildings": "Lambeau Field and the Titletown district, the Bellin, St. Vincent and Aurora BayCare hospital campuses, and the paper mills along the Fox River carry the large HVAC plant.",
+    "grade": { "health": "some", "research": "some", "print": "strong", "datacenter": "none", "energy": "some", "buildings": "some" }
+  },
+  "South Bend|IN": {
+    "health": ["Beacon Memorial Hospital South Bend", "Saint Joseph Health System Mishawaka"],
+    "research": ["University of Notre Dame"],
+    "print": [],
+    "datacenter": ["AWS New Carlisle data center campus"],
+    "energy": ["Indiana Michigan Power (AEP)"],
+    "buildings": "Notre Dame's campus and stadium, the Memorial and Saint Joseph hospital campuses, the Four Winds South Bend casino and the AWS New Carlisle campus carry large central plants.",
+    "grade": { "health": "some", "research": "strong", "print": "none", "datacenter": "strong", "energy": "some", "buildings": "some" }
+  },
+  "Lexington|KY": {
+    "health": ["UK HealthCare Albert B. Chandler Hospital", "Baptist Health Lexington", "CHI Saint Joseph Health"],
+    "research": ["University of Kentucky", "Lexmark International HQ", "Toyota Motor Manufacturing Kentucky (Georgetown)"],
+    "print": [],
+    "datacenter": ["DartPoints Lexington data center campus"],
+    "energy": ["Kentucky Utilities (LG&E and KU)"],
+    "buildings": "The University of Kentucky campus and UK HealthCare hospitals, downtown Lexington towers, Rupp Arena, Blue Grass Airport and Toyota's Georgetown plant carry large central plants.",
+    "grade": { "health": "strong", "research": "strong", "print": "none", "datacenter": "some", "energy": "some", "buildings": "some" }
+  },
+  "Montgomery|AL": {
+    "health": ["Baptist Medical Center South", "Jackson Hospital"],
+    "research": ["Hyundai Motor Manufacturing Alabama", "Maxwell Air Force Base", "Alabama State University"],
+    "print": ["International Paper Prattville Mill"],
+    "datacenter": ["Meta Montgomery data center"],
+    "energy": ["Alabama Power"],
+    "buildings": "The Alabama State Capitol complex, Maxwell AFB, the Baptist South and Jackson hospital campuses, and the Hyundai assembly plant carry the large HVAC plant.",
+    "grade": { "health": "some", "research": "some", "print": "some", "datacenter": "strong", "energy": "some", "buildings": "some" }
+  }
+}

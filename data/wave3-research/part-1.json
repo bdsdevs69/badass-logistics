@@ -1,0 +1,200 @@
+{
+  "Los Angeles|CA": {
+    "health": ["Cedars-Sinai Medical Center", "UCLA Health Ronald Reagan Medical Center", "Keck Medicine of USC", "Kaiser Permanente Los Angeles Medical Center"],
+    "research": ["UCLA", "University of Southern California", "Caltech", "NASA Jet Propulsion Laboratory"],
+    "print": ["PABCO Paper Vernon mill"],
+    "datacenter": ["One Wilshire carrier hotel", "CoreSite Los Angeles campus", "Equinix LA1"],
+    "energy": ["Los Angeles Department of Water and Power", "Southern California Edison", "Chevron El Segundo Refinery", "Marathon Los Angeles Refinery"],
+    "buildings": "Downtown and Century City office towers, LAX terminals, and dense hospital and university campuses (Cedars-Sinai, UCLA, USC) carry large central chiller plants.",
+    "grade": { "health": "strong", "research": "strong", "print": "some", "datacenter": "strong", "energy": "strong", "buildings": "strong" }
+  },
+  "Bakersfield|CA": {
+    "health": ["Kern Medical", "Adventist Health Bakersfield", "Memorial Hospital (Dignity Health)"],
+    "research": [],
+    "print": [],
+    "datacenter": [],
+    "energy": ["Pacific Gas and Electric", "Kern River Oil Field", "Elk Hills Oil Field"],
+    "buildings": "Hospital campuses, Cal State Bakersfield, and oilfield-services offices make up a modest large-HVAC stock with few high-rises.",
+    "grade": { "health": "some", "research": "none", "print": "none", "datacenter": "none", "energy": "strong", "buildings": "some" }
+  },
+  "Sacramento|CA": {
+    "health": ["UC Davis Medical Center", "Sutter Medical Center Sacramento", "Mercy General Hospital (Dignity Health)", "Kaiser Permanente Roseville"],
+    "research": ["UC Davis", "Intel Folsom campus", "Sacramento State"],
+    "print": [],
+    "datacenter": ["NTT Sacramento data center campus", "Prime Data Centers McClellan campus"],
+    "energy": ["Sacramento Municipal Utility District (SMUD)", "Pacific Gas and Electric", "Cosumnes Power Plant"],
+    "buildings": "State Capitol office complex and state agency towers, downtown high-rises, UC Davis Health and Sutter campuses, and Sacramento International Airport carry large central plant.",
+    "grade": { "health": "strong", "research": "strong", "print": "none", "datacenter": "some", "energy": "some", "buildings": "strong" }
+  },
+  "Portland|OR": {
+    "health": ["Oregon Health & Science University (OHSU)", "Providence St. Vincent Medical Center", "Legacy Emanuel Medical Center"],
+    "research": ["OHSU", "Portland State University", "Intel Ronler Acres campus, Hillsboro"],
+    "print": [],
+    "datacenter": ["Hillsboro data center submarket", "QTS Hillsboro campus", "Flexential Hillsboro"],
+    "energy": ["Portland General Electric", "Pacific Power", "Bonneville Power Administration"],
+    "buildings": "Downtown and Lloyd District towers, OHSU's Marquam Hill campus, Intel's Hillsboro fabs, and PDX airport carry large HVAC plant.",
+    "grade": { "health": "strong", "research": "strong", "print": "none", "datacenter": "strong", "energy": "some", "buildings": "strong" }
+  },
+  "Seattle|WA": {
+    "health": ["UW Medicine / Harborview Medical Center", "Swedish Medical Center", "Virginia Mason Medical Center", "Fred Hutchinson Cancer Center"],
+    "research": ["University of Washington", "Fred Hutchinson Cancer Center", "Allen Institute"],
+    "print": ["Seattle Times Kent printing plant"],
+    "datacenter": ["Westin Building Exchange", "Sabey Intergate.Seattle, Tukwila", "Equinix Seattle"],
+    "energy": ["Seattle City Light", "Puget Sound Energy", "Bonneville Power Administration"],
+    "buildings": "Downtown and South Lake Union office towers, the UW and First Hill hospital campuses, and Sea-Tac Airport carry large central plant.",
+    "grade": { "health": "strong", "research": "strong", "print": "some", "datacenter": "some", "energy": "some", "buildings": "strong" }
+  },
+  "Spokane|WA": {
+    "health": ["Providence Sacred Heart Medical Center", "MultiCare Deaconess Hospital", "MultiCare Valley Hospital"],
+    "research": ["Washington State University Health Sciences Spokane", "Gonzaga University"],
+    "print": ["Inland Empire Paper Company Millwood mill"],
+    "datacenter": [],
+    "energy": ["Avista Utilities"],
+    "buildings": "Sacred Heart and Deaconess hospital campuses, the university district, downtown office buildings, and Spokane International Airport carry most large HVAC plant.",
+    "grade": { "health": "some", "research": "some", "print": "some", "datacenter": "none", "energy": "some", "buildings": "some" }
+  },
+  "Boise|ID": {
+    "health": ["St. Luke's Boise Medical Center", "Saint Alphonsus Regional Medical Center"],
+    "research": ["Micron Technology Boise campus", "Boise State University"],
+    "print": [],
+    "datacenter": ["Meta Kuna data center"],
+    "energy": ["Idaho Power"],
+    "buildings": "Downtown Boise offices, the State Capitol complex, the St. Luke's and Saint Alphonsus campuses, and Micron's fab campus carry large HVAC plant.",
+    "grade": { "health": "some", "research": "strong", "print": "none", "datacenter": "some", "energy": "some", "buildings": "some" }
+  },
+  "Salt Lake City|UT": {
+    "health": ["University of Utah Health", "Intermountain Medical Center, Murray", "Intermountain Primary Children's Hospital"],
+    "research": ["University of Utah", "University of Utah Research Park"],
+    "print": [],
+    "datacenter": ["NSA Utah Data Center, Bluffdale", "Novva Data Centers West Jordan", "DataBank Salt Lake City"],
+    "energy": ["Rocky Mountain Power", "Chevron Salt Lake City Refinery", "HF Sinclair Woods Cross Refinery", "Marathon Salt Lake City Refinery"],
+    "buildings": "Downtown towers, the University of Utah and Intermountain hospital campuses, and the new Salt Lake City International Airport terminal carry large central plant.",
+    "grade": { "health": "strong", "research": "strong", "print": "none", "datacenter": "some", "energy": "strong", "buildings": "strong" }
+  },
+  "Las Vegas|NV": {
+    "health": ["University Medical Center of Southern Nevada", "Sunrise Hospital and Medical Center", "Valley Hospital Medical Center"],
+    "research": ["University of Nevada, Las Vegas"],
+    "print": ["Las Vegas Review-Journal printing plant"],
+    "datacenter": ["Switch Las Vegas campus (The Core)"],
+    "energy": ["NV Energy", "Harry Allen Generating Station", "Hoover Dam"],
+    "buildings": "Strip casino resorts, convention centers, Harry Reid International Airport, and hospital campuses run some of the largest central chiller plants in the West.",
+    "grade": { "health": "some", "research": "some", "print": "some", "datacenter": "strong", "energy": "some", "buildings": "strong" }
+  },
+  "Phoenix|AZ": {
+    "health": ["Mayo Clinic Arizona", "Banner University Medical Center Phoenix", "HonorHealth", "Phoenix Children's"],
+    "research": ["Arizona State University", "TSMC Arizona fab, north Phoenix", "Intel Ocotillo campus, Chandler"],
+    "print": [],
+    "datacenter": ["Chandler / Mesa data center submarket", "CyrusOne Chandler campus", "Iron Mountain Phoenix campus"],
+    "energy": ["Arizona Public Service (APS)", "Salt River Project (SRP)", "Palo Verde Generating Station"],
+    "buildings": "Downtown and Camelback Corridor towers, ASU and hospital campuses, semiconductor fabs, and Sky Harbor Airport carry heavy cooling plant sized for desert loads.",
+    "grade": { "health": "strong", "research": "strong", "print": "none", "datacenter": "strong", "energy": "strong", "buildings": "strong" }
+  },
+  "Albuquerque|NM": {
+    "health": ["UNM Hospital", "Presbyterian Hospital", "Lovelace Medical Center"],
+    "research": ["Sandia National Laboratories", "University of New Mexico", "Air Force Research Laboratory, Kirtland AFB", "Intel Rio Rancho fab"],
+    "print": [],
+    "datacenter": ["Meta Los Lunas data center"],
+    "energy": ["PNM (Public Service Company of New Mexico)"],
+    "buildings": "UNM and its hospital campus, Kirtland AFB and Sandia facilities, downtown offices, and the Albuquerque Sunport carry large HVAC plant.",
+    "grade": { "health": "some", "research": "strong", "print": "none", "datacenter": "some", "energy": "some", "buildings": "some" }
+  },
+  "Denver|CO": {
+    "health": ["UCHealth University of Colorado Hospital", "Denver Health Medical Center", "National Jewish Health", "Children's Hospital Colorado"],
+    "research": ["CU Anschutz Medical Campus", "University of Colorado Boulder", "National Renewable Energy Laboratory, Golden", "Colorado School of Mines"],
+    "print": ["Denver Post Adams County printing plant"],
+    "datacenter": ["CoreSite Denver campus", "Flexential Denver data centers"],
+    "energy": ["Xcel Energy", "Suncor Commerce City Refinery"],
+    "buildings": "Downtown and Tech Center office towers, the Anschutz Medical Campus, and Denver International Airport carry large central plant.",
+    "grade": { "health": "strong", "research": "strong", "print": "some", "datacenter": "some", "energy": "strong", "buildings": "strong" }
+  },
+  "Casper|WY": {
+    "health": ["Banner Wyoming Medical Center"],
+    "research": [],
+    "print": [],
+    "datacenter": [],
+    "energy": ["HF Sinclair Casper Refinery", "Rocky Mountain Power", "Dave Johnston Power Plant, Glenrock"],
+    "buildings": "Large HVAC plant is limited to the Banner Wyoming Medical Center campus, Casper College, and a handful of downtown and energy-company offices.",
+    "grade": { "health": "some", "research": "none", "print": "none", "datacenter": "none", "energy": "strong", "buildings": "some" }
+  },
+  "Billings|MT": {
+    "health": ["Billings Clinic", "St. Vincent Regional Hospital (Intermountain Health)"],
+    "research": [],
+    "print": [],
+    "datacenter": [],
+    "energy": ["NorthWestern Energy", "Phillips 66 Billings Refinery", "Par Montana Billings Refinery", "CHS Laurel Refinery"],
+    "buildings": "The Billings Clinic and St. Vincent hospital campuses, downtown office towers, and MSU Billings carry most of the large HVAC plant.",
+    "grade": { "health": "some", "research": "none", "print": "none", "datacenter": "none", "energy": "strong", "buildings": "some" }
+  },
+  "Fargo|ND": {
+    "health": ["Sanford Medical Center Fargo", "Essentia Health Fargo"],
+    "research": ["North Dakota State University", "NDSU Research and Technology Park"],
+    "print": [],
+    "datacenter": ["Applied Digital Polaris Forge 2, Harwood"],
+    "energy": ["Xcel Energy", "Cass County Electric Cooperative"],
+    "buildings": "Sanford's Fargo medical campus, NDSU, downtown offices, and Hector International Airport carry most of the large HVAC plant.",
+    "grade": { "health": "some", "research": "some", "print": "none", "datacenter": "some", "energy": "some", "buildings": "some" }
+  },
+  "Omaha|NE": {
+    "health": ["Nebraska Medicine / UNMC", "CHI Health Creighton University Medical Center", "Methodist Hospital", "Children's Nebraska"],
+    "research": ["University of Nebraska Medical Center", "Creighton University"],
+    "print": [],
+    "datacenter": ["Google Council Bluffs data center", "Meta Sarpy County data center"],
+    "energy": ["Omaha Public Power District (OPPD)", "North Omaha Station"],
+    "buildings": "Downtown corporate towers, the UNMC and Creighton medical campuses, and Eppley Airfield carry large central plant.",
+    "grade": { "health": "strong", "research": "some", "print": "none", "datacenter": "strong", "energy": "some", "buildings": "some" }
+  },
+  "Minneapolis|MN": {
+    "health": ["M Health Fairview University of Minnesota Medical Center", "Hennepin Healthcare (HCMC)", "Abbott Northwestern Hospital"],
+    "research": ["University of Minnesota", "Medtronic Fridley campus", "Boston Scientific Maple Grove"],
+    "print": ["Japs-Olson Company, St. Louis Park"],
+    "datacenter": ["Meta Rosemount data center", "Cologix Minneapolis campus"],
+    "energy": ["Xcel Energy", "Flint Hills Resources Pine Bend Refinery", "Marathon St. Paul Park Refinery"],
+    "buildings": "Downtown Minneapolis and St. Paul skyway towers, the University of Minnesota and hospital campuses, and MSP Airport carry large heating and cooling plant.",
+    "grade": { "health": "strong", "research": "strong", "print": "some", "datacenter": "some", "energy": "strong", "buildings": "strong" }
+  },
+  "Milwaukee|WI": {
+    "health": ["Froedtert & Medical College of Wisconsin", "Aurora St. Luke's Medical Center", "Children's Wisconsin"],
+    "research": ["Medical College of Wisconsin", "Marquette University", "UW-Milwaukee"],
+    "print": ["Quad Sussex plant", "Quad Hartford plant", "Quad West Allis plant"],
+    "datacenter": ["Microsoft Fairwater campus, Mount Pleasant", "Vantage Port Washington campus"],
+    "energy": ["We Energies", "Oak Creek Power Plant", "Port Washington Generating Station"],
+    "buildings": "Downtown office towers, the Milwaukee Regional Medical Center campus, universities, and Mitchell Airport carry large central plant.",
+    "grade": { "health": "strong", "research": "some", "print": "strong", "datacenter": "strong", "energy": "some", "buildings": "some" }
+  },
+  "Kansas City|MO": {
+    "health": ["University of Kansas Health System", "Saint Luke's Hospital of Kansas City", "Children's Mercy Kansas City"],
+    "research": ["Stowers Institute for Medical Research", "KU Medical Center", "Kansas City National Security Campus"],
+    "print": ["International Paper North Kansas City sheet plant", "Modern Litho Kansas City"],
+    "datacenter": ["Meta Kansas City data center", "Google Kansas City Northland campus"],
+    "energy": ["Evergy", "Hawthorn Generating Station", "Iatan Generating Station"],
+    "buildings": "Downtown and Crown Center office towers, the KU Medical Center and Saint Luke's campuses, and the new KCI terminal carry large central plant.",
+    "grade": { "health": "strong", "research": "strong", "print": "some", "datacenter": "strong", "energy": "some", "buildings": "some" }
+  },
+  "St. Louis|MO": {
+    "health": ["Barnes-Jewish Hospital (BJC)", "Washington University Medical Center", "SSM Health Saint Louis University Hospital", "Mercy Hospital St. Louis"],
+    "research": ["Washington University in St. Louis", "Donald Danforth Plant Science Center", "Cortex Innovation Community", "Bayer Crop Science Creve Coeur"],
+    "print": [],
+    "datacenter": ["Netrality 210 N Tucker", "TierPoint St. Louis"],
+    "energy": ["Ameren Missouri", "Labadie Energy Center", "Phillips 66 Wood River Refinery"],
+    "buildings": "Downtown towers, the WashU/BJC medical campus, SLU, and Lambert International Airport carry large central plant.",
+    "grade": { "health": "strong", "research": "strong", "print": "none", "datacenter": "some", "energy": "strong", "buildings": "strong" }
+  },
+  "Chicago|IL": {
+    "health": ["Northwestern Memorial Hospital", "Rush University Medical Center", "UChicago Medicine"],
+    "research": ["University of Chicago", "Northwestern University", "Argonne National Laboratory", "Fermilab"],
+    "print": ["Daily Herald printing plant, Schaumburg", "RR Donnelley", "Smurfit Westrock Chicago Card plant, Woodridge"],
+    "datacenter": ["350 East Cermak (Digital Realty)", "Elk Grove Village data center submarket", "Equinix Chicago"],
+    "energy": ["ComEd", "ExxonMobil Joliet Refinery", "CITGO Lemont Refinery", "BP Whiting Refinery"],
+    "buildings": "Loop and Streeterville high-rises, the Illinois Medical District and university campuses, and O'Hare and Midway airports carry some of the largest central plants in the country.",
+    "grade": { "health": "strong", "research": "strong", "print": "strong", "datacenter": "strong", "energy": "strong", "buildings": "strong" }
+  },
+  "Indianapolis|IN": {
+    "health": ["IU Health Methodist Hospital", "Eskenazi Health", "Riley Hospital for Children", "Ascension St. Vincent Indianapolis"],
+    "research": ["Eli Lilly and Company", "Indiana University Indianapolis", "IU School of Medicine"],
+    "print": [],
+    "datacenter": ["Meta Lebanon data center campus", "DataBank Indianapolis", "Netrality Indy Telecom Center"],
+    "energy": ["AES Indiana", "Citizens Energy Group", "Harding Street Generating Station"],
+    "buildings": "Downtown towers, the IU Health and Lilly campuses, Lucas Oil Stadium and the convention center, and Indianapolis International Airport carry large central plant.",
+    "grade": { "health": "strong", "research": "strong", "print": "none", "datacenter": "some", "energy": "some", "buildings": "some" }
+  }
+}

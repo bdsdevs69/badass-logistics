@@ -89,6 +89,10 @@ module.exports = {
     { q: 'How long does a rooftop unit replacement take?', a: 'The lift itself is often short. The time goes into planning, closures, disconnects, and connections, which we schedule to keep the building\'s downtime short.' },
   ],
   faqTitle: 'Chiller &amp; HVAC rigging FAQ',
+  metrosSentinel: 'HV_METROS',
+  metrosTag: "chiller rigging by metro",
+  metrosH2: "Where we rig chillers and HVAC plant",
+  metrosIntro: "Chiller and boiler replacements, rooftop crane-ins, and air handler moves in the 40 metros with the largest hospital, campus, and commercial building stock we cover.",
   related: ['crane-services', 'heavy-lift-rigging', 'data-center-rigging', 'transformer-generator-rigging'],
   guides: [
     ['how-to-move-a-boiler-or-chiller', 'How to Move a Boiler or Chiller'],

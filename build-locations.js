@@ -16,6 +16,8 @@ const CITY_WAVE2 = [
   ['machinery-removal', 'Machinery removal', 'retired machines and plant closures'],
   ['crane-services', 'Crane &amp; rigging services', 'planned picks and rooftop crane-ins'],
   ['forklift-loading-unloading', 'Machinery loading &amp; unloading', 'load-outs and container unloads'],
+  // wave 3 (2026-10-19) — sector-matched, so most metros carry only some of these
+  ...require('./lib/wave3-copy').WAVE3.map(([s, , label, what]) => [s, label, what]),
 ];
 function cityWave2(city, state, slug) {
   const have = CITY_WAVE2.filter(([s]) => inWave(s, `${city}|${state}`));

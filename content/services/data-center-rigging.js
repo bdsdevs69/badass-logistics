@@ -81,6 +81,10 @@ module.exports = {
     { q: 'Do you move loaded server racks?', a: 'Yes, with attention to the rack\'s loaded weight, the floor rating, and how the rack is supported during the move. Some racks should be unloaded first; we\'ll flag that during planning.' },
   ],
   faqTitle: 'Data center rigging FAQ',
+  metrosSentinel: 'DC_METROS',
+  metrosTag: "data center rigging by metro",
+  metrosH2: "Where we rig data center equipment",
+  metrosIntro: "Generator, UPS, switchgear, and cooling rigging in the metros we cover with established data center markets.",
   related: ['transformer-generator-rigging', 'hvac-chiller-rigging', 'crane-services', 'project-freight'],
   guides: [
     ['types-of-rigging', 'Types of Rigging, Explained'],

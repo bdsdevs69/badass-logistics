@@ -1,0 +1,200 @@
+{
+  "Detroit|MI": {
+    "health": ["Henry Ford Health", "Detroit Medical Center", "Corewell Health William Beaumont University Hospital"],
+    "research": ["Wayne State University", "GM Global Technical Center", "Ford Research & Engineering Center"],
+    "print": [],
+    "datacenter": ["365 Data Centers Southfield"],
+    "energy": ["DTE Energy", "Monroe Power Plant", "Marathon Detroit Refinery", "Fermi 2 Nuclear Plant"],
+    "buildings": "Downtown towers led by the Renaissance Center, three downtown casinos (MGM Grand, MotorCity, Hollywood at Greektown), the Henry Ford and DMC hospital campuses and DTW airport carry the big central plants.",
+    "grade": { "health": "strong", "research": "strong", "print": "none", "datacenter": "some", "energy": "strong", "buildings": "strong" }
+  },
+  "Columbus|OH": {
+    "health": ["Ohio State Wexner Medical Center", "Nationwide Children's Hospital", "OhioHealth Riverside Methodist Hospital"],
+    "research": ["Ohio State University", "Battelle", "Intel Ohio One (New Albany)", "Amgen Ohio (New Albany)"],
+    "print": [],
+    "datacenter": ["AWS New Albany/Hilliard/Dublin", "Google New Albany", "Meta New Albany", "Cologix Columbus"],
+    "energy": ["AEP Ohio", "American Electric Power HQ"],
+    "buildings": "The Ohio State campus and Wexner Medical Center, the downtown state-office and bank towers, Nationwide Children's and John Glenn Columbus International Airport anchor the large HVAC plant.",
+    "grade": { "health": "strong", "research": "strong", "print": "none", "datacenter": "strong", "energy": "some", "buildings": "strong" }
+  },
+  "Cleveland|OH": {
+    "health": ["Cleveland Clinic", "University Hospitals Cleveland Medical Center", "MetroHealth"],
+    "research": ["Case Western Reserve University", "NASA Glenn Research Center", "Cleveland Clinic Lerner Research Institute"],
+    "print": ["Plain Dealer Tiedeman Production Center (Brooklyn)"],
+    "datacenter": ["H5 Data Centers Cleveland", "Expedient Cleveland"],
+    "energy": ["FirstEnergy / The Illuminating Company", "Cleveland Public Power", "Perry Nuclear Power Plant"],
+    "buildings": "The Cleveland Clinic main campus and University Circle institutions, downtown towers like Key Tower, JACK Cleveland Casino and Cleveland Hopkins airport carry the heavy central plant.",
+    "grade": { "health": "strong", "research": "strong", "print": "some", "datacenter": "some", "energy": "some", "buildings": "strong" }
+  },
+  "Louisville|KY": {
+    "health": ["UofL Health", "Norton Healthcare", "Baptist Health Louisville"],
+    "research": ["University of Louisville"],
+    "print": [],
+    "datacenter": ["Flexential Louisville", "Data Canopy Louisville"],
+    "energy": ["LG&E (Louisville Gas and Electric)", "Mill Creek Generating Station", "Cane Run Generating Station"],
+    "buildings": "UPS Worldport at Louisville Muhammad Ali International, GE Appliance Park, the downtown medical center and riverfront towers carry the large mechanical plant.",
+    "grade": { "health": "some", "research": "some", "print": "none", "datacenter": "some", "energy": "some", "buildings": "strong" }
+  },
+  "Houston|TX": {
+    "health": ["Texas Medical Center", "MD Anderson Cancer Center", "Houston Methodist", "Memorial Hermann"],
+    "research": ["Rice University", "Baylor College of Medicine", "University of Houston", "NASA Johnson Space Center"],
+    "print": ["Houston Chronicle printing plant"],
+    "datacenter": ["DataBank Westway Park campus (ex-CyrusOne Houston West)", "Switch Houston 2"],
+    "energy": ["CenterPoint Energy", "ExxonMobil Baytown complex", "Deer Park refinery", "W.A. Parish Generating Station"],
+    "buildings": "The Texas Medical Center campus with its district chilled-water plant, the downtown and Energy Corridor towers, and George Bush Intercontinental carry some of the largest HVAC plant in the country.",
+    "grade": { "health": "strong", "research": "strong", "print": "some", "datacenter": "strong", "energy": "strong", "buildings": "strong" }
+  },
+  "Dallas|TX": {
+    "health": ["UT Southwestern Medical Center", "Baylor University Medical Center", "Parkland Memorial Hospital"],
+    "research": ["UT Southwestern", "University of Texas at Dallas", "Texas Instruments Richardson fabs"],
+    "print": [],
+    "datacenter": ["QTS Irving", "Equinix Dallas Infomart", "CyrusOne Carrollton"],
+    "energy": ["Oncor Electric Delivery", "Vistra Corp HQ (Irving)", "Atmos Energy HQ"],
+    "buildings": "DFW Airport, the downtown and Uptown office towers, the Southwestern Medical District and the Las Colinas corporate campuses carry the large chiller plant.",
+    "grade": { "health": "strong", "research": "strong", "print": "none", "datacenter": "strong", "energy": "some", "buildings": "strong" }
+  },
+  "San Antonio|TX": {
+    "health": ["UT Health San Antonio", "University Health", "Methodist Healthcare", "Brooke Army Medical Center"],
+    "research": ["Southwest Research Institute", "Texas Biomedical Research Institute", "UT San Antonio"],
+    "print": [],
+    "datacenter": ["Microsoft San Antonio (Westover Hills)", "CyrusOne San Antonio"],
+    "energy": ["CPS Energy", "Calaveras Power Station", "Valero Energy HQ"],
+    "buildings": "The South Texas Medical Center district, Joint Base San Antonio installations, the downtown River Walk hotels and convention center, and San Antonio International carry the large HVAC plant.",
+    "grade": { "health": "strong", "research": "strong", "print": "none", "datacenter": "strong", "energy": "some", "buildings": "strong" }
+  },
+  "Midland|TX": {
+    "health": ["Midland Memorial Hospital"],
+    "research": [],
+    "print": [],
+    "datacenter": [],
+    "energy": ["Oncor Electric Delivery", "Permian Basin oilfields", "Diamondback Energy HQ"],
+    "buildings": "A compact downtown of oil-company office towers, Midland Memorial Hospital and Midland International Air & Space Port make up most of the large commercial HVAC stock.",
+    "grade": { "health": "some", "research": "none", "print": "none", "datacenter": "none", "energy": "strong", "buildings": "some" }
+  },
+  "Oklahoma City|OK": {
+    "health": ["OU Health", "INTEGRIS Baptist Medical Center", "Mercy Hospital Oklahoma City"],
+    "research": ["OU Health Sciences Center", "Oklahoma Medical Research Foundation", "University of Oklahoma (Norman)"],
+    "print": [],
+    "datacenter": ["RACK59 Oklahoma City", "TierPoint Oklahoma City"],
+    "energy": ["OG&E", "Devon Energy HQ", "Continental Resources HQ"],
+    "buildings": "Devon Energy Center and the downtown towers, the OU Health Sciences Center campus, Tinker Air Force Base and Will Rogers World Airport carry the large central plant.",
+    "grade": { "health": "some", "research": "some", "print": "none", "datacenter": "some", "energy": "strong", "buildings": "some" }
+  },
+  "Little Rock|AR": {
+    "health": ["UAMS Medical Center", "Arkansas Children's Hospital", "Baptist Health Medical Center-Little Rock"],
+    "research": ["University of Arkansas for Medical Sciences", "UA Little Rock"],
+    "print": [],
+    "datacenter": ["TierPoint Little Rock"],
+    "energy": ["Entergy Arkansas"],
+    "buildings": "The State Capitol complex, the UAMS and Arkansas Children's campuses, downtown office towers and Clinton National Airport hold most of the large HVAC plant.",
+    "grade": { "health": "some", "research": "some", "print": "none", "datacenter": "some", "energy": "some", "buildings": "some" }
+  },
+  "New Orleans|LA": {
+    "health": ["Ochsner Medical Center", "University Medical Center New Orleans", "Tulane Medical Center"],
+    "research": ["Tulane University", "LSU Health New Orleans", "NASA Michoud Assembly Facility"],
+    "print": [],
+    "datacenter": ["Cogent 650 Poydras", "EdgeConneX New Orleans"],
+    "energy": ["Entergy New Orleans", "Chalmette Refinery", "Shell Norco", "Valero Meraux Refinery"],
+    "buildings": "The Caesars Superdome, Harrah's/Caesars New Orleans casino, CBD office and hotel towers, the medical district and Louis Armstrong International carry the large HVAC plant.",
+    "grade": { "health": "strong", "research": "some", "print": "none", "datacenter": "some", "energy": "strong", "buildings": "strong" }
+  },
+  "Jackson|MS": {
+    "health": ["University of Mississippi Medical Center", "Baptist Medical Center Jackson", "St. Dominic Hospital"],
+    "research": ["University of Mississippi Medical Center", "Jackson State University"],
+    "print": [],
+    "datacenter": ["AWS Madison County (Canton campus)", "AWS Ridgeland campus"],
+    "energy": ["Entergy Mississippi"],
+    "buildings": "The State Capitol and state office complex, the UMMC campus, downtown office towers and Jackson-Medgar Wiley Evers International carry most of the large HVAC plant.",
+    "grade": { "health": "some", "research": "some", "print": "none", "datacenter": "strong", "energy": "some", "buildings": "some" }
+  },
+  "Memphis|TN": {
+    "health": ["St. Jude Children's Research Hospital", "Methodist Le Bonheur Healthcare", "Baptist Memorial Health Care", "Regional One Health"],
+    "research": ["St. Jude Children's Research Hospital", "UT Health Science Center", "University of Memphis"],
+    "print": [],
+    "datacenter": ["xAI Colossus", "Google West Memphis campus"],
+    "energy": ["Memphis Light, Gas and Water", "TVA Allen Combined Cycle Plant", "Valero Memphis Refinery"],
+    "buildings": "The FedEx World Hub at Memphis International, the downtown Medical District with St. Jude and UTHSC, and the downtown towers and FedExForum carry the large central plant.",
+    "grade": { "health": "strong", "research": "strong", "print": "none", "datacenter": "strong", "energy": "strong", "buildings": "strong" }
+  },
+  "Nashville|TN": {
+    "health": ["Vanderbilt University Medical Center", "HCA TriStar Centennial Medical Center", "Ascension Saint Thomas"],
+    "research": ["Vanderbilt University", "Meharry Medical College"],
+    "print": [],
+    "datacenter": ["Flexential Nashville", "RadiusDC Nashville I", "Evoque Gallatin campus"],
+    "energy": ["Nashville Electric Service", "Tennessee Valley Authority"],
+    "buildings": "The Vanderbilt and HCA hospital campuses, the fast-growing downtown and Gulch towers, Music City Center and Nashville International carry the large HVAC plant.",
+    "grade": { "health": "strong", "research": "strong", "print": "none", "datacenter": "some", "energy": "some", "buildings": "strong" }
+  },
+  "Birmingham|AL": {
+    "health": ["UAB Hospital", "Children's of Alabama", "Ascension St. Vincent's Birmingham"],
+    "research": ["University of Alabama at Birmingham", "Southern Research"],
+    "print": [],
+    "datacenter": ["DC BLOX Birmingham (BHM-1)"],
+    "energy": ["Alabama Power", "Southern Company", "James H. Miller Jr. Electric Generating Plant"],
+    "buildings": "The UAB medical and university campus, downtown bank towers, the BJCC complex and Birmingham-Shuttlesworth International carry the large central plant.",
+    "grade": { "health": "strong", "research": "strong", "print": "none", "datacenter": "some", "energy": "strong", "buildings": "strong" }
+  },
+  "Atlanta|GA": {
+    "health": ["Emory Healthcare", "Grady Memorial Hospital", "Piedmont Atlanta Hospital", "Children's Healthcare of Atlanta"],
+    "research": ["Georgia Tech", "Emory University", "CDC headquarters"],
+    "print": [],
+    "datacenter": ["QTS Atlanta Metro campus", "Switch Atlanta", "Google Douglas County"],
+    "energy": ["Georgia Power", "Southern Company HQ", "Plant Bowen"],
+    "buildings": "Hartsfield-Jackson, the Downtown/Midtown/Buckhead tower stock, the Emory and Georgia Tech campuses and Georgia World Congress Center carry some of the largest HVAC plant in the Southeast.",
+    "grade": { "health": "strong", "research": "strong", "print": "none", "datacenter": "strong", "energy": "strong", "buildings": "strong" }
+  },
+  "Charleston|SC": {
+    "health": ["MUSC Health University Medical Center", "Roper St. Francis Healthcare", "Trident Medical Center"],
+    "research": ["Medical University of South Carolina"],
+    "print": [],
+    "datacenter": ["Google Berkeley County (Moncks Corner)"],
+    "energy": ["Dominion Energy South Carolina", "Santee Cooper"],
+    "buildings": "The MUSC medical district, Boeing South Carolina in North Charleston, Joint Base Charleston and Charleston International carry the large HVAC plant alongside downtown hotels.",
+    "grade": { "health": "strong", "research": "some", "print": "none", "datacenter": "some", "energy": "some", "buildings": "some" }
+  },
+  "Charlotte|NC": {
+    "health": ["Atrium Health Carolinas Medical Center", "Novant Health Presbyterian Medical Center"],
+    "research": ["UNC Charlotte", "North Carolina Research Campus (Kannapolis)"],
+    "print": ["Charlotte Publishing Co. plant (Research Dr.)"],
+    "datacenter": ["Flexential Charlotte", "Digital Realty Charlotte campus (Moores Chapel Rd)"],
+    "energy": ["Duke Energy HQ", "McGuire Nuclear Station", "Catawba Nuclear Station"],
+    "buildings": "Uptown's bank towers (Bank of America Corporate Center, Duke Energy Center), the Atrium and Novant hospital campuses and Charlotte Douglas International carry the large central plant.",
+    "grade": { "health": "strong", "research": "some", "print": "some", "datacenter": "some", "energy": "strong", "buildings": "strong" }
+  },
+  "Jacksonville|FL": {
+    "health": ["Mayo Clinic Florida", "UF Health Jacksonville", "Baptist Medical Center Jacksonville"],
+    "research": ["Mayo Clinic Florida research", "University of North Florida"],
+    "print": ["Smurfit Westrock Fernandina Beach mill"],
+    "datacenter": ["Cologix JAX1", "Flexential Jacksonville"],
+    "energy": ["JEA", "Northside Generating Station"],
+    "buildings": "Downtown and Southbank office towers, the Mayo Clinic and UF Health campuses, NAS Jacksonville and Jacksonville International carry the large HVAC plant.",
+    "grade": { "health": "strong", "research": "some", "print": "some", "datacenter": "some", "energy": "some", "buildings": "strong" }
+  },
+  "Miami|FL": {
+    "health": ["Jackson Memorial Hospital", "UHealth University of Miami", "Baptist Health South Florida", "Mount Sinai Medical Center"],
+    "research": ["University of Miami", "Florida International University"],
+    "print": [],
+    "datacenter": ["Equinix MI1 (NAP of the Americas)"],
+    "energy": ["Florida Power & Light", "Turkey Point Nuclear Generating Station"],
+    "buildings": "Brickell and downtown high-rise towers, Miami International Airport, PortMiami terminals and the Jackson/UHealth medical campus carry an exceptionally cooling-heavy HVAC stock.",
+    "grade": { "health": "strong", "research": "some", "print": "none", "datacenter": "strong", "energy": "strong", "buildings": "strong" }
+  },
+  "Norfolk|VA": {
+    "health": ["Sentara Norfolk General Hospital", "Children's Hospital of The King's Daughters", "Macon & Joan Brock Virginia Health Sciences at ODU"],
+    "research": ["Old Dominion University", "NASA Langley Research Center", "Jefferson Lab (Newport News)"],
+    "print": [],
+    "datacenter": ["Globalinx Virginia Beach cable-landing campus"],
+    "energy": ["Dominion Energy Virginia"],
+    "buildings": "Naval Station Norfolk, the Sentara/EVMS medical center, downtown Norfolk towers and Norfolk International carry the large central plant across Hampton Roads.",
+    "grade": { "health": "some", "research": "strong", "print": "none", "datacenter": "some", "energy": "some", "buildings": "strong" }
+  },
+  "Baltimore|MD": {
+    "health": ["Johns Hopkins Hospital", "University of Maryland Medical Center", "MedStar Union Memorial Hospital"],
+    "research": ["Johns Hopkins University", "Johns Hopkins APL (Laurel)", "University of Maryland BioPark"],
+    "print": [],
+    "datacenter": ["Expedient Baltimore Tide Point", "TierPoint BWI"],
+    "energy": ["BGE (Baltimore Gas and Electric)", "Constellation Energy HQ", "Brandon Shores Generating Station"],
+    "buildings": "The Johns Hopkins and University of Maryland medical campuses, Inner Harbor towers, Horseshoe Casino Baltimore and BWI Marshall Airport carry the large central plant.",
+    "grade": { "health": "strong", "research": "strong", "print": "none", "datacenter": "some", "energy": "strong", "buildings": "strong" }
+  }
+}

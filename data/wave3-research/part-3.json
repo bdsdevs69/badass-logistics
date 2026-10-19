@@ -1,0 +1,200 @@
+{
+  "Philadelphia|PA": {
+    "health": ["Penn Medicine", "Children's Hospital of Philadelphia", "Jefferson Health", "Temple University Health System"],
+    "research": ["University of Pennsylvania", "Drexel University", "University City Science Center", "Philadelphia Navy Yard"],
+    "print": ["Gannett Cherry Hill printing plant"],
+    "datacenter": ["Netrality 401 North Broad", "TierPoint Philadelphia", "365 Data Centers Philadelphia"],
+    "energy": ["PECO", "Limerick Generating Station", "Monroe Energy Trainer refinery"],
+    "buildings": "Center City office towers, the Penn/CHOP and Jefferson medical campuses, University City and PHL airport carry the metro's big chiller and boiler plants.",
+    "grade": { "health": "strong", "research": "strong", "print": "some", "datacenter": "some", "energy": "strong", "buildings": "strong" }
+  },
+  "Pittsburgh|PA": {
+    "health": ["UPMC Presbyterian", "Allegheny Health Network", "UPMC Children's Hospital of Pittsburgh"],
+    "research": ["Carnegie Mellon University", "University of Pittsburgh", "NETL Pittsburgh"],
+    "print": [],
+    "datacenter": ["DataBank PIT1 downtown", "DataBank Summit Park campus"],
+    "energy": ["Duquesne Light", "Shell Polymers Monaca", "Beaver Valley Power Station", "Westinghouse Electric Company"],
+    "buildings": "Downtown Golden Triangle towers, the Oakland university-hospital district and Pittsburgh International Airport hold the region's large central plants.",
+    "grade": { "health": "strong", "research": "strong", "print": "none", "datacenter": "some", "energy": "strong", "buildings": "strong" }
+  },
+  "New York|NY": {
+    "health": ["NewYork-Presbyterian", "NYU Langone Health", "Mount Sinai Health System", "Memorial Sloan Kettering"],
+    "research": ["Columbia University", "Rockefeller University", "NYU", "Alexandria Center for Life Science"],
+    "print": ["New York Times College Point plant"],
+    "datacenter": ["60 Hudson Street", "111 Eighth Avenue", "Equinix Secaucus campus"],
+    "energy": ["Con Edison", "Ravenswood Generating Station", "New York Power Authority", "PSEG Long Island"],
+    "buildings": "Manhattan's office towers, the hospital campuses of the Upper East Side, JFK and LaGuardia airports and university campuses form the densest large-HVAC stock in the country.",
+    "grade": { "health": "strong", "research": "strong", "print": "strong", "datacenter": "strong", "energy": "strong", "buildings": "strong" }
+  },
+  "Boston|MA": {
+    "health": ["Mass General Brigham", "Beth Israel Deaconess Medical Center", "Boston Children's Hospital", "Dana-Farber Cancer Institute"],
+    "research": ["MIT", "Harvard University", "Kendall Square biotech cluster", "MIT Lincoln Laboratory"],
+    "print": ["Boston Globe Taunton printing plant"],
+    "datacenter": ["Markley One Summer Street"],
+    "energy": ["Eversource", "National Grid", "Everett Marine Terminal LNG"],
+    "buildings": "Financial District towers, the Longwood Medical Area, Kendall Square lab buildings and Logan Airport carry heavy chiller and lab-exhaust plant.",
+    "grade": { "health": "strong", "research": "strong", "print": "some", "datacenter": "some", "energy": "some", "buildings": "strong" }
+  },
+  "Cincinnati|OH": {
+    "health": ["Cincinnati Children's Hospital", "UC Health", "TriHealth", "The Christ Hospital"],
+    "research": ["University of Cincinnati", "P&G research centers", "GE Aerospace Evendale"],
+    "print": ["Greif Cincinnati paperboard mill", "Smurfit Westrock Blue Ash plant"],
+    "datacenter": ["CyrusOne Cincinnati 7th Street", "CyrusOne Cincinnati-Mason"],
+    "energy": ["Duke Energy Ohio", "Miami Fort Station", "East Bend Station"],
+    "buildings": "Downtown office towers, the Uptown hospital and UC campus cluster, P&G's headquarters and CVG airport anchor the large HVAC stock.",
+    "grade": { "health": "strong", "research": "some", "print": "some", "datacenter": "some", "energy": "some", "buildings": "some" }
+  },
+  "San Jose|CA": {
+    "health": ["Stanford Health Care", "Santa Clara Valley Medical Center", "Kaiser Permanente Santa Clara", "Good Samaritan Hospital"],
+    "research": ["Stanford University", "NASA Ames Research Center", "Applied Materials Santa Clara", "Intel Santa Clara"],
+    "print": [],
+    "datacenter": ["Santa Clara data-center submarket", "Digital Realty Santa Clara", "CoreSite Silicon Valley", "Vantage Santa Clara"],
+    "energy": ["PG&E", "Silicon Valley Power", "Metcalf Energy Center", "Los Esteros Critical Energy Facility"],
+    "buildings": "Tech corporate campuses, semiconductor fabs and cleanrooms, Stanford's medical campus and SJC airport carry very large process-cooling and HVAC plants.",
+    "grade": { "health": "strong", "research": "strong", "print": "none", "datacenter": "strong", "energy": "some", "buildings": "strong" }
+  },
+  "Greenville|SC": {
+    "health": ["Prisma Health Greenville Memorial", "Bon Secours St. Francis"],
+    "research": ["Clemson ICAR", "GE Vernova Greenville turbine plant"],
+    "print": [],
+    "datacenter": ["DartPoints Greenville", "DC BLOX Greenville"],
+    "energy": ["Duke Energy Carolinas", "GE Vernova Greenville gas turbine plant"],
+    "buildings": "The Prisma Health campus, downtown Greenville offices and the I-85 advanced-manufacturing plants carry most of the metro's large HVAC plant.",
+    "grade": { "health": "some", "research": "some", "print": "none", "datacenter": "some", "energy": "some", "buildings": "some" }
+  },
+  "Grand Rapids|MI": {
+    "health": ["Corewell Health Butterworth Hospital", "Trinity Health Grand Rapids", "Helen DeVos Children's Hospital"],
+    "research": ["Van Andel Institute", "MSU Grand Rapids Innovation Park", "Grand Valley State University"],
+    "print": ["PCA Grand Rapids plant", "Foremost Graphics", "Gilson Graphics"],
+    "datacenter": ["Switch Pyramid campus"],
+    "energy": ["Consumers Energy", "J.H. Campbell Generating Plant"],
+    "buildings": "The Medical Mile hospital and research buildings, downtown towers and convention center, and GVSU's campuses hold the large central plants.",
+    "grade": { "health": "some", "research": "some", "print": "some", "datacenter": "strong", "energy": "some", "buildings": "some" }
+  },
+  "Peoria|IL": {
+    "health": ["OSF Saint Francis Medical Center", "Carle Health Methodist Hospital"],
+    "research": ["USDA National Center for Agricultural Utilization Research", "Bradley University"],
+    "print": [],
+    "datacenter": [],
+    "energy": ["Ameren Illinois", "Powerton Generating Station"],
+    "buildings": "The OSF Saint Francis and Carle hospital campuses, Caterpillar's facilities and downtown offices carry the metro's large HVAC plant.",
+    "grade": { "health": "some", "research": "some", "print": "none", "datacenter": "none", "energy": "some", "buildings": "some" }
+  },
+  "Wichita|KS": {
+    "health": ["Wesley Medical Center", "Ascension Via Christi St. Francis"],
+    "research": ["Wichita State University NIAR", "Spirit AeroSystems Wichita", "Textron Aviation"],
+    "print": [],
+    "datacenter": [],
+    "energy": ["Evergy", "HF Sinclair El Dorado refinery"],
+    "buildings": "Aircraft manufacturing plants, the Wesley and Via Christi hospital campuses and Wichita State's Innovation Campus carry the large HVAC loads.",
+    "grade": { "health": "some", "research": "some", "print": "none", "datacenter": "none", "energy": "some", "buildings": "some" }
+  },
+  "Toledo|OH": {
+    "health": ["ProMedica Toledo Hospital", "Mercy Health St. Vincent Medical Center", "University of Toledo Medical Center"],
+    "research": ["University of Toledo", "First Solar Perrysburg"],
+    "print": [],
+    "datacenter": [],
+    "energy": ["Toledo Edison", "Cenovus Toledo Refinery", "PBF Toledo Refinery", "Davis-Besse Nuclear Power Station"],
+    "buildings": "The ProMedica and Mercy hospital campuses, University of Toledo and the refinery and glass-industry plants carry the metro's large HVAC and process plant.",
+    "grade": { "health": "some", "research": "some", "print": "none", "datacenter": "none", "energy": "strong", "buildings": "some" }
+  },
+  "Chattanooga|TN": {
+    "health": ["Erlanger Health", "CHI Memorial Hospital", "Parkridge Medical Center"],
+    "research": ["UT Chattanooga", "Volkswagen Chattanooga plant"],
+    "print": [],
+    "datacenter": ["DC BLOX Chattanooga"],
+    "energy": ["EPB", "Tennessee Valley Authority", "Sequoyah Nuclear Plant", "Raccoon Mountain Pumped Storage"],
+    "buildings": "TVA's downtown office complex, the Erlanger and Memorial hospital campuses and the Volkswagen assembly plant carry the large HVAC plant.",
+    "grade": { "health": "some", "research": "some", "print": "none", "datacenter": "some", "energy": "strong", "buildings": "some" }
+  },
+  "Huntsville|AL": {
+    "health": ["Huntsville Hospital", "Crestwood Medical Center"],
+    "research": ["NASA Marshall Space Flight Center", "Redstone Arsenal", "Cummings Research Park", "HudsonAlpha Institute"],
+    "print": [],
+    "datacenter": ["Meta Huntsville Data Center"],
+    "energy": ["Huntsville Utilities", "Tennessee Valley Authority", "Browns Ferry Nuclear Plant"],
+    "buildings": "Redstone Arsenal and Marshall facilities, Cummings Research Park office and lab buildings and Huntsville Hospital carry the metro's large HVAC plant.",
+    "grade": { "health": "some", "research": "strong", "print": "none", "datacenter": "strong", "energy": "strong", "buildings": "some" }
+  },
+  "Mobile|AL": {
+    "health": ["USA Health University Hospital", "Mobile Infirmary", "Ascension Providence Hospital"],
+    "research": ["University of South Alabama"],
+    "print": ["Kimberly-Clark Mobile mill"],
+    "datacenter": [],
+    "energy": ["Alabama Power", "Plant Barry", "Vertex Mobile refinery"],
+    "buildings": "The USA Health and Infirmary hospital campuses, downtown towers and the port-side shipyards and industrial plants carry the large HVAC loads.",
+    "grade": { "health": "some", "research": "some", "print": "some", "datacenter": "none", "energy": "some", "buildings": "some" }
+  },
+  "Tulsa|OK": {
+    "health": ["Saint Francis Health System", "Hillcrest Medical Center", "Ascension St. John Medical Center"],
+    "research": ["University of Tulsa", "OSU Center for Health Sciences"],
+    "print": [],
+    "datacenter": ["Google Project Clydesdale campus"],
+    "energy": ["Public Service Company of Oklahoma", "HF Sinclair Tulsa refinery", "ONEOK", "Williams"],
+    "buildings": "Downtown energy-company towers, the Saint Francis and Hillcrest hospital campuses and Tulsa International Airport's MRO base carry the large HVAC plant.",
+    "grade": { "health": "some", "research": "some", "print": "none", "datacenter": "some", "energy": "strong", "buildings": "some" }
+  },
+  "Rockford|IL": {
+    "health": ["OSF Saint Anthony Medical Center", "Javon Bea Hospital", "UW Health SwedishAmerican Hospital"],
+    "research": [],
+    "print": [],
+    "datacenter": [],
+    "energy": ["ComEd", "Woodward Rockford"],
+    "buildings": "The OSF, Mercyhealth and SwedishAmerican hospital campuses and the aerospace plants around Chicago Rockford International Airport carry the large HVAC plant.",
+    "grade": { "health": "some", "research": "none", "print": "none", "datacenter": "none", "energy": "some", "buildings": "some" }
+  },
+  "Dayton|OH": {
+    "health": ["Premier Health Miami Valley Hospital", "Kettering Health", "Dayton Children's Hospital"],
+    "research": ["Air Force Research Laboratory", "University of Dayton Research Institute", "Wright State University"],
+    "print": [],
+    "datacenter": [],
+    "energy": ["AES Ohio"],
+    "buildings": "Wright-Patterson AFB's research and office complex, the Miami Valley and Kettering hospital campuses and the University of Dayton carry the large HVAC plant.",
+    "grade": { "health": "some", "research": "strong", "print": "none", "datacenter": "none", "energy": "some", "buildings": "some" }
+  },
+  "San Diego|CA": {
+    "health": ["UC San Diego Health", "Sharp HealthCare", "Scripps Health", "Rady Children's Hospital"],
+    "research": ["UC San Diego", "Scripps Research", "Salk Institute", "Torrey Pines biotech cluster"],
+    "print": [],
+    "datacenter": ["EdgeConneX San Diego", "DataBank SAN1"],
+    "energy": ["SDG&E", "Carlsbad Energy Center", "Otay Mesa Energy Center"],
+    "buildings": "Torrey Pines and Sorrento Valley lab buildings, the UCSD and hospital campuses, downtown towers and the Navy bases carry heavy lab and HVAC plant.",
+    "grade": { "health": "strong", "research": "strong", "print": "none", "datacenter": "some", "energy": "some", "buildings": "strong" }
+  },
+  "Riverside|CA": {
+    "health": ["Loma Linda University Medical Center", "Riverside University Health System", "Kaiser Permanente Riverside"],
+    "research": ["UC Riverside", "Loma Linda University"],
+    "print": [],
+    "datacenter": [],
+    "energy": ["Riverside Public Utilities", "Southern California Edison"],
+    "buildings": "The Inland Empire's huge warehouse and distribution stock, the Loma Linda and RUHS hospital campuses and UC Riverside carry the large HVAC plant.",
+    "grade": { "health": "some", "research": "some", "print": "none", "datacenter": "none", "energy": "some", "buildings": "some" }
+  },
+  "Savannah|GA": {
+    "health": ["Memorial Health University Medical Center", "St. Joseph's/Candler"],
+    "research": ["Gulfstream Aerospace", "Hyundai Motor Group Metaplant America"],
+    "print": ["Georgia-Pacific Savannah River Mill"],
+    "datacenter": [],
+    "energy": ["Georgia Power", "Plant McIntosh", "Elba Island LNG"],
+    "buildings": "The Memorial and Candler hospital campuses, Gulfstream's plants, the Port of Savannah complex and historic-district hotels carry the large HVAC loads.",
+    "grade": { "health": "some", "research": "some", "print": "some", "datacenter": "none", "energy": "some", "buildings": "some" }
+  },
+  "Baton Rouge|LA": {
+    "health": ["Our Lady of the Lake Regional Medical Center", "Baton Rouge General"],
+    "research": ["Louisiana State University", "Pennington Biomedical Research Center"],
+    "print": ["Georgia-Pacific Port Hudson mill"],
+    "datacenter": [],
+    "energy": ["Entergy Louisiana", "ExxonMobil Baton Rouge Refinery", "Dow Louisiana Operations"],
+    "buildings": "The state capitol complex, LSU's campus, the Our Lady of the Lake medical campus and the river-corridor petrochemical plants carry the large HVAC and process plant.",
+    "grade": { "health": "some", "research": "some", "print": "some", "datacenter": "none", "energy": "strong", "buildings": "some" }
+  },
+  "Greensboro|NC": {
+    "health": ["Cone Health Moses Cone Hospital"],
+    "research": ["UNC Greensboro", "NC A&T State University", "Toyota Battery Manufacturing North Carolina"],
+    "print": [],
+    "datacenter": ["ImpactData Greensboro"],
+    "energy": ["Duke Energy Carolinas"],
+    "buildings": "The Cone Health campus, UNCG and NC A&T, Gateway Research Park and the PTI airport manufacturing corridor carry the large HVAC plant.",
+    "grade": { "health": "some", "research": "some", "print": "none", "datacenter": "some", "energy": "some", "buildings": "some" }
+  }
+}

@@ -87,6 +87,10 @@ module.exports = {
     { q: 'Can you set equipment on raised floors or isolation pads?', a: 'Yes. We check floor ratings along the path and set instruments on pads or isolation systems as the vendor specifies.' },
   ],
   faqTitle: 'Lab equipment moving FAQ',
+  metrosSentinel: 'LB_METROS',
+  metrosTag: "lab moves by metro",
+  metrosH2: "Where we move lab and precision equipment",
+  metrosIntro: "Lab and precision equipment moves in the metros we cover with research universities, national labs, and biotech and pharma campuses.",
   related: ['mri-medical-equipment-rigging', 'data-center-rigging', 'heavy-lift-rigging', 'crating-packing'],
   guides: [
     ['how-to-move-an-mri-machine', 'How to Move an MRI Machine'],

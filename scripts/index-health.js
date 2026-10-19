@@ -104,6 +104,14 @@ const CLUSTERS = [
   ['removal x city', u => /^\/services\/machinery-removal\//.test(u)],
   ['crane x city',   u => /^\/services\/crane-services\//.test(u)],
   ['loading x city', u => /^\/services\/forklift-loading-unloading\//.test(u)],
+  // wave 3, 2026-10-19 — graded separately so a weak sector can't hide in a strong one
+  ['heavy-lift x city', u => /^\/services\/heavy-lift-rigging\//.test(u)],
+  ['hvac x city',    u => /^\/services\/hvac-chiller-rigging\//.test(u)],
+  ['transformer x city', u => /^\/services\/transformer-generator-rigging\//.test(u)],
+  ['mri x city',     u => /^\/services\/mri-medical-equipment-rigging\//.test(u)],
+  ['lab x city',     u => /^\/services\/lab-equipment-movers\//.test(u)],
+  ['press x city',   u => /^\/services\/printing-press-movers\//.test(u)],
+  ['datacenter x city', u => /^\/services\/data-center-rigging\//.test(u)],
   ['city hubs',      u => /^\/locations\//.test(u)],
   ['state hubs',     u => /^\/(states|service-areas)\//.test(u)],
 ];

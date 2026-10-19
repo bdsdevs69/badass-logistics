@@ -86,6 +86,10 @@ module.exports = {
     { q: 'Can the move happen after hours?', a: 'Most of ours do. Nights and weekends keep corridors clear and imaging schedules intact.' },
   ],
   faqTitle: 'MRI &amp; medical rigging FAQ',
+  metrosSentinel: 'MD_METROS',
+  metrosTag: "MRI rigging by metro",
+  metrosH2: "Where we rig MRI and imaging equipment",
+  metrosIntro: "MRI, CT, PET/CT, cath lab, and linac rigging in the metros we cover with major academic medical centers and health systems.",
   related: ['crane-services', 'heavy-lift-rigging', 'machinery-moving', 'crating-packing'],
   guides: [
     ['how-to-move-an-mri-machine', 'How to Move an MRI Machine'],
