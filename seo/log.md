@@ -1695,3 +1695,15 @@ demand, and the 10-19 run's analysis holds), no merges, no backlinks, no Ads.
   current industrial stock. Worth a rewrite next pass.
 - Casper `stock` (10-19 pass) was a null in this run's research: no source could be found for its building
   stock. Worth re-verifying.
+
+## 2026-10-19 — duplicate article-run instance (no-op)
+
+A second instance of the Mon/Wed/Thu article run fired alongside the first (catch-up after the
+3-week sleep gap; the Tue/Fri, Sat, watchdog and Ads runs were also firing at once in this worktree).
+It got the same 6 queue topics and spawned writers. It saw the other instance's modules landing,
+stopped its writers before any of them saved a file, and confirmed that with `git status`. The first
+instance's 5 articles (commit cf596a6) are this Monday's article run. No second pass, because a second
+6-topic pass would double the pace and empty the queue that Wednesday needs.
+**Risk for Sam:** overdue scheduled runs share one worktree with no lock. After a sleep gap they fire
+together, and two of them picked identical topics. A lock file checked at the start of each run would
+prevent it.
