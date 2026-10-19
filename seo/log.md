@@ -1417,3 +1417,30 @@ drayage) all 200 direct, in sitemap.xml + llms.txt; live trailer-selector has 0 
 - Top result for both brand queries is the **GitHub repo** bdsdevs69/badass-logistics, whose description still
   reads "rigging, heavy haul, dispatch & freight moving". That is a cheap, high-leverage fix for Sam (repo About text).
   Homepage meta is correct (88 locations, rigging-first); the engine is using older crawl data plus the repo.
+
+## 2026-10-19 — article publishing pass (Mon)
+
+**Index health (90d):** all 12 clusters GREEN — blog 1% dead (70/71 earning, 12,099 impr). Cleared to publish.
+**Pace:** queue had 8 todo, check-pace asked for backfill. topic-gaps Track A had nothing unowned: every
+question maps to an existing post (critical-lift, step-deck, crane load charts, in-house vs contractor) and
+the one real block (large-move plant relocation) was already queued. No topics invented → **queue not refilled**;
+3 todo left (dedicated-lanes-vs-spot-freight, scaling-a-fleet-past-ten-trucks, the held plant piece).
+
+**Shipped (5):** how-to-move-a-ups-or-battery-plant · how-to-move-a-chiller · how-to-move-a-dust-collector ·
+how-to-evaluate-a-dispatch-service · how-to-transport-a-crane (recovered from a redirect stub — rule removed
+from data/redirects.json; rigging-side mobilisation, zero permit/oversize/escort vocabulary).
+All 200 live, no refresh, Article + FAQPage parse, in sitemap.xml + llms.txt. IndexNow 200, sitemap resubmitted.
+
+**Reviewer:**
+- HOLD `what-separates-plant-relocation-companies-on-large-moves` — track-record, in-house-crew and sequencing
+  sections restate how-to-choose-a-plant-relocation-contractor (whose own H2 is "What separates the best plant
+  relocation companies for a large move?"). Gate showed 0.4% — semantic overlap the shingle check can't see.
+  Back to todo with the fix in `reviewHold`; draft kept untracked at content-drafts/held/ in the main checkout.
+- Edits applied: dispatch post — cut a red-flag bullet duplicating truck-dispatch-for-small-fleets;
+  crane post — counterweight order rewritten as model-specific (old line contradicted itself).
+- Note: reviewer flagged dispatch is marked low-priority in the queue's cluster note; shipped because it was
+  already queued and dispatch is GREEN, but it is now the 4th+ dispatch post — don't add more without GSC demand.
+
+**Not done:** Track B. A concurrent run was editing the shared checkout mid-run (lathe, crane-rental,
+tight-plant deepening + build-service-cities.js) — so this run built and pushed from an isolated worktree
+with only its own files, and left that in-flight work untouched and uncommitted for its owner.
