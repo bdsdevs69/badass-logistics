@@ -131,6 +131,25 @@ keyword row. Medical & Imaging Equipment is bid high ($7.00) on purpose:
 the whole medical cluster is ~210 searches a month, so it cannot absorb
 a budget — it buys position on a thin stream of high-value queries.
 
+## Feed the ops portal
+
+The portal at https://badass-ops-production.up.railway.app shows spend beside
+the leads it bought, and it cannot read the ad account — the Google Ads API
+needs a developer token nobody has set up. So this run writes the numbers out:
+
+```bash
+OPS_INGEST_TOKEN=... node ads/push-to-portal.js rows.json
+```
+
+Pull the trailing 30 days per campaign per day. Upsert is on (date, campaign),
+so re-pushing a day corrects it rather than double-counting, and late
+conversions fix themselves. **Cost per lead on that page is the number the
+budget gets judged on, so a skipped push is worse than it looks** — an empty
+page is indistinguishable from a campaign that stopped serving.
+
+Leads themselves arrive at the portal straight from the website forms; nothing
+in this run needs to do anything about them.
+
 ## Log the run
 
 Append a dated block to `ads/log.md`: the campaign table, what was
